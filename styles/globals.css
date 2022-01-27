@@ -52,3 +52,31 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   grid-column: 1 / 4;
 }
+
+
+/*
+  CSS for the images (not possible with tailwind since complicated selector
+*/
+.image-wrapper > span {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+
+/* ---------- Horizontal separator ----------------- */
+.smallHr {
+  margin-top: 23px;
+  margin-bottom: 23px;
+  border: 0;
+  border-top: 1px solid black;
+  width: 0;
+  animation: separator-width 2s ease-in-out forwards;
+}
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+      width: 200px;
+  }
+}
