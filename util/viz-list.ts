@@ -2,7 +2,7 @@ export type ChartId = "violin" | "density" | "histogram" | "boxplot" | "ridgelin
 
 export type ChartFamily = "distribution" | "correlation" | "evolution" | "ranking" | "partOfAWhole" | "general" | "flow" | "map"
 
-type VizList = {
+export type VizItem = {
     title: string;
     author: string;
     url: string
@@ -16,7 +16,7 @@ type VizList = {
     interactive: boolean
 }
 
-export const vizList: VizList[] = [
+export const vizList: VizItem[] = [
     {
         title: "Here’s When We Expect Omicron to Peak",
         author: "The New York Times",
@@ -42,5 +42,79 @@ export const vizList: VizList[] = [
         chartId: ["map", "line"],
         luminosity: ["light", "dark"],
         interactive: true
-    }
+    },
+    {
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "dataviz_hiking.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },
+    {
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "HBCU_trends_gender.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },{
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "lollipop-plot-with-r-mario-kart-64-world-records.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },{
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "streamchart-xmen.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },{
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "web-circular-lollipop-plot-with-ggplot2.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },{
+        title: "---",
+        author: "---",
+        url: "---",
+        img: "web-horizontal-barplot-with-labels-the-economist.png",
+        description: "---",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["---"],
+        chartId: ["---"],
+        luminosity: ["---"],
+        interactive: false
+    },
 ]
