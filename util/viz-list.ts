@@ -44,16 +44,16 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
-        title: "---",
-        author: "---",
-        url: "---",
-        img: "dataviz_hiking.png",
-        description: "---",
+        title: "Migration waves",
+        author: "National Geographic",
+        url: "https://www.nationalgeographic.com/magazine/graphics/graphic-shows-past-50-years-of-global-human-migration?sf215829698=1&sf217104276=1",
+        img: "migration-waves.png",
+        description: "The ebb and flow of people across borders has long shaped our world. Data from the past 50 years of international migration help us understand why people make the choice to leave and where they go. Less than 10 percent of these migrants are forced to flee; most are seeking a better life and move only when they can afford to. Global migrants totaled fewer than 100 million in the 1960s, and although the number has increased substantially since then, it remains a fraction of the world's 7.6 billion people today.",
         tool: undefined,
         code: undefined,
-        chartFamily: ["---"],
-        chartId: ["---"],
-        luminosity: ["---"],
+        chartFamily: ["distribution"],
+        chartId: ["density", "ridgeline"],
+        luminosity: ["light"],
         interactive: false
     },
     {
