@@ -1,6 +1,6 @@
-export type ChartId = "violin" | "density" | "histogram" | "boxplot" | "ridgeline" | "scatter" | "heatmap" | "correlogram" | "bubble" | "connectedScatter" | "density2d" | "barplot" | "radar" | "wordcloud" | "parallel" | "lollipop" | "circularBarplot" | "treemap" | "venn" | "donut" | "pie" | "dendrogram" | "circularPacking" | "line" | "area" | "stackedArea" | "stream" | "timeseries" | "map" | "choropleth" | "hexbin" | "cartogram" | "connection" | "bubbleMap" | "chordDiagram" | "network" | "sankey" | "arc" | "edgeBundling" | "colors" | "plotly" | "animation" | "cheatSheets" | "caveats" | "3d"
+import { ChartFamily, ChartId } from "./sectionDescription"
 
-export type ChartFamily = "distribution" | "correlation" | "evolution" | "ranking" | "partOfAWhole" | "general" | "flow" | "map"
+export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react"
 
 export type VizItem = {
     title: string;
@@ -8,7 +8,7 @@ export type VizItem = {
     url: string
     img: string
     description: string
-    tool?: "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react",
+    tool?: Tool[],
     code?: string, // Url to read the code
     chartFamily: ChartFamily[],
     chartId: ChartId[],
@@ -36,7 +36,7 @@ export const vizList: VizItem[] = [
         url: "https://www.covid19india.org/about",
         img: "covid19India.png",
         description: "A dashboard describing the spread of Covid 19 in india. Highly interactive with a pretty slick design. Dark mode support, many different types of viz with smooth transition between dataset.",
-        tool: "react",
+        tool: ["react", "d3.js"],
         code: "https://github.com/covid19india/covid19india-react",
         chartFamily: ["map", "evolution"],
         chartId: ["map", "line"],

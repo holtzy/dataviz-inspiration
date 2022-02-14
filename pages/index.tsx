@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import Footer from "../components/Footer";
 import { MasonryItem } from "../components/MasonryItem";
 import TitleAndDescription from "../components/TitleAndDescription";
-import { vizList } from "../util/viz-list";
+import { VizItemModal } from "../components/VizItemModal";
+import { VizItem, vizList } from "../util/viz-list";
 
 const siteDescription = (
   <p>
@@ -16,6 +18,10 @@ const siteDescription = (
 );
 
 const Home: NextPage = () => {
+  // States
+  const [columnNumber, setColumnNumber] = useState(3);
+  const [selectedVizItem, setSelectedVizItem] = useState<VizItem | null>(null);
+
   return (
     <div className="wrapper">
       <Head>
@@ -32,17 +38,30 @@ const Home: NextPage = () => {
 
         <div
           style={{
-            columnCount: 3,
+            columnCount: columnNumber,
             width: "100%",
             columnGap: "1rem",
             paddingTop: 10,
           }}
         >
           {vizList.map((vizItem, i) => {
-            return <MasonryItem key={i} vizItem={vizItem} />;
+            return (
+              <MasonryItem
+                key={i}
+                vizItem={vizItem}
+                onClick={setSelectedVizItem}
+              />
+            );
           })}
         </div>
       </main>
+
+      {selectedVizItem && (
+        <VizItemModal
+          vizItem={selectedVizItem}
+          closeModal={() => setSelectedVizItem(null)}
+        />
+      )}
 
       <Footer />
     </div>
