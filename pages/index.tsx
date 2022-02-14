@@ -8,20 +8,20 @@ import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
 import { VizItem, vizList } from "../util/viz-list";
 
-const siteDescription = (
-  <p>
-    <a href="https://reactjs.org">React</a> manipulates the DOM. So does{" "}
-    <a href="https://www.d3-graph-gallery.com">D3.js</a>. Its hard to make them
-    work together. This website is a set of chart examples where d3 is used to
-    compute the viz layout, and React is used for the rendering.
-  </p>
-);
-
 const Home: NextPage = () => {
   // States
   const [columnNumber, setColumnNumber] = useState(3);
   const [selectedVizItem, setSelectedVizItem] = useState<VizItem | null>(null);
 
+  const VizItemNumber = vizList.length;
+
+  const siteDescription = (
+    <p>
+      Looking for dataviz inspiration? Here is a showcase of{" "}
+      <span>{VizItemNumber}</span> dataviz examples I love, ready to help you
+      create the next awesome graph of this planet.
+    </p>
+  );
   return (
     <div className="wrapper">
       <Head>
@@ -35,6 +35,10 @@ const Home: NextPage = () => {
           title="Dataviz Inspiration"
           description={siteDescription}
         />
+
+        <div className="border-t  border-grey text-grey border-solid w-full">
+          Hello
+        </div>
 
         <div
           style={{

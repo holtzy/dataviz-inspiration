@@ -31,6 +31,7 @@ export const VizItemModal = (props: VizItemModalProps) => {
       </span>
     );
   });
+
   return (
     <div
       style={{ backgroundColor: "rgba(250,250,250,.95)" }}
@@ -64,14 +65,13 @@ export const VizItemModal = (props: VizItemModalProps) => {
           <br />
           <p>{props.vizItem.description}</p>
           <br />
-          <div>
-            <LinkAsButton href={props.vizItem.code} size="sm">
-              Code
-            </LinkAsButton>
-            <LinkAsButton href={props.vizItem.code} size="sm">
-              Code
-            </LinkAsButton>
-          </div>
+          {props.vizItem.code && (
+            <div>
+              <LinkAsButton href={props.vizItem.code} size="sm">
+                Code
+              </LinkAsButton>
+            </div>
+          )}
         </div>
       </div>
     </div>
