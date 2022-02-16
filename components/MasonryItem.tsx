@@ -4,15 +4,18 @@ import { VizItem } from "../util/viz-list";
 type MasonryItemProps = {
   vizItem: VizItem;
   onClick: (arg: VizItem) => void;
+  imgId: number;
 };
-export const MasonryItem = ({ vizItem, onClick }: MasonryItemProps) => {
+
+export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
+  console.log(imgId);
   return (
     <div
       className="image-wrapper cursor-pointer "
       onClick={() => onClick(vizItem)}
     >
       <Image
-        src={require(`../public/img/${vizItem.img}`)}
+        src={require(`../public/img/${vizItem.imgZoomed[imgId]}`)}
         placeholder="blur"
         className="rounded-md"
       />

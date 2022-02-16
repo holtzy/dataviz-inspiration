@@ -113,3 +113,10 @@ body {
       width: 200px;
   }
 }
+
+/* ---------- General style sheet ----------------- */
+a {
+  color: #a53253;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

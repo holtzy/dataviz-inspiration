@@ -49,13 +49,16 @@ const Home: NextPage = () => {
           }}
         >
           {vizList.map((vizItem, i) => {
-            return (
-              <MasonryItem
-                key={i}
-                vizItem={vizItem}
-                onClick={setSelectedVizItem}
-              />
-            );
+            return vizItem.imgZoomed.map((img, j) => {
+              return (
+                <MasonryItem
+                  key={j}
+                  vizItem={vizItem}
+                  onClick={setSelectedVizItem}
+                  imgId={j}
+                />
+              );
+            });
           })}
         </div>
       </main>

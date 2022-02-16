@@ -53,25 +53,68 @@ export const VizItemModal = (props: VizItemModalProps) => {
         <div className="relative h-full w-2/3 p-10 flex justify-center items-center">
           <Image src={require(`../public/img/${props.vizItem.img}`)} />
         </div>
+
         <div className=" w-1/3 p-2">
           <p className="font-bold">{props.vizItem.title}</p>
-          <p className="font-extralight">{"by " + props.vizItem.author}</p>
+          <p>
+            <span className="text-xs font-extralight">by </span>
+            <span className="text-xs italic font-extralight">
+              {props.vizItem.author}
+            </span>
+          </p>
           <br />
+
           <div>
+            <span className="font-light text-gray-500 text-sm">
+              Chart type:{" "}
+            </span>
             <span>{allChartIds}</span>
-            <span> | </span>
-            <span>{allTools}</span>
           </div>
           <br />
-          <p>{props.vizItem.description}</p>
-          <br />
-          {props.vizItem.code && (
-            <div>
-              <LinkAsButton href={props.vizItem.code} size="sm">
-                Code
-              </LinkAsButton>
-            </div>
+
+          {allTools && allTools.length > 0 && (
+            <>
+              <span className="font-light text-gray-500 text-sm">Tool: </span>
+              <span>{allTools}</span>
+              <br />
+            </>
           )}
+          <br />
+
+          <div>
+            <span className="font-light text-gray-500 text-sm">Context: </span>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: props.vizItem.contextDescription,
+              }}
+            />
+          </div>
+          <br />
+
+          <div>
+            <span className="font-light text-gray-500 text-sm">
+              Visualization:{" "}
+            </span>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: props.vizItem.chartDescription,
+              }}
+            />
+          </div>
+          <br />
+
+          <div className="flex">
+            <LinkAsButton href={props.vizItem.url} size="sm">
+              Visit project
+            </LinkAsButton>
+            {props.vizItem.code && (
+              <div>
+                <LinkAsButton href={props.vizItem.code} size="sm">
+                  Read code
+                </LinkAsButton>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
