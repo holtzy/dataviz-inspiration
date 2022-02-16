@@ -8,7 +8,6 @@ type MasonryItemProps = {
 };
 
 export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
-  console.log(imgId);
   return (
     <div
       className="image-wrapper cursor-pointer "
