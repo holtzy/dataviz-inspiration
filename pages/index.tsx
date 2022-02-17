@@ -94,7 +94,6 @@ const Home: NextPage = () => {
             columnCount: columnNumber,
             width: "100%",
             columnGap: "1rem",
-            paddingTop: 10,
           }}
         >
           {vizList.map((vizItem, i) => {
