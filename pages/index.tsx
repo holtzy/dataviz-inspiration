@@ -36,9 +36,10 @@ const Home: NextPage = () => {
 
   const siteDescription = (
     <p>
-      Looking for dataviz inspiration? Here is a showcase of{" "}
-      <span>{VizItemNumber}</span> dataviz examples I love, ready to help you
-      create the next awesome graph of this planet.
+      Data visualization is an endless world where it's easy to get lost. When
+      you build a new chart it is a good idea to rely on the shoulder of giants.
+      This website helps. It provides many viz examples coming from the people I
+      admire on this virtual planet that we call internet.
     </p>
   );
 
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
   // Then useRouter get them in the "query" property
 
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>Dataviz Inspiration</title>
         <meta name="description" content="Dataviz Inspiration" />
@@ -60,54 +61,66 @@ const Home: NextPage = () => {
           description={siteDescription}
         />
 
-        <div className="w-full flex">
-          <div className="flex border-y py-2">
-            <DeviceMobileIcon
-              onClick={() => updateColumnNumber(2)}
-              className={
-                columnNumber === 2
-                  ? "cursor-pointer h-6 w-6 text-red-800 fill-red-200 opacity-100"
-                  : "cursor-pointer h-6 w-6 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-              }
-            />
-            <DeviceTabletIcon
-              onClick={() => updateColumnNumber(3)}
-              className={
-                columnNumber === 3
-                  ? "cursor-pointer h-6 w-6 text-red-800 fill-red-200 opacity-100"
-                  : "cursor-pointer h-6 w-6 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-              }
-            />
-            <DesktopComputerIcon
-              onClick={() => updateColumnNumber(4)}
-              className={
-                columnNumber === 4
-                  ? "cursor-pointer h-6 w-6 text-red-800 fill-red-200 opacity-100"
-                  : "cursor-pointer h-6 w-6 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-              }
-            />
-          </div>{" "}
+        <div className="wrapper">
+          <div className="w-full flex ">
+            <div className="flex py-2">
+              <DeviceMobileIcon
+                onClick={() => updateColumnNumber(2)}
+                className={
+                  columnNumber === 2
+                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
+                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
+                }
+              />
+              <DeviceTabletIcon
+                onClick={() => updateColumnNumber(3)}
+                className={
+                  columnNumber === 3
+                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
+                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
+                }
+              />
+              <DesktopComputerIcon
+                onClick={() => updateColumnNumber(4)}
+                className={
+                  columnNumber === 4
+                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
+                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
+                }
+              />
+            </div>{" "}
+          </div>
         </div>
 
         <div
           style={{
-            columnCount: columnNumber,
-            width: "100%",
-            columnGap: "1rem",
+            backgroundColor: "rgb(245, 245, 245)",
+            paddingTop: 20,
+            paddingBottom: 20,
           }}
         >
-          {vizList.map((vizItem, i) => {
-            return vizItem.imgZoomed.map((img, j) => {
-              return (
-                <MasonryItem
-                  key={j}
-                  vizItem={vizItem}
-                  onClick={setSelectedVizItem}
-                  imgId={j}
-                />
-              );
-            });
-          })}
+          <div className="wrapper">
+            <div
+              style={{
+                columnCount: columnNumber,
+                width: "100%",
+                columnGap: "20px",
+              }}
+            >
+              {vizList.map((vizItem, i) => {
+                return vizItem.imgZoomed.map((img, j) => {
+                  return (
+                    <MasonryItem
+                      key={j}
+                      vizItem={vizItem}
+                      onClick={setSelectedVizItem}
+                      imgId={j}
+                    />
+                  );
+                });
+              })}
+            </div>
+          </div>
         </div>
       </main>
 
@@ -118,8 +131,10 @@ const Home: NextPage = () => {
         />
       )}
 
-      <Footer />
-    </div>
+      <div className="wrapper">
+        <Footer />
+      </div>
+    </>
   );
 };
 

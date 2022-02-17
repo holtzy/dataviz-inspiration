@@ -83,9 +83,9 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   grid-column: 1 / 4;
 }
-body {
+/* body {
   background-color: rgb(245, 245, 245);
-}
+} */
 
 /*
   CSS for the images (not possible with tailwind since complicated selector
