@@ -1,6 +1,6 @@
 import { ChartFamily, ChartId } from "./sectionDescription"
 
-export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react"
+export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react" | "excel"
 
 export type VizItem = {
     title: string;
@@ -195,5 +195,37 @@ export const vizList: VizItem[] = [
         chartId: ["edgeBundling"],
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        title: "Inequality in Spain",
+        date: new Date(2021, 11),
+        author: "Dominic Royé",
+        url: "https://dominicroye.github.io/en/project/population/",
+        imgZoomed: ["map-inequality-spain-zoom.png"],
+        img: "map-inequality-spain.png",
+        contextDescription: "A visualization of Spain, looking a both inequality (using the Gini Index) and average rent prices.",
+        chartDescription: "A dichotomous choropleth map with nice annotation, good looking color palette and a 2D color mapping.",
+        tool: ["R"],
+        code: undefined,
+        chartFamily: ["map"],
+        chartId: ["choropleth"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Troops Vs. Cost",
+        date: new Date(2013, 10),
+        author: "Jorge Camoes",
+        url: "https://excelcharts.com/redraw-troops-vs-cost-time-magazine/",
+        imgZoomed: ["Troops-vs-Costs-zoom.png"],
+        img: "Troops-vs-Costs.png",
+        contextDescription: "The Time Magazine published a Dual-Y axis chart showing the evolution of both the army budget and the Number of troops between 1980 and 2012. Jorge Camoes decided to transform it with his own chart type.",
+        chartDescription: "The result is a connected scatterplot. I personally prefer it since dual Y axis are notoriously <a href='https://www.data-to-viz.com/caveats.html'>broken</a>, but it's hard to know if people truely understand it when they're not used to it.",
+        tool: ["excel"],
+        code: undefined,
+        chartFamily: ["correlation"],
+        chartId: ["connectedScatter"],
+        luminosity: ["light"],
+        interactive: false
     },
 ]
