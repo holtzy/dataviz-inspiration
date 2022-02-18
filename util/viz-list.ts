@@ -1,6 +1,6 @@
 import { ChartFamily, ChartId } from "./sectionDescription"
 
-export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react" | "excel"
+export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react" | "excel" | "javascript"
 
 export type VizItem = {
     title: string;
@@ -227,5 +227,85 @@ export const vizList: VizItem[] = [
         chartId: ["connectedScatter"],
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        title: "Vaccines and Infectious Diseases",
+        date: new Date(2015, 1),
+        author: "Dov Friedman & Tynan DeBold",
+        url: "https://graphics.wsj.com/infectious-diseases-and-vaccines/",
+        imgZoomed: ["vaccine-heatmap-zoom.png"],
+        img: "vaccine-heatmap.png",
+        contextDescription: "Probably the most famous viz about vaccines. It represents the number of measle infected people measured over 70-some years and across all 50 states. It shows a clear trend of decline after vaccines were introduced.",
+        chartDescription: "A clean heatmap that shows the number of cases per 100,000 people. Available for other diseases with similar result.",
+        tool: ["excel"],
+        code: undefined,
+        chartFamily: ["evolution", "correlation"],
+        chartId: ["heatmap"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "A Nation Divided",
+        date: new Date(2014, 9),
+        author: "Die Zeit",
+        url: "https://www.zeit.de/feature/german-unification-a-nation-divided",
+        imgZoomed: ["east-vs-west-germany-zoom.png"],
+        img: "east-vs-west-germany.png",
+        contextDescription: "In the early euphoria following the fall of the Berlin Wall in 1989, Germany moved quickly to erase the scars of its Cold War division. But East Germany’s legacy remains visible in statistics. Die Zeit offers a set of maps showing the remaining discrepancies between the West and the East.",
+        chartDescription: "A massive load of hexbin maps, showing various variables like the average income, the proportion of people called Ronny or the avera farm size. Smooth transition between variables and clean design.",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["map"],
+        chartId: ["hexbin"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Nobels, no degrees",
+        date: new Date(2012, 10),
+        author: "G. Lupi, S. Quadri, G. Rossi, D. Ciuffi, F. Fragapane, F. Majno",
+        url: "https://www.behance.net/gallery/14159439/Nobel-no-degrees",
+        imgZoomed: ["nobel-prices-zoom.png"],
+        img: "nobel-prices.png",
+        contextDescription: "This visualization explores the story of Nobel prizes through years.Visualized for each laureate are prize category, year the prize was awarded, and age of the recipient at the time, as well as principal academic affiliations and hometown.",
+        chartDescription: "Each dot represents a Nobel laureate, and each recipient is positioned according to the year the prize was awarded (x axis) and his or her age at the time of the award (y axis).",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["evolution", "flow"],
+        chartId: ["line", "sankey", "barplot"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Shipmap.org",
+        date: new Date(2012, 10),
+        author: "Kiln",
+        url: "https://www.shipmap.org",
+        imgZoomed: ["shipmap-zoom.png", "shipmap-2-zoom.png"],
+        img: "shipmap.png",
+        contextDescription: "Shipmap.org is an interactive map of commercial shipping movements based on hundreds of millions of data points from throughout 2012. The project's aim is to highlight for a broad audience the extraordinary scale of modern commercial shipping, the routes these huge vessels take around the world, the geographic spread of different types of cargo boats, and the amount of carbon dioxide they produce.",
+        chartDescription: "The unique base map shows ocean depth and major rivers, while the ships can be viewed as a high-resolution animation of movements over time (the 'ships' view) or as a plot showing all the positions at once (the 'routes' view), optionally colour-coded by ship type. A Talkie voiceover with music introduction sets the scene and provides an explanatory tour of the map.",
+        tool: ["javascript"],
+        code: undefined,
+        chartFamily: ["map"],
+        chartId: ["connection"],
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        title: "Rhythm of Food",
+        date: new Date(2016, 1),
+        author: "M. Stefaner, Y. Vishnevsky, S. Rogers, A. Cairo et al.",
+        url: "http://rhythm-of-food.net",
+        imgZoomed: ["rhythm-food-zoom.png"],
+        img: "rhythm-food.png",
+        contextDescription: "An interactive explorer based on the weekly Google Trends data for hundreds of dishes and ingredients, gathered over 15 years. It allows investigating the seasons and rhythm of food around the world",
+        chartDescription: "The main viz of this project is a radial diagram. One viz per ingredient. The color of each square is for the year. The distance to center (radius) is for the number of google search.",
+        tool: ["javascript"],
+        code: undefined,
+        chartFamily: ["evolution"],
+        chartId: ["heatmap"],
+        luminosity: ["light"],
+        interactive: true
     },
 ]

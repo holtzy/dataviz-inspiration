@@ -75,7 +75,7 @@ export const VizItemModal = (props: VizItemModalProps) => {
           {allTools && allTools.length > 0 && (
             <>
               <span className="font-light text-gray-500 text-sm">Tool: </span>
-              <span>{allTools}</span>
+              <span>{allTools[0]}</span>
               <br />
             </>
           )}
