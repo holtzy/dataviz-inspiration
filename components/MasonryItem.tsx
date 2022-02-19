@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { VizItem } from "../util/viz-list";
 
+// A "MasonryItem" is just an image displayed on the main wall.
+// When hovered, an additional layer appears to provide some more information (with a sliding animation)
+// When clicked, a modal with details opens
+
 type MasonryItemProps = {
   vizItem: VizItem;
   onClick: (arg: VizItem) => void;
@@ -14,9 +18,10 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
   return (
     <div className="py-2">
       <div
-        className="relative cursor-pointer border-black group overflow-hidden"
+        className="relative cursor-pointer group overflow-hidden"
         onClick={() => onClick(vizItem)}
       >
+        {/* The next.js Image component is awesome but it is a mess to style it properly since it is wrapped in several spans */}
         <Image
           src={require(`../public/img/${vizItem.imgZoomed[imgId]}`)}
           placeholder="blur"
@@ -24,6 +29,7 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
           layout="intrinsic" // intrinsic is the default
         />
 
+        {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}
         <div className="rounded-md absolute transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 flex items-center justify-center mb-1">
           <div className="absolute pr-10 top-12 left-5">
             <p className="text-md text-white font-bold">{vizItem.title}</p>

@@ -19,7 +19,9 @@ const Home: NextPage = () => {
 
   // States
   const [columnNumber, setColumnNumber] = useState<number>(5);
-  const [selectedVizItem, setSelectedVizItem] = useState<VizItem | null>(null);
+  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
+    null
+  );
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
@@ -113,7 +115,7 @@ const Home: NextPage = () => {
                     <MasonryItem
                       key={j}
                       vizItem={vizItem}
-                      onClick={setSelectedVizItem}
+                      onClick={() => setSelectedProjectId(i)}
                       imgId={j}
                     />
                   );
@@ -124,12 +126,10 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      {selectedVizItem && (
-        <VizItemModal
-          vizItem={selectedVizItem}
-          closeModal={() => setSelectedVizItem(null)}
-        />
-      )}
+      <VizItemModal
+        selectedProjectId={selectedProjectId}
+        closeModal={() => setSelectedProjectId(null)}
+      />
 
       <div className="wrapper">
         <Footer />

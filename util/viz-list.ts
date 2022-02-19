@@ -308,4 +308,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     },
+    {
+        title: "The State of Javascript",
+        date: new Date(2020, 1),
+        author: "A. Wattenberger, S. Greif and R. Benitte",
+        url: "https://2020.stateofjs.com/en-US/technologies/",
+        imgZoomed: ["state-of-js-zoom.png"],
+        img: "state-of-js.png",
+        contextDescription: "The State of Js is a survey that describes how Javascript (a programing language) evolved in the past few years. In the chart below they describe what libraries are trending, and which one are slowly disappearing. The whole webpage is awesome and you should definitely take a look.",
+        chartDescription: "My favorite grouped connected scatterplot! Each line goes from 2016 to 2020. A higher point means a technology has been used by more people, and a point further to the right means more users want to learn it; or have used it and would use it again.",
+        tool: ["javascript", "d3.js"],
+        code: "https://github.com/StateOfJS/StateOfJS-2019/blob/master/src/core/charts/tools/ToolsArrowsChart/ToolsArrowsChart.js",
+        chartFamily: ["evolution"],
+        chartId: ["connectedScatter"],
+        luminosity: ["dark"],
+        interactive: true
+    },
 ]
