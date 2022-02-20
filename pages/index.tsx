@@ -22,6 +22,7 @@ const Home: NextPage = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
+  console.log("selectedProjectId", selectedProjectId);
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
@@ -128,6 +129,7 @@ const Home: NextPage = () => {
 
       <VizItemModal
         selectedProjectId={selectedProjectId}
+        setSelectedProjectId={setSelectedProjectId}
         closeModal={() => setSelectedProjectId(null)}
       />
 

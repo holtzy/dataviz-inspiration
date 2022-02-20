@@ -7,37 +7,43 @@ import { ChartIdPill } from "./ChartIdPill";
 
 // This component is the modal that opens when user clicks on an image of the wall.
 // VizItemModal manages the modal opening & closing
+
 type VizItemModalProps = {
   closeModal: () => void;
   selectedProjectId: number | null;
+  setSelectedProjectId: (arg: number) => void;
 };
 
-export const VizItemModal = (props: VizItemModalProps) => {
-  const slideClass = props.selectedProjectId ? "" : "-left-full";
+export const VizItemModal = ({
+  closeModal,
+  selectedProjectId,
+  setSelectedProjectId,
+}: VizItemModalProps) => {
+  const slideClass = selectedProjectId ? "" : "-left-full";
 
-  const [projectId, setProjectId] = useState(props.selectedProjectId || 0);
-
-  // The escape key closes the modal
-  const keyboardCallback = useCallback((event) => {
-    if (event.key === "Escape") {
-      props.closeModal();
-    }
-    if (event.keyCode == "39") {
-      setProjectId(projectId + 1);
-    }
-    if (event.keyCode == "37") {
-      setProjectId(projectId + 1);
-    }
-  }, []);
+  const keyboardCallback = useCallback(
+    (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+      if (event.keyCode == "39") {
+        setSelectedProjectId((selectedProjectId || 0) + 1);
+      }
+      if (event.keyCode == "37") {
+        setSelectedProjectId((selectedProjectId || 0) - 1);
+      }
+    },
+    [selectedProjectId]
+  );
 
   useEffect(() => {
     document.addEventListener("keydown", keyboardCallback, false);
     return () => {
       document.removeEventListener("keydown", keyboardCallback, false);
     };
-  }, []);
+  }, [keyboardCallback]);
 
-  const vizItem = vizList[projectId];
+  const vizItem = vizList[selectedProjectId || 0];
 
   return (
     <div
@@ -46,12 +52,12 @@ export const VizItemModal = (props: VizItemModalProps) => {
         "transition-all duration-700  fixed inset-0 h-screen w-screen z-20 flex justify-center items-center " +
         slideClass
       }
-      onClick={() => props.closeModal()}
+      onClick={() => closeModal()}
     >
       {/* X to close the modal */}
       <span
         className="text-black cursor-pointer text-4xl absolute top-0 right-0 mr-10 mt-10 p-12 "
-        onClick={() => props.closeModal()}
+        onClick={() => closeModal()}
       >
         &#10005;
       </span>
