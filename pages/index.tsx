@@ -5,13 +5,9 @@ import Footer from "../components/Footer";
 import { MasonryItem } from "../components/MasonryItem";
 import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
-import { VizItem, vizList } from "../util/viz-list";
+import { Luminosity, VizItem, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
-import {
-  DeviceMobileIcon,
-  DeviceTabletIcon,
-  DesktopComputerIcon,
-} from "@heroicons/react/outline";
+import { WallFilters } from "../components/WallFilters";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
@@ -22,7 +18,7 @@ const Home: NextPage = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
-  console.log("selectedProjectId", selectedProjectId);
+  const [luminosity, setLuminosity] = useState<Luminosity[]>(["light", "dark"]);
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
@@ -33,6 +29,10 @@ const Home: NextPage = () => {
   const updateColumnNumber = (colNumber: number) => {
     setColumnNumber(colNumber);
     router.push({ query: { col: colNumber } });
+  };
+  const updateLuminosity = (luminosity: Luminosity[]) => {
+    setLuminosity(luminosity);
+    router.push({ query: { luminosity: "toto" } });
   };
 
   const VizItemNumber = vizList.length;
@@ -64,36 +64,12 @@ const Home: NextPage = () => {
           description={siteDescription}
         />
 
-        <div className="wrapper">
-          <div className="w-full flex ">
-            <div className="flex py-2">
-              <DeviceMobileIcon
-                onClick={() => updateColumnNumber(2)}
-                className={
-                  columnNumber === 2
-                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
-                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-                }
-              />
-              <DeviceTabletIcon
-                onClick={() => updateColumnNumber(3)}
-                className={
-                  columnNumber === 3
-                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
-                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-                }
-              />
-              <DesktopComputerIcon
-                onClick={() => updateColumnNumber(4)}
-                className={
-                  columnNumber === 4
-                    ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
-                    : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-800 hover:fill-red-200 hover:opacity-100"
-                }
-              />
-            </div>{" "}
-          </div>
-        </div>
+        <WallFilters
+          columnNumber={columnNumber}
+          updateColumnNumber={updateColumnNumber}
+          luminosity={luminosity}
+          updateLuminosity={updateLuminosity}
+        />
 
         <div
           style={{
@@ -110,18 +86,24 @@ const Home: NextPage = () => {
                 columnGap: "20px",
               }}
             >
-              {vizList.map((vizItem, i) => {
-                return vizItem.imgZoomed.map((img, j) => {
-                  return (
-                    <MasonryItem
-                      key={j}
-                      vizItem={vizItem}
-                      onClick={() => setSelectedProjectId(i)}
-                      imgId={j}
-                    />
-                  );
-                });
-              })}
+              {vizList
+                .filter(
+                  (item) =>
+                    luminosity.includes(item.luminosity[0]) ||
+                    luminosity.includes(item.luminosity[1])
+                )
+                .map((vizItem, i) => {
+                  return vizItem.imgZoomed.map((img, j) => {
+                    return (
+                      <MasonryItem
+                        key={j}
+                        vizItem={vizItem}
+                        onClick={() => setSelectedProjectId(i)}
+                        imgId={j}
+                      />
+                    );
+                  });
+                })}
             </div>
           </div>
         </div>

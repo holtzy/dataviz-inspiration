@@ -1,6 +1,7 @@
 import { ChartFamily, ChartId } from "./sectionDescription"
 
 export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react" | "excel" | "javascript"
+export type Luminosity = "light" | "dark"
 
 export type VizItem = {
     title: string;
@@ -15,7 +16,7 @@ export type VizItem = {
     code?: string; // Url to read the code
     chartFamily: ChartFamily[];
     chartId: ChartId[];
-    luminosity: ("light" | "dark")[];
+    luminosity: Luminosity[];
     interactive: boolean
 }
 
