@@ -5,20 +5,26 @@ import {
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/outline";
+import { ChartId } from "../util/sectionDescription";
 import { Luminosity } from "../util/viz-list";
+import { ChartIdSelectButton } from "./ChartIdSelectButton";
 
 type WallFiltersProps = {
   columnNumber: number;
   updateColumnNumber: (arg: number) => void;
-  luminosity: Luminosity[];
+  selectedLuminosities: Luminosity[];
   updateLuminosity: (arg: Luminosity[]) => void;
+  selectedChartIds: ChartId[] | undefined;
+  updateChartId: (arg: ChartId[]) => void;
 };
 
 export const WallFilters = ({
   updateColumnNumber,
   columnNumber,
   updateLuminosity,
-  luminosity,
+  selectedLuminosities,
+  updateChartId,
+  selectedChartIds,
 }: WallFiltersProps) => {
   const columnNumberSelection = (
     <div className="flex py-2">
@@ -53,24 +59,26 @@ export const WallFilters = ({
     <div className="flex py-2">
       <SunIcon
         onClick={() =>
-          luminosity.includes("light")
-            ? updateLuminosity(luminosity.filter((l) => l !== "light"))
-            : updateLuminosity([...luminosity, "light"])
+          selectedLuminosities.includes("light")
+            ? updateLuminosity(
+                selectedLuminosities.filter((l) => l !== "light")
+              )
+            : updateLuminosity([...selectedLuminosities, "light"])
         }
         className={
-          luminosity.includes("light")
+          selectedLuminosities.includes("light")
             ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
             : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40"
         }
       />
       <MoonIcon
         onClick={() =>
-          luminosity.includes("dark")
-            ? updateLuminosity(luminosity.filter((l) => l !== "dark"))
-            : updateLuminosity([...luminosity, "dark"])
+          selectedLuminosities.includes("dark")
+            ? updateLuminosity(selectedLuminosities.filter((l) => l !== "dark"))
+            : updateLuminosity([...selectedLuminosities, "dark"])
         }
         className={
-          luminosity.includes("dark")
+          selectedLuminosities.includes("dark")
             ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
             : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40"
         }
@@ -78,11 +86,21 @@ export const WallFilters = ({
     </div>
   );
 
+  const chartIdSelection = (
+    <div className="w-96 text-xs">
+      <ChartIdSelectButton
+        selectedChartIds={selectedChartIds}
+        updateChartId={updateChartId}
+      />
+    </div>
+  );
+
   return (
     <div className="wrapper">
-      <div className="flex">
+      <div className="flex py-2 ">
         <div className="w-full flex mr-6">{columnNumberSelection}</div>
-        <div className="w-full flex ">{lightVsDarkSelection}</div>
+        <div className="w-full flex mr-6 ">{lightVsDarkSelection}</div>
+        <div className="w-full flex mr-6">{chartIdSelection}</div>
       </div>
     </div>
   );

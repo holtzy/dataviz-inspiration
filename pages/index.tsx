@@ -8,6 +8,7 @@ import { VizItemModal } from "../components/VizItemModal";
 import { Luminosity, VizItem, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
 import { WallFilters } from "../components/WallFilters";
+import { ChartId } from "../util/sectionDescription";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
@@ -18,7 +19,12 @@ const Home: NextPage = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
-  const [luminosity, setLuminosity] = useState<Luminosity[]>(["light", "dark"]);
+  const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
+    "light",
+    "dark",
+  ]);
+  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
+  console.log("selectedChartIds", selectedChartIds);
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
@@ -34,21 +40,29 @@ const Home: NextPage = () => {
     setLuminosity(luminosity);
     router.push({ query: { luminosity: "toto" } });
   };
+  const updateChartId = (ids: ChartId[]) => {
+    // If nothing is selected ids will be empty array. In this case, set undefined
+    if (ids.length === 0) {
+      setSelectedChartIds(undefined);
+    }
+    setSelectedChartIds(ids);
+    router.push({ query: { chartId: ids } });
+  };
 
-  const VizItemNumber = vizList.length;
+  const filteredVizList = filterVizList(
+    vizList,
+    selectedLuminosities,
+    selectedChartIds
+  );
+  const VizItemNumber = filteredVizList.length;
 
   const siteDescription = (
     <p>
-      Data visualization is an endless world where it's easy to get lost. When
-      you build a new chart it is a good idea to rely on the shoulder of giants.
-      This website helps. It provides many viz examples coming from the people I
-      admire on this virtual planet that we call internet.
+      {"Data visualization is an endless world where it's easy to get lost. When you build a new chart it is a good idea to rely on the shoulder of giants. This website helps. It provides " +
+        VizItemNumber +
+        " viz examples coming from the people I admire on this virtual planet that we call internet."}
     </p>
   );
-
-  // URL parameters = Query strings = Query parameters
-  // You can add them like: http://localhost:3000/?toto=2&titi=3
-  // Then useRouter get them in the "query" property
 
   return (
     <>
@@ -67,8 +81,10 @@ const Home: NextPage = () => {
         <WallFilters
           columnNumber={columnNumber}
           updateColumnNumber={updateColumnNumber}
-          luminosity={luminosity}
+          selectedLuminosities={selectedLuminosities}
           updateLuminosity={updateLuminosity}
+          selectedChartIds={selectedChartIds}
+          updateChartId={updateChartId}
         />
 
         <div
@@ -86,24 +102,18 @@ const Home: NextPage = () => {
                 columnGap: "20px",
               }}
             >
-              {vizList
-                .filter(
-                  (item) =>
-                    luminosity.includes(item.luminosity[0]) ||
-                    luminosity.includes(item.luminosity[1])
-                )
-                .map((vizItem, i) => {
-                  return vizItem.imgZoomed.map((img, j) => {
-                    return (
-                      <MasonryItem
-                        key={j}
-                        vizItem={vizItem}
-                        onClick={() => setSelectedProjectId(i)}
-                        imgId={j}
-                      />
-                    );
-                  });
-                })}
+              {filteredVizList.map((vizItem, i) => {
+                return vizItem.imgZoomed.map((img, j) => {
+                  return (
+                    <MasonryItem
+                      key={j}
+                      vizItem={vizItem}
+                      onClick={() => setSelectedProjectId(i)}
+                      imgId={j}
+                    />
+                  );
+                });
+              })}
             </div>
           </div>
         </div>
@@ -123,3 +133,29 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+const filterVizList = (
+  vizList: VizItem[],
+  luminosity: Luminosity[],
+  selectedChartIds: ChartId[] | undefined
+) => {
+  return (
+    vizList
+      .filter(
+        (item) =>
+          luminosity.includes(item.luminosity[0]) ||
+          luminosity.includes(item.luminosity[1])
+      )
+      // Keep only the selected chartIds. Nothing selected? keep them all.
+      // Remember that a project can be associated with several chartIds
+      .filter((vizItem) => {
+        // nothing selected? chartId is undefined or empty array
+        if (!selectedChartIds || selectedChartIds.length === 0) {
+          return true;
+        }
+        return vizItem.chartId.some((id) => {
+          return selectedChartIds.includes(id);
+        });
+      })
+  );
+};

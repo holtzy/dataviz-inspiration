@@ -353,7 +353,7 @@ export const vizList: VizItem[] = [
         tool: ["javascript", "d3.js"],
         code: "https://github.com/StateOfJS/StateOfJS-2019/blob/master/src/core/charts/tools/ToolsArrowsChart/ToolsArrowsChart.js",
         chartFamily: ["ranking", "distribution"],
-        chartId: ["scatter", "circularPacking"],
+        chartId: ["scatter", "circularPacking", "histogram"],
         luminosity: ["light"],
         interactive: true
     },
