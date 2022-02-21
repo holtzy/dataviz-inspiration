@@ -324,4 +324,36 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: true
     },
+    {
+        title: "Quantifying the evolution of individual scientific impact",
+        date: new Date(2017, 0),
+        author: "Kim Albrecht",
+        url: "sciencepaths.kimalbrecht.com",
+        imgZoomed: ["scientific-impact-zoom.png"],
+        img: "scientific-impact.png",
+        contextDescription: "How does the impact of a scientist's work change over a scientific career? Does impact, arguably the most relevant performance measure, follow predictable patterns? Can we predict the timing of a scientist’s outstanding achievement? Kim checked the evolution of scientific author citation levels to answer those questions.<br/><br/>The result is called the <b>random impact rule</b>: the highest impact paper of a researcher can be anywhere in the sequence of papers!",
+        chartDescription: "Each row is a scientist. From left to right, the first to the last paper of a scientist are arranged, ignoring their timing of publication. The line height shows the number of citation of the paper. The app has nice controls on top, including interactive histograms that I really like.",
+        tool: ["javascript", "d3.js"],
+        code: undefined,
+        chartFamily: ["evolution"],
+        chartId: ["line", "ridgeline"],
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        title: "Rappers, Sorted by Size of Vocabulary",
+        date: new Date(2019, 0),
+        author: "Matthew Daniels",
+        url: "https://pudding.cool/projects/vocabulary/index.html",
+        imgZoomed: ["rapper-lyrics-zoom.png", "rapper-lyrics-2-zoom.png"],
+        img: "rapper-lyrics.png",
+        contextDescription: "A projects that compares the number of unique words used by some of the most famous artists in hip hop using each artist’s first 35,000 lyrics. Jedi Mind Tricks used 6424 unique words, compared to DMX that counts 2936.",
+        chartDescription: "A 1 dimension scatterplot where the X axis shows the number of unique words and each item is an artist, represented by a circle and an avatar. The Y position is random, just using <a href='https://www.data-to-viz.com/caveat/boxplot.html>jittering</a> to avoid overlap.",
+        tool: ["javascript", "d3.js"],
+        code: "https://github.com/StateOfJS/StateOfJS-2019/blob/master/src/core/charts/tools/ToolsArrowsChart/ToolsArrowsChart.js",
+        chartFamily: ["ranking", "distribution"],
+        chartId: ["scatter", "circularPacking"],
+        luminosity: ["light"],
+        interactive: true
+    },
 ]
