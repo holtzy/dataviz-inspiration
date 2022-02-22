@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   // States
-  const [columnNumber, setColumnNumber] = useState<number>(5);
+  const [columnNumber, setColumnNumber] = useState<number>(4);
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
   );
@@ -24,11 +24,12 @@ const Home: NextPage = () => {
     "dark",
   ]);
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
-  console.log("selectedChartIds", selectedChartIds);
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
-    setColumnNumber(Number(router.query.col));
+    if (router.query.col) {
+      setColumnNumber(Number(router.query.col));
+    }
   }, []);
 
   // Functions that changes the state and update URL params
@@ -54,6 +55,7 @@ const Home: NextPage = () => {
     selectedLuminosities,
     selectedChartIds
   );
+
   const VizItemNumber = filteredVizList.length;
 
   const siteDescription = (

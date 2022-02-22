@@ -11,6 +11,9 @@ type ChartIdSelectorProps = {
   updateChartId: (arg: ChartId[] | undefined) => void;
 };
 
+// -
+//  Short list of logos that appear at the top of the wall
+// -
 export const ChartIdSelector = ({
   selectedChartIds,
   updateChartId,
@@ -72,6 +75,9 @@ export const ChartIdSelector = ({
   );
 };
 
+// -
+//  Modal that opens to select/unselect chart
+// -
 type ChartIdSelectorModalProps = {
   setIsModalOpen: (arg: boolean) => void;
   selectedChartIds: ChartId[] | undefined;
@@ -124,7 +130,7 @@ const ChartIdSelectorModal = ({
 
   return (
     <div
-      style={{ backgroundColor: "transparent" }}
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
       className={
         "fixed inset-0 h-screen w-screen z-20 flex justify-center items-center"
       }

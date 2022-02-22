@@ -27,6 +27,7 @@ export const WallFilters = ({
   updateChartId,
   selectedChartIds,
 }: WallFiltersProps) => {
+  console.log("columnNumber", columnNumber);
   const columnNumberSelection = (
     <div className="flex py-2">
       <DeviceMobileIcon
