@@ -357,4 +357,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     },
+    {
+        title: "Shifting Parent Work Hours, Mom vs. Dad",
+        date: new Date(2018, 0),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2016/04/20/parent-work-hours/",
+        imgZoomed: ["parent-work-zoom.png"],
+        img: "parent-work.png",
+        contextDescription: " Is it more common these days for dads to spend time with kids and work around the house? If so, is time spent that much different from decades past? How do dads’ times compare to moms’ times? An answer based on the American Time Use Survey that show hours spent with unpaid housework and childcare against hours spent at a job by moms and dads.",
+        chartDescription: "2 interactive histograms with animated transition between datasets and control buttons on top.",
+        tool: ["javascript", "d3.js"],
+        code: undefined,
+        chartFamily: ["distribution"],
+        chartId: ["histogram"],
+        luminosity: ["light"],
+        interactive: true
+    },
 ]

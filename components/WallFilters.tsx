@@ -8,6 +8,7 @@ import {
 import { ChartId } from "../util/sectionDescription";
 import { Luminosity } from "../util/viz-list";
 import { ChartIdSelectButton } from "./ChartIdSelectButton";
+import { ChartIdSelector } from "./ChartIdSelector";
 
 type WallFiltersProps = {
   columnNumber: number;
@@ -87,12 +88,14 @@ export const WallFilters = ({
   );
 
   const chartIdSelection = (
-    <div className="w-96 text-xs">
-      <ChartIdSelectButton
-        selectedChartIds={selectedChartIds}
-        updateChartId={updateChartId}
-      />
-    </div>
+    // <ChartIdSelectButton
+    //   selectedChartIds={selectedChartIds}
+    //   updateChartId={updateChartId}
+    // />
+    <ChartIdSelector
+      selectedChartIds={selectedChartIds}
+      updateChartId={updateChartId}
+    />
   );
 
   return (

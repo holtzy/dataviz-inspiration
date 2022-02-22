@@ -12,7 +12,6 @@ export type ChartTypesInfo = {
   dataToVizURL: string,
   reactURL: string,
   label: string,
-  isAvailable: boolean;
 }
 
 export const chartTypesInfo: ChartTypesInfo[] = [
@@ -23,7 +22,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/violin.html",
     reactURL: "https://react-graph-gallery.com/violin-plot/",
     label: "Violin",
-    isAvailable: true
   },
   {
     id: "density",
@@ -32,7 +30,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/density.html",
     reactURL: "https://react-graph-gallery.com/density-plot/",
     label: "Density",
-    isAvailable: false
   },
   {
     id: "histogram",
@@ -41,7 +38,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/histogram.html",
     reactURL: "https://react-graph-gallery.com/histogram/",
     label: "Histogram",
-    isAvailable: false
   },
   {
     id: "boxplot",
@@ -50,7 +46,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/caveat/boxplot.html",
     reactURL: "https://react-graph-gallery.com/boxplot/",
     label: "Boxplot",
-    isAvailable: false
   },
   {
     id: "ridgeline",
@@ -59,7 +54,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/ridgeline.html",
     reactURL: "https://react-graph-gallery.com/ridgeline/",
     label: "Ridgeline",
-    isAvailable: false
   },
   {
     id: "scatter",
@@ -68,7 +62,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/scatter.html",
     reactURL: "https://react-graph-gallery.com/scatter-plot/",
     label: "Scatterplot",
-    isAvailable: true
   },
   {
     id: "heatmap",
@@ -77,7 +70,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/heatmap.html",
     reactURL: "https://react-graph-gallery.com/heatmap/",
     label: "Heatmap",
-    isAvailable: false
   },
   {
     id: "correlogram",
@@ -86,7 +78,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/correlogram.html",
     reactURL: "https://react-graph-gallery.com/correlogram/",
     label: "Correlogram",
-    isAvailable: false
   },
   {
     id: "bubble",
@@ -95,7 +86,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/bubble.html",
     reactURL: "https://react-graph-gallery.com/bubble-plot/",
     label: "Bubble",
-    isAvailable: false
   },
   {
     id: "connectedScatter",
@@ -104,7 +94,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/connectedscatter.html",
     reactURL: "https://react-graph-gallery.com/connected-scatter-plot/",
     label: "Connected Scatter",
-    isAvailable: false
   },
   {
     id: "density2d",
@@ -113,7 +102,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/density2d.html",
     reactURL: "https://react-graph-gallery.com/2d-density-plot/",
     label: "2D Density",
-    isAvailable: false
   },
   {
     id: "barplot",
@@ -122,7 +110,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/barplot.html",
     reactURL: "https://react-graph-gallery.com/barplot/",
     label: "Barplot",
-    isAvailable: false
   },
   {
     id: "radar",
@@ -131,7 +118,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/caveat/spider.html",
     reactURL: "https://react-graph-gallery.com/radar-chart/",
     label: "Spider / Radar",
-    isAvailable: false
   },
   {
     id: "wordcloud",
@@ -140,7 +126,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/wordcloud.html",
     reactURL: "https://react-graph-gallery.com/wordcloud/",
     label: "Wordcloud",
-    isAvailable: false
   },
   {
     id: "parallel",
@@ -149,7 +134,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/parallel.html",
     reactURL: "https://react-graph-gallery.com/parallel-plot/",
     label: "Parallel",
-    isAvailable: false
   },
   {
     id: "lollipop",
@@ -158,7 +142,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/lollipop.html",
     reactURL: "https://react-graph-gallery.com/lollipop-plot/",
     label: "Lollipop",
-    isAvailable: false
   },
   {
     id: "circularBarplot",
@@ -167,7 +150,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/circularbarplot.html",
     reactURL: "https://react-graph-gallery.com/circular-barplot/",
     label: "Circular Barplot",
-    isAvailable: false
   },
   {
     id: "treemap",
@@ -176,7 +158,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/treemap.html",
     reactURL: "https://react-graph-gallery.com/treemap/",
     label: "Treemap",
-    isAvailable: false
   },
   {
     id: "venn",
@@ -185,7 +166,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/venn.html",
     reactURL: "https://react-graph-gallery.com/venn-diagram/",
     label: "Venn Diagram",
-    isAvailable: false
   },
   {
     id: "donut",
@@ -194,7 +174,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "",
     reactURL: "https://react-graph-gallery.com/donut-plot/",
     label: "Donut",
-    isAvailable: false
   },
   {
     id: "pie",
@@ -203,7 +182,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/caveat/pie.html",
     reactURL: "https://react-graph-gallery.com/pie-plot/",
     label: "Pie Chart",
-    isAvailable: true
   },
   {
     id: "dendrogram",
@@ -212,7 +190,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/dendrogram.html",
     reactURL: "https://react-graph-gallery.com/dendrogram/",
     label: "Dendrogram",
-    isAvailable: false
   },
   {
     id: "circularPacking",
@@ -221,7 +198,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/circularpacking.html",
     reactURL: "https://react-graph-gallery.com/circular-packing/",
     label: "Circular Packing",
-    isAvailable: true
   },
   {
     id: "line",
@@ -230,7 +206,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/line.html",
     reactURL: "https://react-graph-gallery.com/line-chart/",
     label: "Line chart",
-    isAvailable: false
   },
   {
     id: "area",
@@ -239,7 +214,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/area.html",
     reactURL: "https://react-graph-gallery.com/area-plot/",
     label: "Area chart",
-    isAvailable: false
   },
   {
     id: "stackedArea",
@@ -248,7 +222,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/stackedarea.html",
     reactURL: "https://react-graph-gallery.com/stacked-area-plot/",
     label: "Stacked Area",
-    isAvailable: false
   },
   {
     id: "stream",
@@ -257,16 +230,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/streamgraph.html",
     reactURL: "https://react-graph-gallery.com/streamchart/",
     label: "Streamgraph",
-    isAvailable: false
-  },
-  {
-    id: "timeseries",
-    family: "evolution",
-    logo: "time150",
-    dataToVizURL: "https://www.data-to-viz.com",
-    reactURL: "https://react-graph-gallery.com/timeseries/",
-    label: "Timeseries",
-    isAvailable: false
   },
   {
     id: "map",
@@ -275,7 +238,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/map.html",
     reactURL: "https://react-graph-gallery.com/map/",
     label: "Map",
-    isAvailable: false
   },
   {
     id: "choropleth",
@@ -284,7 +246,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/choropleth.html",
     reactURL: "https://react-graph-gallery.com/choropleth-map/",
     label: "Choropleth",
-    isAvailable: false
   },
   {
     id: "hexbin",
@@ -293,7 +254,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/hexbinmap.html",
     reactURL: "https://react-graph-gallery.com/hexbin-map/",
     label: "Hexbin",
-    isAvailable: false
   },
   {
     id: "cartogram",
@@ -302,7 +262,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/cartogram.html",
     reactURL: "https://react-graph-gallery.com/cartogram/",
     label: "Cartogram",
-    isAvailable: false
   },
   {
     id: "connection",
@@ -311,7 +270,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/story/MapConnection.html",
     reactURL: "https://react-graph-gallery.com/connection-map/",
     label: "Connection",
-    isAvailable: false
   },
   {
     id: "bubbleMap",
@@ -320,7 +278,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/bubblemap.html",
     reactURL: "https://react-graph-gallery.com/bubble-map/",
     label: "Bubble",
-    isAvailable: false
   },
   {
     id: "chordDiagram",
@@ -329,7 +286,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/chord.html",
     reactURL: "https://react-graph-gallery.com/chord-diagram/",
     label: "Chord Diagram",
-    isAvailable: false
   },
   {
     id: "network",
@@ -338,7 +294,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/network.html",
     reactURL: "https://react-graph-gallery.com/network-chart/",
     label: "Network",
-    isAvailable: false
   },
   {
     id: "sankey",
@@ -347,7 +302,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/sankey.html",
     reactURL: "https://react-graph-gallery.com/sankey-diagram/",
     label: "Sankey",
-    isAvailable: false
   },
   {
     id: "arc",
@@ -356,7 +310,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/arc.html",
     reactURL: "https://react-graph-gallery.com/arc-diagram/",
     label: "Arc Diagram",
-    isAvailable: false
   },
   {
     id: "edgeBundling",
@@ -365,52 +318,6 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/edge_bundling.html",
     reactURL: "https://react-graph-gallery.com/hierarchical-edge-bundling/",
     label: "Edge Bundling",
-    isAvailable: false
-  },
-  {
-    id: "colors",
-    family: "general",
-    logo: "Colours150",
-    dataToVizURL: "",
-    reactURL: "https://react-graph-gallery.com/react-colors/",
-    label: "Colors",
-    isAvailable: false
-  },
-  {
-    id: "plotly",
-    family: "general",
-    logo: "Interactive150",
-    dataToVizURL: "",
-    reactURL: "https://react-graph-gallery.com/plotly/",
-    label: "Interactivity",
-    isAvailable: false
-  },
-  {
-    id: "animation",
-    family: "general",
-    logo: "anim150",
-    dataToVizURL: "",
-    reactURL: "https://react-graph-gallery.com/animation/",
-    label: "Animation",
-    isAvailable: false
-  },
-  {
-    id: "cheatSheets",
-    family: "general",
-    logo: "Cheat150",
-    dataToVizURL: "",
-    reactURL: "https://react-graph-gallery.com/cheat-sheets/",
-    label: "Cheat sheets",
-    isAvailable: false
-  },
-  {
-    id: "caveats",
-    family: "general",
-    logo: "Bad150",
-    dataToVizURL: "",
-    reactURL: "https://www.data-to-viz.com/caveats.html",
-    label: "Caveats",
-    isAvailable: false
   },
   {
     id: "3d",
@@ -419,6 +326,5 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "",
     reactURL: "https://react-graph-gallery.com/3d/",
     label: "3D",
-    isAvailable: false
   },
 ];

@@ -1,4 +1,8 @@
-import Select, { StylesConfig } from "react-select";
+import Select, {
+  components,
+  MultiValueGenericProps,
+  StylesConfig,
+} from "react-select";
 import {
   ChartId,
   chartIds,
@@ -20,7 +24,7 @@ const options: Option[] = chartIds.map((id) => {
 
 const styles: StylesConfig<Option, true> = {
   control: (styles) => ({
-    ...styles,
+    ...styles, // styles are the default style provided by react-select. I just override some features
     backgroundColor: "transparent",
     border: "none",
     borderBottom: "solid .5px",
@@ -34,6 +38,15 @@ const styles: StylesConfig<Option, true> = {
     ...styles,
     color: "black",
   }),
+  container: () => ({
+    // highest Div
+    width: "200px",
+    fontSize: 12,
+  }),
+  multiValue: (base) => ({
+    ...base,
+    border: `2px dotted green`,
+  }),
 };
 
 type ChartIdSelectButtonProps = {
@@ -45,6 +58,7 @@ export const ChartIdSelectButton = ({
   selectedChartIds,
   updateChartId,
 }: ChartIdSelectButtonProps) => {
+  // Component used to render a label in the option list of the menu
   const formatOptionLabel = (data: Option) => (
     <div className="flex items-center">
       <div className="relative w-6 h-6 mr-2">
@@ -70,6 +84,11 @@ export const ChartIdSelectButton = ({
       }
       styles={styles}
       minMenuHeight={430}
+      components={{ MultiValueContainer }}
     />
   );
+};
+
+const MultiValueContainer = (props: MultiValueGenericProps<Option>) => {
+  return <components.MultiValueContainer {...props} />;
 };

@@ -40,9 +40,9 @@ const Home: NextPage = () => {
     setLuminosity(luminosity);
     router.push({ query: { luminosity: "toto" } });
   };
-  const updateChartId = (ids: ChartId[]) => {
+  const updateChartId = (ids: ChartId[] | undefined) => {
     // If nothing is selected ids will be empty array. In this case, set undefined
-    if (ids.length === 0) {
+    if (!ids || ids.length === 0) {
       setSelectedChartIds(undefined);
     }
     setSelectedChartIds(ids);
