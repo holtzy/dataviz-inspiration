@@ -27,8 +27,13 @@ const Home: NextPage = () => {
 
   // Update state from URL param if needed once 1st render happened
   useEffect(() => {
+    console.log("router", router.query);
     if (router.query.col) {
       setColumnNumber(Number(router.query.col));
+    }
+    if (router.query.luminosity) {
+      console.log("router.query.luminosity", router.query.luminosity);
+      setLuminosity(router.query.luminosity);
     }
   }, []);
 
@@ -39,7 +44,7 @@ const Home: NextPage = () => {
   };
   const updateLuminosity = (luminosity: Luminosity[]) => {
     setLuminosity(luminosity);
-    router.push({ query: { luminosity: "toto" } });
+    router.push({ query: { luminosity: luminosity } });
   };
   const updateChartId = (ids: ChartId[] | undefined) => {
     // If nothing is selected ids will be empty array. In this case, set undefined
