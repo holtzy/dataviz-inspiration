@@ -9,12 +9,16 @@ import { Luminosity, VizItem, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
 import { WallFilters } from "../components/WallFilters";
 import { ChartId } from "../util/sectionDescription";
+import { filterVizList } from "../util/filterVizList";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
   const router = useRouter();
 
-  // States
+  //
+  // State of the application
+  // Initialized with default values. Those default can be overriden by URL params in the next useEffect
+  //
   const [columnNumber, setColumnNumber] = useState<number>(4);
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null
@@ -25,26 +29,40 @@ const Home: NextPage = () => {
   ]);
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
 
+  //
   // Update state from URL param if needed once 1st render happened
+  // Note that I don't know how to type useRouter, so it just return string or string[] :(
+  //
   useEffect(() => {
-    console.log("router", router.query);
-    if (router.query.col) {
-      setColumnNumber(Number(router.query.col));
+    const { col, luminosity, chartId } = router.query;
+    if (col) {
+      setColumnNumber(Number(col));
     }
-    if (router.query.luminosity) {
-      console.log("router.query.luminosity", router.query.luminosity);
-      setLuminosity(router.query.luminosity);
+    if (luminosity) {
+      const luminosityArray = Array.isArray(luminosity)
+        ? (luminosity as Luminosity[])
+        : ([luminosity] as Luminosity[]);
+      setLuminosity(luminosityArray);
     }
-  }, []);
+    if (chartId) {
+      const chartIdArray = Array.isArray(chartId)
+        ? (chartId as ChartId[])
+        : ([chartId] as ChartId[]);
+      setSelectedChartIds(chartIdArray);
+    }
+  }, [router]);
 
-  // Functions that changes the state and update URL params
+  //
+  // Functions that change the state AND update URL params
+  // Use only them to update state
+  //
   const updateColumnNumber = (colNumber: number) => {
     setColumnNumber(colNumber);
-    router.push({ query: { col: colNumber } });
+    router.push({ query: { ...router.query, col: colNumber } });
   };
   const updateLuminosity = (luminosity: Luminosity[]) => {
     setLuminosity(luminosity);
-    router.push({ query: { luminosity: luminosity } });
+    router.push({ query: { ...router.query, luminosity: luminosity } });
   };
   const updateChartId = (ids: ChartId[] | undefined) => {
     // If nothing is selected ids will be empty array. In this case, set undefined
@@ -52,9 +70,12 @@ const Home: NextPage = () => {
       setSelectedChartIds(undefined);
     }
     setSelectedChartIds(ids);
-    router.push({ query: { chartId: ids } });
+    router.push({ query: { ...router.query, chartId: ids } });
   };
 
+  //
+  // Apply the filters on the viz list!
+  //
   const filteredVizList = filterVizList(
     vizList,
     selectedLuminosities,
@@ -62,7 +83,6 @@ const Home: NextPage = () => {
   );
 
   const VizItemNumber = filteredVizList.length;
-
   const siteDescription = (
     <p>
       {"Data visualization is an endless world where it's easy to get lost. When you build a new chart it is a good idea to rely on the shoulder of giants. This website helps. It provides " +
@@ -140,29 +160,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-const filterVizList = (
-  vizList: VizItem[],
-  luminosity: Luminosity[],
-  selectedChartIds: ChartId[] | undefined
-) => {
-  return (
-    vizList
-      .filter(
-        (item) =>
-          luminosity.includes(item.luminosity[0]) ||
-          luminosity.includes(item.luminosity[1])
-      )
-      // Keep only the selected chartIds. Nothing selected? keep them all.
-      // Remember that a project can be associated with several chartIds
-      .filter((vizItem) => {
-        // nothing selected? chartId is undefined or empty array
-        if (!selectedChartIds || selectedChartIds.length === 0) {
-          return true;
-        }
-        return vizItem.chartId.some((id) => {
-          return selectedChartIds.includes(id);
-        });
-      })
-  );
-};
