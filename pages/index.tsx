@@ -19,10 +19,9 @@ const Home: NextPage = () => {
   // State of the application
   // Initialized with default values. Those default can be overriden by URL params in the next useEffect
   //
+  const [selectedProjectId, setSelectedProjectId] = useState<number>(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnNumber, setColumnNumber] = useState<number>(4);
-  const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
-    null
-  );
   const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
     "light",
     "dark",
@@ -129,13 +128,17 @@ const Home: NextPage = () => {
                 columnGap: "20px",
               }}
             >
+              {/* Each project (i) can have several images associated (j) */}
               {filteredVizList.map((vizItem, i) => {
                 return vizItem.imgZoomed.map((img, j) => {
                   return (
                     <MasonryItem
-                      key={j}
+                      key={i + " " + j}
                       vizItem={vizItem}
-                      onClick={() => setSelectedProjectId(i)}
+                      onClick={() => {
+                        setSelectedProjectId(i);
+                        setIsModalOpen(true);
+                      }}
                       imgId={j}
                     />
                   );
@@ -147,9 +150,10 @@ const Home: NextPage = () => {
       </main>
 
       <VizItemModal
+        isModalOpen={isModalOpen}
         selectedProjectId={selectedProjectId}
         setSelectedProjectId={setSelectedProjectId}
-        closeModal={() => setSelectedProjectId(null)}
+        closeModal={() => setIsModalOpen(false)}
       />
 
       <div className="wrapper">

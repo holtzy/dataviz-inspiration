@@ -10,25 +10,29 @@ import { ChartIdPill } from "./ChartIdPill";
 
 type VizItemModalProps = {
   closeModal: () => void;
-  selectedProjectId: number | null;
+  selectedProjectId: number;
   setSelectedProjectId: (arg: number) => void;
+  isModalOpen: boolean;
 };
 
 export const VizItemModal = ({
+  isModalOpen,
   closeModal,
   selectedProjectId,
   setSelectedProjectId,
 }: VizItemModalProps) => {
-  const slideClass = selectedProjectId ? "" : "-left-full";
+  const slideClass = isModalOpen ? "" : "-left-full";
 
   const keyboardCallback = useCallback(
     (event) => {
       if (event.key === "Escape") {
         closeModal();
       }
+      // Right arrow
       if (event.keyCode == "39") {
         setSelectedProjectId((selectedProjectId || 0) + 1);
       }
+      // Left arrow
       if (event.keyCode == "37") {
         setSelectedProjectId((selectedProjectId || 0) - 1);
       }
@@ -43,13 +47,13 @@ export const VizItemModal = ({
     };
   }, [keyboardCallback]);
 
-  const vizItem = vizList[selectedProjectId || 0];
+  const vizItem = vizList[selectedProjectId];
 
   return (
     <div
       style={{ backgroundColor: "rgba(250,250,250,.99)" }}
       className={
-        "transition-all duration-700  fixed inset-0 h-screen w-screen z-20 flex justify-center items-center " +
+        "transition-all duration-700 fixed inset-0 h-screen w-screen z-20 flex justify-center items-center " +
         slideClass
       }
       onClick={() => closeModal()}
@@ -77,14 +81,10 @@ export const VizItemModal = ({
 
 // ModalContent manages the content
 type ModalContentProps = {
-  vizItem: VizItem | null;
+  vizItem: VizItem;
 };
 
 const ModalContent = (props: ModalContentProps) => {
-  if (!props.vizItem) {
-    return null;
-  }
-
   const allChartIds = props.vizItem.chartId.map((id, i) => {
     return (
       <span key={i} className="mr-1">
