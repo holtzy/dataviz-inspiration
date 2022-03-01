@@ -108,11 +108,13 @@ const ModalContent = (props: ModalContentProps) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative h-full w-2/3 p-10 flex justify-center items-center"
+        className="relative h-full max-h-full w-2/3 p-10 mr-4 flex justify-center items-center overflow-scroll"
       >
         <Image
           placeholder="blur"
           src={require(`../public/img/${props.vizItem.img}`)}
+          layout="fill"
+          objectFit="contain"
         />
       </div>
 

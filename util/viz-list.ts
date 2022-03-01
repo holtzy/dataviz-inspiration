@@ -379,7 +379,7 @@ export const vizList: VizItem[] = [
         author: "Le Monde",
         url: "https://www.lemonde.fr/international/article/2022/02/25/guerre-en-ukraine-l-ordre-de-bataille-de-poutine_6115167_3210.html",
         imgZoomed: ["ukraine-attack-leMonde-zoom.png"],
-        img: "ukraine-attack-leMonde.jpg",
+        img: "ukraine-attack-leMonde.jpeg",
         contextDescription: "On the 24th of February Russian troops invaded Ukraine. <i>Le monde</i> created a full page on the topic based on a map of the area.",
         chartDescription: "Not really dataviz since this map does not display any data. But still interesting for design inspiration, notably for the whole page layout.",
         tool: undefined,

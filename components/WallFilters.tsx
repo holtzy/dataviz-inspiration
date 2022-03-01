@@ -99,11 +99,11 @@ export const WallFilters = ({
   );
 
   return (
-    <div className="wrapper">
-      <div className="flex py-2 ">
-        <div className="w-full flex mr-6">{columnNumberSelection}</div>
-        <div className="w-full flex mr-6 ">{lightVsDarkSelection}</div>
-        <div className="w-full flex mr-6">{chartIdSelection}</div>
+    <div className="sticky bg-white top-0 w-full z-40 flex justify-center">
+      <div className="flex py-2  justify-center">
+        <div className="flex mr-6">{columnNumberSelection}</div>
+        <div className="flex mr-6 ">{lightVsDarkSelection}</div>
+        <div className="flex mr-6 ">{chartIdSelection}</div>
       </div>
     </div>
   );
