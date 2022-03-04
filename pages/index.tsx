@@ -5,12 +5,13 @@ import Footer from "../components/Footer";
 import { MasonryItem } from "../components/MasonryItem";
 import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
-import { Luminosity, VizItem, vizList } from "../util/viz-list";
+import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
 import { WallFilters } from "../components/WallFilters";
 import { ChartId, chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
+import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
@@ -28,13 +29,14 @@ const Home: NextPage = () => {
     "dark",
   ]);
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
+  const [selectedTools, setSelectedTools] = useState<Tool[]>();
 
   //
   // Update state from URL param if needed once 1st render happened
   // Note that I don't know how to type useRouter, so it just return string or string[] :(
   //
   useEffect(() => {
-    const { col, luminosity, chartId } = router.query;
+    const { col, luminosity, chartId, tool } = router.query;
     if (col) {
       setColumnNumber(Number(col));
     }
@@ -50,10 +52,16 @@ const Home: NextPage = () => {
         : ([chartId] as ChartId[]);
       setSelectedChartIds(chartIdArray);
     }
+    if (tool) {
+      const toolArray = Array.isArray(tool)
+        ? (tool as Tool[])
+        : ([tool] as Tool[]);
+      setSelectedTools(toolArray);
+    }
   }, [router]);
 
   //
-  // Functions that change the state AND update URL params
+  // Functions that changes the state AND updates URL params
   // Use only them to update state
   //
   const updateColumnNumber = (colNumber: number) => {
@@ -72,6 +80,14 @@ const Home: NextPage = () => {
     setSelectedChartIds(ids);
     router.push({ query: { ...router.query, chartId: ids } });
   };
+  const updateTool = (tools: Tool[] | undefined) => {
+    // If nothing is selected tools will be empty array. In this case, set undefined
+    if (!tools || tools.length === 0) {
+      setSelectedTools(undefined);
+    }
+    setSelectedTools(tools);
+    router.push({ query: { ...router.query, tool: tools } });
+  };
 
   //
   // Apply the filters on the viz list!
@@ -85,6 +101,7 @@ const Home: NextPage = () => {
   const vizItemNumber = filteredVizList.length;
 
   // When 1 chart type is selected, the website description is updated to show the chart label
+  console.log("selectedChartIds", selectedChartIds);
   const selectedChartLabel =
     selectedChartIds && selectedChartIds.length === 1
       ? chartTypesInfo.filter((chart) => chart.id === selectedChartIds[0])[0]
@@ -113,6 +130,10 @@ const Home: NextPage = () => {
         selectedChartLabel={selectedChartLabel}
       />
 
+      <div className="wrapper">
+        <Navbar />
+      </div>
+
       <main className="flex flex-col items-center">
         <TitleAndDescription
           title="Dataviz Inspiration"
@@ -126,6 +147,8 @@ const Home: NextPage = () => {
           updateLuminosity={updateLuminosity}
           selectedChartIds={selectedChartIds}
           updateChartId={updateChartId}
+          selectedTools={selectedTools}
+          updateTool={updateTool}
         />
 
         <div

@@ -18,7 +18,7 @@ export const AppHeader = ({
 
   return (
     <Head>
-      <title>Dataviz Inspiration</title>
+      <title>Dataviz Inspiration | Hundreds of chart examples</title>
       <meta name="description" content={siteDescription} />
       <link
         rel="icon"
@@ -34,7 +34,10 @@ export const AppHeader = ({
       />
       <meta name="author" content="Yan Holtz" />
 
-      <meta property="og:title" content={"Dataviz Inspiration"} />
+      <meta
+        property="og:title"
+        content={"Dataviz Inspiration | Hundreds of chart examples"}
+      />
       <meta property="og:description" content={siteDescription} />
       <meta
         property="og:image"

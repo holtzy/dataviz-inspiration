@@ -18,7 +18,7 @@ export default function TitleAndDescription({
 }: TitleAndDescription) {
   return (
     <>
-      <div className="w-full pt-1 sm:pt-28 pb-10 px-10 flex flex-col items-center align-center">
+      <div className="w-full  sm:pt-12 pb-10 px-10 flex flex-col items-center align-center">
         <h1 className="text-4xl text-center">{title}</h1>
         <VerticalSeparator />
         <SocialMediaButtons />

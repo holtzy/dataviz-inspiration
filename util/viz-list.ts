@@ -1,6 +1,8 @@
 import { ChartFamily, ChartId } from "./sectionDescription"
 
-export type Tool = "R" | "python" | "tableau" | "data wrapper" | "d3.js" | "react" | "excel" | "javascript"
+export const Tools = ["R" , "python" , "tableau" , "data wrapper" , "d3.js" , "react" , "excel" , "javascript"]
+export type Tool = typeof Tools[number];
+
 export type Luminosity = "light" | "dark"
 
 export type VizItem = {
