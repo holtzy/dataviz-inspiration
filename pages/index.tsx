@@ -8,8 +8,9 @@ import { VizItemModal } from "../components/VizItemModal";
 import { Luminosity, VizItem, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
 import { WallFilters } from "../components/WallFilters";
-import { ChartId } from "../util/sectionDescription";
+import { ChartId, chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
+import { AppHeader } from "../components/AppHeader";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
@@ -81,22 +82,36 @@ const Home: NextPage = () => {
     selectedChartIds
   );
 
-  const VizItemNumber = filteredVizList.length;
+  const vizItemNumber = filteredVizList.length;
+
+  // When 1 chart type is selected, the website description is updated to show the chart label
+  const selectedChartLabel =
+    selectedChartIds && selectedChartIds.length === 1
+      ? chartTypesInfo.filter((chart) => chart.id === selectedChartIds[0])[0]
+          .label
+      : "chart";
+
   const siteDescription = (
     <p>
-      {"Data visualization is an endless world where it's easy to get lost. When you build a new chart it is a good idea to rely on the shoulder of giants. This website helps. It provides " +
-        VizItemNumber +
-        " viz examples coming from the people I admire on this virtual planet that we call internet."}
+      <a href="dataviz-inspiration">Dataviz-inspiration.com</a>
+      <span>
+        {" is the biggest list of " +
+          selectedChartLabel +
+          " examples available on the web. It showcases " +
+          vizItemNumber +
+          " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with "}
+      </span>
+      <a href="https://www.data-to-viz.com">data-to-viz.com</a>
+      <span>{" that shares dataviz best practices."}</span>
     </p>
   );
 
   return (
     <>
-      <Head>
-        <title>Dataviz Inspiration</title>
-        <meta name="description" content="Dataviz Inspiration" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <AppHeader
+        vizItemNumber={vizItemNumber}
+        selectedChartLabel={selectedChartLabel}
+      />
 
       <main className="flex flex-col items-center">
         <TitleAndDescription
