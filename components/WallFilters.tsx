@@ -5,10 +5,11 @@ import {
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/outline";
+import { Switch } from "@radix-ui/react-switch";
 import { ChartId } from "../util/sectionDescription";
 import { Luminosity } from "../util/viz-list";
-import { ChartIdSelectButton } from "./ChartIdSelectButton";
 import { ChartIdSelector } from "./ChartIdSelector";
+import { SwitchButton } from "./SwitchButton";
 
 type WallFiltersProps = {
   columnNumber: number;
@@ -16,7 +17,7 @@ type WallFiltersProps = {
   selectedLuminosities: Luminosity[];
   updateLuminosity: (arg: Luminosity[]) => void;
   selectedChartIds: ChartId[] | undefined;
-  updateChartId: (arg: ChartId[]) => void;
+  updateChartId: (arg: ChartId[] | undefined) => void;
 };
 
 export const WallFilters = ({
@@ -88,15 +89,13 @@ export const WallFilters = ({
   );
 
   const chartIdSelection = (
-    // <ChartIdSelectButton
-    //   selectedChartIds={selectedChartIds}
-    //   updateChartId={updateChartId}
-    // />
     <ChartIdSelector
       selectedChartIds={selectedChartIds}
       updateChartId={updateChartId}
     />
   );
+
+  const hasCodeSelection = <SwitchButton />;
 
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center">
@@ -104,6 +103,7 @@ export const WallFilters = ({
         <div className="flex mr-6">{columnNumberSelection}</div>
         <div className="flex mr-6 ">{lightVsDarkSelection}</div>
         <div className="flex mr-6 ">{chartIdSelection}</div>
+        <div className="flex mr-6 ">{hasCodeSelection}</div>
       </div>
     </div>
   );
