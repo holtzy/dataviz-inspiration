@@ -19,7 +19,7 @@ export const LinkAsButton = ({
   const isOutsideLink = href.startsWith("www") || href.startsWith("http");
 
   let appearance =
-    "font-normal rounded m-1 cursor-pointer border-purple-700 border";
+    "font-normal rounded m-1 cursor-pointer border-purple-700 border ";
 
   if (isFilled) {
     appearance += " bg-purple-500 hover:bg-purple-700 text-white ";
@@ -41,11 +41,15 @@ export const LinkAsButton = ({
   const link = <span className={appearance}>{children}</span>;
 
   if (isOutsideLink) {
-    return <a href={href}>{link}</a>;
+    return (
+      <a className="decoration-transparent" href={href}>
+        {link}
+      </a>
+    );
   } else {
     return (
       <Link href={href} passHref>
-        <a>{link}</a>
+        <a className="decoration-transparent">{link}</a>
       </Link>
     );
   }
