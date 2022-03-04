@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { MasonryItem } from "../components/MasonryItem";
@@ -58,7 +57,7 @@ const Home: NextPage = () => {
         : ([tool] as Tool[]);
       setSelectedTools(toolArray);
     }
-  }, [router]);
+  }, []);
 
   //
   // Functions that changes the state AND updates URL params
@@ -66,11 +65,19 @@ const Home: NextPage = () => {
   //
   const updateColumnNumber = (colNumber: number) => {
     setColumnNumber(colNumber);
-    router.push({ query: { ...router.query, col: colNumber } });
+    router.push({ query: { ...router.query, col: colNumber } }, undefined, {
+      shallow: true,
+    });
   };
   const updateLuminosity = (luminosity: Luminosity[]) => {
     setLuminosity(luminosity);
-    router.push({ query: { ...router.query, luminosity: luminosity } });
+    router.push(
+      { query: { ...router.query, luminosity: luminosity } },
+      undefined,
+      {
+        shallow: true,
+      }
+    );
   };
   const updateChartId = (ids: ChartId[] | undefined) => {
     // If nothing is selected ids will be empty array. In this case, set undefined
@@ -78,15 +85,21 @@ const Home: NextPage = () => {
       setSelectedChartIds(undefined);
     }
     setSelectedChartIds(ids);
-    router.push({ query: { ...router.query, chartId: ids } });
+    router.push({ query: { ...router.query, chartId: ids } }, undefined, {
+      shallow: true,
+    });
   };
   const updateTool = (tools: Tool[] | undefined) => {
     // If nothing is selected tools will be empty array. In this case, set undefined
     if (!tools || tools.length === 0) {
       setSelectedTools(undefined);
+      router.push({ query: { ...router.query, tool: undefined } });
+    } else {
+      setSelectedTools(tools);
+      router.push({ query: { ...router.query, tool: tools } }, undefined, {
+        shallow: true,
+      });
     }
-    setSelectedTools(tools);
-    router.push({ query: { ...router.query, tool: tools } });
   };
 
   //
@@ -101,7 +114,6 @@ const Home: NextPage = () => {
   const vizItemNumber = filteredVizList.length;
 
   // When 1 chart type is selected, the website description is updated to show the chart label
-  console.log("selectedChartIds", selectedChartIds);
   const selectedChartLabel =
     selectedChartIds && selectedChartIds.length === 1
       ? chartTypesInfo.filter((chart) => chart.id === selectedChartIds[0])[0]

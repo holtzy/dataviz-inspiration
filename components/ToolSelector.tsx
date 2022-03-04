@@ -20,6 +20,7 @@ export const ToolSelector = ({
   updateTool,
   selectedTools,
 }: ToolSelectorProps) => {
+  console.log("selectedTools", selectedTools);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // List of logos that have been selected by the user
@@ -28,8 +29,8 @@ export const ToolSelector = ({
       return null;
     }
     return (
-      <div className="mr-1">
-        <Pill key={i} text={tool} />
+      <div key={i} className="mr-1">
+        <Pill text={tool} />
       </div>
     );
   });
@@ -49,14 +50,14 @@ export const ToolSelector = ({
 
   // Message displayed when all chart types are selected
   const allChartMsg = (
-    <div className="flex w-40 items-center">
-      <span className="text-sm text-gray-700 font-light mr-2">all tools</span>
+    <div className="flex items-center">
+      <span className="text-sm text-gray-700 font-light">all tools</span>
     </div>
   );
 
   return (
     <div
-      className="flex w-40 items-center cursor-pointer opacity-80 hover:opacity-100"
+      className="flex max-w-40 items-center cursor-pointer opacity-80 hover:opacity-100 px-2 hover:outline"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >
       {selectedTools ? selectedToolArea : allChartMsg}

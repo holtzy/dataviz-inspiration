@@ -4,6 +4,7 @@ import {
   DesktopComputerIcon,
   SunIcon,
   MoonIcon,
+  XIcon,
 } from "@heroicons/react/outline";
 import { ChartId } from "../util/sectionDescription";
 import { Luminosity, Tool } from "../util/viz-list";
@@ -102,6 +103,23 @@ export const WallFilters = ({
     <ToolSelector selectedTools={selectedTools} updateTool={updateTool} />
   );
 
+  // A "x" button allowing to reset all filters to default (=no filter at all)
+  const resetFilter = (
+    <div className="flex py-2">
+      <XIcon
+        onClick={() => {
+          updateTool(undefined);
+          updateChartId(undefined);
+        }}
+        className={
+          columnNumber === 3
+            ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
+            : "cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40"
+        }
+      />
+    </div>
+  );
+
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center">
       <div className="flex py-2  justify-center">
@@ -109,6 +127,7 @@ export const WallFilters = ({
         <div className="flex mr-6 ">{lightVsDarkSelection}</div>
         <div className="flex mr-6 ">{chartIdSelection}</div>
         <div className="flex mr-6 ">{toolSelection}</div>
+        <div className="flex mr-6 ">{resetFilter}</div>
       </div>
     </div>
   );
