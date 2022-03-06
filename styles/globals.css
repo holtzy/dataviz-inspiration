@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Main branding color of the website */
+:root {
+  /* Tailwind css pink-400 */
+  --brand-light: #f472b6;
+    /* Tailwind css pink-800 */
+  --brand-main: #9d174d;
+  /* Tailwind css pink-900 */
+  --brand-dark: #831843;
+}
+
 /* Each section has a specific color */
 .distribution{
   color: #e0ac2b;
@@ -82,17 +92,6 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   grid-column: 1 / 4;
 }
-/* body {
-  background-color: rgb(245, 245, 245);
-} */
-
-/*
-  CSS for the images (not possible with tailwind since complicated selector
-*/
-/* .image-wrapper > span {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 20px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-} */
 
 
 /* ---------- Horizontal separator ----------------- */
@@ -115,7 +114,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ---------- General style sheet ----------------- */
 a {
-  color: #a53253;
+  color: var(--brand-main);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
