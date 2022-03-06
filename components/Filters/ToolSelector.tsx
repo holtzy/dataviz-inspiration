@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { ChartId, chartTypesInfo } from "../util/sectionDescription";
-import { Tool, Tools } from "../util/viz-list";
-import { Pill } from "./Pill";
-import SectionLogo from "./SectionLogo";
+import { Tool, Tools } from "../../util/viz-list";
+import { Pill } from "../Pill";
 
 // The selected charts appear in the filter area
 // We can not display all of them. Let's keep only the n first ones.
@@ -57,7 +55,7 @@ export const ToolSelector = ({
 
   return (
     <div
-      className="flex max-w-40 items-center cursor-pointer opacity-80 hover:opacity-100 px-2 hover:outline"
+      className="flex max-w-40 items-center cursor-pointer opacity-80 hover:opacity-100 px-2"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >
       {selectedTools ? selectedToolArea : allChartMsg}

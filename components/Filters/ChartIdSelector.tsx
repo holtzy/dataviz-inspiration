@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ChartId, chartTypesInfo } from "../util/sectionDescription";
-import SectionLogo from "./SectionLogo";
+import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
+import SectionLogo from "../SectionLogo";
 
 // The selected charts appear in the filter area
 // We can not display all of them. Let's keep only the n first ones.
