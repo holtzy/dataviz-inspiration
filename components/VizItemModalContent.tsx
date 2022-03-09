@@ -27,12 +27,16 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
 
   return (
     <div
-      style={{ maxHeight: 700, maxWidth: 1200 }}
-      className="h-full w-full flex items-center justify-around "
+      style={{
+        maxHeight: 1200,
+        maxWidth: 1200,
+        overflow: "scroll",
+      }}
+      className="h-full w-full md:grid md:grid-cols-3 md:gap-5"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative h-full max-h-full w-2/3 p-10 mr-4 flex justify-center items-center overflow-scroll"
+        className="h-full md:col-span-2 relative flex justify-center items-center"
       >
         <Image
           placeholder="blur"
@@ -42,7 +46,10 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
         />
       </div>
 
-      <div onClick={(e) => e.stopPropagation()} className="w-1/3 p-2">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="p-2 flex flex-col justify-center"
+      >
         <p className="font-bold">{props.vizItem.title}</p>
         <p>
           <span className="text-xs font-extralight">by </span>
