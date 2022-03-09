@@ -79,7 +79,7 @@ export const ChartIdSelectorModal = ({
       <div className="mb-4">
         <span className={family + " capitalize"}>{family}</span>
         <hr className="opacity-60" />
-        <div className="flex justify-start flex-wrap mt-2">
+        <div className="flex justify-start flex-no-wrap mt-2">
           {logoList(family)}
         </div>
       </div>
@@ -97,7 +97,7 @@ export const ChartIdSelectorModal = ({
 
   /* At the very top, X to close the modal (important for mobile) */
   const topCross = (
-    <div className="absolute top-2 right-2">
+    <div className="absolute top-2 right-10 flex justify-end items-center mt-2">
       <XIcon
         onClick={() => {
           setIsModalOpen(false);
@@ -109,7 +109,7 @@ export const ChartIdSelectorModal = ({
 
   /* At the very top, X to close the modal (important for mobile) */
   const selectAllButton = (
-    <div className="absolute bottom-2 right-2">
+    <div className="absolute bottom-2 right-10">
       <span
         onClick={() => {
           updateChartId(undefined);
@@ -124,7 +124,7 @@ export const ChartIdSelectorModal = ({
   return (
     // This div takes the whole screen. It allows to close the modal when user clicks outside the content
     <div
-      style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.95)" }}
       className={
         "fixed inset-0 h-screen w-screen z-20 flex justify-center items-center"
       }
@@ -133,7 +133,7 @@ export const ChartIdSelectorModal = ({
       {/* This div is the content with white background */}
       <div
         onClick={(event) => event.stopPropagation()}
-        className="flex flex-col justify-start p-10 max-w-lg bg-white rounded-md border drop-shadow-md cursor-default "
+        className="flex flex-col p-14 max-w-lg bg-white rounded-md border drop-shadow-md cursor-default "
       >
         {topCross}
         {chartFamilies.map((family) => familySection(family))}

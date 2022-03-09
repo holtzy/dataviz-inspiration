@@ -49,7 +49,9 @@ export const ToolSelector = ({
   // Message displayed when all chart types are selected
   const allChartMsg = (
     <div className="flex items-center">
-      <span className="text-sm text-gray-700 font-light">all tools</span>
+      <span className="text-sm text-gray-700 font-light truncate">
+        all tools
+      </span>
     </div>
   );
 

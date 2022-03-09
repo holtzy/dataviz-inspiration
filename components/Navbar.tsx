@@ -29,7 +29,7 @@ export default function Navbar() {
           </div>
 
           {/* Related websites on the right */}
-          <div className="">
+          <div>
             {/* Profile dropdown */}
             <Menu as="div" className="ml-3 relative">
               <div>
@@ -49,58 +49,22 @@ export default function Navbar() {
                 leaveTo="transform opacity-0 scale-95"
               >
                 <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <Menu.Item>
-                    {({ active }) => (
-                      <a
-                        href="https://www.data-to-viz.com"
-                        className={classNames(
-                          active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700 decoration-transparent"
-                        )}
-                      >
-                        Data to viz
-                      </a>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <a
-                        href="https://www.r-graph-gallery.com"
-                        className={classNames(
-                          active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700 decoration-transparent"
-                        )}
-                      >
-                        R Graph Gallery
-                      </a>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <a
-                        href="https://www.python-graph-gallery.com"
-                        className={classNames(
-                          active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700 decoration-transparent"
-                        )}
-                      >
-                        Python Graph Gallery
-                      </a>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <a
-                        href="https://www.d3-graph-gallery.com"
-                        className={classNames(
-                          active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700 decoration-transparent"
-                        )}
-                      >
-                        D3.js Graph Gallery
-                      </a>
-                    )}
-                  </Menu.Item>
+                  <MenuItem
+                    url="https://www.data-to-viz.com"
+                    label="Data to viz"
+                  />
+                  <MenuItem
+                    url="https://www.r-graph-gallery.com"
+                    label="R Graph Gallery"
+                  />
+                  <MenuItem
+                    url="https://www.python-graph-gallery.com"
+                    label="Python Graph Gallery"
+                  />
+                  <MenuItem
+                    url="https://www.d3-graph-gallery.com"
+                    label="D3.js Graph Gallery"
+                  />
                 </Menu.Items>
               </Transition>
             </Menu>
@@ -111,3 +75,25 @@ export default function Navbar() {
     </>
   );
 }
+
+type MenuItemProps = {
+  url: string;
+  label: string;
+};
+const MenuItem = ({ url, label }: MenuItemProps) => {
+  return (
+    <Menu.Item>
+      {({ active }) => (
+        <a
+          href={url}
+          className={classNames(
+            active ? "bg-gray-100" : "",
+            "block px-4 py-2 text-sm text-gray-700 decoration-transparent"
+          )}
+        >
+          {label}
+        </a>
+      )}
+    </Menu.Item>
+  );
+};
