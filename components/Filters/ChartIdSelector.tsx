@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
 import SectionLogo from "../SectionLogo";
+import { ChartIdSelectorModal } from "./ChartIdSelectorModal";
 
 // The selected charts appear in the filter area
 // We can not display all of them. Let's keep only the n first ones.
@@ -71,83 +72,6 @@ export const ChartIdSelector = ({
           updateChartId={updateChartId}
         />
       )}
-    </div>
-  );
-};
-
-// -
-//  Modal that opens to select/unselect chart
-// -
-type ChartIdSelectorModalProps = {
-  setIsModalOpen: (arg: boolean) => void;
-  selectedChartIds: ChartId[] | undefined;
-  updateChartId: (arg: ChartId[] | undefined) => void;
-};
-
-const ChartIdSelectorModal = ({
-  setIsModalOpen,
-  selectedChartIds,
-  updateChartId,
-}: ChartIdSelectorModalProps) => {
-  const [name, setName] = useState<string | undefined>(undefined);
-
-  const logoList = chartTypesInfo.map((chart, i) => {
-    const isCurrentlySelected =
-      selectedChartIds?.includes(chart.id) || !selectedChartIds;
-    return (
-      <div
-        style={{ width: 45, height: 45 }}
-        className={"relative my-2 mx-1 cursor-pointer opacity-100"}
-        key={i}
-        onMouseEnter={() => setName(chart.label)}
-        onMouseLeave={() => setName(undefined)}
-        onClick={(event) => {
-          if (!selectedChartIds) {
-            updateChartId([chart.id]);
-          } else {
-            if (isCurrentlySelected) {
-              const remainingIds = selectedChartIds.filter(
-                (item) => item !== chart.id
-              );
-              if (remainingIds.length === 0) {
-                updateChartId(undefined);
-              } else {
-                updateChartId(remainingIds);
-              }
-            } else {
-              updateChartId([...selectedChartIds, chart.id]);
-            }
-          }
-          event.stopPropagation();
-        }}
-      >
-        <span className={isCurrentlySelected ? "opacity-100" : "opacity-30"}>
-          <SectionLogo chartLogo={chart.logo} />
-        </span>
-      </div>
-    );
-  });
-
-  return (
-    <div
-      style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
-      className={
-        "fixed inset-0 h-screen w-screen z-20 flex justify-center items-center"
-      }
-      onClick={() => setIsModalOpen(false)}
-    >
-      <div className="flex flex-col max-w-lg bg-white rounded-md border drop-shadow-md ">
-        <div className="flex justify-around flex-wrap p-16">{logoList}</div>
-        <div className="absolute bottom-2 flex justify-center w-full">
-          {name ? (
-            <span className="text-gray-700 text-sm font-light">{name}</span>
-          ) : (
-            <span className="text-gray-700 text-sm italic font-extralight">
-              {"select as many chart types as you want"}
-            </span>
-          )}
-        </div>
-      </div>
     </div>
   );
 };

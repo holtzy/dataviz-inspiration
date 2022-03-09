@@ -3,7 +3,8 @@ export type ChartLogo = "Violin150" | "Density150" | "Histogram150" | "Box1150" 
 export const chartIds = ["violin" , "density" , "histogram" , "boxplot" , "ridgeline" , "scatter" , "heatmap" , "correlogram" , "bubble" , "connectedScatter" , "density2d" , "barplot" , "radar" , "wordcloud" , "parallel" , "lollipop" , "circularBarplot" , "treemap" , "venn" , "donut" , "pie" , "dendrogram" , "circularPacking" , "line" , "area" , "stackedArea" , "stream" , "timeseries" , "map" , "choropleth" , "hexbin" , "cartogram" , "connection" , "bubbleMap" , "chordDiagram" , "network" , "sankey" , "arc" , "edgeBundling" , "colors" , "plotly" , "animation" , "cheatSheets" , "caveats" , "3d"]
 export type ChartId = typeof chartIds[number];
 
-export type ChartFamily = "distribution" | "correlation" | "evolution" | "ranking" | "partOfAWhole" | "general" | "flow" | "map"
+export const chartFamilies = ["distribution" , "correlation" , "evolution" , "ranking" , "partOfAWhole"  , "flow" , "map"]
+export type ChartFamily =typeof chartFamilies[number];
 
 export type ChartTypesInfo = {
   id: ChartId,
