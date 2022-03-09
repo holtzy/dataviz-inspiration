@@ -1,3 +1,4 @@
+import { XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import {
   chartFamilies,
@@ -8,7 +9,7 @@ import {
 import SectionLogo from "../SectionLogo";
 
 // -
-//  Modal that opens to select/unselect chart
+//  Modal that allows to select/unselect chart types
 // -
 type ChartIdSelectorModalProps = {
   setIsModalOpen: (arg: boolean) => void;
@@ -21,10 +22,10 @@ export const ChartIdSelectorModal = ({
   selectedChartIds,
   updateChartId,
 }: ChartIdSelectorModalProps) => {
-  // name of the chart type that is hovered over
+  // name of the chart type that is hovered over (appears at the very bottom of the modal)
   const [name, setName] = useState<string | undefined>(undefined);
 
-  // A list of all logos of a specific family
+  // A list of all logos for a specific family
   const logoList = (family: ChartFamily) => {
     return chartTypesInfo
       .filter((chart) => chart.family === family)
@@ -40,6 +41,7 @@ export const ChartIdSelectorModal = ({
               const remainingIds = selectedChartIds.filter(
                 (item) => item !== chart.id
               );
+              // If no more chart are selected, send undefined to select them all
               if (remainingIds.length === 0) {
                 updateChartId(undefined);
               } else {
@@ -71,7 +73,7 @@ export const ChartIdSelectorModal = ({
       });
   };
 
-  //   For a familySection, display a title, an horizontal separator and the logos
+  // For a familySection, display a title, an horizontal separator and the logos
   const familySection = (family: ChartFamily) => {
     return (
       <div className="mb-4">
@@ -93,6 +95,32 @@ export const ChartIdSelectorModal = ({
     </div>
   );
 
+  /* At the very top, X to close the modal (important for mobile) */
+  const topCross = (
+    <div className="absolute top-2 right-2">
+      <XIcon
+        onClick={() => {
+          setIsModalOpen(false);
+        }}
+        className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40"
+      />
+    </div>
+  );
+
+  /* At the very top, X to close the modal (important for mobile) */
+  const selectAllButton = (
+    <div className="absolute bottom-2 right-2">
+      <span
+        onClick={() => {
+          updateChartId(undefined);
+        }}
+        className="text-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
+      >
+        {"select all"}
+      </span>
+    </div>
+  );
+
   return (
     // This div takes the whole screen. It allows to close the modal when user clicks outside the content
     <div
@@ -105,10 +133,12 @@ export const ChartIdSelectorModal = ({
       {/* This div is the content with white background */}
       <div
         onClick={(event) => event.stopPropagation()}
-        className="flex flex-col justify-start p-10 max-w-lg bg-white rounded-md border drop-shadow-md "
+        className="flex flex-col justify-start p-10 max-w-lg bg-white rounded-md border drop-shadow-md cursor-default "
       >
+        {topCross}
         {chartFamilies.map((family) => familySection(family))}
         {hoveredChartName}
+        {selectAllButton}
       </div>
     </div>
   );
