@@ -439,4 +439,36 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        title: "Decline in sex",
+        date: new Date(2019, 3),
+        author: "Washington Post",
+        url: "https://www.washingtonpost.com/business/2019/03/29/share-americans-not-having-sex-has-reached-record-high/",
+        imgZoomed: ["decline-sex-zoom.png"],
+        img: "decline-sex.png",
+        contextDescription: "The share of Americans not having sex has reached a record high. The washington post made a full article on the topic, explaining why this is mainly due to young people which sounds scary to me.",
+        chartDescription: "A simple timeseries line chart showing the evolution of 2 groups (male and female). Note the on-chart annotation of both the group names and the current values.",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["evolution"],
+        chartId: ["line"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Student exchanges in Europe",
+        date: new Date(2022, 2),
+        author: "Benjamin Nowak",
+        url: "https://www.washingtonpost.com/business/2019/03/29/share-americans-not-having-sex-has-reached-record-high/",
+        imgZoomed: ["student-exchance-europe-zoom.png"],
+        img: "student-exchance-europe.png",
+        contextDescription: "Erasmus is an exchange program allowing students to study abroad for a semester or more. This figure allows to see which countries are the most involved.",
+        chartDescription: "The chart is a mirror barplot, showing both the number of outgoing and incoming students. I love the general layout and visual, even though I'm not sure about the opacity used to encode the year.",
+        tool: ["R"],
+        code: "https://t.co/LgnyJ3w63Y",
+        chartFamily: ["ranking"],
+        chartId: ["barplot"],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]

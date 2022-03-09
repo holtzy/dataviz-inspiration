@@ -7,7 +7,7 @@
   /* Tailwind css pink-400 */
   --brand-light: #f472b6;
     /* Tailwind css pink-800 */
-  --brand-main: #9d174d;
+  --brand: #9d174d;
   /* Tailwind css pink-900 */
   --brand-dark: #831843;
 }
@@ -114,7 +114,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ---------- General style sheet ----------------- */
 a {
-  color: var(--brand-main);
+  color: var(--brand);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
