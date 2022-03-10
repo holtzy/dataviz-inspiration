@@ -124,7 +124,7 @@ export const ChartIdSelectorModal = ({
   return (
     // This div takes the whole screen. It allows to close the modal when user clicks outside the content
     <div
-      style={{ backgroundColor: "rgba(255, 255, 255, 0.95)" }}
+      style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
       className={
         "fixed inset-0 h-screen w-screen z-20 flex justify-center items-center"
       }
@@ -133,7 +133,7 @@ export const ChartIdSelectorModal = ({
       {/* This div is the content with white background */}
       <div
         onClick={(event) => event.stopPropagation()}
-        className="flex flex-col p-14 max-w-lg bg-white rounded-md border drop-shadow-md cursor-default "
+        className="p-14 max-w-lg bg-white rounded-md md:border md:drop-shadow-md cursor-default"
       >
         {topCross}
         {chartFamilies.map((family) => familySection(family))}

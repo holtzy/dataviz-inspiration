@@ -35,16 +35,7 @@ const Home: NextPage = () => {
   // Note that I don't know how to type useRouter, so it just return string or string[] :(
   //
   useEffect(() => {
-    const { col, luminosity, chartId, tool } = router.query;
-    if (col) {
-      setColumnNumber(Number(col));
-    }
-    if (luminosity) {
-      const luminosityArray = Array.isArray(luminosity)
-        ? (luminosity as Luminosity[])
-        : ([luminosity] as Luminosity[]);
-      setLuminosity(luminosityArray);
-    }
+    const { chartId, tool } = router.query;
     if (chartId) {
       const chartIdArray = Array.isArray(chartId)
         ? (chartId as ChartId[])
@@ -65,19 +56,9 @@ const Home: NextPage = () => {
   //
   const updateColumnNumber = (colNumber: number) => {
     setColumnNumber(colNumber);
-    router.push({ query: { ...router.query, col: colNumber } }, undefined, {
-      shallow: true,
-    });
   };
   const updateLuminosity = (luminosity: Luminosity[]) => {
     setLuminosity(luminosity);
-    router.push(
-      { query: { ...router.query, luminosity: luminosity } },
-      undefined,
-      {
-        shallow: true,
-      }
-    );
   };
   const updateChartId = (ids: ChartId[] | undefined) => {
     // If nothing is selected ids will be empty array. In this case, set undefined
