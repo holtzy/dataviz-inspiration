@@ -1,10 +1,10 @@
 export type ChartLogo = "Violin150" | "Density150" | "Histogram150" | "Box1150" | "Joyplot150" | "ScatterPlot150" | "Heatmap150" | "Correlogram150" | "BubblePlot150" | "ScatterConnected150" | "Bar150" | "Spider150" | "Wordcloud150" | "Parallel1150" | "Lollipop150" | "CircularBarplot150" | "Tree150" | "Venn150" | "Doughnut150" | "Pie150" | "Dendrogram150" | "CircularPacking150" | "Line150" | "Area150" | "StackedArea150" | "Stream150" | "time150" | "Map150" | "Choropleth150" | "MapHexbin150" | "Cartogram150" | "ConnectedMap150" | "BubbleMap150" | "Chord150" | "Network150" | "Sankey150" | "Arc150" | "Bundle150" | "Colours150" | "Interactive150" | "anim150" | "Cheat150" | "Bad150" | "3d150" | "2dDensity150"
 
-export const chartIds = ["violin" , "density" , "histogram" , "boxplot" , "ridgeline" , "scatter" , "heatmap" , "correlogram" , "bubble" , "connectedScatter" , "density2d" , "barplot" , "radar" , "wordcloud" , "parallel" , "lollipop" , "circularBarplot" , "treemap" , "venn" , "donut" , "pie" , "dendrogram" , "circularPacking" , "line" , "area" , "stackedArea" , "stream" , "timeseries" , "map" , "choropleth" , "hexbin" , "cartogram" , "connection" , "bubbleMap" , "chordDiagram" , "network" , "sankey" , "arc" , "edgeBundling" , "colors" , "plotly" , "animation" , "cheatSheets" , "caveats" , "3d"]
+export const chartIds = ["violin" , "density" , "histogram" , "boxplot" , "ridgeline" , "scatter" , "heatmap" , "correlogram" , "bubble" , "connectedScatter" , "density2d" , "barplot" , "radar" , "wordcloud" , "parallel" , "lollipop" , "circularBarplot" , "treemap" , "venn" , "donut" , "pie" , "dendrogram" , "circularPacking" , "line" , "area" , "stackedArea" , "stream" , "timeseries" , "map" , "choropleth" , "hexbin" , "cartogram" , "connection" , "bubbleMap" , "chordDiagram" , "network" , "sankey" , "arc" , "edgeBundling" , "colors" , "plotly" , "animation" , "cheatSheets" , "caveats" , "3d"] as const
 export type ChartId = typeof chartIds[number];
 
-export const chartFamilies = ["distribution" , "correlation" , "evolution" , "ranking" , "partOfAWhole"  , "flow" , "map"]
-export type ChartFamily =typeof chartFamilies[number];
+export const chartFamilies = ["distribution" , "correlation" , "evolution" , "ranking" , "partOfAWhole"  , "flow" , "map"] as const
+export type ChartFamily = typeof chartFamilies[number];
 
 export type ChartTypesInfo = {
   id: ChartId,
@@ -319,13 +319,5 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/edge_bundling.html",
     reactURL: "https://react-graph-gallery.com/hierarchical-edge-bundling/",
     label: "Edge Bundling",
-  },
-  {
-    id: "3d",
-    family: "general",
-    logo: "3d150",
-    dataToVizURL: "",
-    reactURL: "https://react-graph-gallery.com/3d/",
-    label: "3D",
-  },
+  }
 ];

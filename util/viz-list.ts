@@ -471,4 +471,36 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        title: "Sentiment in Russian tweets",
+        date: new Date(2022, 2),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2022/03/12/the-war-in-ukraine-has-made-russian-social-media-users-glum",
+        imgZoomed: ["sentiment-russia-twitter-zoom.png"],
+        img: "sentiment-russia-twitter.png",
+        contextDescription: "The war in Ukraine has made Russian social-media users glum. Posts on Twitter became far sadder than at the start of the covid-19 pandemic. A proof using sentiment analysis.",
+        chartDescription: "A timeseries where evolution is represented using circles (average per day) and a line (7-day average). Having both information on the same figure is truly insightful. And the annotation of the outlier weeks help understand the full story.",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["evolution"],
+        chartId: ["line"],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "A world of language",
+        date: new Date(2021, 8),
+        author: "South China Morning Post",
+        url: "https://www.scmp.com/infographics/article/1810040/infographic-world-languages",
+        imgZoomed: ["world-of-language-zoom.png"],
+        img: "world-of-language.png",
+        contextDescription: "A deep look into the 7102 known languages alive in th world. What are the main ones? In which country are they spoken?",
+        chartDescription: "A circular Voronoi diagram showing the importance of each language. So much information packed on the same figure, in a very eye-catching style.",
+        tool: undefined,
+        code: undefined,
+        chartFamily: ["partOfAWhole"],
+        chartId: ["circularPacking"],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
