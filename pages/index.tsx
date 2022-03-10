@@ -64,17 +64,20 @@ const Home: NextPage = () => {
     // If nothing is selected ids will be empty array. In this case, set undefined
     if (!ids || ids.length === 0) {
       setSelectedChartIds(undefined);
+      router.replace(router.query, undefined);
+    } else {
+      setSelectedChartIds(ids);
+      router.push({ query: { ...router.query, chartId: ids } }, undefined, {
+        shallow: true,
+      });
     }
-    setSelectedChartIds(ids);
-    router.push({ query: { ...router.query, chartId: ids } }, undefined, {
-      shallow: true,
-    });
   };
   const updateTool = (tools: Tool[] | undefined) => {
     // If nothing is selected tools will be empty array. In this case, set undefined
     if (!tools || tools.length === 0) {
       setSelectedTools(undefined);
-      router.push({ query: { ...router.query, tool: undefined } });
+      // router.push({ query: { ...router.query, tool: undefined } });
+      // router.replace("tool", undefined);
     } else {
       setSelectedTools(tools);
       router.push({ query: { ...router.query, tool: tools } }, undefined, {
