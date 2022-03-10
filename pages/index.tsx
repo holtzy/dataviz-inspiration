@@ -171,7 +171,7 @@ const Home: NextPage = () => {
           }}
         >
           <div className="wrapper">
-            <div className={"gap-2 sm:gap-4 columns-" + columnNumber}>
+            <div style={{ columns: columnNumber }} className={"gap-2 sm:gap-4"}>
               {/* Each project (i) can have several images associated (j) */}
               {filteredVizList.map((vizItem, i) => {
                 return vizItem.imgZoomed.map((img, j) => {

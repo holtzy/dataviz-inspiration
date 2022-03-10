@@ -18,7 +18,6 @@ export const ToolSelector = ({
   updateTool,
   selectedTools,
 }: ToolSelectorProps) => {
-  console.log("selectedTools", selectedTools);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // List of logos that have been selected by the user
