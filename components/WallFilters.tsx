@@ -56,7 +56,11 @@ export const WallFilters = ({
 
       {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
       <FilterWrapper>
-        <FilterReset updateTool={updateTool} updateChartId={updateChartId} />
+        <FilterReset
+          updateTool={updateTool}
+          updateChartId={updateChartId}
+          updateLuminosity={updateLuminosity}
+        />
       </FilterWrapper>
     </div>
   );

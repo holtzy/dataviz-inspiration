@@ -1,20 +1,23 @@
 import { XIcon } from "@heroicons/react/outline";
 import { ChartId } from "../../util/sectionDescription";
-import { Tool } from "../../util/viz-list";
+import { Luminosity, Tool } from "../../util/viz-list";
 
 type FilterResetProps = {
   updateTool: (arg: Tool[] | undefined) => void;
   updateChartId: (arg: ChartId[] | undefined) => void;
+  updateLuminosity: (arg: Luminosity[]) => void;
 };
 
 export const FilterReset = ({
   updateTool,
   updateChartId,
+  updateLuminosity,
 }: FilterResetProps) => {
   return (
     <div className="flex">
       <XIcon
         onClick={() => {
+          updateLuminosity(["dark", "light"]);
           updateTool(undefined);
           updateChartId(undefined);
         }}
