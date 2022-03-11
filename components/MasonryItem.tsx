@@ -30,7 +30,7 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
         />
 
         {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}
-        <div className="rounded-md absolute transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 flex items-center justify-center mb-1">
+        <div className="hidden sm:flex absolute rounded-md transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 items-center justify-center mb-1">
           <div className="absolute pr-10 top-12 left-5">
             <p className="text-md text-white font-bold">{vizItem.title}</p>
             <p className="text-md text-white italic opacity-75 mt-2">

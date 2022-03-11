@@ -88,39 +88,48 @@ export const ChartIdSelectorModal = ({
     );
   };
 
-  /* Display the name of the currently hovered chart type */
-  const hoveredChartName = (
-    <div className="absolute bottom-2">
-      <span className="text-gray-700 text-sm italic font-extralight">
-        {name || "Click on a chart to filter"}
-      </span>
-    </div>
-  );
-
   /* At the very top, X to close the modal (important for mobile) */
   const topCross = (
-    <div className="absolute top-2 right-10 flex justify-end items-center mt-2">
-      <XIcon
+    <div className="flex justify-end items-center ">
+      <div
+        className="p-4 cursor-pointer"
         onClick={() => {
           setIsModalOpen(false);
         }}
-        className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40"
-      />
+      >
+        <XIcon className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40" />
+      </div>
     </div>
+  );
+
+  /* Display the name of the currently hovered chart type */
+  const hoveredChartName = (
+    <span className="text-gray-700 text-xs italic font-extralight">
+      {name || "Click a chart to filter"}
+    </span>
   );
 
   /* At the very top, X to close the modal (important for mobile) */
   const selectAllButton = (
-    <div className="absolute bottom-2 right-10">
-      <span
-        onClick={() => {
-          updateChartId(undefined);
-        }}
-        className="text-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
-      >
-        {"select all"}
-      </span>
-    </div>
+    <span
+      onClick={() => {
+        updateChartId(undefined);
+      }}
+      className="text-brand text-sm mr-1 cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
+    >
+      {"select all"}
+    </span>
+  );
+
+  const validateButton = (
+    <span
+      onClick={() => {
+        setIsModalOpen(false);
+      }}
+      className="text-white bg-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-80 hover:opacity-100"
+    >
+      {"validate"}
+    </span>
   );
 
   return (
@@ -135,12 +144,17 @@ export const ChartIdSelectorModal = ({
       {/* This div is the content with white background */}
       <div
         onClick={(event) => event.stopPropagation()}
-        className="p-14 max-w-lg bg-white rounded-md md:border md:drop-shadow-md cursor-default"
+        className="px-8 py-8 overflow-scroll max-h-screen max-w-lg bg-white rounded-md md:border md:drop-shadow-md cursor-default"
       >
         {topCross}
         {chartFamilies.map((family) => familySection(family))}
-        {hoveredChartName}
-        {selectAllButton}
+        <div className="flex justify-between items-center mt-14">
+          {hoveredChartName}
+          <div>
+            {selectAllButton}
+            {validateButton}
+          </div>
+        </div>
       </div>
     </div>
   );

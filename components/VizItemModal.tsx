@@ -78,7 +78,7 @@ export const VizItemModal = ({
       <VizItemModalContent projectId={projectId} imgId={imgId} />
 
       {/* Shortcuts */}
-      <div className="absolute bottom-4 right-4 flex">
+      <div className="absolute bottom-4 right-4 sm:flex hidden ">
         <ShortCut buttonText="Esc" text="close the modal" onClick={() => ""} />
         <ShortCut buttonText="&rarr;" text="next" onClick={() => ""} />
         <ShortCut buttonText="&larr;" text="previous" onClick={() => ""} />
