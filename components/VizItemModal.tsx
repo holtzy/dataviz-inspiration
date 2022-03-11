@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect } from "react";
+import { Project } from "../pages";
 import { vizList } from "../util/viz-list";
 import { VizItemModalContent } from "./VizItemModalContent";
 
@@ -7,17 +8,19 @@ import { VizItemModalContent } from "./VizItemModalContent";
 
 type VizItemModalProps = {
   closeModal: () => void;
-  selectedProjectId: number;
-  setSelectedProjectId: (arg: number) => void;
+  selectedProject: Project;
+  setSelectedProject: (arg: Project) => void;
   isModalOpen: boolean;
 };
 
 export const VizItemModal = ({
   isModalOpen,
   closeModal,
-  selectedProjectId,
-  setSelectedProjectId,
+  selectedProject,
+  setSelectedProject,
 }: VizItemModalProps) => {
+  const { projectId, imgId } = selectedProject;
+
   const slideClass = isModalOpen ? "" : "-left-full";
 
   const keyboardCallback = useCallback(
@@ -27,14 +30,14 @@ export const VizItemModal = ({
       }
       // Right arrow
       if (event.keyCode == "39") {
-        setSelectedProjectId((selectedProjectId || 0) + 1);
+        setSelectedProject({ projectId: (projectId || 0) + 1, imgId: 0 });
       }
       // Left arrow
       if (event.keyCode == "37") {
-        setSelectedProjectId((selectedProjectId || 0) - 1);
+        setSelectedProject({ projectId: (projectId || 0) - 1, imgId: 0 });
       }
     },
-    [selectedProjectId]
+    [projectId]
   );
 
   useEffect(() => {
@@ -43,8 +46,6 @@ export const VizItemModal = ({
       document.removeEventListener("keydown", keyboardCallback, false);
     };
   }, [keyboardCallback]);
-
-  const vizItem = vizList[selectedProjectId];
 
   return (
     <div
@@ -64,7 +65,7 @@ export const VizItemModal = ({
       </span>
 
       {/* content */}
-      <VizItemModalContent vizItem={vizItem} />
+      <VizItemModalContent projectId={projectId} imgId={imgId} />
 
       {/* Shortcuts */}
       <div className="absolute bottom-4 right-4 flex">

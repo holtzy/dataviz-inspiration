@@ -11,18 +11,19 @@ import { ChartId, chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
-import { cp } from "fs/promises";
+
+export type Project = { projectId: number; imgId: number };
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
   const router = useRouter();
-  console.log("router", router);
 
   //
   // State of the application
   // Initialized with default values. Those default can be overriden by URL params in the next useEffect
   //
-  const [selectedProjectId, setSelectedProjectId] = useState<number>(0);
+  // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
+  const [selectedProject, setSelectedProject] = useState<Project | undefined>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnNumber, setColumnNumber] = useState<number>(4);
   const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
@@ -37,7 +38,6 @@ const Home: NextPage = () => {
   // Note that I don't know how to type useRouter, so it just return string or string[] :(
   //
   useEffect(() => {
-    console.log("USE EFFECT TO READ URL PARAMS IS READ");
     const { chart, tool } = router.query;
 
     if (chart && typeof chart === "string") {
@@ -162,13 +162,13 @@ const Home: NextPage = () => {
             <div style={{ columns: columnNumber }} className={"gap-2 sm:gap-4"}>
               {/* Each project (i) can have several images associated (j) */}
               {filteredVizList.map((vizItem, i) => {
-                return vizItem.imgZoomed.map((img, j) => {
+                return vizItem.img.map((img, j) => {
                   return (
                     <MasonryItem
                       key={i + " " + j}
                       vizItem={vizItem}
                       onClick={() => {
-                        setSelectedProjectId(i);
+                        setSelectedProject({ projectId: i, imgId: j });
                         setIsModalOpen(true);
                       }}
                       imgId={j}
@@ -181,12 +181,14 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <VizItemModal
-        isModalOpen={isModalOpen}
-        selectedProjectId={selectedProjectId}
-        setSelectedProjectId={setSelectedProjectId}
-        closeModal={() => setIsModalOpen(false)}
-      />
+      {selectedProject && (
+        <VizItemModal
+          isModalOpen={isModalOpen}
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+          closeModal={() => setIsModalOpen(false)}
+        />
+      )}
 
       <div className="wrapper">
         <Footer />

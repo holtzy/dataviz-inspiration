@@ -1,15 +1,22 @@
 import Image from "next/image";
-import { VizItem } from "../util/viz-list";
+import { vizList } from "../util/viz-list";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";
+import { Pill } from "./Pill";
 
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
-  vizItem: VizItem;
+  projectId: number;
+  imgId: number;
 };
 
-export const VizItemModalContent = (props: VizItemModalContentProps) => {
-  const allChartIds = props.vizItem.chartId.map((id, i) => {
+export const VizItemModalContent = ({
+  projectId,
+  imgId,
+}: VizItemModalContentProps) => {
+  const vizItem = vizList[projectId];
+
+  const allChartIds = vizItem.chartId.map((id, i) => {
     return (
       <span key={i} className="mr-1">
         <ChartIdPill chartId={id} />
@@ -17,10 +24,10 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
     );
   });
 
-  const allTools = props.vizItem?.tool?.map((tool, i) => {
+  const allTools = vizItem?.tools?.map((tool, i) => {
     return (
       <span key={i} className="mr-1">
-        <ChartIdPill chartId={tool} />
+        <Pill className="" text={tool.name} />
       </span>
     );
   });
@@ -40,7 +47,7 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
       >
         <Image
           placeholder="blur"
-          src={require(`../public/img/${props.vizItem.img}`)}
+          src={require(`../public/img/${vizItem.img[imgId].full}`)}
           layout="fill"
           objectFit="contain"
         />
@@ -50,11 +57,11 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
         onClick={(e) => e.stopPropagation()}
         className="p-2 flex flex-col justify-center"
       >
-        <p className="font-bold">{props.vizItem.title}</p>
+        <p className="font-bold">{vizItem.title}</p>
         <p>
           <span className="text-xs font-extralight">by </span>
           <span className="text-xs italic font-extralight">
-            {props.vizItem.author}
+            {vizItem.author}
           </span>
         </p>
         <br />
@@ -78,7 +85,7 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
           <span className="font-light text-gray-500 text-sm">Context: </span>
           <p
             dangerouslySetInnerHTML={{
-              __html: props.vizItem.contextDescription,
+              __html: vizItem.contextDescription,
             }}
           />
         </div>
@@ -90,19 +97,19 @@ export const VizItemModalContent = (props: VizItemModalContentProps) => {
           </span>
           <p
             dangerouslySetInnerHTML={{
-              __html: props.vizItem.chartDescription,
+              __html: vizItem.chartDescription,
             }}
           />
         </div>
         <br />
 
         <div className="flex">
-          <LinkAsButton href={props.vizItem.url} size="sm">
+          <LinkAsButton href={vizItem.url} size="sm">
             Visit project
           </LinkAsButton>
-          {props.vizItem.code && (
+          {vizItem.tools?.[0].link && (
             <div>
-              <LinkAsButton href={props.vizItem.code} size="sm">
+              <LinkAsButton href={vizItem.tools[0].link} size="sm">
                 Read code
               </LinkAsButton>
             </div>

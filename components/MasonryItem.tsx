@@ -23,7 +23,7 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
       >
         {/* The next.js Image component is awesome but it is a mess to style it properly since it is wrapped in several spans */}
         <Image
-          src={require(`../public/img/${vizItem.imgZoomed[imgId]}`)}
+          src={require(`../public/img/${vizItem.img[imgId].zoom}`)}
           placeholder="blur"
           className="rounded-md"
           layout="intrinsic" // intrinsic is the default

@@ -301,7 +301,7 @@ export const vizList: VizItem[] = [
         date: new Date(2019, 0),
         author: "Matthew Daniels",
         url: "https://pudding.cool/projects/vocabulary/index.html",
-        img: [{full: "rapper-lyrics.png", zoom: "rapper-lyrics-zoom.png"}, {full: "rapper-lyrics.png", zoom: "rapper-lyrics-2-zoom.png"}],
+        img: [{full: "rapper-lyrics.png", zoom: "rapper-lyrics-zoom.png"}, {full: "rapper-lyrics-2.png", zoom: "rapper-lyrics-2-zoom.png"}],
         contextDescription: "A projects that compares the number of unique words used by some of the most famous artists in hip hop using each artist’s first 35,000 lyrics. Jedi Mind Tricks used 6424 unique words, compared to DMX that counts 2936.",
         chartDescription: "A 1 dimension scatterplot where the X axis shows the number of unique words and each item is an artist, represented by a circle and an avatar. The Y position is random, just using <a href='https://www.data-to-viz.com/caveat/boxplot.html>jittering</a> to avoid overlap.",
         tools: [{name: "javascript"}],
