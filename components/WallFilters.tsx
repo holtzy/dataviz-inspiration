@@ -12,9 +12,11 @@ type WallFiltersProps = {
   selectedLuminosities: Luminosity[];
   updateLuminosity: (arg: Luminosity[]) => void;
   selectedChartIds: ChartId[] | undefined;
-  updateChartId: (arg: ChartId[] | undefined) => void;
   selectedTools: Tool[] | undefined;
-  updateTool: (arg: Tool[] | undefined) => void;
+  updateState: (
+    chartIds: ChartId[] | undefined,
+    tools: Tool[] | undefined
+  ) => void;
 };
 
 export const WallFilters = ({
@@ -22,10 +24,9 @@ export const WallFilters = ({
   columnNumber,
   updateLuminosity,
   selectedLuminosities,
-  updateChartId,
   selectedChartIds,
-  updateTool,
   selectedTools,
+  updateState,
 }: WallFiltersProps) => {
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center items-center">
@@ -46,20 +47,28 @@ export const WallFilters = ({
       <FilterWrapper>
         <ChartIdSelector
           selectedChartIds={selectedChartIds}
-          updateChartId={updateChartId}
+          updateChartId={(chartIds: ChartId[] | undefined) => {
+            updateState(chartIds, selectedTools);
+          }}
         />
       </FilterWrapper>
 
       <FilterWrapper>
-        <ToolSelector selectedTools={selectedTools} updateTool={updateTool} />
+        <ToolSelector
+          selectedTools={selectedTools}
+          updateTool={(tools: Tool[] | undefined) => {
+            updateState(selectedChartIds, tools);
+          }}
+        />
       </FilterWrapper>
 
       {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
       <FilterWrapper>
         <FilterReset
-          updateTool={updateTool}
-          updateChartId={updateChartId}
-          updateLuminosity={updateLuminosity}
+          onClick={() => {
+            updateState(undefined, undefined);
+            updateLuminosity(["dark", "light"]);
+          }}
         />
       </FilterWrapper>
     </div>

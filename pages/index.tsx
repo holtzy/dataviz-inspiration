@@ -11,8 +11,13 @@ import { ChartId, chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
+import { ParsedUrlQueryInput } from "querystring";
 
 export type Project = { projectId: number; imgId: number };
+
+const removeUndefinedProps = (obj: Object): ParsedUrlQueryInput => {
+  return JSON.parse(JSON.stringify(obj));
+};
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
@@ -20,10 +25,6 @@ const Home: NextPage = () => {
 
   //
   // State of the application
-  // Initialized with default values. Those default can be overriden by URL params in the next useEffect
-  //
-  // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
-  const [selectedProject, setSelectedProject] = useState<Project | undefined>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnNumber, setColumnNumber] = useState<number>(4);
   const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
@@ -32,61 +33,49 @@ const Home: NextPage = () => {
   ]);
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
   const [selectedTools, setSelectedTools] = useState<Tool[]>();
+  // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
+  const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  //
-  // Update state from URL param if needed once 1st render happened
-  // Note that I don't know how to type useRouter, so it just return string or string[] :(
-  //
+  // Update state from URL param
   useEffect(() => {
     const { chart, tool } = router.query;
 
     if (chart && typeof chart === "string") {
       const ids = chart.split("--") as ChartId[];
       setSelectedChartIds(ids);
+    } else {
+      setSelectedChartIds(undefined);
     }
 
     if (tool && typeof tool === "string") {
       const ids = tool.split("--") as Tool[];
       setSelectedTools(ids);
+    } else {
+      setSelectedTools(undefined);
     }
   }, [router]);
 
-  //
-  // Functions that changes the state AND updates URL params
-  // Use only them to update state
-  //
-  const updateChartId = (ids: ChartId[] | undefined) => {
-    // If nothing is selected ids will be empty array. In this case, i/ set state to undefined and ii/ remove the "chart" url param
-    if (!ids || ids.length === 0) {
-      setSelectedChartIds(undefined);
-      router.replace(router.query, undefined);
-    } else {
-      setSelectedChartIds(ids);
-      router.push(
-        { query: { ...router.query, chart: ids.join("--") } },
-        undefined,
-        {
-          shallow: true,
-        }
-      );
-    }
+  // Update the URL using the application state
+  const updateRouter = (
+    chartIds: ChartId[] | undefined,
+    tools: Tool[] | undefined
+  ) => {
+    let newQuery = {
+      chart: chartIds?.join("--"),
+      tool: tools?.join("--"),
+    };
+    router.push({ query: removeUndefinedProps(newQuery) }, undefined, {
+      shallow: true,
+    });
   };
 
-  const updateTool = (tools: Tool[] | undefined) => {
-    // If nothing is selected tools will be empty array. In this case, set undefined
-    if (!tools || tools.length === 0) {
-      setSelectedTools(undefined);
-      router.replace(router.query, undefined);
-    } else {
-      setSelectedTools(tools);
-      router.push(
-        { query: { ...router.query, tool: tools.join("--") } },
-        undefined,
-        {
-          shallow: true,
-        }
-      );
-    }
+  // Functions to update the chart and tool states
+  // Mechanism: updateChartId -> updates the URL with updateRouter -> useRouter() updates -> useEffect is triggered and update state
+  const updateState = (
+    chartIds: ChartId[] | undefined,
+    tools: Tool[] | undefined
+  ) => {
+    updateRouter(chartIds, tools);
   };
 
   //
@@ -146,9 +135,8 @@ const Home: NextPage = () => {
           selectedLuminosities={selectedLuminosities}
           updateLuminosity={setLuminosity}
           selectedChartIds={selectedChartIds}
-          updateChartId={updateChartId}
           selectedTools={selectedTools}
-          updateTool={updateTool}
+          updateState={updateState}
         />
 
         <div
