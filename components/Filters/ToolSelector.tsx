@@ -20,6 +20,8 @@ export const ToolSelector = ({
 }: ToolSelectorProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  console.log("selectedTools", selectedTools);
+
   // List of logos that have been selected by the user
   const selectedToolPills = selectedTools?.map((tool, i) => {
     if (i >= MAX_PILL_ITEMS_DISPLAYED) {

@@ -1,5 +1,5 @@
 import { ChartId } from "./sectionDescription";
-import { Luminosity, VizItem } from "./viz-list";
+import { Luminosity, Tool, VizItem } from "./viz-list";
 
 // viz-list.ts is the list of all the projects displayed on the main wall
 // at the top of the wall some filters all to filter those projects
@@ -8,6 +8,7 @@ export const filterVizList = (
     vizList: VizItem[],
     luminosity: Luminosity[],
     selectedChartIds: ChartId[] | undefined
+    selectedTools: Tool[] | undefined
   ): VizItem[] => {
     return (
       vizList
@@ -25,6 +26,15 @@ export const filterVizList = (
           }
           return vizItem.chartId.some((id) => {
             return selectedChartIds.includes(id);
+          });
+        })
+        .filter((vizItem) => {
+          // nothing selected? chartId is undefined or empty array
+          if (!selectedTools || selectedTools.length === 0) {
+            return true;
+          }
+          return vizItem.tool.some((id) => {
+            return selectedTools.includes(id);
           });
         })
     );

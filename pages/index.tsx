@@ -11,10 +11,12 @@ import { ChartId, chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
+import { cp } from "fs/promises";
 
 const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
   const router = useRouter();
+  console.log("router", router);
 
   //
   // State of the application
@@ -35,54 +37,55 @@ const Home: NextPage = () => {
   // Note that I don't know how to type useRouter, so it just return string or string[] :(
   //
   useEffect(() => {
-    const { chartId, tool } = router.query;
-    if (chartId) {
-      const chartIdArray = Array.isArray(chartId)
-        ? (chartId as ChartId[])
-        : ([chartId] as ChartId[]);
-      setSelectedChartIds(chartIdArray);
+    console.log("USE EFFECT TO READ URL PARAMS IS READ");
+    const { chart, tool } = router.query;
+
+    if (chart && typeof chart === "string") {
+      const ids = chart.split("--") as ChartId[];
+      setSelectedChartIds(ids);
     }
-    if (tool) {
-      const toolArray = Array.isArray(tool)
-        ? (tool as Tool[])
-        : ([tool] as Tool[]);
-      setSelectedTools(toolArray);
+
+    if (tool && typeof tool === "string") {
+      const ids = tool.split("--") as Tool[];
+      setSelectedTools(ids);
     }
-  }, []);
+  }, [router]);
 
   //
   // Functions that changes the state AND updates URL params
   // Use only them to update state
   //
-  const updateColumnNumber = (colNumber: number) => {
-    setColumnNumber(colNumber);
-  };
-  const updateLuminosity = (luminosity: Luminosity[]) => {
-    setLuminosity(luminosity);
-  };
   const updateChartId = (ids: ChartId[] | undefined) => {
-    // If nothing is selected ids will be empty array. In this case, set undefined
+    // If nothing is selected ids will be empty array. In this case, i/ set state to undefined and ii/ remove the "chart" url param
     if (!ids || ids.length === 0) {
       setSelectedChartIds(undefined);
       router.replace(router.query, undefined);
     } else {
       setSelectedChartIds(ids);
-      router.push({ query: { ...router.query, chartId: ids } }, undefined, {
-        shallow: true,
-      });
+      router.push(
+        { query: { ...router.query, chart: ids.join("--") } },
+        undefined,
+        {
+          shallow: true,
+        }
+      );
     }
   };
+
   const updateTool = (tools: Tool[] | undefined) => {
     // If nothing is selected tools will be empty array. In this case, set undefined
     if (!tools || tools.length === 0) {
       setSelectedTools(undefined);
-      // router.push({ query: { ...router.query, tool: undefined } });
-      // router.replace("tool", undefined);
+      router.replace(router.query, undefined);
     } else {
       setSelectedTools(tools);
-      router.push({ query: { ...router.query, tool: tools } }, undefined, {
-        shallow: true,
-      });
+      router.push(
+        { query: { ...router.query, tool: tools.join("--") } },
+        undefined,
+        {
+          shallow: true,
+        }
+      );
     }
   };
 
@@ -92,7 +95,8 @@ const Home: NextPage = () => {
   const filteredVizList = filterVizList(
     vizList,
     selectedLuminosities,
-    selectedChartIds
+    selectedChartIds,
+    selectedTools
   );
 
   const vizItemNumber = filteredVizList.length;
@@ -138,9 +142,9 @@ const Home: NextPage = () => {
 
         <WallFilters
           columnNumber={columnNumber}
-          updateColumnNumber={updateColumnNumber}
+          updateColumnNumber={setColumnNumber}
           selectedLuminosities={selectedLuminosities}
-          updateLuminosity={updateLuminosity}
+          updateLuminosity={setLuminosity}
           selectedChartIds={selectedChartIds}
           updateChartId={updateChartId}
           selectedTools={selectedTools}

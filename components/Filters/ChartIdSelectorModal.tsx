@@ -54,20 +54,22 @@ export const ChartIdSelectorModal = ({
           event.stopPropagation();
         };
 
+        const logoOpacity = isCurrentlySelected ? "opacity-100" : "opacity-30";
+
         return (
           <div
             style={{ width: 45, height: 45, marginLeft: 2, marginRight: 2 }}
-            className={"relative cursor-pointer opacity-100"}
+            className={
+              "relative cursor-pointer hover:border hover:border-black rounded-full hover:opacity-100" +
+              " " +
+              logoOpacity
+            }
             key={i}
             onMouseEnter={() => setName(chart.label)}
             onMouseLeave={() => setName(undefined)}
             onClick={onLogoClick}
           >
-            <span
-              className={isCurrentlySelected ? "opacity-100" : "opacity-30"}
-            >
-              <SectionLogo chartLogo={chart.logo} />
-            </span>
+            <SectionLogo chartLogo={chart.logo} />
           </div>
         );
       });
