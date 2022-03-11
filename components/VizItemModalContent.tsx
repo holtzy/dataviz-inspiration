@@ -18,7 +18,7 @@ export const VizItemModalContent = ({
 
   const allChartIds = vizItem.chartId.map((id, i) => {
     return (
-      <span key={i} className="mr-1">
+      <span key={i} className="mr-1 mb-1">
         <ChartIdPill chartId={id} />
       </span>
     );
@@ -46,7 +46,7 @@ export const VizItemModalContent = ({
         className="h-full md:col-span-2 relative flex justify-center items-center"
       >
         <Image
-          placeholder="blur"
+          placeholder="empty"
           src={require(`../public/img/${vizItem.img[imgId].full}`)}
           layout="fill"
           objectFit="contain"
@@ -68,7 +68,7 @@ export const VizItemModalContent = ({
 
         <div>
           <span className="font-light text-gray-500 text-sm">Chart type: </span>
-          <span>{allChartIds}</span>
+          <div className="flex flex-wrap">{allChartIds}</div>
         </div>
         <br />
 
@@ -79,7 +79,6 @@ export const VizItemModalContent = ({
             <br />
           </>
         )}
-        <br />
 
         <div>
           <span className="font-light text-gray-500 text-sm">Context: </span>

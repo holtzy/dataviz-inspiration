@@ -28,13 +28,23 @@ export const VizItemModal = ({
       if (event.key === "Escape") {
         closeModal();
       }
+      const projectNumber = vizList.length;
+
       // Right arrow
       if (event.keyCode == "39") {
-        setSelectedProject({ projectId: (projectId || 0) + 1, imgId: 0 });
+        let nextId = projectId + 1;
+        if (nextId >= projectNumber) {
+          nextId = 0;
+        }
+        setSelectedProject({ projectId: nextId, imgId: 0 });
       }
       // Left arrow
       if (event.keyCode == "37") {
-        setSelectedProject({ projectId: (projectId || 0) - 1, imgId: 0 });
+        let previousId = projectId - 1;
+        if (previousId < 0) {
+          previousId = projectNumber - 1;
+        }
+        setSelectedProject({ projectId: previousId, imgId: 0 });
       }
     },
     [projectId]

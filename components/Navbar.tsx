@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import { Glow } from "./Glow";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -34,9 +35,11 @@ export default function Navbar() {
             <Menu as="div" className="ml-3 relative">
               <div>
                 <Menu.Button className="">
-                  <span className="text-black font-light text-sm lg:text-md uppercase tracking-wider cursor-pointer">
-                    Related
-                  </span>
+                  <Glow>
+                    <div className="text-black font-light text-sm lg:text-md uppercase tracking-wider cursor-pointer">
+                      Related
+                    </div>
+                  </Glow>
                 </Menu.Button>
               </div>
               <Transition
