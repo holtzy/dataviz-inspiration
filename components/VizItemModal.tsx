@@ -50,7 +50,7 @@ export const VizItemModal = ({
     <div
       style={{ backgroundColor: "rgba(250,250,250,.99)" }}
       className={
-        "z-50 transition-all duration-700 fixed inset-0 h-screen w-screen z-20 flex justify-center items-center " +
+        "z-50 transition-all duration-700 fixed inset-0 h-screen w-screen flex justify-center items-center " +
         slideClass
       }
       onClick={() => closeModal()}

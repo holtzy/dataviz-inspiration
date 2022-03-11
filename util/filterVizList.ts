@@ -7,7 +7,7 @@ import { Luminosity, Tool, VizItem } from "./viz-list";
 export const filterVizList = (
     vizList: VizItem[],
     luminosity: Luminosity[],
-    selectedChartIds: ChartId[] | undefined
+    selectedChartIds: ChartId[] | undefined,
     selectedTools: Tool[] | undefined
   ): VizItem[] => {
     return (
@@ -20,7 +20,7 @@ export const filterVizList = (
         // Keep only the selected chartIds. Nothing selected? keep them all.
         // Remember that a project can be associated with several chartIds
         .filter((vizItem) => {
-          // nothing selected? chartId is undefined or empty array
+          // No selected tool? Keep this item
           if (!selectedChartIds || selectedChartIds.length === 0) {
             return true;
           }
@@ -29,12 +29,15 @@ export const filterVizList = (
           });
         })
         .filter((vizItem) => {
-          // nothing selected? chartId is undefined or empty array
+          // No selected tool? Keep this item
           if (!selectedTools || selectedTools.length === 0) {
             return true;
           }
-          return vizItem.tool.some((id) => {
-            return selectedTools.includes(id);
+          if(!vizItem.tools){
+            return false
+          }
+          return vizItem?.tools.some((item) => {
+            return selectedTools.includes(item.name);
           });
         })
     );
