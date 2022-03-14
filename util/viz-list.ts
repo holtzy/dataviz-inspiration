@@ -378,4 +378,16 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        title: "Topography of Switzerland",
+        date: new Date(2022, 2),
+        author: "Tobias Stalder",
+        url: "https://twitter.com/toeb18/status/1503129088663433219",
+        img: [{full: "switzerland-topography.png", zoom: "switzerland-topography-zoom.png", chartId: ["map"]}],
+        contextDescription: "A transect from the Swiss Alps over the Swiss lowlands to the Jura mountains.",
+        chartDescription: "A very clean 3D map made with R with a minigraph, very clean and concise.",
+        tools: [{name: "R", link:"https://twitter.com/toeb18/status/1503129095433080838/photo/1"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
