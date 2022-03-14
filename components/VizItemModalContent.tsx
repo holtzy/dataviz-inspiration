@@ -16,7 +16,7 @@ export const VizItemModalContent = ({
 }: VizItemModalContentProps) => {
   const vizItem = vizList[projectId];
 
-  const allChartIds = vizItem.chartId.map((id, i) => {
+  const allChartIds = vizItem.img[imgId].chartId.map((id, i) => {
     return (
       <span key={i} className="mr-1 mb-1">
         <ChartIdPill chartId={id} />

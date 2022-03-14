@@ -362,7 +362,7 @@ export const vizList: VizItem[] = [
         author: "South China Morning Post",
         url: "https://www.scmp.com/infographics/article/1810040/infographic-world-languages",
         img: [{full: "world-of-language.png", zoom: "world-of-language-zoom.png", chartId: ["circularPacking"]}],
-        contextDescription: "A deep look into the 7102 known languages alive in th world. What are the main ones? In which country are they spoken?",
+        contextDescription: "A deep look into the 7102 known languages alive in the world. What are the main ones? In which country are they spoken?",
         chartDescription: "A circular Voronoi diagram showing the importance of each language. So much information packed on the same figure, in a very eye-catching style.",
         luminosity: ["light"],
         interactive: false
