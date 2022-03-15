@@ -68,7 +68,7 @@ export const VizItemModal = ({
     >
       {/* X to close the modal */}
       <span
-        className="text-black cursor-pointer text-4xl absolute top-0 right-0 mr-10 mt-10 p-12 "
+        className="text-black cursor-pointer text-2xl absolute top-0 right-0 mr-4 mt-1 p-2 z-50"
         onClick={() => closeModal()}
       >
         &#10005;

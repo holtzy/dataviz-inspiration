@@ -78,10 +78,10 @@ export const ChartIdSelectorModal = ({
   // For a familySection, display a title, an horizontal separator and the logos
   const familySection = (family: ChartFamily) => {
     return (
-      <div className="mb-4">
-        <span className={family + " capitalize"}>{family}</span>
+      <div className="mb-2">
+        <span className={family + " capitalize text-sm"}>{family}</span>
         <hr className="opacity-60" />
-        <div className="flex justify-start flex-no-wrap mt-2">
+        <div className="flex justify-start flex-no-wrap mt-1">
           {logoList(family)}
         </div>
       </div>
@@ -135,20 +135,19 @@ export const ChartIdSelectorModal = ({
   return (
     // This div takes the whole screen. It allows to close the modal when user clicks outside the content
     <div
-      style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
       className={
-        "fixed inset-0 h-screen w-screen z-20 flex justify-center items-center"
+        "fixed bg-white inset-0 h-screen w-screen z-20 flex justify-center items-center"
       }
       onClick={() => setIsModalOpen(false)}
     >
       {/* This div is the content with white background */}
       <div
         onClick={(event) => event.stopPropagation()}
-        className="px-8 py-8 overflow-scroll max-h-screen max-w-lg bg-white rounded-md md:border md:drop-shadow-md cursor-default"
+        className="px-8 py-2 overflow-scroll max-h-screen max-w-lg bg-white rounded-md cursor-default"
       >
         {topCross}
         {chartFamilies.map((family) => familySection(family))}
-        <div className="flex justify-between items-center mt-14">
+        <div className="flex justify-between items-center mt-10">
           {hoveredChartName}
           <div>
             {selectAllButton}
