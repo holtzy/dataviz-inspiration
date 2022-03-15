@@ -301,6 +301,18 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        title: "Big mac price",
+        date: new Date(2021, 2),
+        author: "Cédric Scherer",
+        url: "https://www.r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html",
+        img: [{full: "big-mac-price.png", zoom: "big-mac-price-zoom.png", chartId: ["line"]}],
+        contextDescription: "Compared to the fincancial crisis in 2008, how much more or less do you have to pay for a Big Mac today?",
+        chartDescription: "A clean line chart allowing to compare the evolution of several groups. Note the clean inline legend that avoids the <a href='https://www.data-to-viz.com/caveat/spaghetti.html'>spaghetti effect</a>.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html"}, {name: "python", link:"https://python-graph-gallery.com/web-line-chart-with-labels-at-line-end"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
         title: "Rouble tumbles to record low",
         date: new Date(2022, 1),
         author: "The New York Times",
@@ -357,6 +369,18 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        title: "Cat rescues by the London fire brigade",
+        date: new Date(2021, 2),
+        author: "Georgios Karamanis",
+        url: "https://www.r-graph-gallery.com/web-time-series-and-facetting.html",
+        img: [{full: "cat-rescues.png", zoom: "cat-rescues-zoom.png", chartId: ["line", "area"]}],
+        contextDescription: "How many cats are rescued by the London fire brigade each year? How does it compare with other animals? An answer with data, split by suburbs",
+        chartDescription: "Each item of the small multiple is a suburb. For each, we quickly see the number of cats (blue line) and other animals (red lines). Coloring the area between both in blue or red makes it easy to compare both at a higher scale.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-time-series-and-facetting.html"}, {name: "python", link:"https://python-graph-gallery.com/web-time-series-and-facetting-with-matplotlib"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
         title: "A world of language",
         date: new Date(2021, 8),
         author: "South China Morning Post",
@@ -387,6 +411,66 @@ export const vizList: VizItem[] = [
         contextDescription: "A transect from the Swiss Alps over the Swiss lowlands to the Jura mountains.",
         chartDescription: "A very clean 3D map made with R with a minigraph, very clean and concise.",
         tools: [{name: "R", link:"https://twitter.com/toeb18/status/1503129095433080838/photo/1"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Palmer Penguins",
+        date: new Date(2021, 2),
+        author: "Tuo Wang",
+        url: "https://www.r-graph-gallery.com/web-scatterplot-and-ggrepel.html",
+        img: [{full: "palmer-penguins.png", zoom: "palmer-penguins-zoom.png", chartId: ["scatter"]}],
+        contextDescription: "Analyse the features of 3 penguins species: show the relationship between bill length and flipper length",
+        chartDescription: "A custom scatterplot with auto-positioned labels to explore the palmerpenguins dataset made with R and the tidyverse.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-scatterplot-and-ggrepel.html"}, {name: "python", link:"https://python-graph-gallery.com/web-text-repel-with-matplotlib"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Corruption and Human Development",
+        date: new Date(2021, 2),
+        author: "Claus O. Wilke",
+        url: "https://www.r-graph-gallery.com/web-scatterplot-corruption-and-human-development.html",
+        img: [{full: "corruption-hdi.png", zoom: "corruption-hdi-zoom.png", chartId: ["scatter"]}],
+        contextDescription: "A scatterplot that shows the relationship between the Human Development Index and the Corruption Perceptions Index.",
+        chartDescription: "A scatterplot with regression fit and automatic text repel. Relationship is striking.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-scatterplot-corruption-and-human-development.html"}, {name: "python", link:"https://python-graph-gallery.com/web-scatterplot-text-annotation-and-regression-matplotlib"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Penguin Radar",
+        date: new Date(2021, 2),
+        author: "Tuo Wang",
+        url: "https://www.r-graph-gallery.com/web-radar-chart-with-R.html",
+        img: [{full: "penguin-radar.png", zoom: "penguin-radar-zoom.png", chartId: ["radar"]}],
+        contextDescription: "Compares the bill length, bill debt, flipper length and body mass of 2 penguin species.",
+        chartDescription: "A radar chart that compares the features of 3 groups for 4 numeric variables.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-radar-chart-with-R.html"}, {name: "python", link:"https://python-graph-gallery.com/web-radar-chart-with-matplotlib"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Hiking locations in Washington",
+        date: new Date(2021, 2),
+        author: "Tobias Stadler",
+        url: "https://www.r-graph-gallery.com/web-circular-barplot-with-R-and-ggplot2.html",
+        img: [{full: "hiking-washington.png", zoom: "hiking-washington-zoom.png", chartId: ["circularBarplot"]}],
+        contextDescription: "This Visualisation shows the cummulative length of tracks, the amount of tracks and the mean gain in elevation per location for a set of hikes in the Washington area.",
+        chartDescription: "A circular barplot with clear group annotation, nice layout and great on-chart legend to explain what's shown.",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-circular-barplot-with-R-and-ggplot2.html"}, {name: "python", link:"https://python-graph-gallery.com/web-circular-barplot-with-matplotlib"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        title: "Child Labour",
+        date: new Date(2021, 7),
+        author: "The Economist",
+        url: "https://www.r-graph-gallery.com/web-lineplots-and-area-chart-the-economist.html",
+        img: [{full: "child-labour.png", zoom: "child-labour-zoom.png", chartId: ["line"]}, {full: "child-labour.png", zoom: "child-labour-zoom-2.png", chartId: ["area"]}],
+        contextDescription: "A deep comparison of child labour across the globe.",
+        chartDescription: "A line chart next to an area chart. Note that the first one is used for a percentage (does not make sense to add numbers up), when the second is used to a number where we are interested in the total number (stacking makes sense)",
+        tools: [{name: "R", link:"https://www.r-graph-gallery.com/web-lineplots-and-area-chart-the-economist.html"}, {name: "python", link:"https://python-graph-gallery.com/web-lineplots-and-area-chart-the-economist"}],
         luminosity: ["light"],
         interactive: false
     },
