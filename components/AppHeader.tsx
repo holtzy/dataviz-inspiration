@@ -59,6 +59,24 @@ export const AppHeader = ({
         property="og:image"
         content="https://raw.githubusercontent.com/holtzy/dataviz-inspiration/main/public/overview.png"
       />
+
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-TRQ20SZLV3`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TRQ20SZLV3', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </Head>
   );
 };
