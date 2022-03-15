@@ -6,6 +6,7 @@ export type Tool = typeof Tools[number];
 export type Luminosity = "light" | "dark"
 
 export type VizItem = {
+    id: number;
     title: string;
     date: Date;
     author: string;
@@ -20,6 +21,7 @@ export type VizItem = {
 
 export const vizList: VizItem[] = [
     {
+        id: 1,
         title: "Here’s When We Expect Omicron to Peak",
         date: new Date(2022, 0),
         author: "The New York Times",
@@ -31,11 +33,16 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 2,
         title: "Covid 19 Dashboard - India",
         date: new Date(2021, 10),
         author: "Group of dedicated volunteers",
         url: "https://www.covid19india.org",
-        img: [{full: "covid19India.png", zoom: "covid19India-zoom.png", chartId: ["map", "bubbleMap"]}],
+        img: [
+            {full: "covid19India.png", zoom: "covid19India-zoom.png", chartId: ["map", "bubbleMap"]},
+            {full: "covid19India-bar.png", zoom: "covid19India-bar-zoom.png", chartId: ["barplot"]},
+            {full: "covid19India-line.png", zoom: "covid19India-line-zoom.png", chartId: ["line"]}
+        ],
         contextDescription: "The covid crisis is a world wide pandemic and India is certainly not spared. Some volunteer decided to create a dashboard to help Indian politics to take information driven decisions.",
         chartDescription: "A dashboard describing the spread of Covid 19 in India. Highly interactive with a pretty slick design. Dark mode support, many different types of viz with smooth transition between dataset.",
         tools: [{name: "react", link: "https://github.com/covid19india/covid19india-react"}, {name: "d3.js", link:"https://github.com/covid19india/covid19india-react"}],
@@ -43,6 +50,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 3,
         title: "Migration waves",
         date: new Date(1000, 0),
         author: "National Geographic",
@@ -54,6 +62,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 4,
         title: "Russia, Gas, and the Ukraine Conflict",
         date: new Date(2022, 2),
         author: "New York Times",
@@ -65,6 +74,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 5,
         title: "Mario Kart world's records",
         date: new Date(2021, 4),
         author: "Cédric Scherer",
@@ -77,6 +87,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 6,
         title: "Appearance of the Five Most Popular X-Men Characters",
         date: new Date(2020, 6),
         author: "Cédric Scherer",
@@ -89,6 +100,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 7,
         title: "Cracking your favorite password",
         date: new Date(2020, 0),
         author: "Cédric Scherer",
@@ -101,6 +113,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 8,
         title: "Infections caught in laboratories are surprisingly common",
         date: new Date(2021, 7),
         author: "the Economist",
@@ -113,6 +126,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 9,
         title: "Enrollments in historically black colleges",
         date: new Date(2022, 2),
         author: "Tobias Stalder",
@@ -125,6 +139,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 10,
         title: "Covid dashboard",
         date: new Date(2021, 1),
         author: "Le Monde",
@@ -137,6 +152,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 11,
         title: "Eigenfactor project",
         date: new Date(2018, 1),
         author: "Eigenfactor Project & Moritz Stefaner",
@@ -149,6 +165,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 12,
         title: "Inequality in Spain",
         date: new Date(2021, 11),
         author: "Dominic Royé",
@@ -161,6 +178,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 13,
         title: "Troops Vs. Cost",
         date: new Date(2013, 10),
         author: "Jorge Camoes",
@@ -173,6 +191,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 14,
         title: "Vaccines and Infectious Diseases",
         date: new Date(2015, 1),
         author: "Dov Friedman & Tynan DeBold",
@@ -185,6 +204,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 15,
         title: "A Nation Divided",
         date: new Date(2014, 9),
         author: "Die Zeit",
@@ -196,6 +216,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 16,
         title: "Nobels, no degrees",
         date: new Date(2012, 10),
         author: "G. Lupi, S. Quadri, G. Rossi, D. Ciuffi, F. Fragapane, F. Majno",
@@ -207,6 +228,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 17,
         title: "Shipmap.org",
         date: new Date(2012, 10),
         author: "Kiln",
@@ -219,6 +241,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 18,
         title: "Rhythm of Food",
         date: new Date(2016, 1),
         author: "M. Stefaner, Y. Vishnevsky, S. Rogers, A. Cairo et al.",
@@ -231,6 +254,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 19,
         title: "The State of Javascript",
         date: new Date(2020, 1),
         author: "A. Wattenberger, S. Greif and R. Benitte",
@@ -243,6 +267,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 20,
         title: "Quantifying the evolution of individual scientific impact",
         date: new Date(2017, 0),
         author: "Kim Albrecht",
@@ -255,6 +280,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 21,
         title: "Rappers, Sorted by Size of Vocabulary",
         date: new Date(2019, 0),
         author: "Matthew Daniels",
@@ -267,6 +293,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 22,
         title: "Shifting Parent Work Hours, Mom vs. Dad",
         date: new Date(2018, 0),
         author: "Nathan Yau",
@@ -279,6 +306,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 23,
         title: "Ukrain War: Poutine's assault organization",
         date: new Date(2022, 1),
         author: "Le Monde",
@@ -290,6 +318,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 24,
         title: "At least half a million refugees flee Ukraine",
         date: new Date(2022, 1),
         author: "The New York Times",
@@ -301,6 +330,7 @@ export const vizList: VizItem[] = [
         interactive: true
     },
     {
+        id: 25,
         title: "Big mac price",
         date: new Date(2021, 2),
         author: "Cédric Scherer",
@@ -313,6 +343,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 26,
         title: "Rouble tumbles to record low",
         date: new Date(2022, 1),
         author: "The New York Times",
@@ -324,6 +355,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 27,
         title: "Change in common household types",
         date: new Date(2022, 1),
         author: "Nathan Yau",
@@ -335,6 +367,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 28,
         title: "Decline in sex",
         date: new Date(2019, 3),
         author: "Washington Post",
@@ -346,6 +379,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 29,
         title: "Student exchanges in Europe",
         date: new Date(2022, 2),
         author: "Benjamin Nowak",
@@ -358,6 +392,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 30,
         title: "Sentiment in Russian tweets",
         date: new Date(2022, 2),
         author: "The Economist",
@@ -369,6 +404,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 31,
         title: "Cat rescues by the London fire brigade",
         date: new Date(2021, 2),
         author: "Georgios Karamanis",
@@ -381,6 +417,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 32,
         title: "A world of language",
         date: new Date(2021, 8),
         author: "South China Morning Post",
@@ -392,6 +429,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 33,
         title: "Hong Kong and the Omicron variant",
         date: new Date(2022, 2),
         author: "the Financial Times",
@@ -403,6 +441,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 34,
         title: "Topography of Switzerland",
         date: new Date(2022, 2),
         author: "Tobias Stalder",
@@ -415,6 +454,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 35,
         title: "Palmer Penguins",
         date: new Date(2021, 2),
         author: "Tuo Wang",
@@ -427,6 +467,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 36,
         title: "Corruption and Human Development",
         date: new Date(2021, 2),
         author: "Claus O. Wilke",
@@ -439,6 +480,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 37,
         title: "Penguin Radar",
         date: new Date(2021, 2),
         author: "Tuo Wang",
@@ -451,6 +493,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 38,
         title: "Hiking locations in Washington",
         date: new Date(2021, 2),
         author: "Tobias Stadler",
@@ -463,6 +506,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
+        id: 39,
         title: "Child Labour",
         date: new Date(2021, 7),
         author: "The Economist",

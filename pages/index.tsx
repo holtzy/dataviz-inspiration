@@ -23,7 +23,6 @@ const Home: NextPage = () => {
   // useRouter returns an object with information on the URL
   const router = useRouter();
 
-  //
   // State of the application
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [columnNumber, setColumnNumber] = useState<number>(4);
@@ -156,7 +155,7 @@ const Home: NextPage = () => {
                       key={i + " " + j}
                       vizItem={vizItem}
                       onClick={() => {
-                        setSelectedProject({ projectId: i, imgId: j });
+                        setSelectedProject({ projectId: vizItem.id, imgId: j });
                         setIsModalOpen(true);
                       }}
                       imgId={j}

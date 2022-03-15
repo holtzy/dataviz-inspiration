@@ -14,7 +14,11 @@ export const VizItemModalContent = ({
   projectId,
   imgId,
 }: VizItemModalContentProps) => {
-  const vizItem = vizList[projectId];
+  const vizItem = vizList.find((item) => item.id === projectId);
+
+  if (!vizItem) {
+    return null;
+  }
 
   // Title and Pills showing the chart type
   const chartPills = vizItem.img[imgId].chartId.map((id, i) => {
