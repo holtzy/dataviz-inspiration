@@ -518,4 +518,83 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 40,
+        title: "Climate stripes",
+        date: new Date(2018, 4),
+        author: "Ed Hawkins",
+        url: "https://showyourstripes.info/s/globe",
+        img: [{full: "climate-stripes.png", zoom: "climate-stripes-zoom.png", chartId: ["heatmap"]}],
+        contextDescription: "Warming stripes reflect a minimalist style, conceived to use colour alone to avoid technical distractions and intuitively convey global warming trends to non-scientists.",
+        chartDescription: "Warming stripes (sometimes referred to as climate stripes, climate timelines or stripe graphics are data visualization graphics that use a series of coloured stripes chronologically ordered to visually portray long-term temperature trends.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 41,
+        title: "Violin & Boxplot with ggplot2",
+        date: new Date(2018, 4),
+        author: "Yan Holtz",
+        url: "https://www.data-to-viz.com/graph/violin.html",
+        img: [{full: "violin-boxplot-ggplot2.png", zoom: "violin-boxplot-ggplot2-zoom.png", chartId: ["violin", "boxplot"]}],
+        contextDescription: "A boxplot can hide the real underlying distribution of a set of data. The violin chart is a great alternative.",
+        chartDescription: "Combination of a violin plot with a boxplot. Sample size added on the x axis. Build with ggplot2.",
+        tools: [{name: "R", link:"https://www.data-to-viz.com/graph/violin.html"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 42,
+        title: "Vaccine and FDA approval",
+        date: new Date(2021, 7),
+        author: "The Wall Street Journal",
+        url: "https://www.wsj.com/articles/covid-19-vaccinations-rise-as-delta-variant-spreads-pfizer-receives-full-fda-approval-11629905741",
+        img: [{full: "vaccine-fda-approval.png", zoom: "vaccine-fda-approval-zoom.png", chartId: ["waffle"]}],
+        contextDescription: "The whole planet is trying to get vaccinated. Some people don't want to. Does an FDA approval would convince them?",
+        chartDescription: "Using 3 waffle charts to compare 3 proportions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 43,
+        title: "Violin chart - Seaborn",
+        date: new Date(2018, 1),
+        author: "Yan Holtz",
+        url: "https://python-graph-gallery.com/violin-plot/",
+        img: [{full: "violin-seaborn.png", zoom: "violin-seaborn-zoom.png", chartId: ["violin"]}],
+        contextDescription: "Random data are used here.",
+        chartDescription: "This example just shows the default style of the Seaborn Python library.",
+        tools: [{name: "python", link:"https://python-graph-gallery.com/violin-plot/"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 44,
+        title: "revenues compared to pre-pandemic",
+        date: new Date(2018, 1),
+        author: "The Wall Street Journal",
+        url: "https://www.wsj.com/articles/how-the-biggest-companies-have-fared-during-the-covid-19-pandemic-11630229403?st=ntrtz9fpufqjchy&reflink=share_mobilewebshare",
+        img: [{full: "revenu-pre-pandemic.png", zoom: "revenu-pre-pandemic-zoom.png", chartId: ["scatter"]}],
+        contextDescription: "Covid19 Pandemic got a massive impact on some company revenues. This chart studies how revenues evolved during and after the pandemic.",
+        chartDescription: "A Scatterplot that split the graph area in 4 sections, showing 4 potential behaviour of companies. As often, single data points are labeled to understand what are the most important data points.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 45,
+        title: "Control of states",
+        date: new Date(2021, 5),
+        author: "Washington Post",
+        url: "https://www.washingtonpost.com/politics/interactive/2021/redistricting-faq/",
+        img: [{full: "control-of-states.png", zoom: "control-of-states-zoom.png", chartId: ["parallel"]}],
+        contextDescription: "How many states are controled by which party in the US. How did it change between 2010 and 2020?",
+        chartDescription: "Two parallel charts showing the evolution of each political party, measured by state and by districts.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    }
+
 ]
