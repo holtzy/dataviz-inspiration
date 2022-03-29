@@ -595,6 +595,96 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 46,
+        title: "Piano Notes",
+        date: new Date(2022, 2),
+        author: "Alice Feng",
+        url: "https://www.behance.net/gallery/139799525/Piano-Notes",
+        img: [{full: "piano-notes.png", zoom: "piano-notes-zoom.png", chartId: ["bubble"]}],
+        contextDescription: "A visualization of what parts of the piano keyboard are played the most in well-known classical music pieces.",
+        chartDescription: "A bubble chart where the Y axis is a categoric variable. Very clean design, with an extensive legend.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 47,
+        title: "The Art of the High Line",
+        date: new Date(2016, 2),
+        author: "Studio Terp",
+        url: "https://www.studioterp.nl/the-art-of-the-high-line/",
+        img: [{full: "art-of-the-high-line.png", zoom: "art-of-the-high-line-zoom.png", chartId: ["bubble"]}],
+        contextDescription: "<a href='https://www.thehighline.org'>The High Line</a> is a elevated linear park in New York that showcases the work of artists. This viz describes the artists that have been exposed there.",
+        chartDescription: "This piece is mainly a circular barplot. But it manages to store a massive amount of information thanks to the inner circles supplementary charts.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 48,
+        title: "Carbon Tax",
+        date: new Date(2016, 2),
+        author: "Studio Terp",
+        url: "http://www.studioterp.nl/carbon-taxes-a-datavisualization-for-scientific-american/",
+        img: [{full: "carbon-tax.png", zoom: "carbon-tax-zoom.png", chartId: []}],
+        contextDescription: "This viz compares carbon tax features of several countries. It checks the revenue, the tax rate and the emmisioins portion covered by Tax.",
+        chartDescription: "It's hard to classify this poster in a viz type. Each country is represented by several shapes, with shape size mapped to a numeric variable. Small multiples is used here to showcases all countries.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 49,
+        title: "Squashing Malaria",
+        date: new Date(2017, 2),
+        author: "Beautiful News Daily",
+        url: "https://informationisbeautiful.net/beautifulnews/1172-africa-squashing-malaria/",
+        img: [{full: "squashing-malaria.png", zoom: "squashing-malaria-zoom.png", chartId: ["parallel"]}],
+        contextDescription: "90% of malaria cases occur in Africa. That’s 200m infections and 400,000 deaths, mainly children under the age of 5. But the numbers are falling.",
+        chartDescription: "A slope chart showing the # of cases per 1000 people in 2007 and 2017 for several African countries. A good way to highlight the global decrease while ranking the countries.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 50,
+        title: "Cycling to work",
+        date: new Date(2017, 2),
+        author: "Beautiful News Daily",
+        url: "https://informationisbeautiful.net/beautifulnews/614-cycling-to-work/",
+        img: [{full: "cycling-to-work.png", zoom: "cycling-to-work-zoom.png", chartId: ["circularPacking"]}],
+        contextDescription: "Cycling is getting more and more popular on planet earth. This viz checks what are the cities with most bicycle commuters.",
+        chartDescription: "A circular packing chart with one level of information. Each bubble map is sized according to its proportion of bicycle commuters. I'm not a big fan of the gradient effect though.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 51,
+        title: "Global weather conditions",
+        date: new Date(2013, 11),
+        author: "Cameron Beccario",
+        url: "https://earth.nullschool.net",
+        img: [{full: "global-weather-conditions.png", zoom: "global-weather-conditions-zoom.png", chartId: ["map"]}],
+        contextDescription: "An animated map of global weather conditions. Includes wind, waves, temperature and much more. Show real time data.",
+        chartDescription: "An interactive map showing global flows. You can rotate and zoom the globe. I like how the webpage is viz focused, with an optional control panel to decide what to display.",
+        tools: [{name: "javascript", link: "https://github.com/cambecc/earth"}],
+        luminosity: [ "dark"],
+        interactive: true
+    },
+    {
+        id: 52,
+        title: "Wind Map",
+        date: new Date(2012, 9),
+        author: "F. Viégas and M. Wattenberg ",
+        url: "http://hint.fm/wind/",
+        img: [{full: "wind-map.png", zoom: "wind-map-zoom.png", chartId: ["map"]}],
+        contextDescription: "A novel way to observe how wind blows on a geographical area. This work inspired Cameron Beccario to create the <a href='https://earth.nullschool.net'>Global Weather Conditions</a> app.",
+        chartDescription: "Please read <a href='https://www.earthisland.org/journal/index.php/articles/entry/imagining-the-wind'>this article</a> that explains how this project was born and what impact it had.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: true
     }
-
 ]
