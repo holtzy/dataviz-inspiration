@@ -75,7 +75,11 @@ export const VizItemModal = ({
       </span>
 
       {/* content */}
-      <VizItemModalContent projectId={projectId} imgId={imgId} />
+      <VizItemModalContent
+        key={selectedProject.projectId}
+        projectId={projectId}
+        imgId={imgId}
+      />
 
       {/* Shortcuts */}
       <div className="absolute bottom-4 right-4 sm:flex hidden ">

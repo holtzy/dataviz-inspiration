@@ -860,4 +860,84 @@ export const vizList: VizItem[] = [
         luminosity: [ "light"],
         interactive: false
     },
+    {
+        id: 65,
+        title: "Switching between phone brands",
+        date: new Date(2014, 11),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/Chord-Diagram-Storytelling/",
+        img: [
+            {full: "switching-phone-1.png", zoom: "switching-phone-zoom-1.png", chartId: ["chordDiagram"]},
+            {full: "switching-phone-2.png", zoom: "switching-phone-zoom-2.png", chartId: ["chordDiagram"]},
+        ],
+        contextDescription: "A study asked 2000 residents of the Netherlands about their mobile phone behavior. The respondents gave information about the brand of their current main phone, and the brand of their previous main phone, and their answers are visualized in this data story.",
+        chartDescription: "Probably the best chord diagram example I know so far. The project incrementally add each part of the final figure to explain how it works.",
+        tools: [{name: "d3.js", link: "https://github.com/nbremer/Chord-Diagram-Storytelling"}],
+        luminosity: [ "light"],
+        interactive: true
+    },
+    {
+        id: 66,
+        title: "Satellite Surge",
+        date: new Date(2020, 1),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/sciam-satellite-surge/",
+        img: [
+            {full: "satellite-surge.png", zoom: "satellite-surge-zoom.png", chartId: ["stream"]},
+        ],
+        contextDescription: "A visualization showing the rise and recent surge of the number of satellites that orbit Earth for the “Graphic Science” magazine.",
+        chartDescription: "A vertical streamgraph with a lot of annotations telling the story. Note that each group of the stream are divided in substreams that follow a 'bump chart' logic.",
+        tools: [{name: "d3.js", link: undefined}, {name: "R", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 67,
+        title: "Digital Trackers",
+        date: new Date(2019, 7),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/new-york-times-digital-trackers/",
+        img: [
+            {full: "digital-tracker.png", zoom: "digital-tracker-zoom.png", chartId: ["network", "circularPacking"]},
+        ],
+        contextDescription: "Visualizing the insane number of digital trackers that you gather when you browse the web for the new York times.",
+        chartDescription: "This is not exactly a network chart but more a diagram representing the day of a regular internet user. The design is very clean and definitely worth a read.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 68,
+        title: "Frontex: EU’s Deportation Machine",
+        date: new Date(2019, 6),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/lighthouse-reports-frontex/",
+        img: [
+            {full: "frontex-deportation-1.png", zoom: "frontex-deportation-zoom-1.png", chartId: ["connection"]},
+            {full: "frontex-deportation-1.png", zoom: "frontex-deportation-zoom-2.png", chartId: ["area"]},
+        ],
+        contextDescription: "Frontex is the EU coast and border agency. It is in charge of organizing the flights that send deportees back home. This viz shows this sad flow on the globe.",
+        chartDescription: "The static version already does a great job at showing the flow thanks to subtle color gradients and icons. But the <a href='https://vimeo.com/351673775'>video</a> is definitely worth a look to, as it depict the acceleration of the process in another way.",
+        tools: [{name: "d3.js", link: undefined}, {name: "R", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 69,
+        title: "Shareholder Report",
+        date: new Date(2019, 1),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/adyen-report-2019/",
+        img: [
+            {full: "shareholder-report-1.png", zoom: "shareholder-report-zoom-1.png", chartId: ["sankey"]},
+            {full: "shareholder-report-2.png", zoom: "shareholder-report-zoom-2.png", chartId: ["treemap"]},
+            {full: "shareholder-report-3.png", zoom: "shareholder-report-zoom-3.png", chartId: ["waffle"]},
+        ],
+        contextDescription: "Some figures for a shareholder letter & annual report. Four extensive visuals about the income statement, costs, regional and FTE growth.",
+        chartDescription: "Several chart types following the same design guidelines: sankey, treemap and waffle. I really like that they each have their own personal touch: sankey start with a gradient, treemap and waffle items have a 45° rotation.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    }
+
 ]
