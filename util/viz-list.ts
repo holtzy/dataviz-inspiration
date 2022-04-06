@@ -938,6 +938,82 @@ export const vizList: VizItem[] = [
         tools: [{name: "d3.js", link: undefined}],
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 70,
+        title: "Intangible Cultural Heritage",
+        date: new Date(2018, 9),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/intangible-cultural-heritage/",
+        img: [
+            {full: "cultural-heritage.png", zoom: "cultural-heritage-zoom.png", chartId: ["network"]},
+        ],
+        contextDescription: "Since 2003 UNESCO safeguards an ever growing list of our Intangible Cultural Heritage and these days there are almost 500 unique cultural elements inscribed on the list.",
+        chartDescription: "A network chart showing those cultural heritage items and their connections. The interactive version is <a href='https://ich.unesco.org/en/dive&display=constellation#tabs'>available here</a>.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 71,
+        title: "Bussed out",
+        date: new Date(2017, 11),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/bussed-out/",
+        img: [
+            {full: "bussed-out-1.png", zoom: "bussed-out-zoom-1.png", chartId: ["density"]},
+            {full: "bussed-out-2.png", zoom: "bussed-out-zoom-2.png", chartId: ["bubbleMap"]},
+            {full: "bussed-out-3.png", zoom: "bussed-out-zoom-3.png", chartId: ["arc"]},
+        ],
+        contextDescription: "Each year, US cities give thousands of homeless people one-way bus tickets out of town. An 18-month nationwide investigation by the Guardian reveals, for the first time, what really happens at journey’s end.",
+        chartDescription: "A master piece of scrollytelling feature a wide range of viz types. I am a big fan of the vertical density chart with this flow diagram on the left, beautiful.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: true
+    },
+    {
+        id: 72,
+        title: "Baby spike",
+        date: new Date(2017, 3),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/baby-spike/",
+        img: [
+            {full: "baby-spike.png", zoom: "baby-spike-zoom.png", chartId: ["density"]}
+        ],
+        contextDescription: "Visualizing the number of babies born across different time frames; from weeks down to the minute, to reveal the role of scheduling & intervention in births.",
+        chartDescription: "Those density charts are highly customized. They are made circular to show the cyclic nature of the data. The distribution is also spread around the median line, instead of using 0 as a baseline.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 73,
+        title: "Words in the Lord of the Rings",
+        date: new Date(2016, 6),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/words-lord-of-the-rings/",
+        img: [
+            {full: "lord-of-rings-words.png", zoom: "lord-of-rings-words-zoom.png", chartId: ["chordDiagram", "sankey"]}
+        ],
+        contextDescription: "In this visualization you can find out how many words a member of the lord of the rings has spoken at each different location throughout the trilogy.",
+        chartDescription: "This chart is looking a lot like a chord diagram but has nodes in the center of the figures. Check the <a href='https://lotr.visualcinnamon.com'>interactive version</a> for a better exploration.",
+        tools: [{name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: true
+    },
+    {
+        id: 74,
+        title: "Annual working hours",
+        date: new Date(2022, 3),
+        author: "Ansgar Wolsing",
+        url: "https://github.com/bydata/30DayChartChallenge/blob/main/2022/06/06-owid-slope.png",
+        img: [
+            {full: "annual-workinf-hours.png", zoom: "annual-workinf-hours-zoom.png", chartId: ["parallel"]}
+        ],
+        contextDescription: "In this visualization you can find out how many words a member of the lord of the rings has spoken at each different location throughout the trilogy.",
+        chartDescription: "Just a clean parallel chart. Great way to legend the chart using an inline color in the chart explanation on top.",
+        tools: [{name: "R", link: 'https://github.com/bydata/30DayChartChallenge/blob/main/2022/06/06-owid-slope.png'}],
+        luminosity: [ "light"],
+        interactive: false
     }
-
 ]
