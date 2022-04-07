@@ -1015,5 +1015,80 @@ export const vizList: VizItem[] = [
         tools: [{name: "R", link: 'https://github.com/bydata/30DayChartChallenge/blob/main/2022/06/06-owid-slope.png'}],
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 75,
+        title: "FM Radios",
+        date: new Date(2020, 3),
+        author: "Erin",
+        url: "https://erdavis.com/2020/01/04/visualizing-the-geography-of-fm-radio/",
+        img: [
+            {full: "fm-radios-map.png", zoom: "fm-radios-map-zoom.png", chartId: ["bubbleMap", "map"]}
+        ],
+        contextDescription: "Checking where FM radios are broadcasting from, split by type.",
+        chartDescription: "Probably more data art than data viz but I very like the global style of this map.",
+        tools: undefined,
+        luminosity: [ "dark"],
+        interactive: false
+    },
+    {
+        id: 76,
+        title: "Upvotes are beautiful",
+        date: new Date(2020, 2),
+        author: "Erin",
+        url: "https://erdavis.com/2020/03/17/6-weeks-of-activity-on-dataisbeautiful-also-coronavirus/",
+        img: [
+            {full: "upvotes-are-beautiful.png", zoom: "upvotes-are-beautiful-zoom.png", chartId: ["line", "connectedScatter", "timeseries"]}
+        ],
+        contextDescription: "Some awesome viz are posted on Reddit every day, on a channel called <a href='https://www.reddit.com/r/dataisbeautiful/'>DataIsBeautiful</a>. This viz checks how popular each viz became for a month. Only a few per day make it to popularity!",
+        chartDescription: "This is a very specific grouped line chart. There are many groups. The value can only increase and data is recorded for 36 hours only. It results in a very original shape. The annotation on top allow to learn what titles where the most popular.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 77,
+        title: "Hidden logic of cities",
+        date: new Date(2019, 8),
+        author: "Erin",
+        url: "https://erdavis.com/2019/09/20/the-beautiful-hidden-logic-of-cities-worldwide/",
+        img: [
+            {full: "hidden-logic-of-cities.png", zoom: "hidden-logic-of-cities-zoom.png", chartId: ["map"]}
+        ],
+        contextDescription: "Driving around your city, you’re probably somewhat aware of Avenues and Boulevards and Streets and Roads and so on. This project aims at showing where each type takes place.",
+        chartDescription: "Those map are just representing what kind of area each place is (street, place, river..). A bunch of cities are available as prints <a href='https://society6.com/erdavis'>here</a>.",
+        tools: [{name: "R", link: "https://github.com/erdavis1/RoadColors"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 78,
+        title: "Mapping road intersections",
+        date: new Date(2020, 6),
+        author: "Erin",
+        url: "https://erdavis.com/2020/07/06/how-common-are-roundabouts-plus-a-bunch-of-other-maps/",
+        img: [
+            {full: "road-intersections.png", zoom: "road-intersections-zoom.png", chartId: ["map"]}
+        ],
+        contextDescription: "A project that maps the 34 million road intersections in Europe. Visit the project to see other great images about roundabouts and empty places.",
+        chartDescription: "It's important to understand that the process results in a population density map. But the “city lights from space” + “starry sky” effect is definitely working here.",
+        tools: undefined,
+        luminosity: [ "dark"],
+        interactive: false
+    },
+    {
+        id: 79,
+        title: "Reading list",
+        date: new Date(2020, 6),
+        author: "Erin",
+        url: "https://erdavis.com/2022/01/04/my-2021-in-reading/",
+        img: [
+            {full: "reading-list.png", zoom: "reading-list-zoom.png", chartId: ["line", "timeseries"]}
+        ],
+        contextDescription: "The author read a bunch of book in 2021, and track the progress of each book along the year. This viz allows to see which book she was reading at each period of the year.",
+        chartDescription: "In my opinion this is a very clever way to represent this dataset. It allows to have a very global vision of the year, and to see which book behaviour. Check how Sapiens became a struggle, I did not finish it either!",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
     }
 ]
