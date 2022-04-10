@@ -1090,5 +1090,143 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 80,
+        title: "Genome collection",
+        date: new Date(2021, 6),
+        author: "Maarten Lambrechts",
+        url: "https://www.maartenlambrechts.com/2021/07/02/visualizing-a-genome-collection-with-cactustrees.html",
+        img: [
+            {full: "genome-collection-1.png", zoom: "genome-collection-zoom-1.png", chartId: ["dendrogram"]},
+            {full: "genome-collection-2.png", zoom: "genome-collection-zoom-2.png", chartId: ["network"]},
+            {full: "genome-collection-3.png", zoom: "genome-collection-zoom-3.png", chartId: ["edgeBundling", "network"]},
+        ],
+        contextDescription: "How do you visualize a genome collection of more than 44.000 soil microbes? A project that takes gene sequences of different kinds of soil organisms, and tries to find species and specimens that are biologically active against crop pests.",
+        chartDescription: "This final piece of this project is a <a href='http://ceur-ws.org/Vol-1947/paper05.pdf'>Cactus Trees</a> visualization, a kind I did not know until today. The author explains the full process leading there, an interesting read and some unconventional shapes.",
+        tools: [{name: "R", link: undefined}, {name: "d3.js", link: undefined}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 81,
+        title: "Bundling on map",
+        date: new Date(2021, 6),
+        author: "Holten et al.",
+        url: "https://www.data-to-viz.com/graph/edge_bundling.html",
+        img: [
+            {full: "map-bundling.png", zoom: "map-bundling-zoom.png", chartId: ["map", "edgeBundling", "connection"]},
+        ],
+        contextDescription: "This figure is part of a paper called 'Force-Directed Edge Bundling for Graph Visualization'. It represents the US airlines connections and studies a variety of bundling algorithms.",
+        chartDescription: "You can read the complete research paper <a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.7989&rep=rep1&type=pdf'>here</a>, that compares different values for the bundling. It shows very well how useful can be bundling.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 82,
+        title: "Co-autorship network",
+        date: new Date(2018, 6),
+        author: "Yan Holtz",
+        url: "https://www.data-to-viz.com/graph/arc.html",
+        img: [
+            {full: "co-autorship-network.png", zoom: "co-autorship-network-zoom.png", chartId: ["arc"]},
+        ],
+        contextDescription: "An example showing the co-authorship network of a researcher. Vincent Ranwez is author of several scientific publications and counts more than 100 co-authors. How are those co-authors interconnected?",
+        chartDescription: "Vincent Ranwez has about 100 co-authors, all represented by a node on the following chart. If two people have already been on the same paper, they are linked by an arc.",
+        tools: [{name: "R", link: "https://www.data-to-viz.com/graph/arc.html"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 83,
+        title: "Metal recovery",
+        date: new Date(2012, 6),
+        author: "Golev et al.",
+        url: "https://www.data-to-viz.com/graph/sankey.html",
+        img: [
+            {full: "metal-recovery.png", zoom: "metal-recovery-zoom.png", chartId: ["sankey"]},
+        ],
+        contextDescription: "A sankey diagram showing the flow of metals in Australia. Import, Export, waste, all the in and out are included.",
+        chartDescription: "Clean and un-cluttered design for this Sankey diagram.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 84,
+        title: "Migraton flow",
+        date: new Date(2018, 6),
+        author: "Gui J. Abel",
+        url: "https://www.data-to-viz.com/graph/chord.html",
+        img: [
+            {full: "migration-flow.png", zoom: "migration-flow-zoom.png", chartId: ["chordDiagram"]},
+        ],
+        contextDescription: "Everyday, people leave a country to join another, creating migration flows. This img is a reproduction of a figure from this <a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/imre.12327'>scientific paper</a> that studies those flows.",
+        chartDescription: "An insightful chord diagram showing migration flows between continent. I really like how easy it is to understand the direction of the flow thanks to the arrow and the start vs end position shift of the connection.",
+        tools: [{name: "R", link: "https://www.data-to-viz.com/graph/chord.html"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 85,
+        title: "EU Regions",
+        date: new Date(2019, 3),
+        author: "Maarten Lambrechts",
+        url: "https://pudding.cool/2019/04/eu-regions/",
+        img: [
+            {full: "eu-regions-1.png", zoom: "eu-regions-zoom-1.png", chartId: ["map", "choropleth"]},
+            {full: "eu-regions-2.png", zoom: "eu-regions-zoom-2.png", chartId: ["lollipop", "scatter"]},
+        ],
+        contextDescription: "A in-depth analysis of the european regions. It tries to explain why Budapest, Warsaw, and Lithuania split themselves in two.",
+        chartDescription: "The choropleth map presented in this scrolltelling article is very clean, and so are the animations telling the story. Definitely worth checking the whole <a href='https://pudding.cool/2019/04/eu-regions/'>interactive project</a>, at least for the choropleth to lollipop transition.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 86,
+        title: "Animated treemap",
+        date: new Date(2019, 3),
+        author: "Maarten Lambrechts",
+        url: "https://themasites.pbl.nl/o/duurzaam-voedsel/",
+        img: [
+            {full: "animated-treemap.png", zoom: "animated-treemap-zoom.png", chartId: ["treemap"]},
+        ],
+        contextDescription: "Not sure about the context of this chart, it's all written in flamish 😀 .",
+        chartDescription: "Clean treemap with illustrations. The transition between dataset is nice in the first tries, but then feels a bit long when you keep playing with it.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 87,
+        title: "Eurosearch song contest",
+        date: new Date(2019, 3),
+        author: "Maarten Lambrechts",
+        url: "https://googletrends.github.io/eurosearch-song-contest/",
+        img: [
+            {full: "eurosearch-song-contest.png", zoom: "eurosearch-song-contest-zoom.png", chartId: ["map", "hexbin"]},
+        ],
+        contextDescription: "What if Google searches were used to award points in the Eurovision Song Contest? What countries would make the final and who would cry victory?",
+        chartDescription: "Many countries are small, sometimes barely visible on the map. But they're value is worth as much as big countries. This article suggests to squarify Europe to put all countries on the same scale.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 88,
+        title: "The 200+ beer brands",
+        date: new Date(2015, 9),
+        author: "Maarten Lambrechts",
+        url: "https://www.maartenlambrechts.com/2015/10/16/interactive-the-200-beer-brands-of-sab-inbev.html",
+        img: [
+            {full: "the-200-beer-brands.png", zoom: "the-200-beer-brands-zoom.png", chartId: ["dendrogram"]},
+        ],
+        contextDescription: "The merging of AB InBev and SABMiller creates a brewing giant, more than one third of all beer worldwide will be produced by just one company. Here is an overview of all the beers that are concerned.",
+        chartDescription: "This is a radial dendrogram, where beers are subdivided in continent and country. Fun interactive touch: hovering a beer makes you see the bottle. Made me thirsty 🌴 !",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
     }
 ]
