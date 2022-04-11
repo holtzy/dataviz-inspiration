@@ -1228,5 +1228,55 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 89,
+        title: "Who speaks when in Shakespeare's MacBeth?",
+        date: new Date(2022, 3),
+        author: "Ansgar Wolsing",
+        url: "https://github.com/bydata/30DayChartChallenge/tree/main/2022/10",
+        img: [
+            {full: "who-speaks-in-shakespeare.png", zoom: "who-speaks-in-shakespeare-zoom.png", chartId: ["stream"]},
+        ],
+        contextDescription: "Distribution of speech share (number of words) per character in each scene. Acts are separated with vertical lines.",
+        chartDescription: "A dark mode streamgraph with clean annotations.",
+        tools: [{name: "R", link: "https://github.com/bydata/30DayChartChallenge/tree/main/2022/10"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 90,
+        title: "Mortality and mental disorders",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            {full: "mortality-and-mental-disorders-1.png", zoom: "mortality-and-mental-disorders-zoom-1.png", chartId: ["line"]},
+            {full: "mortality-and-mental-disorders-2.png", zoom: "mortality-and-mental-disorders-zoom-2.png", chartId: ["lollipop"]},
+            {full: "mortality-and-mental-disorders-3.png", zoom: "mortality-and-mental-disorders-zoom-3.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "An interactive webpage that goes along with a <a href='https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32316-5/fulltext'>scientific publication</a>. The goal was to study the links between mortality rates and mental disorders.",
+        chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
+        tools: [{name: "d3.js", link: "https://github.com/holtzy/Mortality"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 91,
+        title: "The World Mental Health Survey",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            {full: "world-mental-health-survey-1.png", zoom: "world-mental-health-survey-zoom-1.png", chartId: ["heatmap"]},
+            {full: "world-mental-health-survey-2.png", zoom: "world-mental-health-survey-zoom-2.png", chartId: ["barplot"]},
+            {full: "world-mental-health-survey-3.png", zoom: "world-mental-health-survey-zoom-3.png", chartId: ["sankey"]},
+            {full: "world-mental-health-survey-4.png", zoom: "world-mental-health-survey-zoom-4.png", chartId: ["line"]},
+        ],
+        contextDescription: "A set of data visualization on comorbidity between mental disorders. This is a webpage that goes along this scientific publication, allowing readers to explore the data themselves.",
+        chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
+        tools: [{name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey"}],
+        luminosity: [ "light"],
+        interactive: false
     }
 ]
