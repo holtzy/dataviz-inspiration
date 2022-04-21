@@ -65,7 +65,7 @@ const About: NextPage = () => {
           What's in the website? How many projects? What kind of tool? Who are
           the biggest authors?
         </p>
-        <Barplot width={700} height={500} data={authorDataClean} />
+        <Barplot width={700} height={400} data={authorDataClean} />
 
         <h1>Contributing</h1>
         <p>How to suggest a chart? Not sure to publish it though</p>

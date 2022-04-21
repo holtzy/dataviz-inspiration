@@ -19,7 +19,7 @@ export const Barplot = ({ width, height, data }: BarplotProps) => {
   // Y axis is for groups since the barplot is horizontal
   const groups = data.map((d) => d.group);
   const yScale = useMemo(() => {
-    return d3.scaleBand().domain(groups).range([0, boundsHeight]).padding(0.4);
+    return d3.scaleBand().domain(groups).range([0, boundsHeight]).padding(0.3);
   }, [data, height]);
 
   // X axis
@@ -31,35 +31,55 @@ export const Barplot = ({ width, height, data }: BarplotProps) => {
       .range([0, boundsWidth]);
   }, [data, width]);
 
-  // Render the X and Y axis using d3.js, not react
-  useEffect(() => {
-    const svgElement = d3.select(axesRef.current);
-    svgElement.selectAll("*").remove();
-    const xAxisGenerator = d3.axisBottom(xScale);
-    svgElement
-      .append("g")
-      .attr("transform", "translate(0," + boundsHeight + ")")
-      .call(xAxisGenerator);
+  //   // Render the X and Y axis using d3.js, not react
+  //   useEffect(() => {
+  //     const svgElement = d3.select(axesRef.current);
+  //     svgElement.selectAll("*").remove();
+  //     const xAxisGenerator = d3.axisBottom(xScale);
+  //     svgElement
+  //       .append("g")
+  //       .attr("transform", "translate(0," + boundsHeight + ")")
+  //       .call(xAxisGenerator);
 
-    const yAxisGenerator = d3.axisLeft(yScale);
-    svgElement.append("g").call(yAxisGenerator);
-  }, [xScale, yScale, boundsHeight]);
+  //     const yAxisGenerator = d3.axisLeft(yScale);
+  //     svgElement.append("g").call(yAxisGenerator);
+  //   }, [xScale, yScale, boundsHeight]);
 
   // Build the shapes
   const allShapes = data.map((d, i) => {
     return (
-      <rect
-        key={i}
-        x={xScale(0)}
-        y={yScale(d.group)}
-        width={xScale(d.value)}
-        height={yScale.bandwidth()}
-        opacity={0.7}
-        stroke="#9a6fb0"
-        fill="#9a6fb0"
-        fillOpacity={0.3}
-        strokeWidth={1}
-      />
+      <g key={i}>
+        <rect
+          x={xScale(0)}
+          y={yScale(d.group)}
+          width={xScale(d.value)}
+          height={yScale.bandwidth()}
+          opacity={0.7}
+          stroke="#9d174d"
+          fill="#9d174d"
+          fillOpacity={0.3}
+          strokeWidth={1}
+          rx={1}
+        />
+        <text
+          x={xScale(d.value) - 7}
+          y={yScale(d.group) + yScale.bandwidth() / 2}
+          textAnchor="end"
+          alignmentBaseline="central"
+          fontSize={12}
+        >
+          {d.value}
+        </text>
+        <text
+          x={xScale(0) + 7}
+          y={yScale(d.group) + yScale.bandwidth() / 2}
+          textAnchor="start"
+          alignmentBaseline="central"
+          fontSize={12}
+        >
+          {d.group}
+        </text>
+      </g>
     );
   });
 
