@@ -1278,5 +1278,53 @@ export const vizList: VizItem[] = [
         tools: [{name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey"}],
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 92,
+        title: "End of the Covid-19 pandemic",
+        date: new Date(2020, 3),
+        author: "Mc Kinsey",
+        url: "https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/when-will-the-covid-19-pandemic-end",
+        img: [
+            {full: "end-of-covid-pandemic-1.png", zoom: "end-of-covid-pandemic-zoom-1.png", chartId: ["scatter"]},
+            {full: "end-of-covid-pandemic-2.png", zoom: "end-of-covid-pandemic-zoom-2.png", chartId: ["line"]},
+            {full: "end-of-covid-pandemic-3.png", zoom: "end-of-covid-pandemic-zoom-3.png", chartId: ["heatmap"]},
+            {full: "end-of-covid-pandemic-4.png", zoom: "end-of-covid-pandemic-zoom-4.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "Mc Kinsey regularly post updates on the covid situation, especially concerning future potential trends. Luckily this report is full of nice visuals.",
+        chartDescription: "It's great to see such a variety of vizzes in a business report. They are very epurated and all follow the same style guideline which make them worth sharing here.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 93,
+        title: "French folks migration",
+        date: new Date(2018, 3),
+        author: "Etienne Come",
+        url: "https://www.comeetie.fr/galerie/wind/",
+        img: [
+            {full: "french-folks-migration.png", zoom: "french-folks-migration-zoom.png", chartId: ["map", "connection"]},
+        ],
+        contextDescription: "A migration map showing how french people are moving inside their country. What's really interesting here is that you can select a subset of the population based on sex or work category. Stunning result!",
+        chartDescription: "This migration map is very much inspired from the wind map of Tobler et al. that is also feature in dataviz-inspiration.com.<br>Note: the static visual is disappointing but the animated version is mesmerizing!",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: true
+    },
+    {
+        id: 94,
+        title: "Transphobic hate crimes in Sweden",
+        date: new Date(2022, 0),
+        author: "Georgios Karamanis",
+        url: "https://karaman.is/blog/2022/1/tidytuesday-20221",
+        img: [
+            {full: "transphobic-crimes-sweden.png", zoom: "transphobic-crimes-sweden-zoom.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "Reported crimes that the police classified as hate crimes and where killer identified hate as the underlying motive.",
+        chartDescription: "A simple yet clean horizontal barplot.",
+        tools: [{name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2022/2022-week_01"}],
+        luminosity: [ "light"],
+        interactive: false
     }
 ]
