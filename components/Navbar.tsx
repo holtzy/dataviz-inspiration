@@ -29,9 +29,13 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Related websites on the right */}
-          <div>
-            {/* Profile dropdown */}
+          {/* Related websites & About on the right */}
+          <div className="flex items-center">
+            <Link href="/about">
+              <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black">
+                About
+              </span>
+            </Link>
             <Menu as="div" className="ml-3 relative">
               <div>
                 <Menu.Button className="">
