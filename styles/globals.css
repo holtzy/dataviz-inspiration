@@ -10,6 +10,10 @@
   --brand: #9d174d;
   /* Tailwind css pink-900 */
   --brand-dark: #831843;
+  /* Greys */
+  --light-grey:  #f8f9fa;
+  --medium-grey: #e5e5e5;
+  --dark-grey: #C8C8C8;
 }
 
 /* Each section has a specific color */
@@ -82,7 +86,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns:
     1fr
-    min(105ch, 90%)
+    min(800px, 90%)
     1fr;
 }
 .wrapper > * {
@@ -118,4 +122,13 @@ a {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: .1px;
+}
+
+h2 {
+  font-size: 22px !important;
+  width: 100%;
+  border-bottom: 1px solid var(--medium-grey);
+  margin-top: 100px !important;
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }
