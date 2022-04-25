@@ -14,6 +14,7 @@ import { Barplot } from "../components/Dataviz/Barplot";
 import Link from "next/link";
 import { TakeHome } from "../components/TakeHome";
 import { ParallaxSection } from "../components/ParallaxSection";
+import Image from "next/image";
 
 const About: NextPage = () => {
   const siteDescription = (
@@ -89,7 +90,7 @@ const About: NextPage = () => {
 
         <div className="full-bleed">
           <ParallaxSection
-            imgLink="https://github.com/holtzy/dataviz-inspiration/blob/main/public/parralax/overview1.png?raw=true"
+            imgLink="https://github.com/holtzy/dataviz-inspiration/blob/main/public/misc/overview1.png?raw=true"
             opacity={0.6}
             height={300}
           />
@@ -138,6 +139,18 @@ const About: NextPage = () => {
           </TakeHome>
           .
         </p>
+        <div className="flex justify-center items-center">
+          <div className="flex max-w-sm flex-col w-96">
+            <img src="/misc/filterOverview.png" />
+            <p className="text-gray-500 font-light mt-3 italic text-sm">
+              All viz projects are assigned to a chart type of the
+              <br />
+              <a href="https://www.data-to-viz.com">data-to-viz</a>{" "}
+              classification. It makes it easy to target the viz you're looking
+              for.
+            </p>
+          </div>
+        </div>
 
         <h2>💛 The best sources for great charts</h2>
         <p className="pb-3">
