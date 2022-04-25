@@ -132,3 +132,18 @@ h2 {
   margin-bottom: 10px !important;
   padding-bottom: 10px !important;
 }
+
+
+.parallaxposter {
+  /* The image used (faded with convert overview_RGG.png  -fill white -colorize 50%  overview_RGG_faded.png*/
+  background-image: url("/public/img/parralax/overview1.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

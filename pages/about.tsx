@@ -86,6 +86,23 @@ const About: NextPage = () => {
           layout that makes it pleasant to explore.
         </p>
 
+        <div className="full-bleed">
+          <div className="parallaxposter">
+            <div className="container">
+              <div className="row text-center">
+                <div className="col-lg-3 col-md-6 text-center">
+                  <h2 className="text-uppercase">Size</h2>
+                  <p>
+                    Landscape A1
+                    <br />
+                    800mm x 600mm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h2>📖 Why I built this project</h2>
         <p className="pb-3">
           A few years ago I created the{" "}
