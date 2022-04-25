@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 import { Barplot } from "../components/Dataviz/Barplot";
 import Link from "next/link";
 import { TakeHome } from "../components/TakeHome";
+import { ParallaxSection } from "../components/ParallaxSection";
 
 const About: NextPage = () => {
   const siteDescription = (
@@ -87,21 +88,16 @@ const About: NextPage = () => {
         </p>
 
         <div className="full-bleed">
-          <div className="parallaxposter">
-            <div className="container">
-              <div className="row text-center">
-                <div className="col-lg-3 col-md-6 text-center">
-                  <h2 className="text-uppercase">Size</h2>
-                  <p>
-                    Landscape A1
-                    <br />
-                    800mm x 600mm
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ParallaxSection
+            imgLink="https://github.com/holtzy/dataviz-inspiration/blob/main/public/parralax/overview1.png?raw=true"
+            opacity={0.6}
+            height={300}
+          />
         </div>
+        <p className="text-gray-500 font-light mt-3 italic text-sm">
+          A glimpse of the viz showcased in dataviz-inspiration.com, presented
+          in a pinterest style.
+        </p>
 
         <h2>📖 Why I built this project</h2>
         <p className="pb-3">

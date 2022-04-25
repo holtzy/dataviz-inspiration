@@ -136,14 +136,16 @@ h2 {
 
 .parallaxposter {
   /* The image used (faded with convert overview_RGG.png  -fill white -colorize 50%  overview_RGG_faded.png*/
-  background-image: url("/public/img/parralax/overview1.png");
+  background-image: url("https://github.com/holtzy/dataviz-inspiration/blob/main/public/parralax/overview1.png?raw=true");
 
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 300px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  opacity: .6;
 }
