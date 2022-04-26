@@ -8,6 +8,7 @@ import { Barplot } from "../components/Dataviz/Barplot";
 import Link from "next/link";
 import { TakeHome } from "../components/TakeHome";
 import { ParallaxSection } from "../components/ParallaxSection";
+import { ChartTypeTreemap } from "../components/Dataviz/Treemap/ChartTypeTreemap";
 
 const About: NextPage = () => {
   const siteDescription = (
@@ -191,7 +192,9 @@ const About: NextPage = () => {
           is truely a hobby for me and it taught me so much both in term of
           dataviz and general knowledge.
         </p>
-        <Barplot width={700} height={400} data={authorDataClean} />
+        {/* <Barplot width={700} height={400} data={authorDataClean} /> */}
+
+        <ChartTypeTreemap />
 
         <div className="full-bleed bg-gray-100 pb-24">
           <div className="wrapper">
