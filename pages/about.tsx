@@ -1,20 +1,13 @@
 import type { NextPage } from "next";
 import Footer from "../components/Footer";
-import { MasonryItem } from "../components/MasonryItem";
 import TitleAndDescription from "../components/TitleAndDescription";
-import { VizItemModal } from "../components/VizItemModal";
-import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
-import { useRouter } from "next/router";
-import { WallFilters } from "../components/WallFilters";
-import { ChartId, chartTypesInfo } from "../util/sectionDescription";
-import { filterVizList } from "../util/filterVizList";
-import { AppHeader } from "../components/AppHeader";
+import { vizList } from "../util/viz-list";
+
 import Navbar from "../components/Navbar";
 import { Barplot } from "../components/Dataviz/Barplot";
 import Link from "next/link";
 import { TakeHome } from "../components/TakeHome";
 import { ParallaxSection } from "../components/ParallaxSection";
-import Image from "next/image";
 
 const About: NextPage = () => {
   const siteDescription = (

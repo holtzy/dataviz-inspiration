@@ -1326,5 +1326,85 @@ export const vizList: VizItem[] = [
         tools: [{name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2022/2022-week_01"}],
         luminosity: [ "light"],
         interactive: false
+    },
+    {
+        id: 95,
+        title: "Visit Vincent",
+        date: new Date(2022, 4),
+        author: "Julia Borsi",
+        url: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent",
+        img: [
+            {full: "visit-vincent.png", zoom: "visit-vincent-zoom.png", chartId: ["map", "sankey"]},
+        ],
+        contextDescription: "St Vincent and the Grenadines is a southern Caribbean island country. The country is made of 32 islands, only 9 of them are actually inhabited. It is a tropical paradise visited by many people.",
+        chartDescription: "The project is a mix between a map of the country and a sankey diagram.",
+        tools: [{name: "tableau", link: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent"}],
+        luminosity: [ "light"],
+        interactive: false
+    },
+    {
+        id: 96,
+        title: "The new normal",
+        date: new Date(2021, 4),
+        author: "Alberto Cairo",
+        url: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent",
+        img: [
+            {full: "the-new-normal-1.png", zoom: "the-new-normal-zoom-1.png", chartId: ["line"]},
+            {full: "the-new-normal-2.png", zoom: "the-new-normal-zoom-2.png", chartId: ["line"]},
+            {full: "the-new-normal-3.png", zoom: "the-new-normal-zoom-3.png", chartId: ["line"]},
+        ],
+        contextDescription: "This visualization uses Google Trends to explore shopping interest for various products before and during the Covid-19 pandemic.",
+        chartDescription: "A scrollytelling article mainly based on line charts, and using small multiple to explore a high number of groups in an efficient manner.",
+        tools: undefined,
+        luminosity: [ "light"],
+        interactive: true
+    },
+    {
+        id: 97,
+        title: "Orion",
+        date: new Date(2022, 4),
+        author: "Orion team",
+        url: "https://setproduct.com/orion/templates",
+        img: [
+            {full: "orion-figma-template-1.png", zoom: "orion-figma-template-zoom-1.png", chartId: ["radar"]},
+            {full: "orion-figma-template-2.png", zoom: "orion-figma-template-zoom-2.png", chartId: ["circularPacking"]},
+        ],
+        contextDescription: "Orion is a Figma plugin to quickly embed chart templates into a design system.",
+        chartDescription: "I'm not really a fan of most of the viz that are often, but I selected this project for their 'futuristic' style that can be useful to mimick.",
+        tools: undefined,
+        luminosity: [ "light", "dark"],
+        interactive: false
+    },
+    {
+        id: 98,
+        title: "League of legend analytics",
+        date: new Date(2022, 3),
+        author: "Kris Akerstrom",
+        url: "http://akerstrom.co.uk/league-of-legends-analytics-dashboard/",
+        img: [
+            {full: "league-of-legends-analytics-1.png", zoom: "league-of-legends-analytics-zoom-1.png", chartId: ["radar"]},
+            {full: "league-of-legends-analytics-2.png", zoom: "league-of-legends-analytics-zoom-2.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "An analytics dashboard design to show your stats and help you improve at League of Legends.",
+        chartDescription: "What I find interesting here is the 'futuristic' design: dark mode, flashy & glowy colors with gradients.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 99,
+        title: "Dynamic planning",
+        date: new Date(2019, 1),
+        author: "César Neri",
+        url: "https://cesarneri.com/pages/dynamicPlanning.html",
+        img: [
+            {full: "dynamic-planning-1.png", zoom: "dynamic-planning-zoom-1.png", chartId: ["barplot"]},
+            {full: "dynamic-planning-2.png", zoom: "dynamic-planning-zoom-2.png", chartId: ["radar"]},
+        ],
+        contextDescription: "Dynamic Planning is a proof of concept for a SaaS planning platform that allows for data-driven decisions based on live building occupancy. In its current state, it is a data visualization dashboard that connects sensor data and institutional datasets to a building information model (BIM) in order to track an organization's planning goals.",
+        chartDescription: "A set of viz designed for branding. Most of them cannot be used as-is in a dataviz project but there are some design inspiration to get.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
