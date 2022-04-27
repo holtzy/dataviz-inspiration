@@ -214,9 +214,18 @@ const About: NextPage = () => {
           <span className="distribution font-semibold">Distribution</span> is,{" "}
           <span className="correlation font-semibold">Correlation</span> has
         </p>
-        <ChartTypeTreemap />
+        <div className="full-bleed flex justify-center">
+          <ChartTypeTreemap />
+        </div>
+        <p className="text-gray-500 font-light mt-3 italic text-sm">
+          A treemap showing how many chart of each kind is represented in{" "}
+          <a href="https://www.dataviz-inspiration.com">
+            dataviz-inspiration.com
+          </a>
+          .
+        </p>
 
-        <div className="full-bleed bg-gray-100 pb-24">
+        <div className="full-bleed bg-gray-100 pb-24 mt-12">
           <div className="wrapper">
             <h2>👋 Contribution | Contact | Future</h2>
             <p className="pb-3">

@@ -6,6 +6,7 @@ export type ConnectionItem = {
   name: string;
   parent: string;
   value: number | null;
+  label?: string;
 };
 
 export const treemapDataFromVizList = (vizList: VizItem[]) => {
@@ -38,9 +39,10 @@ export const treemapDataFromVizList = (vizList: VizItem[]) => {
   // Add each chart type to the list of connection
   Object.entries(chartTypeCounts).forEach(([key, value]) => {
     const family = chartTypesInfo.find((info) => info.id === key)?.family;
+    const label = chartTypesInfo.find((info) => info.id === key)?.label; // #ugly
     const name = key === "map" ? "backgroundMap" : key;
     if (family) {
-      connectionList.push({ name, parent: family, value });
+      connectionList.push({ name, parent: family, value, label });
     }
   });
 

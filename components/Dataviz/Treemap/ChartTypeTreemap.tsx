@@ -9,7 +9,7 @@ export const ChartTypeTreemap = () => {
   const chartSize = useDimensions(chartRef);
   const treemapData = treemapDataFromVizList(vizList);
   return (
-    <div style={{ width: "100%" }} ref={chartRef}>
+    <div style={{ width: "100%", maxWidth: 1300 }} ref={chartRef}>
       <Treemap data={treemapData} width={chartSize.width} height={400} />
     </div>
   );

@@ -22,6 +22,7 @@ export const Treemap = ({ width, height, data }: TreemapProps) => {
   const treeData = treemap().size([width, height]).padding(2)(data);
 
   const allShapes = treeData.leaves().map((leaf) => {
+    console.log("leaf", leaf);
     return (
       <g key={leaf.id}>
         <rect
@@ -38,8 +39,21 @@ export const Treemap = ({ width, height, data }: TreemapProps) => {
           fontSize={12}
           textAnchor="start"
           alignmentBaseline="hanging"
+          fill="white"
+          className="font-bold"
         >
-          {leaf.id}
+          {leaf.data.label}
+        </text>
+        <text
+          x={leaf.x0 + 3}
+          y={leaf.y0 + 18}
+          fontSize={12}
+          textAnchor="start"
+          alignmentBaseline="hanging"
+          fill="white"
+          className="font-light"
+        >
+          {leaf.data.value}
         </text>
       </g>
     );
