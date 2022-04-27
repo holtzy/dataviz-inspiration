@@ -12,7 +12,7 @@ export const ParallaxSection = ({
   return (
     <div
       style={{
-        backgroundImage: imgLink,
+        backgroundImage: "url(" + imgLink + ")",
         minHeight: height,
         backgroundAttachment: "fixed",
         opacity,
@@ -20,7 +20,7 @@ export const ParallaxSection = ({
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="parallaxposter mt-12"
+      className="mt-12"
     ></div>
   );
 };

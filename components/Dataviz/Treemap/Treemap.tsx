@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useRef } from "react";
-import * as d3 from "d3";
 import { HierarchyNode, treemap } from "d3";
 import { ConnectionItem } from "./treemapDataFromVizList";
 
@@ -22,12 +20,8 @@ const groupColor = {
 export const Treemap = ({ width, height, data }: TreemapProps) => {
   // Get the position of each square based on the dataset
   const treeData = treemap().size([width, height]).padding(2)(data);
-  console.log("treeData", treeData);
-
-  console.log("leaves", treeData.leaves());
 
   const allShapes = treeData.leaves().map((leaf) => {
-    console.log("--leaf", leaf);
     return (
       <g key={leaf.id}>
         <rect

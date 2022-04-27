@@ -16,8 +16,8 @@ const About: NextPage = () => {
       <a href="dataviz-inspiration">Dataviz-inspiration.com</a>{" "}
       <span>
         showcases hundreds of dataviz project I love. The following section
-        explains why I created this project, summarizes what's in it and
-        explains what I've learned in the process.
+        explains why I created this project, summarizes what&apos;s in it and
+        explains what I&apos;ve learned in the process.
       </span>
     </p>
   );
@@ -65,9 +65,9 @@ const About: NextPage = () => {
           of data.
         </p>
         <p className="pb-3">
-          This website is a collection of stunning dataviz project I've seen in
-          my career as a dataviz practitioner. It's by no mean a complete list
-          and is highly influenced by my taste 👨‍🍳.
+          This website is a collection of stunning dataviz project I&apos;ve
+          seen in my career as a dataviz practitioner. It&apos;s by no mean a
+          complete list and is highly influenced by my taste 👨‍🍳.
           <br />
           But hopefully it should help you stand on the shoulders of giant next
           time you have a chart to build.
@@ -111,8 +111,8 @@ const About: NextPage = () => {
           This is why I created{" "}
           <a href="https://www.data-to-viz.com">data-to-viz.com</a>, a
           classification of chart types based on the data input format. It
-          describes the main chart types, explains in what situation they're
-          useful and what are their main associated{" "}
+          describes the main chart types, explains in what situation
+          they&apos;re useful and what are their main associated{" "}
           <a href="https://www.data-to-viz.com/caveats.html">caveats</a>.
         </p>
         <p className="pb-3">
@@ -125,8 +125,8 @@ const About: NextPage = () => {
           the work of other people who faced the same challenged before.
         </p>
         <p className="pb-3">
-          Being someone in love with data visualization for a while now, I've
-          gathered my favorite snapshots in this portfolio and{" "}
+          Being someone in love with data visualization for a while now,
+          I&apos;ve gathered my favorite snapshots in this portfolio and{" "}
           <TakeHome>
             hope it will make your life easier next time you have something
             awesome to build
@@ -140,8 +140,8 @@ const About: NextPage = () => {
               All viz projects are assigned to a chart type of the
               <br />
               <a href="https://www.data-to-viz.com">data-to-viz</a>{" "}
-              classification. It makes it easy to target the viz you're looking
-              for.
+              classification. It makes it easy to target the viz you&apos;re
+              looking for.
             </p>
           </div>
         </div>
@@ -166,12 +166,12 @@ const About: NextPage = () => {
           Some <b>specialized magazines</b> even base their editorial line on
           dataviz. It is the case of{" "}
           <a href="https://pudding.cool">the Pudding</a> that explains ideas
-          using visual essays. If you love scrolly telling don't go now! You
-          will most likely loose your day if you do 😀.
+          using visual essays. If you love scrolly telling don&apos;t go now!
+          You will most likely loose your day if you do 😀.
         </p>
         <p className="pb-3">
           Dataviz <b>competition and challenges</b> are also some terrific
-          source of nice visuals. I'm thinking for instance at the{" "}
+          source of nice visuals. I&apos;m thinking for instance at the{" "}
           <a href="https://www.informationisbeautifulawards.com">
             information is beautiful award
           </a>{" "}
@@ -192,8 +192,28 @@ const About: NextPage = () => {
           is truely a hobby for me and it taught me so much both in term of
           dataviz and general knowledge.
         </p>
-        {/* <Barplot width={700} height={400} data={authorDataClean} /> */}
 
+        <h2>💪 Best examples for each chart type</h2>
+        <p className="pb-3">
+          I&apos;ve tried to find examples for each chart type. However,
+          it&apos;s interesting to realize that some chart types are very common
+          (barplot, line chart) when some others are much lesser known
+          (hierarchical edge bundling, ridgeline chart and many more.)
+        </p>
+        <p className="pb-3">
+          Here is an overview of the occurence of each chart type in the
+          project. Types are grouped by family following the classification of{" "}
+          <a href="https://data-to-viz.com">data-to-viz.com</a>.
+        </p>
+        <p className="pb-3">
+          <span className="evolution font-semibold">Evolution</span> and{" "}
+          <span className="ranking font-semibold">Ranking</span> are the 2 main
+          families, closely followed by{" "}
+          <span className="map font-semibold">Maps</span>.{" "}
+          <span className="flow font-semibold">Flows</span> are,{" "}
+          <span className="distribution font-semibold">Distribution</span> is,{" "}
+          <span className="correlation font-semibold">Correlation</span> has
+        </p>
         <ChartTypeTreemap />
 
         <div className="full-bleed bg-gray-100 pb-24">
