@@ -1,10 +1,10 @@
 import { stratify } from "d3";
-import { ChartId, chartTypesInfo } from "../../../util/sectionDescription";
+import { ChartFamily, chartTypesInfo } from "../../../util/sectionDescription";
 import { VizItem } from "../../../util/viz-list";
 
 export type ConnectionItem = {
   name: string;
-  parent: string;
+  parent: ChartFamily | "root" | "";
   value: number | null;
   label?: string;
 };

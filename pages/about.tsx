@@ -4,7 +4,6 @@ import TitleAndDescription from "../components/TitleAndDescription";
 import { vizList } from "../util/viz-list";
 
 import Navbar from "../components/Navbar";
-import { Barplot } from "../components/Dataviz/Barplot";
 import Link from "next/link";
 import { TakeHome } from "../components/TakeHome";
 import { ParallaxSection } from "../components/ParallaxSection";
