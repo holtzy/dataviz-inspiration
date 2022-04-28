@@ -1406,5 +1406,50 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 100,
+        title: "50 billions birds",
+        date: new Date(2021, 1),
+        author: "Léa Desrayaud",
+        url: "https://www.epsiloon.com",
+        img: [
+            {full: "fifty-billions-birds.png", zoom: "fifty-billions-birds-zoom.png", chartId: ["circularPacking"]},
+        ],
+        contextDescription: "There are 50 billions birds on this planet. The epsiloon mag (science popularization magazine) made a full page about bird classificatio, giving a pretty insightful result.",
+        chartDescription: "A circular packing chart showing the main chart families and their importance in term of number of animals. Annotation are in french but I love stories that are told around a chart like this.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 101,
+        title: "Marine organism biomass",
+        date: new Date(2021, 1),
+        author: "Léa Desrayaud",
+        url: "https://www.epsiloon.com",
+        img: [
+            {full: "marine-biomass.png", zoom: "marine-biomass-zoom.png", chartId: ["circularBarplot", 'histogram']},
+        ],
+        contextDescription: "An infographic studying the biomass of marine organisms. It basically split organisms by size buckets, and check their total weights. Surprisingly, it's always clost to 1 gigatonne!",
+        chartDescription: "A circular barplot showing the total biomass of each organism size bucket. Interesting to see that a lot of information has been added to it: circles to show the recent evolution of the values, stacking to split the value by organism type.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 102,
+        title: "Microbiota of big cities",
+        date: new Date(2021, 1),
+        author: "Léa Desrayaud",
+        url: "https://www.epsiloon.com",
+        img: [
+            {full: "microbiota-big-cities.png", zoom: "microbiota-big-cities-zoom.png", chartId: ["circularBarplot", 'histogram']},
+        ],
+        contextDescription: "Each city has its own microbiota. Researchers took samples in some major city metro stations. The viz checks which micro-organism is present in which city.",
+        chartDescription: "Six treemaps allowing to understand and compare the behavior of 6 cities. The viz allows to understand how diverse the microbiota is in each city, but it's still hard to compare one specific specie across cities.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
