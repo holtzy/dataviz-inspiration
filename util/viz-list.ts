@@ -1444,10 +1444,25 @@ export const vizList: VizItem[] = [
         author: "Léa Desrayaud",
         url: "https://www.epsiloon.com",
         img: [
-            {full: "microbiota-big-cities.png", zoom: "microbiota-big-cities-zoom.png", chartId: ["circularBarplot", 'histogram']},
+            {full: "microbiota-big-cities.png", zoom: "microbiota-big-cities-zoom.png", chartId: ["treemap"]}
         ],
         contextDescription: "Each city has its own microbiota. Researchers took samples in some major city metro stations. The viz checks which micro-organism is present in which city.",
         chartDescription: "Six treemaps allowing to understand and compare the behavior of 6 cities. The viz allows to understand how diverse the microbiota is in each city, but it's still hard to compare one specific specie across cities.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 103,
+        title: "How cancer kills mammals",
+        date: new Date(2021, 1),
+        author: "Léa Desrayaud",
+        url: "https://www.epsiloon.com",
+        img: [
+            {full: "cancer-mammals.png", zoom: "cancer-mammals-zoom.png", chartId: ["dendrogram"]}
+        ],
+        contextDescription: "When a mammal dies, it is about 5% of the time because of cancer. This inforgraphic checks which kind of mammal is more prone to get cancer and shows how spread this disease is.",
+        chartDescription: "This viz is a dendrogram showing the classification of mammals. The distance to center of each node provides its life expectancy, and the node features (size and color) gives more info on the specie. All of that makes the figure very insightful imo.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
