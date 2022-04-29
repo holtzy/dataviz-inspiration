@@ -1466,5 +1466,20 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 104,
+        title: "What kills who in G.o.T.",
+        date: new Date(2021, 1),
+        author: "Vivek",
+        url: "https://stateastic.home.blog/2022/04/04/30-days-30-charts-challenge/",
+        img: [
+            {full: "what-kills-who-got.png", zoom: "what-kills-who-got-zoom.png", chartId: ["sankey"]}
+        ],
+        contextDescription: "How different Houses of Game Of Thrones killed?. A project part of the <a href='https://twitter.com/30daychartchall?lang=en'>30 days 30 charts challenge</a>",
+        chartDescription: "A sankey diagram with just 1 origin and 1 destination. I like how it highlights that most murders happened from a dragon.",
+        tools: [{name: "python", link: "https://github.com/probablyvivek/Code/blob/main/sankey.ipynb"}],
+        luminosity: ["dark"],
+        interactive: false
     }
 ]
