@@ -25,30 +25,34 @@ export const ChartIdSelectorModal = ({
   // name of the chart type that is hovered over (appears at the very bottom of the modal)
   const [name, setName] = useState<string | undefined>(undefined);
 
+  const [newSelectedChartIds, setNewSelectedChartIds] = useState<
+    ChartId[] | undefined
+  >(selectedChartIds);
+
   // A list of all logos for a specific family
   const logoList = (family: ChartFamily) => {
     return chartTypesInfo
       .filter((chart) => chart.family === family)
       .map((chart, i) => {
         const isCurrentlySelected =
-          selectedChartIds?.includes(chart.id) || !selectedChartIds;
+          newSelectedChartIds?.includes(chart.id) || !newSelectedChartIds;
 
         const onLogoClick = (event: React.MouseEvent<HTMLElement>) => {
-          if (!selectedChartIds) {
-            updateChartId([chart.id]);
+          if (!newSelectedChartIds) {
+            setNewSelectedChartIds([chart.id]);
           } else {
             if (isCurrentlySelected) {
-              const remainingIds = selectedChartIds.filter(
+              const remainingIds = newSelectedChartIds.filter(
                 (item) => item !== chart.id
               );
               // If no more chart are selected, send undefined to select them all
               if (remainingIds.length === 0) {
-                updateChartId(undefined);
+                setNewSelectedChartIds(undefined);
               } else {
-                updateChartId(remainingIds);
+                setNewSelectedChartIds(remainingIds);
               }
             } else {
-              updateChartId([...selectedChartIds, chart.id]);
+              setNewSelectedChartIds([...newSelectedChartIds, chart.id]);
             }
           }
           event.stopPropagation();
@@ -94,6 +98,7 @@ export const ChartIdSelectorModal = ({
       <div
         className="p-4 cursor-pointer"
         onClick={() => {
+          updateChartId(newSelectedChartIds);
           setIsModalOpen(false);
         }}
       >
@@ -124,6 +129,7 @@ export const ChartIdSelectorModal = ({
   const validateButton = (
     <span
       onClick={() => {
+        updateChartId(newSelectedChartIds);
         setIsModalOpen(false);
       }}
       className="text-white bg-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-80 hover:opacity-100"
@@ -138,7 +144,10 @@ export const ChartIdSelectorModal = ({
       className={
         "fixed bg-white inset-0 h-screen w-screen z-20 flex justify-center items-center"
       }
-      onClick={() => setIsModalOpen(false)}
+      onClick={() => {
+        updateChartId(newSelectedChartIds);
+        setIsModalOpen(false);
+      }}
     >
       {/* This div is the content with white background */}
       <div

@@ -21,6 +21,7 @@ export type ApplicationState = {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  console.log("router", router);
 
   // State of the application = shared between pages = written as query params in the URL
   const [columnNumber, setColumnNumber] = useState<number>(4);
@@ -32,11 +33,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [selectedTools, setSelectedTools] = useState<Tool[]>();
 
   // Update state from URL param
+  // Basicaly if somebody goes on dataviz_inspi/scatter -> update the state to show scatterplots
   useEffect(() => {
-    const { chart, tool } = router.query;
+    const { chartId, tool } = router.query;
 
-    if (chart && typeof chart === "string") {
-      const ids = chart.split("--") as ChartId[];
+    if (chartId && typeof chartId === "string") {
+      const ids = chartId.split("_") as ChartId[];
       setSelectedChartIds(ids);
     } else {
       setSelectedChartIds(undefined);
@@ -50,18 +52,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router]);
 
-  // Update the URL using the application state
+  // Function to update the URL when user clicks somewhere to update the application state
   const updateRouter = (
     chartIds: ChartId[] | undefined,
     tools: Tool[] | undefined
   ) => {
-    let newQuery = {
-      chart: chartIds?.join("--"),
+    const newQuery = {
       tool: tools?.join("--"),
     };
-    router.push({ query: removeUndefinedProps(newQuery) }, undefined, {
-      shallow: true,
-    });
+    const newPath = chartIds ? "/" + chartIds.join("_") : "/";
+    router.push(
+      { pathname: newPath, query: removeUndefinedProps(newQuery) },
+      undefined,
+      {
+        shallow: true,
+      }
+    );
   };
 
   // Functions to update the chart and tool states
