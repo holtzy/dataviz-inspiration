@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { MasonryItem } from "../components/MasonryItem";
 import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
-import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
+import { Tool, vizList } from "../util/viz-list";
 import { useRouter } from "next/router";
 import { WallFilters } from "../components/WallFilters";
 import { ChartId, chartTypesInfo } from "../util/sectionDescription";
@@ -12,6 +12,7 @@ import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
 import { ParsedUrlQueryInput } from "querystring";
+import { ApplicationState } from "./_app";
 
 export type Project = { projectId: number; imgId: number };
 
@@ -19,19 +20,22 @@ const removeUndefinedProps = (obj: Object): ParsedUrlQueryInput => {
   return JSON.parse(JSON.stringify(obj));
 };
 
-const Home: NextPage = () => {
+const Home: NextPage<ApplicationState> = ({
+  columnNumber,
+  setColumnNumber,
+  selectedLuminosities,
+  setLuminosity,
+  selectedChartIds,
+  setSelectedChartIds,
+  selectedTools,
+  setSelectedTools,
+}: ApplicationState) => {
   // useRouter returns an object with information on the URL
   const router = useRouter();
 
-  // State of the application
+  // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [columnNumber, setColumnNumber] = useState<number>(4);
-  const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
-    "light",
-    "dark",
-  ]);
-  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
-  const [selectedTools, setSelectedTools] = useState<Tool[]>();
+
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
