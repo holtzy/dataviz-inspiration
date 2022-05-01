@@ -6,7 +6,7 @@ import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
 import { vizList } from "../util/viz-list";
 import { WallFilters } from "../components/WallFilters";
-import { chartIds, chartTypesInfo } from "../util/sectionDescription";
+import { chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
@@ -28,6 +28,10 @@ const SpecificChartTypePage: NextPage<ApplicationState> = ({
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
+  if (!selectedChartIds) {
+    return null;
+  }
+
   //
   // Apply the filters on the viz list!
   //
@@ -40,44 +44,56 @@ const SpecificChartTypePage: NextPage<ApplicationState> = ({
 
   const vizItemNumber = filteredVizList.length;
 
-  // When 1 chart type is selected, the website description is updated to show the chart label
-  const selectedChartLabel =
-    selectedChartIds && selectedChartIds.length === 1
-      ? chartTypesInfo.filter((chart) => chart.id === selectedChartIds[0])[0]
-          .label
-      : "chart";
+  const labels = selectedChartIds.map(
+    (id) => chartTypesInfo.filter((chart) => chart.id === id)[0].label
+  );
+
+  // Build the page title
+  const formattedLabels =
+    labels.length === 1
+      ? labels[0] + " examples"
+      : labels.length === 2
+      ? labels[0] + " and " + labels[1] + " examples"
+      : labels.length === 3
+      ? labels[0] + ", " + labels[1] + " and " + labels[2] + " examples"
+      : labels.length === 4
+      ? labels[0] +
+        ", " +
+        labels[1] +
+        ", " +
+        labels[2] +
+        " and " +
+        labels[3] +
+        " examples"
+      : "chart examples for your selection";
+
+  const pageTitle = "Best " + formattedLabels;
 
   const siteDescription = (
     <p>
       <a href="dataviz-inspiration">Dataviz-inspiration.com</a>
       <span>
-        {" is the biggest list of " +
-          selectedChartLabel +
-          " examples available on the web. It showcases " +
+        {" showcases hundreds of stunning dataviz projects. The best works including a " +
+          labels.join(", a ") +
+          " are currently selected, leading to a total of " +
           vizItemNumber +
-          " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with "}
+          " projects. Please enjoy your visit and check "}
       </span>
       <a href="https://www.data-to-viz.com">data-to-viz.com</a>
-      <span>{" that shares dataviz best practices."}</span>
+      <span>{" for complementary dataviz best practices."}</span>
     </p>
   );
 
   return (
     <>
-      <AppHeader
-        vizItemNumber={vizItemNumber}
-        selectedChartLabel={selectedChartLabel}
-      />
+      <AppHeader vizItemNumber={vizItemNumber} selectedChartLabel={"l"} />
 
       <div className="wrapper">
         <Navbar />
       </div>
 
       <main className="flex flex-col items-center">
-        <TitleAndDescription
-          title={selectedChartIds?.[0] + " inspiration"}
-          description={siteDescription}
-        />
+        <TitleAndDescription title={pageTitle} description={siteDescription} />
 
         <WallFilters
           columnNumber={columnNumber}
