@@ -86,8 +86,16 @@ const SpecificChartTypePage: NextPage<ApplicationState> = ({
 
   return (
     <>
-      <AppHeader vizItemNumber={vizItemNumber} selectedChartLabel={"l"} />
-
+      <AppHeader
+        title={"Dataviz Inspiration | Best " + formattedLabels}
+        description={
+          "The biggest list of " +
+          formattedLabels +
+          " available on the web. " +
+          vizItemNumber +
+          " of the best viz projects displayed using a pinterest style sorted by tool and chart type."
+        }
+      />
       <div className="wrapper">
         <Navbar />
       </div>

@@ -1,25 +1,15 @@
 import Head from "next/head";
 
 type AppHeaderProps = {
-  vizItemNumber: number;
-  selectedChartLabel: string;
+  title: string;
+  description: string;
 };
 
-export const AppHeader = ({
-  vizItemNumber,
-  selectedChartLabel,
-}: AppHeaderProps) => {
-  const siteDescription =
-    "Dataviz-inspiration.com is the biggest list of " +
-    selectedChartLabel +
-    " examples available on the web. It showcases " +
-    vizItemNumber +
-    " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with data-to-viz.com that shares dataviz best practices.";
-
+export const AppHeader = ({ title, description }: AppHeaderProps) => {
   return (
     <Head>
-      <title>Dataviz Inspiration | Hundreds of chart examples</title>
-      <meta name="description" content={siteDescription} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
 
       {/* Favicon That I have built thanks to a online service */}
       <link
@@ -52,11 +42,8 @@ export const AppHeader = ({
       />
       <meta name="author" content="Yan Holtz" />
 
-      <meta
-        property="og:title"
-        content={"Dataviz Inspiration | Hundreds of chart examples"}
-      />
-      <meta property="og:description" content={siteDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta
         property="og:image"
         content="https://raw.githubusercontent.com/holtzy/dataviz-inspiration/main/public/overview.png"

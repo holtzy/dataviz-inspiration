@@ -27,16 +27,13 @@ const Home: NextPage<ApplicationState> = ({
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  //
   // Apply the filters on the viz list!
-  //
   const filteredVizList = filterVizList(
     vizList,
     selectedLuminosities,
     selectedChartIds,
     selectedTools
   );
-
   const vizItemNumber = filteredVizList.length;
 
   const siteDescription = (
@@ -54,7 +51,14 @@ const Home: NextPage<ApplicationState> = ({
 
   return (
     <>
-      <AppHeader vizItemNumber={vizItemNumber} selectedChartLabel={"chart"} />
+      <AppHeader
+        title={"Dataviz Inspiration | Hundreds of chart examples"}
+        description={
+          "The biggest list of chart examples available on the web. " +
+          vizItemNumber +
+          " of the best viz projects displayed using a pinterest style sorted by tool and chart type."
+        }
+      />
 
       <div className="wrapper">
         <Navbar />
