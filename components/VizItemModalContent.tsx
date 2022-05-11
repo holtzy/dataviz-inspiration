@@ -118,6 +118,7 @@ export const VizItemModalContent = ({
       <Image
         placeholder="empty"
         src={require(`../public/img/${vizItem.img[imgId].full}`)}
+        alt={"Chart showing " + vizItem.title}
       />
       <br />
       <br />
@@ -143,6 +144,7 @@ export const VizItemModalContent = ({
           src={require(`../public/img/${vizItem.img[imgId].full}`)}
           objectFit="scale-down"
           layout="fill"
+          alt={"Chart showing " + vizItem.title}
         />
       </div>
 

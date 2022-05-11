@@ -34,10 +34,10 @@ export default function SectionLogo({ chartLogo }: SectionLogoProps) {
 
   return (
     <Image
-      alt={chartLogo}
       src={"/section/" + chartLogo + ".png"}
       layout="fill"
       objectFit="contain"
+      alt={"chart logo for the " + chartLogo + " family"}
     />
   );
 }

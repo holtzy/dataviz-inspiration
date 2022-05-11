@@ -6,7 +6,6 @@ import TitleAndDescription from "../components/TitleAndDescription";
 import { VizItemModal } from "../components/VizItemModal";
 import { vizList } from "../util/viz-list";
 import { WallFilters } from "../components/WallFilters";
-import { chartTypesInfo } from "../util/sectionDescription";
 import { filterVizList } from "../util/filterVizList";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
@@ -40,20 +39,11 @@ const Home: NextPage<ApplicationState> = ({
 
   const vizItemNumber = filteredVizList.length;
 
-  // When 1 chart type is selected, the website description is updated to show the chart label
-  const selectedChartLabel =
-    selectedChartIds && selectedChartIds.length === 1
-      ? chartTypesInfo.filter((chart) => chart.id === selectedChartIds[0])[0]
-          .label
-      : "chart";
-
   const siteDescription = (
     <p>
       <a href="dataviz-inspiration">Dataviz-inspiration.com</a>
       <span>
-        {" is the biggest list of " +
-          selectedChartLabel +
-          " examples available on the web. It showcases " +
+        {" aims at being the biggest list of chart examples available on the web. It showcases " +
           vizItemNumber +
           " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with "}
       </span>
@@ -64,10 +54,7 @@ const Home: NextPage<ApplicationState> = ({
 
   return (
     <>
-      <AppHeader
-        vizItemNumber={vizItemNumber}
-        selectedChartLabel={selectedChartLabel}
-      />
+      <AppHeader vizItemNumber={vizItemNumber} selectedChartLabel={"chart"} />
 
       <div className="wrapper">
         <Navbar />
