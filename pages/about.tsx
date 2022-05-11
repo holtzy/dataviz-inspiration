@@ -209,9 +209,14 @@ const About: NextPage = () => {
           <span className="ranking font-semibold">Ranking</span> are the 2 main
           families, closely followed by{" "}
           <span className="map font-semibold">Maps</span>.{" "}
-          <span className="flow font-semibold">Flows</span> are,{" "}
-          <span className="distribution font-semibold">Distribution</span> is,{" "}
-          <span className="correlation font-semibold">Correlation</span> has
+          <span className="flow font-semibold">Flows</span> and{" "}
+          <span className="correlation font-semibold">Correlation</span> are
+          coming next.
+          <span className="distribution font-semibold">
+            Distribution
+          </span> and{" "}
+          <span className="partOfAWhole font-semibold">Part of a whole</span>{" "}
+          are last, despite my love for the circle packing layout
         </p>
         <div className="full-bleed flex justify-center">
           <ChartTypeTreemap />

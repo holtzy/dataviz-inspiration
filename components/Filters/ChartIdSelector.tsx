@@ -56,7 +56,7 @@ export const ChartIdSelector = ({
   const allChartMsg = (
     <div className="flex items-center">
       <span className="text-sm text-gray-700 font-light mr-2 truncate">
-        all charts
+        select chart types
       </span>
     </div>
   );

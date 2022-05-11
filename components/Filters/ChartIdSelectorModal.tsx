@@ -114,7 +114,6 @@ export const ChartIdSelectorModal = ({
     </span>
   );
 
-  /* At the very top, X to close the modal (important for mobile) */
   const selectAllButton = (
     <span
       onClick={() => {

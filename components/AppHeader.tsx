@@ -21,7 +21,7 @@ export const AppHeader = ({
       <title>Dataviz Inspiration | Hundreds of chart examples</title>
       <meta name="description" content={siteDescription} />
 
-      {/* Favicon */}
+      {/* Favicon That I have built thanks to a online service */}
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -40,10 +40,12 @@ export const AppHeader = ({
         href="/favicon/favicon-16x16.png"
       />
 
+      {/* Fonts */}
       <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono:wght@300&display=swap"
         rel="stylesheet"
       />
+
       <meta
         name="keywords"
         content="Viz, dataviz, data visualization, example, catalog, list, chart, graph, plot"

@@ -72,6 +72,10 @@ export default function Navbar() {
                     url="https://www.d3-graph-gallery.com"
                     label="D3.js Graph Gallery"
                   />
+                  <MenuItem
+                    url="https://www.react-graph-gallery.com"
+                    label="React Graph Gallery"
+                  />
                 </Menu.Items>
               </Transition>
             </Menu>

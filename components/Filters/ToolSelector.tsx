@@ -1,3 +1,4 @@
+import { XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import { Tool, Tools } from "../../util/viz-list";
 import { Pill } from "../Pill";
@@ -49,7 +50,7 @@ export const ToolSelector = ({
   const allChartMsg = (
     <div className="flex items-center">
       <span className="text-sm text-gray-700 font-light truncate">
-        all tools
+        select tools
       </span>
     </div>
   );
@@ -85,6 +86,42 @@ const ToolSelectorModal = ({
   selectedTools,
   updateTool,
 }: ToolSelectorModalProps) => {
+  /* At the very top, X to close the modal (important for mobile) */
+  const topCross = (
+    <div className="flex justify-end items-center ">
+      <div
+        className="p-4 cursor-pointer"
+        onClick={() => {
+          setIsModalOpen(false);
+        }}
+      >
+        <XIcon className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40" />
+      </div>
+    </div>
+  );
+
+  const validateButton = (
+    <span
+      onClick={() => {
+        setIsModalOpen(false);
+      }}
+      className="text-white bg-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-80 hover:opacity-100"
+    >
+      {"validate"}
+    </span>
+  );
+
+  const selectAllButton = (
+    <span
+      onClick={() => {
+        updateTool(undefined);
+      }}
+      className="text-brand text-sm mr-1 cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
+    >
+      {"select all"}
+    </span>
+  );
+
   const pillList = Tools.map((tool, i) => {
     const isCurrentlySelected = selectedTools?.includes(tool) || !selectedTools;
 
@@ -129,7 +166,12 @@ const ToolSelectorModal = ({
       onClick={() => setIsModalOpen(false)}
     >
       <div className="flex flex-col max-w-lg bg-white rounded-md border drop-shadow-md ">
+        {topCross}
         <div className="flex justify-start p-16 flex-wrap">{pillList}</div>
+        <div className="flex justify-end p-4">
+          {selectAllButton}
+          {validateButton}
+        </div>
       </div>
     </div>
   );

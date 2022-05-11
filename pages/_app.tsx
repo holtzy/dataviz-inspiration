@@ -21,7 +21,6 @@ export type ApplicationState = {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  console.log("router", router);
 
   // State of the application = shared between pages = written as query params in the URL
   const [columnNumber, setColumnNumber] = useState<number>(4);
