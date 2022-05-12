@@ -185,7 +185,7 @@ export const vizList: VizItem[] = [
         url: "https://excelcharts.com/redraw-troops-vs-cost-time-magazine/",
         img: [{full: "Troops-vs-Costs.png", zoom: "Troops-vs-Costs-zoom.png", chartId: ["connectedScatter"]}],
         contextDescription: "The Time Magazine published a Dual-Y axis chart showing the evolution of both the army budget and the Number of troops between 1980 and 2012. Jorge Camoes decided to transform it with his own chart type.",
-        chartDescription: "The result is a connected scatterplot. I personally prefer it since dual Y axis are notoriously <a href='https://www.data-to-viz.com/caveats.html'>broken</a>, but it's hard to know if people truely understand it when they're not used to it.",
+        chartDescription: "The result is a connected scatterplot. I personally prefer it since dual Y axis are notoriously <a href='https://www.data-to-viz.com/caveats.html'>broken</a>, but it's hard to know if people truly understand it when they're not used to it.",
         tools: [{name: "excel"}],
         luminosity: ["light"],
         interactive: false

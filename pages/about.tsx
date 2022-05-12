@@ -181,14 +181,14 @@ const About: NextPage = () => {
           challenge where I got a lot of this website entries.
         </p>
         <p className="pb-3">
-          But to be honnest what I really love is browsing the home page of{" "}
+          But to be honest what I really love is browsing the home page of{" "}
           <b>individual practitioners</b>. Watching the work of dataviz
           superstars like Nadieh{" "}
           <a href="https://www.visualcinnamon.com">Bremer</a>, Cédric{" "}
           <a href="https://www.cedricscherer.com">Scherer</a>, Maarten{" "}
           <a href="https://www.maartenlambrechts.com">Lambrechts</a>, Nathan{" "}
           <a href="https://flowingdata.com">Yau</a> and a myriad of other people
-          is truely a hobby for me and it taught me so much both in term of
+          is truly a hobby for me and it taught me so much both in term of
           dataviz and general knowledge.
         </p>
 
