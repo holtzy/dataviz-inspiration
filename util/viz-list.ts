@@ -1481,5 +1481,35 @@ export const vizList: VizItem[] = [
         tools: [{name: "python", link: "https://github.com/probablyvivek/Code/blob/main/sankey.ipynb"}],
         luminosity: ["dark"],
         interactive: false
+    },
+    {
+        id: 105,
+        title: "1M Covid deaths",
+        date: new Date(2022, 4),
+        author: "Tina Reed and al.",
+        url: "https://www.axios.com/one-million-us-covid-19-deaths",
+        img: [
+            {full: "1M-covid-deaths.png", zoom: "1M-covid-deaths-zoom.png", chartId: ["line"]}
+        ],
+        contextDescription: "We are in 2022 and the U.S. has reached 1 million deaths even as COVID has faded from the headlines. At this grim milestone, this project sought to refocus on the scale of loss suffered.",
+        chartDescription: "Authors used growing rectangles to make us understand more the scale of numbers. There is a traditional line chart at the bottom right, but the big rectangles make the data more 'alive'.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 106,
+        title: "Global Carbon Footprint",
+        date: new Date(2011, 3),
+        author: "Stanford Kay",
+        url: "https://see.isbscience.org/wp-content/uploads/files/mmw_CO2footprint_111510.pdf",
+        img: [
+            {full: "global-carbon-footprint.png", zoom: "global-carbon-footprint-zoom.png", chartId: ["circularPacking"]}
+        ],
+        contextDescription: "The design depicts global carbon emissions by country, colour-coded by continent and proportional to the amount of emissions. The arrangement of the spheres beautifully pays off the carbon footprint metaphor with a critical sense of scale.",
+        chartDescription: "This is a circular packing chart with very specific shape for the root node. It makes the visualization shine, and made it a dataviz well-known masterpiece.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
     }
 ]
