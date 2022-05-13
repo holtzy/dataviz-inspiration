@@ -38,7 +38,7 @@ const Home: NextPage<ApplicationState> = ({
 
   const siteDescription = (
     <p>
-      <a href="dataviz-inspiration">Dataviz-inspiration.com</a>
+      <a href="https://www.dataviz-inspiration.com">Dataviz-inspiration.com</a>
       <span>
         {" aims at being the biggest list of chart examples available on the web. It showcases " +
           vizItemNumber +
