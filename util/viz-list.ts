@@ -1,6 +1,6 @@
 import { ChartId } from "./sectionDescription";
 
-export const Tools = ["R" , "python" , "tableau" , "data wrapper" , "d3.js" , "react" , "excel" , "javascript"] as const;
+export const Tools = ["R" , "python" , "tableau" , "data wrapper" , "d3.js" , "react" , "excel" , "javascript", "rawGraphs"] as const;
 export type Tool = typeof Tools[number];
 
 export type Luminosity = "light" | "dark"
@@ -1510,6 +1510,88 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a circular packing chart with very specific shape for the root node. It makes the visualization shine, and made it a dataviz well-known masterpiece.",
         tools: undefined,
         luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 107,
+        title: "Madagascar Relief Map",
+        date: new Date(2022, 4),
+        author: "@researchremora",
+        url: "https://twitter.com/researchremora/status/1527361112022593538",
+        img: [
+            {full: "madagascar-relief-map.png", zoom: "madagascar-relief-map-zoom.png", chartId: ["map"]},
+            {full: "madagascar-relief-map-2.png", zoom: "madagascar-relief-map-2-zoom.png", chartId: ["map"]}
+        ],
+        contextDescription: "Part of a project called '#rayshader adventures, an #rstats tale'. Many countries have their equivalent in the project. It is made with <a href='https://www.rayshader.com'>rayshader</a>, an open source package for producing 2D and 3D data visualizations in R",
+        chartDescription: "A map showing the elevation of each part of Madagascar, with an eye catching color palette.",
+        tools: [{name: "R", link: "https://twitter.com/researchremora/status/1418392590244892673"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 108,
+        title: "How I've spent my time",
+        date: new Date(2022, 1),
+        author: "Alli Torban",
+        url: "https://twitter.com/researchremora/status/1527361112022593538",
+        img: [
+            {full: "how-i-have-spent-my-time.png", zoom: "how-i-have-spent-my-time-zoom.png", chartId: ["stream"]},
+        ],
+        contextDescription: "A visual representation on how Alli spent here time through her life, split by categories like caretaking, leisure, work and more. Inspired by <a href='https://www.carniklirs.com/project/spare-time-over-a-lifetime'>Carni Klirs</a> work.",
+        chartDescription: "A great streamgraph, totally adapted at showing the evolution of each category through time in a flowing style. I really like the texture employed here, giving it a personal nature.",
+        tools: [{name: "rawGraphs", link: undefined}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 109,
+        title: "Spare time over a life time",
+        date: new Date(2017, 1),
+        author: "Carni Klirs",
+        url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
+        img: [
+            {full: "how-i-have-spent-my-time-carni.png", zoom: "how-i-have-spent-my-time-carni-zoom.png", chartId: ["stream"]},
+        ],
+        contextDescription: "A visual representation on how Carni spent his time through his life, split by categories like time  wasters, career and more.",
+        chartDescription: "Pretty insightful streamgraph. The first one afaik showing the evolution of one's life activities.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 110,
+        title: "World Resources Report",
+        date: new Date(2022, 1),
+        author: "Carni Klirs",
+        url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
+        img: [
+            {full: "world-resources-report-1.png", zoom: "world-resources-report-1-zoom.png", chartId: ["barplot"]},
+            {full: "world-resources-report-2.png", zoom: "world-resources-report-2-zoom.png", chartId: ["sankey"]},
+            {full: "world-resources-report-3.png", zoom: "world-resources-report-3-zoom.png", chartId: ["barplot"]},
+            {full: "world-resources-report-4.png", zoom: "world-resources-report-4-zoom.png", chartId: ["line"]},
+        ],
+        contextDescription: "The <a href='https://research.wri.org/wrr-food'>World Resource Institute</a> (WRI) studies how to create a sustainable food future. It published a final report giving solutions to ensure the world can feed 10 billion people by 2050 in a sustainable way. It contains many great vizs.",
+        chartDescription: "Several charts are available in the <a href='https://research.wri.org/wrr-food'>report</a>. You can also find them in <a href='https://www.carniklirs.com/project/creating-a-sustainable-food-future'>Carni's portfolio</a>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 111,
+        title: "Untitled-Ui",
+        date: new Date(2022, 1),
+        author: "untitledUi",
+        url: "https://www.untitledui.com",
+        img: [
+            {full: "untitled-ui-1.png", zoom: "untitled-ui-1-zoom.png", chartId: ["barplot"]},
+            {full: "untitled-ui-2.png", zoom: "untitled-ui-2-zoom.png", chartId: ["line"]},
+            {full: "untitled-ui-3.png", zoom: "untitled-ui-3-zoom.png", chartId: ["donut"]},
+            {full: "untitled-ui-4.png", zoom: "untitled-ui-4-zoom.png", chartId: ["radar"]},
+        ],
+        contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
+        chartDescription: "Some charts of this design system are worth a read for inspiration. I like the use of gradients that can make it look modern.",
+        tools: undefined,
+        luminosity: ["light"],
         interactive: false
     }
 ]
