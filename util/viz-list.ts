@@ -1,6 +1,6 @@
 import { ChartId } from "./sectionDescription";
 
-export const Tools = ["R" , "python" , "tableau" , "data wrapper" , "d3.js" , "react" , "excel" , "javascript", "rawGraphs"] as const;
+export const Tools = ["R" , "python" , "tableau" , "data wrapper" , "d3.js" , "react" , "excel" , "javascript", "rawGraphs", "illustrator"] as const;
 export type Tool = typeof Tools[number];
 
 export type Luminosity = "light" | "dark"
@@ -1591,6 +1591,37 @@ export const vizList: VizItem[] = [
         contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
         chartDescription: "Some charts of this design system are worth a read for inspiration. I like the use of gradients that can make it look modern.",
         tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 112,
+        title: "Datylon",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            {full: "datylon-1.png", zoom: "datylon-1-zoom.png", chartId: ["scatter"]},
+            {full: "datylon-2.png", zoom: "datylon-2-zoom.png", chartId: ["pie", "donut"]},
+            {full: "datylon-3.png", zoom: "datylon-3-zoom.png", chartId: ["treemap"]},
+            {full: "datylon-4.png", zoom: "datylon-4-zoom.png", chartId: ["donut"]},
+            {full: "datylon-5.png", zoom: "datylon-5-zoom.png", chartId: ["lollipop"]},
+            {full: "datylon-6.png", zoom: "datylon-6-zoom.png", chartId: ["heatmap"]},
+            {full: "datylon-7.png", zoom: "datylon-7-zoom.png", chartId: ["scatter", "bubble"]},
+            {full: "datylon-8.png", zoom: "datylon-8-zoom.png", chartId: ["density"]},
+            {full: "datylon-9.png", zoom: "datylon-9-zoom.png", chartId: ["barplot"]},
+            {full: "datylon-10.png", zoom: "datylon-10-zoom.png", chartId: ["heatmap"]},
+            {full: "datylon-11.png", zoom: "datylon-11-zoom.png", chartId: ["lollipop"]},
+            {full: "datylon-12.png", zoom: "datylon-12-zoom.png", chartId: ["circularBarplot"]},
+            {full: "datylon-13.png", zoom: "datylon-13-zoom.png", chartId: ["treemap"]},
+            {full: "datylon-14.png", zoom: "datylon-14-zoom.png", chartId: ["ridgeline"]},
+            {full: "datylon-15.png", zoom: "datylon-15-zoom.png", chartId: ["parallel"]},
+            {full: "datylon-16.png", zoom: "datylon-16-zoom.png", chartId: ["connectedScatter"]},
+            {full: "datylon-17.png", zoom: "datylon-17-zoom.png", chartId: ["stream"]},
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "Datylon has a great <a href='https://insights.datylon.com/stories'>gallery</a> of example that are all of good quality. Check it out for more inspiration!",
+        tools: [{name: "illustrator"}],
         luminosity: ["light"],
         interactive: false
     }
