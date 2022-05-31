@@ -1624,5 +1624,20 @@ export const vizList: VizItem[] = [
         tools: [{name: "illustrator"}],
         luminosity: ["light"],
         interactive: false
-    }
+    },
+    {
+        id: 113,
+        title: "Individual carbon footprint",
+        date: new Date(2022, 4),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/economie/article/2022/05/30/le-defi-de-la-sobriete-pour-repondre-a-l-urgence-climatique_6128136_3234.html",
+        img: [
+            {full: "individual-carbon-footprint.png", zoom: "individual-carbon-footprint-zoom.png", chartId: ["treemap"]},
+        ],
+        contextDescription: "Greenhouse gas emissions are a hot topics nowadays. Le Monde wrote an <a href='https://www.lemonde.fr/economie/article/2022/05/30/le-defi-de-la-sobriete-pour-repondre-a-l-urgence-climatique_6128136_3234.html'>article</a> describing what part of our lifestyle have the strongest impact.",
+        chartDescription: "A perfect treemap with impactful color sheme and a great design making it crystal clear what to do to decrease your personal effect on global warming.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
