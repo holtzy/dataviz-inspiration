@@ -1640,4 +1640,56 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 114,
+        title: "0 points to go",
+        date: new Date(2022, 5),
+        author: "Lisa Hornung",
+        url: "https://github.com/Lisa-Ho/100DaysOfDataviz/blob/main/Day5/TidyTuesday_eurovision_notebook.ipynb",
+        img: [
+            {full: "0-points-to-go.png", zoom: "0-points-to-go-zoom.png", chartId: ["heatmap", "timeseries"]},
+        ],
+        contextDescription: "Receiving 'Nul Points' at Eurovision (failing to earn a single point) is the most dreaded outcome for any participating country. This viz visualizes the 37 times it happened, split by countries.",
+        chartDescription: "A timeseries heatmap where each cell is represented as a dot. The cell can be empty (no participation), grey (earned some points) or orange when no points were earned.",
+        tools: [{name: "python", link: "https://github.com/Lisa-Ho/100DaysOfDataviz/blob/main/Day5/TidyTuesday_eurovision_notebook.ipynb"}],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 115,
+        title: "Color Dodge",
+        date: new Date(2022, 5),
+        author: "Dmitry Novikov",
+        url: "https://twitter.com/novikoff/status/1534136043414372352",
+        img: [
+            {full: "color-dodge.png", zoom: "color-dodge-zoom.png", chartId: ["bubble"]},
+        ],
+        contextDescription: "Not really dataviz related but I liked those colors and would love to re-use them on a bubble chart or related.",
+        chartDescription: "Playing with color dodge / Color Burn / Overlay to create some good looking logos.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 116,
+        title: "Bruxelles Malade",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            {full: "bruxelle-malade-1.png", zoom: "bruxelle-malade-zoom-1.png", chartId: ["map", "choropleth"]},
+            {full: "bruxelle-malade-2.png", zoom: "bruxelle-malade-zoom-2.png", chartId: ["map", "bubbleMap"]},
+            {full: "bruxelle-malade-3.png", zoom: "bruxelle-malade-zoom-3.png", chartId: ["circularPacking", "bubble"]},
+            {full: "bruxelle-malade-4.png", zoom: "bruxelle-malade-zoom-4.png", chartId: ["scatter", "bubble"]},
+            {full: "bruxelle-malade-5.png", zoom: "bruxelle-malade-zoom-5.png", chartId: ["heatmap"]}, // marimekko
+            {full: "bruxelle-malade-6.png", zoom: "bruxelle-malade-zoom-6.png", chartId: ["lollipop"]},
+            {full: "bruxelle-malade-7.png", zoom: "bruxelle-malade-zoom-7.png", chartId: ["cartogram", "map"]},
+            {full: "bruxelle-malade-8.png", zoom: "bruxelle-malade-zoom-8.png", chartId: ["parallel"]},
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the Beligium capital. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "Heaps of different chart types, all very clean with perfect annotations and stunning animations between the story steps. Masterpiece!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
 ]
