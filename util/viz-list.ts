@@ -1692,4 +1692,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     },
+    {
+        id: 117,
+        title: "What is Wikipedia about?",
+        date: new Date(2014, 5),
+        author: "Ask Media",
+        url: "https://askmedia.fr/blog/ask-media-short-listee-aux-information-is-beautiful-awards-2014/",
+        img: [
+            {full: "what-is-wikipedia-about.png", zoom: "what-is-wikipedia-about-zoom.png", chartId: ["dendrogram", "bubble"]},
+        ],
+        contextDescription: "In 2014 there were about 10M elements in wikipedia. This infografic groups them by type (e.g. geographical entity) and checks what are the most numerous items.",
+        chartDescription: "Beautiful infographic making the best of dark mode. I really like the slight gradients that truly make a difference on the final appearance.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
 ]
