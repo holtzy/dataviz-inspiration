@@ -1707,4 +1707,38 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: false
     },
+    {
+        id: 118,
+        title: "Pairplot function of Seaborn",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://www.data-to-viz.com/graph/correlogram.html",
+        img: [
+            {full: "seaborn-pairplot-function.png", zoom: "seaborn-pairplot-function-zoom.png", chartId: ["correlogram"]},
+        ],
+        contextDescription: "This is a correlogram made using the pairplot function of the seaborn python library for data visualization.",
+        chartDescription: "Clean and simple correlogram. Distributions on the diagonal. Scatterplots on other facets.",
+        tools: [{name: "python", link: "https://www.data-to-viz.com/graph/correlogram.html"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 119,
+        title: "Correlograms with R",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://r-graph-gallery.com/correlogram.html",
+        img: [
+            {full: "correlograms-with-R-1.png", zoom: "correlograms-with-R-zoom-1.png", chartId: ["correlogram"]},
+            {full: "correlograms-with-R-2.png", zoom: "correlograms-with-R-zoom-2.png", chartId: ["correlogram"]},
+            {full: "correlograms-with-R-3.png", zoom: "correlograms-with-R-zoom-3.png", chartId: ["correlogram"]},
+            {full: "correlograms-with-R-4.png", zoom: "correlograms-with-R-zoom-4.png", chartId: ["correlogram"]},
+            {full: "correlograms-with-R-5.png", zoom: "correlograms-with-R-zoom-5.png", chartId: ["correlogram"]},
+        ],
+        contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
+        chartDescription: "Several libraries can be used to build correlograms with R. <code>GGally</code>, <code>Corrgram</code>, <code>Ellipse</code> and more. Visit the <a href='https://r-graph-gallery.com/correlogram.html'>R graph gallery</a> for more.",
+        tools: [{name: "R", link: "https://r-graph-gallery.com/correlogram.html"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
