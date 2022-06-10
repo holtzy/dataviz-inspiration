@@ -70,7 +70,6 @@ export const ChartIdSelector = ({
       {isModalOpen && (
         <ChartIdSelectorModal
           setIsModalOpen={setIsModalOpen}
-          selectedChartIds={selectedChartIds}
           updateChartId={updateChartId}
         />
       )}
