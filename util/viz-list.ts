@@ -1741,4 +1741,37 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 120,
+        title: "Plastic waste",
+        date: new Date(2022, 6),
+        author: "Lisa Hornung",
+        url: "https://inside-numbers.com/six-things-i-learned-by-tracking-my-plastic-waste-everyday-in-2021",
+        img: [
+            {full: "plastic-waste-1.png", zoom: "plastic-waste-zoom-1.png", chartId: ["circularBarplot"]},
+            {full: "plastic-waste-2.png", zoom: "plastic-waste-zoom-2.png", chartId: ["heatmap"]},
+            {full: "plastic-waste-3.png", zoom: "plastic-waste-zoom-3.png", chartId: ["bubble"]},
+            {full: "plastic-waste-4.png", zoom: "plastic-waste-zoom-4.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "Lisa tracked her plastic waste details for a year and wrote a blogpost full of insightful dataviz to explain the result.",
+        chartDescription: "I really like the visual identity that is created here. The blogpost also includes an infographic shared on <a href='https://twitter.com/LisaHornung_/status/1541739547645583360'>twitter</p>.",
+        tools: [{name: "python", link: undefined}, {name: "illustrator"}],
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 121,
+        title: "Rude Compounds",
+        date: new Date(2022, 6),
+        author: "Colin Morris",
+        url: "https://colinmorris.github.io/blog/compound-curse-words",
+        img: [
+            {full: "rude-compounds.png", zoom: "rude-compounds-zoom.png", chartId: ["circularBarplot"]},
+        ],
+        contextDescription: "A deep dive into Reddit's most comon dirty words, trying to understand how those words are combined together.",
+        chartDescription: "This heatmap does not have anything crazy in term of viz, but with more than 5000 likes on <a href='https://twitter.com/HalfEatenScone/status/1541868671789932545'>twitter</a> it's one of the most viral viz I know.",
+        tools: [{name: "python", link: "https://github.com/colinmorris/pejorative-compounds"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
