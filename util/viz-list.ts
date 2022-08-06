@@ -1871,7 +1871,7 @@ export const vizList: VizItem[] = [
         author: "Pedro Cruz et al.",
         url: "https://web.northeastern.edu/naturalizing-immigration-dataviz/",
         img: [
-            {full: "tree-us-immigration.png", zoom: "tree-us-immigration-zoom.png", chartId: ["network", "barplot", "sankey", "line"]},
+            {full: "tree-us-immigration.png", zoom: "tree-us-immigration-zoom.png", chartId: ["circularBarplot"]},
         ],
         contextDescription: "A circular graph mimicking the shape of a tree. It represents immigration in the U.S: each dot represents 100 immigrants. Distance to the center represents the date. Angle represents the migrant origin.",
         chartDescription: "This chart is unique, it does not belong to any chart type I know. And that's probably what makes it so famous and inspiring. Awesome metaphor, probably closer to data art than dataviz though.",
