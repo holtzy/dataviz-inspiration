@@ -1879,4 +1879,81 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: false
     },
+    {
+        id: 129,
+        title: "Remixing Rosling",
+        date: new Date(2018, 6),
+        author: "Moritz Stefaner",
+        url: "https://truth-and-beauty.net/projects/remixing-rosling",
+        img: [
+            {full: "remixing-rosling.png", zoom: "remixing-rosling-zoom.png", chartId: ["connectedScatter"]},
+        ],
+        contextDescription: "This chart is a remix of Hans Rosling's famous gapminder <a href='https://www.gapminder.org/tools/#$chart-type=bubbles&url=v1'>bubble chart</a>. It shows the evolution of life expectancy and fertility rate for a few countries.",
+        chartDescription: "This is a very unique connected scatterplot. Bubble size is mapped to the year, which ease the understanding of the evolution and making the flow very smooth. It truly allows to 'feel' the evolution of each country!.",
+        tools: [{name: "tableau", link: "https://public.tableau.com/app/profile/jeffrey.shaffer/viz/RemixingRoslinginTableau/RemixingRosling"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 130,
+        title: "Waves of Interest",
+        date: new Date(2021, 6),
+        author: "Moritz Stefaner",
+        url: "https://truth-and-beauty.net/projects/waves-of-interest",
+        img: [
+            {full: "wave-of-interest-1.png", zoom: "wave-of-interest-1-zoom.png", chartId: ["density2d"]},
+            {full: "wave-of-interest-2.png", zoom: "wave-of-interest-2-zoom.png", chartId: ["line"]},
+            {full: "wave-of-interest-3.png", zoom: "wave-of-interest-3-zoom.png", chartId: ["connectedScatter"]},
+        ],
+        contextDescription: "Which topics capture the attention of Americans during US election years? And how have our interests shifted from one election cycle to the next? This project investigates these questions with the help of Google Search Trends data.",
+        chartDescription: "The density 2d heatmap is the one that caught my eyes here, especially due to its nice annotation. But the whole <a hef='https://waves-of-interest.truth-and-beauty.net/#US'>project</a> is definitely worth a look.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 131,
+        title: "Serena Williams's career",
+        date: new Date(2022, 7),
+        author: "Washington Post",
+        url: "https://www.washingtonpost.com/sports/2022/08/28/serena-williams-career-rankings/",
+        img: [
+            {full: "serena-williams.png", zoom: "serena-williams-zoom.png", chartId: ["line"]},
+        ],
+        contextDescription: "Since her debut in the 1990s, Serena Williams has spent a total of 319 weeks atop the WTA rankings, a tally that spans three time periods in her career.",
+        chartDescription: "This chart is a vertical line chart. Making it vertical allows to fit many more annotation, what makes the chart very insightful.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 132,
+        title: "Leonardo DiCaprio Refuses to Date a Woman Over 25",
+        date: new Date(2019, 7),
+        author: "TrustLittleBrother",
+        url: "https://www.reddit.com/r/dataisbeautiful/comments/azjti7/leonardo_dicaprio_refuses_to_date_a_woman_over_25/",
+        img: [
+            {full: "leonardo-dicaprio-girlfriends.png", zoom: "leonardo-dicaprio-girlfriends-zoom.png", chartId: ["line", "barplot"]},
+        ],
+        contextDescription: "A highly viral viz showing how Leonardo DiCaprio always broke with his girlfriend once she turned 25, even at 42 y.o.",
+        chartDescription: "Not sure what made this viz viral. The topic? The eye catching look? The fact that it was originally made using excel?",
+        tools: [{name: "R", link: "https://github.com/tashapiro/tanya-data-viz/blob/main/dicaprio-gfs/dicaprio-gfs.R"}],
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 133,
+        title: "The shape of happiness",
+        date: new Date(2019, 7),
+        author: "TrustLittleBrother",
+        url: "https://www.nber.org/papers/w23724",
+        img: [
+            {full: "shape-happiness.png", zoom: "shape-happiness-zoom.png", chartId: ["line"]},
+        ],
+        contextDescription: "The result of a research paper on 51 countries and 1.3 M people. Trying to understand when people are the most happy, and why there is a mid-life dip.",
+        chartDescription: "A line chart showing the relationship between happiness and age across several surveys. The chart could be greatly improved but I find the topic very interesting.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
 ]
