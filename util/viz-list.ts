@@ -1956,4 +1956,64 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: true
     },
+    {
+        id: 134,
+        title: "Europe gaz reserves",
+        date: new Date(2022, 7),
+        author: "De Tijd",
+        url: "https://www.tijd.be/politiek-economie/europa/algemeen/europa-in-sneltempo-op-weg-naar-volle-gasreserves/10410695.html",
+        img: [
+            {full: "europe-gaz-reserves.png", zoom: "europe-gaz-reserves-zoom.png", chartId: ["marimekko"]},
+        ],
+        contextDescription: "Talks about gaz reserves in Europe. But I do not understand much about the article to be honest :).",
+        chartDescription: "Marimekko chart.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 135,
+        title: "Economic growth and CO2",
+        date: new Date(2022, 7),
+        author: "Max Roser",
+        url: "https://twitter.com/MaxCRoser/status/1566182467010273280",
+        img: [
+            {full: "economy-and-co2.png", zoom: "economy-and-co2-zoom.png", chartId: ["line", "timeseries", "parallel"]},
+        ],
+        contextDescription: "More and more countries achieve to decouple economic growth from CO₂ emissions.This chart shows the evidence for 25 countries.",
+        chartDescription: "What strikes me here is that I'm not sure what kind of viz it is 🤔. But with 12k likes on <a href='https://twitter.com/MaxCRoser/status/1566182467010273280'>twitter</a>, the message is definitely conveyed efficiently.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 136,
+        title: "French salaries",
+        date: new Date(2022, 8),
+        author: "Judith Chetrit",
+        url: "https://twitter.com/judithchetrit/status/1567191486126587904",
+        img: [
+            {full: "french-salaries.png", zoom: "french-salaries-zoom.png", chartId: ["histogram", "barplot"]},
+        ],
+        contextDescription: "Distribution of salaries in France in 2020. ",
+        chartDescription: "I do not particularly like the look of the chart, but I like the annotation showing the sum value of a group of bars. 19k likes on <a href='https://twitter.com/judithchetrit/status/1567191486126587904'>twitter</a>!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 137,
+        title: "Missing migrants",
+        date: new Date(2022, 8),
+        author: "Soha Elghany",
+        url: "https://twitter.com/SohaElghany/status/1570725861384654849",
+        img: [
+            {full: "missing-migrants.png", zoom: "missing-migrants-zoom.png", chartId: ["circularPacking"]},
+        ],
+        contextDescription: "A sad project tracking people who have died in the process of migration towards an internation destination. ",
+        chartDescription: "A circular packing chart where each bubble is an incident that caused arms to migrants. Color related to origin location. Beautiful but sad.",
+        tools: [{name: "tableau", link: "https://public.tableau.com/app/profile/soha.elghany/viz/MissingMigrantsprintpt_1/Dashboard13"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
