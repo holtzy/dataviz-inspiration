@@ -2016,4 +2016,65 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 138,
+        title: "Climate change: vulnerability and co2",
+        date: new Date(2022, 8),
+        author: "David Wendler",
+        url: "https://blog.datawrapper.de/climate-risk-readiness-responsibility/",
+        img: [
+            {full: "climat-change-co2-vulnerability.png", zoom: "climat-change-co2-vulnerability-zoom.png", chartId: ["scatter", "bubble"]},
+        ],
+        contextDescription: "Not every country is truly facing an equal risk from climate change, nor has the capability to prepare and protect itself. This project highlights that countries with low readiness are often the most vulnerable, and the least responsible.",
+        chartDescription: "This is a scatterplot using squares instead of circles. It has a third dimension mapped to the square size. A toolip allows to get the name of each country with its precise numbers. Clean annotation. Nice hover effect. I love data wrapper.",
+        tools: [{name: "data wrapper", link: "https://blog.datawrapper.de/climate-risk-readiness-responsibility/"}],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 139,
+        title: "How Britain ended its coal addiction",
+        date: new Date(2022, 8),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/a05d1dd4-dddd-11e9-9743-db5a370481bc",
+        img: [
+            {full: "britain-ends-coal-addiction.png", zoom: "britain-ends-coal-addiction-zoom.png", chartId: ["area", "stackedArea"]},
+            {full: "britain-ends-coal-addiction-2.png", zoom: "britain-ends-coal-addiction-zoom-2.png", chartId: ["barplot"]},
+        ],
+        contextDescription: "The shift in the UK is an important victory for environmentalists in their fight against fossil fuels.",
+        chartDescription: "Clean area and bar charts used as timeseries, with the very recogniizable style of the financial times.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 140,
+        title: "AVS 21 Reform",
+        date: new Date(2022, 8),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/a05d1dd4-dddd-11e9-9743-db5a370481bc",
+        img: [
+            {full: "avs-21-reform.png", zoom: "avs-21-reform-zoom.png", chartId: ["beeswarm"]},
+        ],
+        contextDescription: "A graph showing the striking difference between linguistic regions in switzerland concerning a recent reform proposal.",
+        chartDescription: "Interactive beeswarm chart where each dot is a council. Split in 3 groups (one per region). Very cool to see an uncommon chart <a href='https://twitter.com/duc_qn/status/1574663295365177349/photo/1'>printed</a> in a newpaper.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 141,
+        title: "Tree Species in Germany",
+        date: new Date(2022, 8),
+        author: "Jens Wiesehahn",
+        url: "https://twitter.com/JensWiesehahn/status/1576553354276151296",
+        img: [
+            {full: "tree-species-germany.png", zoom: "tree-species-germany-zoom.png", chartId: ["map"]},
+        ],
+        contextDescription: "A map showing the dominant tree species in Germany.",
+        chartDescription: "A stunning map built with R and rayshader. Simply beautiful and insightful.",
+        tools: [{name: "R", link: "https://twitter.com/JensWiesehahn/status/1576553354276151296"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
