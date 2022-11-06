@@ -1936,7 +1936,7 @@ export const vizList: VizItem[] = [
             {full: "leonardo-dicaprio-girlfriends.png", zoom: "leonardo-dicaprio-girlfriends-zoom.png", chartId: ["line", "barplot"]},
         ],
         contextDescription: "A highly viral viz showing how Leonardo DiCaprio always broke with his girlfriend once she turned 25, even at 42 y.o.",
-        chartDescription: "Not sure what made this viz viral. The topic? The eye catching look? The fact that it was originally made using excel?",
+        chartDescription: "Not sure what made this viz viral. The topic? The eye catching look? The fact that it was originally made using excel? <a href='https://twitter.com/tanya_shapiro/status/1565029412428562433'>ggplot2 version</a>.",
         tools: [{name: "R", link: "https://github.com/tashapiro/tanya-data-viz/blob/main/dicaprio-gfs/dicaprio-gfs.R"}],
         luminosity: ["dark"],
         interactive: true
@@ -2074,6 +2074,51 @@ export const vizList: VizItem[] = [
         contextDescription: "A map showing the dominant tree species in Germany.",
         chartDescription: "A stunning map built with R and rayshader. Simply beautiful and insightful.",
         tools: [{name: "R", link: "https://twitter.com/JensWiesehahn/status/1576553354276151296"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 142,
+        title: "Flood Phenomena",
+        date: new Date(2020, 8),
+        author: "Tamás Varga",
+        url: "https://public.tableau.com/app/profile/tam.s.varga/viz/FloodPhenomenainEurope/FloodPhenomenainEurope",
+        img: [
+            {full: "flood-phenomena.png", zoom: "flood-phenomena-zoom.png", chartId: ["barplot", "stream"]},
+        ],
+        contextDescription: "A visual showing the number of flood phenomena in each of the European countries. A barchart on the left shows the most impacted countries. A stream chart on the right show the evolution of the number of events.",
+        chartDescription: "Data talks about floods, and the visual definitely goes along with it. The color palette and the organic shapes of the streamchart are going so well together. As often with nice visuals, the annotation tells the story.",
+        tools: [{name: "tableau", link: "https://public.tableau.com/app/profile/tam.s.varga/viz/FloodPhenomenainEurope/FloodPhenomenainEurope"}],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 143,
+        title: "Endangered languages",
+        date: new Date(2020, 8),
+        author: "Nature",
+        url: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-022-14479-1/MediaObjects/41598_2022_14479_Fig1_HTML.png?as=webp",
+        img: [
+            {full: "endangered-languages.png", zoom: "endangered-languages-zoom.png", chartId: ["barplot", "stream"]},
+        ],
+        contextDescription: "Some languages are about disappear from the planet. This visual quantifies this and show where in the world those languages are.",
+        chartDescription: "A clean world map with dots and 2d density on top. There is also a stacked barchart at the bottom showing how vulnerable the languages of each zone are.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 144,
+        title: "Carbon Emissions",
+        date: new Date(2021, 11),
+        author: "Anshool Deshmukh",
+        url: "https://www.visualcapitalist.com/visualizing-global-per-capita-co2-emissions/",
+        img: [
+            {full: "carbon-emissions.png", zoom: "carbon-emissions-zoom.png", chartId: ["circularBarplot"]},
+        ],
+        contextDescription: "Carbon emissions is such a hot topic nowadays. This chart summarizes how much C02 a country emitts, in regard of its population",
+        chartDescription: "This chart is a circular barchart with unequal bar widths. Indeed, bar widths are proportional to the country population. This is such an interesting tweaks that makes the chart much more insightful.",
+        tools: undefined,
         luminosity: ["light"],
         interactive: false
     },
