@@ -2122,4 +2122,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 145,
+        title: "Hate Crime In Uk",
+        date: new Date(2022, 9),
+        author: "Saverio Rocchetti",
+        url: "https://public.tableau.com/app/profile/saveriorocchetti/viz/HateCrimeInUk/HATECRIMEINUK",
+        img: [
+            {full: "hate-crime-uk.png", zoom: "hate-crime-uk-zoom.png", chartId: ["waffle"]},
+        ],
+        contextDescription: "This view shows the number of hate crimes recorded by the police in UK. In particular, on the progress of thes crimes and against which category they are mainly carried out.",
+        chartDescription: "A time series showing the general trend on the left. On the right, a waffle chart with small multiple: instead of having all the groups on the same waffle, each group is represented on its own waffle.<br/>It's a surprising strategy, but it works well to show the weight of each group on the whole.",
+        tools: [{name: "tableau", link: "https://public.tableau.com/app/profile/saveriorocchetti/viz/HateCrimeInUk/HATECRIMEINUK"}],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 146,
+        title: "Brazilian Economy and Inequality",
+        date: new Date(2010, 9),
+        author: "Alberto Cairo",
+        url: "https://twitter.com/AlbertoCairo/status/1582885556240797697",
+        img: [
+            {full: "brazilian-economy-and-inequality.png", zoom: "brazilian-economy-and-inequality-zoom.png", chartId: ["connectedScatter"]},
+        ],
+        contextDescription: "The graphic shows the correlation between Brazilian GDP (horizontal axis) and inequality (vertical axis). Each dot represents a year.",
+        chartDescription: "This is a connected scatterplot. It is very powerful as it shows both a correlation and an evolution on the same figure. However, it takes a while to understand it properly, so make sure to share it with an audience used to complex charts.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
