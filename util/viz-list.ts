@@ -2152,4 +2152,50 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 147,
+        title: "The slow loss",
+        date: new Date(2022, 10),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/151474693/The-Slow-Loss-La-Lettura-dataviz",
+        img: [
+            {full: "the-slow-loss.png", zoom: "the-slow-loss-zoom.png", chartId: ["dendrogram"]},
+            {full: "the-slow-loss-2.png", zoom: "the-slow-loss-zoom-2.png", chartId: ["dendrogram"]},
+        ],
+        contextDescription: "This diptych shows the species of endangered birds and fishes in Italy, according to the IUCN's 'Red list'. For each animal, the following are indicated: common name, order, degree of danger, size and habitat.",
+        chartDescription: "Those circular dendrograms are a poetic way to represent the information. The animal size is mapped to a shape that makes us think at a feather or a scale. Not the most scientific way to do it, but beautiful result.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 148,
+        title: "Number of Elizabeths",
+        date: new Date(2022, 9),
+        author: "Brodsky",
+        url: "https://twitter.com/a_drewsky/status/1583082040932474880/photo/1",
+        img: [
+            {full: "number-of-elizabeth.png", zoom: "number-of-elizabeth-zoom.png", chartId: ["timeseries"]},
+        ],
+        contextDescription: "<a href='https://en.wikipedia.org/wiki/Elizabeth_II'>Elizabeth II</a>, was the queen of the UK until the 8th of September. <a href='https://fr.wikipedia.org/wiki/Liz_Truss'>Liz Truss</a> was prime minister from the 6th of September.",
+        chartDescription: "A dataviz joke with a simple timeseries that gathered more than <a href='https://twitter.com/a_drewsky/status/1583082040932474880/photo/1'>100k likes</a>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 149,
+        title: "NYT best sellers",
+        date: new Date(2022, 9),
+        author: "Brodsky",
+        url: "https://github.com/tashapiro/TidyTuesday/tree/master/2022/W19",
+        img: [
+            {full: "NYT-best-sellers.png", zoom: "NYT-best-sellers-zoom.png", chartId: ["table"]},
+        ],
+        contextDescription: "Top authors by decade. Ranking based on number of weeks author appeared on list. Sparkline depicts total weeks by year. Top performing book included beneath each author's name. Data from Post45 Data Collective.",
+        chartDescription: "Such a clean table providing heaps of info. What I love the most is that it's been created <a href='https://github.com/tashapiro/TidyTuesday/tree/master/2022/W19'>using R</a>.",
+        tools: [{name: "R", link: "https://github.com/tashapiro/TidyTuesday/tree/master/2022/W19"}],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
