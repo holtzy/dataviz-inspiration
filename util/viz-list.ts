@@ -1800,7 +1800,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "Windguru.cz is the most famous service for wind prediction, used by a myriad of surfers. It has a page for each spot, showing the most recent wind force and direction.",
         chartDescription: "The area chart is very powerful and informative. It displays both wind speed and direction, including gust values and average values. Color gradient allows to know what's happening in a glimpse.",
-        tools: [],
+        tools: undefined,
         luminosity: ["light"],
         interactive: false
     },
@@ -1815,7 +1815,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "I've always been interested by viz that looks futuristic. This generative shape is good inspiration for this.",
         chartDescription: "Not a dataviz. But I would like to create a network chart based on this design.",
-        tools: [],
+        tools: undefined,
         luminosity: ["dark"],
         interactive: false
     },
@@ -1830,7 +1830,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "A circular calendar showing the evolution of the most significant tech companies of our time. Show features like market value, purchase price, number of employees and more.",
         chartDescription: "This is a circular lollipop chart. It displays a big amount of information for each company and I like the color choices that makes it look futuristic.",
-        tools: [],
+        tools: undefined,
         luminosity: ["dark"],
         interactive: false
     },
@@ -1845,7 +1845,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "This visualization helps one understand the likelihood and probable career path one can take to become a NASA Astronaut.",
         chartDescription: "Vertical sankey diagram with stunning colors. I wonder how insightful it is with such a complexity in the data, but design is good.",
-        tools: [],
+        tools: undefined,
         luminosity: ["dark"],
         interactive: false
     },
@@ -1860,7 +1860,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "Not a real viz. This is a fiction user interface made for movies or video game. But some concept can definitely be borrowed to create real futuristic style dataviz.",
         chartDescription: "Many different chart types are represented, especially if yoyu watch the whole <a href='https://videohive.net/item/ultimate-fui-hud-library/25744407'>video</a>.",
-        tools: [],
+        tools: undefined,
         luminosity: ["dark"],
         interactive: false
     },
@@ -1875,7 +1875,7 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "A circular graph mimicking the shape of a tree. It represents immigration in the U.S: each dot represents 100 immigrants. Distance to the center represents the date. Angle represents the migrant origin.",
         chartDescription: "This chart is unique, it does not belong to any chart type I know. And that's probably what makes it so famous and inspiring. Awesome metaphor, probably closer to data art than dataviz though.",
-        tools: [],
+        tools: undefined,
         luminosity: ["dark"],
         interactive: false
     },
