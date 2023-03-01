@@ -36,14 +36,12 @@ export default function Navbar() {
                 About
               </span>
             </Link>
-            <Menu as="div" className="ml-3 relative">
+            <Menu as="div" className="ml-3 relative ">
               <div>
                 <Menu.Button className="">
-                  <Glow>
-                    <div className="text-black font-light text-sm lg:text-md uppercase tracking-wider cursor-pointer">
-                      Related
-                    </div>
-                  </Glow>
+                  <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black">
+                    Related
+                  </span>
                 </Menu.Button>
               </div>
               <Transition
@@ -79,6 +77,11 @@ export default function Navbar() {
                 </Menu.Items>
               </Transition>
             </Menu>
+            <a href="https://datavizuniverse.substack.com" style={{ textDecoration: 'none' }}>
+              <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black ml-3 border border-gray-300 rounded-md p-2">
+                Subscribe
+              </span>
+            </a>
           </div>
         </div>
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
