@@ -2255,37 +2255,43 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
-    }, {
-        id: 154,
-        title: "Geopolitics and Globalization",
-        date: new Date(2022, 9),
-        author: "Financial Times",
-        url: "https://www.ft.com/content/8954a5f8-8f03-4044-8401-f1efefe9791b",
-        img: [
-            { full: "geopolitics-and-globalization-1.png", zoom: "geopolitics-and-globalization-1-zoom.png", chartId: ["line"] },
-            { full: "geopolitics-and-globalization-1.png", zoom: "geopolitics-and-globalization-1-zoom.png", chartId: ["treemap"] },
-            { full: "geopolitics-and-globalization-1.png", zoom: "geopolitics-and-globalization-1-zoom.png", chartId: ["scatter"] },
-        ],
-        contextDescription: "Some charts about globalization, GDP, gini indexes and other economic metrics.",
-        chartDescription: "Another set of clean chart examples, always with a good style and some insightful annotation as always for the FT.",
-        tools: undefined,
-        luminosity: ["light"],
-        interactive: false
-    }, {
-        id: 155,
-        title: "Famous Uni",
-        date: new Date(2022, 9),
-        author: "Les echos",
-        url: "https://media.lesechos.com/api/v1/images/view/633eff162467d568456da8f8/par_defaut/image.jpg",
-        img: [
-            { full: "famous-uni.png", zoom: "famous-uni-zoom.png", chartId: ["barplot"] },
-        ],
-        contextDescription: "You're most likely to go to a famous uni if you come from a rich/educated family. This arcticle quantifies this.",
-        chartDescription: "Just a barplot, sorted, that communicates a strong message.",
-        tools: undefined,
-        luminosity: ["light"],
-        interactive: false
-    }, {
+    },
+
+    // {
+    //     id: 154,
+    //     title: "Geopolitics and Globalization",
+    //     date: new Date(2022, 9),
+    //     author: "Financial Times",
+    //     url: "https://www.ft.com/content/8954a5f8-8f03-4044-8401-f1efefe9791b",
+    //     img: [
+    //         { full: "geopolitics-and-globalization-1.png", zoom: "geopolitics-and-globalization-1-zoom.png", chartId: ["line"] },
+    //         { full: "geopolitics-and-globalization-2.png", zoom: "geopolitics-and-globalization-2-zoom.png", chartId: ["treemap"] },
+    //         { full: "geopolitics-and-globalization-3.png", zoom: "geopolitics-and-globalization-3-zoom.png", chartId: ["scatter"] },
+    //     ],
+    //     contextDescription: "Some charts about globalization, GDP, gini indexes and other economic metrics.",
+    //     chartDescription: "Another set of clean chart examples, always with a good style and some insightful annotation as always for the FT.",
+    //     tools: undefined,
+    //     luminosity: ["light"],
+    //     interactive: false
+    // },
+
+    // {
+    //     id: 155,
+    //     title: "Famous Uni",
+    //     date: new Date(2022, 9),
+    //     author: "Les echos",
+    //     url: "https://media.lesechos.com/api/v1/images/view/633eff162467d568456da8f8/par_defaut/image.jpg",
+    //     img: [
+    //         { full: "famous-uni.png", zoom: "famous-uni-zoom.png", chartId: ["barplot"] },
+    //     ],
+    //     contextDescription: "You're most likely to go to a famous uni if you come from a rich/educated family. This arcticle quantifies this.",
+    //     chartDescription: "Just a barplot, sorted, that communicates a strong message.",
+    //     tools: undefined,
+    //     luminosity: ["light"],
+    //     interactive: false
+    // },
+
+    {
         id: 156,
         title: "How far by train",
         date: new Date(2022, 9),
@@ -2344,3 +2350,5 @@ export const vizList: VizItem[] = [
         interactive: false
     },
 ]
+
+
