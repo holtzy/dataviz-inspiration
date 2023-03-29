@@ -2349,6 +2349,38 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 160,
+        title: "The billionaire boom",
+        date: new Date(2021, 5),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/747a76dd-f018-4d0d-a9f3-4069bf2f5a93",
+        img: [
+            { full: "billionaire-boom.png", zoom: "billionaire-boom-zoom.png", chartId: ["barplot"] },
+            { full: "billionaire-boom-2.png", zoom: "billionaire-boom-zoom-2.png", chartId: ["area"] },
+            { full: "billionaire-boom-3.png", zoom: "billionaire-boom-zoom-3.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Pandemic stimulus has made the world’s wealthiest wealthier. Ruchir Sharma charts the rise of ‘good’ and ‘bad’ billionaires around the world",
+        chartDescription: "Some clean bar charts and area charts highlighting the reality of a somewhat grim topic. Leading to a <a href='https://twitter.com/NicolasFramont/status/1594648574217928704'>tweet with 13k likes</a>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 161,
+        title: "Musk and Followers",
+        date: new Date(2022, 11),
+        author: "Washington Post",
+        url: "https://www.washingtonpost.com/technology/2022/11/27/musk-followers-bernie-cruz/",
+        img: [
+            { full: "musk-and-followers.png", zoom: "musk-and-followers-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Musk is now owning twitter. Shift in follower counts for Elizabeth Warren, Ted Cruz and others shows how the platform is beginning to change.",
+        chartDescription: "It's very unusual to see a line chart displayed from top to bottom instead of from left to right. But since the figure is wider then tall, it increases the insight of the figure message. Smart move!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
 
 
