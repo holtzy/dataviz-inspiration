@@ -2381,6 +2381,21 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 162,
+        title: "Musk and Followers",
+        date: new Date(2022, 11),
+        author: "Washington Post",
+        url: "https://www.washingtonpost.com/technology/2022/11/27/musk-followers-bernie-cruz/",
+        img: [
+            { full: "musk-and-followers.png", zoom: "musk-and-followers-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Musk is now owning twitter. Shift in follower counts for Elizabeth Warren, Ted Cruz and others shows how the platform is beginning to change.",
+        chartDescription: "It's very unusual to see a line chart displayed from top to bottom instead of from left to right. But since the figure is wider then tall, it increases the insight of the figure message. Smart move!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
 
 
