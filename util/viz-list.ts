@@ -2391,7 +2391,7 @@ export const vizList: VizItem[] = [
             { full: "My-career-in-a-graph.jpeg", zoom: "My-career-in-a-graph-zoom.jpeg", chartId: ["parallel"] },
         ],
         contextDescription: "A humorous Twitter account that tackles here the subject of excitement for work throughout someone's career.",
-        chartDescription: "",
+        chartDescription: "Not much to say about this chart, except that topic definitely makes a diff for virality 😋",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2406,7 +2406,7 @@ export const vizList: VizItem[] = [
             { full: "Pornstars-per-million-inhabitants.png", zoom: "Pornstars-per-million-inhabitants-zoom.png", chartId: ["map", "choropleth"] },
         ],
         contextDescription: "A Twitter account that describes itself as « the home of terribles maps with a pinch of humour », and that illustrates here the differences in numbers of pornstars in different European countries.",
-        chartDescription: "",
+        chartDescription: "This choropleth map is far from perfect, but the topic makes it highly viral.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2421,7 +2421,7 @@ export const vizList: VizItem[] = [
             { full: "Plus-petits-noms-communes.png", zoom: "Plus-petits-noms-communes-zoom.png", chartId: ["map"] },
         ],
         contextDescription: "French graphic designer Clara Dealberto layed out the smallest town names by department in her country.",
-        chartDescription: "",
+        chartDescription: "Just a map with interesting labeling",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2436,8 +2436,8 @@ export const vizList: VizItem[] = [
             { full: "ChatGPT-vs-Lensa.jpeg", zoom: "ChatGPT-vs-Lensa-zoom.jpeg", chartId: ["line"] },
         ],
         contextDescription: "A Google keyword search comparison of ChatGPT and Lensa over a two week period in November 2022.",
-        chartDescription: "",
-        tools: undefined,
+        chartDescription: "Interesting way of labeling the 2 lines here. Inline labeling on the right hand side is usually used to avoid having a legend. But the labeling over the line allows to not waste real eastate!",
+        tools: [{ name: "R", link: "https://github.com/tashapiro/tanya-data-viz/blob/main/chatgpt-lensa/chatgpt-lensa.R" }],
         luminosity: ["light"],
         interactive: false
     },
@@ -2448,10 +2448,10 @@ export const vizList: VizItem[] = [
         author: "Pablo Alvarez",
         url: "https://www.visualcapitalist.com/cp/visualizing-country-smoking-population/",
         img: [
-            { full: "Smoking-population-by-country.png", zoom: "Smoking-population-by-country-zoom.png", chartId: ["histogram"] },
+            { full: "Smoking-population-by-country.png", zoom: "Smoking-population-by-country-zoom.png", chartId: ["barplot"] },
         ],
         contextDescription: "This visual depicts the share of men vs the share of women who smoke tobacco in different countries, in a more general inquiry about world smokers.",
-        chartDescription: "",
+        chartDescription: "This graph is a mirrored vertical barplot: left hand side is for women, right hand side for men. What's interesting here is that the bar height encodes a second numeric variable: the population size.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2466,7 +2466,7 @@ export const vizList: VizItem[] = [
             { full: "Paid-vacation-days.jpeg", zoom: "Paid-vacation-days-zoom.jpeg", chartId: ["scatter"] },
         ],
         contextDescription: "This chart compares the number of paid vacation days in different countries around the world.",
-        chartDescription: "",
+        chartDescription: "A surprising way of showing a distribution: a scatterplot with jittering is used instead of a more classic histogram or density chart.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
@@ -2481,8 +2481,8 @@ export const vizList: VizItem[] = [
             { full: "Population-density-maps.jpeg", zoom: "Population-density-maps-zoom.jpg", chartId: ["map", "choropleth"] },
         ],
         contextDescription: "25 maps that illustrate the population densities of different countries in a very visual way.",
-        chartDescription: "",
-        tools: undefined,
+        chartDescription: "Using the very awesome RayShader to build stunning 3d maps with R.",
+        tools: [{ name: "R", link: "https://www.rayshader.com/" }],
         luminosity: ["light"],
         interactive: false
     },
@@ -2496,7 +2496,7 @@ export const vizList: VizItem[] = [
             { full: "Chinese-repression-via-Twitter.jpeg", zoom: "Chinese-repression-via-Twitter-zoom.jpeg", chartId: ["bubble"] },
         ],
         contextDescription: "Thanks to all sorts of data retrieved from Twitter, three journalists from the French paper «Les Échos» were able to illustrate how Twitter has become a powerful tool for Chinese diplomats.",
-        chartDescription: "",
+        chartDescription: "I really like it when a Viz is fully integrated in a newspaper full page.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2511,7 +2511,7 @@ export const vizList: VizItem[] = [
             { full: "Indias-unsung-freedom-fighters.png", zoom: "Indias-unsung-freedom-fighters-zoom.png", chartId: ["circularBarplot"] },
         ],
         contextDescription: "Everybody remembers Gandhi and Nehru, but here is an overview into 50 underrated heroes who were active in the Indian freedom struggle between 1900 to 1947.",
-        chartDescription: "",
+        chartDescription: "A circular layour with a kind of clevelent chart (inside), labels (middle slice) and bubbles (outside).",
         tools: undefined,
         luminosity: ["dark"],
         interactive: true
@@ -2526,7 +2526,7 @@ export const vizList: VizItem[] = [
             { full: "Population-movements-in-Germany.jpeg", zoom: "Population-movements-in-Germany-zoom.jpeg", chartId: ["map", "choropleth", "connection"] },
         ],
         contextDescription: "Depictions of population movements from and to major German cities, by Zeit Online, the web version of the German newspaper Die Zeit.",
-        chartDescription: "",
+        chartDescription: "Beautiful way to show connections on a map. Dark mode is very well done and bundling adds such a nice touch.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: false
@@ -2541,7 +2541,7 @@ export const vizList: VizItem[] = [
             { full: "Biggest-accident-in-history.jpg", zoom: "Biggest-accident-in-history-zoom.jpeg", chartId: ["map"] },
         ],
         contextDescription: "Through the use of maps, videos and drawings, Tomas Pueyo gives us a great story about how India just passed China as the most populous country in the world. Spoiler alert: the causes go back a few million years.",
-        chartDescription: "",
+        chartDescription: "Very nice storry telling based on various visuals. Note the use of RayShader for the 3d map.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2556,7 +2556,7 @@ export const vizList: VizItem[] = [
             { full: "Super-Bowl-commercials.jpeg", zoom: "Super-Bowl-commercials-zoom.jpeg", chartId: ["stream"] },
         ],
         contextDescription: "Simran Parwani takes us through her creative dataviz process about the various commercials that are broadcast during the Super Bowl.",
-        chartDescription: "",
+        chartDescription: "The streamgraph is very elegant and convey the information efficitently. Note that it is a rare case of vertical streamgraph!",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2571,7 +2571,7 @@ export const vizList: VizItem[] = [
             { full: "Consumer-Confidence-around-the-world.png", zoom: "Consumer-Confidence-around-the-world-zoom.png", chartId: ["line"] },
         ],
         contextDescription: "This graphic uses OECD data from 2019-2022 to chart the rise and fall of consumer confidence (expected income and confidence in the economy) in nine major countries.",
-        chartDescription: "",
+        chartDescription: "Small multiple is a very powerfull in data visualization. It works even better when all series are repeated but greyed out on all units! 👏",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2581,12 +2581,12 @@ export const vizList: VizItem[] = [
         title: "The time at which films are born",
         date: new Date(2023, 3),
         author: "Tom Février",
-        url: "https://twitter.com/TomFevrier/status/1633416425191661568",
+        url: "https://media.lesechos.fr/infographie/9h-halles/",
         img: [
             { full: "The-time-at-which-films-are-born-2.jpeg", zoom: "The-time-at-which-films-are-born-zoom.jpeg", chartId: ["scatter"] },
         ],
         contextDescription: "The 9am Wednesday screenings at the UGC in the Halles district of Paris have become a true barometer to evaluate the success of a film very early on. What are the real correlations? An article by the newspaper Les Échos, and its great scrollytelling version on the web.",
-        chartDescription: "",
+        chartDescription: "Very good scrollytelling with animation between chart types. Each dot remains the same thing but moves along the story what allows to keep the focus.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
@@ -2596,12 +2596,12 @@ export const vizList: VizItem[] = [
         title: "Circular Republic",
         date: new Date(2023, 4),
         author: "Tom Février",
-        url: "https://twitter.com/TomFevrier/status/1645717071127535616",
+        url: "http://media.lesechos.fr/infographie/comprendre-legislatives/",
         img: [
-            { full: "French-legislative-elections.jpg", zoom: "French-legislative-elections-zoom.jpg", chartId: ["circularPacking"] },
+            { full: "French-legislative-elections.jpg", zoom: "French-legislative-elections-zoom.jpg", chartId: ["circularPacking", 'barplot', 'voronoi'] },
         ],
         contextDescription: "A well-done scrollytelling to understand how the French legislative elections work, using an imaginary « Circular Republic ». By the French newspaper Les Échos.",
-        chartDescription: "",
+        chartDescription: "An awesome scrollytelling animating from a voronoi treemap to a circular packing to a barplot.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
@@ -2616,7 +2616,7 @@ export const vizList: VizItem[] = [
             { full: "Who-speaks-about-whom-in-The-Office.jpeg", zoom: "Who-speaks-about-whom-in-The-Office-zoom.jpeg", chartId: ["chordDiagram"] },
         ],
         contextDescription: "A visualization showing who the main characters of the tv show The Office mention by name, and how often.",
-        chartDescription: "",
+        chartDescription: "Using the small multiples technique with a set of chord diagram is a nice way to show the various flows of this dataset.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: false
@@ -2631,9 +2631,9 @@ export const vizList: VizItem[] = [
             { full: "Wine-oil-fruit-southwestern-Europe.jpeg", zoom: "Wine-oil-fruit-southwestern-Europe-zoom.jpeg", chartId: ["map", "bubbleMap", "hexbin"] },
         ],
         contextDescription: "The cartography of wine, oil and fruit in southwestern Europe.",
-        chartDescription: "",
+        chartDescription: "A bubble map showing both a numeric value (area of culture) and a categoric one (type of culture)",
         tools: undefined,
-        luminosity: ["dark"],
+        luminosity: ["light"],
         interactive: false
     },
     {
@@ -2646,7 +2646,7 @@ export const vizList: VizItem[] = [
             { full: "Noise-pollution-commute-1.jpg", zoom: "Noise-pollution-commute-1-zoom.jpg", chartId: ["bubble", 'line'] },
         ],
         contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
-        chartDescription: "",
+        chartDescription: "Pretty hard to describe this chart type as it goes more into data art than data analysis 🙃",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
@@ -2661,7 +2661,7 @@ export const vizList: VizItem[] = [
             { full: "Noise-pollution-commute-2.jpg", zoom: "Noise-pollution-commute-2-zoom.jpg", chartId: ["bubble", 'line'] },
         ],
         contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
-        chartDescription: "",
+        chartDescription: "Pretty hard to describe this chart type as it goes more into data art than data analysis 🙃",
         tools: undefined,
         luminosity: ["dark"],
         interactive: true
@@ -2676,7 +2676,7 @@ export const vizList: VizItem[] = [
             { full: "French-short-haul-flights.jpg", zoom: "French-short-haul-flights-zoom.jpg", chartId: ["connection"] },
         ],
         contextDescription: "French legislation aims to prohibit air connections for which there is an alternative by train in less than 2h30. A measure emptied of its initial substance, which will have limited consequences in the fight against global warming.",
-        chartDescription: "",
+        chartDescription: "Connection map. Note the usage of arcs and not lines to show the connections.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
@@ -2691,7 +2691,7 @@ export const vizList: VizItem[] = [
             { full: "Migrants-searches-and-realities.jpg", zoom: "Migrants-searches-and-realities-zoom.jpg", chartId: ["stackedArea", "chordDiagram"] },
         ],
         contextDescription: "Using different types of graphs, this article shows how, all over the world, migrants' search interests differ from migration realities.",
-        chartDescription: "",
+        chartDescription: "Stunning project with so much information packed into this circular layout.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: true
