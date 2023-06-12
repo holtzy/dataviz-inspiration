@@ -2381,6 +2381,323 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 162,
+        title: "My career in a graph",
+        date: new Date(2022, 10),
+        author: "Shit Product Manager",
+        url: "https://twitter.com/shitPM/status/1584901769766883328",
+        img: [
+            { full: "My-career-in-a-graph.jpeg", zoom: "My-career-in-a-graph-zoom.jpeg", chartId: ["parallel"] },
+        ],
+        contextDescription: "A humorous Twitter account that tackles here the subject of excitement for work throughout someone's career.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 163,
+        title: "Pornstars per inhabitants",
+        date: new Date(2022, 11),
+        author: "Terrible Maps",
+        url: "https://twitter.com/TerribleMaps/status/1588240724277231616",
+        img: [
+            { full: "Pornstars-per-million-inhabitants.png", zoom: "Pornstars-per-million-inhabitants-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "A Twitter account that describes itself as « the home of terribles maps with a pinch of humour », and that illustrates here the differences in numbers of pornstars in different European countries.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 164,
+        title: "France's smallest city names",
+        date: new Date(2022, 11),
+        author: "Clara Dealberto",
+        url: "https://twitter.com/claradealberto/status/1587793756572499972?lang=fr",
+        img: [
+            { full: "Plus-petits-noms-communes.png", zoom: "Plus-petits-noms-communes-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "French graphic designer Clara Dealberto layed out the smallest town names by department in her country.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 165,
+        title: "ChatGPT vs. Lensa",
+        date: new Date(2022, 12),
+        author: "Tanya Shapiro",
+        url: "https://twitter.com/tanya_shapiro/status/1601612680619753473",
+        img: [
+            { full: "ChatGPT-vs-Lensa.jpeg", zoom: "ChatGPT-vs-Lensa-zoom.jpeg", chartId: ["line"] },
+        ],
+        contextDescription: "A Google keyword search comparison of ChatGPT and Lensa over a two week period in November 2022.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 166,
+        title: "Smoking populations",
+        date: new Date(2022, 12),
+        author: "Pablo Alvarez",
+        url: "https://www.visualcapitalist.com/cp/visualizing-country-smoking-population/",
+        img: [
+            { full: "Smoking-population-by-country.png", zoom: "Smoking-population-by-country-zoom.png", chartId: ["histogram"] },
+        ],
+        contextDescription: "This visual depicts the share of men vs the share of women who smoke tobacco in different countries, in a more general inquiry about world smokers.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 167,
+        title: "Paid vacation days",
+        date: new Date(2022, 12),
+        author: "Samo Drole",
+        url: "https://twitter.com/samodrole/status/1604341547817918464",
+        img: [
+            { full: "Paid-vacation-days.jpeg", zoom: "Paid-vacation-days-zoom.jpeg", chartId: ["scatter"] },
+        ],
+        contextDescription: "This chart compares the number of paid vacation days in different countries around the world.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 168,
+        title: "Population density",
+        date: new Date(2022, 12),
+        author: "Terence Fosstodon",
+        url: "https://creapills.com/cartographie-densite-population-rayshader-20221230",
+        img: [
+            { full: "Population-density-maps.jpeg", zoom: "Population-density-maps-zoom.jpg", chartId: ["map", "choropleth"] },,
+        ],
+        contextDescription: "25 maps that illustrate the population densities of different countries in a very visual way.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 169,
+        title: "Chinese repression via Twitter",
+        date: new Date(2022, 12),
+        author: "Tom Février",
+        url: "https://twitter.com/TomFevrier/status/1598651997862989825",
+        img: [
+            { full: "Chinese-repression-via-Twitter.jpeg", zoom: "Chinese-repression-via-Twitter-zoom.jpeg", chartId: ["bubble"] },
+        ],
+        contextDescription: "Thanks to all sorts of data retrieved from Twitter, three journalists from the French paper «Les Échos» were able to illustrate how Twitter has become a powerful tool for Chinese diplomats.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 170,
+        title: "India's unsung freedom fighters",
+        date: new Date(2022),
+        author: "Rajiv Surya",
+        url: "https://www.figma.com/proto/mpkUGNMhgctguJOp9GkRhW/Project-I---Data-Viz-project-1?page-id=0%3A1&node-id=10-3646&viewport=-155%2C87%2C0.41&scaling=scale-down-width&starting-point-node-id=10%3A3646",
+        img: [
+            { full: "Indias-unsung-freedom-fighters.png", zoom: "Indias-unsung-freedom-fighters-zoom.png", chartId: [""] },
+        ],
+        contextDescription: "Everybody remembers Gandhi and Nehru, but here is an overview into 50 underrated heroes who were active in the Indian freedom struggle between 1900 to 1947.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 171,
+        title: "Population movements in Germany",
+        date: new Date(2023, 01),
+        author: "Zeit Online",
+        url: "https://twitter.com/lisacmuth/status/1613558715155898373",
+        img: [
+            { full: "Population-movements-in-Germany.jpeg", zoom: "Population-movements-in-Germany-zoom.jpeg", chartId: ["map", "choropleth", "connection"] },
+        ],
+        contextDescription: "Depictions of population movements from and to major German cities, by Zeit Online, the web version of the German newspaper Die Zeit.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 172,
+        title: "Biggest accident in history",
+        date: new Date(2023, 02),
+        author: "Tomas Pueyo",
+        url: "https://twitter.com/tomaspueyo/status/1622753371663867905",
+        img: [
+            { full: "Biggest-accident-in-history.jpg", zoom: "Biggest-accident-in-history-zoom.jpeg", chartId: ["map"] },
+        ],
+        contextDescription: "Through the use of maps, videos and drawings, Tomas Pueyo gives us a great story about how India just passed China as the most populous country in the world. Spoiler alert: the causes go back a few million years.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 173,
+        title: "Super Bowl commercials",
+        date: new Date(2023, 02),
+        author: "Simran Parwani",
+        url: "https://twitter.com/simranparwani/status/1624435538433392642",
+        img: [
+            { full: "Super-Bowl-commercials.jpeg", zoom: "Super-Bowl-commercials-zoom.jpeg", chartId: ["stream"] },
+        ],
+        contextDescription: "Simran Parwani takes us through her creative dataviz process about the various commercials that are broadcast during the Super Bowl.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 174,
+        title: "Consumer confidence around the world",
+        date: new Date(2023, 02),
+        author: "Gilbert Fontana",
+        url: "https://www.visualcapitalist.com/cp/charting-the-global-decline-in-consumer-confidence/",
+        img: [
+            { full: "Consumer-Confidence-around-the-world.png", zoom: "Consumer-Confidence-around-the-world-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "This graphic uses OECD data from 2019-2022 to chart the rise and fall of consumer confidence (expected income and confidence in the economy) in nine major countries.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 175,
+        title: "The time at which films are born",
+        date: new Date(2023, 03),
+        author: "Tom Février",
+        url: "https://twitter.com/TomFevrier/status/1633416425191661568",
+        img: [
+            { full: "The-time-at-which-films-are-born-2.jpeg", zoom: "The-time-at-which-films-are-born-zoom.jpeg", chartId: ["scatter"] },
+        ],
+        contextDescription: "The 9am Wednesday screenings at the UGC in the Halles district of Paris have become a true barometer to evaluate the success of a film very early on. What are the real correlations? An article by the newspaper Les Échos, and its great scrollytelling version on the web.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 176,
+        title: "Circular Republic",
+        date: new Date(2023, 04),
+        author: "Tom Février",
+        url: "https://twitter.com/TomFevrier/status/1645717071127535616",
+        img: [
+            { full: "French-legislative-elections.jpg", zoom: "French-legislative-elections-zoom.jpg", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "A well-done scrollytelling to understand how the French legislative elections work, using an imaginary « Circular Republic ». By the French newspaper Les Échos.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 177,
+        title: "Who speaks about whom in The Office",
+        date: new Date(2023, 04),
+        author: "Ansgar Wolsing",
+        url: "https://twitter.com/_ansgar/status/1647905766479732736",
+        img: [
+            { full: "Who-speaks-about-whom-in-The-Office.jpeg", zoom: "Who-speaks-about-whom-in-The-Office-zoom.jpeg", chartId: ["chordDiagram"] },
+        ],
+        contextDescription: "A visualization showing who the main characters of the tv show The Office mention by name, and how often.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 178,
+        title: "Wine, oil and fruit",
+        date: new Date(2023, 05),
+        author: "Dominic Royé",
+        url: "https://twitter.com/_ansgar/status/1647905766479732736",
+        img: [
+            { full: "Wine-oil-fruit-southwestern-Europe.jpeg", zoom: "Wine-oil-fruit-southwestern-Europe-zoom.jpeg", chartId: ["map", "bubbleMap", "hexbin"] },
+        ],
+        contextDescription: "The cartography of wine, oil and fruit in southwestern Europe.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 179,
+        title: "Commute noise pollution",
+        date: new Date(),
+        author: "Ludovic Riffault",
+        url: "https://commute.dataveyes.com/",
+        img: [
+            { full: "Noise-pollution-commute-1.jpg", zoom: "Noise-pollution-commute-1-zoom.jpg", chartId: [""] },
+        ],
+        contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 180,
+        title: "Commute noise pollution",
+        date: new Date(),
+        author: "Ludovic Riffault",
+        url: "https://commute.dataveyes.com/",
+        img: [
+            { full: "Noise-pollution-commute-2.jpg", zoom: "Noise-pollution-commute-2-zoom.jpg", chartId: [""] },
+        ],
+        contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 181,
+        title: "French short-haul flights",
+        date: new Date(2023, 05),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2023/05/24/l-interdiction-des-vols-interieurs-courts-en-france-une-mesure-videe-de-sa-substance_6174641_4355770.html",
+        img: [
+            { full: "French-short-haul-flights.jpg", zoom: "French-short-haul-flights-zoom.jpg", chartId: ["connection"] },
+        ],
+        contextDescription: "French legislation aims to prohibit air connections for which there is an alternative by train in less than 2h30. A measure emptied of its initial substance, which will have limited consequences in the fight against global warming.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 182,
+        title: "Migrants' searches and realities",
+        date: new Date(),
+        author: "Mohamad Waked",
+        url: "https://migrationinsearch.com/",
+        img: [
+            { full: "Migrants-searches-and-realities.jpg", zoom: "Migrants-searches-and-realities-zoom.jpg", chartId: ["stackedArea", "chordDiagram"] },
+        ],
+        contextDescription: "Using different types of graphs, this article shows how, all over the world, migrants' search interests differ from migration realities.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+
+   
 ]
 
 
