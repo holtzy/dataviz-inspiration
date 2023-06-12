@@ -2478,7 +2478,7 @@ export const vizList: VizItem[] = [
         author: "Terence Fosstodon",
         url: "https://creapills.com/cartographie-densite-population-rayshader-20221230",
         img: [
-            { full: "Population-density-maps.jpeg", zoom: "Population-density-maps-zoom.jpg", chartId: ["map", "choropleth"] },,
+            { full: "Population-density-maps.jpeg", zoom: "Population-density-maps-zoom.jpg", chartId: ["map", "choropleth"] },
         ],
         contextDescription: "25 maps that illustrate the population densities of different countries in a very visual way.",
         chartDescription: "",
@@ -2508,7 +2508,7 @@ export const vizList: VizItem[] = [
         author: "Rajiv Surya",
         url: "https://www.figma.com/proto/mpkUGNMhgctguJOp9GkRhW/Project-I---Data-Viz-project-1?page-id=0%3A1&node-id=10-3646&viewport=-155%2C87%2C0.41&scaling=scale-down-width&starting-point-node-id=10%3A3646",
         img: [
-            { full: "Indias-unsung-freedom-fighters.png", zoom: "Indias-unsung-freedom-fighters-zoom.png", chartId: [""] },
+            { full: "Indias-unsung-freedom-fighters.png", zoom: "Indias-unsung-freedom-fighters-zoom.png", chartId: ["circularBarplot"] },
         ],
         contextDescription: "Everybody remembers Gandhi and Nehru, but here is an overview into 50 underrated heroes who were active in the Indian freedom struggle between 1900 to 1947.",
         chartDescription: "",
@@ -2519,7 +2519,7 @@ export const vizList: VizItem[] = [
     {
         id: 171,
         title: "Population movements in Germany",
-        date: new Date(2023, 01),
+        date: new Date(2023, 1),
         author: "Zeit Online",
         url: "https://twitter.com/lisacmuth/status/1613558715155898373",
         img: [
@@ -2534,7 +2534,7 @@ export const vizList: VizItem[] = [
     {
         id: 172,
         title: "Biggest accident in history",
-        date: new Date(2023, 02),
+        date: new Date(2023, 2),
         author: "Tomas Pueyo",
         url: "https://twitter.com/tomaspueyo/status/1622753371663867905",
         img: [
@@ -2549,7 +2549,7 @@ export const vizList: VizItem[] = [
     {
         id: 173,
         title: "Super Bowl commercials",
-        date: new Date(2023, 02),
+        date: new Date(2023, 2),
         author: "Simran Parwani",
         url: "https://twitter.com/simranparwani/status/1624435538433392642",
         img: [
@@ -2564,7 +2564,7 @@ export const vizList: VizItem[] = [
     {
         id: 174,
         title: "Consumer confidence around the world",
-        date: new Date(2023, 02),
+        date: new Date(2023, 2),
         author: "Gilbert Fontana",
         url: "https://www.visualcapitalist.com/cp/charting-the-global-decline-in-consumer-confidence/",
         img: [
@@ -2579,7 +2579,7 @@ export const vizList: VizItem[] = [
     {
         id: 175,
         title: "The time at which films are born",
-        date: new Date(2023, 03),
+        date: new Date(2023, 3),
         author: "Tom Février",
         url: "https://twitter.com/TomFevrier/status/1633416425191661568",
         img: [
@@ -2594,7 +2594,7 @@ export const vizList: VizItem[] = [
     {
         id: 176,
         title: "Circular Republic",
-        date: new Date(2023, 04),
+        date: new Date(2023, 4),
         author: "Tom Février",
         url: "https://twitter.com/TomFevrier/status/1645717071127535616",
         img: [
@@ -2609,7 +2609,7 @@ export const vizList: VizItem[] = [
     {
         id: 177,
         title: "Who speaks about whom in The Office",
-        date: new Date(2023, 04),
+        date: new Date(2023, 4),
         author: "Ansgar Wolsing",
         url: "https://twitter.com/_ansgar/status/1647905766479732736",
         img: [
@@ -2624,7 +2624,7 @@ export const vizList: VizItem[] = [
     {
         id: 178,
         title: "Wine, oil and fruit",
-        date: new Date(2023, 05),
+        date: new Date(2023, 5),
         author: "Dominic Royé",
         url: "https://twitter.com/_ansgar/status/1647905766479732736",
         img: [
@@ -2643,7 +2643,7 @@ export const vizList: VizItem[] = [
         author: "Ludovic Riffault",
         url: "https://commute.dataveyes.com/",
         img: [
-            { full: "Noise-pollution-commute-1.jpg", zoom: "Noise-pollution-commute-1-zoom.jpg", chartId: [""] },
+            { full: "Noise-pollution-commute-1.jpg", zoom: "Noise-pollution-commute-1-zoom.jpg", chartId: ["bubble", 'line'] },
         ],
         contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
         chartDescription: "",
@@ -2658,7 +2658,7 @@ export const vizList: VizItem[] = [
         author: "Ludovic Riffault",
         url: "https://commute.dataveyes.com/",
         img: [
-            { full: "Noise-pollution-commute-2.jpg", zoom: "Noise-pollution-commute-2-zoom.jpg", chartId: [""] },
+            { full: "Noise-pollution-commute-2.jpg", zoom: "Noise-pollution-commute-2-zoom.jpg", chartId: ["bubble", 'line'] },
         ],
         contextDescription: "Visualisation of the ambient noise during parisian subway journeys, with algorithmically generated melodies.",
         chartDescription: "",
@@ -2669,7 +2669,7 @@ export const vizList: VizItem[] = [
     {
         id: 181,
         title: "French short-haul flights",
-        date: new Date(2023, 05),
+        date: new Date(2023, 5),
         author: "Le Monde",
         url: "https://www.lemonde.fr/les-decodeurs/article/2023/05/24/l-interdiction-des-vols-interieurs-courts-en-france-une-mesure-videe-de-sa-substance_6174641_4355770.html",
         img: [
@@ -2695,9 +2695,5 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: true
-    },
-
-   
+    }
 ]
-
-
