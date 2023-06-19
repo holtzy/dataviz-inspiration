@@ -80,7 +80,7 @@ export const vizList: VizItem[] = [
         author: "Cédric Scherer",
         url: "https://www.r-graph-gallery.com/web-lollipop-plot-with-r-mario-kart-64-world-records.html",
         img: [{ full: "lollipop-plot-with-r-mario-kart-64-world-records.png", zoom: "lollipop-plot-with-r-mario-kart-64-world-records-zoom.png", chartId: ["lollipop"] }],
-        contextDescription: "Mario Kart on Nintendo 64 is probably one of the most famouse game of all time (at least it is for me 😃). In this chart Cédric Scherer visualized the world records to understand what's the best character to play with.",
+        contextDescription: "Mario Kart on Nintendo 64 is probably one of the most famous game of all time (at least it is for me 😃). In this chart Cédric Scherer visualized the world records to understand what's the best character to play with.",
         chartDescription: "A lollipop chart grouped by character. It's interesting to notice that character names are not aligned vertically, but displayed next to each segment for better readability.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-lollipop-plot-with-r-mario-kart-64-world-records.html" }],
         luminosity: ["light"],
@@ -120,7 +120,7 @@ export const vizList: VizItem[] = [
         url: "https://www.economist.com/graphic-detail/2021/08/24/infections-caught-in-laboratories-are-surprisingly-common",
         img: [{ full: "infection-from-lab.png", zoom: "infection-from-lab-zoom.png", chartId: ["barplot"] }],
         contextDescription: "In the middle of a worlwide pandemic, some people wonder if covid-19 escaped from a Chinese lab. The economist checked the probability of this by comparing with other diseases.",
-        chartDescription: "A simple barplot with the well known Economics style signature. Note bars are displayed horizontally, each being labeled using a very readable manner.",
+        chartDescription: "A simple barplot with the Economist's well known style signature. Note bars are displayed horizontally, each being labeled using a very readable manner.",
         tools: [{ name: "python", link: "https://www.python-graph-gallery.com/web-horizontal-barplot-with-labels-the-economist" }],
         luminosity: ["light"],
         interactive: false
@@ -145,7 +145,7 @@ export const vizList: VizItem[] = [
         author: "Le Monde",
         url: "https://www.lemonde.fr/les-decodeurs/article/2020/05/05/coronavirus-age-mortalite-departements-pays-suivez-l-evolution-de-l-epidemie-en-cartes-et-graphiques_6038751_4355770.html",
         img: [{ full: "covid-dash-lemonde-1.png", zoom: "covid-dash-lemonde-1.png", chartId: ["map"] }, { full: "covid-dash-lemonde-2.png", zoom: "covid-dash-lemonde-2-zoom.png", chartId: ["line"] }, { full: "covid-dash-lemonde-3.png", zoom: "covid-dash-lemonde-3-zoom.png", chartId: ["stream"] }, { full: "covid-dash-lemonde-4.png", zoom: "covid-dash-lemonde-4.png", chartId: ["line", "barplot"] }],
-        contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famouse newspaper in France and does a pretty good job in its daily updated dashboard.",
+        contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famous newspapers in France and does a pretty good job in its daily updated dashboard.",
         chartDescription: "Several viz are provided, going from mirror area charts to streamcharts, with different kinds of map and several tables. Worth a read if you speak 🇫🇷.",
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
@@ -336,7 +336,7 @@ export const vizList: VizItem[] = [
         author: "Cédric Scherer",
         url: "https://www.r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html",
         img: [{ full: "big-mac-price.png", zoom: "big-mac-price-zoom.png", chartId: ["line"] }],
-        contextDescription: "Compared to the fincancial crisis in 2008, how much more or less do you have to pay for a Big Mac today?",
+        contextDescription: "Compared to the financial crisis in 2008, how much more or less do you have to pay for a Big Mac today?",
         chartDescription: "A clean line chart allowing to compare the evolution of several groups. Note the clean inline legend that avoids the <a href='https://www.data-to-viz.com/caveat/spaghetti.html'>spaghetti effect</a>.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html" }, { name: "python", link: "https://python-graph-gallery.com/web-line-chart-with-labels-at-line-end" }],
         luminosity: ["light"],
@@ -591,7 +591,7 @@ export const vizList: VizItem[] = [
         url: "https://www.washingtonpost.com/politics/interactive/2021/redistricting-faq/",
         img: [{ full: "control-of-states.png", zoom: "control-of-states-zoom.png", chartId: ["parallel"] }],
         contextDescription: "How many states are controled by which party in the US. How did it change between 2010 and 2020?",
-        chartDescription: "Two parallel charts showing the evolution of each political party, measured by state and by districts.",
+        chartDescription: "Two parallel charts showing the evolution of each political party, measured by state and by district.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -806,7 +806,7 @@ export const vizList: VizItem[] = [
             { full: "airport-world-megacities-3.png", zoom: "airport-world-megacities-zoom-3.png", chartId: ["connectedScatter"] },
             { full: "airport-world-megacities-4.png", zoom: "airport-world-megacities-zoom-4.png", chartId: ["scatter"] }
         ],
-        contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article try to explains it.",
+        contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article tries to explain it.",
         chartDescription: "A set of charts following the same design, spread around a well-written article. I really like the mirror barplot and the clear annotations that make the vizs very insightful.",
         tools: undefined,
         luminosity: ["dark"],
@@ -1155,7 +1155,7 @@ export const vizList: VizItem[] = [
     },
     {
         id: 84,
-        title: "Migraton flow",
+        title: "Migration flow",
         date: new Date(2018, 6),
         author: "Gui J. Abel",
         url: "https://www.data-to-viz.com/graph/chord.html",
@@ -1686,7 +1686,7 @@ export const vizList: VizItem[] = [
             { full: "bruxelle-malade-7.png", zoom: "bruxelle-malade-zoom-7.png", chartId: ["cartogram", "map"] },
             { full: "bruxelle-malade-8.png", zoom: "bruxelle-malade-zoom-8.png", chartId: ["parallel"] },
         ],
-        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the Beligium capital. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
         chartDescription: "Heaps of different chart types, all very clean with perfect annotations and stunning animations between the story steps. Masterpiece!",
         tools: undefined,
         luminosity: ["light"],
@@ -2042,7 +2042,7 @@ export const vizList: VizItem[] = [
             { full: "britain-ends-coal-addiction-2.png", zoom: "britain-ends-coal-addiction-zoom-2.png", chartId: ["barplot"] },
         ],
         contextDescription: "The shift in the UK is an important victory for environmentalists in their fight against fossil fuels.",
-        chartDescription: "Clean area and bar charts used as timeseries, with the very recogniizable style of the financial times.",
+        chartDescription: "Clean area and bar charts used as timeseries, with the very recognizable style of the financial times.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2086,7 +2086,7 @@ export const vizList: VizItem[] = [
         img: [
             { full: "flood-phenomena.png", zoom: "flood-phenomena-zoom.png", chartId: ["barplot", "stream"] },
         ],
-        contextDescription: "A visual showing the number of flood phenomena in each of the European countries. A barchart on the left shows the most impacted countries. A stream chart on the right show the evolution of the number of events.",
+        contextDescription: "A visual showing the number of flood phenomena in each of the European countries. A barchart on the left shows the most impacted countries. A stream chart on the right shows the evolution of the number of events.",
         chartDescription: "Data talks about floods, and the visual definitely goes along with it. The color palette and the organic shapes of the streamchart are going so well together. As often with nice visuals, the annotation tells the story.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/tam.s.varga/viz/FloodPhenomenainEurope/FloodPhenomenainEurope" }],
         luminosity: ["dark"],
@@ -2101,7 +2101,7 @@ export const vizList: VizItem[] = [
         img: [
             { full: "endangered-languages.png", zoom: "endangered-languages-zoom.png", chartId: ["barplot", "stream"] },
         ],
-        contextDescription: "Some languages are about disappear from the planet. This visual quantifies this and show where in the world those languages are.",
+        contextDescription: "Some languages are about disappear from the planet. This visual quantifies this and shows where in the world those languages are.",
         chartDescription: "A clean world map with dots and 2d density on top. There is also a stacked barchart at the bottom showing how vulnerable the languages of each zone are.",
         tools: undefined,
         luminosity: ["light"],
@@ -2117,7 +2117,7 @@ export const vizList: VizItem[] = [
             { full: "carbon-emissions.png", zoom: "carbon-emissions-zoom.png", chartId: ["circularBarplot"] },
         ],
         contextDescription: "Carbon emissions is such a hot topic nowadays. This chart summarizes how much C02 a country emitts, in regard of its population",
-        chartDescription: "This chart is a circular barchart with unequal bar widths. Indeed, bar widths are proportional to the country population. This is such an interesting tweaks that makes the chart much more insightful.",
+        chartDescription: "This chart is a circular barchart with unequal bar widths. Indeed, bar widths are proportional to the country population. This is such an interesting tweak that makes the chart much more insightful.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -2222,7 +2222,7 @@ export const vizList: VizItem[] = [
         img: [
             { full: "all-you-need-is-love.png", zoom: "all-you-need-is-love-zoom.png", chartId: ["circularBarplot", 'bubble'] },
         ],
-        contextDescription: "An homage to the Beattles. It represents their core thirteen albums and breaks down every song in each album.",
+        contextDescription: "An homage to the Beatles. It represents their core thirteen albums and breaks down every song in each album.",
         chartDescription: "A circular layout displaying several layouts of information. Bubbles to show the total number of the word 'love' being said, line showing when it happened in the song.",
         tools: [{ name: "illustrator", link: undefined }],
         luminosity: ["light"],
@@ -2694,6 +2694,21 @@ export const vizList: VizItem[] = [
         chartDescription: "Stunning project with so much information packed into this circular layout.",
         tools: undefined,
         luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 183,
+        title: "A day in the life of Americans",
+        date: new Date(),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/",
+        img: [
+            { full: "A-day-in-the-life-of-Americans.jpg", zoom: "A-day-in-the-life-of-Americans-zoom.jpg", chartId: ["bubble", "network"] },
+        ],
+        contextDescription: "A animated simulation of 1000 Americans' average day, from sleeping to working, leisure, and all other activities that tend to take place in a 24 hour time span.",
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
         interactive: true
     }
 ]
