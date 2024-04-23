@@ -1859,7 +1859,7 @@ export const vizList: VizItem[] = [
             { full: "fiction-user-interface.png", zoom: "fiction-user-interface-zoom.png", chartId: ["network", "barplot", "sankey", "line"] },
         ],
         contextDescription: "Not a real viz. This is a fiction user interface made for movies or video game. But some concept can definitely be borrowed to create real futuristic style dataviz.",
-        chartDescription: "Many different chart types are represented, especially if yoyu watch the whole <a href='https://videohive.net/item/ultimate-fui-hud-library/25744407'>video</a>.",
+        chartDescription: "Many different chart types are represented, especially if you watch the whole <a href='https://videohive.net/item/ultimate-fui-hud-library/25744407'>video</a>.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: false
