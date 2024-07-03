@@ -1638,7 +1638,7 @@ export const vizList: VizItem[] = [
         chartDescription: "A perfect treemap with impactful color sheme and a great design making it crystal clear what to do to decrease your personal effect on global warming.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
     },
     {
         id: 114,
