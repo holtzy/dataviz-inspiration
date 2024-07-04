@@ -1,47 +1,51 @@
+"use client";
+
 import type { NextPage } from "next";
 import { useState } from "react";
-import Footer from "../components/Footer";
-import { MasonryItem } from "../components/MasonryItem";
-import TitleAndDescription from "../components/TitleAndDescription";
-import { VizItemModal } from "../components/VizItemModal";
-import { vizList } from "../util/viz-list";
-import { WallFilters } from "../components/WallFilters";
-import { chartTypesInfo } from "../util/sectionDescription";
-import { filterVizList } from "../util/filterVizList";
-import { AppHeader } from "../components/AppHeader";
-import Navbar from "../components/Navbar";
-import { ApplicationState } from "./_app";
+import Footer from "../../components/Footer";
+import { MasonryItem } from "../../components/MasonryItem";
+import TitleAndDescription from "../../components/TitleAndDescription";
+import { VizItemModal } from "../../components/VizItemModal";
+import { Luminosity, Tool, vizList } from "../../util/viz-list";
+import { WallFilters } from "../../components/WallFilters";
+import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
+import { filterVizList } from "../../util/filterVizList";
+import { AppHeader } from "../../components/AppHeader";
+import Navbar from "../../components/Navbar";
 
 export type Project = { projectId: number; imgId: number };
 
-const SpecificChartTypePage: NextPage<ApplicationState> = ({
-  columnNumber,
-  setColumnNumber,
-  selectedLuminosities,
-  setLuminosity,
-  selectedChartIds,
-  selectedTools,
-  updateState,
-}: ApplicationState) => {
+export default function Page() {
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  if (!selectedChartIds) {
-    return null;
-  }
+  // State of the application = shared between pages = written as query params in the URL
+  const [columnNumber, setColumnNumber] = useState<number>(4);
+  const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
+    "light",
+    "dark",
+  ]);
+  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>([]);
+  const [selectedTools, setSelectedTools] = useState<Tool[]>();
 
-  //
+  // Functions to update the chart and tool states
+  // Mechanism: updateChartId -> updates the URL with updateRouter -> useRouter() updates -> useEffect is triggered and update state
+  const updateState = (
+    chartIds: ChartId[] | undefined,
+    tools: Tool[] | undefined
+  ) => {
+    console.log("hello");
+  };
+
   // Apply the filters on the viz list!
-  //
   const filteredVizList = filterVizList(
     vizList,
     selectedLuminosities,
     selectedChartIds,
     selectedTools
   );
-
   const vizItemNumber = filteredVizList.length;
 
   const labels = selectedChartIds.map(
@@ -157,6 +161,4 @@ const SpecificChartTypePage: NextPage<ApplicationState> = ({
       </div>
     </>
   );
-};
-
-export default SpecificChartTypePage;
+}
