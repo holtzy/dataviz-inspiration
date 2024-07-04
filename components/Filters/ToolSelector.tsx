@@ -1,28 +1,29 @@
+"use client";
+
 import { XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
-import { Tool, Tools } from "../../util/viz-list";
+import { Tool, allTools } from "../../util/viz-list";
 import { Pill } from "../Pill";
+import Link from "next/link";
+import { buildUrlWithUpdatedParam } from "../../util/build-url-with-updated-param";
+import { useRouter } from "next/navigation";
 
 // The selected charts appear in the filter area
 // We can not display all of them. Let's keep only the n first ones.
 const MAX_PILL_ITEMS_DISPLAYED = 2;
 
 type ToolSelectorProps = {
-  selectedTools: Tool[] | undefined;
-  updateTool: (arg: Tool[] | undefined) => void;
+  tools: Tool[] | undefined;
 };
 
 // -
 //  Short list of logos that appear at the top of the wall
 // -
-export const ToolSelector = ({
-  updateTool,
-  selectedTools,
-}: ToolSelectorProps) => {
+export const ToolSelector = ({ tools }: ToolSelectorProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // List of logos that have been selected by the user
-  const selectedToolPills = selectedTools?.map((tool, i) => {
+  const selectedToolPills = tools?.map((tool, i) => {
     if (i >= MAX_PILL_ITEMS_DISPLAYED) {
       return null;
     }
@@ -33,8 +34,8 @@ export const ToolSelector = ({
     );
   });
 
-  const notDisplayedLogoNumber = selectedTools
-    ? selectedTools.length - MAX_PILL_ITEMS_DISPLAYED
+  const notDisplayedLogoNumber = tools
+    ? tools.length - MAX_PILL_ITEMS_DISPLAYED
     : 0;
 
   const selectedToolArea = (
@@ -60,32 +61,30 @@ export const ToolSelector = ({
       className="flex max-w-40 items-center cursor-pointer opacity-80 hover:opacity-100 px-2"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >
-      {selectedTools ? selectedToolArea : allChartMsg}
+      {tools && tools.length > 0 ? selectedToolArea : allChartMsg}
       {isModalOpen && (
-        <ToolSelectorModal
-          setIsModalOpen={setIsModalOpen}
-          selectedTools={selectedTools}
-          updateTool={updateTool}
-        />
+        <ToolSelectorModal setIsModalOpen={setIsModalOpen} tools={tools} />
       )}
     </div>
   );
 };
 
 // -
+//
 //  Modal that opens to select/unselect chart
+//
 // -
 type ToolSelectorModalProps = {
   setIsModalOpen: (arg: boolean) => void;
-  selectedTools: Tool[] | undefined;
-  updateTool: (arg: Tool[] | undefined) => void;
+  tools: Tool[] | undefined;
 };
 
 const ToolSelectorModal = ({
   setIsModalOpen,
-  selectedTools,
-  updateTool,
+  tools,
 }: ToolSelectorModalProps) => {
+  const router = useRouter();
+
   /* At the very top, X to close the modal (important for mobile) */
   const topCross = (
     <div className="flex justify-end items-center ">
@@ -112,35 +111,26 @@ const ToolSelectorModal = ({
   );
 
   const selectAllButton = (
-    <span
-      onClick={() => {
-        updateTool(undefined);
-      }}
+    <Link
+      href={buildUrlWithUpdatedParam("tools")}
       className="text-brand text-sm mr-1 cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
     >
       {"select all"}
-    </span>
+    </Link>
   );
 
-  const pillList = Tools.map((tool, i) => {
-    const isCurrentlySelected = selectedTools?.includes(tool) || !selectedTools;
+  const pillList = allTools.map((tool, i) => {
+    const isCurrentlySelected = tools?.includes(tool) || !tools;
+
+    const newTools = isCurrentlySelected
+      ? tools?.filter((item) => item !== tool)
+      : [...tools, tool];
 
     const onPillClick = (event: any) => {
-      if (!selectedTools) {
-        updateTool([tool]);
-      } else {
-        if (isCurrentlySelected) {
-          const remainingIds = selectedTools.filter((item) => item !== tool);
-          if (remainingIds.length === 0) {
-            updateTool(undefined);
-          } else {
-            updateTool(remainingIds);
-          }
-        } else {
-          updateTool([...selectedTools, tool]);
-        }
-      }
-      event.stopPropagation();
+      const updatedUrl = buildUrlWithUpdatedParam("tools", newTools);
+      // Use shallow routing to update the URL without affecting modal state
+      router.push(updatedUrl);
+      event.stopPropagation(); // Stop the event from propagating further
     };
 
     return (
@@ -151,7 +141,11 @@ const ToolSelectorModal = ({
       >
         <Pill
           text={tool}
-          className={isCurrentlySelected ? "opacity-100" : "opacity-30"}
+          className={
+            isCurrentlySelected || tools.length === 0
+              ? "opacity-100"
+              : "opacity-30"
+          }
         />
       </div>
     );

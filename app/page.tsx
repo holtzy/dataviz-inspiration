@@ -21,6 +21,9 @@ export default function Page() {
   const luminosity = (searchParams.get("luminosity") || undefined) as
     | Luminosity
     | undefined;
+  const tools = (searchParams.getAll("tools") || undefined) as
+    | Tool[]
+    | undefined;
 
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,24 +31,15 @@ export default function Page() {
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
-  const [selectedTools, setSelectedTools] = useState<Tool[]>();
-
-  // Functions to update the chart and tool states
-  // Mechanism: updateChartId -> updates the URL with updateRouter -> useRouter() updates -> useEffect is triggered and update state
-  const updateState = (
-    chartIds: ChartId[] | undefined,
-    tools: Tool[] | undefined
-  ) => {
-    console.log("hello");
-  };
 
   // Apply the filters on the viz list!
   const filteredVizList = filterVizList(
     vizList,
     luminosity,
     selectedChartIds,
-    selectedTools
+    tools
   );
+
   const vizItemNumber = filteredVizList.length;
 
   const siteDescription = (
@@ -86,8 +80,7 @@ export default function Page() {
           columnNumber={Number(columnNumber)}
           luminosity={luminosity}
           selectedChartIds={selectedChartIds}
-          selectedTools={selectedTools}
-          updateState={updateState}
+          tools={tools}
         />
 
         <div

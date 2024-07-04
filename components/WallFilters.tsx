@@ -10,19 +10,14 @@ type WallFiltersProps = {
   columnNumber: number;
   luminosity: Luminosity[] | undefined;
   selectedChartIds: ChartId[] | undefined;
-  selectedTools: Tool[] | undefined;
-  updateState: (
-    chartIds: ChartId[] | undefined,
-    tools: Tool[] | undefined
-  ) => void;
+  tools: Tool[] | undefined;
 };
 
 export const WallFilters = ({
   columnNumber,
   luminosity,
   selectedChartIds,
-  selectedTools,
-  updateState,
+  tools,
 }: WallFiltersProps) => {
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center items-center">
@@ -38,25 +33,20 @@ export const WallFilters = ({
         <ChartIdSelector
           selectedChartIds={selectedChartIds}
           updateChartId={(chartIds: ChartId[] | undefined) => {
-            updateState(chartIds, selectedTools);
+            console.log();
           }}
         />
       </FilterWrapper>
 
       <FilterWrapper>
-        <ToolSelector
-          selectedTools={selectedTools}
-          updateTool={(tools: Tool[] | undefined) => {
-            updateState(selectedChartIds, tools);
-          }}
-        />
+        <ToolSelector tools={tools} />
       </FilterWrapper>
 
       {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
       <FilterWrapper>
         <FilterReset
           onClick={() => {
-            updateState(undefined, undefined);
+            console.log();
           }}
         />
       </FilterWrapper>

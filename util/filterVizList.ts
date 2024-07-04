@@ -12,7 +12,7 @@ export const filterVizList = (
   vizList: VizItem[],
   luminosity: Luminosity | undefined,
   selectedChartIds: ChartId[] | undefined,
-  selectedTools: Tool[] | undefined
+  tools: Tool[] | undefined
 ): VizItem[] => {
   return (
     vizList
@@ -39,14 +39,14 @@ export const filterVizList = (
 
       .filter((vizItem) => {
         // No selected tool? Keep this item
-        if (!selectedTools || selectedTools.length === 0) {
+        if (!tools || tools.length === 0) {
           return true;
         }
         if (!vizItem.tools) {
           return false
         }
         return vizItem?.tools.some((item) => {
-          return selectedTools.includes(item.name);
+          return tools.includes(item.name);
         });
       })
   );

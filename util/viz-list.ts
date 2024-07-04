@@ -1,7 +1,7 @@
 import { ChartId } from "./sectionDescription";
 
-export const Tools = ["R", "python", "tableau", "data wrapper", "d3.js", "react", "excel", "javascript", "rawGraphs", "illustrator"] as const;
-export type Tool = typeof Tools[number];
+export const allTools = ["R", "python", "tableau", "data wrapper", "d3.js", "react", "excel", "javascript", "rawGraphs", "illustrator"] as const;
+export type Tool = typeof allTools[number];
 
 export type Luminosity = "light" | "dark"
 
