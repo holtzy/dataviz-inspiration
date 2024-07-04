@@ -1,13 +1,15 @@
-import type { NextPage } from "next";
-import Footer from "../components/Footer";
-import TitleAndDescription from "../components/TitleAndDescription";
-import { vizList } from "../util/viz-list";
+"use client";
 
-import Navbar from "../components/Navbar";
+import type { NextPage } from "next";
+import Footer from "../../components/Footer";
+import TitleAndDescription from "../../components/TitleAndDescription";
+import { vizList } from "../../util/viz-list";
+
+import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { TakeHome } from "../components/TakeHome";
-import { ParallaxSection } from "../components/ParallaxSection";
-import { ChartTypeTreemap } from "../components/Dataviz/Treemap/ChartTypeTreemap";
+import { TakeHome } from "../../components/TakeHome";
+import { ParallaxSection } from "../../components/ParallaxSection";
+import { ChartTypeTreemap } from "../../components/Dataviz/Treemap/ChartTypeTreemap";
 
 const About: NextPage = () => {
   const siteDescription = (

@@ -11,17 +11,20 @@ import Footer from "../components/Footer";
 import { filterVizList } from "../util/filterVizList";
 import { Luminosity, Tool, vizList } from "../util/viz-list";
 import { ChartId } from "../util/sectionDescription";
+import { useSearchParams } from "next/navigation";
 
 export type Project = { projectId: number; imgId: number };
 
 export default function Page() {
+  const searchParams = useSearchParams();
+  const columnNumber = searchParams.get("columnNumber") || "3";
+
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
   // State of the application = shared between pages = written as query params in the URL
-  const [columnNumber, setColumnNumber] = useState<number>(4);
   const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
     "light",
     "dark",
@@ -82,8 +85,7 @@ export default function Page() {
         />
 
         <WallFilters
-          columnNumber={columnNumber}
-          updateColumnNumber={setColumnNumber}
+          columnNumber={Number(columnNumber)}
           selectedLuminosities={selectedLuminosities}
           updateLuminosity={setLuminosity}
           selectedChartIds={selectedChartIds}

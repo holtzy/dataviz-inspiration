@@ -8,7 +8,6 @@ import { ToolSelector } from "./Filters/ToolSelector";
 
 type WallFiltersProps = {
   columnNumber: number;
-  updateColumnNumber: (arg: number) => void;
   selectedLuminosities: Luminosity[];
   updateLuminosity: (arg: Luminosity[]) => void;
   selectedChartIds: ChartId[] | undefined;
@@ -20,7 +19,6 @@ type WallFiltersProps = {
 };
 
 export const WallFilters = ({
-  updateColumnNumber,
   columnNumber,
   updateLuminosity,
   selectedLuminosities,
@@ -31,10 +29,7 @@ export const WallFilters = ({
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center items-center">
       <FilterWrapper>
-        <ColumnNumberSelector
-          columnNumber={columnNumber}
-          updateColumnNumber={updateColumnNumber}
-        />
+        <ColumnNumberSelector columnNumber={columnNumber} />
       </FilterWrapper>
 
       <FilterWrapper>
