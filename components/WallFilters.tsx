@@ -8,8 +8,7 @@ import { ToolSelector } from "./Filters/ToolSelector";
 
 type WallFiltersProps = {
   columnNumber: number;
-  selectedLuminosities: Luminosity[];
-  updateLuminosity: (arg: Luminosity[]) => void;
+  luminosity: Luminosity[] | undefined;
   selectedChartIds: ChartId[] | undefined;
   selectedTools: Tool[] | undefined;
   updateState: (
@@ -20,8 +19,7 @@ type WallFiltersProps = {
 
 export const WallFilters = ({
   columnNumber,
-  updateLuminosity,
-  selectedLuminosities,
+  luminosity,
   selectedChartIds,
   selectedTools,
   updateState,
@@ -33,10 +31,7 @@ export const WallFilters = ({
       </FilterWrapper>
 
       <FilterWrapper>
-        <LuminositySelector
-          updateLuminosity={updateLuminosity}
-          selectedLuminosities={selectedLuminosities}
-        />
+        <LuminositySelector luminosity={luminosity} />
       </FilterWrapper>
 
       <FilterWrapper>
@@ -62,7 +57,6 @@ export const WallFilters = ({
         <FilterReset
           onClick={() => {
             updateState(undefined, undefined);
-            updateLuminosity(["dark", "light"]);
           }}
         />
       </FilterWrapper>

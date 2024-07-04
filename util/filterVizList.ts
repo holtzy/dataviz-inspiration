@@ -9,45 +9,45 @@ const hasIntersection = (array1: any[], array2: any[]) => {
 // at the top of the wall some filters all to filter those projects
 // this function is used to make the filter
 export const filterVizList = (
-    vizList: VizItem[],
-    luminosity: Luminosity[],
-    selectedChartIds: ChartId[] | undefined,
-    selectedTools: Tool[] | undefined
-  ): VizItem[] => {
-    return (
-      vizList
-        .filter(
-          (item) =>
-            luminosity.includes(item.luminosity[0]) ||
-            luminosity.includes(item.luminosity[1])
-        )
+  vizList: VizItem[],
+  luminosity: Luminosity | undefined,
+  selectedChartIds: ChartId[] | undefined,
+  selectedTools: Tool[] | undefined
+): VizItem[] => {
+  return (
+    vizList
+      .filter(
+        (item) => {
+          return typeof luminosity === "undefined" ? true : item.luminosity.includes(luminosity)
+        }
+      )
 
-        // Apply the chart type filter
-        // A project can have several associated images.
-        // Keep only the appropriate images
-        .reduce((acc: VizItem[], element) => {
-          if (!selectedChartIds || selectedChartIds.length === 0) {
-            acc.push(element)
-          } else {
-            const images = element.img.filter(image => hasIntersection(image.chartId, selectedChartIds))
-            if(images.length > 0){
-                acc.push({...element, img: images})
-            }
+      // Apply the chart type filter
+      // A project can have several associated images.
+      // Keep only the appropriate images
+      .reduce((acc: VizItem[], element) => {
+        if (!selectedChartIds || selectedChartIds.length === 0) {
+          acc.push(element)
+        } else {
+          const images = element.img.filter(image => hasIntersection(image.chartId, selectedChartIds))
+          if (images.length > 0) {
+            acc.push({ ...element, img: images })
           }
-          return acc
-        }, [])
+        }
+        return acc
+      }, [])
 
-        .filter((vizItem) => {
-          // No selected tool? Keep this item
-          if (!selectedTools || selectedTools.length === 0) {
-            return true;
-          }
-          if(!vizItem.tools){
-            return false
-          }
-          return vizItem?.tools.some((item) => {
-            return selectedTools.includes(item.name);
-          });
-        })
-    );
-  };
+      .filter((vizItem) => {
+        // No selected tool? Keep this item
+        if (!selectedTools || selectedTools.length === 0) {
+          return true;
+        }
+        if (!vizItem.tools) {
+          return false
+        }
+        return vizItem?.tools.some((item) => {
+          return selectedTools.includes(item.name);
+        });
+      })
+  );
+};

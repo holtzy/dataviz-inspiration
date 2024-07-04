@@ -18,17 +18,15 @@ export type Project = { projectId: number; imgId: number };
 export default function Page() {
   const searchParams = useSearchParams();
   const columnNumber = searchParams.get("columnNumber") || "3";
+  const luminosity = (searchParams.get("luminosity") || undefined) as
+    | Luminosity
+    | undefined;
 
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  // State of the application = shared between pages = written as query params in the URL
-  const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
-    "light",
-    "dark",
-  ]);
   const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
   const [selectedTools, setSelectedTools] = useState<Tool[]>();
 
@@ -44,7 +42,7 @@ export default function Page() {
   // Apply the filters on the viz list!
   const filteredVizList = filterVizList(
     vizList,
-    selectedLuminosities,
+    luminosity,
     selectedChartIds,
     selectedTools
   );
@@ -86,8 +84,7 @@ export default function Page() {
 
         <WallFilters
           columnNumber={Number(columnNumber)}
-          selectedLuminosities={selectedLuminosities}
-          updateLuminosity={setLuminosity}
+          luminosity={luminosity}
           selectedChartIds={selectedChartIds}
           selectedTools={selectedTools}
           updateState={updateState}
