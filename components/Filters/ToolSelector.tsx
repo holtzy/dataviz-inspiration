@@ -128,9 +128,8 @@ const ToolSelectorModal = ({
 
     const onPillClick = (event: any) => {
       const updatedUrl = buildUrlWithUpdatedParam("tools", newTools);
-      // Use shallow routing to update the URL without affecting modal state
       router.push(updatedUrl);
-      event.stopPropagation(); // Stop the event from propagating further
+      event.stopPropagation();
     };
 
     return (

@@ -44,11 +44,7 @@ export const WallFilters = ({
 
       {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
       <FilterWrapper>
-        <FilterReset
-          onClick={() => {
-            console.log();
-          }}
-        />
+        <FilterReset />
       </FilterWrapper>
     </div>
   );
