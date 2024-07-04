@@ -9,11 +9,18 @@ import { MasonryItem } from "../components/MasonryItem";
 import { VizItemModal } from "../components/VizItemModal";
 import Footer from "../components/Footer";
 import { filterVizList } from "../util/filterVizList";
-import { Luminosity, Tool, vizList } from "../util/viz-list";
+import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { ChartId } from "../util/sectionDescription";
 import { useSearchParams } from "next/navigation";
+import { Masonry } from "masonic";
 
 export type Project = { projectId: number; imgId: number };
+
+type MasonryCardProps = {
+  index: number;
+  data: VizItem;
+  width: number;
+};
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -55,6 +62,19 @@ export default function Page() {
     </p>
   );
 
+  const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
+    return (
+      <MasonryItem
+        vizItem={data}
+        onClick={() => {
+          setSelectedProject({ projectId: data.id, imgId: 0 });
+          setIsModalOpen(true);
+        }}
+        imgId={0}
+      />
+    );
+  };
+
   return (
     <>
       <AppHeader
@@ -89,26 +109,15 @@ export default function Page() {
             paddingTop: 20,
             paddingBottom: 20,
           }}
+          className="w-full flex justify-center"
         >
-          <div className="wrapper">
-            <div style={{ columns: columnNumber }} className={"gap-2 sm:gap-4"}>
-              {/* Each project (i) can have several images associated (j) */}
-              {filteredVizList.map((vizItem, i) => {
-                return vizItem.img.map((img, j) => {
-                  return (
-                    <MasonryItem
-                      key={i + " " + j}
-                      vizItem={vizItem}
-                      onClick={() => {
-                        setSelectedProject({ projectId: vizItem.id, imgId: j });
-                        setIsModalOpen(true);
-                      }}
-                      imgId={j}
-                    />
-                  );
-                });
-              })}
-            </div>
+          <div className="max-w-6xl w-96 bg-red-400">
+            <Masonry
+              items={filteredVizList}
+              render={MasonryCard}
+              columnCount={Number(columnNumber)}
+              columnGutter={4}
+            />
           </div>
         </div>
       </main>
