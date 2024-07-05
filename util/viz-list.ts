@@ -1766,7 +1766,7 @@ export const vizList: VizItem[] = [
         author: "Colin Morris",
         url: "https://colinmorris.github.io/blog/compound-curse-words",
         img: [
-            { full: "rude-compounds.png", zoom: "rude-compounds-zoom.png", chartId: ["circularBarplot"] },
+            { full: "rude-compounds.png", zoom: "rude-compounds-zoom.png", chartId: ["heatmap"] },
         ],
         contextDescription: "A deep dive into Reddit's most comon dirty words, trying to understand how those words are combined together.",
         chartDescription: "This heatmap does not have anything crazy in term of viz, but with more than 5000 likes on <a href='https://twitter.com/HalfEatenScone/status/1541868671789932545'>twitter</a> it's one of the most viral viz I know.",
