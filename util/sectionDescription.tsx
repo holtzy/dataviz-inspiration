@@ -1,23 +1,130 @@
-export type ChartLogo = "Violin150" | "Density150" | "Histogram150" | "Box1150" | "Joyplot150" | "ScatterPlot150" | "Heatmap150" | "Correlogram150" | "BubblePlot150" | "ScatterConnected150" | "Bar150" | "Spider150" | "Wordcloud150" | "Parallel1150" | "Lollipop150" | "CircularBarplot150" | "Tree150" | "Venn150" | "Doughnut150" | "Pie150" | "Dendrogram150" | "CircularPacking150" | "Line150" | "Area150" | "StackedArea150" | "Stream150" | "time150" | "Map150" | "Choropleth150" | "MapHexbin150" | "Cartogram150" | "ConnectedMap150" | "BubbleMap150" | "Chord150" | "Network150" | "Sankey150" | "Arc150" | "Bundle150" | "Colours150" | "Interactive150" | "anim150" | "Cheat150" | "Bad150" | "3d150" | "2dDensity150"
+import { ReactNode } from "react";
 
-export const chartIds = ["violin", "density", "histogram", "boxplot", "ridgeline", "scatter", "heatmap", "correlogram", "bubble", "connectedScatter", "density2d", "barplot", "radar", "wordcloud", "parallel", "lollipop", "circularBarplot", "treemap", "venn", "donut", "pie", "dendrogram", "circularPacking", "line", "area", "stackedArea", "stream", "timeseries", "map", "choropleth", "hexbin", "cartogram", "connection", "bubbleMap", "chordDiagram", "network", "sankey", "arc", "edgeBundling", "colors", "plotly", "animation", "cheatSheets", "caveats", "3d", "waffle", "marimekko", "beeswarm", 'table', 'voronoi'] as const
-export type ChartId = typeof chartIds[number];
+export type ChartLogo =
+  | "Violin150"
+  | "Density150"
+  | "Histogram150"
+  | "Box1150"
+  | "Joyplot150"
+  | "ScatterPlot150"
+  | "Heatmap150"
+  | "Correlogram150"
+  | "BubblePlot150"
+  | "ScatterConnected150"
+  | "Bar150"
+  | "Spider150"
+  | "Wordcloud150"
+  | "Parallel1150"
+  | "Lollipop150"
+  | "CircularBarplot150"
+  | "Tree150"
+  | "Venn150"
+  | "Doughnut150"
+  | "Pie150"
+  | "Dendrogram150"
+  | "CircularPacking150"
+  | "Line150"
+  | "Area150"
+  | "StackedArea150"
+  | "Stream150"
+  | "time150"
+  | "Map150"
+  | "Choropleth150"
+  | "MapHexbin150"
+  | "Cartogram150"
+  | "ConnectedMap150"
+  | "BubbleMap150"
+  | "Chord150"
+  | "Network150"
+  | "Sankey150"
+  | "Arc150"
+  | "Bundle150"
+  | "Colours150"
+  | "Interactive150"
+  | "anim150"
+  | "Cheat150"
+  | "Bad150"
+  | "3d150"
+  | "2dDensity150";
 
-export const chartFamilies = ["distribution", "correlation", "evolution", "ranking", "partOfAWhole", "flow", "map"] as const
-export type ChartFamily = typeof chartFamilies[number];
+export const chartIds = [
+  "violin",
+  "density",
+  "histogram",
+  "boxplot",
+  "ridgeline",
+  "scatter",
+  "heatmap",
+  "correlogram",
+  "bubble",
+  "connectedScatter",
+  "density2d",
+  "barplot",
+  "radar",
+  "wordcloud",
+  "parallel",
+  "lollipop",
+  "circularBarplot",
+  "treemap",
+  "venn",
+  "donut",
+  "pie",
+  "dendrogram",
+  "circularPacking",
+  "line",
+  "area",
+  "stackedArea",
+  "stream",
+  "timeseries",
+  "map",
+  "choropleth",
+  "hexbin",
+  "cartogram",
+  "connection",
+  "bubbleMap",
+  "chordDiagram",
+  "network",
+  "sankey",
+  "arc",
+  "edgeBundling",
+  "colors",
+  "plotly",
+  "animation",
+  "cheatSheets",
+  "caveats",
+  "3d",
+  "waffle",
+  "marimekko",
+  "beeswarm",
+  "table",
+  "voronoi",
+] as const;
+
+export type ChartId = (typeof chartIds)[number];
+
+export const chartFamilies = [
+  "distribution",
+  "correlation",
+  "evolution",
+  "ranking",
+  "partOfAWhole",
+  "flow",
+  "map",
+] as const;
+export type ChartFamily = (typeof chartFamilies)[number];
 
 export type ChartTypesInfo = {
-  id: ChartId,
-  family: ChartFamily,
-  logo: ChartLogo,
-  dataToVizURL: string,
-  reactURL: string,
-  rURL: string,
-  pythonURL: string,
-  d3URL: string,
-  description: string,
-  label: string,
-}
+  id: ChartId;
+  family: ChartFamily;
+  logo: ChartLogo;
+  dataToVizURL: string;
+  reactURL: string;
+  rURL: string;
+  pythonURL: string;
+  d3URL: string;
+  description: ReactNode;
+  label: string;
+};
 
 export const chartTypesInfo: ChartTypesInfo[] = [
   {
@@ -30,7 +137,20 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     pythonURL: "https://python-graph-gallery.com/violin-plot/",
     d3URL: "https://d3-graph-gallery.com/violin.html",
     label: "Violin Plot",
-    description: "A violin plot is a method of plotting numeric data and can be understood as a combination of a box plot and a density plot. It shows the distribution of the data across different categories and is particularly useful for visualizing the distribution and frequency of a variable. The plot displays the density of the data at different values with wider sections of the violin representing higher density. It is ideal for comparing the distributions between different groups or categories."
+    description: (
+      <div>
+        <p>
+          A violin plot is a method of plotting numeric data and can be
+          understood as a combination of a boxplot and a densityplot. It shows
+          the distribution of the data across different categories and is
+          particularly useful for visualizing the distribution and frequency of
+          a variable. The plot displays the density of the data at different
+          values with wider sections of the violin representing higher density.
+          It is ideal for comparing the distributions between different groups
+          or categories.
+        </p>
+      </div>
+    ),
   },
 
   {
@@ -328,5 +448,5 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     dataToVizURL: "https://www.data-to-viz.com/graph/edge_bundling.html",
     reactURL: "https://react-graph-gallery.com/hierarchical-edge-bundling/",
     label: "Edge Bundling",
-  }
+  },
 ];

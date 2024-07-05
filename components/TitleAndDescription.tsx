@@ -8,13 +8,11 @@ import { LinkAsButton } from "./LinkAsButton";
 type TitleAndDescription = {
   title: string;
   description: JSX.Element;
-  showSectionLink?: boolean;
 };
 
 export default function TitleAndDescription({
   title,
   description,
-  showSectionLink = false,
 }: TitleAndDescription) {
   return (
     <>
