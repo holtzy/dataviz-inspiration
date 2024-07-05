@@ -90,7 +90,7 @@ export default function Page() {
         <Navbar />
       </div>
 
-      <main className="flex flex-col items-center">
+      <main>
         <TitleAndDescription
           title="Dataviz Inspiration"
           description={siteDescription}
@@ -106,18 +106,22 @@ export default function Page() {
         <div
           style={{
             backgroundColor: "rgb(245, 245, 245)",
-            paddingTop: 20,
-            paddingBottom: 20,
           }}
-          className="w-full flex justify-center"
+          className="w-full flex justify-center py-5"
         >
-          <div className="max-w-6xl w-96 bg-red-400">
-            <Masonry
-              items={filteredVizList}
-              render={MasonryCard}
-              columnCount={Number(columnNumber)}
-              columnGutter={4}
-            />
+          <div
+            className="w-full px-4"
+            style={{ maxWidth: 1100, marginTop: 25 }}
+          >
+            <div className="w-full">
+              <Masonry
+                items={filteredVizList}
+                render={MasonryCard}
+                columnCount={Number(columnNumber)}
+                columnGutter={12}
+                rowGutter={12}
+              />
+            </div>
           </div>
         </div>
       </main>
