@@ -1,147 +1,137 @@
 "use client";
 
-import type { NextPage } from "next";
 import { useState } from "react";
-import Footer from "../../components/Footer";
-import { MasonryItem } from "../../components/MasonryItem";
-import TitleAndDescription from "../../components/TitleAndDescription";
-import { VizItemModal } from "../../components/VizItemModal";
-import { Luminosity, Tool, vizList } from "../../util/viz-list";
-import { WallFilters } from "../../components/WallFilters";
-import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
-import { filterVizList } from "../../util/filterVizList";
 import { AppHeader } from "../../components/AppHeader";
 import Navbar from "../../components/Navbar";
+import TitleAndDescription from "../../components/TitleAndDescription";
+import { WallFilters } from "../../components/WallFilters";
+import { MasonryItem } from "../../components/MasonryItem";
+import { VizItemModal } from "../../components/VizItemModal";
+import Footer from "../../components/Footer";
+import { filterVizList } from "../../util/filterVizList";
+import { Luminosity, Tool, VizItem, vizList } from "../../util/viz-list";
+import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Masonry } from "masonic";
 
 export type Project = { projectId: number; imgId: number };
 
+type MasonryCardProps = {
+  index: number;
+  data: VizItem;
+  width: number;
+};
+
 export default function Page() {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  // Extract the chartType from the pathname
+  const chartType = pathname.split("/")[1];
+  const chartTypeInfo = chartTypesInfo.find((c) => c.id === chartType);
+
+  const columnNumber = searchParams.get("columnNumber") || "3";
+  const luminosity = (searchParams.get("luminosity") || undefined) as
+    | Luminosity
+    | undefined;
+  const tools = (searchParams.getAll("tools") || undefined) as
+    | Tool[]
+    | undefined;
+
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  // State of the application = shared between pages = written as query params in the URL
-  const [columnNumber, setColumnNumber] = useState<number>(4);
-  const [selectedLuminosities, setLuminosity] = useState<Luminosity[]>([
-    "light",
-    "dark",
-  ]);
-  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>([]);
-  const [selectedTools, setSelectedTools] = useState<Tool[]>();
-
-  // Functions to update the chart and tool states
-  // Mechanism: updateChartId -> updates the URL with updateRouter -> useRouter() updates -> useEffect is triggered and update state
-  const updateState = (
-    chartIds: ChartId[] | undefined,
-    tools: Tool[] | undefined
-  ) => {
-    console.log("hello");
-  };
+  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
 
   // Apply the filters on the viz list!
   const filteredVizList = filterVizList(
     vizList,
-    selectedLuminosities,
+    luminosity,
     selectedChartIds,
-    selectedTools
+    tools
   );
+
   const vizItemNumber = filteredVizList.length;
-
-  const labels = selectedChartIds.map(
-    (id) => chartTypesInfo.filter((chart) => chart.id === id)[0].label
-  );
-
-  // Build the page title
-  const formattedLabels =
-    labels.length === 1
-      ? labels[0] + " examples"
-      : labels.length === 2
-      ? labels[0] + " and " + labels[1] + " examples"
-      : labels.length === 3
-      ? labels[0] + ", " + labels[1] + " and " + labels[2] + " examples"
-      : labels.length === 4
-      ? labels[0] +
-        ", " +
-        labels[1] +
-        ", " +
-        labels[2] +
-        " and " +
-        labels[3] +
-        " examples"
-      : "chart examples for your selection";
-
-  const pageTitle = "Best " + formattedLabels;
 
   const siteDescription = (
     <p>
-      <a href="dataviz-inspiration">Dataviz-inspiration.com</a>
+      <a href="https://www.dataviz-inspiration.com">Dataviz-inspiration.com</a>
       <span>
-        {" showcases hundreds of stunning dataviz projects. The best works including a " +
-          labels.join(", a ") +
-          " are currently selected, leading to a total of " +
+        {" aims at being the biggest list of chart examples available on the web. It showcases " +
           vizItemNumber +
-          " projects. Please enjoy your visit and check "}
+          " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with "}
       </span>
       <a href="https://www.data-to-viz.com">data-to-viz.com</a>
-      <span>{" for complementary dataviz best practices."}</span>
+      <span>{" that shares dataviz best practices."}</span>
     </p>
   );
+
+  const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
+    return (
+      <MasonryItem
+        vizItem={data}
+        onClick={() => {
+          setSelectedProject({ projectId: data.id, imgId: 0 });
+          setIsModalOpen(true);
+        }}
+        imgId={0}
+      />
+    );
+  };
+
+  if (!chartTypeInfo) {
+    return <p>hmmmm, we don't know this chart type.</p>;
+  }
 
   return (
     <>
       <AppHeader
-        title={"Dataviz Inspiration | Best " + formattedLabels}
+        title={"Dataviz Inspiration | Hundreds of chart examples"}
         description={
-          "The biggest list of " +
-          formattedLabels +
-          " available on the web. " +
+          "The biggest list of chart examples available on the web. " +
           vizItemNumber +
           " of the best viz projects displayed using a pinterest style sorted by tool and chart type."
         }
       />
+
       <div className="wrapper">
         <Navbar />
       </div>
 
-      <main className="flex flex-col items-center">
-        <TitleAndDescription title={pageTitle} description={siteDescription} />
+      <main>
+        <TitleAndDescription
+          title={chartTypeInfo.label + " inspiration"}
+          description={chartTypeInfo.description}
+        />
 
         <WallFilters
-          columnNumber={columnNumber}
-          updateColumnNumber={setColumnNumber}
-          selectedLuminosities={selectedLuminosities}
-          updateLuminosity={setLuminosity}
+          columnNumber={Number(columnNumber)}
+          luminosity={luminosity}
           selectedChartIds={selectedChartIds}
-          selectedTools={selectedTools}
-          updateState={updateState}
+          tools={tools}
         />
 
         <div
           style={{
             backgroundColor: "rgb(245, 245, 245)",
-            paddingTop: 20,
-            paddingBottom: 20,
           }}
+          className="w-full flex justify-center py-5"
         >
-          <div className="wrapper">
-            <div style={{ columns: columnNumber }} className={"gap-2 sm:gap-4"}>
-              {/* Each project (i) can have several images associated (j) */}
-              {filteredVizList.map((vizItem, i) => {
-                return vizItem.img.map((img, j) => {
-                  return (
-                    <MasonryItem
-                      key={i + " " + j}
-                      vizItem={vizItem}
-                      onClick={() => {
-                        setSelectedProject({ projectId: vizItem.id, imgId: j });
-                        setIsModalOpen(true);
-                      }}
-                      imgId={j}
-                    />
-                  );
-                });
-              })}
+          <div
+            className="w-full px-4"
+            style={{ maxWidth: 1100, marginTop: 25 }}
+          >
+            <div className="w-full">
+              <Masonry
+                items={filteredVizList}
+                render={MasonryCard}
+                columnCount={Number(columnNumber)}
+                columnGutter={12}
+                rowGutter={12}
+              />
             </div>
           </div>
         </div>

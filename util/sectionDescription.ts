@@ -12,6 +12,10 @@ export type ChartTypesInfo = {
   logo: ChartLogo,
   dataToVizURL: string,
   reactURL: string,
+  rURL: string,
+  pythonURL: string,
+  d3URL: string,
+  description: string,
   label: string,
 }
 
@@ -22,8 +26,13 @@ export const chartTypesInfo: ChartTypesInfo[] = [
     logo: "Violin150",
     dataToVizURL: "https://www.data-to-viz.com/graph/violin.html",
     reactURL: "https://react-graph-gallery.com/violin-plot/",
-    label: "Violin",
+    rURL: "https://r-graph-gallery.com/violin.html",
+    pythonURL: "https://python-graph-gallery.com/violin-plot/",
+    d3URL: "https://d3-graph-gallery.com/violin.html",
+    label: "Violin Plot",
+    description: "A violin plot is a method of plotting numeric data and can be understood as a combination of a box plot and a density plot. It shows the distribution of the data across different categories and is particularly useful for visualizing the distribution and frequency of a variable. The plot displays the density of the data at different values with wider sections of the violin representing higher density. It is ideal for comparing the distributions between different groups or categories."
   },
+
   {
     id: "density",
     family: "distribution",
