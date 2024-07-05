@@ -6,7 +6,14 @@ const mainPages: MetadataRoute.Sitemap = [{
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 1,
-}]
+},
+{
+    url: 'https://dataviz-inspiration.com/about',
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 1,
+}
+]
 
 const graphPages: MetadataRoute.Sitemap = chartTypesInfo.map(c => {
     return (
