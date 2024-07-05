@@ -10,7 +10,6 @@ import { VizItemModal } from "../components/VizItemModal";
 import Footer from "../components/Footer";
 import { filterVizList } from "../util/filterVizList";
 import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
-import { ChartId } from "../util/sectionDescription";
 import { useSearchParams } from "next/navigation";
 import { Masonry } from "masonic";
 
@@ -38,15 +37,8 @@ export default function Page() {
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
-
   // Apply the filters on the viz list!
-  const filteredVizList = filterVizList(
-    vizList,
-    luminosity,
-    selectedChartIds,
-    tools
-  );
+  const filteredVizList = filterVizList(vizList, luminosity, undefined, tools);
 
   const vizItemNumber = filteredVizList.length;
 
@@ -100,7 +92,7 @@ export default function Page() {
         <WallFilters
           columnNumber={Number(columnNumber)}
           luminosity={luminosity}
-          selectedChartIds={selectedChartIds}
+          selectedChart={undefined}
           tools={tools}
         />
 

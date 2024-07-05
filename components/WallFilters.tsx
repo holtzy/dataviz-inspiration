@@ -9,14 +9,14 @@ import { ToolSelector } from "./Filters/ToolSelector";
 type WallFiltersProps = {
   columnNumber: number;
   luminosity: Luminosity[] | undefined;
-  selectedChartIds: ChartId[] | undefined;
+  selectedChart: ChartId | undefined;
   tools: Tool[] | undefined;
 };
 
 export const WallFilters = ({
   columnNumber,
   luminosity,
-  selectedChartIds,
+  selectedChart,
   tools,
 }: WallFiltersProps) => {
   return (
@@ -30,12 +30,7 @@ export const WallFilters = ({
       </FilterWrapper>
 
       <FilterWrapper>
-        <ChartIdSelector
-          selectedChartIds={selectedChartIds}
-          updateChartId={(chartIds: ChartId[] | undefined) => {
-            console.log();
-          }}
-        />
+        <ChartIdSelector selectedChart={selectedChart} />
       </FilterWrapper>
 
       <FilterWrapper>

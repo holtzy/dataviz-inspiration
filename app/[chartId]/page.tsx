@@ -27,7 +27,7 @@ export default function Page() {
   const pathname = usePathname();
 
   // Extract the chartType from the pathname
-  const chartType = pathname.split("/")[1];
+  const chartType = pathname.split("/")[1] as ChartId;
   const chartTypeInfo = chartTypesInfo.find((c) => c.id === chartType);
 
   const columnNumber = searchParams.get("columnNumber") || "3";
@@ -44,30 +44,10 @@ export default function Page() {
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
 
-  const [selectedChartIds, setSelectedChartIds] = useState<ChartId[]>();
-
   // Apply the filters on the viz list!
-  const filteredVizList = filterVizList(
-    vizList,
-    luminosity,
-    selectedChartIds,
-    tools
-  );
+  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools);
 
   const vizItemNumber = filteredVizList.length;
-
-  const siteDescription = (
-    <p>
-      <a href="https://www.dataviz-inspiration.com">Dataviz-inspiration.com</a>
-      <span>
-        {" aims at being the biggest list of chart examples available on the web. It showcases " +
-          vizItemNumber +
-          " of the most beautiful and impactful dataviz projects I know. The collection is a good place to visit when you're designing a new graph, together with "}
-      </span>
-      <a href="https://www.data-to-viz.com">data-to-viz.com</a>
-      <span>{" that shares dataviz best practices."}</span>
-    </p>
-  );
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
     return (
@@ -110,8 +90,8 @@ export default function Page() {
         <WallFilters
           columnNumber={Number(columnNumber)}
           luminosity={luminosity}
-          selectedChartIds={selectedChartIds}
           tools={tools}
+          selectedChart={chartType}
         />
 
         <div

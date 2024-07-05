@@ -1,25 +1,32 @@
+"use client";
+
 import { XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import {
   chartFamilies,
   ChartFamily,
-  ChartId,
   chartTypesInfo,
 } from "../../util/sectionDescription";
 import SectionLogo from "../SectionLogo";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 // -
 //  Modal that allows to select a specific chart type
 // -
 type ChartIdSelectorModalProps = {
   setIsModalOpen: (arg: boolean) => void;
-  updateChartId: (arg: ChartId[] | undefined) => void;
 };
 
 export const ChartIdSelectorModal = ({
   setIsModalOpen,
-  updateChartId,
 }: ChartIdSelectorModalProps) => {
+  const searchParams = useSearchParams();
+
+  const searchParamsStringToAdd = searchParams
+    ? "?" + searchParams.toString()
+    : "";
+
   // name of the chart type that is hovered over (appears at the very bottom of the modal)
   const [name, setName] = useState<string | undefined>(undefined);
 
@@ -28,24 +35,21 @@ export const ChartIdSelectorModal = ({
     return chartTypesInfo
       .filter((chart) => chart.family === family)
       .map((chart, i) => {
-        const onLogoClick = () => {
-          updateChartId([chart.id]);
-          setIsModalOpen(false);
-        };
+        const newHref = "/" + chart.id + searchParamsStringToAdd;
 
         return (
-          <div
+          <Link
+            key={i}
+            href={newHref}
             style={{ width: 45, height: 45, marginLeft: 2, marginRight: 2 }}
             className={
               "relative cursor-pointer hover:border hover:border-black rounded-full hover:opacity-100"
             }
-            key={i}
             onMouseEnter={() => setName(chart.label)}
             onMouseLeave={() => setName(undefined)}
-            onClick={onLogoClick}
           >
             <SectionLogo chartLogo={chart.logo} />
-          </div>
+          </Link>
         );
       });
   };
@@ -85,14 +89,12 @@ export const ChartIdSelectorModal = ({
   );
 
   const selectAllButton = (
-    <span
-      onClick={() => {
-        updateChartId(undefined);
-      }}
+    <Link
+      href={"/" + searchParamsStringToAdd}
       className="text-brand text-sm mr-1 cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
     >
       {"select all"}
-    </span>
+    </Link>
   );
 
   return (

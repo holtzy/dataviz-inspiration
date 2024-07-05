@@ -1,17 +1,13 @@
 import { ChartId } from "./sectionDescription";
 import { Luminosity, Tool, VizItem } from "./viz-list";
 
-const hasIntersection = (array1: any[], array2: any[]) => {
-  return array1.filter(value => array2.includes(value)).length > 0
-}
-
 // viz-list.ts is the list of all the projects displayed on the main wall
 // at the top of the wall some filters all to filter those projects
 // this function is used to make the filter
 export const filterVizList = (
   vizList: VizItem[],
   luminosity: Luminosity | undefined,
-  selectedChartIds: ChartId[] | undefined,
+  selectedChartId: ChartId | undefined,
   tools: Tool[] | undefined
 ): VizItem[] => {
   return (
@@ -26,10 +22,10 @@ export const filterVizList = (
       // A project can have several associated images.
       // Keep only the appropriate images
       .reduce((acc: VizItem[], element) => {
-        if (!selectedChartIds || selectedChartIds.length === 0) {
+        if (!selectedChartId) {
           acc.push(element)
         } else {
-          const images = element.img.filter(image => hasIntersection(image.chartId, selectedChartIds))
+          const images = element.img.filter(image => image.chartId.includes(selectedChartId))
           if (images.length > 0) {
             acc.push({ ...element, img: images })
           }
