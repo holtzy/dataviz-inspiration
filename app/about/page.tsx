@@ -11,7 +11,7 @@ import { TakeHome } from "../../components/TakeHome";
 import { ParallaxSection } from "../../components/ParallaxSection";
 import { ChartTypeTreemap } from "../../components/Dataviz/Treemap/ChartTypeTreemap";
 
-const About: NextPage = () => {
+export default function Page() {
   const siteDescription = (
     <p>
       <a href="dataviz-inspiration">Dataviz-inspiration.com</a>{" "}
@@ -265,6 +265,4 @@ const About: NextPage = () => {
       </div>
     </>
   );
-};
-
-export default About;
+}
