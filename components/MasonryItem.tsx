@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { VizItem } from "../util/viz-list";
+import { LikeButton } from "./LikeButton";
 
 // A "MasonryItem" is just an image displayed on the main wall.
 // When hovered, an additional layer appears to provide some more information (with a sliding animation)
@@ -25,9 +26,9 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
         src={require(`../public/img/${vizItem.img[imgId].zoom}`)}
         placeholder="blur"
         className="rounded-md"
-        layout="intrinsic" // intrinsic is the default
         alt={"Chart showing " + vizItem.title}
       />
+      <LikeButton />
 
       {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}
       <div className="hidden sm:flex absolute rounded-md transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 items-center justify-center mb-1">

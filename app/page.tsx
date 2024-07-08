@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
 import TitleAndDescription from "../components/TitleAndDescription";
@@ -12,6 +12,7 @@ import { filterVizList } from "../util/filterVizList";
 import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { useSearchParams } from "next/navigation";
 import { Masonry } from "masonic";
+import useLikesData from "../hooks/use-likes";
 
 export type Project = { projectId: number; imgId: number };
 
@@ -33,6 +34,9 @@ export default function Page() {
 
   // State of this specific page
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const likesData = useLikesData();
+  console.log("likesData", likesData);
 
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();

@@ -22,8 +22,8 @@ export default function Navbar() {
                 <Image
                   alt={"project logo"}
                   src={"/logo_big.png"}
-                  layout="fill"
-                  objectFit="contain"
+                  width={30}
+                  height={30}
                 />
               </span>
             </Link>
@@ -77,7 +77,10 @@ export default function Navbar() {
                 </Menu.Items>
               </Transition>
             </Menu>
-            <a href="https://datavizuniverse.substack.com" style={{ textDecoration: 'none' }}>
+            <a
+              href="https://datavizuniverse.substack.com"
+              style={{ textDecoration: "none" }}
+            >
               <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black ml-3 border border-gray-300 rounded-md p-2">
                 Subscribe
               </span>
