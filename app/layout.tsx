@@ -4,8 +4,9 @@ import "../styles/globals.css";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "TODO",
-  description: "TODO",
+  title: "Dataviz Inspiration",
+  description:
+    "The Pinterest of data visualization. Explore hundreds of stunning dataviz projects in a clean, organized layout. Easily searchable, filterable, and categorized by chart type for your convenience.",
 };
 
 export default function RootLayout({
@@ -15,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Suspense fallback={"loading"}>
-        <body>{children}</body>
-      </Suspense>
+      <body>
+        <Suspense fallback={"loading"}>{children}</Suspense>
+      </body>
     </html>
   );
 }

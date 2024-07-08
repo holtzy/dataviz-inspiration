@@ -1,6 +1,5 @@
 "use client";
 
-import { XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import {
   chartFamilies,
@@ -10,6 +9,7 @@ import {
 import SectionLogo from "../SectionLogo";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { X } from "lucide-react";
 
 // -
 //  Modal that allows to select a specific chart type
@@ -76,7 +76,7 @@ export const ChartIdSelectorModal = ({
           setIsModalOpen(false);
         }}
       >
-        <XIcon className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40" />
+        <X className="cursor-pointer h-5 w-5 opacity-40 hover:text-red-600 hover:fill-red-100 hover:opacity-40" />
       </div>
     </div>
   );

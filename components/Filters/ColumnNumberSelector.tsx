@@ -1,12 +1,8 @@
 "use client";
 
-import {
-  DeviceMobileIcon,
-  DeviceTabletIcon,
-  DesktopComputerIcon,
-} from "@heroicons/react/outline";
 import Link from "next/link";
 import { buildUrlWithUpdatedParam } from "../../util/build-url-with-updated-param";
+import { Monitor, Smartphone, Tablet } from "lucide-react";
 
 type ColumnNumberSelectorProps = {
   columnNumber: number;
@@ -18,7 +14,7 @@ export const ColumnNumberSelector = ({
   return (
     <div className="flex">
       <Link href={buildUrlWithUpdatedParam("columnNumber", "2")}>
-        <DeviceMobileIcon
+        <Smartphone
           className={
             columnNumber === 2
               ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
@@ -27,7 +23,7 @@ export const ColumnNumberSelector = ({
         />
       </Link>
       <Link href={buildUrlWithUpdatedParam("columnNumber", "3")}>
-        <DeviceTabletIcon
+        <Tablet
           className={
             columnNumber === 3
               ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"
@@ -36,7 +32,7 @@ export const ColumnNumberSelector = ({
         />
       </Link>
       <Link href={buildUrlWithUpdatedParam("columnNumber", "4")}>
-        <DesktopComputerIcon
+        <Monitor
           className={
             columnNumber === 4
               ? "cursor-pointer h-5 w-5 text-red-800 fill-red-200 opacity-100"

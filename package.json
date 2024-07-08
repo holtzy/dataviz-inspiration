@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
-    "@heroicons/react": "^2.1.4",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-switch": "^1.1.0",
     "@types/d3": "^7.1.0",
     "d3": "^7.4.4",
+    "lucide-react": "^0.402.0",
     "masonic": "^4.0.0",
     "next": "^14.2.4",
     "react": "^18.3.1",

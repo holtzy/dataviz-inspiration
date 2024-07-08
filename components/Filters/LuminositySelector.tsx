@@ -1,7 +1,7 @@
-import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { Luminosity } from "../../util/viz-list";
 import { buildUrlWithUpdatedParam } from "../../util/build-url-with-updated-param";
 import Link from "next/link";
+import { Moon, Sun } from "lucide-react";
 
 type LuminositySelectorProps = {
   luminosity: Luminosity[] | undefined;
@@ -19,14 +19,14 @@ export const LuminositySelector = ({ luminosity }: LuminositySelectorProps) => {
   return (
     <div className="flex">
       <Link href={sunLink}>
-        <SunIcon
+        <Sun
           className={
             luminosity?.includes("light") ? activeClass : inactiveClass
           }
         />
       </Link>
       <Link href={moonLink}>
-        <MoonIcon
+        <Moon
           className={luminosity?.includes("dark") ? activeClass : inactiveClass}
         />
       </Link>
