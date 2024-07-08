@@ -36,7 +36,6 @@ export default function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const likesData = useLikesData();
-  console.log("likesData", likesData);
 
   // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [selectedProject, setSelectedProject] = useState<Project | undefined>();
@@ -68,6 +67,7 @@ export default function Page() {
           setIsModalOpen(true);
         }}
         imgId={0}
+        likeNumber={likesData[data.id] || 100}
       />
     );
   };

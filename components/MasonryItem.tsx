@@ -10,9 +10,15 @@ type MasonryItemProps = {
   vizItem: VizItem;
   onClick: (arg: VizItem) => void;
   imgId: number;
+  likeNumber: number;
 };
 
-export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
+export const MasonryItem = ({
+  vizItem,
+  onClick,
+  imgId,
+  likeNumber,
+}: MasonryItemProps) => {
   const month = vizItem.date.toLocaleString("default", { month: "long" });
   const year = vizItem.date.toLocaleString("default", { year: "numeric" });
 
@@ -28,7 +34,7 @@ export const MasonryItem = ({ vizItem, onClick, imgId }: MasonryItemProps) => {
         className="rounded-md"
         alt={"Chart showing " + vizItem.title}
       />
-      <LikeButton />
+      <LikeButton likeNumber={likeNumber} />
 
       {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}
       <div className="hidden sm:flex absolute rounded-md transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 items-center justify-center mb-1">

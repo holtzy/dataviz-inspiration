@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useLikesData = () => {
-    const [likesData, setLikesData] = useState([]);
+    const [likesData, setLikesData] = useState({});
 
     useEffect(() => {
         const fetchLikesData = async () => {
@@ -11,7 +11,16 @@ const useLikesData = () => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                setLikesData(data);
+
+                // Convert data array to a map for efficient lookup in the app
+                const likesDataMap = {};
+
+                data.result.rows.forEach((item: { projectId: string, numberoflikes: number }) => {
+                    likesDataMap[item.projectid] = item.numberoflikes;
+                });
+
+                setLikesData(likesDataMap);
+
             } catch (error) {
                 console.error('Failed to fetch likes data:', error);
             }

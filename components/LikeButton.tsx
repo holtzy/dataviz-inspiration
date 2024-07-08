@@ -1,4 +1,4 @@
-export const LikeButton = () => {
+export const LikeButton = ({ likeNumber }: { likeNumber: number }) => {
   const number = 4;
 
   //   const { rows, fields } =
@@ -6,5 +6,5 @@ export const LikeButton = () => {
 
   //   console.log("rows");
 
-  return <p>{number}</p>;
+  return <p>{likeNumber}</p>;
 };
