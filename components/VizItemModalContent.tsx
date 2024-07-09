@@ -3,6 +3,7 @@ import { vizList } from "../util/viz-list";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";
 import { Pill } from "./Pill";
+import { LikeButton } from "./LikeButton";
 
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
@@ -148,6 +149,12 @@ export const VizItemModalContent = ({
       </div>
 
       <div className="p-2 flex flex-col justify-center">
+        <LikeButton
+          projectId={projectId}
+          initialLikeNumber={444}
+          isDarkBackground={false}
+        />
+        <br /> <br />
         {titleAndAuthor}
         <br />
         {chartIdsSection}

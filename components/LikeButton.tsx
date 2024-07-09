@@ -2,20 +2,23 @@ import { Heart } from "lucide-react";
 import { MouseEventHandler, useState } from "react";
 import { getUserLikeTotalCount } from "../util/get-user-like-total-count";
 import { writeUserLikeTotalCount } from "../util/write-user-like-total-count";
+import { AnimatedHeart } from "./AnimatedHeart";
 
-const MAX_NUMBER_OF_LIKE_PER_IMG = 5;
-const MAX_NUMBER_OF_LIKE_TOTAL = 2;
+export const MAX_NUMBER_OF_LIKE_PER_IMG = 10;
+const MAX_NUMBER_OF_LIKE_TOTAL = 200;
+
+type LikeButtonprops = {
+  initialLikeNumber: number;
+  projectId: number;
+  isDarkBackground?: boolean;
+};
 
 export const LikeButton = ({
   initialLikeNumber,
   projectId,
-}: {
-  initialLikeNumber: number;
-  projectId: number;
-}) => {
+  isDarkBackground,
+}: LikeButtonprops) => {
   const [likeNumber, setLikeNumber] = useState(initialLikeNumber);
-  const [size, setSize] = useState(13);
-  const [opacity, setOpacity] = useState(0.3);
   const [likeUsed, setLikedUsed] = useState(0); // Only a few likes per img allowed.
 
   const userLikeTotalCount = getUserLikeTotalCount();
@@ -32,8 +35,6 @@ export const LikeButton = ({
     }
 
     setLikeNumber(likeNumber + 1);
-    setSize(size + 2);
-    setOpacity(opacity + 0.2);
     setLikedUsed(likeUsed + 1);
     writeUserLikeTotalCount(userLikeTotalCount + 1);
 
@@ -59,11 +60,13 @@ export const LikeButton = ({
   return (
     <div
       onClick={addLike}
-      className="flex items-center gap-2 text-white opacity-70 hover:opacity-100 border border-solid border-transparent hover:border-white/20 p-2 rounded-md"
+      className={`flex items-center gap-2 ${
+        isDarkBackground ? "text-white" : "text-black"
+      } opacity-70 hover:opacity-100 border border-solid border-transparent hover:border-white/20 p-2 rounded-md`}
     >
       {likeNumber}
       <div className="w-8 h-8 flex justify-center items-center">
-        <Heart size={size} fill={"red"} stroke="red" opacity={opacity} />
+        <AnimatedHeart likeNumber={likeUsed} />
       </div>
     </div>
   );

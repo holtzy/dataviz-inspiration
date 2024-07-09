@@ -6,42 +6,42 @@
 :root {
   /* Tailwind css pink-400 */
   --brand-light: #f472b6;
-    /* Tailwind css pink-800 */
+  /* Tailwind css pink-800 */
   --brand: #9d174d;
   /* Tailwind css pink-900 */
   --brand-dark: #831843;
   /* Greys */
-  --light-grey:  #f8f9fa;
+  --light-grey: #f8f9fa;
   --medium-grey: #e5e5e5;
-  --dark-grey: #C8C8C8;
+  --dark-grey: #c8c8c8;
 }
 
 /* Each section has a specific color */
-.distribution{
+.distribution {
   color: #e0ac2b;
-  border-color: #e0ac2b
+  border-color: #e0ac2b;
 }
-.correlation{
+.correlation {
   color: #7f7f7f;
   border-color: #7f7f7f;
 }
-.ranking{
+.ranking {
   color: #a4c969;
   border-color: #a4c969;
 }
-.partOfAWhole{
+.partOfAWhole {
   color: #e85252;
   border-color: #e85252;
 }
-.evolution{
+.evolution {
   color: #6689c6;
   border-color: #6689c6;
 }
-.map{
+.map {
   color: #9a6fb0;
   border-color: #9a6fb0;
 }
-.flow{
+.flow {
   color: #a53253;
   border-color: #a53253;
 }
@@ -50,33 +50,49 @@
   CSS reset by Josh Comeau
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
   margin: 0;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
-
 
 /*
   Full bleed layout by Josh Comeau
@@ -97,7 +113,6 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-column: 1 / 4;
 }
 
-
 /* ---------- Horizontal separator ----------------- */
 .smallHr {
   margin-top: 23px;
@@ -112,7 +127,7 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 0;
   }
   100% {
-      width: 200px;
+    width: 200px;
   }
 }
 
@@ -121,7 +136,7 @@ a {
   color: var(--brand);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-thickness: .1px;
+  text-decoration-thickness: 0.1px;
 }
 
 h2 {
@@ -131,4 +146,65 @@ h2 {
   margin-top: 100px !important;
   margin-bottom: 10px !important;
   padding-bottom: 10px !important;
+}
+
+/* ---------- HEART ANIMATION ----------------- */
+
+.heartIncrease {
+  animation: snap 0.9s forwards;
+  stroke-width: 0;
+}
+@keyframes snap {
+  from {
+    transform: scale3d(1, 1, 1);
+    filter: brightness(0.9);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+    filter: brightness(1);
+  }
+}
+
+.heartShake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
