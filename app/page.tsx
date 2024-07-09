@@ -59,9 +59,6 @@ export default function Page() {
   );
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
-    // console.log("data in Masonry Card", data);
-    // console.log("likesData in Masonry card", likesData);
-    // const randomLikeNumber = Math.floor(Math.random() * (1200 - 50 + 1)) + 50;
     return (
       <MasonryItem
         vizItem={data}
