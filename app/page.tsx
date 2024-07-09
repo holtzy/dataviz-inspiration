@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
 import TitleAndDescription from "../components/TitleAndDescription";
@@ -129,6 +129,7 @@ export default function Page() {
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
           closeModal={() => setIsModalOpen(false)}
+          likeNumber={likesData[selectedProject.projectId] || 0}
         />
       )}
 

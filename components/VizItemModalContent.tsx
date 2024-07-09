@@ -9,11 +9,13 @@ import { LikeButton } from "./LikeButton";
 type VizItemModalContentProps = {
   projectId: number;
   imgId: number;
+  likeNumber: number;
 };
 
 export const VizItemModalContent = ({
   projectId,
   imgId,
+  likeNumber,
 }: VizItemModalContentProps) => {
   const vizItem = vizList.find((item) => item.id === projectId);
 
@@ -100,6 +102,14 @@ export const VizItemModalContent = ({
     </>
   );
 
+  const likeButton = (
+    <LikeButton
+      projectId={projectId}
+      initialLikeNumber={likeNumber}
+      isDarkBackground={false}
+    />
+  );
+
   const smallScreenLayout = (
     <div
       style={{
@@ -116,12 +126,12 @@ export const VizItemModalContent = ({
       <br />
       {toolSection}
       <br />
-      <Image
-        placeholder="empty"
-        src={require(`../public/img/${vizItem.img[imgId].full}`)}
+      <img
+        src={`/img/${vizItem.img[imgId].full}`}
         alt={"Chart showing " + vizItem.title}
       />
       <br />
+      {likeButton}
       <br />
       {contextDescription}
       <br />
@@ -139,21 +149,16 @@ export const VizItemModalContent = ({
       className="p-4 h-full w-full grid grid-cols-3 gap-5"
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="relative flex flex-col justify-start items-start h-full col-span-2">
-        <Image
-          placeholder="empty"
-          src={require(`../public/img/${vizItem.img[imgId].full}`)}
-          objectFit="scale-down"
+      <div className="relative flex flex-col justify-center items-center h-full col-span-2">
+        <img
+          src={`/img/${vizItem.img[imgId].full}`}
+          style={{ objectFit: "scale-down", width: "100%", height: "100%" }}
           alt={"Chart showing " + vizItem.title}
         />
       </div>
 
       <div className="p-2 flex flex-col justify-center">
-        <LikeButton
-          projectId={projectId}
-          initialLikeNumber={444}
-          isDarkBackground={false}
-        />
+        {likeButton}
         <br /> <br />
         {titleAndAuthor}
         <br />

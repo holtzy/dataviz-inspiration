@@ -7,8 +7,6 @@ type AnimatedHeartProps = {
 };
 
 export const AnimatedHeart = ({ likeNumber }: AnimatedHeartProps) => {
-  console.log("likeNumber", likeNumber);
-
   const [animate, setAnimate] = useState(false);
   const [shake, setShake] = useState(false);
 

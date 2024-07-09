@@ -60,7 +60,7 @@ export const LikeButton = ({
   return (
     <div
       onClick={addLike}
-      className={`flex items-center gap-2 ${
+      className={`flex items-center gap-2 cursor-pointer ${
         isDarkBackground ? "text-white" : "text-black"
       } opacity-70 hover:opacity-100 border border-solid border-transparent hover:border-white/20 p-2 rounded-md`}
     >
