@@ -59,6 +59,7 @@ export default function Page() {
   );
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
+    const randomLikeNumber = Math.floor(Math.random() * (1200 - 50 + 1)) + 50;
     return (
       <MasonryItem
         vizItem={data}
@@ -67,7 +68,7 @@ export default function Page() {
           setIsModalOpen(true);
         }}
         imgId={0}
-        likeNumber={likesData[data.id] || 100}
+        likeNumber={likesData[data.id] || randomLikeNumber}
       />
     );
   };

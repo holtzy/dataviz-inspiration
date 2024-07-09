@@ -34,20 +34,21 @@ export const MasonryItem = ({
         className="rounded-md"
         alt={"Chart showing " + vizItem.title}
       />
-      <LikeButton likeNumber={likeNumber} />
 
       {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}
       <div className="hidden sm:flex absolute rounded-md transition-all duration-700 -left-full group-hover:left-0 top-0 w-full bottom-0 bg-slate-800 opacity-90 items-center justify-center mb-1">
-        <div className="absolute pr-10 top-12 left-5">
+        <div className="absolute pr-10 top-12 left-5 ">
           <p className="text-md text-white font-bold">{vizItem.title}</p>
           <p className="text-md text-white italic opacity-75 mt-2">
             {vizItem.author}
           </p>
         </div>
-        <div className="absolute pr-10 bottom-6 left-5">
+
+        <div className="absolute pr-10 bottom-6 left-5 flex flex-row w-full justify-between items-center">
           <p className="text-md text-white text-xs opacity-75 mt-2">
             {month + " " + year}
           </p>
+          <LikeButton initialLikeNumber={likeNumber} />
         </div>
       </div>
     </div>

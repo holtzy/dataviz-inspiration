@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 
+type LikeTableItem = {
+    projectId: string;
+    numberoflikes: number
+}
+
 const useLikesData = () => {
     const [likesData, setLikesData] = useState({});
 
@@ -10,12 +15,13 @@ const useLikesData = () => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                const data = await response.json();
+                const jsonResponse = await response.json();
+                const data: LikeTableItem[] = jsonResponse.result.rows
 
                 // Convert data array to a map for efficient lookup in the app
                 const likesDataMap = {};
 
-                data.result.rows.forEach((item: { projectId: string, numberoflikes: number }) => {
+                data.forEach((item: { projectId: string, numberoflikes: number }) => {
                     likesDataMap[item.projectid] = item.numberoflikes;
                 });
 
