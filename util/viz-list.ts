@@ -27,7 +27,7 @@ export const vizList: VizItem[] = [
         author: "The New York Times",
         url: "https://www.nytimes.com/2022/01/06/opinion/omicron-covid-us.html",
         img: [{ full: "omicron-NYT.png", zoom: "omicron-NYT-zoom.png", chartId: ["stream"] }],
-        contextDescription: "We're in early 2022, the Omicron variant importance is raising across the globe and the New york times decides to represent the Covid pandemic evolutioin of the last 2 years.",
+        contextDescription: "We're in early 2022, the Omicron variant importance is raising across the globe and the New york times decides to represent the Covid pandemic evolution of the last 2 years.",
         chartDescription: "The New York Times <a href='https://twitter.com/FreedZach/status/1479132573578240001'>literally broke the internet</a> with this circular streamgraph. The dataviz community is divided, trying to understand if this unconventional figure is pure genius or trash, since it does not respect most of the comon rules.<br/><br/>Hint: when so many people talk about a chart, there is probably something good about it!",
         luminosity: ["light"],
         interactive: false

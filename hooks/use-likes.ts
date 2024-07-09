@@ -12,10 +12,13 @@ const useLikesData = () => {
         const fetchLikesData = async () => {
             try {
                 const response = await fetch('/api/get-likes');
+                console.log("***response", response)
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const jsonResponse = await response.json();
+                console.log("***JSON response", jsonResponse)
+
                 const data: LikeTableItem[] = jsonResponse.result.rows
 
                 // Convert data array to a map for efficient lookup in the app
@@ -35,6 +38,7 @@ const useLikesData = () => {
         fetchLikesData();
     }, []);
 
+    console.log("likesData after fetch", likesData)
     return likesData;
 };
 

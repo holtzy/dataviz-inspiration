@@ -48,7 +48,7 @@ export const MasonryItem = ({
           <p className="text-md text-white text-xs opacity-75 mt-2">
             {month + " " + year}
           </p>
-          <LikeButton initialLikeNumber={likeNumber} />
+          <LikeButton initialLikeNumber={likeNumber} projectId={vizItem.id} />
         </div>
       </div>
     </div>

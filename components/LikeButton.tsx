@@ -3,20 +3,40 @@ import { MouseEventHandler, useState } from "react";
 
 export const LikeButton = ({
   initialLikeNumber,
+  projectId,
 }: {
   initialLikeNumber: number;
+  projectId: number;
 }) => {
   const [likeNumber, setLikeNumber] = useState(initialLikeNumber);
 
   const [size, setSize] = useState(13);
   const [opacity, setOpacity] = useState(0.3);
 
-  const addLike: MouseEventHandler<HTMLDivElement> = (event) => {
+  const addLike: MouseEventHandler<HTMLDivElement> = async (event) => {
     event.preventDefault();
     event.stopPropagation();
     setLikeNumber(likeNumber + 1);
     setSize(size + 2);
     setOpacity(opacity + 0.2);
+
+    try {
+      const response = await fetch("/api/add-like", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ projectId, likeNumber }),
+      });
+
+      if (response.ok) {
+        console.log("link with DB worked!");
+      } else {
+        console.error("Failed to add like");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
