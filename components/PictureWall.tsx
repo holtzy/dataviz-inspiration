@@ -7,6 +7,7 @@ import { useState } from "react";
 import useLikesData from "../hooks/use-likes";
 import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { filterVizList } from "../util/filterVizList";
+import { ChartId } from "../util/sectionDescription";
 
 export type Project = { projectId: number; imgId: number };
 
