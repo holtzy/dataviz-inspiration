@@ -1,7 +1,7 @@
 import { Masonry } from "masonic";
 import { WallFilters } from "./WallFilters";
 import { VizItemModal } from "./VizItemModal";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { MasonryItem } from "./MasonryItem";
 import { useState } from "react";
 import useLikesData from "../hooks/use-likes";
@@ -28,6 +28,8 @@ export const PictureWall = () => {
   const tools = (searchParams.getAll("tools") || undefined) as
     | Tool[]
     | undefined;
+  const pathname = usePathname();
+  const chartType = pathname.split("/")[1] as ChartId;
 
   //
   // Additional state that is NOT in the URL
@@ -36,7 +38,7 @@ export const PictureWall = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State of this specific page
 
   const likesData = useLikesData();
-  const filteredVizList = filterVizList(vizList, luminosity, undefined, tools);
+  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools);
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
     return (
