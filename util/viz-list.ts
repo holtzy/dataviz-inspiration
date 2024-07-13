@@ -2710,5 +2710,20 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
-    }
+    },
+    {
+    id: 184,
+    title: "Choropleth map with a customized legend",
+    date: new Date(2024, 7),
+    author: "Joseph Barbier",
+    url: "https://python-graph-gallery.com/web-map-with-custom-legend/",
+    img: [
+        { full: "Choropleth-map-with-a-customized-legend.png", zoom: "Choropleth-map-with-a-customized-legend-zoom.png", chartId: ["map"] },
+    ],
+    contextDescription: "The Choropleth map provides a detailed representation of per capita CO2 emissions in 2021 across various countries. It utilizes a customized legend to ensure clarity in depicting emission levels and their geographical distribution.",
+    chartDescription: "The Choropleth map features a well-crafted legend that guides viewers through different levels of CO2 emissions. It includes clear annotations and uses a vibrant color scheme, making it both engaging and informative.",
+    tools: [{ name: "python", link: "https://github.com/holtzy/The-Python-Graph-Gallery/blob/master/src/notebooks/web-map-with-custom-legend.ipynb" }],
+    luminosity: ["light", "dark"],
+    interactive: true
+},
 ]
