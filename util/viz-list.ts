@@ -2711,4 +2711,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     }
+    {
+        id: 184,
+        title: "CO2 emissions in Europe",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-map-with-custom-legend/",
+        img: [
+        { full: "Choropleth-map-with-a-customized-legend.png", zoom: "Choropleth-map-with-a-customized-legend-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Europe has been actively working to reduce CO2 emissions, with many countries implementing diverse strategies based on their economic structures and policies. This has resulted in varying levels of emissions across the region.",
+        chartDescription: "The Choropleth map features a well-crafted legend that guides viewers through different levels of CO2 emissions. It includes clear annotations and uses a vibrant color scheme, making it both engaging and informative.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+        },
 ]
