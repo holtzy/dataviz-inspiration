@@ -2786,4 +2786,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 189,
+        title: "Number of fiscal sponsorship",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-barplot-with-annotations-and-arrows/",
+        img: [
+            { full: "sponsored-projects.png", zoom: "sponsored-projects-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The Fiscal Sponsorship Directory is an organisation that provides a comprehensive list of fiscal sponsorship opportunities, searchable by state and service category. Its aim is to help people find a non-profit organisation for their project when they need help with financial management.",
+        chartDescription: "This bar chart features a relevant colour scheme that makes it easy to understand which category each bar relates to. What's more, the curved arrows add a pleasant touch.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-barplot-with-annotations-and-arrows/" }],
+        luminosity: ["dark"],
+        interactive: false
+    },
 ]
