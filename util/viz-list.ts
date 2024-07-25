@@ -2726,4 +2726,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     },
+    {
+        id: 185,
+        title: "Human Development Index in Sao Paulo",
+        date: new Date(2024, 7),
+        author: "Vinicius Oike Reginatto",
+        url: "https://r-graph-gallery.com/web-choropleth-barchart-map.html",
+        img: [
+            { full: "hdi-sao-polo.png", zoom: "hdi-sao-polo-zoom.png", chartId: ["map", "choropleth", "histogram"] },
+        ],
+        contextDescription: "This visualization shows the Human Development Index (HDI) at the subregional level in Sao Paulo, Brazil’s largest city. The values follow the standard United Nations’s HDI: values are in the 0 to 1 range.",
+        chartDescription: "This is a cleanc choropleth map with a histogram on the side. The histogram is great as it gives additional context to the map and serves as a legend",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/web-choropleth-barchart-map.html" }],
+        luminosity: ["light"],
+        interactive: false
+    },
 ]
