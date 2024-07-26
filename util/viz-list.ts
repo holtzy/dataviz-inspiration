@@ -2724,7 +2724,82 @@ export const vizList: VizItem[] = [
         chartDescription: "The Choropleth map features a well-crafted legend that guides viewers through different levels of CO2 emissions. It includes clear annotations and uses a vibrant color scheme, making it both engaging and informative.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-map-with-custom-legend/" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: false
+    },
+    {
+        id: 185,
+        title: "Evolution of unemployment rates",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-small-multiple-with-highlights/",
+        img: [
+            { full: "small-multilple-line-chart-unemployment-linecharts.png", zoom: "small-multilple-line-chart-unemployment-linecharts-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "COVID-19 has had a major economic impact on most countries in the world, and unemployment is no exception. Most regions have seen dramatic changes in their unemployment rates in a very short space of time, but some have managed to remain stable.",
+        chartDescription: "This small multi-line graph shows all 9 lines on each of its sub-graphs, but only one of them is highlighted at a time, making it easy to understand how each country's metric system evolved over the period, thanks to a clear colour scheme and precise annotations using arrows.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-small-multiple-with-highlights/" }],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 186,
+        title: "Earthquake around the world",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-bubble-map-with-arrows/",
+        img: [
+            { full: "earthquakes-around-the-world.png", zoom: "earthquakes-around-the-world-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "The Earth's crust is divided into several plates that float on the semi-fluid asthenosphere. When these plates move, they can collide, pull apart, or slide past each other.",
+        chartDescription: "This bubble map illustrates that points can be used to represent the shape of tectonic plates. The low opacity of the bubbles, the absence of borders between countries and the clear annotations make it easy to read and quickly understand the position of earthquakes around the world.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-bubble-map-with-arrows/" }],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 187,
+        title: "Evolution of movie rating",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-stacked-charts/",
+        img: [
+            { full: "evolution-movie-rating.png", zoom: "evolution-movie-rating-zoom.png", chartId: ["line", "connectedScatter"] },
+        ],
+        contextDescription: "The number of new films released each year has never been higher, but if we look at the average rating per year, we see that this doesn't mean they're any better, especially when compared to iconic films such as The Godfather.",
+        chartDescription: "This chart is a combination of a word cloud in the background and a line graph in the foreground. The word cloud is based on film titles to highlight the most common words, while the line graph is very minimalist to display only relevant information.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-stacked-charts/" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 188,
+        title: "Evolution of number of natural disasters",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/",
+        img: [
+            { full: "evolution-natural-disasters.png", zoom: "evolution-natural-disasters-zoom.png", chartId: ["stackedArea"] },
+        ],
+        contextDescription: "There are different types of natural disaster, but most tend to increase in frequency every year. In today's world, there is an average of at least one natural disaster every day. Most of these are floods or extreme weather events.",
+        chartDescription: "This stacked area chart uses arrows with an inflection point in combination with a relevant colour scheme to help the user quickly understand what each element is and measures.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 189,
+        title: "Number of fiscal sponsorship",
+        date: new Date(2024, 7),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-barplot-with-annotations-and-arrows/",
+        img: [
+            { full: "sponsored-projects.png", zoom: "sponsored-projects-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The Fiscal Sponsorship Directory is an organisation that provides a comprehensive list of fiscal sponsorship opportunities, searchable by state and service category. Its aim is to help people find a non-profit organisation for their project when they need help with financial management.",
+        chartDescription: "This bar chart features a relevant colour scheme that makes it easy to understand which category each bar relates to. What's more, the curved arrows add a pleasant touch.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-barplot-with-annotations-and-arrows/" }],
+        luminosity: ["dark"],
+        interactive: false
     },
     {
         id: 185,
