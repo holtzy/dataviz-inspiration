@@ -2802,7 +2802,7 @@ export const vizList: VizItem[] = [
         interactive: false
     },
     {
-        id: 185,
+        id: 190,
         title: "Human Development Index in Sao Paulo",
         date: new Date(2024, 7),
         author: "Vinicius Oike Reginatto",
@@ -2811,9 +2811,113 @@ export const vizList: VizItem[] = [
             { full: "hdi-sao-polo.png", zoom: "hdi-sao-polo-zoom.png", chartId: ["map", "choropleth", "histogram"] },
         ],
         contextDescription: "This visualization shows the Human Development Index (HDI) at the subregional level in Sao Paulo, Brazil’s largest city. The values follow the standard United Nations’s HDI: values are in the 0 to 1 range.",
-        chartDescription: "This is a cleanc choropleth map with a histogram on the side. The histogram is great as it gives additional context to the map and serves as a legend",
+        chartDescription: "This is a clean choropleth map with a histogram on the side. The histogram is great as it gives additional context to the map and serves as a legend",
         tools: [{ name: "R", link: "https://r-graph-gallery.com/web-choropleth-barchart-map.html" }],
         luminosity: ["light"],
         interactive: false
     },
+    {
+        id: 191,
+        title: "Evolution of global temperature",
+        date: new Date(2024, 9),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-lollipop-with-colormap-and-arrow/",
+        img: [
+            { full: "lollipop-evolution-global-temperature.png", zoom: "lollipop-evolution-global-temperature-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "Climate change, and in particular rising temperatures, is one of the major issues of the 21st century. We are predicting a warming of around 1.5° Celsius by 2050, and 2 to 4° Celsius by 2100.",
+        chartDescription: "This lollipop plot is beautifully designed with a colour palette from PyPalettes, curved arrows with DrawArrow and cool fonts loaded via PyFonts. It perfectly highlights the rising temperatures we're facing.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-lollipop-with-colormap-and-arrow/" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 192,
+        title: "Japan's population decline",
+        date: new Date(2024, 9),
+        author: "Joseph Barbier",
+        url: "https://python-graph-gallery.com/web-area-chart-with-different-colors-for-positive-and-negative-values/",
+        img: [
+            { full: "area-chart-japan-population.png", zoom: "area-chart-japan-population-zoom.png", chartId: ["area"] },
+        ],
+        contextDescription: "For several decades now, Japan's population has been growing more slowly, and has even been declining since 2010. This trend appears to be continuing, even though Japan is losing around 0.5% of its population every year.",
+        chartDescription: "This minimalist graph changes colour when the values fall below 0, underlining the fact that this is a major change. What's more, the annotations around the graph provide the key contextual information you need.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-area-chart-with-different-colors-for-positive-and-negative-values/" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 193,
+        title: "Comparing winters in the US",
+        date: new Date(2023, 9),
+        author: "United States Geological Survey",
+        url: "https://www.usgs.gov/media/images/distributions-highlow-a-tale-two-winters",
+        img: [
+            { full: "two-winters-usa.jpg", zoom: "two-winters-usa-zoom.png", chartId: ["hexbin", "lollipop"] },
+        ],
+        contextDescription: "Climate change is affecting weather patterns across the board. Although extreme heat often takes the spotlight, winter conditions are shifting as well. The 2022–2023 winter season experienced unexpected shifts in both the timing and locations of snowfall.",
+        chartDescription: "This display is a combination of a hexagonal map and a lollipop-shaped graph. The x-axis of the lollipop is actually the longitude, which makes it easier to read the map and draw parallels.",
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 194,
+        title: "Changes in infant mortality rates",
+        date: new Date(2023, 9),
+        author: "Saloni Dattani",
+        url: "https://ourworldindata.org/child-mortality",
+        img: [
+            { full: "infant-death-rates-evolution.png", zoom: "infant-death-rates-evolution-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "The chart shows that infant death rates are significantly higher on the first day of life, but decrease sharply in the following days and continue to decline over the year. Over time, the overall curve has shifted down, indicating that infant survival has improved, making every day of infancy safer compared to previous decades.",
+        chartDescription: "This graph uses one line per year, and even if the trend is not displayed on the x or y axis, the trend over time can be quickly understood thanks to the data and a relevant colour pattern.",
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 195,
+        title: "Summer films themes",
+        date: new Date(2024, 9),
+        author: "Georgios Karamanis",
+        url: "https://r-graph-gallery.com/web-sankey-diagram-with-highlight.html",
+        img: [
+            { full: "sankey-summer-movies.png", zoom: "sankey-summer-movies-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "This graph shows the evolution of film themes containing the word ‘summer’, according to IMDb data.",
+        chartDescription: "The sankey diagram highlights the trend at a glance, while the annotations give us more information about the data.",
+        tools: [{ name: "python", link: "https://r-graph-gallery.com/web-sankey-diagram-with-highlight.html" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 196,
+        title: "Recycling rates by London borough",
+        date: new Date(2024, 9),
+        author: "Lisa Hornung",
+        url: "https://python-graph-gallery.com/web-waffle-with-small-multiples/",
+        img: [
+            { full: "map-waffle-chart-london-recycling.png", zoom: "map-waffle-chart-london-recycling-zoom.png", chartId: ["waffle", "map"] },
+        ],
+        contextDescription: "This graph shows the recycling rates for each London borough, highlighting significant differences: some boroughs recycle 17% (minimum) and others nearly 50%.", 
+        chartDescription: "The waffle charts are represented in such a way that the overall figure has the same shape as that of London and each borough is well located.",
+        tools: [{ name: "python", link: "https://python-graph-gallery.com/web-waffle-with-small-multiples/" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 197,
+        title: "Share of cereals for animals",
+        date: new Date(2024, 9),
+        author: "Benjamin Nowak",
+        url: "https://r-graph-gallery.com/web-waffle-chart-share.html",
+        img: [
+            { full: "waffle-share-animal-feeds.png", zoom: "waffle-share-animal-feeds-zoom.png", chartId: ["waffle"] },
+        ],
+        contextDescription: "This graph shows the proportion of cereals used for animal feed on different continents.", 
+        chartDescription: "Using the waffle chart to highlight the differences between the continents makes it much easier to understand and compare them.",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/web-waffle-chart-share.html" }],
+        luminosity: ["dark"],
+        interactive: false
+    },
+
 ]
