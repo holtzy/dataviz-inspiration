@@ -4826,7 +4826,7 @@ export const vizList: VizItem[] = [
       {
         full: "map-waffle-chart-london-recycling.png",
         zoom: "map-waffle-chart-london-recycling-zoom.png",
-        chartId: ["waffl", "map"],
+        chartId: ["waffle", "map"],
       },
     ],
     contextDescription:
@@ -4866,6 +4866,187 @@ export const vizList: VizItem[] = [
       },
     ],
     luminosity: ["dark"],
+    interactive: false,
+  },
+  {
+    id: 198,
+    title: "Energy consumption per French region",
+    date: new Date(2024, 9),
+    author: "Joseph Barbier",
+    url: "https://python-graph-gallery.com/web-heatmap-comparison/",
+    img: [
+      {
+        full: "double-heatmap.png",
+        zoom: "double-heatmap-zoom.png",
+        chartId: ["heatmap"],
+      },
+    ],
+    contextDescription:
+      "Energy consumption by region can be a misleading indicator, whereas normalisation per capita ensures comparability between regions.",
+    chartDescription:
+      "A double heat map for time series comparison makes it easy to understand the two different measurements.",
+    tools: [
+      {
+        name: "python",
+        link: "https://python-graph-gallery.com/web-heatmap-comparison/",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 199,
+    title: "Rent in San Francisco",
+    date: new Date(2024, 9),
+    author: "Ansgar Wolsing",
+    url: "https://r-graph-gallery.com/web-ridgeline-plot-with-inside-plot-and-annotations.html",
+    img: [
+      {
+        full: "ridgeline-with-small-legend.png",
+        zoom: "ridgeline-with-small-legend-zoom.png",
+        chartId: ["ridgeline"],
+      },
+    ],
+    contextDescription:
+      "Relationship between labels describing flats and their associated price distribution in the Bay Area.",
+    chartDescription:
+      "Ridgeline plot with an isolated density chart as a legend.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-ridgeline-plot-with-inside-plot-and-annotations.html",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 200,
+    title: "Party Advantage in the U.S",
+    date: new Date(2024, 9),
+    author: "Aman Bhargava",
+    url: "https://r-graph-gallery.com/web-vertical-line-chart-with-ggplot2.html",
+    img: [
+      {
+        full: "party-advantages-us.png",
+        zoom: "party-advantages-us-zoom.png",
+        chartId: ["ridgeline"],
+      },
+    ],
+    contextDescription:
+      "Evolution of the most popular party (Democrats VS Republicans) over time.",
+    chartDescription:
+      "Graph with vertical lines that change colour over time and a minimalist yet insightful legend on the right.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-vertical-line-chart-with-ggplot2.html",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 201,
+    title: "Storms in the Atlantic Ocean",
+    date: new Date(2024, 9),
+    author: "Muhammad Azhar",
+    url: "https://r-graph-gallery.com/web-waffle-for-time-evolution.html",
+    img: [
+      {
+        full: "storms-atlantic-waffle.png",
+        zoom: "storms-atlantic-waffle-zoom.png",
+        chartId: ["waffle", "timeseries"],
+      },
+    ],
+    contextDescription:
+      "Evolution of the different types of storms in the Atlantic Ocean, highlighting that tropical storms are the most frequent.",
+    chartDescription:
+      "Waffle chart combined with a time series chart, divided by category, with a beautiful colour palette and legend.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-waffle-for-time-evolution.html",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 202,
+    title: "Density map in the style of Jacques Bertin",
+    date: new Date(2024, 9),
+    author: "Benjamin Nowak",
+    url: "https://r-graph-gallery.com/web-valued-dots-map-bertin.html",
+    img: [
+      {
+        full: "densitymap-jacques-bertin.png",
+        zoom: "densitymap-jacques-bertin-zoom.png",
+        chartId: ["density2d", "map"],
+      },
+    ],
+    contextDescription:
+      "Distribution of the French population in a map in the style of Jacques Bertin.",
+    chartDescription: "Density map in a minimalist black and white style.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-valued-dots-map-bertin.html",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 203,
+    title: "Dorling cartogram of the world",
+    date: new Date(2024, 9),
+    author: "Benjamin Nowak",
+    url: "https://r-graph-gallery.com/web-dorling-cartogram-with-R.html",
+    img: [
+      {
+        full: "dorling-cartogram-bubble.png",
+        zoom: "dorling-cartogram-bubble-zoom.png",
+        chartId: ["map", "cartogram"],
+      },
+    ],
+    contextDescription:
+      "Comparison of grassland and arable land in each agricultural region of each country.",
+    chartDescription:
+      "Dorling cartogram (bubble map distorted to represent the proportion of land use) with a comparison within each bubble.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-dorling-cartogram-with-R.html",
+      },
+    ],
+    luminosity: ["light"],
+    interactive: false,
+  },
+  {
+    id: 204,
+    title: "Evolution of wealth per country",
+    date: new Date(2024, 9),
+    author: "Gilbert Fontana",
+    url: "https://r-graph-gallery.com/web-stacked-area-chart-inline-labels.html",
+    img: [
+      {
+        full: "stacked-area-chart-fontana.png",
+        zoom: "stacked-area-chart-fontana-zoom.png",
+        chartId: ["stackedArea"],
+      },
+    ],
+    contextDescription:
+      "Changes in household wealth in some countries and in the rest of the world.",
+    chartDescription:
+      "Stacked area chart with a beautiful colour palette and perfectly aligned in-line labels.",
+    tools: [
+      {
+        name: "R",
+        link: "https://r-graph-gallery.com/web-stacked-area-chart-inline-labels.html",
+      },
+    ],
+    luminosity: ["light"],
     interactive: false,
   },
 ];

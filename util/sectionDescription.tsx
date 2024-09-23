@@ -41,6 +41,7 @@ export type ChartLogo =
   | "Bundle150"
   | "Colours150"
   | "Interactive150"
+  | "Waffle150"
   | "anim150"
   | "Cheat150"
   | "Bad150"
@@ -503,6 +504,27 @@ export const chartTypesInfo: ChartTypesInfo[] = [
           a set of nested rectangles, where each rectangle's size represents a
           certain attribute (such as proportion within a category) and the
           colors can represent different values.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "waffle",
+    family: "partOfAWhole",
+    logo: "Waffle150",
+    dataToVizURL: "https://www.data-to-viz.com/",
+    reactURL: "https://react-graph-gallery.com",
+    rURL: "https://r-graph-gallery.com/waffle.html",
+    pythonURL: "https://python-graph-gallery.com/waffle-chart/",
+    d3URL: "https://d3-graph-gallery.com",
+    label: "Waffle",
+    description: (
+      <div>
+        <p>
+          A waffle chart visually represents categorical data through a grid of
+          <b>small squares</b>, resembling a waffle. Each category is assigned a
+          unique color, and the number of squares allocated to each category
+          corresponds to its proportional share of the total data count.
         </p>
       </div>
     ),
