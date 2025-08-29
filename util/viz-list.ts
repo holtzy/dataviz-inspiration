@@ -2919,5 +2919,19 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: false
     },
-
+    {
+        id: 198,
+        title: "Gap between Americans' prosperity and well-being",
+        date: new Date(2025, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2025/02/04/briefing/the-us-economy-is-racing-ahead-almost-everything-else-is-falling-behind.html",
+        img: [
+            { full: "wellbeing-NYT.png", zoom: "wellbeing-NYT-zoom.png", chartId: ["parallel"] },
+        ],
+        contextDescription: "The U.S. has the world's second largest economy. However, many other measures of well-being is far worse than other rich countries.", 
+        chartDescription: "Using the slope chart to highlight the change in ranking between United States and dozen other countries on economic performance, physical health, social trust and more.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    }
 ]
