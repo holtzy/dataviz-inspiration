@@ -2933,5 +2933,35 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 199,
+        title: "death on wikipedia",
+        date: new Date(2018, 8),
+        author: "The Pudding",
+        url: "https://pudding.cool/2018/08/wiki-death/",
+        img: [
+            { full: "death-wikipedia-traffic.png", zoom: "death-wikipedia-traffic-zoom.png", chartId: ["density", "ridgeline"] },
+        ],
+        contextDescription: "One time where celebrities get huge attention is when news break about their death. At least that's what the data shows. Using Wikipedia pageviews, The Pudding examined some notable figures — even those who didn't get much notice until after their passing.", 
+        chartDescription: "Ridgeline chart shows one-week moving average of the percent increase in pageviews compared to the pre-death average. Includes interactive popups to reveal more information among each individual.",
+        tools: [{ name: "javascript", link: "https://github.com/the-pudding/wiki-death-data/tree/master" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 200,
+        title: "A Visual History of Which Countries Have Dominated the Summer Olympics",
+        date: new Date(2016, 8),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html",
+        img: [
+            { full: "olympic-medal-NYC.png", zoom: "olympic-medal-NYC-zoom.png", chartId: ["stream"] },
+        ],
+        contextDescription: "Which countries have acquired more medal during the olympics? The New York Times traced medal counts of participating countries covering from the first game in Athens in 1896 to recent summer olympics held in Rio.", 
+        chartDescription: "Streamgraph in the article shows rise and fall of each country's medal count over time. Besides the time flow of each event, there are streamgraphs concentrated by discipline. Definitely an interesting piece to check out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
