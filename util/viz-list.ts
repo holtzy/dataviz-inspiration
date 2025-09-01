@@ -2963,5 +2963,65 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 201,
+        title: "Make the Grade",
+        date: new Date(2015, 7),
+        author: "Dark Horse Analytics",
+        url: "https://grades.dha.io/",
+        img: [
+            { full: "alberta-grade.png", zoom: "alberta-grade-zoom.png", chartId: ["lollipop", "area"] },
+        ],
+        contextDescription: "A look at high school grades in Alberta using the province's open data. Website targets parents of children about to enter high school, providing comparison of grades among different schools.", 
+        chartDescription: "Website shows average grade by school and subject. Allows interactive to see which school excels in certain subject. For example, can select school that is specifically strong in English education.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 202,
+        title: "Searching Covid-19",
+        date: new Date(2020),
+        author: "Schema Design",
+        url: "https://searchingcovid19.com/",
+        img: [
+            { full: "covid-search.png", zoom: "covid-search-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Covid-19 pandemic has changed the lives, cautioning people with what to do and how to act accordingly. Schema, parted with Google Trends and Axios, along with art direction from Alberto Cairo, analyzed coronavirus-related search queries to identify what type of information people have been seeking.", 
+        chartDescription: "Using x-axis as the timeline during the pandemic, each bubble represents a query that was among the top trending searches in one or more US states on each day.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 203,
+        title: "Americans Say High Prices Are Hitting the Things They Need to Get By",
+        date: new Date(2022, 3),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2022/03/09/upshot/where-americans-have-noticed-inflation.html?campaign_id=29&emc=edit_up_20220310&instance_id=55379&nl=the-upshot&regi_id=52022771&segment_id=85183&te=1&user_id=7cc6d9cd8f523e256ae41958ee8a9cb5",
+        img: [
+            { full: "inflation-word.png", zoom: "inflation-word-zoom.png", chartId: ["wordcloud"] },
+        ],
+        contextDescription: "Where have Americans felt inflation at? The New York Times Asked 2,200 people to name specific products and services whose higher prices have stood out to them over the past year.", 
+        chartDescription: "Word cloud lists specific items for which repondents have noticed rising prices. Food items are highlighted orange, others in gray.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 204,
+        title: "How Electricity Is Changing, Country by Country",
+        date: new Date(2023, 11),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2023/11/20/climate/global-power-electricity-fossil-fuels-coal.html",
+        img: [
+            { full: "electricity-generation.png", zoom: "electricity-generation-zoom.png", chartId: ["stackedArea"] },
+        ],
+        contextDescription: "How has electricity generation changed around the world? Using estimated made by Ember, an energy think tank, The New York Times visualizes trends of electricity generation, compared among different countries.", 
+        chartDescription: "Each area stacked represents energy, categorized under clean power or fossil fuel. The color distinction shows how much fossil-fueled power generation has declined over years.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
