@@ -3023,5 +3023,66 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
-    }
+    },
+    {
+        id: 205,
+        title: "Here Is All the Science at Risk in Trump's Clash With Harvard",
+        date: new Date(2025, 6),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2025/06/22/upshot/harvard-funding-cuts.html?unlocked_article_code=1.RE8.KELx.uq4W90kO9ZDD&smid=url-share",
+        img: [
+            { full: "harvard-grant.png", zoom: "harvard-grant-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "The New York Times analyzed terminated grants worth $2.6 billion at Harvard. The article covers which research funding the government has cut and its overall impact.", 
+        chartDescription: "Each treemap, divided under different research categories, shows which research funding had the most impact. At the end of the article is the full interactive treemap, where you can explore more into each canceled grants.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 206,
+        title: "A Closer Look at Labor",
+        date: new Date(2015, 9),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/occupationscanvas/",
+        img: [
+            { full: "occupation-age.png", zoom: "occupation-age-zoom.png", chartId: ["circularPacking", "barplot"] },
+        ],
+        contextDescription: "Age distribution across all 550 occupation in the U.S, using data in 2014. The size of the circle shows how many people are employed in that occupation. Bar chart within each circle is the distribution of 7 different age groups.", 
+        chartDescription: "A cool interaction by either entering a specific occupation in a search bar or clicking any of the circles to zoom in.",
+        tools:  undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 207,
+        title: "Christmas Cookies",
+        date: new Date(2024, 12),
+        author: "Ann Pregler",
+        url: "https://public.tableau.com/app/profile/ann.pregler/viz/ChristmasCookies11/Sankey",
+        img: [
+            { full: "bake-recipe.png", zoom: "bake-recipe-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Not sure how much flour, sugar, or other ingredients you'll need? This visualization breaks down the exact amounts required for different bakes.", 
+        chartDescription: "The sankey diagram highlights how each recipe flows into its ingredients.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/ann.pregler/viz/ChristmasCookies11/Sankey" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 208,
+        title: "Breaking the cycle of homelessness in San Francisco",
+        date: new Date(2025, 4),
+        author: "Crankstart",
+        url: "https://streetstostability.com/today",
+        img: [
+            { full: "sf-homeless-dendrogram.png", zoom: "sf-homeless-dendrogram-zoom.png", chartId: ["dendrogram"] },
+            { full: "sf-homeless-sankey.png", zoom: "sf-homeless-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "A report by Crankstart, a San Francisco'based family foundation, addresses San Francisco's homelessness and offers a road map for administrations to build a better system with demonstrable results.",
+        chartDescription: "Sankey diagram shows the flow of people entering and exiting homelessness in San Francisco. It highlights different reasons for homelessness and ways people exit or reenter homelessness. Radial dendrogram, on the other hand, shows the interactions among individuals, service providers, and City agencies, highlighting the complexity of the support system.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
 ]
