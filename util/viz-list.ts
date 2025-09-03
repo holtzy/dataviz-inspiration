@@ -3085,4 +3085,65 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true
     },
+    {
+        id: 209,
+        title: "Life Span of Animals",
+        date: new Date(2021, 2),
+        author: "Takafumi Shukuya",
+        url: "https://public.tableau.com/app/profile/takafumi.shukuya/viz/Viz2educateLifeSpanofAnimals/Dashboard1",
+        img: [
+            { full: "lifespan-animal.png", zoom: "lifespan-animal-zoom.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "Which animal lives the longest? This project uses average life expectancy to calculate and visualize life span of animals.", 
+        chartDescription: "You can either hover over each bubbles to identify which animal or filter using the search bar on the right.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/takafumi.shukuya/viz/Viz2educateLifeSpanofAnimals/Dashboard1" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 210,
+        title: "Wes Anderson Films",
+        date: new Date(2021, 10),
+        author: "Bo McCready",
+        url: "https://public.tableau.com/app/profile/bo.mccready8742/viz/WesAndersonFilms/WesAndersonFilms",
+        img: [
+            { full: "wes-anderson-film.png", zoom: "wes-anderson-film-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Film directors often favor certain actors, casting them repeatedly across their works. This graph, based on Wes Anderson's ten films and their cast lists, illustrates how frequently specific actors appear in his movies.", 
+        chartDescription: "The upper node in sankey diagram lists 10 films by Wes Anderson. The lower node shows list of actors that appeared repeatedly in his films. If you mouse over each flow, you can find out which actor played which role in a specific movie.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/bo.mccready8742/viz/WesAndersonFilms/WesAndersonFilms" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 211,
+        title: "Likely to vote by mail",
+        date: new Date(2020, 9),
+        author: "SurveyMonkey Research",
+        url: "https://public.tableau.com/app/profile/surveymonkey/viz/Likelytovotebymail/VBMdashboard",
+        img: [
+            { full: "mail-vote.png", zoom: "mail-vote-zoom.png", chartId: ["hexbin"] },
+        ],
+        contextDescription: "Survey Moneky, in partnership with Axios, collected polls for the 2020 election. They asked each stat whether they were to vote by mail.", 
+        chartDescription: "Map divides each state into separate hexbins. Darker purple means state is more likely to vote by mail, and vice versa. Good to see annotation of the state name and percentage for each hexbin. ",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/surveymonkey/viz/Likelytovotebymail/VBMdashboard" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 212,
+        title: "The Lifespan of News Stories",
+        date: new Date(2019, 1),
+        author: "Schema Design",
+        url: "https://www.newslifespan.com/",
+        img: [
+            { full: "news-story-area.png", zoom: "news-story-area-zoom.png", chartId: ["area"] },
+            { full: "news-story-map.png", zoom: "news-story-map-zoom.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "In collaboration between Schema, Google News Initiative, Alberto Cairo, and Axios, the project analyzes search interest data of the top news stories of 2018.",
+        chartDescription: "Cool animated area chart which shows which stories stay longest in the public view as time passes by. Definitely a cool piece to check out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    }
 ]
