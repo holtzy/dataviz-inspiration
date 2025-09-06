@@ -3145,5 +3145,65 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 213,
+        title: "Cat vs printers",
+        date: new Date(2025, 4),
+        author: "Lynn Miclea",
+        url: "https://x.com/infobeautiful/status/1961834806708162612",
+        img: [
+            { full: "cat-inkjet-venn.png", zoom: "cat-inkjet-venn-zoom.png", chartId: ["venn"] },
+        ],
+        contextDescription: "Fun little diagram showing the similarities between cat and an inkjet printer.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 214,
+        title: "How Drug Overdose Deaths Have Plagued One Generation of Black Men for Decades",
+        date: new Date(2024, 12),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2025/01/30/upshot/black-men-overdose-deaths.html?unlocked_article_code=1.m04.2sB5.vIYs6ISzHJnu",
+        img: [
+            { full: "drug-overdose-black-men.png", zoom: "drug-overdose-black-men-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "The New York Times, in partnership with The Baltimore Banner, Big Local News, and nine other newsrooms, analyzed drug overdose deaths over the past decades. Through data, they found one common trend -- that drug overdose has been prevalent especially among Black men.", 
+        chartDescription: "Heatmap shows Covid deaths among Black men, showing a surge in drug deaths due to fentanyl among men born from 1951 to 1970.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 215,
+        title: "Inflation in America: Where are prices rising and falling?",
+        date: new Date(2022, 6),
+        author: "NBC News",
+        url: "https://www.nbcnews.com/data-graphics/inflation-tracker-how-much-prices-rising-us-consumers-n1296378",
+        img: [
+            { full: "inflation-america.png", zoom: "inflation-america-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "NBC News tracks monthly inflation levels for gas, flights, groceries and more. Data is as of April 28, 2025 and all items are percentage change from year earlier.", 
+        chartDescription: "Heatmap shows inflation levels across a variety of consumer metrics. Includes interactive by hovering over each rectangle to see how much prices have changed from a year ago.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 216,
+        title: "Anti-Tag Cloud",
+        date: new Date(2024, 12),
+        author: "Martin Wattenberg",
+        url: "https://www.bewitched.com/demo/anti/",
+        img: [
+            { full: "anti-tag-wordcloud.png", zoom: "anti-tag-wordcloud-zoom.png", chartId: ["wordcloud"] },
+        ],
+        contextDescription: "Instead of featuring words that is most common, Anti-Tag Cloud shows words that never appear in a text.", 
+        chartDescription: "This is the Anti-Tag Cloud for Alice in Wonderland. Word size indicates how frequent a word is across other texts. You can pick a different book to visualize via search bar.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
