@@ -3205,5 +3205,66 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 217,
+        title: "What our analysis of 900 firms shows about their values",
+        date: new Date(2025, 6),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/business/2025/06/16/corporate-culture",
+        img: [
+            { full: "employee-review-beeswarm.png", zoom: "employee-review-beeswarm-zoom.png", chartId: ["beeswarm", "bubble"] },
+            { full: "employee-review-scatter.png", zoom: "employee-review-scatter-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.", 
+        chartDescription: "The beeswarm chart shows how each companies are rated into four different measurements. Each dot represents one company and its color represents how well they are scoring on each measurement. You can find a specific company by using filter bars.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 218,
+        title: "Shakespeare Spoken Words",
+        date: new Date(2018, 5),
+        author: "Rody Zakovich",
+        url: "https://public.tableau.com/app/profile/rody.zakovich/viz/ShakespeareSpokenWords/ShakespeareSpokenWords",
+        img: [
+            { full: "shakespeare-word.png", zoom: "shakespeare-word-zoom.png", chartId: ["chordDiagram"] },
+        ],
+        contextDescription: "This project analyzes Shakespear's play, looking at main characters and their spokens words in each scene.", 
+        chartDescription: "Each chord diagram represents Shakespear's play and outer bands represent each scene in the play. Length is determined by percent of total words in the play. The bar plot below each chord diagram makes it easier to determine which character had spoken the most.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/rody.zakovich/viz/ShakespeareSpokenWords/ShakespeareSpokenWords" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 219,
+        title: "What do you get when your emotions combine?",
+        date: new Date(2024, 6),
+        author: "Six Seconds",
+        url: "https://www.facebook.com/sixseconds/posts/pfbid0rbfPPbNcXEyvFnJ2BTpXWNiqCvCbNDFtWqq97qwTrfUHABTJtnUNfj7uSMJqSsKil",
+        img: [
+            { full: "emotion-venn.png", zoom: "emotion-venn-zoom.png", chartId: ["venn"] },
+        ],
+        contextDescription: "Feelings can be a mix of different emotions. Using the emotions featured in Inside Out, Six Seconds shows how feelings overlap with different emotions.", 
+        chartDescription: "The Venn Diagram shows two emotions that are combined, resulting in a specific emotion. Wonder what would happen if the characters from Inside Out 2 gets added.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 220,
+        title: "Student Opinions",
+        date: new Date(2024, 3),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html",
+        img: [
+            { full: "NYT-survey-pie.png", zoom: "NYT-survey-pie-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country of their opinion. The original print was issued on Dec. 31, 2023 in print. The New York Times's project, What's Going On in This Graph, which resurfaces some of their most iconic graphs, revealed this graph for school to learn more about graphs. I would recommend visiting their website for more projects.", 
+        chartDescription: "With aims to educate how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
