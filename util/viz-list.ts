@@ -3266,5 +3266,50 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 221,
+        title: "American Height and Weight",
+        date: new Date(2024, 7),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2024/07/30/american-height-and-weight/",
+        img: [
+            { full: "american-bmi.png", zoom: "american-bmi-zoom.png", chartId: ["bubble", "heatmap", "scatter"] },
+        ],
+        contextDescription: "The project uses 2022 BRFSS survey to show the distribution of height and weight of American people.", 
+        chartDescription: "The bubble map with x-axis as weight and y axis and height shows BMI of American adults. Each color represents BMI category and size of square gets larger depending on how common it is among adults. Interesting case of combining bubble chart's x,y coordinates with heatmap.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 222,
+        title: "Nuclear Slowdown",
+        date: new Date(2017, 5),
+        author: "Velerio Pellegrini",
+        url: "https://www.behance.net/gallery/52825037/NUCLEAR-SLOWDOWN-Wired-UK",
+        img: [
+            { full: "nuclear-stream.png", zoom: "nuclear-stream-zoom.png", chartId: ["stream", "stackedArea", "area"] },
+        ],
+        contextDescription: "A project for Wired UK, it shows the use of nuclear reactors from 1950 to 2020.", 
+        chartDescription: "Streamgraph shows usage of nuclear energy, where each color represents usage from a specific country. The annotation includes some main events regarding nuclear energy, suggesting the reason of its decrease. On the top left are area charts, showing status of nuclear reactors over time.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 223,
+        title: "From here to there: internal migration in Chile",
+        date: new Date(2025, 9),
+        author: "Dataista",
+        url: "https://www.dataista.cl/interactivos/migracion-interna",
+        img: [
+            { full: "chile-migration.png", zoom: "chile-migration-zoom.png", chartId: ["arc"] },
+        ],
+        contextDescription: "What are the movement patterns of Chileans within the country? Dataista uses the 2024 Population Census to find out.", 
+        chartDescription: "The interactive page allows you to explore each cicles, which represent each commune. The arcs show how people are moving from one commune to another. You can also read the full <a href='https://www.dataista.cl/articulos/2025/09/02/migracion-interna-censo-2024'>article</p>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
