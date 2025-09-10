@@ -3023,5 +3023,293 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 205,
+        title: "Here Is All the Science at Risk in Trump's Clash With Harvard",
+        date: new Date(2025, 6),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2025/06/22/upshot/harvard-funding-cuts.html?unlocked_article_code=1.RE8.KELx.uq4W90kO9ZDD&smid=url-share",
+        img: [
+            { full: "harvard-grant.png", zoom: "harvard-grant-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "The New York Times analyzed terminated grants worth $2.6 billion at Harvard. The article covers which research funding the government has cut and its overall impact.", 
+        chartDescription: "Each treemap, divided under different research categories, shows which research funding had the most impact. At the end of the article is the full interactive treemap, where you can explore more into each canceled grants.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 206,
+        title: "A Closer Look at Labor",
+        date: new Date(2015, 9),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/occupationscanvas/",
+        img: [
+            { full: "occupation-age.png", zoom: "occupation-age-zoom.png", chartId: ["circularPacking", "barplot"] },
+        ],
+        contextDescription: "Age distribution across all 550 occupation in the U.S, using data in 2014. The size of the circle shows how many people are employed in that occupation. Bar chart within each circle is the distribution of 7 different age groups.", 
+        chartDescription: "A cool interaction by either entering a specific occupation in a search bar or clicking any of the circles to zoom in.",
+        tools:  undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 207,
+        title: "Christmas Cookies",
+        date: new Date(2024, 12),
+        author: "Ann Pregler",
+        url: "https://public.tableau.com/app/profile/ann.pregler/viz/ChristmasCookies11/Sankey",
+        img: [
+            { full: "bake-recipe.png", zoom: "bake-recipe-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Not sure how much flour, sugar, or other ingredients you'll need? This visualization breaks down the exact amounts required for different bakes.", 
+        chartDescription: "The sankey diagram highlights how each recipe flows into its ingredients.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/ann.pregler/viz/ChristmasCookies11/Sankey" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 208,
+        title: "Breaking the cycle of homelessness in San Francisco",
+        date: new Date(2025, 4),
+        author: "Crankstart",
+        url: "https://streetstostability.com/today",
+        img: [
+            { full: "sf-homeless-dendrogram.png", zoom: "sf-homeless-dendrogram-zoom.png", chartId: ["dendrogram"] },
+            { full: "sf-homeless-sankey.png", zoom: "sf-homeless-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "A report by Crankstart, a San Francisco'based family foundation, addresses San Francisco's homelessness and offers a road map for administrations to build a better system with demonstrable results.",
+        chartDescription: "Sankey diagram shows the flow of people entering and exiting homelessness in San Francisco. It highlights different reasons for homelessness and ways people exit or reenter homelessness. Radial dendrogram, on the other hand, shows the interactions among individuals, service providers, and City agencies, highlighting the complexity of the support system.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 209,
+        title: "Life Span of Animals",
+        date: new Date(2021, 2),
+        author: "Takafumi Shukuya",
+        url: "https://public.tableau.com/app/profile/takafumi.shukuya/viz/Viz2educateLifeSpanofAnimals/Dashboard1",
+        img: [
+            { full: "lifespan-animal.png", zoom: "lifespan-animal-zoom.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "Which animal lives the longest? This project uses average life expectancy to calculate and visualize life span of animals.", 
+        chartDescription: "You can either hover over each bubbles to identify which animal or filter using the search bar on the right.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/takafumi.shukuya/viz/Viz2educateLifeSpanofAnimals/Dashboard1" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 210,
+        title: "Wes Anderson Films",
+        date: new Date(2021, 10),
+        author: "Bo McCready",
+        url: "https://public.tableau.com/app/profile/bo.mccready8742/viz/WesAndersonFilms/WesAndersonFilms",
+        img: [
+            { full: "wes-anderson-film.png", zoom: "wes-anderson-film-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Film directors often favor certain actors, casting them repeatedly across their works. This graph, based on Wes Anderson's ten films and their cast lists, illustrates how frequently specific actors appear in his movies.", 
+        chartDescription: "The upper node in sankey diagram lists 10 films by Wes Anderson. The lower node shows list of actors that appeared repeatedly in his films. If you mouse over each flow, you can find out which actor played which role in a specific movie.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/bo.mccready8742/viz/WesAndersonFilms/WesAndersonFilms" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 211,
+        title: "Likely to vote by mail",
+        date: new Date(2020, 9),
+        author: "SurveyMonkey Research",
+        url: "https://public.tableau.com/app/profile/surveymonkey/viz/Likelytovotebymail/VBMdashboard",
+        img: [
+            { full: "mail-vote.png", zoom: "mail-vote-zoom.png", chartId: ["hexbin"] },
+        ],
+        contextDescription: "Survey Moneky, in partnership with Axios, collected polls for the 2020 election. They asked each stat whether they were to vote by mail.", 
+        chartDescription: "Map divides each state into separate hexbins. Darker purple means state is more likely to vote by mail, and vice versa. Good to see annotation of the state name and percentage for each hexbin. ",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/surveymonkey/viz/Likelytovotebymail/VBMdashboard" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 212,
+        title: "The Lifespan of News Stories",
+        date: new Date(2019, 1),
+        author: "Schema Design",
+        url: "https://www.newslifespan.com/",
+        img: [
+            { full: "news-story-area.png", zoom: "news-story-area-zoom.png", chartId: ["area"] },
+            { full: "news-story-map.png", zoom: "news-story-map-zoom.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "In collaboration between Schema, Google News Initiative, Alberto Cairo, and Axios, the project analyzes search interest data of the top news stories of 2018.",
+        chartDescription: "Cool animated area chart which shows which stories stay longest in the public view as time passes by. Definitely a cool piece to check out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 213,
+        title: "Cat vs printers",
+        date: new Date(2025, 4),
+        author: "Lynn Miclea",
+        url: "https://x.com/infobeautiful/status/1961834806708162612",
+        img: [
+            { full: "cat-inkjet-venn.png", zoom: "cat-inkjet-venn-zoom.png", chartId: ["venn"] },
+        ],
+        contextDescription: "Fun little diagram showing the similarities between cat and an inkjet printer.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 214,
+        title: "How Drug Overdose Deaths Have Plagued One Generation of Black Men for Decades",
+        date: new Date(2024, 12),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2025/01/30/upshot/black-men-overdose-deaths.html?unlocked_article_code=1.m04.2sB5.vIYs6ISzHJnu",
+        img: [
+            { full: "drug-overdose-black-men.png", zoom: "drug-overdose-black-men-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "The New York Times, in partnership with The Baltimore Banner, Big Local News, and nine other newsrooms, analyzed drug overdose deaths over the past decades. Through data, they found one common trend -- that drug overdose has been prevalent especially among Black men.", 
+        chartDescription: "Heatmap shows Covid deaths among Black men, showing a surge in drug deaths due to fentanyl among men born from 1951 to 1970.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 215,
+        title: "Inflation in America: Where are prices rising and falling?",
+        date: new Date(2022, 6),
+        author: "NBC News",
+        url: "https://www.nbcnews.com/data-graphics/inflation-tracker-how-much-prices-rising-us-consumers-n1296378",
+        img: [
+            { full: "inflation-america.png", zoom: "inflation-america-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "NBC News tracks monthly inflation levels for gas, flights, groceries and more. Data is as of April 28, 2025 and all items are percentage change from year earlier.", 
+        chartDescription: "Heatmap shows inflation levels across a variety of consumer metrics. Includes interactive by hovering over each rectangle to see how much prices have changed from a year ago.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 216,
+        title: "Anti-Tag Cloud",
+        date: new Date(2024, 12),
+        author: "Martin Wattenberg",
+        url: "https://www.bewitched.com/demo/anti/",
+        img: [
+            { full: "anti-tag-wordcloud.png", zoom: "anti-tag-wordcloud-zoom.png", chartId: ["wordcloud"] },
+        ],
+        contextDescription: "Instead of featuring words that is most common, Anti-Tag Cloud shows words that never appear in a text.", 
+        chartDescription: "This is the Anti-Tag Cloud for Alice in Wonderland. Word size indicates how frequent a word is across other texts. You can pick a different book to visualize via search bar.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 217,
+        title: "What our analysis of 900 firms shows about their values",
+        date: new Date(2025, 6),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/business/2025/06/16/corporate-culture",
+        img: [
+            { full: "employee-review-beeswarm.png", zoom: "employee-review-beeswarm-zoom.png", chartId: ["beeswarm", "bubble"] },
+            { full: "employee-review-scatter.png", zoom: "employee-review-scatter-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.", 
+        chartDescription: "The beeswarm chart shows how each companies are rated into four different measurements. Each dot represents one company and its color represents how well they are scoring on each measurement. You can find a specific company by using filter bars.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 218,
+        title: "Shakespeare Spoken Words",
+        date: new Date(2018, 5),
+        author: "Rody Zakovich",
+        url: "https://public.tableau.com/app/profile/rody.zakovich/viz/ShakespeareSpokenWords/ShakespeareSpokenWords",
+        img: [
+            { full: "shakespeare-word.png", zoom: "shakespeare-word-zoom.png", chartId: ["chordDiagram"] },
+        ],
+        contextDescription: "This project analyzes Shakespear's play, looking at main characters and their spokens words in each scene.", 
+        chartDescription: "Each chord diagram represents Shakespear's play and outer bands represent each scene in the play. Length is determined by percent of total words in the play. The bar plot below each chord diagram makes it easier to determine which character had spoken the most.",
+        tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/rody.zakovich/viz/ShakespeareSpokenWords/ShakespeareSpokenWords" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 219,
+        title: "What do you get when your emotions combine?",
+        date: new Date(2024, 6),
+        author: "Six Seconds",
+        url: "https://www.facebook.com/sixseconds/posts/pfbid0rbfPPbNcXEyvFnJ2BTpXWNiqCvCbNDFtWqq97qwTrfUHABTJtnUNfj7uSMJqSsKil",
+        img: [
+            { full: "emotion-venn.png", zoom: "emotion-venn-zoom.png", chartId: ["venn"] },
+        ],
+        contextDescription: "Feelings can be a mix of different emotions. Using the emotions featured in Inside Out, Six Seconds shows how feelings overlap with different emotions.", 
+        chartDescription: "The Venn Diagram shows two emotions that are combined, resulting in a specific emotion. Wonder what would happen if the characters from Inside Out 2 gets added.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 220,
+        title: "Student Opinions",
+        date: new Date(2024, 3),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html",
+        img: [
+            { full: "NYT-survey-pie.png", zoom: "NYT-survey-pie-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country of their opinion. The original print was issued on Dec. 31, 2023 in print. The New York Times's project, What's Going On in This Graph, which resurfaces some of their most iconic graphs, revealed this graph for school to learn more about graphs. I would recommend visiting their website for more projects.", 
+        chartDescription: "With aims to educate how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 221,
+        title: "American Height and Weight",
+        date: new Date(2024, 7),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2024/07/30/american-height-and-weight/",
+        img: [
+            { full: "american-bmi.png", zoom: "american-bmi-zoom.png", chartId: ["bubble", "heatmap", "scatter"] },
+        ],
+        contextDescription: "The project uses 2022 BRFSS survey to show the distribution of height and weight of American people.", 
+        chartDescription: "The bubble map with x-axis as weight and y axis and height shows BMI of American adults. Each color represents BMI category and size of square gets larger depending on how common it is among adults. Interesting case of combining bubble chart's x,y coordinates with heatmap.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 222,
+        title: "Nuclear Slowdown",
+        date: new Date(2017, 5),
+        author: "Velerio Pellegrini",
+        url: "https://www.behance.net/gallery/52825037/NUCLEAR-SLOWDOWN-Wired-UK",
+        img: [
+            { full: "nuclear-stream.png", zoom: "nuclear-stream-zoom.png", chartId: ["stream", "stackedArea", "area"] },
+        ],
+        contextDescription: "A project for Wired UK, it shows the use of nuclear reactors from 1950 to 2020.", 
+        chartDescription: "Streamgraph shows usage of nuclear energy, where each color represents usage from a specific country. The annotation includes some main events regarding nuclear energy, suggesting the reason of its decrease. On the top left are area charts, showing status of nuclear reactors over time.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 223,
+        title: "From here to there: internal migration in Chile",
+        date: new Date(2025, 9),
+        author: "Dataista",
+        url: "https://www.dataista.cl/interactivos/migracion-interna",
+        img: [
+            { full: "chile-migration.png", zoom: "chile-migration-zoom.png", chartId: ["arc"] },
+        ],
+        contextDescription: "What are the movement patterns of Chileans within the country? Dataista uses the 2024 Population Census to find out.", 
+        chartDescription: "The interactive page allows you to explore each cicles, which represent each commune. The arcs show how people are moving from one commune to another. You can also read the full <a href='https://www.dataista.cl/articulos/2025/09/02/migracion-interna-censo-2024'>article</p>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
