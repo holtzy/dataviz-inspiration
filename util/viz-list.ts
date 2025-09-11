@@ -3261,8 +3261,8 @@ export const vizList: VizItem[] = [
         img: [
             { full: "NYT-survey-pie.png", zoom: "NYT-survey-pie-zoom.png", chartId: ["pie"] },
         ],
-        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country of their opinion. The original print was issued on Dec. 31, 2023 in print. The New York Times's project, What's Going On in This Graph, which resurfaces some of their most iconic graphs, revealed this graph for school to learn more about graphs. I would recommend visiting their website for more projects.", 
-        chartDescription: "With aims to educate how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
+        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country. The original print was issued on Dec. 31, 2023 but you can also find more about it via The New York Times's project, <a href='https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html'>What's Going On in This Graph</p>.", 
+        chartDescription: "With aims to educate on how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
