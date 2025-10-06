@@ -3261,8 +3261,8 @@ export const vizList: VizItem[] = [
         img: [
             { full: "NYT-survey-pie.png", zoom: "NYT-survey-pie-zoom.png", chartId: ["pie"] },
         ],
-        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country of their opinion. The original print was issued on Dec. 31, 2023 in print. The New York Times's project, What's Going On in This Graph, which resurfaces some of their most iconic graphs, revealed this graph for school to learn more about graphs. I would recommend visiting their website for more projects.", 
-        chartDescription: "With aims to educate how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
+        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country. The original print was issued on Dec. 31, 2023 but you can also find more about it via The New York Times's project, <a href='https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html'>What's Going On in This Graph</p>.", 
+        chartDescription: "With aims to educate on how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false
@@ -3308,6 +3308,72 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "What are the movement patterns of Chileans within the country? Dataista uses the 2024 Population Census to find out.", 
         chartDescription: "The interactive page allows you to explore each cicles, which represent each commune. The arcs show how people are moving from one commune to another. You can also read the full <a href='https://www.dataista.cl/articulos/2025/09/02/migracion-interna-censo-2024'>article</p>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 224,
+        title: "A Promising Horizon: How the 2025-2027 Horizon Europe strategic plan will shape Europe's tomorrow",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/promising-horizon-how-2025-2027-horizon-europe-strategic-plan-will-shape",
+        img: [
+            { full: "EU-economy-slope.png", zoom: "EU-economy-slope-zoom.png", chartId: ["line"] },
+            { full: "EU-economy-map.png", zoom: "EU-economy-map-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "EU-economy-bar.png", zoom: "EU-economy-bar-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.", 
+        chartDescription: "Three charts are shown in this piece. One a slope chart comparing EU's average raw material consumption, a map that highlights rise in sea levels in the Ebro River Delta, and a bar chart showing EU citizens' attitude toward AI.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 225,
+        title: "Leisure in Europe: Insights from open data",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/leisure-europe-insights-open-data",
+        img: [
+            { full: "EU-leisure-circle.png", zoom: "EU-leisure-circle-zoom.png", chartId: ["bubble"] },
+            { full: "EU-leisure-circle-two.png", zoom: "EU-leisure-circle-two-zoom.png", chartId: ["bubble"] },
+            { full: "EU-leisure-map.png", zoom: "EU-leisure-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.", 
+        chartDescription: "The first data visualization shows the average share of household spending allocated to dining out in across Europe with each circle scaled to the percent of household expenditure. Second chart shows how EU citizens celebrate summer season, ending the piece with a map  highlighting shares of tourists during the summer.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 226,
+        title: "Health and well-being in the EU: Investing where it matters",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/health-and-well-being-eu-investing-where-it-matters",
+        img: [
+            { full: "EU-healthcare-voronoi1.png", zoom: "EU-healthcare-voronoi1-zoom.png", chartId: ["circularPacking"] },
+            { full: "EU-healthcare-voronoi2.png", zoom: "EU-healthcare-voronoi2-zoom.png", chartId: ["circularPacking"] },
+            { full: "EU-healthcare-voronoi3.png", zoom: "EU-healthcare-voronoi3-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.", 
+        chartDescription: "The Voronoi Treemap in this piece shows shares of public health spending across the EU as well as some major preventable causes of death, ending with diverse reasons for missing needed medical care.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 227,
+        title: "How far can you go by train from Paris?",
+        date: new Date(2025, 9),
+        author: "Benjamin Tran Dinh",
+        url: "https://www.linkedin.com/posts/mbforr_one-of-the-coolest-maps-ive-seen-lately-activity-7372615071669342208-zqtl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "paris-train-animation.png", zoom: "paris-train-animation-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "An animated visualization that shows train travel times across Europe.", 
+        chartDescription: "The animation makes it hundred times more fascinating, strongly recommend to check out the link below.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
