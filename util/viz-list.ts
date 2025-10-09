@@ -3368,7 +3368,7 @@ export const vizList: VizItem[] = [
         title: "How far can you go by train from Paris?",
         date: new Date(2025, 9),
         author: "Benjamin Tran Dinh",
-        url: "https://www.linkedin.com/posts/mbforr_one-of-the-coolest-maps-ive-seen-lately-activity-7372615071669342208-zqtl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        url: "https://www.chronotrains.com/fr/explore/2988507-Paris",
         img: [
             { full: "paris-train-animation.png", zoom: "paris-train-animation-zoom.png", chartId: ["map", "choropleth"] },
         ],
