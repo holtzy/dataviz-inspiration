@@ -3377,5 +3377,65 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 228,
+        title: "Impeach this",
+        date: new Date(2019, 10),
+        author: "Tweet from Trump",
+        url: "https://x.com/realDonaldTrump/status/1178989254309011456",
+        img: [
+            { full: "impeach-this-trump.png", zoom: "impeach-this-trump-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "A tweet by Donald Trump displaying a choropleth map of the 2016 election results. The map appears to suggest Trump’s victory but is misleading because it ignores the population size of each state.", 
+        chartDescription: "To be more specific, the colors misrepresent the population of each state, giving small and large states equal visual weight. A better alternative would be a bubble map, where each bubble represents a state and is sized according to its population. For a deeper discussion of this misleading map, see this <a href='https://prodigious-trailblazer-3628.kit.com/posts/foundational-dataviz-example'>newsletter</p>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 229,
+        title: "How TikTok keeps its users scrolling for hours a day",
+        date: new Date(2025, 10),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/wellness/interactive/2025/tiktok-addiction-algorithm-scrolling-mental-health/?itid=sr_0_f1e1d79c-4883-4c78-8ffe-9b1d062189f2",
+        img: [
+            { full: "tiktok-users-washingtonpost.png", zoom: "tiktok-users-washingtonpost-zoom.png", chartId: ["bubble", "scatter"] },
+        ],
+        contextDescription: "Using 800 Tiktok userss in U.S., The Washington Post analyzes why people become power users, spending hours per day scrolling.", 
+        chartDescription: "Each circle in the chart represents the daily watch time of a real TikTok user, with color scales that show percent change of users from April, 2024.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 230,
+        title: "A Data Love Letter to the Subway",
+        date: new Date(2025, 10),
+        author: "Pentagram & Giorgia Lupi",
+        url: "https://www.pentagram.com/work/a-data-love-letter-to-the-subway",
+        img: [
+            { full: "subway-data-love-letter-sankey.png", zoom: "subway-data-love-letter-sankey-zoom.png", chartId: ["sankey", "line"] },
+        ],
+        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.", 
+        chartDescription: "The two-minute animation that can be viewed at Fulton Center, New York, is another great example of how everyday data can be turned into beautiful visualization. For example, sankey chart shows each train's final destinations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 231,
+        title: "A Data Love Letter to the Subway",
+        date: new Date(2025, 10),
+        author: "Pentagram & Giorgia Lupi",
+        url: "https://www.pentagram.com/work/a-data-love-letter-to-the-subway",
+        img: [
+            { full: "subway-data-love-letter-barplot.png", zoom: "subway-data-love-letter-barplot-zoom.png", chartId: ["barplot", "line", "histogram"] },
+        ],
+        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.", 
+        chartDescription: "The two-minute animation that can be viewed at Fulton Center, New York, is another great example of how everyday data can be turned into beautiful visualization. For example, barplot shows each train's duration of train spent underground.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
