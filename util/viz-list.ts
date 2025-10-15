@@ -3437,5 +3437,65 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 232,
+        title: "How mega batteries are unlocking an energy revolution",
+        date: new Date(2025, 10),
+        author: "Financial Times",
+        url: "https://ig.ft.com/mega-batteries/",
+        img: [
+            { full: "fuel-mix-stacked-area.png", zoom: "fuel-mix-stacked-area-zoom.png", chartId: ["area", "stackedArea", "stream"] },
+        ],
+        contextDescription: "How does California use solar power at night? The answer lies in grid scale batteries. This visual story from Financial Times highlights the increasing importance of storage solutions for clean energy.", 
+        chartDescription: "The stacked area chart shows California's average energy in a day. Different energy use is represented according to the hour of the day. You can see that solar power is at its peak from early morning to late afternoon.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 233,
+        title: "Asia has highest protein supply",
+        date: new Date(2025, 10),
+        author: "Nicola Rennie",
+        url: "https://bsky.app/profile/nrennie.bsky.social/post/3m36ptrdilc2l",
+        img: [
+            { full: "protein-supply-voronoi.png", zoom: "protein-supply-voronoi-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "A project for week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, data on food security comes from <a href='https://www.fao.org/faostat/en/#home'>The Food and Agriculture Organization of the United Nations (FAO)</a>, celebrating World Food Day.", 
+        chartDescription: "The Voronoi treemap shows the average protein supply for different continents. Areas indicate the total protein supply per day for each country.  Nice annotations for specific countries with interesting findings!",
+        tools: [{ name: "R", link: "https://github.com/nrennie/tidytuesday/tree/main/2025/2025-10-14" }],
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 234,
+        title: "Where can Americans afford to live solo in 2025?",
+        date: new Date(2025, 9),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2025/09/30/where-can-americans-afford-to-live-solo-in-2025",
+        img: [
+            { full: "carrie-bradshaw-afford.png", zoom: "carrie-bradshaw-afford-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "The Economist, usings its Carrie Bradshaw Index (from Sex and the City, a TV series), ranks 100 of the United States' cities by affordability for living solo.", 
+        chartDescription: "Lollipop chart highlights the gap between median wage and affordable-studio wage for each city. Colors represent affordability(red as unaffordable, blue as affordable). The chart is interactive, so you get choose specific cities, highly recommend to check it out!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 235,
+        title: "Here's how Africa wants to redraw the world map",
+        date: new Date(2025, 8),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/world/interactive/2025/mercator-map-africa-au-size/",
+        img: [
+            { full: "map-projection-washington-post.png", zoom: "map-projection-washington-post-zoom.png", chartId: ["map", "cartogram"] },
+        ],
+        contextDescription: "Africa is calling for a change in world map, replacing the widely-used Mercator projection. Reason lies on underestimating the true size of Africa. The Washington Post, visualizes the difference between Mercator and the newly suggested map, Equal Earth.", 
+        chartDescription: "Cartogram shows relative sizes of countries in different map projections. You can spot the stark size-difference between Greenland and Africa, a well-known example of distortion found in Mercator.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
