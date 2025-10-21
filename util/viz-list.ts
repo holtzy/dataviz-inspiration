@@ -3497,5 +3497,125 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 236,
+        title: "Tawny frogmouth named 2025 Australian bird of the year winner",
+        date: new Date(2025, 10),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/2025/oct/16/tawny-frogmouth-2025-australian-bird-year-winner",
+        img: [
+            { full: "guardian-bird-of-year-2025.png", zoom: "guardian-bird-of-year-2025-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Probably one of the most anticipated event for bird lovers, The Guardian Australia has announced the bird of the year for 2025, with more than 310,000 votes casted. The article includes charts from past votes (in 2025 and 2023).", 
+        chartDescription: "The bump chart ranks birds by votes casted for each round (8 round in total). There are filter options for difference highlights including the top ten and big climbs.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 237,
+        title: "Bird migration is changing. What does this reveal about our planet? -visualized",
+        date: new Date(2025, 10),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/ng-interactive/2025/oct/16/bird-migration-is-changing-what-does-this-reveal-about-our-planet-visualised-aoe",
+        img: [
+            { full: "guardian-bird-migrate-green.png", zoom: "guardian-bird-migrate-green-zoom.png", chartId: ["map", "choropleth", "connection"] },
+        ],
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        chartDescription: "The animated map shows seasonal bird migration. Darker green means denser green new life. You can see the seasonal change and migration flow through animation.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 238,
+        title: "Bird migration is changing. What does this reveal about our planet? -visualized",
+        date: new Date(2025, 10),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/ng-interactive/2025/oct/16/bird-migration-is-changing-what-does-this-reveal-about-our-planet-visualised-aoe",
+        img: [
+            { full: "guardian-bird-migrate-heat.png", zoom: "guardian-bird-migrate-heat-zoom.png", chartId: ["map", "choropleth", "connection"] },
+        ],
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        chartDescription: "Birds tend to move to regions with milder climate. The animated map shows bird migration to different regions, across the continents.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 239,
+        title: "Bird migration is changing. What does this reveal about our planet? -visualized",
+        date: new Date(2025, 10),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/ng-interactive/2025/oct/16/bird-migration-is-changing-what-does-this-reveal-about-our-planet-visualised-aoe",
+        img: [
+            { full: "guardian-bird-mario-migrate.png", zoom: "guardian-bird-mario-migrate-zoom.png", chartId: ["map", "choropleth", "connection"] },
+        ],
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        chartDescription: "Mario is one of Desertas petrels, bird species known for foraging deep-sea creatures by chasing hurricanes. The map shows Mario's journey, crossing the Atlantic Ocean in different seasons.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 240,
+        title: "A Classic Graphic Reveals Nature's Most Efficient Traveler",
+        date: new Date(2025, 10),
+        author: "Scientific American",
+        url: "https://www.scientificamerican.com/article/a-human-on-a-bicycle-is-among-the-most-efficient-forms-of-travel-in-the/",
+        img: [
+            { full: "scientific-american-efficient-traveler.png", zoom: "scientific-american-efficient-traveler-zoom.png", chartId: ["scatter", "correlogram"] },
+        ],
+        contextDescription: "Science American has updated its graphic, comparing lomotion in the animal kingdom.", 
+        chartDescription: "Chart shows relation between body weight and cost of transport, with each dot representing a specific animal.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 241,
+        title: "Women face higher rates of severe food insecurity in most countries",
+        date: new Date(2025, 10),
+        author: "Georgios Karamanis",
+        url: "https://www.linkedin.com/posts/georgios-karamanis-a54926153_tidytuesday-rstats-dataviz-activity-7385672923128197120-dS1L?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBhA",
+        img: [
+            { full: "food-insecurity-women-tidytuesday.png", zoom: "food-insecurity-women-tidytuesday-zoom.png", chartId: ["barplot", "histogram"] },
+        ],
+        contextDescription: "For week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, Georgios Karamanis explores global differences in severe food insecurity between women and men.", 
+        chartDescription: "78 countries are listed horizontally according to its difference of food insecurity betweeen women and men. You can see that countries including Pakistan, Afghanistan, and Peru report higher food insecurity for women.",
+        tools: [{ name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2025/2025-week_42" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 242,
+        title: "Economic Barcode: Mapping Global Inflation",
+        date: new Date(2025, 10),
+        author: "Yushan Chiu",
+        url: "https://www.behance.net/gallery/236878401/Economic-Barcode-Mapping-Global-Inflation",
+        img: [
+            { full: "economic-barcode-inflation.png", zoom: "economic-barcode-inflation-zoom.png", chartId: ["barplot", "histogram", "line"] },
+        ],
+        contextDescription: "Using global inflation data, the visualization shows how inflation has spread across different income groups for each country.", 
+        chartDescription: "Barcode charts are divided according to each income levels, with each stripe(country) placed according to the level of inflation.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 243,
+        title: "Repair, not replace",
+        date: new Date(2025, 10),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/you-can-probably-fix-your-25year-old-vacuum",
+        img: [
+            { full: "repair-cafe-success-rate.png", zoom: "repair-cafe-success-rate-zoom.png", chartId: ["bubble", "scatter"] },
+        ],
+        contextDescription: "The Repair Café in Europe is a community-based meeting place where people bring broken items for repairment. The project explores which items has been successfully fixed between 2015 and 2025.", 
+        chartDescription: "Each bubble represents certain group of items, distinguished by color. Each groups of bubbles are along the y-axis, distributed according to the success rate shown in the x-axis.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
