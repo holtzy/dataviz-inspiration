@@ -3617,5 +3617,95 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 244,
+        title: "Every Writer of Chris Carter's TV Shows",
+        date: new Date(2025, 10),
+        author: "Ihar Yanouski",
+        url: "https://yanouski.com/projects/xfiles-writers/",
+        img: [
+            { full: "chris-carter-tvshow.png", zoom: "chris-carter-tvshow-zoom.png", chartId: ["bubble", "dendrogram", "chordDiagram", "network", "edgeBundling"] },
+        ],
+        contextDescription: "This project features screenwriters who took part in Chris Carter's TV shows, displaying the summary of contributions for each TV series.", 
+        chartDescription: "Cool infographic with interactive tools such as the sort options by first names, episode counts, and more. Definitely a lot of information to absorb, but the creator has nicely added a 'show legend' button on the bottom to explain how to read the chart.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 245,
+        title: "Your diet's impact on the planet depends on where you live. Look up your city.",
+        date: new Date(2025, 10),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/climate-environment/interactive/2025/meat-beef-climate-impact/",
+        img: [
+            { full: "diet-meat-region-impact.png", zoom: "diet-meat-region-impact-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "The 'carbon hoofprint' refers to the amount of climate threat Americans poses from raising meat (beef, pork, and chicken). However, the degree of pollution differs according to each region, according to experts. The Washington Post has visualized its impact across difference regions within the United States.", 
+        chartDescription: "Map shows which regions are concentrated with emissions from meat consumption.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 246,
+        title: "China's power over rare earths is not as great as it seems.",
+        date: new Date(2025, 8),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/briefing/2025/08/13/chinas-power-over-rare-earths-is-not-as-great-as-it-seems",
+        img: [
+            { full: "china-rare-earth-area.png", zoom: "china-rare-earth-area-zoom.png", chartId: ["area", "stackedArea"] },
+        ],
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        chartDescription: "The stacked area chart shows how much China is leading in production of rare earths.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 247,
+        title: "China's power over rare earths is not as great as it seems.",
+        date: new Date(2025, 8),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/briefing/2025/08/13/chinas-power-over-rare-earths-is-not-as-great-as-it-seems",
+        img: [
+            { full: "china-rare-earth-sankey.png", zoom: "china-rare-earth-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        chartDescription: "Sankey chart shows rare earth flows into specific purposes, leading to more general contributions like manufacturing and electronics.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 248,
+        title: "China's power over rare earths is not as great as it seems.",
+        date: new Date(2025, 8),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/briefing/2025/08/13/chinas-power-over-rare-earths-is-not-as-great-as-it-seems",
+        img: [
+            { full: "china-rare-earth-map.png", zoom: "china-rare-earth-map-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        chartDescription: "Map with different shapes (circles and diamond) show which countries are holding control of rare-earth projects in other regions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 249,
+        title: "What Qualifies as Middle-Income in Each State",
+        date: new Date(2025, 10),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2025/10/23/middle-income-2024/",
+        img: [
+            { full: "middle-income-state.png", zoom: "middle-income-state-zoom.png", chartId: ["line", "barplot"] },
+        ],
+        contextDescription: "Middle income range differs based on where you live. Using data from the five-year American Community Survey from 2023, Nathan Yau explores which region in the U.S has the largest range.", 
+        chartDescription: "You get to interact by choosing the number of household in the filter option.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
