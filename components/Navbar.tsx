@@ -78,7 +78,7 @@ export default function Navbar() {
               </Transition>
             </Menu>
             <a
-              href="https://datavizuniverse.substack.com"
+              href="https://blog.yan-holtz.com/"
               style={{ textDecoration: "none" }}
             >
               <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black ml-3 border border-gray-300 rounded-md p-2">
