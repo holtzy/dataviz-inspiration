@@ -1,3 +1,4 @@
+import { TreeDeciduousIcon } from "lucide-react";
 import { ChartId } from "./sectionDescription";
 
 export const allTools = ["R", "python", "tableau", "data wrapper", "d3.js", "react", "excel", "javascript", "rawGraphs", "illustrator"] as const;
@@ -3704,6 +3705,66 @@ export const vizList: VizItem[] = [
         ],
         contextDescription: "Middle income range differs based on where you live. Using data from the five-year American Community Survey from 2023, Nathan Yau explores which region in the U.S has the largest range.", 
         chartDescription: "You get to interact by choosing the number of household in the filter option.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 250,
+        title: "Highly Hazardous Pesticides",
+        date: new Date(2020, 2),
+        author: "Nadieh Bremer",
+        url: "https://unearthed.greenpeace.org/2020/02/20/pesticides-croplife-hazardous-bayer-syngenta-health-bees/",
+        img: [
+            { full: "nadieh-bremer-pesticide.png", zoom: "nadieh-bremer-pesticide-zoom.png", chartId: ["voronoi", "treemap"] },
+        ],
+        contextDescription: "A visualization for Greenpeace, Nadieh Bremer has created sales of hazardous pesticides by the CropLife companies.", 
+        chartDescription: "The voronoi treemap highlights how five largest agrochemical companies are gaining most profit by selling highly hazardous pesticides. Colors indicate which hazard categories pesticides are part of. For more information of its process, check out her <a href='https://www.visualcinnamon.com/portfolio/highly-hazardous-pesticides/'>blog</a>",
+        tools:  [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 251,
+        title: "Removing content quotas has decimated Australian children's TV",
+        date: new Date(2025, 11),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/news/ng-interactive/2025/nov/07/australian-kids-tv-production-has-declined-could-streaming-quotas-help",
+        img: [
+            { full: "guardian-lego-chart.png", zoom: "guardian-lego-chart-zoom.png", chartId: ["histogram", "barplot"] },
+        ],
+        contextDescription: "<a href='https://www.theguardian.com/news/series/one-big-chart'> One big chart</a> features hand-drawn charts on key issues from Guardian Australia's data team. This chart shows total hours of children's TV produced in Australia.", 
+        chartDescription: "Love the hand-made chart! You can also check the making of the chart <a href='https://www.tiktok.com/@guardianaustralia/video/7569796419146616081'> here </a>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 252,
+        title: "Annual rainfall",
+        date: new Date(2025, 11),
+        author: "Nicola Rennie",
+        url: "https://bsky.app/profile/nrennie.bsky.social/post/3m4yqln3q5226",
+        img: [
+            { full: "annual-rainfall-30daymap.png", zoom: "annual-rainfall-30daymap-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A submission for day 6 of the <a href='https://30daymapchallenge.com/'> #30DayMap Challenge </a>, which is a daily mapping challenge taking place every November, Nicola Rennie explores annual rainfall in the UK.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 253,
+        title: "in pursuit of democracy",
+        date: new Date(2025, 11),
+        author: "The Pudding",
+        url: "https://pudding.cool/2025/11/democracy/",
+        img: [
+            { full: "the-pudding-democracy.png", zoom: "the-pudding-democracy-zoom.png", chartId: ["barplot", "scatter", "histogram"] },
+        ],
+        contextDescription: "Alvin Chang from The Pudding has done it again with an amazing scrollytelling article. Interactive dot shows every time someone says 'democracy' in the Congressioanl Record since 1880.", 
+        chartDescription: "While ordinary dots represent mentioning of the word, brighter dots are the ones where ones argue American democracy is under threat. The scrollytelling, done in a time series order with dots pouring below text, ultimately leads to a histogram for better exploration. Make sure to check it out!",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
