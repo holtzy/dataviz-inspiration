@@ -1,3 +1,4 @@
+import { TreeDeciduousIcon } from "lucide-react";
 import { ChartId } from "./sectionDescription";
 
 export const allTools = ["R", "python", "tableau", "data wrapper", "d3.js", "react", "excel", "javascript", "rawGraphs", "illustrator"] as const;
@@ -3700,10 +3701,184 @@ export const vizList: VizItem[] = [
         author: "Nathan Yau",
         url: "https://flowingdata.com/2025/10/23/middle-income-2024/",
         img: [
-            { full: "middle-income-state.png", zoom: "middle-income-state-zoom.png", chartId: ["line", "barplot"] },
+            { full: "middle-income-state.png", zoom: "middle-income-state-zoom.png", chartId: ["lollipop"] },
         ],
         contextDescription: "Middle income range differs based on where you live. Using data from the five-year American Community Survey from 2023, Nathan Yau explores which region in the U.S has the largest range.", 
         chartDescription: "You get to interact by choosing the number of household in the filter option.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 250,
+        title: "Highly Hazardous Pesticides",
+        date: new Date(2020, 2),
+        author: "Nadieh Bremer",
+        url: "https://unearthed.greenpeace.org/2020/02/20/pesticides-croplife-hazardous-bayer-syngenta-health-bees/",
+        img: [
+            { full: "nadieh-bremer-pesticide.png", zoom: "nadieh-bremer-pesticide-zoom.png", chartId: ["voronoi", "treemap"] },
+        ],
+        contextDescription: "A visualization for Greenpeace, Nadieh Bremer has created sales of hazardous pesticides by the CropLife companies.", 
+        chartDescription: "The voronoi treemap highlights how five largest agrochemical companies are gaining most profit by selling highly hazardous pesticides. Colors indicate which hazard categories pesticides are part of. For more information of its process, check out her <a href='https://www.visualcinnamon.com/portfolio/highly-hazardous-pesticides/'>blog</a>",
+        tools:  [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 251,
+        title: "Removing content quotas has decimated Australian children's TV",
+        date: new Date(2025, 11),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/news/ng-interactive/2025/nov/07/australian-kids-tv-production-has-declined-could-streaming-quotas-help",
+        img: [
+            { full: "guardian-lego-chart.png", zoom: "guardian-lego-chart-zoom.png", chartId: ["histogram", "barplot"] },
+        ],
+        contextDescription: "<a href='https://www.theguardian.com/news/series/one-big-chart'> One big chart</a> features hand-drawn charts on key issues from Guardian Australia's data team. This chart shows total hours of children's TV produced in Australia.", 
+        chartDescription: "Love the hand-made chart! You can also check the making of the chart <a href='https://www.tiktok.com/@guardianaustralia/video/7569796419146616081'> here </a>.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 252,
+        title: "Annual rainfall",
+        date: new Date(2025, 11),
+        author: "Nicola Rennie",
+        url: "https://bsky.app/profile/nrennie.bsky.social/post/3m4yqln3q5226",
+        img: [
+            { full: "annual-rainfall-30daymap.png", zoom: "annual-rainfall-30daymap-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A submission for day 6 of the <a href='https://30daymapchallenge.com/'> #30DayMap Challenge </a>, which is a daily mapping challenge taking place every November, Nicola Rennie explores annual rainfall in the UK.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 253,
+        title: "in pursuit of democracy",
+        date: new Date(2025, 11),
+        author: "The Pudding",
+        url: "https://pudding.cool/2025/11/democracy/",
+        img: [
+            { full: "the-pudding-democracy.png", zoom: "the-pudding-democracy-zoom.png", chartId: ["barplot", "scatter", "histogram"] },
+        ],
+        contextDescription: "Alvin Chang from The Pudding has done it again with an amazing scrollytelling article. Interactive dot shows every time someone says 'democracy' in the Congressioanl Record since 1880.", 
+        chartDescription: "While ordinary dots represent mentioning of the word, brighter dots are the ones where ones argue American democracy is under threat. The scrollytelling, done in a time series order with dots pouring below text, ultimately leads to a histogram for better exploration. Make sure to check it out!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 254,
+        title: "Earth's Land Surface (A Voronoi World)",
+        date: new Date(2020, 1),
+        author: "Luca Urzì",
+        url: "https://public.tableau.com/app/profile/luca7027/viz/EarthsLandSurfaceAVoronoiWorld/EarthsLandSurfaceAVoronoiWorld",
+        img: [
+            { full: "land-surface-voronoi.png", zoom: "land-surface-voronoi-zoom.png", chartId: ["voronoi", "treemap"] },
+        ],
+        contextDescription: "Earth's land surface account for mere 27%, with the rest all water. This project shows visualization of land, comparing its mass among continents.", 
+        chartDescription: "Voronoi treemap shows proportions of land for each continent.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 255,
+        title: "Brussels. A lovely Melting Pot.",
+        date: new Date(2025, 1),
+        author: "Karim Douieb",
+        url: "https://brussels-diversity.jetpack.ai/",
+        img: [
+            { full: "brussell-voronoi-treemap.png", zoom: "brussell-voronoi-treemap-zoom.png", chartId: ["voronoi", "treemap"] },
+            { full: "brussell-map.png", zoom: "brussell-map-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A data viz essay exploring Brussels and its people.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 256,
+        title: "The Chart Contains a Few Hidden Surprises About the Economy",
+        date: new Date(2017, 7),
+        author: "HowMuch.net",
+        url: "https://howmuch.net/articles/the-global-economy-by-gdp",
+        img: [
+            { full: "global-economy-by-gdp.png", zoom: "global-economy-by-gdp-zoom.png", chartId: ["voronoi", "treemap"] },
+        ],
+        contextDescription: "An article with neat visual to show proportions of global GDP each countries takes up.", 
+        chartDescription: "Voronoi treemap shows countries with size relative to the amount of global GDP is takes up. We can spot the two biggest economic countributers (U.S. and China) right on.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 257,
+        title: "Mapping the future of the AU-EU partnership",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-map-1.png", zoom: "EU-AU-relation-map-1-zoom.png", chartId: ["map"] },
+            { full: "EU-AU-relation-choropleth-1.png", zoom: "EU-AU-relation-choropleth-1-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "EU-AU-relation-choropleth-2.png", zoom: "EU-AU-relation-choropleth-2-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "EU-AU-relation-treemap.png", zoom: "EU-AU-relation-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "EU-AU-relation-heatmap.png", zoom: "EU-AU-relation-heatmap-zoom.png", chartId: ["heatmap"] },
+            { full: "EU-AU-relation-line-1.png", zoom: "EU-AU-relation-line-1-zoom.png", chartId: ["line"] },
+            { full: "EU-AU-relation-connnected-dot-1.png", zoom: "EU-AU-relation-connnected-dot-1-zoom.png", chartId: ["connectedScatter"] },
+            { full: "EU-AU-relation-correlogram-1.png", zoom: "EU-AU-relation-correlogram-1-zoom.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.", 
+        chartDescription: "The 57 page report has at least one data viz for every page, impressive!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 258,
+        title: "Passport Index Visualization",
+        date: new Date(2025, 11),
+        author: "Ihar Yanouski",
+        url: "https://yanouski.com/projects/passport-index/",
+        img: [
+            { full: "passport-index.png", zoom: "passport-index-zoom.png", chartId: ["map", "connection"] },
+        ],
+        contextDescription: "Which countries' citizens get to travel to which countries, visa-free? Ihar Yanouski uses passport index data to visualize which destinations with a certain visa regime for every country.", 
+        chartDescription: "The interactive visualization allows you to click on either country in map or via search bar to see the flow of map according to visa restriction. Definitely a fun yet informative project to interact with!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 259,
+        title: "The Prevention Gap",
+        date: new Date(2025, 10),
+        author: "Parabole Studio",
+        url: "https://www.parabole.studio/spina-bifida/en",
+        img: [
+            { full: "spina-bifida-half-circle.png", zoom: "spina-bifida-half-circle-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Using charts and illustrations, the article explains about spina bifida, one of the most common serious birth conditions that is yet unknown to many.", 
+        chartDescription: "One of the chart in the article is proportional area chart, which compares two datasets (in this case, continent/incontinent). Size refers to proportion to each measurement.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 260,
+        title: "Chocolate Wars!",
+        date: new Date(2024, 8),
+        author: "Surbhi Bhatia",
+        url: "https://surbhi-bh.github.io/chocolate-wars/",
+        img: [
+            { full: "chocolate-war-radar.png", zoom: "chocolate-war-radar-zoom.png", chartId: ["radar"] },
+            { full: "chocolate-war-barplot.png", zoom: "chocolate-war-barplot-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Does U.S. chocolate taste poorly compared to the same ones produced in Europe? Surbhi Bhatia uses data of each chocolate ingredients to find it out.", 
+        chartDescription: "Fun use of KitKat images to replace the conventional bars in the barchart. The radar chart compares three essential components for chocolate (sugar, fat, and cocoa) between American and European chocolate products.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true
