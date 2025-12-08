@@ -3882,5 +3882,80 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 261,
+        title: "Where's the Youth?",
+        date: new Date(2025, 10),
+        author: "Ansgar Wolsing",
+        url: "https://www.linkedin.com/posts/ansgar-wolsing_30daymapchallenge-rstats-ggplot2-share-7399179654001004544-7CQT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "germany-youth-hexbin.png", zoom: "germany-youth-hexbin-zoom.png", chartId: ["map","hexbin"] },
+        ],
+        contextDescription: "For 2025's #30DayMapChallenge Day 25: Hexagons, Ansgar Wolsing uses population data to visualize share of population aged 15-24 in Germany.", 
+        chartDescription: "Strong visual that displays concentration of youth in certain regions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 262,
+        title: "Should you take the train or the car?",
+        date: new Date(2025, 11),
+        author: "Jules Grandin",
+        url: "https://www.linkedin.com/posts/jules-grandin-60309552_30daymapchallenge-ugcPost-7399342875714686977-O2tf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "france-train-car.png", zoom: "france-train-car-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "For 2025's #30dDayMapChallenge transports, Jules Grandin explores map of the fastest mode of transport from 10 major French cities.", 
+        chartDescription: "The difference between traveling through train (blue) and car (purple) builds up as each color darkens, love it!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 263,
+        title: "Comparison of the environmental impacts of agricultural production",
+        date: new Date(2025, 11),
+        author: "Benjamin Nowak",
+        url: "https://www.linkedin.com/posts/benjamin-nowak-561296352_chaque-fleur-repr%C3%A9sente-lempreinte-activity-7390634971679432704-AaoH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "carbon-footprint-radar.png", zoom: "carbon-footprint-radar-zoom.png", chartId: ["radar"] },
+        ],
+        contextDescription: "Benjamin Nowak uses data of environmental footprint required to produce 1kg of milk, meat, grain or fruit.", 
+        chartDescription: "Instead of the conventional radar chart that we expect of, a symbolic 'flower' is used to represent environmental footprint. The size of each petal corresponds to type of impact, with largest petal represention the production with greatest impact.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 264,
+        title: "Young adult's personalities are changing, with conscientiousness in freefall",
+        date: new Date(2025, 9),
+        author: "The Financial Times",
+        url: "https://www.ft.com/content/5cd77ef0-b546-4105-8946-36db3f84dc43",
+        img: [
+            { full: "consciousness-ft-line.png", zoom: "consciousness-ft-line-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "The Financial Times uses data with different age groups to visualize the downfall of consciousness that is especially strong among young adults.", 
+        chartDescription: "One simple line chart suggesting interesting trend of consciousness in freefall.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 265,
+        title: "ACT Threatened Species",
+        date: new Date(2025, 6),
+        author: "Diana MacDonald",
+        url: "https://didoesdigital.com/30-day-chart-challenge-2025/",
+        img: [
+            { full: "ACT-threatened-species.png", zoom: "ACT-threatened-species-zoom.png", chartId: ["dendrogram"] },
+        ],
+        contextDescription: "One of Diana MacDonald's complete 30 day chart challenge for 2025, this visualization lists ACT Threatened Species including a cute Scarlet Robin.", 
+        chartDescription: "If you are curious to explore more, make sure to check out the complete collection through the link below!",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false
     }
 ]
