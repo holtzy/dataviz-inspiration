@@ -3957,5 +3957,110 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: false
+    },
+    {
+        id: 266,
+        title: "Are you in TikTok's cat niche? What 121,000 videos reveal.",
+        date: new Date(2025, 12),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/technology/interactive/2025/tiktok-algorithm-video-map-interests/",
+        img: [
+            { full: "tiktok-algorithm-wp.png", zoom: "tiktok-algorithm-wp-zoom.png", chartId: ["map", "hexbin"] },
+        ],
+        contextDescription: "Did you know cat videas are often watched by people who also enjoy LGBTQ+ and music content? That's what The Washington Post says according to an analysis based on watch histories provided by 1,100 tiktok users.", 
+        chartDescription: "Along various topics that are clustered according to TikTok's algorithm, the hexbin map shows which hastag is opposite to which hastags.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 267,
+        title: "The Physical Phenomenon: Why CDs are still well-loved in Kpop",
+        date: new Date(2025, 10),
+        author: "Kontinentalist",
+        url: "https://kontinentalist.com/stories/kpop-physical-album-sales-environmental-impact",
+        img: [
+            { full: "kpop-physical-album.png", zoom: "kpop-physical-album-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Popularity of kpop and its kpop merch frenzy comes with a cost. The Kontinentalist visualizes how album sales from Kpop has exponentially increased, with physical albums posing as an environmental concern.", 
+        chartDescription: "Size of icon means amount of albums sold. For more information, you can mouse over each icons.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 268,
+        title: "Business is booming for defense contractors",
+        date: new Date(2025, 12),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/BUSINESS-DEFENSE/lbvgmjwxrvq/",
+        img: [
+            { full: "defense-company-reuters.png", zoom: "defense-company-reuters-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "Military spending has risen over the past years worldwide. Which would mean new recording revenues for defense industries. Reuters visualizes  top defense companies for dominant countries and regions.", 
+        chartDescription: "Using circular packing, each big circle represents either a country or a region. The nested circles represent defense companies and its size correspond to revenue from arms sales.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 269,
+        title: "How Much Snow Will Fall Where You Live?",
+        date: new Date(2025, 12),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2025/upshot/snow-forecast-totals-lookup.html",
+        img: [
+            { full: "2025-US-snow-map.png", zoom: "2025-US-snow-map-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "Will we be celebrating White Christmas for 2025? We could only look to weather forecasts to give our best guess. The New York Times uses weather forecaster to visualize the likeliness to snow in the United States.", 
+        chartDescription: "The data is updated with the newly issued data noted below the map.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 271,
+        title: "Who earns a higher salary than you and the jobs they work",
+        date: new Date(2025, 12),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2025/12/02/who-makes-a-higher-salary-and-the-jobs-they-work/",
+        img: [
+            { full: "who-earns-higher-salary-nathan-yau.png", zoom: "who-earns-higher-salary-nathan-yau-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "Another fun, interactive dataviz by Nathan Yau, the visual allows you to see who makes more than you and in which occupation.", 
+        chartDescription: "You can use the slider to adjust annual salary!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 272,
+        title: "Investment in AI is exploding",
+        date: new Date(2025, 12),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/USA-ECONOMY/AI-INVESTMENT/gkvlqbgxkpb/",
+        img: [
+            { full: "AI-investment-reuters.png", zoom: "AI-investment-reuters-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Just how much investment is being made in AI? Reuters says it has already outstripped government-led initiatives like the Manhaten Project and the Apollo program. The article dives into the vast investment that is currently being made.", 
+        chartDescription: "A cool interactive bar chart that compares the invesment that has been made to space projects and AI. If you keep scrolling it shows how AI investment has far passed the other past projects.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 273,
+        title: "We asked more than 40 people to track their coffee consumption for a week. Here is what we found.",
+        date: new Date(2025, 12),
+        author: "Straits Times",
+        url: "https://www.straitstimes.com/multimedia/graphics/2025/12/singapore-coffee/index.html",
+        img: [
+            { full: "coffee-straits-times.png", zoom: "coffee-straits-times-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "A delight work by Straits Times, visualizing 40 people of their coffee consumption for a week.", 
+        chartDescription: "Love the part where you customize your own cup of cofee depending on its coffee bean, taste, and the feeling after drinking it.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
