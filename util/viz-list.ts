@@ -4062,5 +4062,215 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 274,
+        title: "#La France des loyers 2025",
+        date: new Date(2025, 12),
+        author: "Boris Mericskay",
+        url: "https://www.linkedin.com/posts/boris-mericskay-378aa029_loyers-opendata-activity-7406640108818366465-XXV_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "france-rent-2025.png", zoom: "france-rent-2025-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "The visualization uses rents by municipality using data from 9 million rental listings from open data set from the French Ministry of Ecology, Territorial Development, Transport, Urban Affairs and Housing.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 275,
+        title: "The Chinese goods Americans most rely on, from microwaves to Barbies",
+        date: new Date(2025, 4),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/ec96e2ed-5dd6-4c6b-92a0-1b77bf517b36?accessToken=zwAAAZs_uUTGkdPsluLtXdZMa9OSoBt3v1F7Ng.MEUCIQDIwnmhGX5e10KOsaGFvmZBXDEqGpTNtsRwWF2hLq1cRAIgODLehLuva-kQ96CXPhPJ-Ti_z0BlN6kuyiU9-VrSr00&segmentId=e95a9ae7-622c-6235-5f87-51e412b47e97&shareType=enterprise&shareId=08fb2bbc-d79f-48a9-b89a-14735e1526eb",
+        img: [
+            { full: "ft-chinese-import-tariff.png", zoom: "ft-chinese-import-tariff-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Despite the tariff war between US and China, the reliance on Chinese goods is undeniable. In this piece, Financial Times analyzes which categorized goods the US has been relying most.", 
+        chartDescription: "Each circle represents Chinese goods in a certain categorized, which is distinguished through color. You can easily see which imports are most critical to the tariff Trump adminsistration has imposed.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 276,
+        title: "Horror's favorite words",
+        date: new Date(2024, 11),
+        author: "Georgios Karamanis",
+        url: "https://karaman.is/blog/2024/11/tidytuesday-2024-44",
+        img: [
+            { full: "horror-word-pumpkin.png", zoom: "horror-word-pumpkin-zoom.png", chartId: ["wordcloud"] },
+        ],
+        contextDescription: "Georgios Karamanis's submission for #TidyTuesday 2024, week of 44, she uses monster movie titles to look at some of the most frequent words.", 
+        chartDescription: "Love the pumpkin!",
+        tools: [{ name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2024/2024-week_44" }],
+        luminosity: ["dark"],
+        interactive: false
+    },
+    {
+        id: 277,
+        title: "How Much the Most Followed Instagram Accounts Earn on Posts",
+        date: new Date(2023, 7),
+        author: "Visual Capitalist",
+        url: "https://www.visualcapitalist.com/cp/most-followed-instagram-accounts-earn-posts/",
+        img: [
+            { full: "instagram-rich-list.png", zoom: "instagram-rich-list-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "We know that a single post from a renowned celebrity can capture the attention of millions. But how powerful is that influence when it comes to money? Visual Capitalist visualizes Instagram's biggest accounts, and their estimated earnings per sponsored post.", 
+        chartDescription: "Each circle represents one celebrity with size corresponding to earnings per post. This kind of new ranking makes it easier for readers to absorb information.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 278,
+        title: "Dreams and Deadly Seas",
+        date: new Date(2023, 7),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/nation/interactive/2023/bahamas-human-smuggling-by-boat/?utm_campaign=wp_main&utm_medium=social&utm_source=twitter",
+        img: [
+            { full: "haiti-migrant-map.png", zoom: "haiti-migrant-map-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "In this article, The Washington Post covers the increasing attempts of Haitians to cross the Bahamian waters for migration. The map visualizes their journey, which often ends up into unfortunate events.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 279,
+        title: "Home Hot Home",
+        date: new Date(2020, 7),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/101477175/Home-Hot-Home-La-Lettura-450-dataviz",
+        img: [
+            { full: "volcanoe-eruptions.png", zoom: "volcanoe-eruptions-zoom.png", chartId: ["sankey", "line"] },
+        ],
+        contextDescription: "A really cool work of visualization showing ten volcanoes and the record of its eruptions.", 
+        chartDescription: "Love the visualization packed with so many interesting facts!",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 280,
+        title: "White Christmas",
+        date: new Date(2019, 12),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/89693687/White-Christmas-La-Lettura-377-dataviz",
+        img: [
+            { full: "circular-barplot-white-christmas.png", zoom: "circular-barplot-white-christmas-zoom.png", chartId: ["circularBarplot"] },
+        ],
+        contextDescription: "A circular barplot that shows days of snow and hail in each Italian chief town arranged by season and weather on Christmas day. The data is from 1973~2019.", 
+        chartDescription: "The bars for each plot are arranged in time order clockwise, with height corresponding to weather categories (snow, hail, etc). What an inspiration!",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 281,
+        title: "Where the Crime Ends Up",
+        date: new Date(2019, 4),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/79767529/Where-the-Crime-Ends-Up-La-Lettura-387-dataviz",
+        img: [
+            { full: "crime-asset-stream.png", zoom: "crime-asset-stream-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "The visualization shows the seized assets (real estates and companies) from organized crime in Italy.", 
+        chartDescription: "If you follow the stream (left to right) you can see new destination of seized assets and new purposes.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 282,
+        title: "Amustment Park Atlas",
+        date: new Date(2018, 4),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/64346469/Amusement-Park-Atlas-La-Lettura-332-dataviz",
+        img: [
+            { full: "amusement-park-north-america.png", zoom: "amusement-park-north-america-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "What are the top 10 most visited amusement parks in North America? This map visualization uses data of number of visitors in 2016 to find out.", 
+        chartDescription: "Orange bubble represents top 10 most visited amusement parks while light blue bubble represents top 10 water parks in North America.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 283,
+        title: "The most friendless place on earth",
+        date: new Date(2025, 12),
+        author: "The Economist",
+        url: "https://www.economist.com/christmas-specials/2025/12/18/the-most-friendless-place-on-earth?utm_campaign=trueanthem&utm_medium=social&utm_source=linkedin",
+        img: [
+            { full: "loneliness-income-the-economist.png", zoom: "loneliness-income-the-economist-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Does being rich make you lonelier? Well that is not the case when comparing countries by income. The Economist, using data from 2025 or latest available, finds out the the percentage of loneliness people felt.", 
+        chartDescription: "Each line represent countries divided into income level. We can easily see that the ones experiencing more loneliness are the ones in red (low-income countries)",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 284,
+        title: "What street talk reveals about Alglophone civilisation",
+        date: new Date(2025, 12),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/christmas-specials/2025/12/18/what-street-talk-reveals-about-anglophone-civilisation",
+        img: [
+            { full: "drinking-slang-word-the-economist.png", zoom: "drinking-slang-word-the-economist-zoom.png", chartId: ["wordcloud"] },
+        ],
+        contextDescription: "For Christmas Specials in 2025, The Economist has used a selection of drinking slang 1500-2020 and put them into a wonderful time-lined word visualization.", 
+        chartDescription: "Love the animation with words poppling up as I scroll down.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 285,
+        title: "Why Do Some Americans Leave Their Religion While Others Stay?",
+        date: new Date(2025, 12),
+        author: "Pew Research Center",
+        url: "https://www.pewresearch.org/religion/2025/12/15/why-do-some-americans-leave-their-religion-while-others-stay/",
+        img: [
+            { full: "American-religion-pew-research.png", zoom: "American-religion-pew-research-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "An interesting finding from Pew Research Center that 56% of U.S. adults identify with their childhood religion. The original paper goes more in depth to find out the reason behind this.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 286,
+        title: "Celebrating Winter Solstice",
+        date: new Date(2025, 12),
+        author: "Sonja Kuijpers",
+        url: "https://bsky.app/profile/sonjakuijpers.bsky.social/post/3malarsl6ns26",
+        img: [
+            { full: "celebrate-winter-solstice.png", zoom: "celebrate-winter-solstice-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A map visualization that shows where in the world solstice is/was a ritual celebration.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 287,
+        title: "AI Data Center Gold Rush Driven by Thousands of Newcomers",
+        date: new Date(2025, 12),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/graphics/2025-ai-data-center-ownership/?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc2NjQwNzE5OCwiZXhwIjoxNzY3MDExOTk4LCJhcnRpY2xlSWQiOiJUN04zU0JLSVAzSkYwMCIsImJjb25uZWN0SWQiOiI2NDE5MTFBQjEzOTg0M0FGOEQ1MzEzOEEwQjkzQzdGMiJ9.FTkdmDlaUSRQOL5y-DUzcvNbSPGDpeGvHE9yrNse9ls",
+        img: [
+            { full: "AI-data-center-bloomberg.png", zoom: "AI-data-center-bloomberg-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "Four major tech companies has been dominating the AI infrastructure game, but there are new players incoming. Bloomberg analyzed thousands of data center operators, visualizing both the current AI data center occupation as well as its future with new players.", 
+        chartDescription: "The scroytelling of current AI data centers in map shows what the future will be like if other firms come to join the race.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true
     }
 ]
