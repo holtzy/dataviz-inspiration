@@ -4272,5 +4272,65 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: true
+    },
+    {
+        id: 288,
+        title: "Who we choose to spend our days with",
+        date: new Date(2025, 12),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2025/12/17/time-with-others/",
+        img: [
+            { full: "time-with-others-nathan-yau.png", zoom: "time-with-others-nathan-yau-zoom.png", chartId: ["ridgeline"] },
+        ],
+        contextDescription: "Who are we spending our days with? Nathan Yau uses American Time User Survey between 2022 and 2024 to show  the distribution of time spent with others.", 
+        chartDescription: "Fun interactive with options to change respondents by sex, age, and time of week.",
+        tools: [{ name: "R", link: "" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 289,
+        title: "Inside the Deportation Machine",
+        date: new Date(2025, 12),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2025/12/22/us/trump-immigration-deportation-network-ice-arrests.html",
+        img: [
+            { full: "ICE-deport-ny-times.png", zoom: "ICE-deport-ny-times-zoom.png", chartId: ["connection", "map"] },
+        ],
+        contextDescription: "A powerful visual storytelling about how ICE has moved thousands of people through detention and out of the country.", 
+        chartDescription: "Besides the animated connected map which shows transfers and removals of people, there are additional maps that visualizes where ICE makes arrests and where they are held, all very powerful. Make sure to check them out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 290,
+        title: "Why playful adults help Lego build an empire at Christmas and beyond",
+        date: new Date(2025, 12),
+        author: "USA Today",
+        url: "https://www.usatoday.com/story/graphics/2025/12/22/why-adults-want-legos-for-christmas/87667388007/",
+        img: [
+            { full: "lego-USA-today.png", zoom: "lego-USA-today-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Lego, once deemed as a toy for kids, is capturing attention of adults as well. USA Today uses visualizations to explain its growing market.", 
+        chartDescription: "The simple bar chart made with Lego block shows the increasing number of Lego branded stores, worldwide.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 291,
+        title: "What if you'd been born somewhere else?",
+        date: new Date(2025, 12),
+        author: "Giving What We Can",
+        url: "https://www.givingwhatwecan.org/birth-lottery",
+        img: [
+            { full: "born-again-life-change.png", zoom: "born-again-life-change-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "An interesting game where you spin the globe to choose where to be born again, and see your expected life expectancy and child mortality at this new birthplace.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
