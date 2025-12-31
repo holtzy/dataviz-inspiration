@@ -4332,5 +4332,80 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 292,
+        title: "More Texas students complete journey through college, but low-income students still left behind",
+        date: new Date(2025, 12),
+        author: "The Texas Tribune",
+        url: "https://www.texastribune.org/2025/12/18/texas-college-completion-income-gap/",
+        img: [
+            { full: "texas-tribune-income-college.png", zoom: "texas-tribune-income-college-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "The Texas Tribune uses state data to track how economically disadvantaged students are much less likely to go on and attain degrees.", 
+        chartDescription: "The animated sankey flow shows how economic disadvantage impacts student outcomes. For a more straight-forward result, there is another option to look at waffle chart of the same result.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 293,
+        title: "Map: The 2024 European election results in France, town by town",
+        date: new Date(2024, 6),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/en/les-decodeurs/article/2024/06/10/map-the-2024-european-election-results-in-france-town-by-town_6674392_8.html",
+        img: [
+            { full: "france-2024-election-le-monde.png", zoom: "france-2024-election-le-monde-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Le Monde visualizes the 2024 European election results in France, town by town.", 
+        chartDescription: "Love the colorblind option below the map chart!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 294,
+        title: "Where do all the world's people live?",
+        date: new Date(2024, 6),
+        author: "Information is beautiful",
+        url: "https://informationisbeautiful.net/visualizations/world-population/",
+        img: [
+            { full: "country-population-voronoi-treemap.png", zoom: "country-population-voronoi-treemap-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "Information is Beautiful uses United Nation's mid-year predictions for 2023 to visualize country by population.", 
+        chartDescription: "Voronoi treemap shows regions that has been subdivded into each country, with size deteremined by population.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: false
+    },
+    {
+        id: 295,
+        title: "What Ukraine Has Lost",
+        date: new Date(2024, 6),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2024/06/03/world/europe/ukraine-destruction.html?unlocked_article_code=1.2E0.3bTN.QtLQJNlnREc4",
+        img: [
+            { full: "ukraine-damage-map-the-new-york-times.png", zoom: "ukraine-damage-map-the-new-york-times-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "The New York Times has visualized the destruction in Ukraine, using interactive storytelling and data to highlight the damages.", 
+        chartDescription: "Definitely recommend checking out the story, and if you are interested in the visualization process, check out the  <a href='https://mhinfographics.com/2024/06/22/visualizing-the-destruction-in-ukraine-a-years-long-project-following-satellite-clues/'> extensive blog </a> writtern by its creator.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 296,
+        title: "Sociology of French electorates",
+        date: new Date(2024, 6),
+        author: "Karim Douïeb",
+        url: "https://x.com/karim_douieb/status/1808019774108234065",
+        img: [
+            { full: "french-election-2024-karim-douieb.png", zoom: "french-election-2024-karim-douieb-zoom.png", chartId: [] },
+        ],
+        contextDescription: "Karim Douïeb uses data from Ipsos to visualize sociology of French electorates.", 
+        chartDescription: "This chart would be Marimekko chart, which has both axes as percentage scales, that deteremines wideth and height of each variables in a certain categorical data.",
+        tools: [{ name: "JavaScript", link: "https://observablehq.com/d/49626e7e21f5f83e" }],
+        luminosity: ["light"],
+        interactive: false
     }
 ]
