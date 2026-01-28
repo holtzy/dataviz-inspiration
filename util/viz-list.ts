@@ -4407,5 +4407,185 @@ export const vizList: VizItem[] = [
         tools: [{ name: "JavaScript", link: "https://observablehq.com/d/49626e7e21f5f83e" }],
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 297,
+        title: "Monitoring forest fires in Europe through high-value datasets",
+        date: new Date(2023, 1),
+        author: "Federica Fragapane",
+        url: "https://www.behance.net/gallery/208653779/Graphics-for-thePublications-Office-of-the-EU-Trade",
+        img: [
+            { full: "forest-fire-voronoi-treemap.png", zoom: "forest-fire-voronoi-treemap-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A data viz created by Federica Fragapane using European Union's data on forest fires. You can see the article published by EU <a href='https://data.europa.eu/en/publications/datastories/high-value-datasets-forest-fires-eu'> here </a>.", 
+        chartDescription: "Voronoi treemap shows goods imported by member state, with each portion of circle representing EU member state.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 298,
+        title: "40,000 tweets in two years: Elon Musk's switch to X dissected",
+        date: new Date(2025, 3),
+        author: "Les Echos",
+        url: "https://www.lesechos.fr/monde/enjeux-internationaux/40000-tweets-en-deux-ans-la-bascule-delon-musk-sur-x-dissequee-2153587",
+        img: [
+            { full: "elon-musk-tweet-les-echos.png", zoom: "elon-musk-tweet-les-echos-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Les Echos has invested 40,000 tweets Elon Musk made in the last two years. Using those data, the visualization shows which topics Elon Musk has focused on his tweet.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 299,
+        title: "Data Visualization of Clients Career",
+        date: new Date(2021, 11),
+        author: "Tanja Radovanovic",
+        url: "https://www.behance.net/gallery/131602347/Data-Visualization-of-Clients-Career",
+        img: [
+            { full: "company-impact-project-data-art.png", zoom: "company-impact-project-data-art-zoom.png", chartId: [] },
+        ],
+        contextDescription: "A client work from a group that wanted to present a colleague's impact in the company, Tanja Radovanovic uses the collected data to create a time-lined data art.", 
+        chartDescription: "Each plant is one project with biggest flower the main fruit of her work. Love the nice data art guides provided below the work.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 300,
+        title: "GitHub Commit History Timeline",
+        date: new Date(2024, 3),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/ORCA/commit-history/",
+        img: [
+            { full: "git-commit-nadieh-bremer.png", zoom: "git-commit-nadieh-bremer-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "A client work for Mozilla, the interactive visualization shows entire commit history of a GitHub repository.", 
+        chartDescription: "The visualization groups all commits by months, scaled by the number of lines changed in the commit. There is an interactive which allows user to explore commits and find other commits made by the same author. For more details on the creative process, check out her <a href='https://www.visualcinnamon.com/portfolio/orca-github-commits/'> blog! </a>",
+        tools: [{ name: "d3.js", link: "" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 301,
+        title: "More days with less Arctic sea ice",
+        date: new Date(2024, 12),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/63fbcf2b-9acc-4ccb-ac12-9f3b78e85b68?accessToken=zwAAAZvv7bK8kc9j-88rmsxMy9OsEp87eOhbaA.MEUCIEd6Dc46AyWNN4yyu3qFQ8gOoFELU-6CGeCmvf25GN5-AiEAuwOwEI66rDT0qk2bmYq3eufDfAFToinx6z3dO2WDSXA&segmentId=e95a9ae7-622c-6235-5f87-51e412b47e97&shareType=enterprise&shareId=27b72d04-71d2-4d72-95d4-22f8ec782d5f",
+        img: [
+            { full: "less-arctic-sea-ice-financial-times.png", zoom: "less-arctic-sea-ice-financial-times-zoom.png", chartId: ["ridgeline"] },
+        ],
+        contextDescription: "New study shows that first ice-free day in the Arctic Ocean may come beofre 2030. Financial Times uses ridgeline plot to show the change in Arctic sea ice over the years.", 
+        chartDescription: "The distribution moving gradually towards the left shows the decrease in sea ice and what is to come ahead in the future.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 302,
+        title: "Europe wants Kamala Harris",
+        date: new Date(2024, 11),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/europe-wants-kamala-harris",
+        img: [
+            { full: "europe-wants-kamala-harris-european-correspondent.png", zoom: "europe-wants-kamala-harris-european-correspondent-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The European Correspondent visualizes a survey result that suggests Europeans prefer Kamala Harris to be elected as U.S president over Donald Trump.", 
+        chartDescription: "Nice, clean graph with annotations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 303,
+        title: "Explore the striking political divides across Europe",
+        date: new Date(2024, 11),
+        author: "de Volkskrant",
+        url: "https://www.volkskrant.nl/kijkverder/v/2024/zo-stemde-europa-alle-regios-en-gemeenten-in-kaart~v1119423/",
+        img: [
+            { full: "de-Volkskrant-european-election.png", zoom: "de-Volkskrant-european-election-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "An interactive map for European elections, where users get to explore voting results across the 27 European Union member states.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 304,
+        title: "This is how the AfD brought hatred into parliaments",
+        date: new Date(2024, 8),
+        author: "Tagesspiegel",
+        url: "https://interaktiv.tagesspiegel.de/lab/von-messermaennern-und-ficki-ficki-bereicherern-so-trug-die-afd-den-hass-in-die-parlamente/",
+        img: [
+            { full: "afD-hatred-parliament-map.png", zoom: "afD-hatred-parliament-map-zoom.png", chartId: ["map", "barplot", "choropleth"] },
+        ],
+        contextDescription: "An extensive scrollytelling analysis of AfD speeches in German state parliament. Throught the speech over the years, there is map highlighting certain regions that has mentioned certain topics more than any other region.", 
+        chartDescription: "Love how they added a barplot below map to show actual mentions over time.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 305,
+        title: "Too Much Of A Good Thing",
+        date: new Date(2024, 8),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/united-states/2024/08/31/americans-love-affair-with-big-cars-is-killing-them",
+        img: [
+            { full: "big-car-weight-the-economist.png", zoom: "big-car-weight-the-economist-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "An analysis by The Economist shows that weight is still a critical factor in car crashes in America. Using data, the visualization shows relationship between vehicle weight and road safety.", 
+        chartDescription: "The grey dot represents fatality rate of the occupants of heavy pickup truck while red one represents fatality rate of people in other cars. The following result is that as weight of your car increases, the risk of killing others will increase dramatically.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 306,
+        title: "The Star Trek Universe",
+        date: new Date(2022, 8),
+        author: "Varun Jain",
+        url: "https://public.tableau.com/app/profile/varun.viz.vorkshop/viz/TheStarTrekUniverse/Dashboard",
+        img: [
+            { full: "star-trek-voronoi-treemap-tableau.png", zoom: "star-trek-voronoi-treemap-tableau-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A voronoi treemap representing TV Series in the Star Trek universe, made with Tableau.", 
+        chartDescription: "Each block represents one season, with size according to number of episodes. Color of block is divided by series.",
+        tools: [{ name: "tableau", link: "" }],
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 307,
+        title: "James Bond Movie Franchise",
+        date: new Date(2022, 2),
+        author: "Mateusz Karmalski",
+        url: "https://public.tableau.com/app/profile/mateusz.karmalski/viz/Book1_16438173422630/BOND",
+        img: [
+            { full: "james-bond-tableau-iron-viz.png", zoom: "james-bond-tableau-iron-viz-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A submission for <a href='https://www.tableau.com/community/iron-viz'> #ironviz</a>, data-viz competition using Tableau, Mateusz Karmalski uses James Bond movie data to visualize the film.", 
+        chartDescription: "Love how there is a treemap in the shape of a wine glass!",
+        tools: [{ name: "tableau", link: "" }],
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 308,
+        title: "French Rainfall",
+        date: new Date(2024, 12),
+        author: "Thomas Maguin",
+        url: "https://www.linkedin.com/posts/thomas-maguin-bb1104189_kartotheque-gis-maeztaezo-activity-7241321164998946816-506m/?utm_source=share&utm_medium=member_desktop",
+        img: [
+            { full: "france-rainfall-choropleth-map.png", zoom: "france-rainfall-choropleth-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "A visual oveview of rainfall variations across France, highlighting the rainiest regions.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
