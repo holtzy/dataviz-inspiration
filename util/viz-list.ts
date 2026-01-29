@@ -4587,5 +4587,140 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 309,
+        title: "Education attainment vs. GDP per Capita PPPs (2005-2023)",
+        date: new Date(2025, 4),
+        author: "Jorge CamõesJorge Camões",
+        url: "https://www.linkedin.com/posts/camoesjo_when-you-have-a-single-series-full-of-twists-activity-7318211151962513409-hHJB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "education-gdp-connected-scatterplot.png", zoom: "education-gdp-connected-scatterplot-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "This visualization shows education attainment by GDP per Capita PPPs for each country. Using connected scatterplot, it shows sequential nature of the data.", 
+        chartDescription: "The color indicates western (blue) and former communist (red) countries, with height x-axis and y-axis depending on more education and more purschasing power accordingly.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 310,
+        title: "How Europe is feeling",
+        date: new Date(2026, 1),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/beyond-gdp-how-europe-is-actually-doing",
+        img: [
+            { full: "how-europe-is-feeling-european-correspondent.png", zoom: "how-europe-is-feeling-european-correspondent-zoom.png", chartId: ["scatter", "beeswarm"] },
+        ],
+        contextDescription: "To look at how people in Europe has been feeling lately, The European Correspondent uses survey data to show distribution of different feelings people felt in the previous day.", 
+        chartDescription: "Different categories of feeling each have their own beeswarm according to response. Colors are divided into positive (green) and negative (red).",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 311,
+        title: "2025 was the third hottest year in record",
+        date: new Date(2026, 1),
+        author: "The Economist",
+        url: "https://www.economist.com/science-and-technology/2026/01/14/2025-was-the-third-hottest-year-on-record",
+        img: [
+            { full: "hottest-year-2025-the-economist-heatmap.png", zoom: "hottest-year-2025-the-economist-heatmap-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "When it comes to climate change, you cannot leave out data. The Economist visualizes the global surface air-temperature for the past years.", 
+        chartDescription: "Heatmap shows how temperature has been rising in recent years.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 312,
+        title: "Total funds provided for ICE",
+        date: new Date(2026, 1),
+        author: "New York Times",
+        url: "https://www.nytimes.com/2026/01/28/us/politics/ice-funding-congress.html",
+        img: [
+            { full: "funds-for-ICE-barplot-ny-times.png", zoom: "funds-for-ICE-barplot-ny-times-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Strong visual showing how much funding has been provided for ICE for the past years.", 
+        chartDescription: "The distinctive orange barplots along with bold annotations highlight the dramatic increase of funding for ICE.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 313,
+        title: "What science can tell us about dog breeds",
+        date: new Date(2026, 1),
+        author: "Scientific American",
+        url: "https://www.scientificamerican.com/article/which-dog-breed-stereotypes-are-true-heres-the-science/",
+        img: [
+            { full: "dog-breed-behavior-scientific-american.png", zoom: "dog-breed-behavior-scientific-american-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "A visualization by Scientific American using data on dog behavior obtained from more than 50,000 owners to categories behaviors by breeds.", 
+        chartDescription: "This is a dot plot with each dot representing a certain dog breed. Color distinctions are made according to typical size. Make sure to check out the article to explore more on other categoreis as well!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 314,
+        title: "What makes Britons oppose immigration?",
+        date: new Date(2026, 1),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/britain/2025/01/22/a-detailed-look-at-britains-changing-ethnic-mix",
+        img: [
+            { full: "britain-ethnicity-diverse-segregate-the-economist.png", zoom: "britain-ethnicity-diverse-segregate-the-economist-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "An interactive article by The Economist analyzing how diverse Britain has become and in which regions specifically. With the offical data currently unavailable, they have used annual census of schoolchildren to figure out the ethnic make-up of the country. For more details on the analysis, you can check out <a href='https://theeconomistoffthecharts.substack.com/'> The Economist: Off the Charts</a>, a newsletter from The Economist data and visual journalism team.", 
+        chartDescription: "The scatterplot shows constituencies in England, with areas split into four sections according to diversity and segregation. A search bar allows you to find specific constituency and see which section it belongs to.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 315,
+        title: "Bird watching",
+        date: new Date(2026, 1),
+        author: "Amanda Shendruk",
+        url: "https://www.not-ship.com/birds-might-help-us-get-through-this/",
+        img: [
+            { full: "UK-bird-joy-rating-not-ship.png", zoom: "UK-bird-joy-rating-not-ship-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "A visualization that ranks bird types using data of joy rating for common UK birds.", 
+        chartDescription: "A joy rating for each bird type, with line representing 95% confidence interval.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 316,
+        title: "Homeland Security presence in Minnesota",
+        date: new Date(2026, 1),
+        author: "The Minnesota Star Tribune",
+        url: "https://www.startribune.com/how-ice-numbers-compare-to-twin-cities-largest-police-forces/601562617?utm_source=gift",
+        img: [
+            { full: "minnesota-federal-agent-pie-chart.png", zoom: "minnesota-federal-agent-pie-chart-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "With the ongoing tensions in Minnesota with federal presence, The Minnesota Star Tribune has visualized what it would look like if additional federal agents were to head to the city.", 
+        chartDescription: "Instead of plain, solid pie chart showing propotions, the pie chart comes in a scatter of numerous dots with each representing one officer. This allows strong visual of how one side outnumbers the other.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 317,
+        title: "Ice cream flavors",
+        date: new Date(2025, 6),
+        author: "CNN",
+        url: "https://edition.cnn.com/interactive/politics/ranked-choice-voting-explained-dg/",
+        img: [
+            { full: "ice-cream-flavor-ranking-cnn.png", zoom: "ice-cream-flavor-ranking-cnn-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "A sweet interactive article showing how ranked-choice voting process works for ice-cream.", 
+        chartDescription: "A fun interactive where you first rank five favorite ice cream flavors and follow along the votes getting counted until the final winner is decided.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
