@@ -4407,5 +4407,320 @@ export const vizList: VizItem[] = [
         tools: [{ name: "JavaScript", link: "https://observablehq.com/d/49626e7e21f5f83e" }],
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 297,
+        title: "Monitoring forest fires in Europe through high-value datasets",
+        date: new Date(2023, 1),
+        author: "Federica Fragapane",
+        url: "https://www.behance.net/gallery/208653779/Graphics-for-thePublications-Office-of-the-EU-Trade",
+        img: [
+            { full: "forest-fire-voronoi-treemap.png", zoom: "forest-fire-voronoi-treemap-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A data viz created by Federica Fragapane using European Union's data on forest fires. You can see the article published by EU <a href='https://data.europa.eu/en/publications/datastories/high-value-datasets-forest-fires-eu'> here </a>.", 
+        chartDescription: "Voronoi treemap shows goods imported by member state, with each portion of circle representing EU member state.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 298,
+        title: "40,000 tweets in two years: Elon Musk's switch to X dissected",
+        date: new Date(2025, 3),
+        author: "Les Echos",
+        url: "https://www.lesechos.fr/monde/enjeux-internationaux/40000-tweets-en-deux-ans-la-bascule-delon-musk-sur-x-dissequee-2153587",
+        img: [
+            { full: "elon-musk-tweet-les-echos.png", zoom: "elon-musk-tweet-les-echos-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Les Echos has invested 40,000 tweets Elon Musk made in the last two years. Using those data, the visualization shows which topics Elon Musk has focused on his tweet.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 299,
+        title: "Data Visualization of Clients Career",
+        date: new Date(2021, 11),
+        author: "Tanja Radovanovic",
+        url: "https://www.behance.net/gallery/131602347/Data-Visualization-of-Clients-Career",
+        img: [
+            { full: "company-impact-project-data-art.png", zoom: "company-impact-project-data-art-zoom.png", chartId: [] },
+        ],
+        contextDescription: "A client work from a group that wanted to present a colleague's impact in the company, Tanja Radovanovic uses the collected data to create a time-lined data art.", 
+        chartDescription: "Each plant is one project with biggest flower the main fruit of her work. Love the nice data art guides provided below the work.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 300,
+        title: "GitHub Commit History Timeline",
+        date: new Date(2024, 3),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/ORCA/commit-history/",
+        img: [
+            { full: "git-commit-nadieh-bremer.png", zoom: "git-commit-nadieh-bremer-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "A client work for Mozilla, the interactive visualization shows entire commit history of a GitHub repository.", 
+        chartDescription: "The visualization groups all commits by months, scaled by the number of lines changed in the commit. There is an interactive which allows user to explore commits and find other commits made by the same author. For more details on the creative process, check out her <a href='https://www.visualcinnamon.com/portfolio/orca-github-commits/'> blog! </a>",
+        tools: [{ name: "d3.js", link: "" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 301,
+        title: "More days with less Arctic sea ice",
+        date: new Date(2024, 12),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/63fbcf2b-9acc-4ccb-ac12-9f3b78e85b68?accessToken=zwAAAZvv7bK8kc9j-88rmsxMy9OsEp87eOhbaA.MEUCIEd6Dc46AyWNN4yyu3qFQ8gOoFELU-6CGeCmvf25GN5-AiEAuwOwEI66rDT0qk2bmYq3eufDfAFToinx6z3dO2WDSXA&segmentId=e95a9ae7-622c-6235-5f87-51e412b47e97&shareType=enterprise&shareId=27b72d04-71d2-4d72-95d4-22f8ec782d5f",
+        img: [
+            { full: "less-arctic-sea-ice-financial-times.png", zoom: "less-arctic-sea-ice-financial-times-zoom.png", chartId: ["ridgeline"] },
+        ],
+        contextDescription: "New study shows that first ice-free day in the Arctic Ocean may come beofre 2030. Financial Times uses ridgeline plot to show the change in Arctic sea ice over the years.", 
+        chartDescription: "The distribution moving gradually towards the left shows the decrease in sea ice and what is to come ahead in the future.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 302,
+        title: "Europe wants Kamala Harris",
+        date: new Date(2024, 11),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/europe-wants-kamala-harris",
+        img: [
+            { full: "europe-wants-kamala-harris-european-correspondent.png", zoom: "europe-wants-kamala-harris-european-correspondent-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The European Correspondent visualizes a survey result that suggests Europeans prefer Kamala Harris to be elected as U.S president over Donald Trump.", 
+        chartDescription: "Nice, clean graph with annotations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 303,
+        title: "Explore the striking political divides across Europe",
+        date: new Date(2024, 11),
+        author: "de Volkskrant",
+        url: "https://www.volkskrant.nl/kijkverder/v/2024/zo-stemde-europa-alle-regios-en-gemeenten-in-kaart~v1119423/",
+        img: [
+            { full: "de-Volkskrant-european-election.png", zoom: "de-Volkskrant-european-election-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "An interactive map for European elections, where users get to explore voting results across the 27 European Union member states.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 304,
+        title: "This is how the AfD brought hatred into parliaments",
+        date: new Date(2024, 8),
+        author: "Tagesspiegel",
+        url: "https://interaktiv.tagesspiegel.de/lab/von-messermaennern-und-ficki-ficki-bereicherern-so-trug-die-afd-den-hass-in-die-parlamente/",
+        img: [
+            { full: "afD-hatred-parliament-map.png", zoom: "afD-hatred-parliament-map-zoom.png", chartId: ["map", "barplot", "choropleth"] },
+        ],
+        contextDescription: "An extensive scrollytelling analysis of AfD speeches in German state parliament. Throught the speech over the years, there is map highlighting certain regions that has mentioned certain topics more than any other region.", 
+        chartDescription: "Love how they added a barplot below map to show actual mentions over time.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 305,
+        title: "Too Much Of A Good Thing",
+        date: new Date(2024, 8),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/united-states/2024/08/31/americans-love-affair-with-big-cars-is-killing-them",
+        img: [
+            { full: "big-car-weight-the-economist.png", zoom: "big-car-weight-the-economist-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "An analysis by The Economist shows that weight is still a critical factor in car crashes in America. Using data, the visualization shows relationship between vehicle weight and road safety.", 
+        chartDescription: "The grey dot represents fatality rate of the occupants of heavy pickup truck while red one represents fatality rate of people in other cars. The following result is that as weight of your car increases, the risk of killing others will increase dramatically.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 306,
+        title: "The Star Trek Universe",
+        date: new Date(2022, 8),
+        author: "Varun Jain",
+        url: "https://public.tableau.com/app/profile/varun.viz.vorkshop/viz/TheStarTrekUniverse/Dashboard",
+        img: [
+            { full: "star-trek-voronoi-treemap-tableau.png", zoom: "star-trek-voronoi-treemap-tableau-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A voronoi treemap representing TV Series in the Star Trek universe, made with Tableau.", 
+        chartDescription: "Each block represents one season, with size according to number of episodes. Color of block is divided by series.",
+        tools: [{ name: "tableau", link: "" }],
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 307,
+        title: "James Bond Movie Franchise",
+        date: new Date(2022, 2),
+        author: "Mateusz Karmalski",
+        url: "https://public.tableau.com/app/profile/mateusz.karmalski/viz/Book1_16438173422630/BOND",
+        img: [
+            { full: "james-bond-tableau-iron-viz.png", zoom: "james-bond-tableau-iron-viz-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A submission for <a href='https://www.tableau.com/community/iron-viz'> #ironviz</a>, data-viz competition using Tableau, Mateusz Karmalski uses James Bond movie data to visualize the film.", 
+        chartDescription: "Love how there is a treemap in the shape of a wine glass!",
+        tools: [{ name: "tableau", link: "" }],
+        luminosity: ["dark"],
+        interactive: true
+    },
+    {
+        id: 308,
+        title: "French Rainfall",
+        date: new Date(2024, 12),
+        author: "Thomas Maguin",
+        url: "https://www.linkedin.com/posts/thomas-maguin-bb1104189_kartotheque-gis-maeztaezo-activity-7241321164998946816-506m/?utm_source=share&utm_medium=member_desktop",
+        img: [
+            { full: "france-rainfall-choropleth-map.png", zoom: "france-rainfall-choropleth-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "A visual oveview of rainfall variations across France, highlighting the rainiest regions.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 309,
+        title: "Education attainment vs. GDP per Capita PPPs (2005-2023)",
+        date: new Date(2025, 4),
+        author: "Jorge CamõesJorge Camões",
+        url: "https://www.linkedin.com/posts/camoesjo_when-you-have-a-single-series-full-of-twists-activity-7318211151962513409-hHJB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
+        img: [
+            { full: "education-gdp-connected-scatterplot.png", zoom: "education-gdp-connected-scatterplot-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "This visualization shows education attainment by GDP per Capita PPPs for each country. Using connected scatterplot, it shows sequential nature of the data.", 
+        chartDescription: "The color indicates western (blue) and former communist (red) countries, with height x-axis and y-axis depending on more education and more purschasing power accordingly.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 310,
+        title: "How Europe is feeling",
+        date: new Date(2026, 1),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/beyond-gdp-how-europe-is-actually-doing",
+        img: [
+            { full: "how-europe-is-feeling-european-correspondent.png", zoom: "how-europe-is-feeling-european-correspondent-zoom.png", chartId: ["scatter", "beeswarm"] },
+        ],
+        contextDescription: "To look at how people in Europe has been feeling lately, The European Correspondent uses survey data to show distribution of different feelings people felt in the previous day.", 
+        chartDescription: "Different categories of feeling each have their own beeswarm according to response. Colors are divided into positive (green) and negative (red).",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 311,
+        title: "2025 was the third hottest year in record",
+        date: new Date(2026, 1),
+        author: "The Economist",
+        url: "https://www.economist.com/science-and-technology/2026/01/14/2025-was-the-third-hottest-year-on-record",
+        img: [
+            { full: "hottest-year-2025-the-economist-heatmap.png", zoom: "hottest-year-2025-the-economist-heatmap-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "When it comes to climate change, you cannot leave out data. The Economist visualizes the global surface air-temperature for the past years.", 
+        chartDescription: "Heatmap shows how temperature has been rising in recent years.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 312,
+        title: "Total funds provided for ICE",
+        date: new Date(2026, 1),
+        author: "New York Times",
+        url: "https://www.nytimes.com/2026/01/28/us/politics/ice-funding-congress.html",
+        img: [
+            { full: "funds-for-ICE-barplot-ny-times.png", zoom: "funds-for-ICE-barplot-ny-times-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Strong visual showing how much funding has been provided for ICE for the past years.", 
+        chartDescription: "The distinctive orange barplots along with bold annotations highlight the dramatic increase of funding for ICE.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 313,
+        title: "What science can tell us about dog breeds",
+        date: new Date(2026, 1),
+        author: "Scientific American",
+        url: "https://www.scientificamerican.com/article/which-dog-breed-stereotypes-are-true-heres-the-science/",
+        img: [
+            { full: "dog-breed-behavior-scientific-american.png", zoom: "dog-breed-behavior-scientific-american-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "A visualization by Scientific American using data on dog behavior obtained from more than 50,000 owners to categories behaviors by breeds.", 
+        chartDescription: "This is a dot plot with each dot representing a certain dog breed. Color distinctions are made according to typical size. Make sure to check out the article to explore more on other categoreis as well!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 314,
+        title: "What makes Britons oppose immigration?",
+        date: new Date(2026, 1),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/britain/2025/01/22/a-detailed-look-at-britains-changing-ethnic-mix",
+        img: [
+            { full: "britain-ethnicity-diverse-segregate-the-economist.png", zoom: "britain-ethnicity-diverse-segregate-the-economist-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "An interactive article by The Economist analyzing how diverse Britain has become and in which regions specifically. With the offical data currently unavailable, they have used annual census of schoolchildren to figure out the ethnic make-up of the country. For more details on the analysis, you can check out <a href='https://theeconomistoffthecharts.substack.com/'> The Economist: Off the Charts</a>, a newsletter from The Economist data and visual journalism team.", 
+        chartDescription: "The scatterplot shows constituencies in England, with areas split into four sections according to diversity and segregation. A search bar allows you to find specific constituency and see which section it belongs to.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 315,
+        title: "Bird watching",
+        date: new Date(2026, 1),
+        author: "Amanda Shendruk",
+        url: "https://www.not-ship.com/birds-might-help-us-get-through-this/",
+        img: [
+            { full: "UK-bird-joy-rating-not-ship.png", zoom: "UK-bird-joy-rating-not-ship-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "A visualization that ranks bird types using data of joy rating for common UK birds.", 
+        chartDescription: "A joy rating for each bird type, with line representing 95% confidence interval.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 316,
+        title: "Homeland Security presence in Minnesota",
+        date: new Date(2026, 1),
+        author: "The Minnesota Star Tribune",
+        url: "https://www.startribune.com/how-ice-numbers-compare-to-twin-cities-largest-police-forces/601562617?utm_source=gift",
+        img: [
+            { full: "minnesota-federal-agent-pie-chart.png", zoom: "minnesota-federal-agent-pie-chart-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "With the ongoing tensions in Minnesota with federal presence, The Minnesota Star Tribune has visualized what it would look like if additional federal agents were to head to the city.", 
+        chartDescription: "Instead of plain, solid pie chart showing propotions, the pie chart comes in a scatter of numerous dots with each representing one officer. This allows strong visual of how one side outnumbers the other.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 317,
+        title: "Ice cream flavors",
+        date: new Date(2025, 6),
+        author: "CNN",
+        url: "https://edition.cnn.com/interactive/politics/ranked-choice-voting-explained-dg/",
+        img: [
+            { full: "ice-cream-flavor-ranking-cnn.png", zoom: "ice-cream-flavor-ranking-cnn-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "A sweet interactive article showing how ranked-choice voting process works for ice-cream.", 
+        chartDescription: "A fun interactive where you first rank five favorite ice cream flavors and follow along the votes getting counted until the final winner is decided.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
