@@ -4722,5 +4722,201 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 318,
+        title: "Average health insurance price",
+        date: new Date(2026, 1),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2026/01/30/upshot/obamacare-subsidies-financial-cliff.html",
+        img: [
+            { full: "the-upshot-obamacare-area.png", zoom: "the-upshot-obamacare-area-zoom.png", chartId: ["area", "stackedArea"] },
+        ],
+        contextDescription: "What could the end of Obamacare mean for some Americans? The New York Times uses average health insurance to visualize what expiration of extra subsidies would mean for those making more than a certain amount of income.", 
+        chartDescription: "This stacked area chart shows government share (beige) and individual share (blue), highlighting the sharp drop of government support after a certain income level.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 319,
+        title: "Russian economy",
+        date: new Date(2026, 2),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/world/ng-interactive/2026/feb/06/the-russian-economy-is-finally-stagnating-what-does-it-mean-for-the-war-and-for-putin",
+        img: [
+            { full: "russia-growth-downgrade-the-guardian.png", zoom: "russia-growth-downgrade-the-guardian-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Despite belief of immediate shock in Russian economy after sanctions in 2022, there seemed to be no impact on Russia. Not anymore, according to The Guardian and its findings using data, further climbs seem unlikely.", 
+        chartDescription: "Out of many charts in the article, this barplot shows growth downgrade, with forecasts on growth that is to be behind Western countries.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 320,
+        title: "The heavy reality of Venezuela's oil",
+        date: new Date(2026, 2),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/USA-VENEZUELA/OIL-RESERVES/mypmqearlpr/",
+        img: [
+            { full: "venezuela-oil-reuters-treemap.png", zoom: "venezuela-oil-reuters-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "venezuela-oil-reuters-scatter.png", zoom: "venezuela-oil-reuters-scatter-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "While Venezuela's massive oil reserves should naturally attract significant investment production, the reality has been far more complex. Besides dataviz, Reuters employs a unique horizontal scrollytelling approach, allowing readers to 'flip' through interactive pages to uncover the underlying causes.", 
+        chartDescription: "It's only fair to mention the clever feature of heavy oil animation that covers the whole background between pages while liquid mark at the bottom tracks your reading progress. Definitely worth a look!",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 321,
+        title: "Trump's Tangled Web of Deal-Making, Policy and Riches",
+        date: new Date(2025, 12),
+        author: "Reuters",
+        url: "https://www.nytimes.com/interactive/2025/12/31/us/trump-deals-policy-conflicts-web.html",
+        img: [
+            { full: "trump-web-connection-policy-newyork-times.png", zoom: "trump-web-connection-policy-newyork-times-zoom.png", chartId: ["network"] },
+        ],
+        contextDescription: "It's important to understand the people around Donald Trump to understand his policies. The New York Times, using a network chart with individual photos, explains the complex web of people around the U.S. president.", 
+        chartDescription: "In the end of the article, you get to explore the web, searching for people, businesses and other entities.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 322,
+        title: "Trump's Job Approval",
+        date: new Date(2026, 1),
+        author: "Strength in Numbers",
+        url: "https://projects.gelliottmorris.com/trump-approval/",
+        img: [
+            { full: "trump-approval-monthly-map-strength-in-numbers.png", zoom: "trump-approval-monthly-map-strength-in-numbers-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "Using Census Public Use Microdata (PUMA), G. Elliot Morris explores Trump's job approval updated monthly and visualized in map by geography and demographics.", 
+        chartDescription: "In map is bubble with size deteremined by population and color deteremined by approval.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 323,
+        title: "Explore the Third Place Index",
+        date: new Date(2026, 1),
+        author: "Evan O'Neil",
+        url: "https://thirdplaceindex.org/map-app/address-map",
+        img: [
+            { full: "third-place-index-us-map.png", zoom: "third-place-index-us-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "With data queried from OpenStreetMap, this project uses third place index, informal public gathering spots like cafes and libraries, to explore which regions in the U.S. provides such community.", 
+        chartDescription: "Amazing interactive map where you can explore places with scores of index. Higher score means more places for community-building. For more information, check out its <a href='https://thirdplaceindex.org/'> official website. </a>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 324,
+        title: "Extreme cold events from different parts of the world",
+        date: new Date(2026, 2),
+        author: "Burak Başkaya",
+        url: "https://www.linkedin.com/posts/burak-ba%C5%9Fkaya_datavisualization-climatedata-gis-activity-7426914836745289728-NRgn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBhA",
+        img: [
+            { full: "cold-weather-temperature-globe.png", zoom: "cold-weather-temperature-globe-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A project that looks into extreme cold events of the world.", 
+        chartDescription: "Love the visual animation that explores gradual change of temperature in different regions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 325,
+        title: "Microplastics with a focus on textiles",
+        date: new Date(2026, 1),
+        author: "Silvia Romanelli",
+        url: "https://www.behance.net/gallery/237617091/Microplastics",
+        img: [
+            { full: "microplastic-textile-pie.png", zoom: "microplastic-textile-pie-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "With objective to raise awareness of microplastics, specifically through textile, the project includes series of visualization to deliver clear understanding of what microplastics are and its impact on our surroundings.", 
+        chartDescription: "The pie chart design stood out to me, which highlights most textiles used in apparrel industries are synthetic.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 326,
+        title: "Trust in radio",
+        date: new Date(2026, 2),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/trust-in-radio",
+        img: [
+            { full: "media-type-trust-europe-european-correspondent.png", zoom: "media-type-trust-europe-european-correspondent-zoom.png", chartId: ["bubble", "scatter"] },
+        ],
+        contextDescription: "Which media types are most trusted in Europe? The European Correspondent visualizes the proportions of responses that have claimed to trust in certain media.", 
+        chartDescription: "With each dot representing a certain media type, you can easily find that radio (red) has topped others as most trusted media in Europe.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 327,
+        title: "Economic growth is still heating the planet. Is there any way out?",
+        date: new Date(2026, 2),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/ng-interactive/2026/feb/09/economic-growth-carbon-emissions-impact-global-heating",
+        img: [
+            { full: "global-gdp-emission-connected-scatter-the-guardian.png", zoom: "global-gdp-emission-connected-scatter-the-guardian-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Global economic growth has been coming along with increased CO2 emissions. The Guardian shows correlaion of those two variable along time, explaining whether the two can be decoupled.", 
+        chartDescription: "Each dot represents certain year, with scrollytelling allowing a gradual increase in both GDP and CO2 emissions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 328,
+        title: "Milan-Cortina Olympics: Who Leads the Medal Count?",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/02/09/upshot/olympics-medal-table-milan-cortina.html",
+        img: [
+            { full: "olympics-medal-count-the-newyork-times.png", zoom: "olympics-medal-count-the-newyork-times-zoom.png", chartId: ["area"] },
+        ],
+        contextDescription: "How to measure country performance in the olympics? You can either only count gold medals, or add silver and bronze to measure its worth. The New York Times has come up with a cool chart that shows how to read medal and its worth in different conditions.", 
+        chartDescription: "The article provides chart for different countries, make sure to check our yours!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 329,
+        title: "Most common fields of study, from 1970 to now",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/02/19/fields-of-study-ranked-by-bachelors-degrees-since-1970/",
+        img: [
+            { full: "most-common-field-line-flowing-data.png", zoom: "most-common-field-line-flowing-data-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "How has most common fields of study changed over time? Using data from 1970 through 2024, Nathan Yau has created a ranking line chart showing change in study fields.", 
+        chartDescription: "We can see that Business has topped other fields for a long period of time. Check out other fileds through the chart!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 330,
+        title: "How are the countries and products subject to tariffs now",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/business/economy/trump-tariff-tracker.html",
+        img: [
+            { full: "US-import-share-tariff-stacked-area-newyork-times.png", zoom: "US-import-share-tariff-stacked-area-newyork-times-zoom.png", chartId: ["area", "stackedArea"] },
+        ],
+        contextDescription: "The New York Times has come up with a stacked area chart explaining how share of U.S imports have evoled before and after Trump's trade policy.", 
+        chartDescription: "From the chart, you can see change in porportions of share change before and after Trump inauguration. One specific change is china-specific tariffs (dark beige) that has significantly decreased after the new government.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
