@@ -4918,5 +4918,97 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 331,
+        title: "Searching for Birds",
+        date: new Date(2026, 2),
+        author: "Nadieh Bremer",
+        url: "https://searchingforbirds.visualcinnamon.com/",
+        img: [
+            { full: "search-for-bird-nadieh-bremer-treemap.png", zoom: "search-for-bird-nadieh-bremer-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "search-for-bird-nadieh-bremer-map.png", zoom: "search-for-bird-nadieh-bremer-map-zoom.png", chartId: ["map"] },
+            { full: "search-for-bird-nadieh-bremer-line.png", zoom: "search-for-bird-nadieh-bremer-line-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "A project for Google Trends, this interactive article uses Google Trend data to explore patterns of nearly 700 species.", 
+        chartDescription: "There are tons of cool charts in this piece, including an egg-shaped treemap that shows different types of birds. It's awesome how these illustrations are hand-drawn!",
+        tools: [{ name: "R" }, { name: "python" }, { name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 332,
+        title: "Amsterdam Startup Landscape",
+        date: new Date(2024, 6),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/amsterdam-startup-landscape/",
+        img: [
+            { full: "amsterdam-startup-landscape-nadieh-bremer.png", zoom: "amsterdam-startup-landscape-nadieh-bremer-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "A project that explains interesting insights and trends of startups in Amsterdam.", 
+        chartDescription: "Each circle represents academic startup, with size relative to number of employees and number of rings drawn according to size of funding.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 333,
+        title: "Electoral Weight",
+        date: new Date(2022, 5),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2022/05/24/nombre-d-habitants-ou-d-inscrits-taux-de-chomage-age-moyen-de-fortes-disparites-entre-les-577-circonscriptions-legislatives_6127403_4355770.html",
+        img: [
+            { full: "le-monde-electoral-weight-hexbin-map.png", zoom: "le-monde-electoral-weight-hexbin-map-zoom.png", chartId: ["map", "hexbin"] },
+        ],
+        contextDescription: "A piece by Le Monde which shows significant disparities between the 577 constituencies in terms of population or registered voters, etc.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 334,
+        title: "Is university still worth it? is the wrong question",
+        date: new Date(2026, 2),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/649d3c64-b8e5-4979-9f0c-9aebd43642e2",
+        img: [
+            { full: "graduate-premium-graduate-pay-financial-times.png", zoom: "graduate-premium-graduate-pay-financial-times-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "An interesting piece with a line chart showing how Britain is an exception when discussing graduate earnings premium.", 
+        chartDescription: "Compared with other countries which show gradual increase, the UK (red) stands out as it falls downward.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 335,
+        title: "Women's sizing",
+        date: new Date(2026, 2),
+        author: "The Pudding",
+        url: "https://pudding.cool/2026/02/womens-sizing/",
+        img: [
+            { full: "women-size-measurement-the-pudding.png", zoom: "women-size-measurement-the-pudding-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "A well-drafted essay that examines how clothing size changes as young girls turn older, outgrowing their previous size.", 
+        chartDescription: "The following line chart shows sizing standards that differ according to brands and how medium label differs.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 336,
+        title: "Want to walk more without trying? Move here",
+        date: new Date(2026, 2),
+        author: "Scientific American",
+        url: "https://www.scientificamerican.com/article/moving-to-a-walkable-city-can-add-1-100-steps-to-your-day/",
+        img: [
+            { full: "walkability-city-united-states-scientific-american-bubble-map.png", zoom: "walkability-city-united-states-scientific-american-bubble-map-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "Recent research suggests that living in a walkable city boosts daily locomotion by an average of 1,100 steps. Scientific American uses map of United States to compare how moving to a certain city leads to more active movement.", 
+        chartDescription: "Each circle represents origin or destination cities with size according to number of people. Color differs according to walkability score with purple as low and green as high. Certain regions are highlighted green to show that it is one of five most walkable cities.",
+        tools: [{name: "python"}],
+        luminosity: ["light"],
+        interactive: false
     }
 ]
