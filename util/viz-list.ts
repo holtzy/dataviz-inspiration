@@ -5010,5 +5010,80 @@ export const vizList: VizItem[] = [
         tools: [{name: "python"}],
         luminosity: ["light"],
         interactive: false
+    },
+    {
+        id: 337,
+        title: "The Pokemon Tree of Life",
+        date: new Date(2026, 2),
+        author: "The Straits Times",
+        url: "https://www.straitstimes.com/multimedia/graphics/2026/02/pokemon-tree-of-life/index.html",
+        img: [
+            { full: "pokemon-origin-dendrogram-the-straits-times.png", zoom: "pokemon-origin-dendrogram-the-straits-times-zoom.png", chartId: ["dendrogram"] },
+        ],
+        contextDescription: "To celebrate Pokemon's 30th anniversay, The Straits Times has come up with a cool data visualization of over 1,000 pokemon.", 
+        chartDescription: "This radial diagram dives into where pokemons are categories under with different filters to learn more about each character. What an inspiration!",
+        tools: [{name: "d3.js"}],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 338,
+        title: "Voter flows",
+        date: new Date(2026, 2),
+        author: "Datastory",
+        url: "https://www.sverigeisiffror.se/sv/stories/valjarstrommar",
+        img: [
+            { full: "voter-flows-sweden-data-story-interactive-sankey.png", zoom: "voter-flows-sweden-data-story-interactive-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Sverige i Siffror is a project by Datastory showcasing several interactive graphics which explain complex topics about Sweden. This is one example, with all charts interactive, animated, filtered, and customised. For more information, visit the <a href='https://www.sverigeisiffror.se/'> website! </a>", 
+        chartDescription: "I've posted my own observation via <a href='https://www.linkedin.com/posts/yan-holtz-2477534a_dataviz-activity-7432068928094400512-GUfk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBh'> Linkedin, </a> if you'd like to check them out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 339,
+        title: "How to Win Slots and Influence People",
+        date: new Date(2026, 2),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/features/2026-stake-drake-crypto-casino-adin-ross-gambling/?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MjIwNDI5MCwiZXhwIjoxNzcyODA5MDkwLCJhcnRpY2xlSWQiOiJUQjRFV0JLR0NUSVEwMCIsImJjb25uZWN0SWQiOiI2NDU1MEM3NkRFMkU0QkM1OEI0OTI5QjBDQkIzRDlCRCJ9.FpzER3_CzafPnHAK2fhAipaMRInY0pJN8Die71PA1S8&leadSource=uverify%20wall",
+        img: [
+            { full: "online-slots-play-drake-area-bloomberg.png", zoom: "online-slots-play-drake-area-bloomberg-zoom.png", chartId: ["area"] },
+        ],
+        contextDescription: "This article investigates on relation between crypto casino Stake and Drake, a Canadian rapper by analyzing his live stream of online slots play.", 
+        chartDescription: "A simple area chart but you can see star icons meaning big wins at specifically on game owned by Stake's parent company. For more information on data methodology, check out <a href='https://www.bloomberg.com/news/features/2026-02-27/how-businessweek-analyzed-crypto-casino-stake-s-slots-gameplay?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MjIwNDQ2NSwiZXhwIjoxNzcyODA5MjY1LCJhcnRpY2xlSWQiOiJUQjRFVzVLR1pBS00wMCIsImJjb25uZWN0SWQiOiI2NDU1MEM3NkRFMkU0QkM1OEI0OTI5QjBDQkIzRDlCRCJ9.Vp0gMAkJAr2xc8tVffadZXN4YFV9_Uqi7jrH8PRFEyo&leadSource=uverify%20wall'> here. </a>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 340,
+        title: "Should you rent or buy?",
+        date: new Date(2026, 2),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/graphic-detail/2026/02/10/should-i-rent-or-buy",
+        img: [
+            { full: "rent-or-buy-us-map-the-economist.png", zoom: "rent-or-buy-us-map-the-economist-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "An interactive map by The Economist, showing whether you should rent or buy a house depending on the area.", 
+        chartDescription: "You also get to pick a year to compare the price between rent and buy.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 341,
+        title: "The Warning Signs Flashing From the Tech-Heavy Bloat of the S&P 500",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/02/26/business/stock-market-sp-500-nvidia-tech-bubble-crises.html",
+        img: [
+            { full: "market-value-sp-500-treemap-the-new-york-times.png", zoom: "market-value-sp-500-treemap-the-new-york-times-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A visualization showing what makes up the value of the S&P 500, each divided by industries and subdivided into specific companies.", 
+        chartDescription: "Specifically focusing on a certain tech company, the scrollytelling visual compares worth of Nvidia with other industries.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
