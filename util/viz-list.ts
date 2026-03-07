@@ -5085,5 +5085,86 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 342,
+        title: "Unemployment reason by age and education",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/03/05/unemployment-reasons/",
+        img: [
+            { full: "American-unemployment-Nathan-Yau-barplot.png", zoom: "American-unemployment-Nathan-Yau-barplot-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Using Current Population Survey from January 2026, Nathan Yau has visualized why Americans are unemployed, based on age and highest education attained.", 
+        chartDescription: "The following interactive barplot allows readers to go through different age groups and education attained showing which reason topped others.",
+        tools: [{name: "python"}, {name: "d3.js"}], 
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 343,
+        title: "Happy map",
+        date: new Date(2026, 2),
+        author: "The Pudding",
+        url: "https://pudding.cool/2026/02/happy-map/",
+        img: [
+            { full: "happy-moment-map-the-pudding.png", zoom: "happy-moment-map-the-pudding-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "What would a map look like if it were made up of happy moments people experienced? Using data listing happy moments respondents had in the past, The Pudding came up with an amazing visualization with great storytelling that goes deep into happy moments of people's lives.", 
+        chartDescription: "Make sure to reserve time to explore the map. Also, if you're interested in the creation process, I suggest you also read <a href='https://buttondown.com/charthead/archive/happy-map/'> Behind the Scenes. </a>",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 344,
+        title: "How Latino Voters Helped Talarico Win in Texas",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/03/04/us/elections/texas-primary-talarico-crockett-results-votes.html",
+        img: [
+            { full: "latino-voters-texas-the-newyork-times-map.png", zoom: "latino-voters-texas-the-newyork-times-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "This piece of Texas and its Democratic Senate primary uses map visualization to highlight demographic shift.", 
+        chartDescription: "A good use of annotation to stress some parts that had counties with more Hispanic voters.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 345,
+        title: "How 250 years of immigration shaped America",
+        date: new Date(2026, 3),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/03/04/how-250-years-of-immigration-shaped-america",
+        img: [
+            { full: "immigrant-population-united-states-map-the-economist.png", zoom: "immigrant-population-united-states-map-the-economist-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Immigration has long been a topic discussed by head leaders of the United States. The Economist has created a map that shows shifts of immigrant populations over the past years.", 
+        chartDescription: "As you start from 1850s, moving to 2024, you can visually see the change in immigrant populations of different parts of United States.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 346,
+        title: "Maps and charts of the Iran crisis",
+        date: new Date(2026, 3),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/IRAN-CRISIS/MAPS/znpnmelervl/#where-us-and-israeli-forces-struck-iran",
+        img: [
+            { full: "Iran-conflict-map-reuters-bubble-1.png", zoom: "Iran-conflict-map-reuters-bubble-1-zoom.png", chartId: ["map", "bubbleMap"] },
+            { full: "Iran-conflict-map-reuters-choropleth-2.png", zoom: "Iran-conflict-map-reuters-choropleth-2-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-choropleth-3.png", zoom: "Iran-conflict-map-reuters-choropleth-3-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-connection-4.png", zoom: "Iran-conflict-map-reuters-connection-4-zoom.png", chartId: ["map", "connection"] },
+            { full: "Iran-conflict-map-reuters-connection-5.png", zoom: "Iran-conflict-map-reuters-connection-5-zoom.png", chartId: ["map", "connection"] },
+            { full: "Iran-conflict-map-reuters-choropleth-6.png", zoom: "Iran-conflict-map-reuters-choropleth-6-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-choropleth-7.png", zoom: "Iran-conflict-map-reuters-choropleth-7-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Reuters has come up with compilation of maps that explain the Iran crisis.", 
+        chartDescription: "Maps are in time order, used to explain US and Israeli forces that struck Iran up to its impact in the Middle East.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
