@@ -5166,5 +5166,129 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 347,
+        title: "(M)any women at the Paralympics?",
+        date: new Date(2026, 3),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/many-women-at-the-paralympics",
+        img: [
+            { full: "winter-paralympics-milan-women-men-athletes-lollipop.png", zoom: "winter-paralympics-milan-women-men-athletes-lollipop-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "Has gender disparity been alleviated for the 2026 Paralympic Winter Games? The European Correspondent visualizes in charts to find out.", 
+        chartDescription: "Lollipop chart, also known as dumbbell charts is used to highlight gender disparity of atheletes for the winter games. We can see that men atheletes has outnumbered women, suggesting the need for a more balanced outcome, especially in ice hockey with only 2 atheletes that are women.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 348,
+        title: "Hermann's tortoises in North Macedonia",
+        date: new Date(2026, 3),
+        author: "Georgios Karamanis",
+        url: "https://www.linkedin.com/posts/georgios-karamanis-a54926153_tidytuesday-rstats-dataviz-share-7436343410095202304-Zkk9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBhA",
+        img: [
+            { full: "tortoise-population-tidytuesday-week10-2026-connected-scatterplot.png", zoom: "tortoise-population-tidytuesday-week10-2026-connected-scatterplot-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "For Week 10 of <a href='https://github.com/rfordatascience/tidytuesday/tree/main'/> #TidyTuesday </a>, Georgios Karamanis has used dataset of Hermann's tortoises in Lake Prespa in North Macedonia for visualization.", 
+        chartDescription: "Connected scatter plot shows each point of field surveys with x-axis showing males per female ratio and y-axis of mean female BCI. Annotations shows year of survey, as you follow through and spot the decreasing number of female captured. For more information on its data, check out <a href='https://github.com/rfordatascience/tidytuesday/tree/main/data/2026/2026-03-03/'> here. </a>",
+        tools: [{name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2026/2026-week_10"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 349,
+        title: "Going to university does still pay--if it's the right one",
+        date: new Date(2026, 3),
+        author: "The Times",
+        url: "https://www.thetimes.com/comment/columnists/article/going-to-university-does-still-pay-if-its-the-right-one-6050xb3hl",
+        img: [
+            { full: "university-graduate-premium-britain-the-times.png", zoom: "university-graduate-premium-britain-the-times-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Is university graduate premium still valid? An analysis by The Times shows that it is, at least for top schools.", 
+        chartDescription: "Since earnings depend on type of degrees, earnings are divided into different courses. We can see that earnings of graduates from selective schools like Oxbridge has topped others.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 350,
+        title: "Hey guys? You could help out a little more.",
+        date: new Date(2026, 2),
+        author: "Amanda Shendruk",
+        url: "https://www.not-ship.com/hey-guys-you-could-help-out-a-little-more/",
+        img: [
+            { full: "women-men-unpaid-labor-time-notship-lollipop.png", zoom: "women-men-unpaid-labor-time-notship-lollipop-zoom.png", chartId: ["lollipop"] },
+            { full: "women-men-unpaid-labor-time-notship-stripplot.png", zoom: "women-men-unpaid-labor-time-notship-stripplot-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Are domestic work still done by most women? Amanda Shendruk uses data to find out.", 
+        chartDescription: "Charts like strip plot and lollipop gathers data from all around the world to show that women spending more time on unpaid labor is universal.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 351,
+        title: "See which jobs are most threatened by AI and who may be able to adapt",
+        date: new Date(2026, 3),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/?utm_source=email&utm_medium=acq&utm_campaign=RH-ACQ&utm_content=dtpmonthly_20260316_RH_c&campaign_id=17297932",
+        img: [
+            { full: "job-ai-vulenrability-adapt-the-washingtonpost-bubble.png", zoom: "job-ai-vulenrability-adapt-the-washingtonpost-bubble-zoom.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "The discussion of AI taking over jobs has been everywhere, with predictions calling white-job collar jobs as most vulnerable. But new study handles the changing job paradigm by adding another condition besides vulnerability: which jobs will find it easier to adapt?", 
+        chartDescription: "The bubble chart shows two dimensions: vulnerability and adaptability on all jobs. Color is used to distinguish which works will far best (green) and worst (orange). Interesting article to check out!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 352,
+        title: "How a Melting Glacier Could Affect Tens of Millions Around the Globe",
+        date: new Date(2026, 3),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/03/17/climate/thwaites-glacier-rising-sea-level-risk-floods.html",
+        img: [
+            { full: "melting-glacier-high-tide-the-newyorktimes-choropleth.png", zoom: "melting-glacier-high-tide-the-newyorktimes-choropleth-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "The melting of a glacier could affect tens of millions worldwide, according to New York Times analysis. This article covers how recent melting will cause risks on coastal and populated cities.", 
+        chartDescription: "Map uses three colors to show how populated cities are at risk, with distinct yellow color to demonstrate its impact.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 353,
+        title: "How wars are adding hours to your flights",
+        date: new Date(2026, 3),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/03/12/how-wars-are-adding-hours-to-your-flights",
+        img: [
+            { full: "iran-war-flight-schedule-theeconomist-connectionmap.png", zoom: "iran-war-flight-schedule-theeconomist-connectionmap-zoom.png", chartId: ["map", "connection"] },
+            { full: "iran-war-flight-schedule-theeconomist-lollipop.png", zoom: "iran-war-flight-schedule-theeconomist-lollipop-zoom.png", chartId: ["lollipop"] },
+            { full: "iran-war-flight-schedule-theeconomist-line.png", zoom: "iran-war-flight-schedule-theeconomist-line-zoom.png", chartId: ["line"] },
+            { full: "iran-war-flight-schedule-theeconomist-bar.png", zoom: "iran-war-flight-schedule-theeconomist-bar-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The war in the Middle East has drastically changed travelling on air. The Economist uses flight-tracking data to show the scale of the disruption.", 
+        chartDescription: "Charts comparing before and after war shows how flights have been emptied in the areas of near Iran.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 354,
+        title: "Polymarket Bets on Iran War Show Limits of Prediction Markets for Wall Street",
+        date: new Date(2026, 3),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/news/articles/2026-03-06/iran-war-bets-on-polymarket-kalshi-are-cautionary-tale-for-wall-street",
+        img: [
+            { full: "prediction-market-khamenei-exit-beeswarm-bloomberg.png", zoom: "prediction-market-khamenei-exit-beeswarm-bloomberg-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Betting in prediction markets has also reached wars. Bloomberg News's analysis in this article shows how the market in dominated by small betters, with only a small percent making huge wins.", 
+        chartDescription: "Beeswarm chart shows distribution of wagers according to wallet. We can see that ten wallets places bets larger than $1M on the right.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
     }
 ]
