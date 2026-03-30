@@ -4722,5 +4722,676 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 318,
+        title: "Average health insurance price",
+        date: new Date(2026, 1),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2026/01/30/upshot/obamacare-subsidies-financial-cliff.html",
+        img: [
+            { full: "the-upshot-obamacare-area.png", zoom: "the-upshot-obamacare-area-zoom.png", chartId: ["area", "stackedArea"] },
+        ],
+        contextDescription: "What could the end of Obamacare mean for some Americans? The New York Times uses average health insurance to visualize what expiration of extra subsidies would mean for those making more than a certain amount of income.", 
+        chartDescription: "This stacked area chart shows government share (beige) and individual share (blue), highlighting the sharp drop of government support after a certain income level.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 319,
+        title: "Russian economy",
+        date: new Date(2026, 2),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/world/ng-interactive/2026/feb/06/the-russian-economy-is-finally-stagnating-what-does-it-mean-for-the-war-and-for-putin",
+        img: [
+            { full: "russia-growth-downgrade-the-guardian.png", zoom: "russia-growth-downgrade-the-guardian-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Despite belief of immediate shock in Russian economy after sanctions in 2022, there seemed to be no impact on Russia. Not anymore, according to The Guardian and its findings using data, further climbs seem unlikely.", 
+        chartDescription: "Out of many charts in the article, this barplot shows growth downgrade, with forecasts on growth that is to be behind Western countries.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 320,
+        title: "The heavy reality of Venezuela's oil",
+        date: new Date(2026, 2),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/USA-VENEZUELA/OIL-RESERVES/mypmqearlpr/",
+        img: [
+            { full: "venezuela-oil-reuters-treemap.png", zoom: "venezuela-oil-reuters-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "venezuela-oil-reuters-scatter.png", zoom: "venezuela-oil-reuters-scatter-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "While Venezuela's massive oil reserves should naturally attract significant investment production, the reality has been far more complex. Besides dataviz, Reuters employs a unique horizontal scrollytelling approach, allowing readers to 'flip' through interactive pages to uncover the underlying causes.", 
+        chartDescription: "It's only fair to mention the clever feature of heavy oil animation that covers the whole background between pages while liquid mark at the bottom tracks your reading progress. Definitely worth a look!",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 321,
+        title: "Trump's Tangled Web of Deal-Making, Policy and Riches",
+        date: new Date(2025, 12),
+        author: "Reuters",
+        url: "https://www.nytimes.com/interactive/2025/12/31/us/trump-deals-policy-conflicts-web.html",
+        img: [
+            { full: "trump-web-connection-policy-newyork-times.png", zoom: "trump-web-connection-policy-newyork-times-zoom.png", chartId: ["network"] },
+        ],
+        contextDescription: "It's important to understand the people around Donald Trump to understand his policies. The New York Times, using a network chart with individual photos, explains the complex web of people around the U.S. president.", 
+        chartDescription: "In the end of the article, you get to explore the web, searching for people, businesses and other entities.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 322,
+        title: "Trump's Job Approval",
+        date: new Date(2026, 1),
+        author: "Strength in Numbers",
+        url: "https://projects.gelliottmorris.com/trump-approval/",
+        img: [
+            { full: "trump-approval-monthly-map-strength-in-numbers.png", zoom: "trump-approval-monthly-map-strength-in-numbers-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "Using Census Public Use Microdata (PUMA), G. Elliot Morris explores Trump's job approval updated monthly and visualized in map by geography and demographics.", 
+        chartDescription: "In map is bubble with size deteremined by population and color deteremined by approval.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 323,
+        title: "Explore the Third Place Index",
+        date: new Date(2026, 1),
+        author: "Evan O'Neil",
+        url: "https://thirdplaceindex.org/map-app/address-map",
+        img: [
+            { full: "third-place-index-us-map.png", zoom: "third-place-index-us-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "With data queried from OpenStreetMap, this project uses third place index, informal public gathering spots like cafes and libraries, to explore which regions in the U.S. provides such community.", 
+        chartDescription: "Amazing interactive map where you can explore places with scores of index. Higher score means more places for community-building. For more information, check out its <a href='https://thirdplaceindex.org/'> official website. </a>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 324,
+        title: "Extreme cold events from different parts of the world",
+        date: new Date(2026, 2),
+        author: "Burak Başkaya",
+        url: "https://www.linkedin.com/posts/burak-ba%C5%9Fkaya_datavisualization-climatedata-gis-activity-7426914836745289728-NRgn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBhA",
+        img: [
+            { full: "cold-weather-temperature-globe.png", zoom: "cold-weather-temperature-globe-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "A project that looks into extreme cold events of the world.", 
+        chartDescription: "Love the visual animation that explores gradual change of temperature in different regions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 325,
+        title: "Microplastics with a focus on textiles",
+        date: new Date(2026, 1),
+        author: "Silvia Romanelli",
+        url: "https://www.behance.net/gallery/237617091/Microplastics",
+        img: [
+            { full: "microplastic-textile-pie.png", zoom: "microplastic-textile-pie-zoom.png", chartId: ["pie"] },
+        ],
+        contextDescription: "With objective to raise awareness of microplastics, specifically through textile, the project includes series of visualization to deliver clear understanding of what microplastics are and its impact on our surroundings.", 
+        chartDescription: "The pie chart design stood out to me, which highlights most textiles used in apparrel industries are synthetic.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 326,
+        title: "Trust in radio",
+        date: new Date(2026, 2),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/trust-in-radio",
+        img: [
+            { full: "media-type-trust-europe-european-correspondent.png", zoom: "media-type-trust-europe-european-correspondent-zoom.png", chartId: ["bubble", "scatter"] },
+        ],
+        contextDescription: "Which media types are most trusted in Europe? The European Correspondent visualizes the proportions of responses that have claimed to trust in certain media.", 
+        chartDescription: "With each dot representing a certain media type, you can easily find that radio (red) has topped others as most trusted media in Europe.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 327,
+        title: "Economic growth is still heating the planet. Is there any way out?",
+        date: new Date(2026, 2),
+        author: "The Guardian",
+        url: "https://www.theguardian.com/environment/ng-interactive/2026/feb/09/economic-growth-carbon-emissions-impact-global-heating",
+        img: [
+            { full: "global-gdp-emission-connected-scatter-the-guardian.png", zoom: "global-gdp-emission-connected-scatter-the-guardian-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Global economic growth has been coming along with increased CO2 emissions. The Guardian shows correlaion of those two variable along time, explaining whether the two can be decoupled.", 
+        chartDescription: "Each dot represents certain year, with scrollytelling allowing a gradual increase in both GDP and CO2 emissions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 328,
+        title: "Milan-Cortina Olympics: Who Leads the Medal Count?",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/02/09/upshot/olympics-medal-table-milan-cortina.html",
+        img: [
+            { full: "olympics-medal-count-the-newyork-times.png", zoom: "olympics-medal-count-the-newyork-times-zoom.png", chartId: ["area"] },
+        ],
+        contextDescription: "How to measure country performance in the olympics? You can either only count gold medals, or add silver and bronze to measure its worth. The New York Times has come up with a cool chart that shows how to read medal and its worth in different conditions.", 
+        chartDescription: "The article provides chart for different countries, make sure to check our yours!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 329,
+        title: "Most common fields of study, from 1970 to now",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/02/19/fields-of-study-ranked-by-bachelors-degrees-since-1970/",
+        img: [
+            { full: "most-common-field-line-flowing-data.png", zoom: "most-common-field-line-flowing-data-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "How has most common fields of study changed over time? Using data from 1970 through 2024, Nathan Yau has created a ranking line chart showing change in study fields.", 
+        chartDescription: "We can see that Business has topped other fields for a long period of time. Check out other fileds through the chart!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 330,
+        title: "How are the countries and products subject to tariffs now",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/business/economy/trump-tariff-tracker.html",
+        img: [
+            { full: "US-import-share-tariff-stacked-area-newyork-times.png", zoom: "US-import-share-tariff-stacked-area-newyork-times-zoom.png", chartId: ["area", "stackedArea"] },
+        ],
+        contextDescription: "The New York Times has come up with a stacked area chart explaining how share of U.S imports have evoled before and after Trump's trade policy.", 
+        chartDescription: "From the chart, you can see change in porportions of share change before and after Trump inauguration. One specific change is china-specific tariffs (dark beige) that has significantly decreased after the new government.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 331,
+        title: "Searching for Birds",
+        date: new Date(2026, 2),
+        author: "Nadieh Bremer",
+        url: "https://searchingforbirds.visualcinnamon.com/",
+        img: [
+            { full: "search-for-bird-nadieh-bremer-treemap.png", zoom: "search-for-bird-nadieh-bremer-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "search-for-bird-nadieh-bremer-map.png", zoom: "search-for-bird-nadieh-bremer-map-zoom.png", chartId: ["map"] },
+            { full: "search-for-bird-nadieh-bremer-line.png", zoom: "search-for-bird-nadieh-bremer-line-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "A project for Google Trends, this interactive article uses Google Trend data to explore patterns of nearly 700 species.", 
+        chartDescription: "There are tons of cool charts in this piece, including an egg-shaped treemap that shows different types of birds. It's awesome how these illustrations are hand-drawn!",
+        tools: [{ name: "R" }, { name: "python" }, { name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 332,
+        title: "Amsterdam Startup Landscape",
+        date: new Date(2024, 6),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/amsterdam-startup-landscape/",
+        img: [
+            { full: "amsterdam-startup-landscape-nadieh-bremer.png", zoom: "amsterdam-startup-landscape-nadieh-bremer-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "A project that explains interesting insights and trends of startups in Amsterdam.", 
+        chartDescription: "Each circle represents academic startup, with size relative to number of employees and number of rings drawn according to size of funding.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 333,
+        title: "Electoral Weight",
+        date: new Date(2022, 5),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2022/05/24/nombre-d-habitants-ou-d-inscrits-taux-de-chomage-age-moyen-de-fortes-disparites-entre-les-577-circonscriptions-legislatives_6127403_4355770.html",
+        img: [
+            { full: "le-monde-electoral-weight-hexbin-map.png", zoom: "le-monde-electoral-weight-hexbin-map-zoom.png", chartId: ["map", "hexbin"] },
+        ],
+        contextDescription: "A piece by Le Monde which shows significant disparities between the 577 constituencies in terms of population or registered voters, etc.", 
+        chartDescription: "",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 334,
+        title: "Is university still worth it? is the wrong question",
+        date: new Date(2026, 2),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/649d3c64-b8e5-4979-9f0c-9aebd43642e2",
+        img: [
+            { full: "graduate-premium-graduate-pay-financial-times.png", zoom: "graduate-premium-graduate-pay-financial-times-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "An interesting piece with a line chart showing how Britain is an exception when discussing graduate earnings premium.", 
+        chartDescription: "Compared with other countries which show gradual increase, the UK (red) stands out as it falls downward.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 335,
+        title: "Women's sizing",
+        date: new Date(2026, 2),
+        author: "The Pudding",
+        url: "https://pudding.cool/2026/02/womens-sizing/",
+        img: [
+            { full: "women-size-measurement-the-pudding.png", zoom: "women-size-measurement-the-pudding-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "A well-drafted essay that examines how clothing size changes as young girls turn older, outgrowing their previous size.", 
+        chartDescription: "The following line chart shows sizing standards that differ according to brands and how medium label differs.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 336,
+        title: "Want to walk more without trying? Move here",
+        date: new Date(2026, 2),
+        author: "Scientific American",
+        url: "https://www.scientificamerican.com/article/moving-to-a-walkable-city-can-add-1-100-steps-to-your-day/",
+        img: [
+            { full: "walkability-city-united-states-scientific-american-bubble-map.png", zoom: "walkability-city-united-states-scientific-american-bubble-map-zoom.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "Recent research suggests that living in a walkable city boosts daily locomotion by an average of 1,100 steps. Scientific American uses map of United States to compare how moving to a certain city leads to more active movement.", 
+        chartDescription: "Each circle represents origin or destination cities with size according to number of people. Color differs according to walkability score with purple as low and green as high. Certain regions are highlighted green to show that it is one of five most walkable cities.",
+        tools: [{name: "python"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 337,
+        title: "The Pokemon Tree of Life",
+        date: new Date(2026, 2),
+        author: "The Straits Times",
+        url: "https://www.straitstimes.com/multimedia/graphics/2026/02/pokemon-tree-of-life/index.html",
+        img: [
+            { full: "pokemon-origin-dendrogram-the-straits-times.png", zoom: "pokemon-origin-dendrogram-the-straits-times-zoom.png", chartId: ["dendrogram"] },
+        ],
+        contextDescription: "To celebrate Pokemon's 30th anniversay, The Straits Times has come up with a cool data visualization of over 1,000 pokemon.", 
+        chartDescription: "This radial diagram dives into where pokemons are categories under with different filters to learn more about each character. What an inspiration!",
+        tools: [{name: "d3.js"}],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 338,
+        title: "Voter flows",
+        date: new Date(2026, 2),
+        author: "Datastory",
+        url: "https://www.sverigeisiffror.se/sv/stories/valjarstrommar",
+        img: [
+            { full: "voter-flows-sweden-data-story-interactive-sankey.png", zoom: "voter-flows-sweden-data-story-interactive-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "Sverige i Siffror is a project by Datastory showcasing several interactive graphics which explain complex topics about Sweden. This is one example, with all charts interactive, animated, filtered, and customised. For more information, visit the <a href='https://www.sverigeisiffror.se/'> website! </a>", 
+        chartDescription: "I've posted my own observation via <a href='https://www.linkedin.com/posts/yan-holtz-2477534a_dataviz-activity-7432068928094400512-GUfk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBh'> Linkedin, </a> if you'd like to check them out.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 339,
+        title: "How to Win Slots and Influence People",
+        date: new Date(2026, 2),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/features/2026-stake-drake-crypto-casino-adin-ross-gambling/?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MjIwNDI5MCwiZXhwIjoxNzcyODA5MDkwLCJhcnRpY2xlSWQiOiJUQjRFV0JLR0NUSVEwMCIsImJjb25uZWN0SWQiOiI2NDU1MEM3NkRFMkU0QkM1OEI0OTI5QjBDQkIzRDlCRCJ9.FpzER3_CzafPnHAK2fhAipaMRInY0pJN8Die71PA1S8&leadSource=uverify%20wall",
+        img: [
+            { full: "online-slots-play-drake-area-bloomberg.png", zoom: "online-slots-play-drake-area-bloomberg-zoom.png", chartId: ["area"] },
+        ],
+        contextDescription: "This article investigates on relation between crypto casino Stake and Drake, a Canadian rapper by analyzing his live stream of online slots play.", 
+        chartDescription: "A simple area chart but you can see star icons meaning big wins at specifically on game owned by Stake's parent company. For more information on data methodology, check out <a href='https://www.bloomberg.com/news/features/2026-02-27/how-businessweek-analyzed-crypto-casino-stake-s-slots-gameplay?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3MjIwNDQ2NSwiZXhwIjoxNzcyODA5MjY1LCJhcnRpY2xlSWQiOiJUQjRFVzVLR1pBS00wMCIsImJjb25uZWN0SWQiOiI2NDU1MEM3NkRFMkU0QkM1OEI0OTI5QjBDQkIzRDlCRCJ9.Vp0gMAkJAr2xc8tVffadZXN4YFV9_Uqi7jrH8PRFEyo&leadSource=uverify%20wall'> here. </a>",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 340,
+        title: "Should you rent or buy?",
+        date: new Date(2026, 2),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/graphic-detail/2026/02/10/should-i-rent-or-buy",
+        img: [
+            { full: "rent-or-buy-us-map-the-economist.png", zoom: "rent-or-buy-us-map-the-economist-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "An interactive map by The Economist, showing whether you should rent or buy a house depending on the area.", 
+        chartDescription: "You also get to pick a year to compare the price between rent and buy.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 341,
+        title: "The Warning Signs Flashing From the Tech-Heavy Bloat of the S&P 500",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/02/26/business/stock-market-sp-500-nvidia-tech-bubble-crises.html",
+        img: [
+            { full: "market-value-sp-500-treemap-the-new-york-times.png", zoom: "market-value-sp-500-treemap-the-new-york-times-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "A visualization showing what makes up the value of the S&P 500, each divided by industries and subdivided into specific companies.", 
+        chartDescription: "Specifically focusing on a certain tech company, the scrollytelling visual compares worth of Nvidia with other industries.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 342,
+        title: "Unemployment reason by age and education",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/03/05/unemployment-reasons/",
+        img: [
+            { full: "American-unemployment-Nathan-Yau-barplot.png", zoom: "American-unemployment-Nathan-Yau-barplot-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Using Current Population Survey from January 2026, Nathan Yau has visualized why Americans are unemployed, based on age and highest education attained.", 
+        chartDescription: "The following interactive barplot allows readers to go through different age groups and education attained showing which reason topped others.",
+        tools: [{name: "python"}, {name: "d3.js"}], 
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 343,
+        title: "Happy map",
+        date: new Date(2026, 2),
+        author: "The Pudding",
+        url: "https://pudding.cool/2026/02/happy-map/",
+        img: [
+            { full: "happy-moment-map-the-pudding.png", zoom: "happy-moment-map-the-pudding-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "What would a map look like if it were made up of happy moments people experienced? Using data listing happy moments respondents had in the past, The Pudding came up with an amazing visualization with great storytelling that goes deep into happy moments of people's lives.", 
+        chartDescription: "Make sure to reserve time to explore the map. Also, if you're interested in the creation process, I suggest you also read <a href='https://buttondown.com/charthead/archive/happy-map/'> Behind the Scenes. </a>",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 344,
+        title: "How Latino Voters Helped Talarico Win in Texas",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/03/04/us/elections/texas-primary-talarico-crockett-results-votes.html",
+        img: [
+            { full: "latino-voters-texas-the-newyork-times-map.png", zoom: "latino-voters-texas-the-newyork-times-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "This piece of Texas and its Democratic Senate primary uses map visualization to highlight demographic shift.", 
+        chartDescription: "A good use of annotation to stress some parts that had counties with more Hispanic voters.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 345,
+        title: "How 250 years of immigration shaped America",
+        date: new Date(2026, 3),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/03/04/how-250-years-of-immigration-shaped-america",
+        img: [
+            { full: "immigrant-population-united-states-map-the-economist.png", zoom: "immigrant-population-united-states-map-the-economist-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Immigration has long been a topic discussed by head leaders of the United States. The Economist has created a map that shows shifts of immigrant populations over the past years.", 
+        chartDescription: "As you start from 1850s, moving to 2024, you can visually see the change in immigrant populations of different parts of United States.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 346,
+        title: "Maps and charts of the Iran crisis",
+        date: new Date(2026, 3),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/IRAN-CRISIS/MAPS/znpnmelervl/#where-us-and-israeli-forces-struck-iran",
+        img: [
+            { full: "Iran-conflict-map-reuters-bubble-1.png", zoom: "Iran-conflict-map-reuters-bubble-1-zoom.png", chartId: ["map", "bubbleMap"] },
+            { full: "Iran-conflict-map-reuters-choropleth-2.png", zoom: "Iran-conflict-map-reuters-choropleth-2-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-choropleth-3.png", zoom: "Iran-conflict-map-reuters-choropleth-3-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-connection-4.png", zoom: "Iran-conflict-map-reuters-connection-4-zoom.png", chartId: ["map", "connection"] },
+            { full: "Iran-conflict-map-reuters-connection-5.png", zoom: "Iran-conflict-map-reuters-connection-5-zoom.png", chartId: ["map", "connection"] },
+            { full: "Iran-conflict-map-reuters-choropleth-6.png", zoom: "Iran-conflict-map-reuters-choropleth-6-zoom.png", chartId: ["map", "choropleth"] },
+            { full: "Iran-conflict-map-reuters-choropleth-7.png", zoom: "Iran-conflict-map-reuters-choropleth-7-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Reuters has come up with compilation of maps that explain the Iran crisis.", 
+        chartDescription: "Maps are in time order, used to explain US and Israeli forces that struck Iran up to its impact in the Middle East.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 347,
+        title: "(M)any women at the Paralympics?",
+        date: new Date(2026, 3),
+        author: "The European Correspondent",
+        url: "https://europeancorrespondent.com/en/r/many-women-at-the-paralympics",
+        img: [
+            { full: "winter-paralympics-milan-women-men-athletes-lollipop.png", zoom: "winter-paralympics-milan-women-men-athletes-lollipop-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "Has gender disparity been alleviated for the 2026 Paralympic Winter Games? The European Correspondent visualizes in charts to find out.", 
+        chartDescription: "Lollipop chart, also known as dumbbell charts is used to highlight gender disparity of atheletes for the winter games. We can see that men atheletes has outnumbered women, suggesting the need for a more balanced outcome, especially in ice hockey with only 2 atheletes that are women.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 348,
+        title: "Hermann's tortoises in North Macedonia",
+        date: new Date(2026, 3),
+        author: "Georgios Karamanis",
+        url: "https://www.linkedin.com/posts/georgios-karamanis-a54926153_tidytuesday-rstats-dataviz-share-7436343410095202304-Zkk9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLig0BYbcbOhoT1XSWC2O35MCk1JOMBhA",
+        img: [
+            { full: "tortoise-population-tidytuesday-week10-2026-connected-scatterplot.png", zoom: "tortoise-population-tidytuesday-week10-2026-connected-scatterplot-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "For Week 10 of <a href='https://github.com/rfordatascience/tidytuesday/tree/main'/> #TidyTuesday </a>, Georgios Karamanis has used dataset of Hermann's tortoises in Lake Prespa in North Macedonia for visualization.", 
+        chartDescription: "Connected scatter plot shows each point of field surveys with x-axis showing males per female ratio and y-axis of mean female BCI. Annotations shows year of survey, as you follow through and spot the decreasing number of female captured. For more information on its data, check out <a href='https://github.com/rfordatascience/tidytuesday/tree/main/data/2026/2026-03-03/'> here. </a>",
+        tools: [{name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2026/2026-week_10"}],
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 349,
+        title: "Going to university does still pay--if it's the right one",
+        date: new Date(2026, 3),
+        author: "The Times",
+        url: "https://www.thetimes.com/comment/columnists/article/going-to-university-does-still-pay-if-its-the-right-one-6050xb3hl",
+        img: [
+            { full: "university-graduate-premium-britain-the-times.png", zoom: "university-graduate-premium-britain-the-times-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Is university graduate premium still valid? An analysis by The Times shows that it is, at least for top schools.", 
+        chartDescription: "Since earnings depend on type of degrees, earnings are divided into different courses. We can see that earnings of graduates from selective schools like Oxbridge has topped others.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 350,
+        title: "Hey guys? You could help out a little more.",
+        date: new Date(2026, 2),
+        author: "Amanda Shendruk",
+        url: "https://www.not-ship.com/hey-guys-you-could-help-out-a-little-more/",
+        img: [
+            { full: "women-men-unpaid-labor-time-notship-lollipop.png", zoom: "women-men-unpaid-labor-time-notship-lollipop-zoom.png", chartId: ["lollipop"] },
+            { full: "women-men-unpaid-labor-time-notship-stripplot.png", zoom: "women-men-unpaid-labor-time-notship-stripplot-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Are domestic work still done by most women? Amanda Shendruk uses data to find out.", 
+        chartDescription: "Charts like strip plot and lollipop gathers data from all around the world to show that women spending more time on unpaid labor is universal.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 351,
+        title: "See which jobs are most threatened by AI and who may be able to adapt",
+        date: new Date(2026, 3),
+        author: "The Washington Post",
+        url: "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/?utm_source=email&utm_medium=acq&utm_campaign=RH-ACQ&utm_content=dtpmonthly_20260316_RH_c&campaign_id=17297932",
+        img: [
+            { full: "job-ai-vulenrability-adapt-the-washingtonpost-bubble.png", zoom: "job-ai-vulenrability-adapt-the-washingtonpost-bubble-zoom.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "The discussion of AI taking over jobs has been everywhere, with predictions calling white-job collar jobs as most vulnerable. But new study handles the changing job paradigm by adding another condition besides vulnerability: which jobs will find it easier to adapt?", 
+        chartDescription: "The bubble chart shows two dimensions: vulnerability and adaptability on all jobs. Color is used to distinguish which works will far best (green) and worst (orange). Interesting article to check out!",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 352,
+        title: "How a Melting Glacier Could Affect Tens of Millions Around the Globe",
+        date: new Date(2026, 3),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/interactive/2026/03/17/climate/thwaites-glacier-rising-sea-level-risk-floods.html",
+        img: [
+            { full: "melting-glacier-high-tide-the-newyorktimes-choropleth.png", zoom: "melting-glacier-high-tide-the-newyorktimes-choropleth-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "The melting of a glacier could affect tens of millions worldwide, according to New York Times analysis. This article covers how recent melting will cause risks on coastal and populated cities.", 
+        chartDescription: "Map uses three colors to show how populated cities are at risk, with distinct yellow color to demonstrate its impact.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 353,
+        title: "How wars are adding hours to your flights",
+        date: new Date(2026, 3),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/03/12/how-wars-are-adding-hours-to-your-flights",
+        img: [
+            { full: "iran-war-flight-schedule-theeconomist-connectionmap.png", zoom: "iran-war-flight-schedule-theeconomist-connectionmap-zoom.png", chartId: ["map", "connection"] },
+            { full: "iran-war-flight-schedule-theeconomist-lollipop.png", zoom: "iran-war-flight-schedule-theeconomist-lollipop-zoom.png", chartId: ["lollipop"] },
+            { full: "iran-war-flight-schedule-theeconomist-line.png", zoom: "iran-war-flight-schedule-theeconomist-line-zoom.png", chartId: ["line"] },
+            { full: "iran-war-flight-schedule-theeconomist-bar.png", zoom: "iran-war-flight-schedule-theeconomist-bar-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The war in the Middle East has drastically changed travelling on air. The Economist uses flight-tracking data to show the scale of the disruption.", 
+        chartDescription: "Charts comparing before and after war shows how flights have been emptied in the areas of near Iran.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 354,
+        title: "Polymarket Bets on Iran War Show Limits of Prediction Markets for Wall Street",
+        date: new Date(2026, 3),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/news/articles/2026-03-06/iran-war-bets-on-polymarket-kalshi-are-cautionary-tale-for-wall-street",
+        img: [
+            { full: "prediction-market-khamenei-exit-beeswarm-bloomberg.png", zoom: "prediction-market-khamenei-exit-beeswarm-bloomberg-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Betting in prediction markets has also reached wars. Bloomberg News's analysis in this article shows how the market in dominated by small betters, with only a small percent making huge wins.", 
+        chartDescription: "Beeswarm chart shows distribution of wagers according to wallet. We can see that ten wallets places bets larger than $1M on the right.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 355,
+        title: "College Graduates Face a Tougher Job Market as Hiring Cools",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2026/03/24/business/economy/college-graduates-job-market-hiring.html?smtyp=cur&smid=li-nytimes",
+        img: [{ full: "unemployment-rate-young-people-newyork-times-line.png", zoom: "unemployment-rate-young-people-newyork-times-line-zoom.png", chartId: ["line"] }],
+        contextDescription: "As the Class of 2026 prepares to enter the workforce, the economic landscape is shifting. After a period of rapid post-pandemic hiring, companies are becoming more selective, leading to a more competitive and uncertain job market for new graduates.",
+        chartDescription: "The article features line charts tracking the unemployment and underemployment rates for recent college graduates.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 356,
+        title: "Price changes in consumer goods and services in the United States",
+        date: new Date(2026, 2),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/grapher/price-changes-consumer-goods-services-united-states",
+        img: [{ full: "price-changes-consumer-goods-services-united-states-ourworldindata.png", zoom: "price-changes-consumer-goods-services-united-states-ourworldindata-zoom.png", chartId: ["line"] }],
+        contextDescription: "This chart illustrates the varying inflation rates across different sectors of the U.S. economy. While the cost of services like healthcare and education has surged, the prices of manufactured goods like televisions and software have significantly declined over the past few decades.",
+        chartDescription: "A multi-line chart showing the percentage change in prices for various consumer goods and services relative to the year 2000. It highlights the 'Great Divergence' between items subject to technological advancement and globalization versus those in highly regulated or service-intensive sectors.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 357,
+        title: "Iran’s regional military reach: Tracking missile and drone capabilities",
+        date: new Date(2026, 2),
+        author: "NBC News",
+        url: "https://www.nbcnews.com/data-graphics/iran-war-drones-missile-strikes-military-attack-capabilities-rcna263382",
+        img: [
+            { full: "iran-aerial-attack-drone-nbc-barplot-1.png", zoom: "iran-aerial-attack-drone-nbc-barplot-1-zoom.png", chartId: ["map", "barplot"] },
+            { full: "iran-aerial-attack-drone-nbc-barplot-2.png", zoom: "iran-aerial-attack-drone-nbc-barplot-2-zoom.png", chartId: ["barplot"] }
+        ],
+        contextDescription: "Following the escalation of tensions in the Middle East, this report analyzes Iran's extensive arsenal of ballistic missiles and drones. It examines how these weapons extend Iran's influence across the region, reaching targets thousands of kilometers away.",
+        chartDescription: "The first visualization combines a map showing the strike range of various Iranian missiles with a bar plot comparing payload capacities. The second visualization is a stacked bar chart that breaks down the inventory by missile type and operational status, illustrating the scale of Iran's technological advancements in weaponry.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 358,
+        title: "The nightmare scenario for global trade",
+        date: new Date(2026, 2),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/briefing/2026/03/27/the-nightmare-scenario-for-global-trade",
+        img: [{ full: "global-trade-blockage-the-economist-connection.png", zoom: "global-trade-blockage-the-economist-connection-zoom.png", chartId: ["map", "connection"] }],
+        contextDescription: "As geopolitical tensions rise, the era of seamless global trade is facing unprecedented threats. This interactive briefing explores how new barriers and supply chain disruptions could fundamentally rewire the world's economic connections.",
+        chartDescription: "An interactive globe visualizes the complex web of international shipping lanes and trade dependencies. It illustrates how potential blockades or regional conflicts in key maritime chokepoints could ripple through the global economy.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 359,
+        title: "Who We Spend Time with as We Get Older",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2022/04/22/changing-who-we-spend-time-with-as-we-get-older/",
+        img: [{ full: "time-spent-with-others-animations-nathan-yau.png", zoom: "time-spent-with-others-animations-nathan-yau-zoom.png", chartId: ["barplot"] },
+        { full: "time-spent-with-others-small-multiples-nathan-yau.png", zoom: "time-spent-with-others-small-multiples-nathan-yau-zoom.png", chartId: ["barplot"] }
+        ],
+        contextDescription: "As we move through different stages of life, the people we spend our time with shifts dramatically. This analysis uses American Time Use Survey data to show how our social circles evolve from childhood through old age.",
+        chartDescription: "A series of bar plots showing the proportions of time spent with various groups like family, friends, coworkers, and alone. Make sure to check out the animation that changes the percentages as we get older.",
+        tools: [{ name: "d3.js" }, { name: "R" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 360,
+        title: "How long Americans work the same job",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/03/26/job-tenure/",
+        img: [
+            { full: "job-tenure-age-line-nathan-yau-1.png", zoom: "job-tenure-age-line-nathan-yau-1-zoom.png", chartId: ["line"] },
+            { full: "job-tenure-age-line-nathan-yau-2.png", zoom: "job-tenure-age-line-nathan-yau-2-zoom.png", chartId: ["line"] }
+        ],
+        contextDescription: "How long do people stay in the same job? Nathan Yau uses survey data to see how many years they have worked their current job, with data spanning from 1996 to 2024.",
+        chartDescription: "Line charts have interactive feature where readers can adjust the years of tenure. You can see that people staying in the same job for over 10 years have been rare regardless of what year.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 361,
+        title: "The fragile economies at the heart of rural hospitals",
+        date: new Date(2026, 2),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/USA-HEALTH/RURAL-HOSPITALS/zgpolkmdbvd/",
+        img: [
+            { full: "rural-hospital-closure-reuters-cartogram.png", zoom: "rural-hospital-closure-reuters-cartogram-zoom.png", chartId: ["cartogram"] },
+            { full: "rural-hospital-closure-reuters-treemap.png", zoom: "rural-hospital-closure-reuters-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "rural-hospital-closure-reuters-bubble.png", zoom: "rural-hospital-closure-reuters-bubble-zoom.png", chartId: ["bubble"] }
+        ],
+        contextDescription: "Rural areas across the United States are facing less health care access, with hundreds shuttering over the past decade. This deep dive by Reuters explores how shifting demographics, rising costs, and legislative changes have left millions of Americans in 'medical deserts' without easy access to emergency care.",
+        chartDescription: "This story contains multiple charts including a cartogram highlighting affected states, and a treemap detailing the financial breakdown of hospital expenses.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
