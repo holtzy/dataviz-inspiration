@@ -5290,5 +5290,108 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 355,
+        title: "College Graduates Face a Tougher Job Market as Hiring Cools",
+        date: new Date(2026, 2),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2026/03/24/business/economy/college-graduates-job-market-hiring.html?smtyp=cur&smid=li-nytimes",
+        img: [{ full: "unemployment-rate-young-people-newyork-times-line.png", zoom: "unemployment-rate-young-people-newyork-times-line-zoom.png", chartId: ["line"] }],
+        contextDescription: "As the Class of 2026 prepares to enter the workforce, the economic landscape is shifting. After a period of rapid post-pandemic hiring, companies are becoming more selective, leading to a more competitive and uncertain job market for new graduates.",
+        chartDescription: "The article features line charts tracking the unemployment and underemployment rates for recent college graduates.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 356,
+        title: "Price changes in consumer goods and services in the United States",
+        date: new Date(2026, 2),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/grapher/price-changes-consumer-goods-services-united-states",
+        img: [{ full: "price-changes-consumer-goods-services-united-states-ourworldindata.png", zoom: "price-changes-consumer-goods-services-united-states-ourworldindata-zoom.png", chartId: ["line"] }],
+        contextDescription: "This chart illustrates the varying inflation rates across different sectors of the U.S. economy. While the cost of services like healthcare and education has surged, the prices of manufactured goods like televisions and software have significantly declined over the past few decades.",
+        chartDescription: "A multi-line chart showing the percentage change in prices for various consumer goods and services relative to the year 2000. It highlights the 'Great Divergence' between items subject to technological advancement and globalization versus those in highly regulated or service-intensive sectors.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 357,
+        title: "Iran’s regional military reach: Tracking missile and drone capabilities",
+        date: new Date(2026, 2),
+        author: "NBC News",
+        url: "https://www.nbcnews.com/data-graphics/iran-war-drones-missile-strikes-military-attack-capabilities-rcna263382",
+        img: [
+            { full: "iran-aerial-attack-drone-nbc-barplot-1.png", zoom: "iran-aerial-attack-drone-nbc-barplot-1-zoom.png", chartId: ["map", "barplot"] },
+            { full: "iran-aerial-attack-drone-nbc-barplot-2.png", zoom: "iran-aerial-attack-drone-nbc-barplot-2-zoom.png", chartId: ["barplot"] }
+        ],
+        contextDescription: "Following the escalation of tensions in the Middle East, this report analyzes Iran's extensive arsenal of ballistic missiles and drones. It examines how these weapons extend Iran's influence across the region, reaching targets thousands of kilometers away.",
+        chartDescription: "The first visualization combines a map showing the strike range of various Iranian missiles with a bar plot comparing payload capacities. The second visualization is a stacked bar chart that breaks down the inventory by missile type and operational status, illustrating the scale of Iran's technological advancements in weaponry.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 358,
+        title: "The nightmare scenario for global trade",
+        date: new Date(2026, 2),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/briefing/2026/03/27/the-nightmare-scenario-for-global-trade",
+        img: [{ full: "global-trade-blockage-the-economist-connection.png", zoom: "global-trade-blockage-the-economist-connection-zoom.png", chartId: ["map", "connection"] }],
+        contextDescription: "As geopolitical tensions rise, the era of seamless global trade is facing unprecedented threats. This interactive briefing explores how new barriers and supply chain disruptions could fundamentally rewire the world's economic connections.",
+        chartDescription: "An interactive globe visualizes the complex web of international shipping lanes and trade dependencies. It illustrates how potential blockades or regional conflicts in key maritime chokepoints could ripple through the global economy.",
+        tools: undefined,
+        luminosity: ["light", "dark"],
+        interactive: true
+    },
+    {
+        id: 359,
+        title: "Who We Spend Time with as We Get Older",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2022/04/22/changing-who-we-spend-time-with-as-we-get-older/",
+        img: [{ full: "time-spent-with-others-animations-nathan-yau.png", zoom: "time-spent-with-others-animations-nathan-yau-zoom.png", chartId: ["barplot"] },
+        { full: "time-spent-with-others-small-multiples-nathan-yau.png", zoom: "time-spent-with-others-small-multiples-nathan-yau-zoom.png", chartId: ["barplot"] }
+        ],
+        contextDescription: "As we move through different stages of life, the people we spend our time with shifts dramatically. This analysis uses American Time Use Survey data to show how our social circles evolve from childhood through old age.",
+        chartDescription: "A series of bar plots showing the proportions of time spent with various groups like family, friends, coworkers, and alone. Make sure to check out the animation that changes the percentages as we get older.",
+        tools: [{ name: "d3.js" }, { name: "R" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 360,
+        title: "How long Americans work the same job",
+        date: new Date(2026, 2),
+        author: "Nathan Yau",
+        url: "https://flowingdata.com/2026/03/26/job-tenure/",
+        img: [
+            { full: "job-tenure-age-line-nathan-yau-1.png", zoom: "job-tenure-age-line-nathan-yau-1-zoom.png", chartId: ["line"] },
+            { full: "job-tenure-age-line-nathan-yau-2.png", zoom: "job-tenure-age-line-nathan-yau-2-zoom.png", chartId: ["line"] }
+        ],
+        contextDescription: "How long do people stay in the same job? Nathan Yau uses survey data to see how many years they have worked their current job, with data spanning from 1996 to 2024.",
+        chartDescription: "Line charts have interactive feature where readers can adjust the years of tenure. You can see that people staying in the same job for over 10 years have been rare regardless of what year.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 361,
+        title: "The fragile economies at the heart of rural hospitals",
+        date: new Date(2026, 2),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/USA-HEALTH/RURAL-HOSPITALS/zgpolkmdbvd/",
+        img: [
+            { full: "rural-hospital-closure-reuters-cartogram.png", zoom: "rural-hospital-closure-reuters-cartogram-zoom.png", chartId: ["cartogram"] },
+            { full: "rural-hospital-closure-reuters-treemap.png", zoom: "rural-hospital-closure-reuters-treemap-zoom.png", chartId: ["treemap"] },
+            { full: "rural-hospital-closure-reuters-bubble.png", zoom: "rural-hospital-closure-reuters-bubble-zoom.png", chartId: ["bubble"] }
+        ],
+        contextDescription: "Rural areas across the United States are facing less health care access, with hundreds shuttering over the past decade. This deep dive by Reuters explores how shifting demographics, rising costs, and legislative changes have left millions of Americans in 'medical deserts' without easy access to emergency care.",
+        chartDescription: "This story contains multiple charts including a cartogram highlighting affected states, and a treemap detailing the financial breakdown of hospital expenses.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
