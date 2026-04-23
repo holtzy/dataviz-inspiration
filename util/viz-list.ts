@@ -4721,6 +4721,20 @@ export const vizList: VizItem[] = [
         chartDescription: "A fun interactive where you first rank five favorite ice cream flavors and follow along the votes getting counted until the final winner is decided.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+    {
+        id: 318,
+        title: "German cheese exports and imports from and to Austria between 2001 and 2025 in the style of William Playfair",
+        date: new Date(2026, 3),
+        author: "Ansgar Wolsing",
+        url: "https://bsky.app/profile/ansgarw.bsky.social/post/3mjzupi72xs2x",
+        img: [
+            { full: "cheese-austria-germany-playfair.png", zoom: "cheese-austria-germany-playfair.png", chartId: ["stream"] },
+        ],
+        contextDescription: "A visualization of German cheese exports and imports with Austria from 2001 to 2025, recreated in the historical style of William Playfair's charts.",
+        chartDescription: "Flows of cheese trade between Germany and Austria across 25 years, presented as a Playfair-style stream chart showing the magnitude and direction of trade.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
     }
 ]
