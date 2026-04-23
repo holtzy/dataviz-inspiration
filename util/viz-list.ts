@@ -950,7 +950,7 @@ export const vizList: VizItem[] = [
             { full: "cultural-heritage.png", zoom: "cultural-heritage-zoom.png", chartId: ["network"] },
         ],
         contextDescription: "Since 2003 UNESCO safeguards an ever growing list of our Intangible Cultural Heritage and these days there are almost 500 unique cultural elements inscribed on the list.",
-        chartDescription: "A network chart showing those cultural heritage items and their connections. The interactive version is <a href='https://ich.unesco.org/en/dive&display=constellation#tabs'>available here</a>.",
+        chartDescription: "A network chart showing those cultural heritage items and their connections. The interactive version is <a href='https://ich.unesco.org/en/dive/display=constellation#tabs'>available here</a>.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
         interactive: false
@@ -4722,5 +4722,20 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 318,
+        title: "German Cheese Exports and Imports to and from Austria",
+        date: new Date(2026, 3),
+        author: "Ansgar Wolsing",
+        url: "https://github.com/bydata/30DayChartChallenge/tree/main/2026/21",
+        img: [
+            { full: "cheese-trade-germany-austria.png", zoom: "cheese-trade-germany-austria-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "A visualization showing German cheese trade with Austria from 2001 to 2025, created as part of the #30DayChartChallenge. Data sourced from Destatis.", 
+        chartDescription: "This ribbon chart shows the trade balance between German cheese exports and imports to/from Austria. The yellow ribbon indicates export surplus (favoring Germany) while the dark ribbon shows periods of import dominance. Line labels follow the curves directly, and a distinctive 'Balance in Favour of Germany' annotation highlights the trade surplus. The double-frame border and Abhaya Libre font give it an editorial print feel.",
+        tools: [{ name: "R", link: "https://github.com/bydata/30DayChartChallenge/blob/main/2026/21/21-historical.R" }],
+        luminosity: ["light"],
+        interactive: false
     }
 ]
