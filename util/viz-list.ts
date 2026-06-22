@@ -4722,5 +4722,50 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true
+    },
+    {
+        id: 318,
+        title: "Life expectancy vs. health expenditure",
+        date: new Date(2020, 0),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/us-life-expectancy-low",
+        img: [
+            { full: "life-expectancy-vs-health-spending.png", zoom: "life-expectancy-vs-health-spending-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Americans spend far more on health than any other country, yet live shorter lives than people in other rich countries that spend much less. In the 1970s the US was not an outlier, but since then its health spending has exploded while life expectancy gains stalled — and have recently started to decline.",
+        chartDescription: "A connected scatterplot where each line is a country, connecting yearly observations from 1970 to 2018: health spending per capita on the x-axis, life expectancy on the y-axis. Greying out every country except the USA (in red) instantly tells the story — the American line drifts far to the right without climbing much, breaking away from the tight cluster of other nations. A textbook example of how highlighting a single series turns a spaghetti of trajectories into a clear message.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false
+    },
+    {
+        id: 319,
+        title: "How Apple's supply chain evolves",
+        date: new Date(2023, 0),
+        author: "CommonWealth Magazine",
+        url: "https://www.cw.com.tw/graphics/how-apples-supply-chain-evolves/",
+        img: [
+            { full: "apple-supply-chain-circle-packing.png", zoom: "apple-supply-chain-circle-packing-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "A scrollytelling piece by Taiwan's CommonWealth Magazine (天下雜誌) on how Apple's manufacturing supply chain has shifted over the years. In this 2012 snapshot, more than 40% of Apple's suppliers — 333 manufacturing sites — were located in China, by far the largest share in the world.",
+        chartDescription: "A circular packing chart where each tiny dot is a single Apple manufacturing site, grouped into nested bubbles by region. Highlighting the China group in red against the greyed-out rest makes its dominance obvious at a glance. I love the dotted texture inside each circle: it turns an abstract proportion into something you can almost count.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true
+    },
+    {
+        id: 320,
+        title: "Voting shifts, 2004–2020",
+        date: new Date(2021, 0),
+        author: "The New York Times",
+        url: "https://www.nytimes.com/2021/01/07/learning/whats-going-on-in-this-graph-voting-shifts.html",
+        img: [
+            { full: "nyt-voting-shifts.png", zoom: "nyt-voting-shifts-zoom.png", chartId: ["line", "parallel"] },
+        ],
+        contextDescription: "Across five presidential elections from 2004 to 2020, how did each US state's partisan lean shift? This New York Times graphic places every state on a Democratic-to-Republican margin axis for each election year, tracing how solidly blue and red states moved — and which ones flirted with crossing the line.",
+        chartDescription: "A bump-style line chart: each line is a state, threaded top-to-bottom through the five election years and positioned left-to-right by its voting margin, with a central 'Tie' line as the anchor. Blue and red encode the lean. The result reads almost like flowing currents, and the swings of swing states pop out immediately against the calm of the safe ones.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: false
     }
 ]
