@@ -39,7 +39,7 @@ export const PictureWall = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State of this specific page
 
   const likesData = useLikesData();
-  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools);
+  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools).reverse();
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
     return (
