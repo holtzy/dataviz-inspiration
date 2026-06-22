@@ -6,6 +6,40 @@ export type Tool = typeof allTools[number];
 
 export type Luminosity = "light" | "dark"
 
+// "labels" are cross-cutting design techniques / features, orthogonal to the chart type.
+// They let people search for inspiration on a specific need (e.g. "a good color legend",
+// "scrolly-telling", "a clean annotation") regardless of which chart family they're building.
+export const vizLabels = [
+    "annotation",          // on-chart text that explains or points at key data
+    "legend",              // thoughtful color / size / shape legend design
+    "direct labeling",     // labels placed directly on the data instead of a separate legend
+    "color palette",       // notable or beautiful color choices
+    "bivariate coloring",  // a 2D color scale encoding two variables at once
+    "gradient",            // gradient fills or strokes
+    "texture",             // patterns / textures used inside shapes
+    "typography",          // standout use of type and fonts
+    "icons & pictograms",  // icons or pictograms used to encode or decorate data
+    "highlight",           // emphasizing one series while greying out the rest
+    "storytelling",        // strong data-driven narrative / article structure
+    "scrollytelling",      // a narrative that unfolds as you scroll
+    "comparison",          // mirror / diverging / side-by-side comparison layouts
+    "uncertainty",         // showing confidence intervals, error or uncertainty
+    "animation",           // animated transitions between states or datasets
+    "shape morphism",      // smooth morphing between shapes or chart types
+    "interactive controls",// buttons, dropdowns, sliders to change the view
+    "tooltip",             // informative hover tooltips
+    "hover effect",        // hover-based highlighting or interaction
+    "zoom & pan",          // a zoomable / pannable canvas
+    "brushing",            // select a range to filter or zoom
+    "small multiples",     // repeated mini-charts (faceting)
+    "full-page layout",    // viz fully integrated into an editorial page
+    "minimalist",          // clean, stripped-down design
+    "flow & arrows",       // arrows / flows showing direction or movement
+    "3d",                  // three-dimensional rendering
+    "log scale",           // logarithmic axis
+] as const;
+export type VizLabel = typeof vizLabels[number];
+
 export type VizItem = {
     id: number;
     title: string;
@@ -18,6 +52,7 @@ export type VizItem = {
     tools?: { name: Tool, link?: string }[]
     luminosity: Luminosity[];
     interactive: boolean
+    labels?: VizLabel[]; // cross-cutting design techniques / features (see vizLabels above)
 }
 
 export const vizList: VizItem[] = [
@@ -4736,7 +4771,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A connected scatterplot where each line is a country, connecting yearly observations from 1970 to 2018: health spending per capita on the x-axis, life expectancy on the y-axis. Greying out every country except the USA (in red) instantly tells the story — the American line drifts far to the right without climbing much, breaking away from the tight cluster of other nations. A textbook example of how highlighting a single series turns a spaghetti of trajectories into a clear message.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "annotation", "direct labeling"]
     },
     {
         id: 319,
@@ -4751,7 +4787,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular packing chart where each tiny dot is a single Apple manufacturing site, grouped into nested bubbles by region. Highlighting the China group in red against the greyed-out rest makes its dominance obvious at a glance. I love the dotted texture inside each circle: it turns an abstract proportion into something you can almost count.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["highlight", "texture", "legend", "scrollytelling"]
     },
     {
         id: 320,
@@ -4766,6 +4803,23 @@ export const vizList: VizItem[] = [
         chartDescription: "A bump-style line chart: each line is a state, threaded top-to-bottom through the five election years and positioned left-to-right by its voting margin, with a central 'Tie' line as the anchor. Blue and red encode the lean. The result reads almost like flowing currents, and the swings of swing states pop out immediately against the calm of the safe ones.",
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "comparison"]
+    },
+    {
+        id: 321,
+        title: "South Gaza's services and a doubling of population",
+        date: new Date(2023, 9),
+        author: "Bloomberg",
+        url: "https://www.bloomberg.com/graphics/2023-israel-gaza-evacuation-hospital-access/",
+        img: [
+            { full: "gaza-hospital-access-bivariate.png", zoom: "gaza-hospital-access-bivariate-zoom.png", chartId: ["choropleth"] },
+        ],
+        contextDescription: "After Israel ordered the evacuation of northern Gaza in October 2023, more than a million people were expected to move south — into an area whose health services are far sparser. Bloomberg maps where people live against how easily they can reach a hospital, before and after the evacuation.",
+        chartDescription: "A bivariate map that blends two variables into a single 2D color scale (shown in the legend, top-right): population density on one axis and access to health services on the other. Blue means good access, pink/magenta means dense population with poor access, and dark purple means both are high. A 'Before / After evacuation' toggle and arrow annotations walk you through the shift. A masterclass in encoding two dimensions of data on one map without losing the reader.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["bivariate coloring", "legend", "annotation", "interactive controls"]
     }
 ]

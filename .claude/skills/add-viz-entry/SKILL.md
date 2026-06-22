@@ -44,8 +44,23 @@ R, python, tableau, data wrapper, d3.js, react, excel, javascript, rawGraphs, il
   tools?: { name: Tool, link?: string }[];   // or `undefined`
   luminosity: ("light"|"dark")[];
   interactive: boolean;
+  labels?: VizLabel[];   // optional — cross-cutting design techniques/features (see below)
 }
 ```
+
+### labels vocabulary (`VizLabel`, defined in `viz-list.ts` as `vizLabels`)
+Cross-cutting design techniques/features, orthogonal to chart type — they let people find
+inspiration for a specific need (e.g. "a good color legend", "scrollytelling") regardless of
+chart family. Pick the few that genuinely stand out in the viz; omit the field if none do.
+
+annotation, legend, direct labeling, color palette, bivariate coloring, gradient, texture, typography,
+icons & pictograms, highlight, storytelling, scrollytelling, comparison, uncertainty,
+animation, shape morphism, interactive controls, tooltip, hover effect, zoom & pan, brushing,
+small multiples, full-page layout, minimalist, flow & arrows, 3d, log scale
+
+> `highlight` = emphasizing one series while greying out the rest (very common in good editorial
+> viz). `direct labeling` = labels on the data instead of a separate legend. Don't use a label
+> for something already captured by another field (e.g. no "dark mode" label — that's `luminosity`).
 
 ## Procedure
 
@@ -85,6 +100,8 @@ R, python, tableau, data wrapper, d3.js, react, excel, javascript, rawGraphs, il
      etc.) tag `d3.js`; otherwise `undefined`. Don't invent a `link`.
    - `interactive`: `true` for live web graphics/scrollytelling, `false` for static figures.
    - `luminosity`: `["light"]`, `["dark"]`, or both — judge from the image background.
+   - `labels`: pick the few `VizLabel`s (from the vocab above) that genuinely stand out in the
+     viz — what would make someone with that specific need want to study it. Omit if none do.
 
 6. **Verify**: `grep -n "id: <new>"`, confirm both image files exist in `public/img/`, and
    run `npx tsc --noEmit` (filter to the viz-list line range) to confirm the object parses.
@@ -105,7 +122,8 @@ R, python, tableau, data wrapper, d3.js, react, excel, javascript, rawGraphs, il
     chartDescription: "A circular packing chart where each tiny dot is a single Apple manufacturing site, grouped into nested bubbles by region. Highlighting the China group in red against the greyed-out rest makes its dominance obvious at a glance. I love the dotted texture inside each circle: it turns an abstract proportion into something you can almost count.",
     tools: undefined,
     luminosity: ["light"],
-    interactive: true
+    interactive: true,
+    labels: ["highlight", "texture", "legend", "scrollytelling"]
 }
 ```
 
