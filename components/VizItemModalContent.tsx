@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { vizList } from "../util/viz-list";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";

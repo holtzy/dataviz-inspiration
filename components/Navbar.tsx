@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { Glow } from "./Glow";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
