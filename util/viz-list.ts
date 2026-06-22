@@ -32,6 +32,7 @@ export const vizLabels = [
     "zoom & pan",          // a zoomable / pannable canvas
     "brushing",            // select a range to filter or zoom
     "small multiples",     // repeated mini-charts (faceting)
+    "radial",              // circular / polar layout (spirals, sunbursts, radial bars)
     "full-page layout",    // viz fully integrated into an editorial page
     "minimalist",          // clean, stripped-down design
     "flow & arrows",       // arrows / flows showing direction or movement
@@ -66,7 +67,8 @@ export const vizList: VizItem[] = [
         contextDescription: "We're in early 2022, the Omicron variant importance is raising across the globe and the New york times decides to represent the Covid pandemic evolution of the last 2 years.",
         chartDescription: "The New York Times <a href='https://twitter.com/FreedZach/status/1479132573578240001'>literally broke the internet</a> with this circular streamgraph. The dataviz community is divided, trying to understand if this unconventional figure is pure genius or trash, since it does not respect most of the comon rules.<br/><br/>Hint: when so many people talk about a chart, there is probably something good about it!",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "minimalist", "radial"]
     },
     {
         id: 2,
@@ -83,7 +85,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A dashboard describing the spread of Covid 19 in India. Highly interactive with a pretty slick design. Dark mode support, many different types of viz with smooth transition between dataset.",
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
         luminosity: ["light", "dark"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "small multiples", "animation"]
     },
     {
         id: 3,
@@ -95,7 +98,8 @@ export const vizList: VizItem[] = [
         contextDescription: "The flow of people across borders has long shaped our world. Data from the past 50 years of international migration helped National Geographic understand why people make the choice to leave and where they go. Less than 10 percent of these migrants are forced to flee; most are seeking a better life and move only when they can afford to.",
         chartDescription: "The article describes the evolution of the immigration of many countries using smoothed area charts. The last figure looks pretty much like a ridgeline chart that is usually used to compare distributions, but smartly used here to compare evolutions.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "full-page layout", "color palette"]
     },
     {
         id: 4,
@@ -107,7 +111,8 @@ export const vizList: VizItem[] = [
         contextDescription: "Europe relies on Russia’s natural gas to help heat millions of homes, generate electricity and power factories. With Russian troops massed along Ukraine’s border, Europe’s heavy dependence on Russia is limiting its diplomatic options and threatening to throw its energy supplies into turmoil. This map describes what proportion of the gas supply is distributed to each European country.",
         chartDescription: "This viz is a choropleth map with a sankey diagram on top. The choropleth shows how much each country relies on Russian gaz. The sankey diagram (arrows) shows where the Russian gas is distributed.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "legend", "annotation"]
     },
     {
         id: 5,
@@ -120,7 +125,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A lollipop chart grouped by character. It's interesting to notice that character names are not aligned vertically, but displayed next to each segment for better readability.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-lollipop-plot-with-r-mario-kart-64-world-records.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "legend", "small multiples", "annotation"]
     },
     {
         id: 6,
@@ -133,7 +139,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A set of aligned streamcharts with helpful annotations. Nice attention to details with striking color palette, great fonts and clear legend.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-streamchart-with-ggstream.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "annotation", "legend", "color palette"]
     },
     {
         id: 7,
@@ -146,7 +153,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular lollipop chart where each item is a password. Sorted by rank and colored by category. Annotation for the most extreme password, cool split by category at the bottom.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-circular-lollipop-plot-with-ggplot2.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "annotation", "color palette", "radial"]
     },
     {
         id: 8,
@@ -159,7 +167,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A simple barplot with the Economist's well known style signature. Note bars are displayed horizontally, each being labeled using a very readable manner.",
         tools: [{ name: "python", link: "https://www.python-graph-gallery.com/web-horizontal-barplot-with-labels-the-economist" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "minimalist", "typography"]
     },
     {
         id: 9,
@@ -172,7 +181,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A dumbbell plot made with ggplot2. On top of the nice layout and annotations, it also have additional grouped mean and standart deviation for each year.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-extended-dumbbell-plot-ggplot2.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["comparison", "direct labeling", "uncertainty"]
     },
     {
         id: 10,
@@ -185,7 +195,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Several viz are provided, going from mirror area charts to streamcharts, with different kinds of map and several tables. Worth a read if you speak 🇫🇷.",
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "interactive controls", "direct labeling"]
     },
     {
         id: 11,
@@ -198,7 +209,8 @@ export const vizList: VizItem[] = [
         chartDescription: "An interactive hierarchical edge bundling where each node is a scientific journal. A journal is linked with another through an edge if it cites it in one of its publication. Clicking on a specific journal highlights its connections.",
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "minimalist", "highlight"]
     },
     {
         id: 12,
@@ -211,7 +223,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A dichotomous choropleth map with nice annotation, good looking color palette and a 2D color mapping.",
         tools: [{ name: "R", link: "https://dominicroye.github.io/en/project/population/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["bivariate coloring", "annotation", "legend"]
     },
     {
         id: 13,
@@ -224,7 +237,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The result is a connected scatterplot. I personally prefer it since dual Y axis are notoriously <a href='https://www.data-to-viz.com/caveats.html'>broken</a>, but it's hard to know if people truly understand it when they're not used to it.",
         tools: [{ name: "excel" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling"]
     },
     {
         id: 14,
@@ -237,7 +251,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A clean heatmap that shows the number of cases per 100,000 people. Available for other diseases with similar result.",
         tools: [{ name: "excel" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "annotation", "small multiples"]
     },
     {
         id: 15,
@@ -249,7 +264,8 @@ export const vizList: VizItem[] = [
         contextDescription: "In the early euphoria following the fall of the Berlin Wall in 1989, Germany moved quickly to erase the scars of its Cold War division. But East Germany’s legacy remains visible in statistics. Die Zeit offers a set of maps showing the remaining discrepancies between the West and the East.",
         chartDescription: "A massive load of hexbin maps, showing various variables like the average income, the proportion of people called Ronny or the avera farm size. Smooth transition between variables and clean design.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "small multiples", "minimalist"]
     },
     {
         id: 16,
@@ -261,7 +277,8 @@ export const vizList: VizItem[] = [
         contextDescription: "This visualization explores the story of Nobel prizes through years.Visualized for each laureate are prize category, year the prize was awarded, and age of the recipient at the time, as well as principal academic affiliations and hometown.",
         chartDescription: "Each dot represents a Nobel laureate, and each recipient is positioned according to the year the prize was awarded (x axis) and his or her age at the time of the award (y axis).",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["full-page layout", "annotation", "color palette", "storytelling"]
     },
     {
         id: 17,
@@ -274,7 +291,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The unique base map shows ocean depth and major rivers, while the ships can be viewed as a high-resolution animation of movements over time (the 'ships' view) or as a plot showing all the positions at once (the 'routes' view), optionally colour-coded by ship type. A Talkie voiceover with music introduction sets the scene and provides an explanatory tour of the map.",
         tools: [{ name: "javascript" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "color palette", "animation"]
     },
     {
         id: 18,
@@ -287,7 +305,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The main viz of this project is a radial diagram. One viz per ingredient. The color of each square is for the year. The distance to center (radius) is for the number of google search.",
         tools: [{ name: "javascript" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "small multiples", "color palette"]
     },
     {
         id: 19,
@@ -300,7 +319,8 @@ export const vizList: VizItem[] = [
         chartDescription: "My favorite grouped connected scatterplot! Each line goes from 2016 to 2020. A higher point means a technology has been used by more people, and a point further to the right means more users want to learn it; or have used it and would use it again.",
         tools: [{ name: "javascript", link: "https://github.com/StateOfJS/StateOfJS-2019/blob/master/src/core/charts/tools/ToolsArrowsChart/ToolsArrowsChart.js" }, { name: "d3.js", link: "https://github.com/StateOfJS/StateOfJS-2019/blob/master/src/core/charts/tools/ToolsArrowsChart/ToolsArrowsChart.js" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "direct labeling", "color palette"]
     },
     {
         id: 20,
@@ -313,7 +333,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Each row is a scientist. From left to right, the first to the last paper of a scientist are arranged, ignoring their timing of publication. The line height shows the number of citation of the paper. The app has nice controls on top, including interactive histograms that I really like.",
         tools: [{ name: "javascript" }, { name: "d3.js" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "interactive controls", "color palette"]
     },
     {
         id: 21,
@@ -326,7 +347,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A 1 dimension scatterplot where the X axis shows the number of unique words and each item is an artist, represented by a circle and an avatar. The Y position is random, just using <a href='https://www.data-to-viz.com/caveat/boxplot.html>jittering</a> to avoid overlap.",
         tools: [{ name: "javascript" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["icons & pictograms", "interactive controls", "minimalist"]
     },
     {
         id: 22,
@@ -339,7 +361,8 @@ export const vizList: VizItem[] = [
         chartDescription: "2 interactive histograms with animated transition between datasets and control buttons on top.",
         tools: [{ name: "javascript" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "interactive controls", "comparison", "animation"]
     },
     {
         id: 23,
@@ -351,7 +374,8 @@ export const vizList: VizItem[] = [
         contextDescription: "On the 24th of February Russian troops invaded Ukraine. <i>Le monde</i> created a full page on the topic based on a map of the area.",
         chartDescription: "Not really dataviz since this map does not display any data. But still interesting for design inspiration, notably for the whole page layout.",
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["full-page layout", "typography", "legend"]
     },
     {
         id: 24,
@@ -363,7 +387,8 @@ export const vizList: VizItem[] = [
         contextDescription: "The New York Times covered the migration of Ukrainians fleeing the war with a very complete article full of migration maps.",
         chartDescription: "This snapshot shows a sankey diagram drawn on top of a map. Read the article for more map examples.",
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "direct labeling"]
     },
     {
         id: 25,
@@ -376,7 +401,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A clean line chart allowing to compare the evolution of several groups. Note the clean inline legend that avoids the <a href='https://www.data-to-viz.com/caveat/spaghetti.html'>spaghetti effect</a>.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-line-chart-with-labels-at-end-of-line.html" }, { name: "python", link: "https://python-graph-gallery.com/web-line-chart-with-labels-at-line-end" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "highlight", "minimalist"]
     },
     {
         id: 26,
@@ -388,7 +414,8 @@ export const vizList: VizItem[] = [
         contextDescription: "A good proportion of the world countries have applied heavy sanctions to Russia following the Ukraine invasion. As a result the Rouble value is quickly decreasing.",
         chartDescription: "A line chart of the Ruble / USD exchange rate evolution. Two things are interesting here. Annotations are very clear and truly make a difference in the chart quality. The Y scale is inverted which is usually a bad thing, but works well here.",
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "minimalist"]
     },
     {
         id: 27,
@@ -400,7 +427,8 @@ export const vizList: VizItem[] = [
         contextDescription: "In the 1970s, the most common household type in the U.S. was a married couple with kids. But over time, as people wait longer to get married and have fewer kids (if any), it’s grown more common to live alone or with non-family.",
         chartDescription: "This project describes this kind of effect using an alluvial diagram, showing both the rank and the percentage of each household type over the years.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "annotation", "color palette"]
     },
     {
         id: 28,
@@ -412,7 +440,8 @@ export const vizList: VizItem[] = [
         contextDescription: "The share of Americans not having sex has reached a record high. The washington post made a full article on the topic, explaining why this is mainly due to young people which sounds scary to me.",
         chartDescription: "A simple timeseries line chart showing the evolution of 2 groups (male and female). Note the on-chart annotation of both the group names and the current values.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "minimalist", "annotation"]
     },
     {
         id: 29,
@@ -425,7 +454,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The chart is a mirror barplot, showing both the number of outgoing and incoming students. I love the general layout and visual, even though I'm not sure about the opacity used to encode the year.",
         tools: [{ name: "R", link: "https://t.co/LgnyJ3w63Y" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["comparison", "typography", "legend"]
     },
     {
         id: 30,
@@ -437,7 +467,8 @@ export const vizList: VizItem[] = [
         contextDescription: "The war in Ukraine has made Russian social-media users glum. Posts on Twitter became far sadder than at the start of the covid-19 pandemic. A proof using sentiment analysis.",
         chartDescription: "A timeseries where evolution is represented using circles (average per day) and a line (7-day average). Having both information on the same figure is truly insightful. And the annotation of the outlier weeks help understand the full story.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "uncertainty", "minimalist"]
     },
     {
         id: 31,
@@ -450,7 +481,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Each item of the small multiple is a suburb. For each, we quickly see the number of cats (blue line) and other animals (red lines). Coloring the area between both in blue or red makes it easy to compare both at a higher scale.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-time-series-and-facetting.html" }, { name: "python", link: "https://python-graph-gallery.com/web-time-series-and-facetting-with-matplotlib" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "comparison", "direct labeling"]
     },
     {
         id: 32,
@@ -462,7 +494,8 @@ export const vizList: VizItem[] = [
         contextDescription: "A deep look into the 7102 known languages alive in the world. What are the main ones? In which country are they spoken?",
         chartDescription: "A circular Voronoi diagram showing the importance of each language. So much information packed on the same figure, in a very eye-catching style.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "typography", "annotation"]
     },
     {
         id: 33,
@@ -474,7 +507,8 @@ export const vizList: VizItem[] = [
         contextDescription: "Hong Kong’s vaccination rate has lagged far behind peer countries, especially among the most vulnerable. This article by the financial times goes deep into this matter and compares the situation with other countries.",
         chartDescription: "Some timeseries line chart with clean on-graph legends and a set of 3 stacked bar chart clearly showing how Hong-Kong differs to other countries.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "comparison", "direct labeling", "annotation"]
     },
     {
         id: 34,
@@ -487,7 +521,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A very clean 3D map made with R with a minigraph, very clean and concise.",
         tools: [{ name: "R", link: "https://twitter.com/toeb18/status/1503129095433080838/photo/1" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["3d", "annotation", "minimalist", "typography"]
     },
     {
         id: 35,
@@ -500,7 +535,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A custom scatterplot with auto-positioned labels to explore the palmerpenguins dataset made with R and the tidyverse.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-scatterplot-and-ggrepel.html" }, { name: "python", link: "https://python-graph-gallery.com/web-text-repel-with-matplotlib" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "legend", "typography"]
     },
     {
         id: 36,
@@ -513,7 +549,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A scatterplot with regression fit and automatic text repel. Relationship is striking.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-scatterplot-corruption-and-human-development.html" }, { name: "python", link: "https://python-graph-gallery.com/web-scatterplot-text-annotation-and-regression-matplotlib" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "legend"]
     },
     {
         id: 37,
@@ -526,7 +563,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A radar chart that compares the features of 3 groups for 4 numeric variables.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-radar-chart-with-R.html" }, { name: "python", link: "https://python-graph-gallery.com/web-radar-chart-with-matplotlib" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "legend", "color palette"]
     },
     {
         id: 38,
@@ -539,7 +577,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular barplot with clear group annotation, nice layout and great on-chart legend to explain what's shown.",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-circular-barplot-with-R-and-ggplot2.html" }, { name: "python", link: "https://python-graph-gallery.com/web-circular-barplot-with-matplotlib" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "annotation", "legend", "color palette"]
     },
     {
         id: 39,
@@ -552,7 +591,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A line chart next to an area chart. Note that the first one is used for a percentage (does not make sense to add numbers up), when the second is used to a number where we are interested in the total number (stacking makes sense)",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-lineplots-and-area-chart-the-economist.html" }, { name: "python", link: "https://python-graph-gallery.com/web-lineplots-and-area-chart-the-economist" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["comparison", "direct labeling", "annotation"]
     },
     {
         id: 40,
@@ -565,7 +605,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Warming stripes (sometimes referred to as climate stripes, climate timelines or stripe graphics are data visualization graphics that use a series of coloured stripes chronologically ordered to visually portray long-term temperature trends.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["minimalist", "color palette", "gradient"]
     },
     {
         id: 41,
@@ -578,7 +619,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Combination of a violin plot with a boxplot. Sample size added on the x axis. Build with ggplot2.",
         tools: [{ name: "R", link: "https://www.data-to-viz.com/graph/violin.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "minimalist"]
     },
     {
         id: 42,
@@ -591,7 +633,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Using 3 waffle charts to compare 3 proportions.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["icons & pictograms", "comparison", "small multiples", "annotation"]
     },
     {
         id: 43,
@@ -604,7 +647,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This example just shows the default style of the Seaborn Python library.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/violin-plot/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "minimalist"]
     },
     {
         id: 44,
@@ -617,7 +661,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A Scatterplot that split the graph area in 4 sections, showing 4 potential behaviour of companies. As often, single data points are labeled to understand what are the most important data points.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling"]
     },
     {
         id: 45,
@@ -630,7 +675,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Two parallel charts showing the evolution of each political party, measured by state and by district.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "comparison", "color palette"]
     },
     {
         id: 46,
@@ -643,7 +689,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A bubble chart where the Y axis is a categoric variable. Very clean design, with an extensive legend.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "typography", "color palette"]
     },
     {
         id: 47,
@@ -656,7 +703,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This piece is mainly a circular barplot. But it manages to store a massive amount of information thanks to the inner circles supplementary charts.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "full-page layout", "legend"]
     },
     {
         id: 48,
@@ -669,7 +717,8 @@ export const vizList: VizItem[] = [
         chartDescription: "It's hard to classify this poster in a viz type. Each country is represented by several shapes, with shape size mapped to a numeric variable. Small multiples is used here to showcases all countries.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "comparison", "icons & pictograms", "full-page layout"]
     },
     {
         id: 49,
@@ -682,7 +731,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A slope chart showing the # of cases per 1000 people in 2007 and 2017 for several African countries. A good way to highlight the global decrease while ranking the countries.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "direct labeling", "gradient"]
     },
     {
         id: 50,
@@ -695,7 +745,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular packing chart with one level of information. Each bubble map is sized according to its proportion of bicycle commuters. I'm not a big fan of the gradient effect though.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "gradient"]
     },
     {
         id: 51,
@@ -708,7 +759,8 @@ export const vizList: VizItem[] = [
         chartDescription: "An interactive map showing global flows. You can rotate and zoom the globe. I like how the webpage is viz focused, with an optional control panel to decide what to display.",
         tools: [{ name: "javascript", link: "https://github.com/cambecc/earth" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "animation", "zoom & pan", "full-page layout"]
     },
     {
         id: 52,
@@ -721,7 +773,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Please read <a href='https://www.earthisland.org/journal/index.php/articles/entry/imagining-the-wind'>this article</a> that explains how this project was born and what impact it had.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "minimalist", "animation"]
     },
     {
         id: 53,
@@ -734,7 +787,8 @@ export const vizList: VizItem[] = [
         chartDescription: "I don't know much about this project, but wanted to show it for its slick design. Be careful, the radial barchart is definitely not a good viz type.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "small multiples", "direct labeling"]
     },
     {
         id: 54,
@@ -747,7 +801,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Two things I really love on this circular packing project: the way labels are set around each circles, and the scrolly-telling that works like a charm.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["scrollytelling", "direct labeling", "legend"]
     },
     {
         id: 55,
@@ -760,7 +815,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A small multiple map that quickly conveys a pretty complicated information. No wonders it became viral on <a href='https://twitter.com/erindataviz/status/1489009794245541888?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1489009794245541888%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Ferdavis.com%2F2022%2F02%2F09%2Fhow-i-made-the-viral-map%2F'>twitter</a>!",
         tools: [{ name: "R", link: "https://erdavis.com/2022/02/09/how-i-made-the-viral-map/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "legend", "color palette"]
     },
     {
         id: 56,
@@ -773,7 +829,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Erin's article is well written and vizzes are unusual and very well thought. A masterpiece of data analysis!",
         tools: [{ name: "R", link: "https://erdavis.com/2021/06/14/do-women-who-pose-with-their-art-on-reddit-get-more-upvotes/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["log scale", "annotation", "highlight"]
     },
     {
         id: 57,
@@ -786,7 +843,8 @@ export const vizList: VizItem[] = [
         chartDescription: "An interactive circle packing chart with great tooltip. The transitions between viz types are very smooth and make it a delight to explore.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "interactive controls", "tooltip"]
     },
     {
         id: 58,
@@ -799,7 +857,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A data-based article with clean design. I mainly selected it for the clean horizontal barplots that can probably be used on other projects.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["icons & pictograms", "direct labeling", "minimalist"]
     },
     {
         id: 59,
@@ -815,7 +874,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A massive streamchart showing the raise of QAnon on private channels, with a spike next to the Storming of the Capitol. In the printed version this viz is folded in 4 parts.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "color palette", "storytelling"]
     },
     {
         id: 60,
@@ -828,7 +888,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A colorfull scatterplot with gradient. Original design choices, especially when it comes to the axes.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "direct labeling", "annotation"]
     },
     {
         id: 61,
@@ -846,7 +907,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A set of charts following the same design, spread around a well-written article. I really like the mirror barplot and the clear annotations that make the vizs very insightful.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "annotation", "small multiples"]
     },
     {
         id: 62,
@@ -862,7 +924,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A nicely animate scatterplot with linear trend. The page uses scrollytelling, progressively adding features to the chart as the story goes.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["scrollytelling", "direct labeling", "animation"]
     },
     {
         id: 63,
@@ -877,7 +940,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Three colorfull barplots allowing to compare features of 3 groups. The article uses scrollytelling.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "comparison", "color palette", "direct labeling"]
     },
     {
         id: 64,
@@ -894,7 +958,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A complete app with various chart types showing different features of the dataset. Nice design and consistent styling and palettes among charts.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "direct labeling", "small multiples"]
     },
     {
         id: 65,
@@ -910,7 +975,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Probably the best chord diagram example I know so far. The project incrementally add each part of the final figure to explain how it works.",
         tools: [{ name: "d3.js", link: "https://github.com/nbremer/Chord-Diagram-Storytelling" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "storytelling", "color palette"]
     },
     {
         id: 66,
@@ -925,7 +991,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A vertical streamgraph with a lot of annotations telling the story. Note that each group of the stream are divided in substreams that follow a 'bump chart' logic.",
         tools: [{ name: "d3.js", link: undefined }, { name: "R", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "storytelling", "gradient", "typography"]
     },
     {
         id: 67,
@@ -940,7 +1007,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is not exactly a network chart but more a diagram representing the day of a regular internet user. The design is very clean and definitely worth a read.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "minimalist", "storytelling"]
     },
     {
         id: 68,
@@ -956,7 +1024,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The static version already does a great job at showing the flow thanks to subtle color gradients and icons. But the <a href='https://vimeo.com/351673775'>video</a> is definitely worth a look to, as it depict the acceleration of the process in another way.",
         tools: [{ name: "d3.js", link: undefined }, { name: "R", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "gradient", "icons & pictograms"]
     },
     {
         id: 69,
@@ -973,7 +1042,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Several chart types following the same design guidelines: sankey, treemap and waffle. I really like that they each have their own personal touch: sankey start with a gradient, treemap and waffle items have a 45° rotation.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "color palette", "flow & arrows"]
     },
     {
         id: 70,
@@ -988,7 +1058,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A network chart showing those cultural heritage items and their connections. The interactive version is <a href='https://ich.unesco.org/en/dive&display=constellation#tabs'>available here</a>.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "annotation"]
     },
     {
         id: 71,
@@ -1005,7 +1076,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A master piece of scrollytelling feature a wide range of viz types. I am a big fan of the vertical density chart with this flow diagram on the left, beautiful.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "annotation", "scrollytelling", "highlight"]
     },
     {
         id: 72,
@@ -1020,7 +1092,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Those density charts are highly customized. They are made circular to show the cyclic nature of the data. The distribution is also spread around the median line, instead of using 0 as a baseline.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "annotation", "small multiples"]
     },
     {
         id: 73,
@@ -1035,7 +1108,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This chart is looking a lot like a chord diagram but has nodes in the center of the figures. Check the <a href='https://lotr.visualcinnamon.com'>interactive version</a> for a better exploration.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "flow & arrows", "typography"]
     },
     {
         id: 74,
@@ -1050,7 +1124,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Just a clean parallel chart. Great way to legend the chart using an inline color in the chart explanation on top.",
         tools: [{ name: "R", link: 'https://github.com/bydata/30DayChartChallenge/blob/main/2022/06/06-owid-slope.png' }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "highlight", "minimalist", "comparison"]
     },
     {
         id: 75,
@@ -1065,7 +1140,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Probably more data art than data viz but I very like the global style of this map.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "minimalist"]
     },
     {
         id: 76,
@@ -1080,7 +1156,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a very specific grouped line chart. There are many groups. The value can only increase and data is recorded for 36 hours only. It results in a very original shape. The annotation on top allow to learn what titles where the most popular.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "annotation", "legend", "direct labeling"]
     },
     {
         id: 77,
@@ -1095,7 +1172,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Those map are just representing what kind of area each place is (street, place, river..). A bunch of cities are available as prints <a href='https://society6.com/erdavis'>here</a>.",
         tools: [{ name: "R", link: "https://github.com/erdavis1/RoadColors" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "minimalist"]
     },
     {
         id: 78,
@@ -1110,7 +1188,8 @@ export const vizList: VizItem[] = [
         chartDescription: "It's important to understand that the process results in a population density map. But the “city lights from space” + “starry sky” effect is definitely working here.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["minimalist", "annotation"]
     },
     {
         id: 79,
@@ -1125,7 +1204,8 @@ export const vizList: VizItem[] = [
         chartDescription: "In my opinion this is a very clever way to represent this dataset. It allows to have a very global vision of the year, and to see which book behaviour. Check how Sapiens became a struggle, I did not finish it either!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "legend"]
     },
     {
         id: 80,
@@ -1142,7 +1222,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This final piece of this project is a <a href='http://ceur-ws.org/Vol-1947/paper05.pdf'>Cactus Trees</a> visualization, a kind I did not know until today. The author explains the full process leading there, an interesting read and some unconventional shapes.",
         tools: [{ name: "R", link: undefined }, { name: "d3.js", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "minimalist"]
     },
     {
         id: 81,
@@ -1157,7 +1238,8 @@ export const vizList: VizItem[] = [
         chartDescription: "You can read the complete research paper <a href='https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.7989&rep=rep1&type=pdf'>here</a>, that compares different values for the bundling. It shows very well how useful can be bundling.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "highlight", "minimalist"]
     },
     {
         id: 82,
@@ -1172,7 +1254,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Vincent Ranwez has about 100 co-authors, all represented by a node on the following chart. If two people have already been on the same paper, they are linked by an arc.",
         tools: [{ name: "R", link: "https://www.data-to-viz.com/graph/arc.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "minimalist"]
     },
     {
         id: 83,
@@ -1187,7 +1270,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Clean and un-cluttered design for this Sankey diagram.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "direct labeling", "color palette"]
     },
     {
         id: 84,
@@ -1202,7 +1286,8 @@ export const vizList: VizItem[] = [
         chartDescription: "An insightful chord diagram showing migration flows between continent. I really like how easy it is to understand the direction of the flow thanks to the arrow and the start vs end position shift of the connection.",
         tools: [{ name: "R", link: "https://www.data-to-viz.com/graph/chord.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "flow & arrows", "color palette"]
     },
     {
         id: 85,
@@ -1218,7 +1303,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The choropleth map presented in this scrolltelling article is very clean, and so are the animations telling the story. Definitely worth checking the whole <a href='https://pudding.cool/2019/04/eu-regions/'>interactive project</a>, at least for the choropleth to lollipop transition.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["scrollytelling", "small multiples", "color palette", "animation"]
     },
     {
         id: 86,
@@ -1233,7 +1319,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Clean treemap with illustrations. The transition between dataset is nice in the first tries, but then feels a bit long when you keep playing with it.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["icons & pictograms", "animation", "legend", "interactive controls"]
     },
     {
         id: 87,
@@ -1248,7 +1335,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Many countries are small, sometimes barely visible on the map. But they're value is worth as much as big countries. This article suggests to squarify Europe to put all countries on the same scale.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "direct labeling", "comparison"]
     },
     {
         id: 88,
@@ -1263,7 +1351,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a radial dendrogram, where beers are subdivided in continent and country. Fun interactive touch: hovering a beer makes you see the bottle. Made me thirsty 🌴 !",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "direct labeling", "color palette"]
     },
     {
         id: 89,
@@ -1278,7 +1367,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A dark mode streamgraph with clean annotations.",
         tools: [{ name: "R", link: "https://github.com/bydata/30DayChartChallenge/tree/main/2022/10" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "legend", "storytelling"]
     },
     {
         id: 90,
@@ -1295,7 +1385,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
         tools: [{ name: "d3.js", link: "https://github.com/holtzy/Mortality" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["log scale", "uncertainty", "small multiples", "direct labeling"]
     },
     {
         id: 91,
@@ -1313,7 +1404,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
         tools: [{ name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "flow & arrows", "color palette"]
     },
     {
         id: 92,
@@ -1331,7 +1423,8 @@ export const vizList: VizItem[] = [
         chartDescription: "It's great to see such a variety of vizzes in a business report. They are very epurated and all follow the same style guideline which make them worth sharing here.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["log scale", "legend", "direct labeling", "minimalist"]
     },
     {
         id: 93,
@@ -1346,7 +1439,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This migration map is very much inspired from the wind map of Tobler et al. that is also feature in dataviz-inspiration.com.<br>Note: the static visual is disappointing but the animated version is mesmerizing!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "minimalist", "animation"]
     },
     {
         id: 94,
@@ -1361,7 +1455,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A simple yet clean horizontal barplot.",
         tools: [{ name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2022/2022-week_01" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["texture", "direct labeling", "annotation", "uncertainty"]
     },
     {
         id: 95,
@@ -1376,7 +1471,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The project is a mix between a map of the country and a sankey diagram.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "full-page layout", "typography", "color palette"]
     },
     {
         id: 96,
@@ -1393,7 +1489,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A scrollytelling article mainly based on line charts, and using small multiple to explore a high number of groups in an efficient manner.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "highlight", "annotation", "small multiples"]
     },
     {
         id: 97,
@@ -1409,7 +1506,8 @@ export const vizList: VizItem[] = [
         chartDescription: "I'm not really a fan of most of the viz that are often, but I selected this project for their 'futuristic' style that can be useful to mimick.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "gradient", "minimalist", "direct labeling"]
     },
     {
         id: 98,
@@ -1425,7 +1523,8 @@ export const vizList: VizItem[] = [
         chartDescription: "What I find interesting here is the 'futuristic' design: dark mode, flashy & glowy colors with gradients.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "gradient", "icons & pictograms", "color palette"]
     },
     {
         id: 99,
@@ -1441,7 +1540,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A set of viz designed for branding. Most of them cannot be used as-is in a dataviz project but there are some design inspiration to get.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "minimalist"]
     },
     {
         id: 100,
@@ -1456,7 +1556,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular packing chart showing the main chart families and their importance in term of number of animals. Annotation are in french but I love stories that are told around a chart like this.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "storytelling", "full-page layout", "color palette"]
     },
     {
         id: 101,
@@ -1471,7 +1572,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular barplot showing the total biomass of each organism size bucket. Interesting to see that a lot of information has been added to it: circles to show the recent evolution of the values, stacking to split the value by organism type.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "annotation", "storytelling"]
     },
     {
         id: 102,
@@ -1486,7 +1588,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Six treemaps allowing to understand and compare the behavior of 6 cities. The viz allows to understand how diverse the microbiota is in each city, but it's still hard to compare one specific specie across cities.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "comparison", "annotation"]
     },
     {
         id: 103,
@@ -1501,7 +1604,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This viz is a dendrogram showing the classification of mammals. The distance to center of each node provides its life expectancy, and the node features (size and color) gives more info on the specie. All of that makes the figure very insightful imo.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "annotation", "storytelling"]
     },
     {
         id: 104,
@@ -1516,7 +1620,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A sankey diagram with just 1 origin and 1 destination. I like how it highlights that most murders happened from a dragon.",
         tools: [{ name: "python", link: "https://github.com/probablyvivek/Code/blob/main/sankey.ipynb" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "highlight", "direct labeling"]
     },
     {
         id: 105,
@@ -1531,7 +1636,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Authors used growing rectangles to make us understand more the scale of numbers. There is a traditional line chart at the bottom right, but the big rectangles make the data more 'alive'.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["storytelling", "gradient", "minimalist"]
     },
     {
         id: 106,
@@ -1546,7 +1652,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a circular packing chart with very specific shape for the root node. It makes the visualization shine, and made it a dataviz well-known masterpiece.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "direct labeling"]
     },
     {
         id: 107,
@@ -1562,7 +1669,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A map showing the elevation of each part of Madagascar, with an eye catching color palette.",
         tools: [{ name: "R", link: "https://twitter.com/researchremora/status/1418392590244892673" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "minimalist", "gradient"]
     },
     {
         id: 108,
@@ -1577,7 +1685,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A great streamgraph, totally adapted at showing the evolution of each category through time in a flowing style. I really like the texture employed here, giving it a personal nature.",
         tools: [{ name: "rawGraphs", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["texture", "direct labeling", "color palette"]
     },
     {
         id: 109,
@@ -1592,7 +1701,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Pretty insightful streamgraph. The first one afaik showing the evolution of one's life activities.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "flow & arrows"]
     },
     {
         id: 110,
@@ -1610,7 +1720,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Several charts are available in the <a href='https://research.wri.org/wrr-food'>report</a>. You can also find them in <a href='https://www.carniklirs.com/project/creating-a-sustainable-food-future'>Carni's portfolio</a>.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "annotation", "flow & arrows"]
     },
     {
         id: 111,
@@ -1628,7 +1739,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Some charts of this design system are worth a read for inspiration. I like the use of gradients that can make it look modern.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "gradient", "legend"]
     },
     {
         id: 112,
@@ -1659,7 +1771,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Datylon has a great <a href='https://insights.datylon.com/stories'>gallery</a> of example that are all of good quality. Check it out for more inspiration!",
         tools: [{ name: "illustrator" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "color palette"]
     },
     {
         id: 113,
@@ -1675,6 +1788,7 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
+        labels: ["icons & pictograms", "color palette", "direct labeling"]
     },
     {
         id: 114,
@@ -1689,7 +1803,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A timeseries heatmap where each cell is represented as a dot. The cell can be empty (no participation), grey (earned some points) or orange when no points were earned.",
         tools: [{ name: "python", link: "https://github.com/Lisa-Ho/100DaysOfDataviz/blob/main/Day5/TidyTuesday_eurovision_notebook.ipynb" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "color palette", "annotation"]
     },
     {
         id: 115,
@@ -1704,7 +1819,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Playing with color dodge / Color Burn / Overlay to create some good looking logos.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "color palette"]
     },
     {
         id: 116,
@@ -1726,7 +1842,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Heaps of different chart types, all very clean with perfect annotations and stunning animations between the story steps. Masterpiece!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "annotation", "color palette"]
     },
     {
         id: 117,
@@ -1741,7 +1858,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Beautiful infographic making the best of dark mode. I really like the slight gradients that truly make a difference on the final appearance.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "gradient", "color palette"]
     },
     {
         id: 118,
@@ -1756,7 +1874,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Clean and simple correlogram. Distributions on the diagonal. Scatterplots on other facets.",
         tools: [{ name: "python", link: "https://www.data-to-viz.com/graph/correlogram.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples"]
     },
     {
         id: 119,
@@ -1775,7 +1894,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Several libraries can be used to build correlograms with R. <code>GGally</code>, <code>Corrgram</code>, <code>Ellipse</code> and more. Visit the <a href='https://r-graph-gallery.com/correlogram.html'>R graph gallery</a> for more.",
         tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples"]
     },
     {
         id: 120,
@@ -1793,7 +1913,8 @@ export const vizList: VizItem[] = [
         chartDescription: "I really like the visual identity that is created here. The blogpost also includes an infographic shared on <a href='https://twitter.com/LisaHornung_/status/1541739547645583360'>twitter</p>.",
         tools: [{ name: "python", link: undefined }, { name: "illustrator" }],
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "annotation"]
     },
     {
         id: 121,
@@ -1808,7 +1929,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This heatmap does not have anything crazy in term of viz, but with more than 5000 likes on <a href='https://twitter.com/HalfEatenScone/status/1541868671789932545'>twitter</a> it's one of the most viral viz I know.",
         tools: [{ name: "python", link: "https://github.com/colinmorris/pejorative-compounds" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "color palette"]
     },
     {
         id: 122,
@@ -1823,7 +1945,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Simple barplot with slick design and especially nice annotations.",
         tools: [{ name: "R", link: "R" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "icons & pictograms", "direct labeling"]
     },
     {
         id: 123,
@@ -1838,7 +1961,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The area chart is very powerful and informative. It displays both wind speed and direction, including gust values and average values. Color gradient allows to know what's happening in a glimpse.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "direct labeling", "color palette"]
     },
     {
         id: 124,
@@ -1853,7 +1977,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Not a dataviz. But I would like to create a network chart based on this design.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["minimalist", "gradient", "color palette"]
     },
     {
         id: 125,
@@ -1868,7 +1993,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a circular lollipop chart. It displays a big amount of information for each company and I like the color choices that makes it look futuristic.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "legend"]
     },
     {
         id: 126,
@@ -1883,7 +2009,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Vertical sankey diagram with stunning colors. I wonder how insightful it is with such a complexity in the data, but design is good.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "direct labeling", "color palette"]
     },
     {
         id: 127,
@@ -1898,7 +2025,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Many different chart types are represented, especially if you watch the whole <a href='https://videohive.net/item/ultimate-fui-hud-library/25744407'>video</a>.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["3d", "gradient", "color palette"]
     },
     {
         id: 128,
@@ -1913,7 +2041,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This chart is unique, it does not belong to any chart type I know. And that's probably what makes it so famous and inspiring. Awesome metaphor, probably closer to data art than dataviz though.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette"]
     },
     {
         id: 129,
@@ -1928,7 +2057,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a very unique connected scatterplot. Bubble size is mapped to the year, which ease the understanding of the evolution and making the flow very smooth. It truly allows to 'feel' the evolution of each country!.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/jeffrey.shaffer/viz/RemixingRoslinginTableau/RemixingRosling" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "direct labeling", "annotation"]
     },
     {
         id: 130,
@@ -1945,7 +2075,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The density 2d heatmap is the one that caught my eyes here, especially due to its nice annotation. But the whole <a hef='https://waves-of-interest.truth-and-beauty.net/#US'>project</a> is definitely worth a look.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["gradient", "annotation", "direct labeling"]
     },
     {
         id: 131,
@@ -1960,7 +2091,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This chart is a vertical line chart. Making it vertical allows to fit many more annotation, what makes the chart very insightful.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "direct labeling", "legend"]
     },
     {
         id: 132,
@@ -1975,7 +2107,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Not sure what made this viz viral. The topic? The eye catching look? The fact that it was originally made using excel? <a href='https://twitter.com/tanya_shapiro/status/1565029412428562433'>ggplot2 version</a>.",
         tools: [{ name: "R", link: "https://github.com/tashapiro/tanya-data-viz/blob/main/dicaprio-gfs/dicaprio-gfs.R" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["icons & pictograms", "direct labeling", "annotation"]
     },
     {
         id: 133,
@@ -1990,7 +2123,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A line chart showing the relationship between happiness and age across several surveys. The chart could be greatly improved but I find the topic very interesting.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["comparison", "color palette"]
     },
     {
         id: 134,
@@ -2005,7 +2139,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Marimekko chart.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette"]
     },
     {
         id: 135,
@@ -2020,7 +2155,8 @@ export const vizList: VizItem[] = [
         chartDescription: "What strikes me here is that I'm not sure what kind of viz it is 🤔. But with 12k likes on <a href='https://twitter.com/MaxCRoser/status/1566182467010273280'>twitter</a>, the message is definitely conveyed efficiently.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "highlight", "comparison"]
     },
     {
         id: 136,
@@ -2035,7 +2171,8 @@ export const vizList: VizItem[] = [
         chartDescription: "I do not particularly like the look of the chart, but I like the annotation showing the sum value of a group of bars. 19k likes on <a href='https://twitter.com/judithchetrit/status/1567191486126587904'>twitter</a>!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "color palette", "direct labeling"]
     },
     {
         id: 137,
@@ -2050,7 +2187,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular packing chart where each bubble is an incident that caused arms to migrants. Color related to origin location. Beautiful but sad.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/soha.elghany/viz/MissingMigrantsprintpt_1/Dashboard13" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "annotation"]
     },
     {
         id: 138,
@@ -2065,7 +2203,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a scatterplot using squares instead of circles. It has a third dimension mapped to the square size. A toolip allows to get the name of each country with its precise numbers. Clean annotation. Nice hover effect. I love data wrapper.",
         tools: [{ name: "data wrapper", link: "https://blog.datawrapper.de/climate-risk-readiness-responsibility/" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "direct labeling", "tooltip", "hover effect"]
     },
     {
         id: 139,
@@ -2081,7 +2220,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Clean area and bar charts used as timeseries, with the very recognizable style of the financial times.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "typography"]
     },
     {
         id: 140,
@@ -2096,7 +2236,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Interactive beeswarm chart where each dot is a council. Split in 3 groups (one per region). Very cool to see an uncommon chart <a href='https://twitter.com/duc_qn/status/1574663295365177349/photo/1'>printed</a> in a newpaper.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "annotation"]
     },
     {
         id: 141,
@@ -2111,7 +2252,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A stunning map built with R and rayshader. Simply beautiful and insightful.",
         tools: [{ name: "R", link: "https://twitter.com/JensWiesehahn/status/1576553354276151296" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["3d", "color palette", "legend"]
     },
     {
         id: 142,
@@ -2126,7 +2268,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Data talks about floods, and the visual definitely goes along with it. The color palette and the organic shapes of the streamchart are going so well together. As often with nice visuals, the annotation tells the story.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/tam.s.varga/viz/FloodPhenomenainEurope/FloodPhenomenainEurope" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "annotation", "storytelling"]
     },
     {
         id: 143,
@@ -2141,7 +2284,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A clean world map with dots and 2d density on top. There is also a stacked barchart at the bottom showing how vulnerable the languages of each zone are.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "legend", "color palette", "annotation"]
     },
     {
         id: 144,
@@ -2156,7 +2300,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This chart is a circular barchart with unequal bar widths. Indeed, bar widths are proportional to the country population. This is such an interesting tweak that makes the chart much more insightful.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "color palette", "direct labeling"]
     },
     {
         id: 145,
@@ -2171,7 +2316,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A time series showing the general trend on the left. On the right, a waffle chart with small multiple: instead of having all the groups on the same waffle, each group is represented on its own waffle.<br/>It's a surprising strategy, but it works well to show the weight of each group on the whole.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/saveriorocchetti/viz/HateCrimeInUk/HATECRIMEINUK" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "color palette", "direct labeling", "comparison"]
     },
     {
         id: 146,
@@ -2186,7 +2332,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a connected scatterplot. It is very powerful as it shows both a correlation and an evolution on the same figure. However, it takes a while to understand it properly, so make sure to share it with an audience used to complex charts.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "storytelling"]
     },
     {
         id: 147,
@@ -2202,7 +2349,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Those circular dendrograms are a poetic way to represent the information. The animal size is mapped to a shape that makes us think at a feather or a scale. Not the most scientific way to do it, but beautiful result.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "gradient", "color palette", "small multiples"]
     },
     {
         id: 148,
@@ -2217,7 +2365,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A dataviz joke with a simple timeseries that gathered more than <a href='https://twitter.com/a_drewsky/status/1583082040932474880/photo/1'>100k likes</a>.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["minimalist", "comparison", "typography"]
     },
     {
         id: 149,
@@ -2232,7 +2381,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Such a clean table providing heaps of info. What I love the most is that it's been created <a href='https://github.com/tashapiro/TidyTuesday/tree/master/2022/W19'>using R</a>.",
         tools: [{ name: "R", link: "https://github.com/tashapiro/TidyTuesday/tree/master/2022/W19" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "typography", "icons & pictograms"]
     },
     {
         id: 150,
@@ -2248,7 +2398,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A scrollytelling experience that drives you through several animated map views, all done with a nice dark-mode theme.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "animation", "annotation", "legend"]
     }, {
         id: 151,
         title: "All you need is love",
@@ -2262,7 +2413,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular layout displaying several layouts of information. Bubbles to show the total number of the word 'love' being said, line showing when it happened in the song.",
         tools: [{ name: "illustrator", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "minimalist", "legend"]
     }, {
         id: 152,
         title: "Ebb & Flow",
@@ -2276,7 +2428,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A stream graph. What's interesting here is that it does not go straight from left to right, but does its own way. Definitely not a scientific strategy but increases the flow feeling of the data.",
         tools: [{ name: "illustrator", link: undefined }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "annotation", "legend", "color palette"]
     }, {
         id: 153,
         title: "Europe and its gaz dependency",
@@ -2290,7 +2443,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Smart way to represent info. Size of the square shows percentage of dependency to Russia. Then inner rects show usage of coal, gaz and petrol.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "typography", "annotation"]
     },
 
     // {
@@ -2340,7 +2494,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This kind of map is called isochrone maps. ",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "gradient"]
     }, {
         id: 157,
         title: "The most important problem",
@@ -2354,7 +2509,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A set of treemaps made for the New York Times",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "color palette", "legend"]
     }, {
         id: 158,
         title: "How Britain Voted",
@@ -2369,7 +2525,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A set of annotated choropleth and hexbin maps accurately describing the results of the election.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "legend", "comparison"]
     }, {
         id: 159,
         title: "Nations Compromised by Terrorism",
@@ -2383,7 +2540,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Some cartograms where each country is represented as a rectangle, with size proportional to the number of immigrants.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "highlight", "direct labeling", "comparison"]
     },
     {
         id: 160,
@@ -2400,7 +2558,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Some clean bar charts and area charts highlighting the reality of a somewhat grim topic. Leading to a <a href='https://twitter.com/NicolasFramont/status/1594648574217928704'>tweet with 13k likes</a>",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "minimalist", "comparison"]
     },
     {
         id: 161,
@@ -2415,7 +2574,8 @@ export const vizList: VizItem[] = [
         chartDescription: "It's very unusual to see a line chart displayed from top to bottom instead of from left to right. But since the figure is wider then tall, it increases the insight of the figure message. Smart move!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "color palette"]
     },
     {
         id: 162,
@@ -2430,7 +2590,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Not much to say about this chart, except that topic definitely makes a diff for virality 😋",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "minimalist", "storytelling"]
     },
     {
         id: 163,
@@ -2445,7 +2606,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This choropleth map is far from perfect, but the topic makes it highly viral.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "direct labeling", "color palette"]
     },
     {
         id: 164,
@@ -2460,7 +2622,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Just a map with interesting labeling",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "minimalist", "typography"]
     },
     {
         id: 165,
@@ -2475,7 +2638,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Interesting way of labeling the 2 lines here. Inline labeling on the right hand side is usually used to avoid having a legend. But the labeling over the line allows to not waste real eastate!",
         tools: [{ name: "R", link: "https://github.com/tashapiro/tanya-data-viz/blob/main/chatgpt-lensa/chatgpt-lensa.R" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette"]
     },
     {
         id: 166,
@@ -2490,7 +2654,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This graph is a mirrored vertical barplot: left hand side is for women, right hand side for men. What's interesting here is that the bar height encodes a second numeric variable: the population size.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "comparison"]
     },
     {
         id: 167,
@@ -2505,7 +2670,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A surprising way of showing a distribution: a scatterplot with jittering is used instead of a more classic histogram or density chart.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "direct labeling", "highlight"]
     },
     {
         id: 168,
@@ -2520,7 +2686,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Using the very awesome RayShader to build stunning 3d maps with R.",
         tools: [{ name: "R", link: "https://www.rayshader.com/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["3d", "small multiples", "color palette", "annotation"]
     },
     {
         id: 169,
@@ -2535,7 +2702,8 @@ export const vizList: VizItem[] = [
         chartDescription: "I really like it when a Viz is fully integrated in a newspaper full page.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["full-page layout", "flow & arrows", "annotation", "typography"]
     },
     {
         id: 170,
@@ -2550,7 +2718,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A circular layour with a kind of clevelent chart (inside), labels (middle slice) and bubbles (outside).",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "direct labeling", "icons & pictograms", "color palette"]
     },
     {
         id: 171,
@@ -2565,7 +2734,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Beautiful way to show connections on a map. Dark mode is very well done and bundling adds such a nice touch.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "color palette", "small multiples", "highlight"]
     },
     {
         id: 172,
@@ -2580,7 +2750,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Very nice storry telling based on various visuals. Note the use of RayShader for the 3d map.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["storytelling", "3d", "annotation"]
     },
     {
         id: 173,
@@ -2595,7 +2766,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The streamgraph is very elegant and convey the information efficitently. Note that it is a rare case of vertical streamgraph!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette", "comparison"]
     },
     {
         id: 174,
@@ -2610,7 +2782,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Small multiple is a very powerfull in data visualization. It works even better when all series are repeated but greyed out on all units! 👏",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "highlight", "direct labeling"]
     },
     {
         id: 175,
@@ -2625,7 +2798,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Very good scrollytelling with animation between chart types. Each dot remains the same thing but moves along the story what allows to keep the focus.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "animation", "annotation", "highlight"]
     },
     {
         id: 176,
@@ -2640,7 +2814,8 @@ export const vizList: VizItem[] = [
         chartDescription: "An awesome scrollytelling animating from a voronoi treemap to a circular packing to a barplot.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "animation", "shape morphism", "icons & pictograms"]
     },
     {
         id: 177,
@@ -2655,7 +2830,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Using the small multiples technique with a set of chord diagram is a nice way to show the various flows of this dataset.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "small multiples", "highlight", "color palette"]
     },
     {
         id: 178,
@@ -2670,7 +2846,8 @@ export const vizList: VizItem[] = [
         chartDescription: "A bubble map showing both a numeric value (area of culture) and a categoric one (type of culture)",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "annotation", "direct labeling", "legend"]
     },
     {
         id: 179,
@@ -2685,7 +2862,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Pretty hard to describe this chart type as it goes more into data art than data analysis 🙃",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "interactive controls", "animation", "gradient"]
     },
     {
         id: 180,
@@ -2700,7 +2878,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Pretty hard to describe this chart type as it goes more into data art than data analysis 🙃",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "interactive controls", "animation", "color palette"]
     },
     {
         id: 181,
@@ -2715,7 +2894,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Connection map. Note the usage of arcs and not lines to show the connections.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "legend", "tooltip"]
     },
     {
         id: 182,
@@ -2730,7 +2910,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Stunning project with so much information packed into this circular layout.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "color palette", "small multiples", "comparison"]
     },
     {
         id: 183,
@@ -2745,7 +2926,8 @@ export const vizList: VizItem[] = [
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["animation", "color palette", "direct labeling", "interactive controls"]
     },
     {
         id: 184,
@@ -2760,7 +2942,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The Choropleth map features a well-crafted legend that guides viewers through different levels of CO2 emissions. It includes clear annotations and uses a vibrant color scheme, making it both engaging and informative.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-map-with-custom-legend/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "color palette", "direct labeling", "annotation"]
     },
     {
         id: 185,
@@ -2775,7 +2958,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This small multi-line graph shows all 9 lines on each of its sub-graphs, but only one of them is highlighted at a time, making it easy to understand how each country's metric system evolved over the period, thanks to a clear colour scheme and precise annotations using arrows.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-small-multiple-with-highlights/" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "highlight", "annotation", "flow & arrows"]
     },
     {
         id: 186,
@@ -2790,7 +2974,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This bubble map illustrates that points can be used to represent the shape of tectonic plates. The low opacity of the bubbles, the absence of borders between countries and the clear annotations make it easy to read and quickly understand the position of earthquakes around the world.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-bubble-map-with-arrows/" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "flow & arrows", "minimalist"]
     },
     {
         id: 187,
@@ -2805,7 +2990,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This chart is a combination of a word cloud in the background and a line graph in the foreground. The word cloud is based on film titles to highlight the most common words, while the line graph is very minimalist to display only relevant information.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-stacked-charts/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "typography", "highlight", "minimalist"]
     },
     {
         id: 188,
@@ -2820,7 +3006,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This stacked area chart uses arrows with an inflection point in combination with a relevant colour scheme to help the user quickly understand what each element is and measures.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "flow & arrows", "color palette"]
     },
     {
         id: 189,
@@ -2835,7 +3022,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This bar chart features a relevant colour scheme that makes it easy to understand which category each bar relates to. What's more, the curved arrows add a pleasant touch.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-barplot-with-annotations-and-arrows/" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "flow & arrows", "color palette"]
     },
     {
         id: 190,
@@ -2850,7 +3038,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This is a clean choropleth map with a histogram on the side. The histogram is great as it gives additional context to the map and serves as a legend",
         tools: [{ name: "R", link: "https://r-graph-gallery.com/web-choropleth-barchart-map.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "comparison"]
     },
     {
         id: 191,
@@ -2865,7 +3054,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This lollipop plot is beautifully designed with a colour palette from PyPalettes, curved arrows with DrawArrow and cool fonts loaded via PyFonts. It perfectly highlights the rising temperatures we're facing.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-lollipop-with-colormap-and-arrow/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "annotation", "typography", "flow & arrows"]
     },
     {
         id: 192,
@@ -2880,7 +3070,8 @@ export const vizList: VizItem[] = [
         chartDescription: "This minimalist graph changes colour when the values fall below 0, underlining the fact that this is a major change. What's more, the annotations around the graph provide the key contextual information you need.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-area-chart-with-different-colors-for-positive-and-negative-values/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "minimalist", "typography", "highlight"]
     },
     {
         id: 193,
@@ -2894,7 +3085,8 @@ export const vizList: VizItem[] = [
         contextDescription: "Climate change is affecting weather patterns across the board. Although extreme heat often takes the spotlight, winter conditions are shifting as well. The 2022–2023 winter season experienced unexpected shifts in both the timing and locations of snowfall.",
         chartDescription: "This display is a combination of a hexagonal map and a lollipop-shaped graph. The x-axis of the lollipop is actually the longitude, which makes it easier to read the map and draw parallels.",
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "color palette", "comparison", "legend"]
     },
     {
         id: 194,
@@ -2908,7 +3100,8 @@ export const vizList: VizItem[] = [
         contextDescription: "The chart shows that infant death rates are significantly higher on the first day of life, but decrease sharply in the following days and continue to decline over the year. Over time, the overall curve has shifted down, indicating that infant survival has improved, making every day of infancy safer compared to previous decades.",
         chartDescription: "This graph uses one line per year, and even if the trend is not displayed on the x or y axis, the trend over time can be quickly understood thanks to the data and a relevant colour pattern.",
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "direct labeling", "color palette", "log scale"]
     },
     {
         id: 195,
@@ -2923,7 +3116,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The sankey diagram highlights the trend at a glance, while the annotations give us more information about the data.",
         tools: [{ name: "python", link: "https://r-graph-gallery.com/web-sankey-diagram-with-highlight.html" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "highlight", "direct labeling", "flow & arrows"]
     },
     {
         id: 196,
@@ -2934,11 +3128,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "map-waffle-chart-london-recycling.png", zoom: "map-waffle-chart-london-recycling-zoom.png", chartId: ["waffle", "map"] },
         ],
-        contextDescription: "This graph shows the recycling rates for each London borough, highlighting significant differences: some boroughs recycle 17% (minimum) and others nearly 50%.", 
+        contextDescription: "This graph shows the recycling rates for each London borough, highlighting significant differences: some boroughs recycle 17% (minimum) and others nearly 50%.",
         chartDescription: "The waffle charts are represented in such a way that the overall figure has the same shape as that of London and each borough is well located.",
         tools: [{ name: "python", link: "https://python-graph-gallery.com/web-waffle-with-small-multiples/" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "color palette"]
     },
     {
         id: 197,
@@ -2949,11 +3144,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "waffle-share-animal-feeds.png", zoom: "waffle-share-animal-feeds-zoom.png", chartId: ["waffle"] },
         ],
-        contextDescription: "This graph shows the proportion of cereals used for animal feed on different continents.", 
+        contextDescription: "This graph shows the proportion of cereals used for animal feed on different continents.",
         chartDescription: "Using the waffle chart to highlight the differences between the continents makes it much easier to understand and compare them.",
         tools: [{ name: "R", link: "https://r-graph-gallery.com/web-waffle-chart-share.html" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "highlight", "direct labeling"]
     },
     {
         id: 198,
@@ -2964,11 +3160,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "wellbeing-NYT.png", zoom: "wellbeing-NYT-zoom.png", chartId: ["parallel"] },
         ],
-        contextDescription: "The U.S. has the world's second largest economy. However, many other measures of well-being is far worse than other rich countries.", 
+        contextDescription: "The U.S. has the world's second largest economy. However, many other measures of well-being is far worse than other rich countries.",
         chartDescription: "Using the slope chart to highlight the change in ranking between United States and dozen other countries on economic performance, physical health, social trust and more.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "small multiples", "comparison"]
     },
     {
         id: 199,
@@ -2979,11 +3176,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "death-wikipedia-traffic.png", zoom: "death-wikipedia-traffic-zoom.png", chartId: ["density", "ridgeline"] },
         ],
-        contextDescription: "One time where celebrities get huge attention is when news break about their death. At least that's what the data shows. Using Wikipedia pageviews, The Pudding examined some notable figures — even those who didn't get much notice until after their passing.", 
+        contextDescription: "One time where celebrities get huge attention is when news break about their death. At least that's what the data shows. Using Wikipedia pageviews, The Pudding examined some notable figures — even those who didn't get much notice until after their passing.",
         chartDescription: "Ridgeline chart shows one-week moving average of the percent increase in pageviews compared to the pre-death average. Includes interactive popups to reveal more information among each individual.",
         tools: [{ name: "javascript", link: "https://github.com/the-pudding/wiki-death-data/tree/master" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "annotation", "direct labeling"]
     },
     {
         id: 200,
@@ -2994,11 +3192,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "olympic-medal-NYC.png", zoom: "olympic-medal-NYC-zoom.png", chartId: ["stream"] },
         ],
-        contextDescription: "Which countries have acquired more medal during the olympics? The New York Times traced medal counts of participating countries covering from the first game in Athens in 1896 to recent summer olympics held in Rio.", 
+        contextDescription: "Which countries have acquired more medal during the olympics? The New York Times traced medal counts of participating countries covering from the first game in Athens in 1896 to recent summer olympics held in Rio.",
         chartDescription: "Streamgraph in the article shows rise and fall of each country's medal count over time. Besides the time flow of each event, there are streamgraphs concentrated by discipline. Definitely an interesting piece to check out.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "annotation", "direct labeling"]
     },
     {
         id: 201,
@@ -3009,11 +3208,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "alberta-grade.png", zoom: "alberta-grade-zoom.png", chartId: ["lollipop", "area"] },
         ],
-        contextDescription: "A look at high school grades in Alberta using the province's open data. Website targets parents of children about to enter high school, providing comparison of grades among different schools.", 
+        contextDescription: "A look at high school grades in Alberta using the province's open data. Website targets parents of children about to enter high school, providing comparison of grades among different schools.",
         chartDescription: "Website shows average grade by school and subject. Allows interactive to see which school excels in certain subject. For example, can select school that is specifically strong in English education.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "interactive controls", "legend"]
     },
     {
         id: 202,
@@ -3024,11 +3224,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "covid-search.png", zoom: "covid-search-zoom.png", chartId: ["bubble"] },
         ],
-        contextDescription: "Covid-19 pandemic has changed the lives, cautioning people with what to do and how to act accordingly. Schema, parted with Google Trends and Axios, along with art direction from Alberto Cairo, analyzed coronavirus-related search queries to identify what type of information people have been seeking.", 
+        contextDescription: "Covid-19 pandemic has changed the lives, cautioning people with what to do and how to act accordingly. Schema, parted with Google Trends and Axios, along with art direction from Alberto Cairo, analyzed coronavirus-related search queries to identify what type of information people have been seeking.",
         chartDescription: "Using x-axis as the timeline during the pandemic, each bubble represents a query that was among the top trending searches in one or more US states on each day.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "legend", "interactive controls"]
     },
     {
         id: 203,
@@ -3039,11 +3240,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "inflation-word.png", zoom: "inflation-word-zoom.png", chartId: ["wordcloud"] },
         ],
-        contextDescription: "Where have Americans felt inflation at? The New York Times Asked 2,200 people to name specific products and services whose higher prices have stood out to them over the past year.", 
+        contextDescription: "Where have Americans felt inflation at? The New York Times Asked 2,200 people to name specific products and services whose higher prices have stood out to them over the past year.",
         chartDescription: "Word cloud lists specific items for which repondents have noticed rising prices. Food items are highlighted orange, others in gray.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["typography", "highlight"]
     },
     {
         id: 204,
@@ -3054,11 +3256,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "electricity-generation.png", zoom: "electricity-generation-zoom.png", chartId: ["stackedArea"] },
         ],
-        contextDescription: "How has electricity generation changed around the world? Using estimated made by Ember, an energy think tank, The New York Times visualizes trends of electricity generation, compared among different countries.", 
+        contextDescription: "How has electricity generation changed around the world? Using estimated made by Ember, an energy think tank, The New York Times visualizes trends of electricity generation, compared among different countries.",
         chartDescription: "Each area stacked represents energy, categorized under clean power or fossil fuel. The color distinction shows how much fossil-fueled power generation has declined over years.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "annotation", "color palette"]
     },
     {
         id: 205,
@@ -3069,11 +3272,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "harvard-grant.png", zoom: "harvard-grant-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "The New York Times analyzed terminated grants worth $2.6 billion at Harvard. The article covers which research funding the government has cut and its overall impact.", 
+        contextDescription: "The New York Times analyzed terminated grants worth $2.6 billion at Harvard. The article covers which research funding the government has cut and its overall impact.",
         chartDescription: "Each treemap, divided under different research categories, shows which research funding had the most impact. At the end of the article is the full interactive treemap, where you can explore more into each canceled grants.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["direct labeling", "color palette"]
     },
     {
         id: 206,
@@ -3084,11 +3288,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "occupation-age.png", zoom: "occupation-age-zoom.png", chartId: ["circularPacking", "barplot"] },
         ],
-        contextDescription: "Age distribution across all 550 occupation in the U.S, using data in 2014. The size of the circle shows how many people are employed in that occupation. Bar chart within each circle is the distribution of 7 different age groups.", 
+        contextDescription: "Age distribution across all 550 occupation in the U.S, using data in 2014. The size of the circle shows how many people are employed in that occupation. Bar chart within each circle is the distribution of 7 different age groups.",
         chartDescription: "A cool interaction by either entering a specific occupation in a search bar or clicking any of the circles to zoom in.",
-        tools:  undefined,
+        tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["legend", "interactive controls", "zoom & pan"]
     },
     {
         id: 207,
@@ -3099,11 +3304,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "bake-recipe.png", zoom: "bake-recipe-zoom.png", chartId: ["sankey"] },
         ],
-        contextDescription: "Not sure how much flour, sugar, or other ingredients you'll need? This visualization breaks down the exact amounts required for different bakes.", 
+        contextDescription: "Not sure how much flour, sugar, or other ingredients you'll need? This visualization breaks down the exact amounts required for different bakes.",
         chartDescription: "The sankey diagram highlights how each recipe flows into its ingredients.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/ann.pregler/viz/ChristmasCookies11/Sankey" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "icons & pictograms", "direct labeling", "highlight"]
     },
     {
         id: 208,
@@ -3119,7 +3325,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Sankey diagram shows the flow of people entering and exiting homelessness in San Francisco. It highlights different reasons for homelessness and ways people exit or reenter homelessness. Radial dendrogram, on the other hand, shows the interactions among individuals, service providers, and City agencies, highlighting the complexity of the support system.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "flow & arrows", "direct labeling", "full-page layout"]
     },
     {
         id: 209,
@@ -3130,11 +3337,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "lifespan-animal.png", zoom: "lifespan-animal-zoom.png", chartId: ["scatter", "bubble"] },
         ],
-        contextDescription: "Which animal lives the longest? This project uses average life expectancy to calculate and visualize life span of animals.", 
+        contextDescription: "Which animal lives the longest? This project uses average life expectancy to calculate and visualize life span of animals.",
         chartDescription: "You can either hover over each bubbles to identify which animal or filter using the search bar on the right.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/takafumi.shukuya/viz/Viz2educateLifeSpanofAnimals/Dashboard1" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["direct labeling", "annotation", "highlight"]
     },
     {
         id: 210,
@@ -3145,11 +3353,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "wes-anderson-film.png", zoom: "wes-anderson-film-zoom.png", chartId: ["sankey"] },
         ],
-        contextDescription: "Film directors often favor certain actors, casting them repeatedly across their works. This graph, based on Wes Anderson's ten films and their cast lists, illustrates how frequently specific actors appear in his movies.", 
+        contextDescription: "Film directors often favor certain actors, casting them repeatedly across their works. This graph, based on Wes Anderson's ten films and their cast lists, illustrates how frequently specific actors appear in his movies.",
         chartDescription: "The upper node in sankey diagram lists 10 films by Wes Anderson. The lower node shows list of actors that appeared repeatedly in his films. If you mouse over each flow, you can find out which actor played which role in a specific movie.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/bo.mccready8742/viz/WesAndersonFilms/WesAndersonFilms" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "color palette", "direct labeling"]
     },
     {
         id: 211,
@@ -3160,11 +3369,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "mail-vote.png", zoom: "mail-vote-zoom.png", chartId: ["hexbin"] },
         ],
-        contextDescription: "Survey Moneky, in partnership with Axios, collected polls for the 2020 election. They asked each stat whether they were to vote by mail.", 
+        contextDescription: "Survey Moneky, in partnership with Axios, collected polls for the 2020 election. They asked each stat whether they were to vote by mail.",
         chartDescription: "Map divides each state into separate hexbins. Darker purple means state is more likely to vote by mail, and vice versa. Good to see annotation of the state name and percentage for each hexbin. ",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/surveymonkey/viz/Likelytovotebymail/VBMdashboard" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["direct labeling", "color palette", "interactive controls"]
     },
     {
         id: 212,
@@ -3180,7 +3390,8 @@ export const vizList: VizItem[] = [
         chartDescription: "Cool animated area chart which shows which stories stay longest in the public view as time passes by. Definitely a cool piece to check out.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["log scale", "animation", "color palette", "annotation"]
     },
     {
         id: 213,
@@ -3191,11 +3402,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "cat-inkjet-venn.png", zoom: "cat-inkjet-venn-zoom.png", chartId: ["venn"] },
         ],
-        contextDescription: "Fun little diagram showing the similarities between cat and an inkjet printer.", 
+        contextDescription: "Fun little diagram showing the similarities between cat and an inkjet printer.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["comparison", "typography", "minimalist"]
     },
     {
         id: 214,
@@ -3206,11 +3418,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "drug-overdose-black-men.png", zoom: "drug-overdose-black-men-zoom.png", chartId: ["heatmap"] },
         ],
-        contextDescription: "The New York Times, in partnership with The Baltimore Banner, Big Local News, and nine other newsrooms, analyzed drug overdose deaths over the past decades. Through data, they found one common trend -- that drug overdose has been prevalent especially among Black men.", 
+        contextDescription: "The New York Times, in partnership with The Baltimore Banner, Big Local News, and nine other newsrooms, analyzed drug overdose deaths over the past decades. Through data, they found one common trend -- that drug overdose has been prevalent especially among Black men.",
         chartDescription: "Heatmap shows Covid deaths among Black men, showing a surge in drug deaths due to fentanyl among men born from 1951 to 1970.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "gradient", "color palette"]
     },
     {
         id: 215,
@@ -3221,11 +3434,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "inflation-america.png", zoom: "inflation-america-zoom.png", chartId: ["heatmap"] },
         ],
-        contextDescription: "NBC News tracks monthly inflation levels for gas, flights, groceries and more. Data is as of April 28, 2025 and all items are percentage change from year earlier.", 
+        contextDescription: "NBC News tracks monthly inflation levels for gas, flights, groceries and more. Data is as of April 28, 2025 and all items are percentage change from year earlier.",
         chartDescription: "Heatmap shows inflation levels across a variety of consumer metrics. Includes interactive by hovering over each rectangle to see how much prices have changed from a year ago.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "gradient", "tooltip"]
     },
     {
         id: 216,
@@ -3236,11 +3450,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "anti-tag-wordcloud.png", zoom: "anti-tag-wordcloud-zoom.png", chartId: ["wordcloud"] },
         ],
-        contextDescription: "Instead of featuring words that is most common, Anti-Tag Cloud shows words that never appear in a text.", 
+        contextDescription: "Instead of featuring words that is most common, Anti-Tag Cloud shows words that never appear in a text.",
         chartDescription: "This is the Anti-Tag Cloud for Alice in Wonderland. Word size indicates how frequent a word is across other texts. You can pick a different book to visualize via search bar.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["typography", "interactive controls", "minimalist"]
     },
     {
         id: 217,
@@ -3252,11 +3467,12 @@ export const vizList: VizItem[] = [
             { full: "employee-review-beeswarm.png", zoom: "employee-review-beeswarm-zoom.png", chartId: ["beeswarm", "bubble"] },
             { full: "employee-review-scatter.png", zoom: "employee-review-scatter-zoom.png", chartId: ["scatter"] },
         ],
-        contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.", 
+        contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.",
         chartDescription: "The beeswarm chart shows how each companies are rated into four different measurements. Each dot represents one company and its color represents how well they are scoring on each measurement. You can find a specific company by using filter bars.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "direct labeling", "color palette"]
     },
     {
         id: 218,
@@ -3267,11 +3483,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "shakespeare-word.png", zoom: "shakespeare-word-zoom.png", chartId: ["chordDiagram"] },
         ],
-        contextDescription: "This project analyzes Shakespear's play, looking at main characters and their spokens words in each scene.", 
+        contextDescription: "This project analyzes Shakespear's play, looking at main characters and their spokens words in each scene.",
         chartDescription: "Each chord diagram represents Shakespear's play and outer bands represent each scene in the play. Length is determined by percent of total words in the play. The bar plot below each chord diagram makes it easier to determine which character had spoken the most.",
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/rody.zakovich/viz/ShakespeareSpokenWords/ShakespeareSpokenWords" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "small multiples", "color palette"]
     },
     {
         id: 219,
@@ -3282,11 +3499,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "emotion-venn.png", zoom: "emotion-venn-zoom.png", chartId: ["venn"] },
         ],
-        contextDescription: "Feelings can be a mix of different emotions. Using the emotions featured in Inside Out, Six Seconds shows how feelings overlap with different emotions.", 
+        contextDescription: "Feelings can be a mix of different emotions. Using the emotions featured in Inside Out, Six Seconds shows how feelings overlap with different emotions.",
         chartDescription: "The Venn Diagram shows two emotions that are combined, resulting in a specific emotion. Wonder what would happen if the characters from Inside Out 2 gets added.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["icons & pictograms", "small multiples", "color palette", "direct labeling"]
     },
     {
         id: 220,
@@ -3297,11 +3515,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "NYT-survey-pie.png", zoom: "NYT-survey-pie-zoom.png", chartId: ["pie"] },
         ],
-        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country. The original print was issued on Dec. 31, 2023 but you can also find more about it via The New York Times's project, <a href='https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html'>What's Going On in This Graph</p>.", 
+        contextDescription: "How are students observing the world? What's the biggest problem that needs to be addressed? The New York Times for Kids, a monthly print-only section for young readers, visualized a survey of children around the country. The original print was issued on Dec. 31, 2023 but you can also find more about it via The New York Times's project, <a href='https://www.nytimes.com/2024/03/07/learning/whats-going-on-in-this-graph-march-13-2024.html'>What's Going On in This Graph</p>.",
         chartDescription: "With aims to educate on how to show survey results and about categorical data, the pie chart shows survey results of children for several questions. With some disagreements over pie chart in mind, still think that it is one of the conventional chart type to introduce to students.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "typography", "comparison"]
     },
     {
         id: 221,
@@ -3312,11 +3531,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "american-bmi.png", zoom: "american-bmi-zoom.png", chartId: ["bubble", "heatmap", "scatter"] },
         ],
-        contextDescription: "The project uses 2022 BRFSS survey to show the distribution of height and weight of American people.", 
+        contextDescription: "The project uses 2022 BRFSS survey to show the distribution of height and weight of American people.",
         chartDescription: "The bubble map with x-axis as weight and y axis and height shows BMI of American adults. Each color represents BMI category and size of square gets larger depending on how common it is among adults. Interesting case of combining bubble chart's x,y coordinates with heatmap.",
         tools: [{ name: "R" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "annotation", "legend"]
     },
     {
         id: 222,
@@ -3327,11 +3547,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "nuclear-stream.png", zoom: "nuclear-stream-zoom.png", chartId: ["stream", "stackedArea", "area"] },
         ],
-        contextDescription: "A project for Wired UK, it shows the use of nuclear reactors from 1950 to 2020.", 
+        contextDescription: "A project for Wired UK, it shows the use of nuclear reactors from 1950 to 2020.",
         chartDescription: "Streamgraph shows usage of nuclear energy, where each color represents usage from a specific country. The annotation includes some main events regarding nuclear energy, suggesting the reason of its decrease. On the top left are area charts, showing status of nuclear reactors over time.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "color palette", "typography"]
     },
     {
         id: 223,
@@ -3342,11 +3563,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "chile-migration.png", zoom: "chile-migration-zoom.png", chartId: ["arc"] },
         ],
-        contextDescription: "What are the movement patterns of Chileans within the country? Dataista uses the 2024 Population Census to find out.", 
+        contextDescription: "What are the movement patterns of Chileans within the country? Dataista uses the 2024 Population Census to find out.",
         chartDescription: "The interactive page allows you to explore each cicles, which represent each commune. The arcs show how people are moving from one commune to another. You can also read the full <a href='https://www.dataista.cl/articulos/2025/09/02/migracion-interna-censo-2024'>article</p>.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "interactive controls", "color palette"]
     },
     {
         id: 224,
@@ -3359,11 +3581,12 @@ export const vizList: VizItem[] = [
             { full: "EU-economy-map.png", zoom: "EU-economy-map-zoom.png", chartId: ["map", "choropleth"] },
             { full: "EU-economy-bar.png", zoom: "EU-economy-bar-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.", 
+        contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.",
         chartDescription: "Three charts are shown in this piece. One a slope chart comparing EU's average raw material consumption, a map that highlights rise in sea levels in the Ebro River Delta, and a bar chart showing EU citizens' attitude toward AI.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "annotation", "typography"]
     },
     {
         id: 225,
@@ -3376,11 +3599,12 @@ export const vizList: VizItem[] = [
             { full: "EU-leisure-circle-two.png", zoom: "EU-leisure-circle-two-zoom.png", chartId: ["bubble"] },
             { full: "EU-leisure-map.png", zoom: "EU-leisure-map-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.", 
+        contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.",
         chartDescription: "The first data visualization shows the average share of household spending allocated to dining out in across Europe with each circle scaled to the percent of household expenditure. Second chart shows how EU citizens celebrate summer season, ending the piece with a map  highlighting shares of tourists during the summer.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "legend", "icons & pictograms", "color palette"]
     },
     {
         id: 226,
@@ -3393,11 +3617,12 @@ export const vizList: VizItem[] = [
             { full: "EU-healthcare-voronoi2.png", zoom: "EU-healthcare-voronoi2-zoom.png", chartId: ["circularPacking"] },
             { full: "EU-healthcare-voronoi3.png", zoom: "EU-healthcare-voronoi3-zoom.png", chartId: ["circularPacking"] },
         ],
-        contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.", 
+        contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.",
         chartDescription: "The Voronoi Treemap in this piece shows shares of public health spending across the EU as well as some major preventable causes of death, ending with diverse reasons for missing needed medical care.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "annotation", "direct labeling"]
     },
     {
         id: 227,
@@ -3408,11 +3633,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "paris-train-animation.png", zoom: "paris-train-animation-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "An animated visualization that shows train travel times across Europe.", 
+        contextDescription: "An animated visualization that shows train travel times across Europe.",
         chartDescription: "The animation makes it hundred times more fascinating, strongly recommend to check out the link below.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["animation", "interactive controls", "color palette"]
     },
     {
         id: 228,
@@ -3423,11 +3649,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "impeach-this-trump.png", zoom: "impeach-this-trump-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "A tweet by Donald Trump displaying a choropleth map of the 2016 election results. The map appears to suggest Trump’s victory but is misleading because it ignores the population size of each state.", 
+        contextDescription: "A tweet by Donald Trump displaying a choropleth map of the 2016 election results. The map appears to suggest Trump’s victory but is misleading because it ignores the population size of each state.",
         chartDescription: "To be more specific, the colors misrepresent the population of each state, giving small and large states equal visual weight. A better alternative would be a bubble map, where each bubble represents a state and is sized according to its population. For a deeper discussion of this misleading map, see this <a href='https://prodigious-trailblazer-3628.kit.com/posts/foundational-dataviz-example'>newsletter</p>",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "storytelling"]
     },
     {
         id: 229,
@@ -3438,11 +3665,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "tiktok-users-washingtonpost.png", zoom: "tiktok-users-washingtonpost-zoom.png", chartId: ["bubble", "scatter"] },
         ],
-        contextDescription: "Using 800 Tiktok userss in U.S., The Washington Post analyzes why people become power users, spending hours per day scrolling.", 
+        contextDescription: "Using 800 Tiktok userss in U.S., The Washington Post analyzes why people become power users, spending hours per day scrolling.",
         chartDescription: "Each circle in the chart represents the daily watch time of a real TikTok user, with color scales that show percent change of users from April, 2024.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["gradient", "color palette", "interactive controls"]
     },
     {
         id: 230,
@@ -3453,11 +3681,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "subway-data-love-letter-sankey.png", zoom: "subway-data-love-letter-sankey-zoom.png", chartId: ["sankey", "line"] },
         ],
-        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.", 
+        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.",
         chartDescription: "The two-minute animation that can be viewed at Fulton Center, New York, is another great example of how everyday data can be turned into beautiful visualization. For example, sankey chart shows each train's final destinations.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "animation", "minimalist"]
     },
     {
         id: 231,
@@ -3468,11 +3697,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "subway-data-love-letter-barplot.png", zoom: "subway-data-love-letter-barplot-zoom.png", chartId: ["barplot", "line", "histogram"] },
         ],
-        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.", 
+        contextDescription: "A data-driven animation for Fulton Center commissioned by MTA Arts & Design for its 40th annivery. Pentagram, in partnership with Giorgia Lupi, uses MTA data to visualize each train line as a character with its unique personality.",
         chartDescription: "The two-minute animation that can be viewed at Fulton Center, New York, is another great example of how everyday data can be turned into beautiful visualization. For example, barplot shows each train's duration of train spent underground.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["animation", "direct labeling", "color palette", "minimalist"]
     },
     {
         id: 232,
@@ -3483,11 +3713,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "fuel-mix-stacked-area.png", zoom: "fuel-mix-stacked-area-zoom.png", chartId: ["area", "stackedArea", "stream"] },
         ],
-        contextDescription: "How does California use solar power at night? The answer lies in grid scale batteries. This visual story from Financial Times highlights the increasing importance of storage solutions for clean energy.", 
+        contextDescription: "How does California use solar power at night? The answer lies in grid scale batteries. This visual story from Financial Times highlights the increasing importance of storage solutions for clean energy.",
         chartDescription: "The stacked area chart shows California's average energy in a day. Different energy use is represented according to the hour of the day. You can see that solar power is at its peak from early morning to late afternoon.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["direct labeling", "texture", "annotation", "color palette"]
     },
     {
         id: 233,
@@ -3498,11 +3729,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "protein-supply-voronoi.png", zoom: "protein-supply-voronoi-zoom.png", chartId: ["circularPacking"] },
         ],
-        contextDescription: "A project for week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, data on food security comes from <a href='https://www.fao.org/faostat/en/#home'>The Food and Agriculture Organization of the United Nations (FAO)</a>, celebrating World Food Day.", 
+        contextDescription: "A project for week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, data on food security comes from <a href='https://www.fao.org/faostat/en/#home'>The Food and Agriculture Organization of the United Nations (FAO)</a>, celebrating World Food Day.",
         chartDescription: "The Voronoi treemap shows the average protein supply for different continents. Areas indicate the total protein supply per day for each country.  Nice annotations for specific countries with interesting findings!",
         tools: [{ name: "R", link: "https://github.com/nrennie/tidytuesday/tree/main/2025/2025-10-14" }],
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "color palette", "icons & pictograms"]
     },
     {
         id: 234,
@@ -3513,11 +3745,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "carrie-bradshaw-afford.png", zoom: "carrie-bradshaw-afford-zoom.png", chartId: ["line"] },
         ],
-        contextDescription: "The Economist, usings its Carrie Bradshaw Index (from Sex and the City, a TV series), ranks 100 of the United States' cities by affordability for living solo.", 
+        contextDescription: "The Economist, usings its Carrie Bradshaw Index (from Sex and the City, a TV series), ranks 100 of the United States' cities by affordability for living solo.",
         chartDescription: "Lollipop chart highlights the gap between median wage and affordable-studio wage for each city. Colors represent affordability(red as unaffordable, blue as affordable). The chart is interactive, so you get choose specific cities, highly recommend to check it out!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "direct labeling", "color palette", "annotation"]
     },
     {
         id: 235,
@@ -3528,11 +3761,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "map-projection-washington-post.png", zoom: "map-projection-washington-post-zoom.png", chartId: ["map", "cartogram"] },
         ],
-        contextDescription: "Africa is calling for a change in world map, replacing the widely-used Mercator projection. Reason lies on underestimating the true size of Africa. The Washington Post, visualizes the difference between Mercator and the newly suggested map, Equal Earth.", 
+        contextDescription: "Africa is calling for a change in world map, replacing the widely-used Mercator projection. Reason lies on underestimating the true size of Africa. The Washington Post, visualizes the difference between Mercator and the newly suggested map, Equal Earth.",
         chartDescription: "Cartogram shows relative sizes of countries in different map projections. You can spot the stark size-difference between Greenland and Africa, a well-known example of distortion found in Mercator.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["comparison", "direct labeling", "color palette"]
     },
     {
         id: 236,
@@ -3543,11 +3777,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "guardian-bird-of-year-2025.png", zoom: "guardian-bird-of-year-2025-zoom.png", chartId: ["line"] },
         ],
-        contextDescription: "Probably one of the most anticipated event for bird lovers, The Guardian Australia has announced the bird of the year for 2025, with more than 310,000 votes casted. The article includes charts from past votes (in 2025 and 2023).", 
+        contextDescription: "Probably one of the most anticipated event for bird lovers, The Guardian Australia has announced the bird of the year for 2025, with more than 310,000 votes casted. The article includes charts from past votes (in 2025 and 2023).",
         chartDescription: "The bump chart ranks birds by votes casted for each round (8 round in total). There are filter options for difference highlights including the top ten and big climbs.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["highlight", "direct labeling", "interactive controls", "color palette"]
     },
     {
         id: 237,
@@ -3558,11 +3793,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "guardian-bird-migrate-green.png", zoom: "guardian-bird-migrate-green-zoom.png", chartId: ["map", "choropleth", "connection"] },
         ],
-        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.",
         chartDescription: "The animated map shows seasonal bird migration. Darker green means denser green new life. You can see the seasonal change and migration flow through animation.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["animation", "gradient", "legend"]
     },
     {
         id: 238,
@@ -3573,11 +3809,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "guardian-bird-migrate-heat.png", zoom: "guardian-bird-migrate-heat-zoom.png", chartId: ["map", "choropleth", "connection"] },
         ],
-        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.",
         chartDescription: "Birds tend to move to regions with milder climate. The animated map shows bird migration to different regions, across the continents.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["animation", "gradient", "legend"]
     },
     {
         id: 239,
@@ -3588,11 +3825,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "guardian-bird-mario-migrate.png", zoom: "guardian-bird-mario-migrate-zoom.png", chartId: ["map", "choropleth", "connection"] },
         ],
-        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.", 
+        contextDescription: "The Guardian has tracked bird migration via GPS data. Using animation and map charts, the article explains how climate change has impacted bird travel.",
         chartDescription: "Mario is one of Desertas petrels, bird species known for foraging deep-sea creatures by chasing hurricanes. The map shows Mario's journey, crossing the Atlantic Ocean in different seasons.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["annotation", "flow & arrows", "minimalist"]
     },
     {
         id: 240,
@@ -3603,11 +3841,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "scientific-american-efficient-traveler.png", zoom: "scientific-american-efficient-traveler-zoom.png", chartId: ["scatter", "correlogram"] },
         ],
-        contextDescription: "Science American has updated its graphic, comparing lomotion in the animal kingdom.", 
+        contextDescription: "Science American has updated its graphic, comparing lomotion in the animal kingdom.",
         chartDescription: "Chart shows relation between body weight and cost of transport, with each dot representing a specific animal.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["log scale", "color palette", "direct labeling"]
     },
     {
         id: 241,
@@ -3618,11 +3857,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "food-insecurity-women-tidytuesday.png", zoom: "food-insecurity-women-tidytuesday-zoom.png", chartId: ["barplot", "histogram"] },
         ],
-        contextDescription: "For week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, Georgios Karamanis explores global differences in severe food insecurity between women and men.", 
+        contextDescription: "For week 41 of <a href='https://github.com/rfordatascience/tidytuesday'>#TidyTuesday</a>, Georgios Karamanis explores global differences in severe food insecurity between women and men.",
         chartDescription: "78 countries are listed horizontally according to its difference of food insecurity betweeen women and men. You can see that countries including Pakistan, Afghanistan, and Peru report higher food insecurity for women.",
         tools: [{ name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2025/2025-week_42" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "direct labeling", "annotation"]
     },
     {
         id: 242,
@@ -3633,11 +3873,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "economic-barcode-inflation.png", zoom: "economic-barcode-inflation-zoom.png", chartId: ["barplot", "histogram", "line"] },
         ],
-        contextDescription: "Using global inflation data, the visualization shows how inflation has spread across different income groups for each country.", 
+        contextDescription: "Using global inflation data, the visualization shows how inflation has spread across different income groups for each country.",
         chartDescription: "Barcode charts are divided according to each income levels, with each stripe(country) placed according to the level of inflation.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "minimalist"]
     },
     {
         id: 243,
@@ -3648,11 +3889,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "repair-cafe-success-rate.png", zoom: "repair-cafe-success-rate-zoom.png", chartId: ["bubble", "scatter"] },
         ],
-        contextDescription: "The Repair Café in Europe is a community-based meeting place where people bring broken items for repairment. The project explores which items has been successfully fixed between 2015 and 2025.", 
+        contextDescription: "The Repair Café in Europe is a community-based meeting place where people bring broken items for repairment. The project explores which items has been successfully fixed between 2015 and 2025.",
         chartDescription: "Each bubble represents certain group of items, distinguished by color. Each groups of bubbles are along the y-axis, distributed according to the success rate shown in the x-axis.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "color palette", "direct labeling"]
     },
     {
         id: 244,
@@ -3663,11 +3905,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "chris-carter-tvshow.png", zoom: "chris-carter-tvshow-zoom.png", chartId: ["bubble", "dendrogram", "chordDiagram", "network", "edgeBundling"] },
         ],
-        contextDescription: "This project features screenwriters who took part in Chris Carter's TV shows, displaying the summary of contributions for each TV series.", 
+        contextDescription: "This project features screenwriters who took part in Chris Carter's TV shows, displaying the summary of contributions for each TV series.",
         chartDescription: "Cool infographic with interactive tools such as the sort options by first names, episode counts, and more. Definitely a lot of information to absorb, but the creator has nicely added a 'show legend' button on the bottom to explain how to read the chart.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "interactive controls", "color palette"]
     },
     {
         id: 245,
@@ -3678,11 +3921,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "diet-meat-region-impact.png", zoom: "diet-meat-region-impact-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "The 'carbon hoofprint' refers to the amount of climate threat Americans poses from raising meat (beef, pork, and chicken). However, the degree of pollution differs according to each region, according to experts. The Washington Post has visualized its impact across difference regions within the United States.", 
+        contextDescription: "The 'carbon hoofprint' refers to the amount of climate threat Americans poses from raising meat (beef, pork, and chicken). However, the degree of pollution differs according to each region, according to experts. The Washington Post has visualized its impact across difference regions within the United States.",
         chartDescription: "Map shows which regions are concentrated with emissions from meat consumption.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "gradient", "legend"]
     },
     {
         id: 246,
@@ -3693,11 +3937,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "china-rare-earth-area.png", zoom: "china-rare-earth-area-zoom.png", chartId: ["area", "stackedArea"] },
         ],
-        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.",
         chartDescription: "The stacked area chart shows how much China is leading in production of rare earths.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "highlight", "color palette"]
     },
     {
         id: 247,
@@ -3708,11 +3953,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "china-rare-earth-sankey.png", zoom: "china-rare-earth-sankey-zoom.png", chartId: ["sankey"] },
         ],
-        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.",
         chartDescription: "Sankey chart shows rare earth flows into specific purposes, leading to more general contributions like manufacturing and electronics.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "direct labeling", "legend"]
     },
     {
         id: 248,
@@ -3723,11 +3969,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "china-rare-earth-map.png", zoom: "china-rare-earth-map-zoom.png", chartId: ["map", "bubbleMap"] },
         ],
-        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.", 
+        contextDescription: "An interactive article by The Economist explains in-depth of the recent global tension over rare earth minerals.",
         chartDescription: "Map with different shapes (circles and diamond) show which countries are holding control of rare-earth projects in other regions.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "icons & pictograms", "color palette"]
     },
     {
         id: 249,
@@ -3738,11 +3985,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "middle-income-state.png", zoom: "middle-income-state-zoom.png", chartId: ["lollipop"] },
         ],
-        contextDescription: "Middle income range differs based on where you live. Using data from the five-year American Community Survey from 2023, Nathan Yau explores which region in the U.S has the largest range.", 
+        contextDescription: "Middle income range differs based on where you live. Using data from the five-year American Community Survey from 2023, Nathan Yau explores which region in the U.S has the largest range.",
         chartDescription: "You get to interact by choosing the number of household in the filter option.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "direct labeling"]
     },
     {
         id: 250,
@@ -3753,11 +4001,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "nadieh-bremer-pesticide.png", zoom: "nadieh-bremer-pesticide-zoom.png", chartId: ["voronoi", "treemap"] },
         ],
-        contextDescription: "A visualization for Greenpeace, Nadieh Bremer has created sales of hazardous pesticides by the CropLife companies.", 
+        contextDescription: "A visualization for Greenpeace, Nadieh Bremer has created sales of hazardous pesticides by the CropLife companies.",
         chartDescription: "The voronoi treemap highlights how five largest agrochemical companies are gaining most profit by selling highly hazardous pesticides. Colors indicate which hazard categories pesticides are part of. For more information of its process, check out her <a href='https://www.visualcinnamon.com/portfolio/highly-hazardous-pesticides/'>blog</a>",
-        tools:  [{ name: "d3.js" }],
+        tools: [{ name: "d3.js" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "direct labeling"]
     },
     {
         id: 251,
@@ -3768,11 +4017,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "guardian-lego-chart.png", zoom: "guardian-lego-chart-zoom.png", chartId: ["histogram", "barplot"] },
         ],
-        contextDescription: "<a href='https://www.theguardian.com/news/series/one-big-chart'> One big chart</a> features hand-drawn charts on key issues from Guardian Australia's data team. This chart shows total hours of children's TV produced in Australia.", 
+        contextDescription: "<a href='https://www.theguardian.com/news/series/one-big-chart'> One big chart</a> features hand-drawn charts on key issues from Guardian Australia's data team. This chart shows total hours of children's TV produced in Australia.",
         chartDescription: "Love the hand-made chart! You can also check the making of the chart <a href='https://www.tiktok.com/@guardianaustralia/video/7569796419146616081'> here </a>.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "texture", "typography"]
     },
     {
         id: 252,
@@ -3783,11 +4033,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "annual-rainfall-30daymap.png", zoom: "annual-rainfall-30daymap-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "A submission for day 6 of the <a href='https://30daymapchallenge.com/'> #30DayMap Challenge </a>, which is a daily mapping challenge taking place every November, Nicola Rennie explores annual rainfall in the UK.", 
+        contextDescription: "A submission for day 6 of the <a href='https://30daymapchallenge.com/'> #30DayMap Challenge </a>, which is a daily mapping challenge taking place every November, Nicola Rennie explores annual rainfall in the UK.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["3d", "gradient"]
     },
     {
         id: 253,
@@ -3798,11 +4049,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "the-pudding-democracy.png", zoom: "the-pudding-democracy-zoom.png", chartId: ["barplot", "scatter", "histogram"] },
         ],
-        contextDescription: "Alvin Chang from The Pudding has done it again with an amazing scrollytelling article. Interactive dot shows every time someone says 'democracy' in the Congressioanl Record since 1880.", 
+        contextDescription: "Alvin Chang from The Pudding has done it again with an amazing scrollytelling article. Interactive dot shows every time someone says 'democracy' in the Congressioanl Record since 1880.",
         chartDescription: "While ordinary dots represent mentioning of the word, brighter dots are the ones where ones argue American democracy is under threat. The scrollytelling, done in a time series order with dots pouring below text, ultimately leads to a histogram for better exploration. Make sure to check it out!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "highlight", "animation"]
     },
     {
         id: 254,
@@ -3813,11 +4065,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "land-surface-voronoi.png", zoom: "land-surface-voronoi-zoom.png", chartId: ["voronoi", "treemap"] },
         ],
-        contextDescription: "Earth's land surface account for mere 27%, with the rest all water. This project shows visualization of land, comparing its mass among continents.", 
+        contextDescription: "Earth's land surface account for mere 27%, with the rest all water. This project shows visualization of land, comparing its mass among continents.",
         chartDescription: "Voronoi treemap shows proportions of land for each continent.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "color palette", "direct labeling"]
     },
     {
         id: 255,
@@ -3829,11 +4082,12 @@ export const vizList: VizItem[] = [
             { full: "brussell-voronoi-treemap.png", zoom: "brussell-voronoi-treemap-zoom.png", chartId: ["voronoi", "treemap"] },
             { full: "brussell-map.png", zoom: "brussell-map-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "A data viz essay exploring Brussels and its people.", 
+        contextDescription: "A data viz essay exploring Brussels and its people.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "legend", "comparison", "direct labeling"]
     },
     {
         id: 256,
@@ -3844,11 +4098,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "global-economy-by-gdp.png", zoom: "global-economy-by-gdp-zoom.png", chartId: ["voronoi", "treemap"] },
         ],
-        contextDescription: "An article with neat visual to show proportions of global GDP each countries takes up.", 
+        contextDescription: "An article with neat visual to show proportions of global GDP each countries takes up.",
         chartDescription: "Voronoi treemap shows countries with size relative to the amount of global GDP is takes up. We can spot the two biggest economic countributers (U.S. and China) right on.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette"]
     },
     {
         id: 257,
@@ -3866,11 +4121,12 @@ export const vizList: VizItem[] = [
             { full: "EU-AU-relation-connnected-dot-1.png", zoom: "EU-AU-relation-connnected-dot-1-zoom.png", chartId: ["connectedScatter"] },
             { full: "EU-AU-relation-correlogram-1.png", zoom: "EU-AU-relation-correlogram-1-zoom.png", chartId: ["correlogram"] },
         ],
-        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.", 
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
         chartDescription: "The 57 page report has at least one data viz for every page, impressive!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "small multiples", "minimalist"]
     },
     {
         id: 258,
@@ -3881,11 +4137,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "passport-index.png", zoom: "passport-index-zoom.png", chartId: ["map", "connection"] },
         ],
-        contextDescription: "Which countries' citizens get to travel to which countries, visa-free? Ihar Yanouski uses passport index data to visualize which destinations with a certain visa regime for every country.", 
+        contextDescription: "Which countries' citizens get to travel to which countries, visa-free? Ihar Yanouski uses passport index data to visualize which destinations with a certain visa regime for every country.",
         chartDescription: "The interactive visualization allows you to click on either country in map or via search bar to see the flow of map according to visa restriction. Definitely a fun yet informative project to interact with!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "interactive controls", "minimalist"]
     },
     {
         id: 259,
@@ -3896,11 +4153,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "spina-bifida-half-circle.png", zoom: "spina-bifida-half-circle-zoom.png", chartId: ["bubble"] },
         ],
-        contextDescription: "Using charts and illustrations, the article explains about spina bifida, one of the most common serious birth conditions that is yet unknown to many.", 
+        contextDescription: "Using charts and illustrations, the article explains about spina bifida, one of the most common serious birth conditions that is yet unknown to many.",
         chartDescription: "One of the chart in the article is proportional area chart, which compares two datasets (in this case, continent/incontinent). Size refers to proportion to each measurement.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "comparison", "annotation"]
     },
     {
         id: 260,
@@ -3912,11 +4170,12 @@ export const vizList: VizItem[] = [
             { full: "chocolate-war-radar.png", zoom: "chocolate-war-radar-zoom.png", chartId: ["radar"] },
             { full: "chocolate-war-barplot.png", zoom: "chocolate-war-barplot-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "Does U.S. chocolate taste poorly compared to the same ones produced in Europe? Surbhi Bhatia uses data of each chocolate ingredients to find it out.", 
+        contextDescription: "Does U.S. chocolate taste poorly compared to the same ones produced in Europe? Surbhi Bhatia uses data of each chocolate ingredients to find it out.",
         chartDescription: "Fun use of KitKat images to replace the conventional bars in the barchart. The radar chart compares three essential components for chocolate (sugar, fat, and cocoa) between American and European chocolate products.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["radial", "comparison", "highlight", "annotation"]
     },
     {
         id: 261,
@@ -3925,13 +4184,14 @@ export const vizList: VizItem[] = [
         author: "Ansgar Wolsing",
         url: "https://www.linkedin.com/posts/ansgar-wolsing_30daymapchallenge-rstats-ggplot2-share-7399179654001004544-7CQT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApu3pcBwNT9ub2-aE3lAo3VsaAtnkN68gE",
         img: [
-            { full: "germany-youth-hexbin.png", zoom: "germany-youth-hexbin-zoom.png", chartId: ["map","hexbin"] },
+            { full: "germany-youth-hexbin.png", zoom: "germany-youth-hexbin-zoom.png", chartId: ["map", "hexbin"] },
         ],
-        contextDescription: "For 2025's #30DayMapChallenge Day 25: Hexagons, Ansgar Wolsing uses population data to visualize share of population aged 15-24 in Germany.", 
+        contextDescription: "For 2025's #30DayMapChallenge Day 25: Hexagons, Ansgar Wolsing uses population data to visualize share of population aged 15-24 in Germany.",
         chartDescription: "Strong visual that displays concentration of youth in certain regions.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "legend"]
     },
     {
         id: 262,
@@ -3942,11 +4202,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "france-train-car.png", zoom: "france-train-car-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "For 2025's #30dDayMapChallenge transports, Jules Grandin explores map of the fastest mode of transport from 10 major French cities.", 
+        contextDescription: "For 2025's #30dDayMapChallenge transports, Jules Grandin explores map of the fastest mode of transport from 10 major French cities.",
         chartDescription: "The difference between traveling through train (blue) and car (purple) builds up as each color darkens, love it!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "direct labeling", "legend"]
     },
     {
         id: 263,
@@ -3957,11 +4218,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "carbon-footprint-radar.png", zoom: "carbon-footprint-radar-zoom.png", chartId: ["radar"] },
         ],
-        contextDescription: "Benjamin Nowak uses data of environmental footprint required to produce 1kg of milk, meat, grain or fruit.", 
+        contextDescription: "Benjamin Nowak uses data of environmental footprint required to produce 1kg of milk, meat, grain or fruit.",
         chartDescription: "Instead of the conventional radar chart that we expect of, a symbolic 'flower' is used to represent environmental footprint. The size of each petal corresponds to type of impact, with largest petal represention the production with greatest impact.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "small multiples", "comparison"]
     },
     {
         id: 264,
@@ -3972,11 +4234,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "consciousness-ft-line.png", zoom: "consciousness-ft-line-zoom.png", chartId: ["line"] },
         ],
-        contextDescription: "The Financial Times uses data with different age groups to visualize the downfall of consciousness that is especially strong among young adults.", 
+        contextDescription: "The Financial Times uses data with different age groups to visualize the downfall of consciousness that is especially strong among young adults.",
         chartDescription: "One simple line chart suggesting interesting trend of consciousness in freefall.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "highlight"]
     },
     {
         id: 265,
@@ -3987,11 +4250,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "ACT-threatened-species.png", zoom: "ACT-threatened-species-zoom.png", chartId: ["dendrogram"] },
         ],
-        contextDescription: "One of Diana MacDonald's complete 30 day chart challenge for 2025, this visualization lists ACT Threatened Species including a cute Scarlet Robin.", 
+        contextDescription: "One of Diana MacDonald's complete 30 day chart challenge for 2025, this visualization lists ACT Threatened Species including a cute Scarlet Robin.",
         chartDescription: "If you are curious to explore more, make sure to check out the complete collection through the link below!",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "direct labeling", "icons & pictograms"]
     },
     {
         id: 266,
@@ -4002,11 +4266,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "tiktok-algorithm-wp.png", zoom: "tiktok-algorithm-wp-zoom.png", chartId: ["map", "hexbin"] },
         ],
-        contextDescription: "Did you know cat videas are often watched by people who also enjoy LGBTQ+ and music content? That's what The Washington Post says according to an analysis based on watch histories provided by 1,100 tiktok users.", 
+        contextDescription: "Did you know cat videas are often watched by people who also enjoy LGBTQ+ and music content? That's what The Washington Post says according to an analysis based on watch histories provided by 1,100 tiktok users.",
         chartDescription: "Along various topics that are clustered according to TikTok's algorithm, the hexbin map shows which hastag is opposite to which hastags.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "highlight", "icons & pictograms"]
     },
     {
         id: 267,
@@ -4017,11 +4282,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "kpop-physical-album.png", zoom: "kpop-physical-album-zoom.png", chartId: ["scatter"] },
         ],
-        contextDescription: "Popularity of kpop and its kpop merch frenzy comes with a cost. The Kontinentalist visualizes how album sales from Kpop has exponentially increased, with physical albums posing as an environmental concern.", 
+        contextDescription: "Popularity of kpop and its kpop merch frenzy comes with a cost. The Kontinentalist visualizes how album sales from Kpop has exponentially increased, with physical albums posing as an environmental concern.",
         chartDescription: "Size of icon means amount of albums sold. For more information, you can mouse over each icons.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "icons & pictograms", "minimalist", "interactive controls"]
     },
     {
         id: 268,
@@ -4032,11 +4298,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "defense-company-reuters.png", zoom: "defense-company-reuters-zoom.png", chartId: ["circularPacking"] },
         ],
-        contextDescription: "Military spending has risen over the past years worldwide. Which would mean new recording revenues for defense industries. Reuters visualizes  top defense companies for dominant countries and regions.", 
+        contextDescription: "Military spending has risen over the past years worldwide. Which would mean new recording revenues for defense industries. Reuters visualizes  top defense companies for dominant countries and regions.",
         chartDescription: "Using circular packing, each big circle represents either a country or a region. The nested circles represent defense companies and its size correspond to revenue from arms sales.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette"]
     },
     {
         id: 269,
@@ -4047,11 +4314,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "2025-US-snow-map.png", zoom: "2025-US-snow-map-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "Will we be celebrating White Christmas for 2025? We could only look to weather forecasts to give our best guess. The New York Times uses weather forecaster to visualize the likeliness to snow in the United States.", 
+        contextDescription: "Will we be celebrating White Christmas for 2025? We could only look to weather forecasts to give our best guess. The New York Times uses weather forecaster to visualize the likeliness to snow in the United States.",
         chartDescription: "The data is updated with the newly issued data noted below the map.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "color palette", "annotation"]
     },
     {
         id: 271,
@@ -4062,11 +4330,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "who-earns-higher-salary-nathan-yau.png", zoom: "who-earns-higher-salary-nathan-yau-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "Another fun, interactive dataviz by Nathan Yau, the visual allows you to see who makes more than you and in which occupation.", 
+        contextDescription: "Another fun, interactive dataviz by Nathan Yau, the visual allows you to see who makes more than you and in which occupation.",
         chartDescription: "You can use the slider to adjust annual salary!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "direct labeling", "interactive controls"]
     },
     {
         id: 272,
@@ -4077,11 +4346,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "AI-investment-reuters.png", zoom: "AI-investment-reuters-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "Just how much investment is being made in AI? Reuters says it has already outstripped government-led initiatives like the Manhaten Project and the Apollo program. The article dives into the vast investment that is currently being made.", 
+        contextDescription: "Just how much investment is being made in AI? Reuters says it has already outstripped government-led initiatives like the Manhaten Project and the Apollo program. The article dives into the vast investment that is currently being made.",
         chartDescription: "A cool interactive bar chart that compares the invesment that has been made to space projects and AI. If you keep scrolling it shows how AI investment has far passed the other past projects.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["comparison", "scrollytelling", "highlight", "minimalist"]
     },
     {
         id: 273,
@@ -4092,11 +4362,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "coffee-straits-times.png", zoom: "coffee-straits-times-zoom.png", chartId: ["bubble"] },
         ],
-        contextDescription: "A delight work by Straits Times, visualizing 40 people of their coffee consumption for a week.", 
+        contextDescription: "A delight work by Straits Times, visualizing 40 people of their coffee consumption for a week.",
         chartDescription: "Love the part where you customize your own cup of cofee depending on its coffee bean, taste, and the feeling after drinking it.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["texture", "icons & pictograms", "annotation"]
     },
     {
         id: 274,
@@ -4107,11 +4378,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "france-rent-2025.png", zoom: "france-rent-2025-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "The visualization uses rents by municipality using data from 9 million rental listings from open data set from the French Ministry of Ecology, Territorial Development, Transport, Urban Affairs and Housing.", 
+        contextDescription: "The visualization uses rents by municipality using data from 9 million rental listings from open data set from the French Ministry of Ecology, Territorial Development, Transport, Urban Affairs and Housing.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["legend", "color palette", "minimalist"]
     },
     {
         id: 275,
@@ -4122,11 +4394,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "ft-chinese-import-tariff.png", zoom: "ft-chinese-import-tariff-zoom.png", chartId: ["bubble"] },
         ],
-        contextDescription: "Despite the tariff war between US and China, the reliance on Chinese goods is undeniable. In this piece, Financial Times analyzes which categorized goods the US has been relying most.", 
+        contextDescription: "Despite the tariff war between US and China, the reliance on Chinese goods is undeniable. In this piece, Financial Times analyzes which categorized goods the US has been relying most.",
         chartDescription: "Each circle represents Chinese goods in a certain categorized, which is distinguished through color. You can easily see which imports are most critical to the tariff Trump adminsistration has imposed.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "legend", "texture", "storytelling"]
     },
     {
         id: 276,
@@ -4137,11 +4410,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "horror-word-pumpkin.png", zoom: "horror-word-pumpkin-zoom.png", chartId: ["wordcloud"] },
         ],
-        contextDescription: "Georgios Karamanis's submission for #TidyTuesday 2024, week of 44, she uses monster movie titles to look at some of the most frequent words.", 
+        contextDescription: "Georgios Karamanis's submission for #TidyTuesday 2024, week of 44, she uses monster movie titles to look at some of the most frequent words.",
         chartDescription: "Love the pumpkin!",
         tools: [{ name: "R", link: "https://github.com/gkaramanis/tidytuesday/tree/master/2024/2024-week_44" }],
         luminosity: ["dark"],
-        interactive: false
+        interactive: false,
+        labels: ["typography", "color palette", "minimalist"]
     },
     {
         id: 277,
@@ -4152,11 +4426,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "instagram-rich-list.png", zoom: "instagram-rich-list-zoom.png", chartId: ["bubble"] },
         ],
-        contextDescription: "We know that a single post from a renowned celebrity can capture the attention of millions. But how powerful is that influence when it comes to money? Visual Capitalist visualizes Instagram's biggest accounts, and their estimated earnings per sponsored post.", 
+        contextDescription: "We know that a single post from a renowned celebrity can capture the attention of millions. But how powerful is that influence when it comes to money? Visual Capitalist visualizes Instagram's biggest accounts, and their estimated earnings per sponsored post.",
         chartDescription: "Each circle represents one celebrity with size corresponding to earnings per post. This kind of new ranking makes it easier for readers to absorb information.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "legend", "color palette", "full-page layout"]
     },
     {
         id: 278,
@@ -4167,11 +4442,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "haiti-migrant-map.png", zoom: "haiti-migrant-map-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "In this article, The Washington Post covers the increasing attempts of Haitians to cross the Bahamian waters for migration. The map visualizes their journey, which often ends up into unfortunate events.", 
+        contextDescription: "In this article, The Washington Post covers the increasing attempts of Haitians to cross the Bahamian waters for migration. The map visualizes their journey, which often ends up into unfortunate events.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["minimalist", "annotation", "storytelling"]
     },
     {
         id: 279,
@@ -4182,11 +4458,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "volcanoe-eruptions.png", zoom: "volcanoe-eruptions-zoom.png", chartId: ["sankey", "line"] },
         ],
-        contextDescription: "A really cool work of visualization showing ten volcanoes and the record of its eruptions.", 
+        contextDescription: "A really cool work of visualization showing ten volcanoes and the record of its eruptions.",
         chartDescription: "Love the visualization packed with so many interesting facts!",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "color palette", "annotation", "icons & pictograms"]
     },
     {
         id: 280,
@@ -4197,11 +4474,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "circular-barplot-white-christmas.png", zoom: "circular-barplot-white-christmas-zoom.png", chartId: ["circularBarplot"] },
         ],
-        contextDescription: "A circular barplot that shows days of snow and hail in each Italian chief town arranged by season and weather on Christmas day. The data is from 1973~2019.", 
+        contextDescription: "A circular barplot that shows days of snow and hail in each Italian chief town arranged by season and weather on Christmas day. The data is from 1973~2019.",
         chartDescription: "The bars for each plot are arranged in time order clockwise, with height corresponding to weather categories (snow, hail, etc). What an inspiration!",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "small multiples", "annotation"]
     },
     {
         id: 281,
@@ -4212,11 +4490,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "crime-asset-stream.png", zoom: "crime-asset-stream-zoom.png", chartId: ["sankey"] },
         ],
-        contextDescription: "The visualization shows the seized assets (real estates and companies) from organized crime in Italy.", 
+        contextDescription: "The visualization shows the seized assets (real estates and companies) from organized crime in Italy.",
         chartDescription: "If you follow the stream (left to right) you can see new destination of seized assets and new purposes.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["flow & arrows", "color palette", "direct labeling"]
     },
     {
         id: 282,
@@ -4227,11 +4506,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "amusement-park-north-america.png", zoom: "amusement-park-north-america-zoom.png", chartId: ["map", "bubbleMap"] },
         ],
-        contextDescription: "What are the top 10 most visited amusement parks in North America? This map visualization uses data of number of visitors in 2016 to find out.", 
+        contextDescription: "What are the top 10 most visited amusement parks in North America? This map visualization uses data of number of visitors in 2016 to find out.",
         chartDescription: "Orange bubble represents top 10 most visited amusement parks while light blue bubble represents top 10 water parks in North America.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["icons & pictograms", "legend", "color palette", "annotation"]
     },
     {
         id: 283,
@@ -4242,11 +4522,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "loneliness-income-the-economist.png", zoom: "loneliness-income-the-economist-zoom.png", chartId: ["line"] },
         ],
-        contextDescription: "Does being rich make you lonelier? Well that is not the case when comparing countries by income. The Economist, using data from 2025 or latest available, finds out the the percentage of loneliness people felt.", 
+        contextDescription: "Does being rich make you lonelier? Well that is not the case when comparing countries by income. The Economist, using data from 2025 or latest available, finds out the the percentage of loneliness people felt.",
         chartDescription: "Each line represent countries divided into income level. We can easily see that the ones experiencing more loneliness are the ones in red (low-income countries)",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "highlight", "typography"]
     },
     {
         id: 284,
@@ -4257,11 +4538,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "drinking-slang-word-the-economist.png", zoom: "drinking-slang-word-the-economist-zoom.png", chartId: ["wordcloud"] },
         ],
-        contextDescription: "For Christmas Specials in 2025, The Economist has used a selection of drinking slang 1500-2020 and put them into a wonderful time-lined word visualization.", 
+        contextDescription: "For Christmas Specials in 2025, The Economist has used a selection of drinking slang 1500-2020 and put them into a wonderful time-lined word visualization.",
         chartDescription: "Love the animation with words poppling up as I scroll down.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "full-page layout", "animation", "typography"]
     },
     {
         id: 285,
@@ -4272,11 +4554,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "American-religion-pew-research.png", zoom: "American-religion-pew-research-zoom.png", chartId: ["pie"] },
         ],
-        contextDescription: "An interesting finding from Pew Research Center that 56% of U.S. adults identify with their childhood religion. The original paper goes more in depth to find out the reason behind this.", 
+        contextDescription: "An interesting finding from Pew Research Center that 56% of U.S. adults identify with their childhood religion. The original paper goes more in depth to find out the reason behind this.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "annotation"]
     },
     {
         id: 286,
@@ -4287,11 +4570,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "celebrate-winter-solstice.png", zoom: "celebrate-winter-solstice-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "A map visualization that shows where in the world solstice is/was a ritual celebration.", 
+        contextDescription: "A map visualization that shows where in the world solstice is/was a ritual celebration.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "annotation", "legend"]
     },
     {
         id: 287,
@@ -4302,11 +4586,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "AI-data-center-bloomberg.png", zoom: "AI-data-center-bloomberg-zoom.png", chartId: ["map", "bubbleMap"] },
         ],
-        contextDescription: "Four major tech companies has been dominating the AI infrastructure game, but there are new players incoming. Bloomberg analyzed thousands of data center operators, visualizing both the current AI data center occupation as well as its future with new players.", 
+        contextDescription: "Four major tech companies has been dominating the AI infrastructure game, but there are new players incoming. Bloomberg analyzed thousands of data center operators, visualizing both the current AI data center occupation as well as its future with new players.",
         chartDescription: "The scroytelling of current AI data centers in map shows what the future will be like if other firms come to join the race.",
         tools: undefined,
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "color palette", "legend", "animation"]
     },
     {
         id: 288,
@@ -4317,11 +4602,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "time-with-others-nathan-yau.png", zoom: "time-with-others-nathan-yau-zoom.png", chartId: ["ridgeline"] },
         ],
-        contextDescription: "Who are we spending our days with? Nathan Yau uses American Time User Survey between 2022 and 2024 to show  the distribution of time spent with others.", 
+        contextDescription: "Who are we spending our days with? Nathan Yau uses American Time User Survey between 2022 and 2024 to show  the distribution of time spent with others.",
         chartDescription: "Fun interactive with options to change respondents by sex, age, and time of week.",
         tools: [{ name: "R", link: "" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "interactive controls", "color palette"]
     },
     {
         id: 289,
@@ -4332,11 +4618,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "ICE-deport-ny-times.png", zoom: "ICE-deport-ny-times-zoom.png", chartId: ["connection", "map"] },
         ],
-        contextDescription: "A powerful visual storytelling about how ICE has moved thousands of people through detention and out of the country.", 
+        contextDescription: "A powerful visual storytelling about how ICE has moved thousands of people through detention and out of the country.",
         chartDescription: "Besides the animated connected map which shows transfers and removals of people, there are additional maps that visualizes where ICE makes arrests and where they are held, all very powerful. Make sure to check them out.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["storytelling", "flow & arrows", "animation", "color palette"]
     },
     {
         id: 290,
@@ -4347,11 +4634,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "lego-USA-today.png", zoom: "lego-USA-today-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "Lego, once deemed as a toy for kids, is capturing attention of adults as well. USA Today uses visualizations to explain its growing market.", 
+        contextDescription: "Lego, once deemed as a toy for kids, is capturing attention of adults as well. USA Today uses visualizations to explain its growing market.",
         chartDescription: "The simple bar chart made with Lego block shows the increasing number of Lego branded stores, worldwide.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["icons & pictograms", "direct labeling", "highlight"]
     },
     {
         id: 291,
@@ -4362,11 +4650,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "born-again-life-change.png", zoom: "born-again-life-change-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "An interesting game where you spin the globe to choose where to be born again, and see your expected life expectancy and child mortality at this new birthplace.", 
+        contextDescription: "An interesting game where you spin the globe to choose where to be born again, and see your expected life expectancy and child mortality at this new birthplace.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "animation", "minimalist"]
     },
     {
         id: 292,
@@ -4377,11 +4666,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "texas-tribune-income-college.png", zoom: "texas-tribune-income-college-zoom.png", chartId: ["sankey"] },
         ],
-        contextDescription: "The Texas Tribune uses state data to track how economically disadvantaged students are much less likely to go on and attain degrees.", 
+        contextDescription: "The Texas Tribune uses state data to track how economically disadvantaged students are much less likely to go on and attain degrees.",
         chartDescription: "The animated sankey flow shows how economic disadvantage impacts student outcomes. For a more straight-forward result, there is another option to look at waffle chart of the same result.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["flow & arrows", "direct labeling", "animation", "color palette"]
     },
     {
         id: 293,
@@ -4392,11 +4682,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "france-2024-election-le-monde.png", zoom: "france-2024-election-le-monde-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "Le Monde visualizes the 2024 European election results in France, town by town.", 
+        contextDescription: "Le Monde visualizes the 2024 European election results in France, town by town.",
         chartDescription: "Love the colorblind option below the map chart!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["color palette", "legend", "interactive controls"]
     },
     {
         id: 294,
@@ -4407,11 +4698,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "country-population-voronoi-treemap.png", zoom: "country-population-voronoi-treemap-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "Information is Beautiful uses United Nation's mid-year predictions for 2023 to visualize country by population.", 
+        contextDescription: "Information is Beautiful uses United Nation's mid-year predictions for 2023 to visualize country by population.",
         chartDescription: "Voronoi treemap shows regions that has been subdivded into each country, with size deteremined by population.",
         tools: undefined,
         luminosity: ["light", "dark"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "legend", "full-page layout"]
     },
     {
         id: 295,
@@ -4422,11 +4714,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "ukraine-damage-map-the-new-york-times.png", zoom: "ukraine-damage-map-the-new-york-times-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "The New York Times has visualized the destruction in Ukraine, using interactive storytelling and data to highlight the damages.", 
+        contextDescription: "The New York Times has visualized the destruction in Ukraine, using interactive storytelling and data to highlight the damages.",
         chartDescription: "Definitely recommend checking out the story, and if you are interested in the visualization process, check out the  <a href='https://mhinfographics.com/2024/06/22/visualizing-the-destruction-in-ukraine-a-years-long-project-following-satellite-clues/'> extensive blog </a> writtern by its creator.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["3d", "storytelling", "minimalist"]
     },
     {
         id: 296,
@@ -4437,11 +4730,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "french-election-2024-karim-douieb.png", zoom: "french-election-2024-karim-douieb-zoom.png", chartId: [] },
         ],
-        contextDescription: "Karim Douïeb uses data from Ipsos to visualize sociology of French electorates.", 
+        contextDescription: "Karim Douïeb uses data from Ipsos to visualize sociology of French electorates.",
         chartDescription: "This chart would be Marimekko chart, which has both axes as percentage scales, that deteremines wideth and height of each variables in a certain categorical data.",
         tools: [{ name: "JavaScript", link: "https://observablehq.com/d/49626e7e21f5f83e" }],
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "legend", "icons & pictograms"]
     },
     {
         id: 297,
@@ -4452,11 +4746,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "forest-fire-voronoi-treemap.png", zoom: "forest-fire-voronoi-treemap-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "A data viz created by Federica Fragapane using European Union's data on forest fires. You can see the article published by EU <a href='https://data.europa.eu/en/publications/datastories/high-value-datasets-forest-fires-eu'> here </a>.", 
+        contextDescription: "A data viz created by Federica Fragapane using European Union's data on forest fires. You can see the article published by EU <a href='https://data.europa.eu/en/publications/datastories/high-value-datasets-forest-fires-eu'> here </a>.",
         chartDescription: "Voronoi treemap shows goods imported by member state, with each portion of circle representing EU member state.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "legend", "small multiples", "annotation"]
     },
     {
         id: 298,
@@ -4467,11 +4762,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "elon-musk-tweet-les-echos.png", zoom: "elon-musk-tweet-les-echos-zoom.png", chartId: ["line"] },
         ],
-        contextDescription: "Les Echos has invested 40,000 tweets Elon Musk made in the last two years. Using those data, the visualization shows which topics Elon Musk has focused on his tweet.", 
+        contextDescription: "Les Echos has invested 40,000 tweets Elon Musk made in the last two years. Using those data, the visualization shows which topics Elon Musk has focused on his tweet.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "annotation", "gradient", "color palette"]
     },
     {
         id: 299,
@@ -4482,11 +4778,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "company-impact-project-data-art.png", zoom: "company-impact-project-data-art-zoom.png", chartId: [] },
         ],
-        contextDescription: "A client work from a group that wanted to present a colleague's impact in the company, Tanja Radovanovic uses the collected data to create a time-lined data art.", 
+        contextDescription: "A client work from a group that wanted to present a colleague's impact in the company, Tanja Radovanovic uses the collected data to create a time-lined data art.",
         chartDescription: "Each plant is one project with biggest flower the main fruit of her work. Love the nice data art guides provided below the work.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["radial", "annotation", "minimalist", "legend"]
     },
     {
         id: 300,
@@ -4497,11 +4794,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "git-commit-nadieh-bremer.png", zoom: "git-commit-nadieh-bremer-zoom.png", chartId: ["circularPacking"] },
         ],
-        contextDescription: "A client work for Mozilla, the interactive visualization shows entire commit history of a GitHub repository.", 
+        contextDescription: "A client work for Mozilla, the interactive visualization shows entire commit history of a GitHub repository.",
         chartDescription: "The visualization groups all commits by months, scaled by the number of lines changed in the commit. There is an interactive which allows user to explore commits and find other commits made by the same author. For more details on the creative process, check out her <a href='https://www.visualcinnamon.com/portfolio/orca-github-commits/'> blog! </a>",
         tools: [{ name: "d3.js", link: "" }],
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["small multiples", "color palette", "interactive controls", "flow & arrows"]
     },
     {
         id: 301,
@@ -4512,11 +4810,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "less-arctic-sea-ice-financial-times.png", zoom: "less-arctic-sea-ice-financial-times-zoom.png", chartId: ["ridgeline"] },
         ],
-        contextDescription: "New study shows that first ice-free day in the Arctic Ocean may come beofre 2030. Financial Times uses ridgeline plot to show the change in Arctic sea ice over the years.", 
+        contextDescription: "New study shows that first ice-free day in the Arctic Ocean may come beofre 2030. Financial Times uses ridgeline plot to show the change in Arctic sea ice over the years.",
         chartDescription: "The distribution moving gradually towards the left shows the decrease in sea ice and what is to come ahead in the future.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["annotation", "gradient", "color palette", "direct labeling"]
     },
     {
         id: 302,
@@ -4527,11 +4826,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "europe-wants-kamala-harris-european-correspondent.png", zoom: "europe-wants-kamala-harris-european-correspondent-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "The European Correspondent visualizes a survey result that suggests Europeans prefer Kamala Harris to be elected as U.S president over Donald Trump.", 
+        contextDescription: "The European Correspondent visualizes a survey result that suggests Europeans prefer Kamala Harris to be elected as U.S president over Donald Trump.",
         chartDescription: "Nice, clean graph with annotations.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "minimalist", "annotation"]
     },
     {
         id: 303,
@@ -4542,11 +4842,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "de-Volkskrant-european-election.png", zoom: "de-Volkskrant-european-election-zoom.png", chartId: ["map"] },
         ],
-        contextDescription: "An interactive map for European elections, where users get to explore voting results across the 27 European Union member states.", 
+        contextDescription: "An interactive map for European elections, where users get to explore voting results across the 27 European Union member states.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "color palette", "zoom & pan"]
     },
     {
         id: 304,
@@ -4557,11 +4858,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "afD-hatred-parliament-map.png", zoom: "afD-hatred-parliament-map-zoom.png", chartId: ["map", "barplot", "choropleth"] },
         ],
-        contextDescription: "An extensive scrollytelling analysis of AfD speeches in German state parliament. Throught the speech over the years, there is map highlighting certain regions that has mentioned certain topics more than any other region.", 
+        contextDescription: "An extensive scrollytelling analysis of AfD speeches in German state parliament. Throught the speech over the years, there is map highlighting certain regions that has mentioned certain topics more than any other region.",
         chartDescription: "Love how they added a barplot below map to show actual mentions over time.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["scrollytelling", "annotation", "direct labeling", "gradient"]
     },
     {
         id: 305,
@@ -4572,11 +4874,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "big-car-weight-the-economist.png", zoom: "big-car-weight-the-economist-zoom.png", chartId: ["scatter"] },
         ],
-        contextDescription: "An analysis by The Economist shows that weight is still a critical factor in car crashes in America. Using data, the visualization shows relationship between vehicle weight and road safety.", 
+        contextDescription: "An analysis by The Economist shows that weight is still a critical factor in car crashes in America. Using data, the visualization shows relationship between vehicle weight and road safety.",
         chartDescription: "The grey dot represents fatality rate of the occupants of heavy pickup truck while red one represents fatality rate of people in other cars. The following result is that as weight of your car increases, the risk of killing others will increase dramatically.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["direct labeling", "comparison", "color palette"]
     },
     {
         id: 306,
@@ -4587,11 +4890,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "star-trek-voronoi-treemap-tableau.png", zoom: "star-trek-voronoi-treemap-tableau-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "A voronoi treemap representing TV Series in the Star Trek universe, made with Tableau.", 
+        contextDescription: "A voronoi treemap representing TV Series in the Star Trek universe, made with Tableau.",
         chartDescription: "Each block represents one season, with size according to number of episodes. Color of block is divided by series.",
         tools: [{ name: "tableau", link: "" }],
         luminosity: ["light", "dark"],
-        interactive: true
+        interactive: true,
+        labels: ["legend", "color palette", "annotation"]
     },
     {
         id: 307,
@@ -4602,11 +4906,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "james-bond-tableau-iron-viz.png", zoom: "james-bond-tableau-iron-viz-zoom.png", chartId: ["treemap"] },
         ],
-        contextDescription: "A submission for <a href='https://www.tableau.com/community/iron-viz'> #ironviz</a>, data-viz competition using Tableau, Mateusz Karmalski uses James Bond movie data to visualize the film.", 
+        contextDescription: "A submission for <a href='https://www.tableau.com/community/iron-viz'> #ironviz</a>, data-viz competition using Tableau, Mateusz Karmalski uses James Bond movie data to visualize the film.",
         chartDescription: "Love how there is a treemap in the shape of a wine glass!",
         tools: [{ name: "tableau", link: "" }],
         luminosity: ["dark"],
-        interactive: true
+        interactive: true,
+        labels: ["full-page layout", "icons & pictograms", "typography", "storytelling"]
     },
     {
         id: 308,
@@ -4617,11 +4922,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "france-rainfall-choropleth-map.png", zoom: "france-rainfall-choropleth-map-zoom.png", chartId: ["map", "choropleth"] },
         ],
-        contextDescription: "A visual oveview of rainfall variations across France, highlighting the rainiest regions.", 
+        contextDescription: "A visual oveview of rainfall variations across France, highlighting the rainiest regions.",
         chartDescription: "",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["gradient", "annotation", "legend"]
     },
     {
         id: 309,
@@ -4632,11 +4938,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "education-gdp-connected-scatterplot.png", zoom: "education-gdp-connected-scatterplot-zoom.png", chartId: ["connectedScatter"] },
         ],
-        contextDescription: "This visualization shows education attainment by GDP per Capita PPPs for each country. Using connected scatterplot, it shows sequential nature of the data.", 
+        contextDescription: "This visualization shows education attainment by GDP per Capita PPPs for each country. Using connected scatterplot, it shows sequential nature of the data.",
         chartDescription: "The color indicates western (blue) and former communist (red) countries, with height x-axis and y-axis depending on more education and more purschasing power accordingly.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["direct labeling", "color palette", "annotation"]
     },
     {
         id: 310,
@@ -4647,11 +4954,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "how-europe-is-feeling-european-correspondent.png", zoom: "how-europe-is-feeling-european-correspondent-zoom.png", chartId: ["scatter", "beeswarm"] },
         ],
-        contextDescription: "To look at how people in Europe has been feeling lately, The European Correspondent uses survey data to show distribution of different feelings people felt in the previous day.", 
+        contextDescription: "To look at how people in Europe has been feeling lately, The European Correspondent uses survey data to show distribution of different feelings people felt in the previous day.",
         chartDescription: "Different categories of feeling each have their own beeswarm according to response. Colors are divided into positive (green) and negative (red).",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "annotation"]
     },
     {
         id: 311,
@@ -4662,11 +4970,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "hottest-year-2025-the-economist-heatmap.png", zoom: "hottest-year-2025-the-economist-heatmap-zoom.png", chartId: ["heatmap"] },
         ],
-        contextDescription: "When it comes to climate change, you cannot leave out data. The Economist visualizes the global surface air-temperature for the past years.", 
+        contextDescription: "When it comes to climate change, you cannot leave out data. The Economist visualizes the global surface air-temperature for the past years.",
         chartDescription: "Heatmap shows how temperature has been rising in recent years.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["color palette", "highlight", "annotation", "legend"]
     },
     {
         id: 312,
@@ -4677,11 +4986,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "funds-for-ICE-barplot-ny-times.png", zoom: "funds-for-ICE-barplot-ny-times-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "Strong visual showing how much funding has been provided for ICE for the past years.", 
+        contextDescription: "Strong visual showing how much funding has been provided for ICE for the past years.",
         chartDescription: "The distinctive orange barplots along with bold annotations highlight the dramatic increase of funding for ICE.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["highlight", "annotation", "legend"]
     },
     {
         id: 313,
@@ -4692,11 +5002,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "dog-breed-behavior-scientific-american.png", zoom: "dog-breed-behavior-scientific-american-zoom.png", chartId: ["scatter"] },
         ],
-        contextDescription: "A visualization by Scientific American using data on dog behavior obtained from more than 50,000 owners to categories behaviors by breeds.", 
+        contextDescription: "A visualization by Scientific American using data on dog behavior obtained from more than 50,000 owners to categories behaviors by breeds.",
         chartDescription: "This is a dot plot with each dot representing a certain dog breed. Color distinctions are made according to typical size. Make sure to check out the article to explore more on other categoreis as well!",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["small multiples", "legend", "icons & pictograms", "annotation"]
     },
     {
         id: 314,
@@ -4707,11 +5018,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "britain-ethnicity-diverse-segregate-the-economist.png", zoom: "britain-ethnicity-diverse-segregate-the-economist-zoom.png", chartId: ["scatter"] },
         ],
-        contextDescription: "An interactive article by The Economist analyzing how diverse Britain has become and in which regions specifically. With the offical data currently unavailable, they have used annual census of schoolchildren to figure out the ethnic make-up of the country. For more details on the analysis, you can check out <a href='https://theeconomistoffthecharts.substack.com/'> The Economist: Off the Charts</a>, a newsletter from The Economist data and visual journalism team.", 
+        contextDescription: "An interactive article by The Economist analyzing how diverse Britain has become and in which regions specifically. With the offical data currently unavailable, they have used annual census of schoolchildren to figure out the ethnic make-up of the country. For more details on the analysis, you can check out <a href='https://theeconomistoffthecharts.substack.com/'> The Economist: Off the Charts</a>, a newsletter from The Economist data and visual journalism team.",
         chartDescription: "The scatterplot shows constituencies in England, with areas split into four sections according to diversity and segregation. A search bar allows you to find specific constituency and see which section it belongs to.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["interactive controls", "annotation", "legend"]
     },
     {
         id: 315,
@@ -4722,11 +5034,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "UK-bird-joy-rating-not-ship.png", zoom: "UK-bird-joy-rating-not-ship-zoom.png", chartId: ["lollipop"] },
         ],
-        contextDescription: "A visualization that ranks bird types using data of joy rating for common UK birds.", 
+        contextDescription: "A visualization that ranks bird types using data of joy rating for common UK birds.",
         chartDescription: "A joy rating for each bird type, with line representing 95% confidence interval.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: false
+        interactive: false,
+        labels: ["uncertainty", "direct labeling", "annotation", "minimalist"]
     },
     {
         id: 316,
@@ -4737,11 +5050,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "minnesota-federal-agent-pie-chart.png", zoom: "minnesota-federal-agent-pie-chart-zoom.png", chartId: ["pie"] },
         ],
-        contextDescription: "With the ongoing tensions in Minnesota with federal presence, The Minnesota Star Tribune has visualized what it would look like if additional federal agents were to head to the city.", 
+        contextDescription: "With the ongoing tensions in Minnesota with federal presence, The Minnesota Star Tribune has visualized what it would look like if additional federal agents were to head to the city.",
         chartDescription: "Instead of plain, solid pie chart showing propotions, the pie chart comes in a scatter of numerous dots with each representing one officer. This allows strong visual of how one side outnumbers the other.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["icons & pictograms", "direct labeling", "color palette", "comparison"]
     },
     {
         id: 317,
@@ -4752,11 +5066,12 @@ export const vizList: VizItem[] = [
         img: [
             { full: "ice-cream-flavor-ranking-cnn.png", zoom: "ice-cream-flavor-ranking-cnn-zoom.png", chartId: ["barplot"] },
         ],
-        contextDescription: "A sweet interactive article showing how ranked-choice voting process works for ice-cream.", 
+        contextDescription: "A sweet interactive article showing how ranked-choice voting process works for ice-cream.",
         chartDescription: "A fun interactive where you first rank five favorite ice cream flavors and follow along the votes getting counted until the final winner is decided.",
         tools: undefined,
         luminosity: ["light"],
-        interactive: true
+        interactive: true,
+        labels: ["texture", "icons & pictograms", "interactive controls", "storytelling"]
     },
     {
         id: 318,

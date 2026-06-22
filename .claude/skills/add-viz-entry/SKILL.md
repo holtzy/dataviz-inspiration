@@ -56,7 +56,7 @@ chart family. Pick the few that genuinely stand out in the viz; omit the field i
 annotation, legend, direct labeling, color palette, bivariate coloring, gradient, texture, typography,
 icons & pictograms, highlight, storytelling, scrollytelling, comparison, uncertainty,
 animation, shape morphism, interactive controls, tooltip, hover effect, zoom & pan, brushing,
-small multiples, full-page layout, minimalist, flow & arrows, 3d, log scale
+small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log scale
 
 > `highlight` = emphasizing one series while greying out the rest (very common in good editorial
 > viz). `direct labeling` = labels on the data instead of a separate legend. Don't use a label
