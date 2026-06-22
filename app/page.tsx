@@ -1,6 +1,5 @@
 "use client";
 
-import { AppHeader } from "../components/AppHeader";
 import Navbar from "../components/Navbar";
 import TitleAndDescription from "../components/TitleAndDescription";
 import Footer from "../components/Footer";
@@ -23,15 +22,6 @@ export default function Page() {
 
   return (
     <>
-      <AppHeader
-        title={"Dataviz Inspiration | Hundreds of chart examples"}
-        description={
-          "The biggest list of chart examples available on the web. " +
-          vizList.length +
-          " of the best viz projects displayed using a pinterest style sorted by tool and chart type."
-        }
-      />
-
       <div className="wrapper">
         <Navbar />
       </div>
