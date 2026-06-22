@@ -3,19 +3,16 @@ import { vizList } from "../util/viz-list";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";
 import { Pill } from "./Pill";
-import { LikeButton } from "./LikeButton";
 
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
   projectId: number;
   imgId: number;
-  likeNumber: number;
 };
 
 export const VizItemModalContent = ({
   projectId,
   imgId,
-  likeNumber,
 }: VizItemModalContentProps) => {
   const vizItem = vizList.find((item) => item.id === projectId);
 
@@ -102,14 +99,6 @@ export const VizItemModalContent = ({
     </>
   );
 
-  const likeButton = (
-    <LikeButton
-      projectId={projectId}
-      initialLikeNumber={likeNumber}
-      isDarkBackground={false}
-    />
-  );
-
   const smallScreenLayout = (
     <div
       style={{
@@ -130,8 +119,6 @@ export const VizItemModalContent = ({
         src={`/img/${vizItem.img[imgId].full}`}
         alt={"Chart showing " + vizItem.title}
       />
-      <br />
-      {likeButton}
       <br />
       {contextDescription}
       <br />
@@ -158,8 +145,6 @@ export const VizItemModalContent = ({
       </div>
 
       <div className="p-2 flex flex-col justify-center">
-        {likeButton}
-        <br /> <br />
         {titleAndAuthor}
         <br />
         {chartIdsSection}

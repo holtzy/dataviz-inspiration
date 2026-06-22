@@ -11,7 +11,6 @@ type VizItemModalProps = {
   selectedProject: Project;
   setSelectedProject: (arg: Project) => void;
   isModalOpen: boolean;
-  likeNumber: boolean;
 };
 
 export const VizItemModal = ({
@@ -19,7 +18,6 @@ export const VizItemModal = ({
   closeModal,
   selectedProject,
   setSelectedProject,
-  likeNumber,
 }: VizItemModalProps) => {
   const { projectId, imgId } = selectedProject;
 
@@ -81,7 +79,6 @@ export const VizItemModal = ({
         key={selectedProject.projectId}
         projectId={projectId}
         imgId={imgId}
-        likeNumber={likeNumber}
       />
 
       {/* Shortcuts */}

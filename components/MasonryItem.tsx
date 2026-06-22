@@ -1,5 +1,4 @@
 import { VizItem } from "../util/viz-list";
-import { LikeButton } from "./LikeButton";
 
 // A "MasonryItem" is just an image displayed on the main wall.
 // When hovered, an additional layer appears to provide some more information (with a sliding animation)
@@ -9,14 +8,12 @@ type MasonryItemProps = {
   vizItem: VizItem;
   onClick: (arg: VizItem) => void;
   imgId: number;
-  likeNumber: number;
 };
 
 export const MasonryItem = ({
   vizItem,
   onClick,
   imgId,
-  likeNumber,
 }: MasonryItemProps) => {
   const month = vizItem.date.toLocaleString("default", { month: "long" });
   const year = vizItem.date.toLocaleString("default", { year: "numeric" });
@@ -45,11 +42,6 @@ export const MasonryItem = ({
           <p className="text-md text-white text-xs opacity-75 mt-2">
             {month + " " + year}
           </p>
-          <LikeButton
-            initialLikeNumber={likeNumber}
-            projectId={vizItem.id}
-            isDarkBackground={true}
-          />
         </div>
       </div>
     </div>

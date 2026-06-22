@@ -4,7 +4,6 @@ import { VizItemModal } from "./VizItemModal";
 import { usePathname, useSearchParams } from "next/navigation";
 import { MasonryItem } from "./MasonryItem";
 import { useState } from "react";
-import useLikesData from "../hooks/use-likes";
 import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { filterVizList } from "../util/filterVizList";
 import { ChartId } from "../util/sectionDescription";
@@ -38,7 +37,6 @@ export const PictureWall = () => {
   const [selectedProject, setSelectedProject] = useState<Project | undefined>(); // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
   const [isModalOpen, setIsModalOpen] = useState(false); // State of this specific page
 
-  const likesData = useLikesData();
   const filteredVizList = filterVizList(vizList, luminosity, chartType, tools).reverse();
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
@@ -50,7 +48,6 @@ export const PictureWall = () => {
           setIsModalOpen(true);
         }}
         imgId={0}
-        likeNumber={likesData[data.id] || 0}
       />
     );
   };
@@ -89,7 +86,6 @@ export const PictureWall = () => {
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
           closeModal={() => setIsModalOpen(false)}
-          likeNumber={likesData[selectedProject.projectId] || 0}
         />
       )}
     </>
