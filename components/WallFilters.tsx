@@ -1,8 +1,9 @@
 import { ChartId } from "../util/sectionDescription";
-import { Luminosity, Tool } from "../util/viz-list";
+import { Luminosity, Tool, VizLabel } from "../util/viz-list";
 import { ChartIdSelector } from "./Filters/ChartIdSelector";
 import { ColumnNumberSelector } from "./Filters/ColumnNumberSelector";
 import { FilterReset } from "./Filters/FilterReset";
+import { LabelSelector } from "./Filters/LabelSelector";
 import { LuminositySelector } from "./Filters/LuminositySelector";
 import { ToolSelector } from "./Filters/ToolSelector";
 
@@ -11,6 +12,7 @@ type WallFiltersProps = {
   luminosity: Luminosity[] | undefined;
   selectedChart: ChartId | undefined;
   tools: Tool[] | undefined;
+  labels: VizLabel[] | undefined;
 };
 
 export const WallFilters = ({
@@ -18,6 +20,7 @@ export const WallFilters = ({
   luminosity,
   selectedChart,
   tools,
+  labels,
 }: WallFiltersProps) => {
   return (
     <div className="sticky bg-white top-0 w-full z-40 flex justify-center items-center">
@@ -35,6 +38,10 @@ export const WallFilters = ({
 
       <FilterWrapper>
         <ToolSelector tools={tools} />
+      </FilterWrapper>
+
+      <FilterWrapper>
+        <LabelSelector labels={labels} />
       </FilterWrapper>
 
       {/* A "x" button allowing to reset all filters to default (=no filter at all) */}

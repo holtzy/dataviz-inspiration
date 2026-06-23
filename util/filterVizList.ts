@@ -1,5 +1,5 @@
 import { ChartId } from "./sectionDescription";
-import { Luminosity, Tool, VizItem } from "./viz-list";
+import { Luminosity, Tool, VizItem, VizLabel } from "./viz-list";
 
 // viz-list.ts is the list of all the projects displayed on the main wall
 // at the top of the wall some filters all to filter those projects
@@ -8,7 +8,8 @@ export const filterVizList = (
   vizList: VizItem[],
   luminosity: Luminosity | undefined,
   selectedChartId: ChartId | undefined,
-  tools: Tool[] | undefined
+  tools: Tool[] | undefined,
+  labels?: VizLabel[]
 ): VizItem[] => {
   return (
     vizList
@@ -38,6 +39,18 @@ export const filterVizList = (
         return vizItem?.tools.some((item) => {
           return tools.includes(item.name);
         });
+      })
+
+      // Apply the label (design-technique tag) filter.
+      // Keep an item if it carries at least one of the selected labels.
+      .filter((vizItem) => {
+        if (!labels || labels.length === 0) {
+          return true;
+        }
+        if (!vizItem.labels) {
+          return false;
+        }
+        return vizItem.labels.some((label) => labels.includes(label));
       })
   );
 };

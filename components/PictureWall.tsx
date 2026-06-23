@@ -3,8 +3,8 @@ import { WallFilters } from "./WallFilters";
 import { VizItemModal } from "./VizItemModal";
 import { usePathname, useSearchParams } from "next/navigation";
 import { MasonryItem } from "./MasonryItem";
-import { useState } from "react";
-import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
+import { useState, useEffect } from "react";
+import { Luminosity, Tool, VizItem, VizLabel, vizList } from "../util/viz-list";
 import { filterVizList } from "../util/filterVizList";
 import { ChartId } from "../util/sectionDescription";
 
@@ -28,16 +28,28 @@ export const PictureWall = () => {
   const tools = (searchParams.getAll("tools") || undefined) as
     | Tool[]
     | undefined;
+  // Single-select: only ever honor the first label, even if the URL carries several.
+  const labels = searchParams.getAll("labels").slice(0, 1) as VizLabel[];
   const pathname = usePathname();
   const chartType = pathname.split("/")[1] as ChartId;
 
   //
   // Additional state that is NOT in the URL
   //
-  const [selectedProject, setSelectedProject] = useState<Project | undefined>(); // specify the project (id in the viz-list.ts array) + the img id (some projects have several imgs)
+  const [selectedProject, setSelectedProject] = useState<Project | undefined>(); // specify the project (id in the viz-list.ts array)
   const [isModalOpen, setIsModalOpen] = useState(false); // State of this specific page
 
-  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools).reverse();
+  // Masonic relies on ResizeObserver, which doesn't exist during server-side
+  // rendering. Render the grid only after the component has mounted (client-only).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools, labels).reverse();
+
+  // Masonic caches cell positions and assumes the `items` array never shrinks.
+  // Filtering can make it shorter, which crashes Masonic ("No data was found at index").
+  // Remount the grid whenever the filtered set changes by keying it on the active filters.
+  const masonryKey = `${chartType ?? ""}|${luminosity ?? ""}|${(tools ?? []).join(",")}|${labels.join(",")}`;
 
   const MasonryCard = ({ index, data, width }: MasonryCardProps) => {
     return (
@@ -58,6 +70,7 @@ export const PictureWall = () => {
         luminosity={luminosity}
         selectedChart={undefined}
         tools={tools}
+        labels={labels}
       />
 
       <div
@@ -68,13 +81,16 @@ export const PictureWall = () => {
       >
         <div className="w-full px-4" style={{ maxWidth: 1100, marginTop: 25 }}>
           <div className="w-full">
-            <Masonry
-              items={filteredVizList}
-              render={MasonryCard}
-              columnCount={Number(columnNumber)}
-              columnGutter={12}
-              rowGutter={12}
-            />
+            {mounted && (
+              <Masonry
+                key={masonryKey}
+                items={filteredVizList}
+                render={MasonryCard}
+                columnCount={Number(columnNumber)}
+                columnGutter={12}
+                rowGutter={12}
+              />
+            )}
           </div>
         </div>
       </div>
