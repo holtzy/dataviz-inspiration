@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect } from "react";
 import { Project } from "./PictureWall";
-import { vizList } from "../util/viz-list";
 import { VizItemModalContent } from "./VizItemModalContent";
 
 // This component is the modal that opens when user clicks on an image of the wall.
@@ -11,6 +10,7 @@ type VizItemModalProps = {
   selectedProject: Project;
   setSelectedProject: (arg: Project) => void;
   isModalOpen: boolean;
+  orderedIds: number[];
 };
 
 export const VizItemModal = ({
@@ -18,6 +18,7 @@ export const VizItemModal = ({
   closeModal,
   selectedProject,
   setSelectedProject,
+  orderedIds,
 }: VizItemModalProps) => {
   const { projectId } = selectedProject;
 
@@ -27,27 +28,28 @@ export const VizItemModal = ({
     (event) => {
       if (event.key === "Escape") {
         closeModal();
+        return;
       }
-      const projectNumber = vizList.length;
+      // Navigate within the currently-filtered wall (in display order), so the
+      // arrows only ever land on items that actually exist on this page.
+      const count = orderedIds.length;
+      if (count === 0) {
+        return;
+      }
+      const currentIndex = orderedIds.indexOf(projectId);
 
       // Right arrow
       if (event.keyCode == "39") {
-        let nextId = projectId + 1;
-        if (nextId >= projectNumber) {
-          nextId = 0;
-        }
-        setSelectedProject({ projectId: nextId });
+        const nextIndex = (currentIndex + 1) % count;
+        setSelectedProject({ projectId: orderedIds[nextIndex] });
       }
       // Left arrow
       if (event.keyCode == "37") {
-        let previousId = projectId - 1;
-        if (previousId < 0) {
-          previousId = projectNumber - 1;
-        }
-        setSelectedProject({ projectId: previousId });
+        const previousIndex = (currentIndex - 1 + count) % count;
+        setSelectedProject({ projectId: orderedIds[previousIndex] });
       }
     },
-    [projectId]
+    [projectId, orderedIds, closeModal, setSelectedProject]
   );
 
   useEffect(() => {

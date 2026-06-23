@@ -46,6 +46,10 @@ export const PictureWall = () => {
 
   const filteredVizList = filterVizList(vizList, luminosity, chartType, tools, labels).reverse();
 
+  // Ordered ids of the currently-filtered wall, so the modal's prev/next arrows
+  // navigate within this set (in display order) instead of across the whole list.
+  const orderedIds = filteredVizList.map((item) => item.id);
+
   // Masonic caches cell positions and assumes the `items` array never shrinks.
   // Filtering can make it shorter, which crashes Masonic ("No data was found at index").
   // Remount the grid whenever the filtered set changes by keying it on the active filters.
@@ -101,6 +105,7 @@ export const PictureWall = () => {
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
           closeModal={() => setIsModalOpen(false)}
+          orderedIds={orderedIds}
         />
       )}
     </>
