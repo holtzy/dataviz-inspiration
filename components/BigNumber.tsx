@@ -1,21 +1,25 @@
-import React from "react";
-import { useSpring, animated } from "@react-spring/web";
+"use client";
+
+import { useEffect } from "react";
+import { animate, motion, useMotionValue, useTransform } from "motion/react";
 
 type BigNumberProps = {
   number: number;
 };
 
 const BigNumber = ({ number }: BigNumberProps) => {
-  const props = useSpring({
-    number,
-    from: { number: 0 },
-    config: { duration: 1000 },
-  });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (value) => Math.round(value));
+
+  useEffect(() => {
+    const controls = animate(count, number, { duration: 1 });
+    return () => controls.stop();
+  }, [count, number]);
 
   return (
-    <animated.div style={{ fontSize: "3rem", fontWeight: "bold" }}>
-      {props.number.to((n) => n.toFixed(0))}
-    </animated.div>
+    <motion.div style={{ fontSize: "3rem", fontWeight: "bold" }}>
+      {rounded}
+    </motion.div>
   );
 };
 
