@@ -41,7 +41,7 @@ export const ChartIdSelectorModal = ({
           <Link
             key={i}
             href={newHref}
-            style={{ width: 45, height: 45, marginLeft: 2, marginRight: 2 }}
+            style={{ width: 64, height: 64, margin: 3 }}
             className={
               "relative cursor-pointer hover:border hover:border-black rounded-full hover:opacity-100"
             }
@@ -60,7 +60,7 @@ export const ChartIdSelectorModal = ({
       <div className="mb-2">
         <span className={family + " capitalize text-sm"}>{family}</span>
         <hr className="opacity-60" />
-        <div className="flex justify-start flex-no-wrap mt-1">
+        <div className="flex justify-start flex-wrap mt-1">
           {logoList(family)}
         </div>
       </div>

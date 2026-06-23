@@ -4,7 +4,7 @@ export default function SocialMediaButtons() {
   return (
     <div className="flex flex-row my-2">
       <a
-        href="https://github.com/holtzy"
+        href="https://github.com/holtzy/dataviz-inspiration"
         className="mr-1 h-8 w-8 rounded-full bg-black text-white hover:text-brandLight flex justify-center"
       >
         <svg
