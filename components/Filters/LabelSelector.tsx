@@ -72,7 +72,7 @@ const LabelSelectorModal = ({
   const validateButton = (
     <span
       onClick={() => setIsModalOpen(false)}
-      className="text-white bg-brand text-sm cursor-pointer p-1 rounded border-brand border opacity-80 hover:opacity-100"
+      className="text-sm text-white cursor-pointer px-3 py-1 rounded-md bg-purple-500 hover:bg-purple-600"
     >
       {"validate"}
     </span>
@@ -82,7 +82,7 @@ const LabelSelectorModal = ({
   const clearButton = (
     <Link
       href={buildUrlWithUpdatedParam("labels")}
-      className="text-brand text-sm mr-1 cursor-pointer p-1 rounded border-brand border opacity-40 hover:opacity-100"
+      className="text-sm text-gray-600 cursor-pointer px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-100 no-underline"
     >
       {"clear tags"}
     </Link>
@@ -126,7 +126,7 @@ const LabelSelectorModal = ({
       >
         {topCross}
         <div className="flex justify-start px-10 pb-6 flex-wrap">{pillList}</div>
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end items-center gap-2 p-4">
           {clearButton}
           {validateButton}
         </div>
