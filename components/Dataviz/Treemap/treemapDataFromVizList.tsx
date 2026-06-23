@@ -13,14 +13,12 @@ export const treemapDataFromVizList = (vizList: VizItem[]) => {
   // Count how many of each chart type I have (ex: stream: 23, sankey: 12...)
   let chartTypeCounts: { [key: string]: number } = {};
   vizList.forEach((vizItem, i) => {
-    vizItem.img.forEach((img) => {
-      img.chartId.forEach((chartId: string) => {
-        if (chartId in chartTypeCounts) {
-          chartTypeCounts[chartId] += 1;
-        } else {
-          chartTypeCounts[chartId] = 1;
-        }
-      });
+    vizItem.img.chartId.forEach((chartId: string) => {
+      if (chartId in chartTypeCounts) {
+        chartTypeCounts[chartId] += 1;
+      } else {
+        chartTypeCounts[chartId] = 1;
+      }
     });
   });
 

@@ -18,20 +18,14 @@ export const filterVizList = (
         }
       )
 
-      // Apply the chart type filter
-      // A project can have several associated images.
-      // Keep only the appropriate images
-      .reduce((acc: VizItem[], element) => {
+      // Apply the chart type filter: each entry has a single image, so keep the
+      // entry when its image is tagged with the selected chart type.
+      .filter((element) => {
         if (!selectedChartId) {
-          acc.push(element)
-        } else {
-          const images = element.img.filter(image => image.chartId.includes(selectedChartId))
-          if (images.length > 0) {
-            acc.push({ ...element, img: images })
-          }
+          return true
         }
-        return acc
-      }, [])
+        return element.img.chartId.includes(selectedChartId)
+      })
 
       .filter((vizItem) => {
         // No selected tool? Keep this item

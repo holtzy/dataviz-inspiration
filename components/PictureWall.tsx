@@ -8,7 +8,7 @@ import { Luminosity, Tool, VizItem, vizList } from "../util/viz-list";
 import { filterVizList } from "../util/filterVizList";
 import { ChartId } from "../util/sectionDescription";
 
-export type Project = { projectId: number; imgId: number };
+export type Project = { projectId: number };
 
 type MasonryCardProps = {
   index: number;
@@ -44,10 +44,9 @@ export const PictureWall = () => {
       <MasonryItem
         vizItem={data}
         onClick={() => {
-          setSelectedProject({ projectId: data.id, imgId: 0 });
+          setSelectedProject({ projectId: data.id });
           setIsModalOpen(true);
         }}
-        imgId={0}
       />
     );
   };

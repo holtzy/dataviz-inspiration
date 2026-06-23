@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { Project } from "../pages";
+import { Project } from "./PictureWall";
 import { vizList } from "../util/viz-list";
 import { VizItemModalContent } from "./VizItemModalContent";
 
@@ -19,7 +19,7 @@ export const VizItemModal = ({
   selectedProject,
   setSelectedProject,
 }: VizItemModalProps) => {
-  const { projectId, imgId } = selectedProject;
+  const { projectId } = selectedProject;
 
   const slideClass = isModalOpen ? "" : "-left-full";
 
@@ -36,7 +36,7 @@ export const VizItemModal = ({
         if (nextId >= projectNumber) {
           nextId = 0;
         }
-        setSelectedProject({ projectId: nextId, imgId: 0 });
+        setSelectedProject({ projectId: nextId });
       }
       // Left arrow
       if (event.keyCode == "37") {
@@ -44,7 +44,7 @@ export const VizItemModal = ({
         if (previousId < 0) {
           previousId = projectNumber - 1;
         }
-        setSelectedProject({ projectId: previousId, imgId: 0 });
+        setSelectedProject({ projectId: previousId });
       }
     },
     [projectId]
@@ -78,7 +78,6 @@ export const VizItemModal = ({
       <VizItemModalContent
         key={selectedProject.projectId}
         projectId={projectId}
-        imgId={imgId}
       />
 
       {/* Shortcuts */}

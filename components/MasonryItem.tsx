@@ -7,13 +7,11 @@ import { VizItem } from "../util/viz-list";
 type MasonryItemProps = {
   vizItem: VizItem;
   onClick: (arg: VizItem) => void;
-  imgId: number;
 };
 
 export const MasonryItem = ({
   vizItem,
   onClick,
-  imgId,
 }: MasonryItemProps) => {
   const month = vizItem.date.toLocaleString("default", { month: "long" });
   const year = vizItem.date.toLocaleString("default", { year: "numeric" });
@@ -24,7 +22,7 @@ export const MasonryItem = ({
       onClick={() => onClick(vizItem)}
     >
       <img
-        src={`/img/${vizItem.img[imgId].zoom}`}
+        src={`/img/${vizItem.img.zoom}`}
         className="rounded-md"
         alt={"Chart showing " + vizItem.title}
       />

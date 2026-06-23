@@ -14,7 +14,7 @@ import { filterVizList } from "../../util/filterVizList";
 import { VerticalSeparator } from "../../components/VerticalSeparator";
 import SectionLogo from "../../components/SectionLogo";
 
-export type Project = { projectId: number; imgId: number };
+export type Project = { projectId: number };
 
 export default function Page() {
   const pathname = usePathname();

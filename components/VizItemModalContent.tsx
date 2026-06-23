@@ -6,12 +6,10 @@ import { Pill } from "./Pill";
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
   projectId: number;
-  imgId: number;
 };
 
 export const VizItemModalContent = ({
   projectId,
-  imgId,
 }: VizItemModalContentProps) => {
   const vizItem = vizList.find((item) => item.id === projectId);
 
@@ -20,7 +18,7 @@ export const VizItemModalContent = ({
   }
 
   // Title and Pills showing the chart type
-  const chartPills = vizItem.img[imgId].chartId.map((id, i) => {
+  const chartPills = vizItem.img.chartId.map((id, i) => {
     return (
       <span key={i} className="mr-1 mb-1">
         <ChartIdPill chartId={id} />
@@ -115,7 +113,7 @@ export const VizItemModalContent = ({
       {toolSection}
       <br />
       <img
-        src={`/img/${vizItem.img[imgId].full}`}
+        src={`/img/${vizItem.img.full}`}
         alt={"Chart showing " + vizItem.title}
       />
       <br />
@@ -137,7 +135,7 @@ export const VizItemModalContent = ({
     >
       <div className="relative flex flex-col justify-center items-center h-full col-span-2">
         <img
-          src={`/img/${vizItem.img[imgId].full}`}
+          src={`/img/${vizItem.img.full}`}
           style={{ objectFit: "scale-down", width: "100%", height: "100%" }}
           alt={"Chart showing " + vizItem.title}
         />
