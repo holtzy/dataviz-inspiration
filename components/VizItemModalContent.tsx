@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { vizList } from "../util/viz-list";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";
@@ -6,10 +7,14 @@ import { Pill } from "./Pill";
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
   projectId: number;
+  onPrevious: () => void;
+  onNext: () => void;
 };
 
 export const VizItemModalContent = ({
   projectId,
+  onPrevious,
+  onNext,
 }: VizItemModalContentProps) => {
   const vizItem = vizList.find((item) => item.id === projectId);
 
@@ -96,6 +101,33 @@ export const VizItemModalContent = ({
     </>
   );
 
+  // Clickable prev/next arrows (mirror the keyboard arrows) shown below the image.
+  const navArrows = (
+    <div className="flex flex-col items-center mt-3">
+      <div className="flex justify-center items-center gap-8">
+        <button
+          type="button"
+          aria-label="Previous project"
+          onClick={onPrevious}
+          className="flex items-center justify-center h-9 w-9 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 hover:text-black"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          aria-label="Next project"
+          onClick={onNext}
+          className="flex items-center justify-center h-9 w-9 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 hover:text-black"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+      <span className="text-xs text-gray-400 font-light mt-2">
+        keyboard arrows work too
+      </span>
+    </div>
+  );
+
   const smallScreenLayout = (
     <div
       style={{
@@ -116,6 +148,7 @@ export const VizItemModalContent = ({
         src={`/img/${vizItem.img.full}`}
         alt={"Chart showing " + vizItem.title}
       />
+      {navArrows}
       <br />
       {contextDescription}
       <br />
@@ -139,6 +172,7 @@ export const VizItemModalContent = ({
           style={{ objectFit: "scale-down", width: "100%", height: "100%" }}
           alt={"Chart showing " + vizItem.title}
         />
+        {navArrows}
       </div>
 
       <div className="p-2 flex flex-col justify-center">

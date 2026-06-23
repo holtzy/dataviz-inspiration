@@ -24,32 +24,36 @@ export const VizItemModal = ({
 
   const slideClass = isModalOpen ? "" : "-left-full";
 
+  // Move by an offset within the currently-filtered wall (in display order), so we
+  // only ever land on items that actually exist on this page. Used by both the
+  // keyboard arrows and the on-screen arrow buttons below the image.
+  const goToOffset = useCallback(
+    (offset: number) => {
+      const count = orderedIds.length;
+      if (count === 0) {
+        return;
+      }
+      const currentIndex = orderedIds.indexOf(projectId);
+      const newIndex = (currentIndex + offset + count) % count;
+      setSelectedProject({ projectId: orderedIds[newIndex] });
+    },
+    [orderedIds, projectId, setSelectedProject]
+  );
+
   const keyboardCallback = useCallback(
     (event) => {
       if (event.key === "Escape") {
         closeModal();
         return;
       }
-      // Navigate within the currently-filtered wall (in display order), so the
-      // arrows only ever land on items that actually exist on this page.
-      const count = orderedIds.length;
-      if (count === 0) {
-        return;
-      }
-      const currentIndex = orderedIds.indexOf(projectId);
-
-      // Right arrow
       if (event.keyCode == "39") {
-        const nextIndex = (currentIndex + 1) % count;
-        setSelectedProject({ projectId: orderedIds[nextIndex] });
+        goToOffset(1); // Right arrow
       }
-      // Left arrow
       if (event.keyCode == "37") {
-        const previousIndex = (currentIndex - 1 + count) % count;
-        setSelectedProject({ projectId: orderedIds[previousIndex] });
+        goToOffset(-1); // Left arrow
       }
     },
-    [projectId, orderedIds, closeModal, setSelectedProject]
+    [goToOffset, closeModal]
   );
 
   useEffect(() => {
@@ -80,6 +84,8 @@ export const VizItemModal = ({
       <VizItemModalContent
         key={selectedProject.projectId}
         projectId={projectId}
+        onPrevious={() => goToOffset(-1)}
+        onNext={() => goToOffset(1)}
       />
 
       {/* Shortcuts */}
