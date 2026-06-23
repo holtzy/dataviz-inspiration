@@ -38,7 +38,7 @@ R, python, tableau, data wrapper, d3.js, react, excel, javascript, rawGraphs, il
   date: new Date(YYYY, M);   // M is 0-INDEXED (July = 6)
   author: string;
   url: string;
-  img: { full: string, zoom: string, chartId: ChartId[] }[];  // one project, possibly several images
+  img: { full: string, zoom: string, chartId: ChartId[] }[];  // ONE image per entry (see convention below)
   contextDescription: string;   // the WHY / story / background (HTML ok: <a> <i> <b> <br/>)
   chartDescription: string;     // the WHAT / HOW + personal take (1st person ok; HTML ok)
   tools?: { name: Tool, link?: string }[];   // or `undefined`
@@ -127,9 +127,22 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
 }
 ```
 
+## One entry per chart (IMPORTANT convention)
+**Each entry holds exactly ONE image.** The gallery only ever shows the first image of a
+project (`imgId={0}`), and a shared `chartDescription` becomes inaccurate when an entry bundles
+several different charts. So:
+- If a project (e.g. a dashboard, or an article with several figures) has **N distinct charts**,
+  create **N separate entries** — one image each — with the SAME shared fields (date, author,
+  url, contextDescription, tools) but a **per-chart** `chartDescription`, `luminosity`, `labels`,
+  and a **differentiated title**: `"<project title> — <short chart descriptor>"`
+  (e.g. "… — map", "… — barplot", "… — trends"). Each new entry gets its own `id` (max+1, +1, …).
+- If the project is really **one chart that just has multiple thumbnail crops / a light+dark
+  variant**, keep a SINGLE image and **merge the chart-type tags** into its `chartId[]`
+  (e.g. `chartId: ["line", "area"]`) rather than adding extra `img` objects.
+- Net: the `img` array should contain a single `{ full, zoom, chartId }` object.
+
 ## Notes / gotchas
 - The build ignores TS errors, so validate `chartId`/`tool` values by hand against the vocab.
 - Don't forget the trailing-comma fix on the previous last entry.
-- One entry can hold several images (e.g. a dashboard) — each image carries its own `chartId[]`.
 - `zoom` is the wall thumbnail; a tight, eye-catching crop of the viz works better than a
   shrunk full image.

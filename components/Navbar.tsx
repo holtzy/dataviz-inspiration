@@ -30,7 +30,12 @@ export default function Navbar() {
 
           {/* Related websites & About on the right */}
           <div className="flex items-center">
-            <Link href="/about">
+            <Link href="/" className="no-underline">
+              <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black">
+                All
+              </span>
+            </Link>
+            <Link href="/about" className="no-underline">
               <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black">
                 About
               </span>

@@ -72,21 +72,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 2,
-        title: "Covid 19 Dashboard - India",
+        title: "Covid 19 Dashboard - India — map",
         date: new Date(2021, 10),
         author: "Group of dedicated volunteers",
         url: "https://www.covid19india.org",
         img: [
             { full: "covid19India.png", zoom: "covid19India-zoom.png", chartId: ["map", "bubbleMap"] },
-            { full: "covid19India-bar.png", zoom: "covid19India-bar-zoom.png", chartId: ["barplot"] },
-            { full: "covid19India-line.png", zoom: "covid19India-line-zoom.png", chartId: ["line"] }
         ],
         contextDescription: "The covid crisis is a world wide pandemic and India is certainly not spared. Some volunteer decided to create a dashboard to help Indian politics to take information driven decisions.",
-        chartDescription: "A dashboard describing the spread of Covid 19 in India. Highly interactive with a pretty slick design. Dark mode support, many different types of viz with smooth transition between dataset.",
+        chartDescription: "The dashboard's overview: an interactive bubble map of India on a dark base map, where each circle marks a district sized by its case count. A search box lets you jump to any state or district. Slick dark-mode design with smooth transitions.",
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
-        luminosity: ["light", "dark"],
+        luminosity: ["dark"],
         interactive: true,
-        labels: ["interactive controls", "small multiples", "animation"]
+        labels: ["interactive controls", "animation", "tooltip"]
+    },
+    {
+        id: 322,
+        title: "Covid 19 Dashboard - India — barplot",
+        date: new Date(2021, 10),
+        author: "Group of dedicated volunteers",
+        url: "https://www.covid19india.org",
+        img: [
+            { full: "covid19India-bar.png", zoom: "covid19India-bar-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The covid crisis is a world wide pandemic and India is certainly not spared. Some volunteer decided to create a dashboard to help Indian politics to take information driven decisions.",
+        chartDescription: "The light-theme breakdown view: a sortable state-by-state table where horizontal bars encode the confirmed, active, recovered and deceased counts for each region, alongside a 'Spread' bar chart of the daily figures. Easy to rank states at a glance.",
+        tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["interactive controls", "comparison", "direct labeling"]
+    },
+    {
+        id: 323,
+        title: "Covid 19 Dashboard - India — trends",
+        date: new Date(2021, 10),
+        author: "Group of dedicated volunteers",
+        url: "https://www.covid19india.org",
+        img: [
+            { full: "covid19India-line.png", zoom: "covid19India-line-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "The covid crisis is a world wide pandemic and India is certainly not spared. Some volunteer decided to create a dashboard to help Indian politics to take information driven decisions.",
+        chartDescription: "Four headline metrics - confirmed, active, recovered and deceased - each paired with a colour-coded sparkline of its recent trend and the day's increment. The 'Active' card is highlighted in blue. A clean, scannable summary strip.",
+        tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "highlight", "color palette"]
     },
     {
         id: 3,
@@ -186,17 +216,67 @@ export const vizList: VizItem[] = [
     },
     {
         id: 10,
-        title: "Covid dashboard",
+        title: "Covid dashboard — small multiples",
         date: new Date(2021, 1),
         author: "Le Monde",
         url: "https://www.lemonde.fr/les-decodeurs/article/2020/05/05/coronavirus-age-mortalite-departements-pays-suivez-l-evolution-de-l-epidemie-en-cartes-et-graphiques_6038751_4355770.html",
-        img: [{ full: "covid-dash-lemonde-1.png", zoom: "covid-dash-lemonde-1.png", chartId: ["map"] }, { full: "covid-dash-lemonde-2.png", zoom: "covid-dash-lemonde-2-zoom.png", chartId: ["line"] }, { full: "covid-dash-lemonde-3.png", zoom: "covid-dash-lemonde-3-zoom.png", chartId: ["stream"] }, { full: "covid-dash-lemonde-4.png", zoom: "covid-dash-lemonde-4.png", chartId: ["line", "barplot"] }],
+        img: [
+            { full: "covid-dash-lemonde-1.png", zoom: "covid-dash-lemonde-1.png", chartId: ["map"] },
+        ],
         contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famous newspapers in France and does a pretty good job in its daily updated dashboard.",
-        chartDescription: "Several viz are provided, going from mirror area charts to streamcharts, with different kinds of map and several tables. Worth a read if you speak 🇫🇷.",
+        chartDescription: "A grid of small multiples, one tiny area chart per French department, each labeled with its name and code. The consistent small format lets readers scan and compare epidemic curves across all regions at a glance.",
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["small multiples", "interactive controls", "direct labeling"]
+        labels: ["small multiples", "direct labeling", "minimalist"]
+    },
+    {
+        id: 324,
+        title: "Covid dashboard — step line chart",
+        date: new Date(2021, 1),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2020/05/05/coronavirus-age-mortalite-departements-pays-suivez-l-evolution-de-l-epidemie-en-cartes-et-graphiques_6038751_4355770.html",
+        img: [
+            { full: "covid-dash-lemonde-2.png", zoom: "covid-dash-lemonde-2-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famous newspapers in France and does a pretty good job in its daily updated dashboard.",
+        chartDescription: "Two side-by-side step line charts comparing hospitalisation and critical-care admission rates per million for vaccinated, boosted, and unvaccinated people. End-of-line labels identify each series and highlighted phrases in the intro text emphasize the key multipliers.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["direct labeling", "comparison", "highlight", "annotation"]
+    },
+    {
+        id: 325,
+        title: "Covid dashboard — streamgraph",
+        date: new Date(2021, 1),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2020/05/05/coronavirus-age-mortalite-departements-pays-suivez-l-evolution-de-l-epidemie-en-cartes-et-graphiques_6038751_4355770.html",
+        img: [
+            { full: "covid-dash-lemonde-3.png", zoom: "covid-dash-lemonde-3-zoom.png", chartId: ["stream"] },
+        ],
+        contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famous newspapers in France and does a pretty good job in its daily updated dashboard.",
+        chartDescription: "A colorful streamgraph showing the distribution of daily Covid deaths across major world regions over time, using a 21-day rolling average. Inline labels sit directly on each flowing band, and a vivid color palette separates Brazil, the US, Europe, India, and Asia.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["color palette", "direct labeling", "flow & arrows"]
+    },
+    {
+        id: 326,
+        title: "Covid dashboard — area with line overlay",
+        date: new Date(2021, 1),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2020/05/05/coronavirus-age-mortalite-departements-pays-suivez-l-evolution-de-l-epidemie-en-cartes-et-graphiques_6038751_4355770.html",
+        img: [
+            { full: "covid-dash-lemonde-4.png", zoom: "covid-dash-lemonde-4.png", chartId: ["line", "barplot"] },
+        ],
+        contextDescription: "Covid is everywhere in the news and every newspaper is trying to summarize the situation in its country. Le Monde is one of the most famous newspapers in France and does a pretty good job in its daily updated dashboard.",
+        chartDescription: "A time series of daily critical-care admissions in France, with pale orange bars/area for raw daily values overlaid by a bold smoothed line trend. An annotated open circle and headline call out the latest value of 291 admissions.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["annotation", "highlight", "typography"]
     },
     {
         id: 11,
@@ -286,7 +366,7 @@ export const vizList: VizItem[] = [
         date: new Date(2012, 10),
         author: "Kiln",
         url: "https://www.shipmap.org",
-        img: [{ full: "shipmap.png", zoom: "shipmap-zoom.png", chartId: ["connection"] }, { full: "shipmap.png", zoom: "shipmap-2-zoom.png", chartId: ["connection"] }],
+        img: [{ full: "shipmap.png", zoom: "shipmap-zoom.png", chartId: ["connection"] }],
         contextDescription: "Shipmap.org is an interactive map of commercial shipping movements based on hundreds of millions of data points from throughout 2012. The project's aim is to highlight for a broad audience the extraordinary scale of modern commercial shipping, the routes these huge vessels take around the world, the geographic spread of different types of cargo boats, and the amount of carbon dioxide they produce.",
         chartDescription: "The unique base map shows ocean depth and major rivers, while the ships can be viewed as a high-resolution animation of movements over time (the 'ships' view) or as a plot showing all the positions at once (the 'routes' view), optionally colour-coded by ship type. A Talkie voiceover with music introduction sets the scene and provides an explanatory tour of the map.",
         tools: [{ name: "javascript" }],
@@ -338,17 +418,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 21,
-        title: "Rappers, Sorted by Size of Vocabulary",
+        title: "Rappers, Sorted by Size of Vocabulary — scatterplot",
         date: new Date(2019, 0),
         author: "Matthew Daniels",
         url: "https://pudding.cool/projects/vocabulary/index.html",
-        img: [{ full: "rapper-lyrics.png", zoom: "rapper-lyrics-zoom.png", chartId: ["scatter", "bubble", "circularPacking"] }, { full: "rapper-lyrics-2.png", zoom: "rapper-lyrics-2-zoom.png", chartId: ["histogram"] }],
+        img: [
+            { full: "rapper-lyrics.png", zoom: "rapper-lyrics-zoom.png", chartId: ["scatter", "bubble", "circularPacking"] },
+        ],
         contextDescription: "A projects that compares the number of unique words used by some of the most famous artists in hip hop using each artist’s first 35,000 lyrics. Jedi Mind Tricks used 6424 unique words, compared to DMX that counts 2936.",
-        chartDescription: "A 1 dimension scatterplot where the X axis shows the number of unique words and each item is an artist, represented by a circle and an avatar. The Y position is random, just using <a href='https://www.data-to-viz.com/caveat/boxplot.html>jittering</a> to avoid overlap.",
+        chartDescription: "A one-dimensional scatterplot positioning each artist along an X axis of unique words used. Each artist is a small circular avatar, with vertical jittering to avoid overlap and an outlier labeled on the right.",
         tools: [{ name: "javascript" }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["icons & pictograms", "interactive controls", "minimalist"]
+        labels: ["icons & pictograms", "minimalist", "annotation"]
+    },
+    {
+        id: 327,
+        title: "Rappers, Sorted by Size of Vocabulary — histogram",
+        date: new Date(2019, 0),
+        author: "Matthew Daniels",
+        url: "https://pudding.cool/projects/vocabulary/index.html",
+        img: [
+            { full: "rapper-lyrics-2.png", zoom: "rapper-lyrics-2-zoom.png", chartId: ["histogram"] },
+        ],
+        contextDescription: "A projects that compares the number of unique words used by some of the most famous artists in hip hop using each artist’s first 35,000 lyrics. Jedi Mind Tricks used 6424 unique words, compared to DMX that counts 2936.",
+        chartDescription: "Overlapping histograms comparing the distribution of unique-word counts across three music genres (Country, Rock, Hip Hop) using semi-transparent colored bars. Hip Hop spreads furthest to the right, showing larger vocabularies.",
+        tools: [{ name: "javascript" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["color palette", "direct labeling", "comparison"]
     },
     {
         id: 22,
@@ -410,7 +508,7 @@ export const vizList: VizItem[] = [
         date: new Date(2022, 1),
         author: "The New York Times",
         url: "https://www.nytimes.com/interactive/2022/world/europe/ukraine-maps.html",
-        img: [{ full: "rouble-tumbles-low.png", zoom: "rouble-tumbles-low-zoom.png", chartId: ["line"] }, { full: "rouble-tumbles-low.png", zoom: "rouble-tumbles-low-zoom-dark.png", chartId: ["line"] }],
+        img: [{ full: "rouble-tumbles-low.png", zoom: "rouble-tumbles-low-zoom.png", chartId: ["line"] }],
         contextDescription: "A good proportion of the world countries have applied heavy sanctions to Russia following the Ukraine invasion. As a result the Rouble value is quickly decreasing.",
         chartDescription: "A line chart of the Ruble / USD exchange rate evolution. Two things are interesting here. Annotations are very clear and truly make a difference in the chart quality. The Y scale is inverted which is usually a bad thing, but works well here.",
         luminosity: ["light", "dark"],
@@ -499,16 +597,33 @@ export const vizList: VizItem[] = [
     },
     {
         id: 33,
-        title: "Hong Kong and the Omicron variant",
+        title: "Hong Kong and the Omicron variant — stacked barplot",
         date: new Date(2022, 2),
         author: "the Financial Times",
         url: "https://www.scmp.com/infographics/article/1810040/infographic-world-languages",
-        img: [{ full: "hong-kong-omicron.png", zoom: "hong-kong-omicron-zoom.png", chartId: ["barplot"] }, { full: "hong-kong-omicron-2.png", zoom: "hong-kong-omicron-zoom-2.png", chartId: ["line"] }],
+        img: [
+            { full: "hong-kong-omicron.png", zoom: "hong-kong-omicron-zoom.png", chartId: ["barplot"] },
+        ],
         contextDescription: "Hong Kong’s vaccination rate has lagged far behind peer countries, especially among the most vulnerable. This article by the financial times goes deep into this matter and compares the situation with other countries.",
-        chartDescription: "Some timeseries line chart with clean on-graph legends and a set of 3 stacked bar chart clearly showing how Hong-Kong differs to other countries.",
+        chartDescription: "A set of three stacked bar charts comparing vaccination status by age group for Hong Kong, Singapore and New Zealand. Hong Kong's panel stands out with a large unvaccinated share among older age groups, while the peer panels are nearly fully vaccinated.",
         luminosity: ["light"],
         interactive: false,
-        labels: ["small multiples", "comparison", "direct labeling", "annotation"]
+        labels: ["small multiples", "comparison", "legend", "color palette"]
+    },
+    {
+        id: 328,
+        title: "Hong Kong and the Omicron variant — line chart",
+        date: new Date(2022, 2),
+        author: "the Financial Times",
+        url: "https://www.scmp.com/infographics/article/1810040/infographic-world-languages",
+        img: [
+            { full: "hong-kong-omicron-2.png", zoom: "hong-kong-omicron-zoom-2.png", chartId: ["line"] },
+        ],
+        contextDescription: "Hong Kong’s vaccination rate has lagged far behind peer countries, especially among the most vulnerable. This article by the financial times goes deep into this matter and compares the situation with other countries.",
+        chartDescription: "A multi-line time series of cumulative confirmed Covid-19 deaths per million people. Hong Kong's red line surges sharply at the end to overtake its Asia-Pacific peers and several European countries, with each line directly labeled at the right edge.",
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "highlight", "comparison", "color palette"]
     },
     {
         id: 34,
@@ -586,7 +701,7 @@ export const vizList: VizItem[] = [
         date: new Date(2021, 7),
         author: "The Economist",
         url: "https://www.r-graph-gallery.com/web-lineplots-and-area-chart-the-economist.html",
-        img: [{ full: "child-labour.png", zoom: "child-labour-zoom.png", chartId: ["line"] }, { full: "child-labour.png", zoom: "child-labour-zoom-2.png", chartId: ["area"] }],
+        img: [{ full: "child-labour.png", zoom: "child-labour-zoom.png", chartId: ["line", "area"] }],
         contextDescription: "A deep comparison of child labour across the globe.",
         chartDescription: "A line chart next to an area chart. Note that the first one is used for a percentage (does not make sense to add numbers up), when the second is used to a number where we are interested in the total number (stacking makes sense)",
         tools: [{ name: "R", link: "https://www.r-graph-gallery.com/web-lineplots-and-area-chart-the-economist.html" }, { name: "python", link: "https://python-graph-gallery.com/web-lineplots-and-area-chart-the-economist" }],
@@ -782,7 +897,7 @@ export const vizList: VizItem[] = [
         date: new Date(2020, 9),
         author: "Unknown",
         url: "https://analyticsindiamag.com/7-types-of-tableau-charts-graphs-to-make-your-data-visually-interactive/",
-        img: [{ full: "running-stats.png", zoom: "running-stats-zoom-1.png", chartId: ["line", "area"] }, { full: "running-stats.png", zoom: "running-stats-zoom-2.png", chartId: ["histogram"] }, { full: "running-stats.png", zoom: "running-stats-zoom-3.png", chartId: ["histogram"] }, { full: "running-stats.png", zoom: "running-stats-zoom-4.png", chartId: ["barplot"] }],
+        img: [{ full: "running-stats.png", zoom: "running-stats-zoom-1.png", chartId: ["line", "area", "histogram", "barplot"] }],
         contextDescription: "A few vizzes giving running stats. I do not have more details on the project, this is just a snapshot",
         chartDescription: "I don't know much about this project, but wanted to show it for its slick design. Be careful, the radial barchart is definitely not a good viz type.",
         tools: undefined,
@@ -820,17 +935,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 56,
-        title: "Art, Women posing and upvotes",
+        title: "Art, Women posing and upvotes — line chart",
         date: new Date(2021, 5),
         author: "Erin",
         url: "https://erdavis.com/2021/06/14/do-women-who-pose-with-their-art-on-reddit-get-more-upvotes/",
-        img: [{ full: "art-women-posing-1.png", zoom: "art-women-posing-zoom-1.png", chartId: ["line"] }, { full: "art-women-posing-2.png", zoom: "art-women-posing-zoom-2.png", chartId: ["density"] }],
+        img: [
+            { full: "art-women-posing-1.png", zoom: "art-women-posing-zoom-1.png", chartId: ["line"] },
+        ],
         contextDescription: "Do women who pose with their art on Reddit get more upvotes? Erin gathered reddit data on the topic to proove that yes, posing with your art helps getting upvoted, especially if you're a woman.",
-        chartDescription: "Erin's article is well written and vizzes are unusual and very well thought. A masterpiece of data analysis!",
+        chartDescription: "A line chart on a log-scaled x-axis showing the percent of posts that scored X upvotes or more, with three declining curves comparing female posers, male posers, and other arts/crafts posts. Key thresholds are directly labeled on each curve and annotations explain the gap between posers and non-posers.",
         tools: [{ name: "R", link: "https://erdavis.com/2021/06/14/do-women-who-pose-with-their-art-on-reddit-get-more-upvotes/" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["log scale", "annotation", "highlight"]
+        labels: ["log scale", "annotation", "direct labeling", "highlight"]
+    },
+    {
+        id: 329,
+        title: "Art, Women posing and upvotes — ridgeline density",
+        date: new Date(2021, 5),
+        author: "Erin",
+        url: "https://erdavis.com/2021/06/14/do-women-who-pose-with-their-art-on-reddit-get-more-upvotes/",
+        img: [
+            { full: "art-women-posing-2.png", zoom: "art-women-posing-zoom-2.png", chartId: ["density"] },
+        ],
+        contextDescription: "Do women who pose with their art on Reddit get more upvotes? Erin gathered reddit data on the topic to proove that yes, posing with your art helps getting upvoted, especially if you're a woman.",
+        chartDescription: "A small-multiples set of mirrored density distributions (a ridgeline-style back-to-back layout) showing upvote-ratio distributions for women (purple, up) versus men (green, down) across five post-score brackets. Median ratios are directly labeled on each distribution and side annotations narrate the trend.",
+        tools: [{ name: "R", link: "https://erdavis.com/2021/06/14/do-women-who-pose-with-their-art-on-reddit-get-more-upvotes/" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "annotation", "comparison"]
     },
     {
         id: 57,
@@ -848,34 +981,99 @@ export const vizList: VizItem[] = [
     },
     {
         id: 58,
-        title: "French presidential election",
+        title: "French presidential election — barplot",
         date: new Date(2022, 2),
         author: "Le Monde",
         url: "https://www.lemonde.fr/les-decodeurs/article/2022/02/22/presidentielle-2022-le-tableau-de-bord-des-parrainages-sondages-et-temps-de-parole_6114816_4355770.html",
-        img: [{ full: "french-presidential-election-1.png", zoom: "french-presidential-election-zoom-1.png", chartId: ["barplot"] }, { full: "french-presidential-election-2.png", zoom: "french-presidential-election-zoom-2.png", chartId: ["scatter"] }, { full: "french-presidential-election-3.png", zoom: "french-presidential-election-zoom-3.png", chartId: ["bubbleMap"] }],
+        img: [
+            { full: "french-presidential-election-1.png", zoom: "french-presidential-election-zoom-1.png", chartId: ["barplot"] },
+        ],
         contextDescription: "French presidential elections are happening soon. <i>Le Monde</i> wrote a in-depth article showing some of the candidate features: who talks the most on media, who's the richest, who has the best chances to win according to polls?",
-        chartDescription: "A data-based article with clean design. I mainly selected it for the clean horizontal barplots that can probably be used on other projects.",
+        chartDescription: "Clean horizontal barplot ranking presidential candidates by media speaking time, each bar colored by party and topped with a circular candidate portrait. Values are labeled directly at the end of each bar in hours and minutes.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
         labels: ["icons & pictograms", "direct labeling", "minimalist"]
     },
     {
+        id: 330,
+        title: "French presidential election — scatter plot",
+        date: new Date(2022, 2),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2022/02/22/presidentielle-2022-le-tableau-de-bord-des-parrainages-sondages-et-temps-de-parole_6114816_4355770.html",
+        img: [
+            { full: "french-presidential-election-2.png", zoom: "french-presidential-election-zoom-2.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "French presidential elections are happening soon. <i>Le Monde</i> wrote a in-depth article showing some of the candidate features: who talks the most on media, who's the richest, who has the best chances to win according to polls?",
+        chartDescription: "Scatter plot positioning each candidate by wealth (patrimoine) on the x-axis and income (revenus) on the y-axis, with reference lines marking the French median. Candidates are color-coded with a legend, and notable points are directly annotated.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["annotation", "legend", "color palette"]
+    },
+    {
+        id: 331,
+        title: "French presidential election — bubble map",
+        date: new Date(2022, 2),
+        author: "Le Monde",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2022/02/22/presidentielle-2022-le-tableau-de-bord-des-parrainages-sondages-et-temps-de-parole_6114816_4355770.html",
+        img: [
+            { full: "french-presidential-election-3.png", zoom: "french-presidential-election-zoom-3.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "French presidential elections are happening soon. <i>Le Monde</i> wrote a in-depth article showing some of the candidate features: who talks the most on media, who's the richest, who has the best chances to win according to polls?",
+        chartDescription: "Bubble map of France showing the number of mayoral endorsements (parrainages) a candidate received per department, with circle size encoding the count. A tooltip reveals details on hover for a selected department, and a thumbnail strip lets users switch between candidates.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["tooltip", "icons & pictograms", "interactive controls"]
+    },
+    {
         id: 59,
-        title: "The Spread of QAnon",
+        title: "The Spread of QAnon — streamchart",
         date: new Date(2022, 2),
         author: "Cédric Scherer",
         url: "https://cemas.io/en/publikationen/q-vadis-the-spread-of-qanon-in-the-german-speaking-world/CeMAS_Q_Vadis_The_Spread_of_QAnon_in_the_German-Speaking_World.pdf",
         img: [
             { full: "spread-of-qanon-1.png", zoom: "spread-of-qanon-zoom-1.png", chartId: ["stream"] },
-            { full: "spread-of-qanon-2.png", zoom: "spread-of-qanon-zoom-2.png", chartId: ["barplot"] },
-            { full: "spread-of-qanon-3.png", zoom: "spread-of-qanon-zoom-3.png", chartId: ["area"] }],
+        ],
         contextDescription: "The central piece of a study on the spread of QAnon in the german-speaking world. It shows the amount of QAnon related messages exchanged on Telegram.",
-        chartDescription: "A massive streamchart showing the raise of QAnon on private channels, with a spike next to the Storming of the Capitol. In the printed version this viz is folded in 4 parts.",
+        chartDescription: "A large streamchart tracing the volume of QAnon-related Telegram messages over time, with an orange flow at top and stacked brown bands below. Numerous annotations point to key moments such as the spike around the Storming of the Capitol.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
         labels: ["annotation", "color palette", "storytelling"]
+    },
+    {
+        id: 332,
+        title: "The Spread of QAnon — barplot",
+        date: new Date(2022, 2),
+        author: "Cédric Scherer",
+        url: "https://cemas.io/en/publikationen/q-vadis-the-spread-of-qanon-in-the-german-speaking-world/CeMAS_Q_Vadis_The_Spread_of_QAnon_in_the_German-Speaking_World.pdf",
+        img: [
+            { full: "spread-of-qanon-2.png", zoom: "spread-of-qanon-zoom-2.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The central piece of a study on the spread of QAnon in the german-speaking world. It shows the amount of QAnon related messages exchanged on Telegram.",
+        chartDescription: "A grouped bar chart comparing the number of QAnon-related posts in channels (orange) versus groups (grey) from 2018 to 2021, showing a dramatic year-over-year increase up to 8.3 million. Exact values are written directly above and below each bar.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "comparison", "typography", "color palette"]
+    },
+    {
+        id: 333,
+        title: "The Spread of QAnon — small multiples",
+        date: new Date(2022, 2),
+        author: "Cédric Scherer",
+        url: "https://cemas.io/en/publikationen/q-vadis-the-spread-of-qanon-in-the-german-speaking-world/CeMAS_Q_Vadis_The_Spread_of_QAnon_in_the_German-Speaking_World.pdf",
+        img: [
+            { full: "spread-of-qanon-3.png", zoom: "spread-of-qanon-zoom-3.png", chartId: ["area"] },
+        ],
+        contextDescription: "The central piece of a study on the spread of QAnon in the german-speaking world. It shows the amount of QAnon related messages exchanged on Telegram.",
+        chartDescription: "Three area charts shown as small multiples, each tracking membership over time for one of the largest QAnon groups. The first panel (Donald J. Trump = Q Family) towers above the others, peaking near 60,000 members in early 2021.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "comparison", "color palette"]
     },
     {
         id: 60,
@@ -893,39 +1091,99 @@ export const vizList: VizItem[] = [
     },
     {
         id: 61,
-        title: "Airports and world's megacities",
+        title: "Airports and world's megacities — flight connection map",
         date: new Date(2018, 6),
         author: "The Pudding",
         url: "https://pudding.cool/2018/07/airports/",
         img: [
             { full: "airport-world-megacities-1.png", zoom: "airport-world-megacities-zoom-1.png", chartId: ["connection"] },
-            { full: "airport-world-megacities-2.png", zoom: "airport-world-megacities-zoom-2.png", chartId: ["barplot"] },
-            { full: "airport-world-megacities-3.png", zoom: "airport-world-megacities-zoom-3.png", chartId: ["connectedScatter"] },
-            { full: "airport-world-megacities-4.png", zoom: "airport-world-megacities-zoom-4.png", chartId: ["scatter"] }
         ],
         contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article tries to explain it.",
-        chartDescription: "A set of charts following the same design, spread around a well-written article. I really like the mirror barplot and the clear annotations that make the vizs very insightful.",
+        chartDescription: "A world map drawing curved flight-connection lines departing from cities, contrasting Paris (927 daily flights) with Kinshasa (only 13) despite both being 13-million megacities. Annotations and curved arrows guide the eye to the key cities.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: false,
-        labels: ["flow & arrows", "annotation", "small multiples"]
+        labels: ["flow & arrows", "annotation", "direct labeling"]
+    },
+    {
+        id: 334,
+        title: "Airports and world's megacities — mirror barplot",
+        date: new Date(2018, 6),
+        author: "The Pudding",
+        url: "https://pudding.cool/2018/07/airports/",
+        img: [
+            { full: "airport-world-megacities-2.png", zoom: "airport-world-megacities-zoom-2.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article tries to explain it.",
+        chartDescription: "A back-to-back (mirror) bar chart with population bars extending left and flights-per-day bars extending right for each city, sorted by population. An annotation highlights African megacities like Lagos and Kinshasa that lag in flights.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["comparison", "annotation", "direct labeling"]
+    },
+    {
+        id: 335,
+        title: "Airports and world's megacities — connected scatter",
+        date: new Date(2018, 6),
+        author: "The Pudding",
+        url: "https://pudding.cool/2018/07/airports/",
+        img: [
+            { full: "airport-world-megacities-3.png", zoom: "airport-world-megacities-zoom-3.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article tries to explain it.",
+        chartDescription: "A connected scatterplot of population versus flights per day, with colored arrows tracing each selected city's trajectory from 2003 to 2018. A dashed reference line marks the 10-million-people threshold.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["color palette", "annotation", "direct labeling"]
+    },
+    {
+        id: 336,
+        title: "Airports and world's megacities — scatterplot",
+        date: new Date(2018, 6),
+        author: "The Pudding",
+        url: "https://pudding.cool/2018/07/airports/",
+        img: [
+            { full: "airport-world-megacities-4.png", zoom: "airport-world-megacities-zoom-4.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "Biggest cities tend to have more departing flights per day. But some cities don't follow the trend. This data-based article tries to explain it.",
+        chartDescription: "A scatterplot of population versus flights per day where each dot is a city, colored to distinguish current megacities, probable 2030 megacities, and other 10-million-plus cities. Many points are directly labeled with city names.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["color palette", "direct labeling", "annotation"]
     },
     {
         id: 62,
-        title: "Eating alone",
+        title: "Eating alone — scatter with trend",
         date: new Date(2017, 6),
         author: "The Pudding",
         url: "https://pudding.cool/2017/07/eating-alone/",
         img: [
             { full: "eating-alone-1.png", zoom: "eating-alone-zoom-1.png", chartId: ["scatter", "line"] },
-            { full: "eating-alone-2.png", zoom: "eating-alone-zoom-2.png", chartId: ["lollipop"] }
         ],
         contextDescription: "An exploration of the dining habits and companions of Americans.",
-        chartDescription: "A nicely animate scatterplot with linear trend. The page uses scrollytelling, progressively adding features to the chart as the story goes.",
+        chartDescription: "A scatterplot of the percent of meals eaten alone against age, with two color-coded series (2003 and 2015) overlaid with smoothed trend curves and labeled directly at the line ends.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["scrollytelling", "direct labeling", "animation"]
+        labels: ["direct labeling", "color palette", "comparison"]
+    },
+    {
+        id: 337,
+        title: "Eating alone — arrow change chart",
+        date: new Date(2017, 6),
+        author: "The Pudding",
+        url: "https://pudding.cool/2017/07/eating-alone/",
+        img: [
+            { full: "eating-alone-2.png", zoom: "eating-alone-zoom-2.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "An exploration of the dining habits and companions of Americans.",
+        chartDescription: "An arrow chart split into two age-group panels, where each row uses a directional arrow from 2003 to 2015 to show how the share of meals spent with each companion type shifted, with diamonds marking changes under 0.5%.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "flow & arrows", "small multiples", "comparison"]
     },
     {
         id: 63,
@@ -945,38 +1203,83 @@ export const vizList: VizItem[] = [
     },
     {
         id: 64,
-        title: "What is Congress tweeting about?",
+        title: "What is Congress tweeting about? — barplot",
         date: new Date(2020, 7),
         author: "The Pudding",
         url: "https://congress.pudding.cool",
         img: [
             { full: "congress-tweeting-1.png", zoom: "congress-tweeting-zoom-1.png", chartId: ["barplot", "treemap"] },
+        ],
+        contextDescription: "An article describing the topics that dominate members of Congress public discourse.",
+        chartDescription: "A horizontal ranked bar chart on a dark background showing the share of tweets per topic (Health, Military, Education, etc.), with each bar labeled by its percentage and topic name in a matching color. Two thin stacked bars below compare this month versus last month.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["color palette", "direct labeling", "comparison"]
+    },
+    {
+        id: 338,
+        title: "What is Congress tweeting about? — area chart",
+        date: new Date(2020, 7),
+        author: "The Pudding",
+        url: "https://congress.pudding.cool",
+        img: [
             { full: "congress-tweeting-2.png", zoom: "congress-tweeting-zoom-2.png", chartId: ["area", "line"] },
+        ],
+        contextDescription: "An article describing the topics that dominate members of Congress public discourse.",
+        chartDescription: "A filled area/line chart on a dark background tracking the volume of tweets over a full year, with a subtle gradient fill under a green line and a date axis along the bottom.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["color palette", "gradient", "direct labeling"]
+    },
+    {
+        id: 339,
+        title: "What is Congress tweeting about? — tile grid map",
+        date: new Date(2020, 7),
+        author: "The Pudding",
+        url: "https://congress.pudding.cool",
+        img: [
             { full: "congress-tweeting-3.png", zoom: "congress-tweeting-zoom-3.png", chartId: ["hexbin", "map"] },
         ],
         contextDescription: "An article describing the topics that dominate members of Congress public discourse.",
-        chartDescription: "A complete app with various chart types showing different features of the dataset. Nice design and consistent styling and palettes among charts.",
+        chartDescription: "A tile grid map of the US states, each state shown as an equal-sized square labeled with its abbreviation and shaded in a gold color scale to encode a value. The geographic-style layout flattens states into a uniform grid.",
         tools: undefined,
-        luminosity: ["light"],
+        luminosity: ["dark"],
         interactive: false,
-        labels: ["color palette", "direct labeling", "small multiples"]
+        labels: ["color palette", "direct labeling", "gradient"]
     },
     {
         id: 65,
-        title: "Switching between phone brands",
+        title: "Switching between phone brands — partial chord build-up",
         date: new Date(2014, 11),
         author: "Nadieh Bremer",
         url: "https://nbremer.github.io/Chord-Diagram-Storytelling/",
         img: [
             { full: "switching-phone-1.png", zoom: "switching-phone-zoom-1.png", chartId: ["chordDiagram"] },
-            { full: "switching-phone-2.png", zoom: "switching-phone-zoom-2.png", chartId: ["chordDiagram"] },
         ],
         contextDescription: "A study asked 2000 residents of the Netherlands about their mobile phone behavior. The respondents gave information about the brand of their current main phone, and the brand of their previous main phone, and their answers are visualized in this data story.",
-        chartDescription: "Probably the best chord diagram example I know so far. The project incrementally add each part of the final figure to explain how it works.",
+        chartDescription: "An early storytelling step of a chord diagram, where only a subset of ribbons is drawn so the reader can follow the flows out of a single brand before the full picture appears. The phone brands are arranged around the circle with a colored arc per brand.",
         tools: [{ name: "d3.js", link: "https://github.com/nbremer/Chord-Diagram-Storytelling" }],
         luminosity: ["light"],
         interactive: true,
         labels: ["radial", "storytelling", "color palette"]
+    },
+    {
+        id: 340,
+        title: "Switching between phone brands — full chord diagram",
+        date: new Date(2014, 11),
+        author: "Nadieh Bremer",
+        url: "https://nbremer.github.io/Chord-Diagram-Storytelling/",
+        img: [
+            { full: "switching-phone-2.png", zoom: "switching-phone-zoom-2.png", chartId: ["chordDiagram"] },
+        ],
+        contextDescription: "A study asked 2000 residents of the Netherlands about their mobile phone behavior. The respondents gave information about the brand of their current main phone, and the brand of their previous main phone, and their answers are visualized in this data story.",
+        chartDescription: "The complete chord diagram showing flows of respondents switching between mobile phone brands, with every ribbon drawn at once. Each brand occupies a colored arc around the circle and the ribbon thickness encodes the volume of switching between brand pairs.",
+        tools: [{ name: "d3.js", link: "https://github.com/nbremer/Chord-Diagram-Storytelling" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["radial", "color palette", "direct labeling"]
     },
     {
         id: 66,
@@ -1017,8 +1320,7 @@ export const vizList: VizItem[] = [
         author: "Nadieh Bremer",
         url: "https://www.visualcinnamon.com/portfolio/lighthouse-reports-frontex/",
         img: [
-            { full: "frontex-deportation-1.png", zoom: "frontex-deportation-zoom-1.png", chartId: ["connection"] },
-            { full: "frontex-deportation-1.png", zoom: "frontex-deportation-zoom-2.png", chartId: ["area"] },
+            { full: "frontex-deportation-1.png", zoom: "frontex-deportation-zoom-1.png", chartId: ["connection", "area"] },
         ],
         contextDescription: "Frontex is the EU coast and border agency. It is in charge of organizing the flights that send deportees back home. This viz shows this sad flow on the globe.",
         chartDescription: "The static version already does a great job at showing the flow thanks to subtle color gradients and icons. But the <a href='https://vimeo.com/351673775'>video</a> is definitely worth a look to, as it depict the acceleration of the process in another way.",
@@ -1029,21 +1331,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 69,
-        title: "Shareholder Report",
+        title: "Shareholder Report — sankey",
         date: new Date(2019, 1),
         author: "Nadieh Bremer",
         url: "https://www.visualcinnamon.com/portfolio/adyen-report-2019/",
         img: [
             { full: "shareholder-report-1.png", zoom: "shareholder-report-zoom-1.png", chartId: ["sankey"] },
-            { full: "shareholder-report-2.png", zoom: "shareholder-report-zoom-2.png", chartId: ["treemap"] },
-            { full: "shareholder-report-3.png", zoom: "shareholder-report-zoom-3.png", chartId: ["waffle"] },
         ],
         contextDescription: "Some figures for a shareholder letter & annual report. Four extensive visuals about the income statement, costs, regional and FTE growth.",
-        chartDescription: "Several chart types following the same design guidelines: sankey, treemap and waffle. I really like that they each have their own personal touch: sankey start with a gradient, treemap and waffle items have a 45° rotation.",
+        chartDescription: "A vertical sankey diagram of an income statement, flowing from revenue sources down through costs and net revenue to total comprehensive income. Flows start with a soft green-to-white gradient and key nodes are directly labelled with figures.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["gradient", "color palette", "flow & arrows"]
+        labels: ["flow & arrows", "gradient", "direct labeling", "color palette"]
+    },
+    {
+        id: 341,
+        title: "Shareholder Report — treemap",
+        date: new Date(2019, 1),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/adyen-report-2019/",
+        img: [
+            { full: "shareholder-report-2.png", zoom: "shareholder-report-zoom-2.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "Some figures for a shareholder letter & annual report. Four extensive visuals about the income statement, costs, regional and FTE growth.",
+        chartDescription: "A treemap breaking down total costs, with rectangles rotated 45 degrees and a hatched texture on selected cells. A secondary detail treemap expands the 'Other operating expenses' category, with labels set directly along the tilted edges.",
+        tools: [{ name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["texture", "direct labeling", "color palette", "comparison"]
+    },
+    {
+        id: 342,
+        title: "Shareholder Report — waffle",
+        date: new Date(2019, 1),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/adyen-report-2019/",
+        img: [
+            { full: "shareholder-report-3.png", zoom: "shareholder-report-zoom-3.png", chartId: ["waffle"] },
+        ],
+        contextDescription: "Some figures for a shareholder letter & annual report. Four extensive visuals about the income statement, costs, regional and FTE growth.",
+        chartDescription: "Small-multiple waffle charts comparing the number of employees per city between 2017 and 2018, with each office shown as a 45-degree rotated diamond unit. Cities are sorted by size with before/after counts labelled directly under each grid.",
+        tools: [{ name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "comparison", "color palette"]
     },
     {
         id: 70,
@@ -1063,21 +1395,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 71,
-        title: "Bussed out",
+        title: "Bussed out — flow diagram",
         date: new Date(2017, 11),
         author: "Nadieh Bremer",
         url: "https://www.visualcinnamon.com/portfolio/bussed-out/",
         img: [
             { full: "bussed-out-1.png", zoom: "bussed-out-zoom-1.png", chartId: ["density"] },
-            { full: "bussed-out-2.png", zoom: "bussed-out-zoom-2.png", chartId: ["bubbleMap"] },
-            { full: "bussed-out-3.png", zoom: "bussed-out-zoom-3.png", chartId: ["arc"] },
         ],
         contextDescription: "Each year, US cities give thousands of homeless people one-way bus tickets out of town. An 18-month nationwide investigation by the Guardian reveals, for the first time, what really happens at journey’s end.",
-        chartDescription: "A master piece of scrollytelling feature a wide range of viz types. I am a big fan of the vertical density chart with this flow diagram on the left, beautiful.",
+        chartDescription: "A flow diagram showing bus ticket recipients fanning out from a single origin city, with red strands rising to higher-income destinations (12%) and blue strands descending to lower-income ones (88%), paired with a vertical density curve on the right.",
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["flow & arrows", "annotation", "scrollytelling", "highlight"]
+        labels: ["flow & arrows", "annotation", "direct labeling", "color palette"]
+    },
+    {
+        id: 343,
+        title: "Bussed out — bubble map",
+        date: new Date(2017, 11),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/bussed-out/",
+        img: [
+            { full: "bussed-out-2.png", zoom: "bussed-out-zoom-2.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "Each year, US cities give thousands of homeless people one-way bus tickets out of town. An 18-month nationwide investigation by the Guardian reveals, for the first time, what really happens at journey’s end.",
+        chartDescription: "A bubble map of the mainland US where blue circles sized by number of homeless arrivals mark destination cities, beneath which a barplot timeline tracks 21,400 relocation journeys from 2011 to 2017.",
+        tools: [{ name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["legend", "color palette", "annotation"]
+    },
+    {
+        id: 344,
+        title: "Bussed out — arc diagram",
+        date: new Date(2017, 11),
+        author: "Nadieh Bremer",
+        url: "https://www.visualcinnamon.com/portfolio/bussed-out/",
+        img: [
+            { full: "bussed-out-3.png", zoom: "bussed-out-zoom-3.png", chartId: ["arc"] },
+        ],
+        contextDescription: "Each year, US cities give thousands of homeless people one-way bus tickets out of town. An 18-month nationwide investigation by the Guardian reveals, for the first time, what really happens at journey’s end.",
+        chartDescription: "An arc diagram of homeless relocations flown abroad from New York City, with translucent arcs spanning to destination dots along the baseline; the tallest arc highlights the longest journey to Wellington, New Zealand.",
+        tools: [{ name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["flow & arrows", "annotation", "direct labeling", "highlight"]
     },
     {
         id: 72,
@@ -1209,21 +1571,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 80,
-        title: "Genome collection",
+        title: "Genome collection — radial dendrogram",
         date: new Date(2021, 6),
         author: "Maarten Lambrechts",
         url: "https://www.maartenlambrechts.com/2021/07/02/visualizing-a-genome-collection-with-cactustrees.html",
         img: [
             { full: "genome-collection-1.png", zoom: "genome-collection-zoom-1.png", chartId: ["dendrogram"] },
-            { full: "genome-collection-2.png", zoom: "genome-collection-zoom-2.png", chartId: ["network"] },
-            { full: "genome-collection-3.png", zoom: "genome-collection-zoom-3.png", chartId: ["edgeBundling", "network"] },
         ],
         contextDescription: "How do you visualize a genome collection of more than 44.000 soil microbes? A project that takes gene sequences of different kinds of soil organisms, and tries to find species and specimens that are biologically active against crop pests.",
-        chartDescription: "This final piece of this project is a <a href='http://ceur-ws.org/Vol-1947/paper05.pdf'>Cactus Trees</a> visualization, a kind I did not know until today. The author explains the full process leading there, an interesting read and some unconventional shapes.",
+        chartDescription: "A circular dendrogram with thousands of tips arranged around the perimeter, where branches fan out from the center. Selected clades are highlighted with distinct color gradients (green, orange, red, blue) while the rest of the tree stays in neutral grey.",
         tools: [{ name: "R", link: undefined }, { name: "d3.js", link: undefined }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["color palette", "minimalist"]
+        labels: ["radial", "highlight", "color palette", "gradient"]
+    },
+    {
+        id: 345,
+        title: "Genome collection — network",
+        date: new Date(2021, 6),
+        author: "Maarten Lambrechts",
+        url: "https://www.maartenlambrechts.com/2021/07/02/visualizing-a-genome-collection-with-cactustrees.html",
+        img: [
+            { full: "genome-collection-2.png", zoom: "genome-collection-zoom-2.png", chartId: ["network"] },
+        ],
+        contextDescription: "How do you visualize a genome collection of more than 44.000 soil microbes? A project that takes gene sequences of different kinds of soil organisms, and tries to find species and specimens that are biologically active against crop pests.",
+        chartDescription: "A node-link network where dense clusters of small nodes are grouped and colored by bacterial phylum, connected by thin grey edges. A legend at the bottom maps each color to its phylum category.",
+        tools: [{ name: "R", link: undefined }, { name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "legend", "minimalist"]
+    },
+    {
+        id: 346,
+        title: "Genome collection — cactus tree",
+        date: new Date(2021, 6),
+        author: "Maarten Lambrechts",
+        url: "https://www.maartenlambrechts.com/2021/07/02/visualizing-a-genome-collection-with-cactustrees.html",
+        img: [
+            { full: "genome-collection-3.png", zoom: "genome-collection-zoom-3.png", chartId: ["edgeBundling", "network"] },
+        ],
+        contextDescription: "How do you visualize a genome collection of more than 44.000 soil microbes? A project that takes gene sequences of different kinds of soil organisms, and tries to find species and specimens that are biologically active against crop pests.",
+        chartDescription: "A Cactus Trees visualization with organic branching arms ending in white fanned spray shapes, dotted with small colored points along the curving stems. The grey-on-white rendering gives an unconventional, plant-like organic form.",
+        tools: [{ name: "R", link: undefined }, { name: "d3.js", link: undefined }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["minimalist", "color palette", "shape morphism"]
     },
     {
         id: 81,
@@ -1291,20 +1683,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 85,
-        title: "EU Regions",
+        title: "EU Regions — choropleth map",
         date: new Date(2019, 3),
         author: "Maarten Lambrechts",
         url: "https://pudding.cool/2019/04/eu-regions/",
         img: [
             { full: "eu-regions-1.png", zoom: "eu-regions-zoom-1.png", chartId: ["map", "choropleth"] },
-            { full: "eu-regions-2.png", zoom: "eu-regions-zoom-2.png", chartId: ["lollipop", "scatter"] },
         ],
         contextDescription: "A in-depth analysis of the european regions. It tries to explain why Budapest, Warsaw, and Lithuania split themselves in two.",
-        chartDescription: "The choropleth map presented in this scrolltelling article is very clean, and so are the animations telling the story. Definitely worth checking the whole <a href='https://pudding.cool/2019/04/eu-regions/'>interactive project</a>, at least for the choropleth to lollipop transition.",
+        chartDescription: "A clean choropleth map of the EU where each country is filled along a pink-to-green diverging scale representing economic development, from less developed to more developed. A horizontal gradient legend sits at the top.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["scrollytelling", "small multiples", "color palette", "animation"]
+        labels: ["color palette", "bivariate coloring", "legend", "gradient"]
+    },
+    {
+        id: 347,
+        title: "EU Regions — dot plot",
+        date: new Date(2019, 3),
+        author: "Maarten Lambrechts",
+        url: "https://pudding.cool/2019/04/eu-regions/",
+        img: [
+            { full: "eu-regions-2.png", zoom: "eu-regions-zoom-2.png", chartId: ["lollipop", "scatter"] },
+        ],
+        contextDescription: "A in-depth analysis of the european regions. It tries to explain why Budapest, Warsaw, and Lithuania split themselves in two.",
+        chartDescription: "A country-by-country dot plot where each row shows individual regions as dots positioned along an economic development axis, colored on the same pink-to-green diverging scale. Country flags label each row and a black 'average' line marks the reference point.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "direct labeling", "icons & pictograms", "comparison"]
     },
     {
         id: 86,
@@ -1372,59 +1779,179 @@ export const vizList: VizItem[] = [
     },
     {
         id: 90,
-        title: "Mortality and mental disorders",
+        title: "Mortality and mental disorders — line charts",
         date: new Date(2018, 3),
         author: "Yan Holtz",
         url: "https://holtzy.github.io/Mortality/",
         img: [
             { full: "mortality-and-mental-disorders-1.png", zoom: "mortality-and-mental-disorders-zoom-1.png", chartId: ["line"] },
-            { full: "mortality-and-mental-disorders-2.png", zoom: "mortality-and-mental-disorders-zoom-2.png", chartId: ["lollipop"] },
-            { full: "mortality-and-mental-disorders-3.png", zoom: "mortality-and-mental-disorders-zoom-3.png", chartId: ["barplot"] },
         ],
         contextDescription: "An interactive webpage that goes along with a <a href='https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32316-5/fulltext'>scientific publication</a>. The goal was to study the links between mortality rates and mental disorders.",
-        chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
+        chartDescription: "A small-multiples grid of line charts plotting mortality rate against age on a logarithmic y-axis, comparing people with versus without mental disorders (solid vs dashed lines). The right column shows mortality rate ratios with shaded confidence bands.",
         tools: [{ name: "d3.js", link: "https://github.com/holtzy/Mortality" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["log scale", "uncertainty", "small multiples", "direct labeling"]
+        labels: ["log scale", "small multiples", "uncertainty", "direct labeling"]
+    },
+    {
+        id: 348,
+        title: "Mortality and mental disorders — dot plot",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            { full: "mortality-and-mental-disorders-2.png", zoom: "mortality-and-mental-disorders-zoom-2.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "An interactive webpage that goes along with a <a href='https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32316-5/fulltext'>scientific publication</a>. The goal was to study the links between mortality rates and mental disorders.",
+        chartDescription: "A dot plot showing mortality rate ratios per cause of death, with separate teal and red dots for males and females and horizontal lines for confidence intervals. A dashed reference line marks MRR = 1.",
+        tools: [{ name: "d3.js", link: "https://github.com/holtzy/Mortality" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "uncertainty", "legend", "annotation"]
+    },
+    {
+        id: 349,
+        title: "Mortality and mental disorders — barplots",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            { full: "mortality-and-mental-disorders-3.png", zoom: "mortality-and-mental-disorders-zoom-3.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "An interactive webpage that goes along with a <a href='https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32316-5/fulltext'>scientific publication</a>. The goal was to study the links between mortality rates and mental disorders.",
+        chartDescription: "A horizontal stacked bar chart of life years lost per disorder, split into natural and unnatural causes, paired with a vertical bar chart breaking down life years lost by detailed cause of death. Radio buttons let the user toggle between males and females.",
+        tools: [{ name: "d3.js", link: "https://github.com/holtzy/Mortality" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["interactive controls", "direct labeling", "color palette", "comparison"]
     },
     {
         id: 91,
-        title: "The World Mental Health Survey",
+        title: "The World Mental Health Survey — heatmap",
         date: new Date(2018, 3),
         author: "Yan Holtz",
         url: "https://holtzy.github.io/Mortality/",
         img: [
             { full: "world-mental-health-survey-1.png", zoom: "world-mental-health-survey-zoom-1.png", chartId: ["heatmap"] },
-            { full: "world-mental-health-survey-2.png", zoom: "world-mental-health-survey-zoom-2.png", chartId: ["barplot"] },
-            { full: "world-mental-health-survey-3.png", zoom: "world-mental-health-survey-zoom-3.png", chartId: ["sankey"] },
-            { full: "world-mental-health-survey-4.png", zoom: "world-mental-health-survey-zoom-4.png", chartId: ["line"] },
         ],
         contextDescription: "A set of data visualization on comorbidity between mental disorders. This is a webpage that goes along this scientific publication, allowing readers to explore the data themselves.",
-        chartDescription: "The webpage includes several chart types, all with buttons allowing to control what part of the dataset is displayed. It is a mix between a data storytelling and a data exploration tool.",
+        chartDescription: "A large symmetric correlation matrix where each cell is colored on a viridis-to-magma gradient to encode the strength of comorbidity between pairs of mental disorders. Row and column labels are color-coded by disorder family.",
         tools: [{ name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["small multiples", "flow & arrows", "color palette"]
+        labels: ["color palette", "gradient", "typography"]
+    },
+    {
+        id: 350,
+        title: "The World Mental Health Survey — barplot",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            { full: "world-mental-health-survey-2.png", zoom: "world-mental-health-survey-zoom-2.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "A set of data visualization on comorbidity between mental disorders. This is a webpage that goes along this scientific publication, allowing readers to explore the data themselves.",
+        chartDescription: "A diverging bar chart for Alcohol dependence showing hazard ratios with other disorders as a prior disorder (left) and as a later disorder (right). Bars are colored by disorder family with labels centered between the two panels.",
+        tools: [{ name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "color palette", "direct labeling"]
+    },
+    {
+        id: 351,
+        title: "The World Mental Health Survey — sankey",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            { full: "world-mental-health-survey-3.png", zoom: "world-mental-health-survey-zoom-3.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "A set of data visualization on comorbidity between mental disorders. This is a webpage that goes along this scientific publication, allowing readers to explore the data themselves.",
+        chartDescription: "A Sankey diagram visualizing flows from a few prior disorders on the left to a long list of later disorders on the right, with one highlighted flow (depressive episode) emphasized in red. Explanatory text accompanies the diagram on the left.",
+        tools: [{ name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["flow & arrows", "highlight", "storytelling"]
+    },
+    {
+        id: 352,
+        title: "The World Mental Health Survey — small multiples",
+        date: new Date(2018, 3),
+        author: "Yan Holtz",
+        url: "https://holtzy.github.io/Mortality/",
+        img: [
+            { full: "world-mental-health-survey-4.png", zoom: "world-mental-health-survey-zoom-4.png", chartId: ["line"] },
+        ],
+        contextDescription: "A set of data visualization on comorbidity between mental disorders. This is a webpage that goes along this scientific publication, allowing readers to explore the data themselves.",
+        chartDescription: "A grid of small multiple line charts, one per disorder, each plotting hazard ratio (log scale) against time after onset. Panel titles are color-coded by disorder family and most curves decline over time.",
+        tools: [{ name: "d3.js", link: "https://github.com/holtzy/Como-in-World-Heath-Survey" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "log scale", "color palette"]
     },
     {
         id: 92,
-        title: "End of the Covid-19 pandemic",
+        title: "End of the Covid-19 pandemic — scatter plot",
         date: new Date(2020, 3),
         author: "Mc Kinsey",
         url: "https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/when-will-the-covid-19-pandemic-end",
         img: [
             { full: "end-of-covid-pandemic-1.png", zoom: "end-of-covid-pandemic-zoom-1.png", chartId: ["scatter"] },
-            { full: "end-of-covid-pandemic-2.png", zoom: "end-of-covid-pandemic-zoom-2.png", chartId: ["line"] },
-            { full: "end-of-covid-pandemic-3.png", zoom: "end-of-covid-pandemic-zoom-3.png", chartId: ["heatmap"] },
-            { full: "end-of-covid-pandemic-4.png", zoom: "end-of-covid-pandemic-zoom-4.png", chartId: ["barplot"] },
         ],
         contextDescription: "Mc Kinsey regularly post updates on the covid situation, especially concerning future potential trends. Luckily this report is full of nice visuals.",
-        chartDescription: "It's great to see such a variety of vizzes in a business report. They are very epurated and all follow the same style guideline which make them worth sharing here.",
+        chartDescription: "A scatter plot on a logarithmic fatality-rate axis comparing infectiousness and lethality of diseases, with named circles for individual diseases and colored rounded rectangles showing estimated ranges for SARS-CoV-2 variants (Omicron, Delta, Alpha, ancestral strain).",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["log scale", "legend", "direct labeling", "minimalist"]
+        labels: ["log scale", "legend", "direct labeling", "color palette"]
+    },
+    {
+        id: 353,
+        title: "End of the Covid-19 pandemic — line chart",
+        date: new Date(2020, 3),
+        author: "Mc Kinsey",
+        url: "https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/when-will-the-covid-19-pandemic-end",
+        img: [
+            { full: "end-of-covid-pandemic-2.png", zoom: "end-of-covid-pandemic-zoom-2.png", chartId: ["line"] },
+        ],
+        contextDescription: "Mc Kinsey regularly post updates on the covid situation, especially concerning future potential trends. Luckily this report is full of nice visuals.",
+        chartDescription: "Two side-by-side line charts (hospitalizations and deaths) of weekly COVID-19 versus influenza incidence, using solid and dashed strokes to distinguish populations and time periods, with a short italic annotation paragraph on the right.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "legend", "annotation", "minimalist"]
+    },
+    {
+        id: 354,
+        title: "End of the Covid-19 pandemic — heatmap",
+        date: new Date(2020, 3),
+        author: "Mc Kinsey",
+        url: "https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/when-will-the-covid-19-pandemic-end",
+        img: [
+            { full: "end-of-covid-pandemic-3.png", zoom: "end-of-covid-pandemic-zoom-3.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "Mc Kinsey regularly post updates on the covid situation, especially concerning future potential trends. Luckily this report is full of nice visuals.",
+        chartDescription: "A table-style heatmap of factors influencing herd immunity timing across countries, where each cell is shaded along a blue gradient from unfavorable to favorable and overlaid with its numeric value.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "gradient", "direct labeling", "legend"]
+    },
+    {
+        id: 355,
+        title: "End of the Covid-19 pandemic — barplot",
+        date: new Date(2020, 3),
+        author: "Mc Kinsey",
+        url: "https://www.mckinsey.com/industries/healthcare-systems-and-services/our-insights/when-will-the-covid-19-pandemic-end",
+        img: [
+            { full: "end-of-covid-pandemic-4.png", zoom: "end-of-covid-pandemic-zoom-4.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Mc Kinsey regularly post updates on the covid situation, especially concerning future potential trends. Luckily this report is full of nice visuals.",
+        chartDescription: "A stacked bar chart of US vaccine doses committed by Pfizer and Moderna across delivery deadlines, set beside a segmented bracket showing doses needed by vaccination phase, with dashed-circle options-to-purchase callouts.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "legend", "color palette", "comparison"]
     },
     {
         id: 93,
@@ -1476,72 +2003,147 @@ export const vizList: VizItem[] = [
     },
     {
         id: 96,
-        title: "The new normal",
+        title: "The new normal — line chart",
         date: new Date(2021, 4),
         author: "Alberto Cairo",
         url: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent",
         img: [
             { full: "the-new-normal-1.png", zoom: "the-new-normal-zoom-1.png", chartId: ["line"] },
-            { full: "the-new-normal-2.png", zoom: "the-new-normal-zoom-2.png", chartId: ["line"] },
-            { full: "the-new-normal-3.png", zoom: "the-new-normal-zoom-3.png", chartId: ["line"] },
         ],
         contextDescription: "This visualization uses Google Trends to explore shopping interest for various products before and during the Covid-19 pandemic.",
-        chartDescription: "A scrollytelling article mainly based on line charts, and using small multiple to explore a high number of groups in an efficient manner.",
+        chartDescription: "A title slide built around a single large light-blue line chart tracking Google Trends search interest for 'cat treats' over time. A dated annotation marker flags the WHO's March 2020 pandemic declaration, with faint background lines hinting at other categories.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["scrollytelling", "highlight", "annotation", "small multiples"]
+        labels: ["annotation", "highlight", "typography", "storytelling"]
+    },
+    {
+        id: 356,
+        title: "The new normal — small multiples",
+        date: new Date(2021, 4),
+        author: "Alberto Cairo",
+        url: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent",
+        img: [
+            { full: "the-new-normal-2.png", zoom: "the-new-normal-zoom-2.png", chartId: ["line"] },
+        ],
+        contextDescription: "This visualization uses Google Trends to explore shopping interest for various products before and during the Covid-19 pandemic.",
+        chartDescription: "Three side-by-side line charts comparing search-interest patterns categorized as 'New Normal' (blue, hair care), 'Unusual' (yellow, bleach), and 'Normal' (red, eggs). Each panel uses a distinct color and a direct text label on the data to illustrate a different pandemic behavior pattern.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "comparison", "color palette", "direct labeling"]
+    },
+    {
+        id: 357,
+        title: "The new normal — trends grid",
+        date: new Date(2021, 4),
+        author: "Alberto Cairo",
+        url: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent",
+        img: [
+            { full: "the-new-normal-3.png", zoom: "the-new-normal-zoom-3.png", chartId: ["line"] },
+        ],
+        contextDescription: "This visualization uses Google Trends to explore shopping interest for various products before and during the Covid-19 pandemic.",
+        chartDescription: "A dense grid of dozens of tiny line-chart sparklines, one per product category, arranged as small multiples to scan many Google Trends series at once. Each mini chart is labeled with its category name above it.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "direct labeling", "minimalist"]
     },
     {
         id: 97,
-        title: "Orion",
+        title: "Orion — radar chart",
         date: new Date(2022, 4),
         author: "Orion team",
         url: "https://setproduct.com/orion/templates",
         img: [
             { full: "orion-figma-template-1.png", zoom: "orion-figma-template-zoom-1.png", chartId: ["radar"] },
+        ],
+        contextDescription: "Orion is a Figma plugin to quickly embed chart templates into a design system.",
+        chartDescription: "A radar chart comparing two series across six financial categories, drawn as pink and blue polygons over a soft, layered concentric backdrop. Each axis is directly labeled with its category name and dollar value, giving it a clean futuristic look.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "gradient", "direct labeling", "minimalist"]
+    },
+    {
+        id: 358,
+        title: "Orion — bubble chart",
+        date: new Date(2022, 4),
+        author: "Orion team",
+        url: "https://setproduct.com/orion/templates",
+        img: [
             { full: "orion-figma-template-2.png", zoom: "orion-figma-template-zoom-2.png", chartId: ["circularPacking"] },
         ],
         contextDescription: "Orion is a Figma plugin to quickly embed chart templates into a design system.",
-        chartDescription: "I'm not really a fan of most of the viz that are often, but I selected this project for their 'futuristic' style that can be useful to mimick.",
+        chartDescription: "A dark-themed circular bubble chart where glowing red and blue spheres of varying size represent business metrics, each labeled with a category and value. Summary KPIs sit along the bottom and a glassy 'Data visualisation' title floats behind the bubbles.",
         tools: undefined,
-        luminosity: ["light", "dark"],
+        luminosity: ["dark"],
         interactive: false,
-        labels: ["radial", "gradient", "minimalist", "direct labeling"]
+        labels: ["gradient", "direct labeling", "radial", "minimalist"]
     },
     {
         id: 98,
-        title: "League of legend analytics",
+        title: "League of legend analytics — radar chart",
         date: new Date(2022, 3),
         author: "Kris Akerstrom",
         url: "http://akerstrom.co.uk/league-of-legends-analytics-dashboard/",
         img: [
             { full: "league-of-legends-analytics-1.png", zoom: "league-of-legends-analytics-zoom-1.png", chartId: ["radar"] },
-            { full: "league-of-legends-analytics-2.png", zoom: "league-of-legends-analytics-zoom-2.png", chartId: ["barplot"] },
         ],
         contextDescription: "An analytics dashboard design to show your stats and help you improve at League of Legends.",
-        chartDescription: "What I find interesting here is the 'futuristic' design: dark mode, flashy & glowy colors with gradients.",
+        chartDescription: "A radar chart comparing two players across eight gameplay axes (fighting, farming, vision, aggression, etc.), with glowing cyan and purple polygons over a faint concentric spider grid on a dark background. Each axis is marked with a small game icon.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: false,
         labels: ["radial", "gradient", "icons & pictograms", "color palette"]
     },
     {
+        id: 359,
+        title: "League of legend analytics — barplot",
+        date: new Date(2022, 3),
+        author: "Kris Akerstrom",
+        url: "http://akerstrom.co.uk/league-of-legends-analytics-dashboard/",
+        img: [
+            { full: "league-of-legends-analytics-2.png", zoom: "league-of-legends-analytics-zoom-2.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "An analytics dashboard design to show your stats and help you improve at League of Legends.",
+        chartDescription: "A horizontal bar chart comparing two players (cyan vs purple) across eight stats, each row paired bars with the numeric value directly labeled at the end and a game icon on the left. Glowing neon bars sit on muted track backgrounds in a dark theme.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["direct labeling", "gradient", "icons & pictograms", "comparison"]
+    },
+    {
         id: 99,
-        title: "Dynamic planning",
+        title: "Dynamic planning — stacked barplot",
         date: new Date(2019, 1),
         author: "César Neri",
         url: "https://cesarneri.com/pages/dynamicPlanning.html",
         img: [
             { full: "dynamic-planning-1.png", zoom: "dynamic-planning-zoom-1.png", chartId: ["barplot"] },
-            { full: "dynamic-planning-2.png", zoom: "dynamic-planning-zoom-2.png", chartId: ["radar"] },
         ],
         contextDescription: "Dynamic Planning is a proof of concept for a SaaS planning platform that allows for data-driven decisions based on live building occupancy. In its current state, it is a data visualization dashboard that connects sensor data and institutional datasets to a building information model (BIM) in order to track an organization's planning goals.",
-        chartDescription: "A set of viz designed for branding. Most of them cannot be used as-is in a dataviz project but there are some design inspiration to get.",
+        chartDescription: "A stacked bar chart titled 'Stacked Bar Chart' showing people counts across building locations, with each bar segmented into colored categories using a warm-to-cool palette and rounded bar tops.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["radial", "color palette", "minimalist"]
+        labels: ["color palette", "minimalist", "comparison"]
+    },
+    {
+        id: 360,
+        title: "Dynamic planning — radar chart",
+        date: new Date(2019, 1),
+        author: "César Neri",
+        url: "https://cesarneri.com/pages/dynamicPlanning.html",
+        img: [
+            { full: "dynamic-planning-2.png", zoom: "dynamic-planning-zoom-2.png", chartId: ["radar"] },
+        ],
+        contextDescription: "Dynamic Planning is a proof of concept for a SaaS planning platform that allows for data-driven decisions based on live building occupancy. In its current state, it is a data visualization dashboard that connects sensor data and institutional datasets to a building information model (BIM) in order to track an organization's planning goals.",
+        chartDescription: "A radar (polar) chart overlaying three semi-transparent series in red, navy and purple across spokes scaled from 0 to 100%, with filled areas and point markers at each axis.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "color palette", "comparison"]
     },
     {
         id: 100,
@@ -1657,20 +2259,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 107,
-        title: "Madagascar Relief Map",
+        title: "Madagascar Relief Map — pink relief map",
         date: new Date(2022, 4),
         author: "@researchremora",
         url: "https://twitter.com/researchremora/status/1527361112022593538",
         img: [
             { full: "madagascar-relief-map.png", zoom: "madagascar-relief-map-zoom.png", chartId: ["map"] },
-            { full: "madagascar-relief-map-2.png", zoom: "madagascar-relief-map-2-zoom.png", chartId: ["map"] }
         ],
         contextDescription: "Part of a project called '#rayshader adventures, an #rstats tale'. Many countries have their equivalent in the project. It is made with <a href='https://www.rayshader.com'>rayshader</a>, an open source package for producing 2D and 3D data visualizations in R",
-        chartDescription: "A map showing the elevation of each part of Madagascar, with an eye catching color palette.",
+        chartDescription: "A 3D shaded relief map of Madagascar rendered with an eye-catching pink-to-magenta gradient that encodes elevation. The island floats on a clean white background with minimalist title typography.",
         tools: [{ name: "R", link: "https://twitter.com/researchremora/status/1418392590244892673" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["color palette", "minimalist", "gradient"]
+        labels: ["color palette", "gradient", "3d", "minimalist"]
+    },
+    {
+        id: 361,
+        title: "Madagascar Relief Map — grayscale relief map",
+        date: new Date(2022, 4),
+        author: "@researchremora",
+        url: "https://twitter.com/researchremora/status/1527361112022593538",
+        img: [
+            { full: "madagascar-relief-map-2.png", zoom: "madagascar-relief-map-2-zoom.png", chartId: ["map"] },
+        ],
+        contextDescription: "Part of a project called '#rayshader adventures, an #rstats tale'. Many countries have their equivalent in the project. It is made with <a href='https://www.rayshader.com'>rayshader</a>, an open source package for producing 2D and 3D data visualizations in R",
+        chartDescription: "A 3D shaded relief map of Lebanon rendered in grayscale, using light and shadow on the terrain to convey elevation and texture. Set on a white background with restrained title typography.",
+        tools: [{ name: "R", link: "https://twitter.com/researchremora/status/1418392590244892673" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["3d", "texture", "minimalist", "typography"]
     },
     {
         id: 108,
@@ -1706,73 +2323,403 @@ export const vizList: VizItem[] = [
     },
     {
         id: 110,
-        title: "World Resources Report",
+        title: "World Resources Report — waterfall chart",
         date: new Date(2022, 1),
         author: "Carni Klirs",
         url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
         img: [
             { full: "world-resources-report-1.png", zoom: "world-resources-report-1-zoom.png", chartId: ["barplot"] },
-            { full: "world-resources-report-2.png", zoom: "world-resources-report-2-zoom.png", chartId: ["sankey"] },
-            { full: "world-resources-report-3.png", zoom: "world-resources-report-3-zoom.png", chartId: ["barplot"] },
-            { full: "world-resources-report-4.png", zoom: "world-resources-report-4-zoom.png", chartId: ["line"] },
         ],
         contextDescription: "The <a href='https://research.wri.org/wrr-food'>World Resource Institute</a> (WRI) studies how to create a sustainable food future. It published a final report giving solutions to ensure the world can feed 10 billion people by 2050 in a sustainable way. It contains many great vizs.",
-        chartDescription: "Several charts are available in the <a href='https://research.wri.org/wrr-food'>report</a>. You can also find them in <a href='https://www.carniklirs.com/project/creating-a-sustainable-food-future'>Carni's portfolio</a>.",
+        chartDescription: "A waterfall (bridge) chart showing how a series of agricultural mitigation measures step down GHG emissions from a 2050 baseline of 15 Gt to the target. Each step is annotated with the specific intervention and grouped into shaded vertical bands by category.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["small multiples", "annotation", "flow & arrows"]
+        labels: ["annotation", "color palette", "direct labeling"]
+    },
+    {
+        id: 362,
+        title: "World Resources Report — sankey",
+        date: new Date(2022, 1),
+        author: "Carni Klirs",
+        url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
+        img: [
+            { full: "world-resources-report-2.png", zoom: "world-resources-report-2-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "The <a href='https://research.wri.org/wrr-food'>World Resource Institute</a> (WRI) studies how to create a sustainable food future. It published a final report giving solutions to ensure the world can feed 10 billion people by 2050 in a sustainable way. It contains many great vizs.",
+        chartDescription: "A Sankey diagram tracing food loss and waste along the supply chain for cassava in Nigeria, splitting 100% edible production into postharvest handling, consumer, and loss streams with percentage labels on each flow.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["flow & arrows", "direct labeling", "color palette"]
+    },
+    {
+        id: 363,
+        title: "World Resources Report — diverging bars",
+        date: new Date(2022, 1),
+        author: "Carni Klirs",
+        url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
+        img: [
+            { full: "world-resources-report-3.png", zoom: "world-resources-report-3-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The <a href='https://research.wri.org/wrr-food'>World Resource Institute</a> (WRI) studies how to create a sustainable food future. It published a final report giving solutions to ensure the world can feed 10 billion people by 2050 in a sustainable way. It contains many great vizs.",
+        chartDescription: "A diverging stacked bar chart showing the percentage of studies projecting future crop yield changes under climate change across five time periods. Bars diverge from a center line into red (decrease) and green (increase) shades, with red outlines highlighting the share predicting yield declines.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["bivariate coloring", "highlight", "legend"]
+    },
+    {
+        id: 364,
+        title: "World Resources Report — line chart",
+        date: new Date(2022, 1),
+        author: "Carni Klirs",
+        url: "https://www.carniklirs.com/project/spare-time-over-a-lifetime",
+        img: [
+            { full: "world-resources-report-4.png", zoom: "world-resources-report-4-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "The <a href='https://research.wri.org/wrr-food'>World Resource Institute</a> (WRI) studies how to create a sustainable food future. It published a final report giving solutions to ensure the world can feed 10 billion people by 2050 in a sustainable way. It contains many great vizs.",
+        chartDescription: "A multi-line chart of per-capita calorie availability from 1961 to a 2050 projection, with a bold black WORLD line standing out against thinner colored country lines that are directly labeled at the right edge. A dashed vertical line separates historical data from projection.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "highlight", "color palette"]
     },
     {
         id: 111,
-        title: "Untitled-Ui",
+        title: "Untitled-Ui — stacked barplot",
         date: new Date(2022, 1),
         author: "untitledUi",
         url: "https://www.untitledui.com",
         img: [
             { full: "untitled-ui-1.png", zoom: "untitled-ui-1-zoom.png", chartId: ["barplot"] },
-            { full: "untitled-ui-2.png", zoom: "untitled-ui-2-zoom.png", chartId: ["line"] },
-            { full: "untitled-ui-3.png", zoom: "untitled-ui-3-zoom.png", chartId: ["donut"] },
-            { full: "untitled-ui-4.png", zoom: "untitled-ui-4-zoom.png", chartId: ["radar"] },
         ],
         contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
-        chartDescription: "Some charts of this design system are worth a read for inspiration. I like the use of gradients that can make it look modern.",
+        chartDescription: "A monthly stacked bar chart with three series rendered in a clean purple palette on a white background. Rounded bar tops and a simple dotted-marker legend give it a modern, polished look.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["color palette", "gradient", "legend"]
+        labels: ["color palette", "legend", "minimalist"]
+    },
+    {
+        id: 365,
+        title: "Untitled-Ui — line chart",
+        date: new Date(2022, 1),
+        author: "untitledUi",
+        url: "https://www.untitledui.com",
+        img: [
+            { full: "untitled-ui-2.png", zoom: "untitled-ui-2-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
+        chartDescription: "A multi-line time series of active users by month, with three purple-toned lines and a subtle gradient fill under the area. Axes are clearly labeled and the styling stays minimal and light.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "gradient", "minimalist"]
+    },
+    {
+        id: 366,
+        title: "Untitled-Ui — donut chart",
+        date: new Date(2022, 1),
+        author: "untitledUi",
+        url: "https://www.untitledui.com",
+        img: [
+            { full: "untitled-ui-3.png", zoom: "untitled-ui-3-zoom.png", chartId: ["donut"] },
+        ],
+        contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
+        chartDescription: "Two side-by-side donut charts each split into four segments using a graduated purple palette, sharing a single dotted-marker legend on the right. The matching pair invites comparison between the two distributions.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "legend", "comparison"]
+    },
+    {
+        id: 367,
+        title: "Untitled-Ui — radar chart",
+        date: new Date(2022, 1),
+        author: "untitledUi",
+        url: "https://www.untitledui.com",
+        img: [
+            { full: "untitled-ui-4.png", zoom: "untitled-ui-4-zoom.png", chartId: ["radar"] },
+        ],
+        contextDescription: "<a href='https://www.untitledui.com'>Untitled UI</a> is the largest UI kit and design system for Figma in the world. Some of its components are dataviz related.",
+        chartDescription: "A radial radar chart over the seven days of the week comparing three semi-transparent overlapping series in purple, pink, and blue. Concentric gridlines and axis tick labels anchor the polar layout.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "color palette", "legend", "comparison"]
     },
     {
         id: 112,
-        title: "Datylon",
+        title: "Datylon — scatterplot",
         date: new Date(2022, 4),
         author: "Datylon",
         url: "https://insights.datylon.com/stories",
         img: [
             { full: "datylon-1.png", zoom: "datylon-1-zoom.png", chartId: ["scatter"] },
-            { full: "datylon-2.png", zoom: "datylon-2-zoom.png", chartId: ["pie", "donut"] },
-            { full: "datylon-3.png", zoom: "datylon-3-zoom.png", chartId: ["treemap"] },
-            { full: "datylon-4.png", zoom: "datylon-4-zoom.png", chartId: ["donut"] },
-            { full: "datylon-5.png", zoom: "datylon-5-zoom.png", chartId: ["lollipop"] },
-            { full: "datylon-6.png", zoom: "datylon-6-zoom.png", chartId: ["heatmap"] },
-            { full: "datylon-7.png", zoom: "datylon-7-zoom.png", chartId: ["scatter", "bubble"] },
-            { full: "datylon-8.png", zoom: "datylon-8-zoom.png", chartId: ["density"] },
-            { full: "datylon-9.png", zoom: "datylon-9-zoom.png", chartId: ["barplot"] },
-            { full: "datylon-10.png", zoom: "datylon-10-zoom.png", chartId: ["heatmap"] },
-            { full: "datylon-11.png", zoom: "datylon-11-zoom.png", chartId: ["lollipop"] },
-            { full: "datylon-12.png", zoom: "datylon-12-zoom.png", chartId: ["circularBarplot"] },
-            { full: "datylon-13.png", zoom: "datylon-13-zoom.png", chartId: ["treemap"] },
-            { full: "datylon-14.png", zoom: "datylon-14-zoom.png", chartId: ["ridgeline"] },
-            { full: "datylon-15.png", zoom: "datylon-15-zoom.png", chartId: ["parallel"] },
-            { full: "datylon-16.png", zoom: "datylon-16-zoom.png", chartId: ["connectedScatter"] },
-            { full: "datylon-17.png", zoom: "datylon-17-zoom.png", chartId: ["stream"] },
         ],
         contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
-        chartDescription: "Datylon has a great <a href='https://insights.datylon.com/stories'>gallery</a> of example that are all of good quality. Check it out for more inspiration!",
+        chartDescription: "A scatterplot showing NBA 2021-22 players' scoring efficiency, with the plane divided into four quadrants (effective/low-effective high/low scorers) and a zoomed inset of the top performers in the upper right.",
         tools: [{ name: "illustrator" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "direct labeling", "color palette"]
+        labels: ["annotation", "direct labeling", "zoom & pan"]
+    },
+    {
+        id: 368,
+        title: "Datylon — donut",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-2.png", zoom: "datylon-2-zoom.png", chartId: ["pie", "donut"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A two-level radial sunburst/donut chart of the Early Romantic orchestra instrumentation, with the inner ring grouping instrument families and the outer ring breaking them into individual instruments labeled around the circle.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "direct labeling", "color palette"]
+    },
+    {
+        id: 369,
+        title: "Datylon — treemap",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-3.png", zoom: "datylon-3-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "An illustrated treemap of the distribution of Earth's six biomes, where each rectangle is sized by share and filled with a textured scene (underwater for marine, trees for forest, etc.) instead of flat color.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["texture", "icons & pictograms", "direct labeling"]
+    },
+    {
+        id: 370,
+        title: "Datylon — radial bars",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-4.png", zoom: "datylon-4-zoom.png", chartId: ["donut"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A stylized radial chart where animal populations are drawn as thick rounded arcs of decreasing length around a circle, each labeled with its name and value via leader lines.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "direct labeling", "color palette"]
+    },
+    {
+        id: 371,
+        title: "Datylon — dumbbell chart",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-5.png", zoom: "datylon-5-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A dumbbell/lollipop chart comparing 2020 happiness scores to 2018 and 2019 across the top 20 happiest countries, with colored markers connected by horizontal lines and sorted from highest to lowest.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "direct labeling", "color palette"]
+    },
+    {
+        id: 372,
+        title: "Datylon — heatmap",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-6.png", zoom: "datylon-6-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A heatmap of North Pole monthly temperatures (average, max, min) where each cell is colored on a blue-to-red diverging scale and labeled with its numeric value.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["gradient", "direct labeling", "bivariate coloring"]
+    },
+    {
+        id: 373,
+        title: "Datylon — bubble chart",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-7.png", zoom: "datylon-7-zoom.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A bubble chart exploring the link between countries' happiness score and GDP per capita, with bubble size encoding population and color encoding world region, plus a size legend and region legend.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "direct labeling", "color palette"]
+    },
+    {
+        id: 374,
+        title: "Datylon — density chart",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-8.png", zoom: "datylon-8-zoom.png", chartId: ["density"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "Overlapping smoothed density/area curves showing the points-finish frequency of the top five F1 drivers in 2021, with translucent fills and each driver named in its own color directly on the chart.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "color palette", "typography"]
+    },
+    {
+        id: 375,
+        title: "Datylon — stacked bars",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-9.png", zoom: "datylon-9-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A 100% stacked horizontal bar chart on a dark background breaking down transport modes by customers, employees and tourists, with each segment value labeled inside the bar.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["direct labeling", "color palette", "comparison"]
+    },
+    {
+        id: 376,
+        title: "Datylon — skill matrix",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-10.png", zoom: "datylon-10-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A dense diverging heatmap matrix of FIFA 19 skill ratings for the top 25 players, with players as rows and skill attributes as columns colored on a green-to-purple scale.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["gradient", "legend", "bivariate coloring"]
+    },
+    {
+        id: 377,
+        title: "Datylon — arrow chart",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-11.png", zoom: "datylon-11-zoom.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "An arrow/change chart comparing imports as a percentage of GDP from 2013 to 2018 by country, where colored arrows point from the start to end value (green for increase, red for decrease) along dotted guide lines.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["flow & arrows", "direct labeling", "comparison"]
+    },
+    {
+        id: 378,
+        title: "Datylon — circular barplot",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-12.png", zoom: "datylon-12-zoom.png", chartId: ["circularBarplot"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A circular (polar) barplot spiraling outward by year and month, with golden bars whose length encodes a value, creating a spiral seasonal pattern from 2013 to 2021.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "color palette", "minimalist"]
+    },
+    {
+        id: 379,
+        title: "Datylon — nested treemap",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-13.png", zoom: "datylon-13-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A nested treemap of the world's top 20 CO2 polluters per capita grouped by continent, framed by explanatory annotation text in the margins describing notable countries.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["annotation", "storytelling", "direct labeling"]
+    },
+    {
+        id: 380,
+        title: "Datylon — ridgeline",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-14.png", zoom: "datylon-14-zoom.png", chartId: ["ridgeline"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A ridgeline (joyplot) of New York City 2016 weather, with one overlapping purple density curve per month stacked top to bottom against a shared temperature axis.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "color palette"]
+    },
+    {
+        id: 381,
+        title: "Datylon — slope chart",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-15.png", zoom: "datylon-15-zoom.png", chartId: ["parallel"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A slope chart tracking total investment as a percentage of GDP from 1980 to 2019 across seven countries, with each colored line and its end value labeled directly on the right.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "color palette", "comparison"]
+    },
+    {
+        id: 382,
+        title: "Datylon — connected scatter",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-16.png", zoom: "datylon-16-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A connected scatterplot of Australia's inflation-unemployment curve from 1970 to 2020, with points colored by decade, joined chronologically by a path, and key years annotated in italics.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "annotation", "color palette"]
+    },
+    {
+        id: 383,
+        title: "Datylon — streamgraph",
+        date: new Date(2022, 4),
+        author: "Datylon",
+        url: "https://insights.datylon.com/stories",
+        img: [
+            { full: "datylon-17.png", zoom: "datylon-17-zoom.png", chartId: ["stream"] },
+        ],
+        contextDescription: "Datylon is a data visualization platform dedicated to graphic designers and report designers who work with <b>Adobe Illustrator</b>. It is a robust chart maker plugin for Illustrator to create beautiful charts and graphs for inspiring data stories.",
+        chartDescription: "A streamgraph of U.S. top box office movies in the first half of 2019, with flowing colored bands centered around a baseline and movie titles labeled above their peaks.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "color palette", "flow & arrows"]
     },
     {
         id: 113,
@@ -1824,26 +2771,131 @@ export const vizList: VizItem[] = [
     },
     {
         id: 116,
-        title: "Bruxelles Malade",
+        title: "Bruxelles Malade — choropleth map",
         date: new Date(2022, 5),
         author: "Catherine Joie et al.",
         url: "https://bxl-malade.medor.coop",
         img: [
             { full: "bruxelle-malade-1.png", zoom: "bruxelle-malade-zoom-1.png", chartId: ["map", "choropleth"] },
-            { full: "bruxelle-malade-2.png", zoom: "bruxelle-malade-zoom-2.png", chartId: ["map", "bubbleMap"] },
-            { full: "bruxelle-malade-3.png", zoom: "bruxelle-malade-zoom-3.png", chartId: ["circularPacking", "bubble"] },
-            { full: "bruxelle-malade-4.png", zoom: "bruxelle-malade-zoom-4.png", chartId: ["scatter", "bubble"] },
-            { full: "bruxelle-malade-5.png", zoom: "bruxelle-malade-zoom-5.png", chartId: ["heatmap"] }, // marimekko
-            { full: "bruxelle-malade-6.png", zoom: "bruxelle-malade-zoom-6.png", chartId: ["lollipop"] },
-            { full: "bruxelle-malade-7.png", zoom: "bruxelle-malade-zoom-7.png", chartId: ["cartogram", "map"] },
-            { full: "bruxelle-malade-8.png", zoom: "bruxelle-malade-zoom-8.png", chartId: ["parallel"] },
         ],
         contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
-        chartDescription: "Heaps of different chart types, all very clean with perfect annotations and stunning animations between the story steps. Masterpiece!",
+        chartDescription: "A dark, detailed choropleth map of Brussels shading individual building footprints along a teal-to-orange diverging scale, revealing a sharp spatial divide between neighborhoods.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["color palette", "bivariate coloring", "minimalist"]
+    },
+    {
+        id: 384,
+        title: "Bruxelles Malade — bubble map",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-2.png", zoom: "bruxelle-malade-zoom-2.png", chartId: ["map", "bubbleMap"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A bubble map of the Brussels region where circles sized by population and colored on a red-to-blue diverging scale are placed across the city's outline, with a size legend at lower left.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["scrollytelling", "annotation", "color palette"]
+        labels: ["legend", "color palette", "minimalist"]
+    },
+    {
+        id: 385,
+        title: "Bruxelles Malade — beeswarm",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-3.png", zoom: "bruxelle-malade-zoom-3.png", chartId: ["circularPacking", "bubble"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A horizontal beeswarm of clustered bubbles spreading along an x-axis of the proportion of residents receiving major intervention, colored teal to orange with an annotated average line.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["annotation", "color palette", "direct labeling"]
+    },
+    {
+        id: 386,
+        title: "Bruxelles Malade — scatter plot",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-4.png", zoom: "bruxelle-malade-zoom-4.png", chartId: ["scatter", "bubble"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A bubble scatter plot of average age versus share of residents in precarity, with points colored teal to orange and several horizontal annotation lines highlighting age levels.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["annotation", "color palette", "direct labeling"]
+    },
+    {
+        id: 387,
+        title: "Bruxelles Malade — marimekko",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-5.png", zoom: "bruxelle-malade-zoom-5.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A marimekko-style stacked panel chart breaking down net monthly salary bands across origin and gender groups, using a grey-to-red sequential palette with curved callout annotations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["annotation", "color palette", "direct labeling", "legend"]
+    },
+    {
+        id: 388,
+        title: "Bruxelles Malade — lollipop",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-6.png", zoom: "bruxelle-malade-zoom-6.png", chartId: ["lollipop"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A connected dot (lollipop) chart ranking Brussels municipalities by median apartment price between 1995 and 2020, with multiplier labels and a small inset map keyed by color.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["direct labeling", "color palette", "legend", "comparison"]
+    },
+    {
+        id: 389,
+        title: "Bruxelles Malade — cartogram",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-7.png", zoom: "bruxelle-malade-zoom-7.png", chartId: ["cartogram", "map"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A distorted cartogram of Brussels showing annual mean PM2.5 fine particle concentration with a purple-to-teal bivariate color key in the corner and several pointer annotations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["bivariate coloring", "legend", "annotation"]
+    },
+    {
+        id: 390,
+        title: "Bruxelles Malade — parallel coordinates",
+        date: new Date(2022, 5),
+        author: "Catherine Joie et al.",
+        url: "https://bxl-malade.medor.coop",
+        img: [
+            { full: "bruxelle-malade-8.png", zoom: "bruxelle-malade-zoom-8.png", chartId: ["parallel"] },
+        ],
+        contextDescription: "A scrollytelling article (in french) that talks about health in Bruxelles, the capital of Belgium. It highlights the discrepencies that exist between suburbs. A in-depth investigation definitely worth a read.",
+        chartDescription: "A parallel coordinates plot with multiple stacked axes for pollution and green-space indicators, where teal and orange lines trace each neighborhood to expose contrasting environmental profiles.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["color palette", "small multiples", "minimalist"]
     },
     {
         id: 117,
@@ -1879,42 +2931,147 @@ export const vizList: VizItem[] = [
     },
     {
         id: 119,
-        title: "Correlograms with R",
+        title: "Correlograms with R — scatterplot matrix",
         date: new Date(2013, 5),
         author: "Yan Holtz",
         url: "https://r-graph-gallery.com/correlogram.html",
         img: [
             { full: "correlograms-with-R-1.png", zoom: "correlograms-with-R-zoom-1.png", chartId: ["correlogram"] },
-            { full: "correlograms-with-R-2.png", zoom: "correlograms-with-R-zoom-2.png", chartId: ["correlogram"] },
-            { full: "correlograms-with-R-3.png", zoom: "correlograms-with-R-zoom-3.png", chartId: ["correlogram"] },
-            { full: "correlograms-with-R-4.png", zoom: "correlograms-with-R-zoom-4.png", chartId: ["correlogram"] },
-            { full: "correlograms-with-R-5.png", zoom: "correlograms-with-R-zoom-5.png", chartId: ["correlogram"] },
         ],
         contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
-        chartDescription: "Several libraries can be used to build correlograms with R. <code>GGally</code>, <code>Corrgram</code>, <code>Ellipse</code> and more. Visit the <a href='https://r-graph-gallery.com/correlogram.html'>R graph gallery</a> for more.",
+        chartDescription: "A ggpairs() scatterplot matrix showing five variables: lower triangle holds black scatterplots, the diagonal shows density curves, and the upper triangle prints pairwise correlation coefficients.",
         tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["small multiples"]
+        labels: ["small multiples", "direct labeling", "minimalist"]
+    },
+    {
+        id: 391,
+        title: "Correlograms with R — correlation heatmap",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://r-graph-gallery.com/correlogram.html",
+        img: [
+            { full: "correlograms-with-R-2.png", zoom: "correlograms-with-R-zoom-2.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
+        chartDescription: "A lower-triangle correlation matrix rendered as a heatmap, with cells colored on a red-to-blue diverging scale from +1 to -1 and a continuous color legend on the side.",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "gradient", "legend"]
+    },
+    {
+        id: 392,
+        title: "Correlograms with R — grouped scatterplot matrix",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://r-graph-gallery.com/correlogram.html",
+        img: [
+            { full: "correlograms-with-R-3.png", zoom: "correlograms-with-R-zoom-3.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
+        chartDescription: "A scatterplot matrix of three morphological variables split into three colored groups (blue, red, green), with grouped density curves on the diagonal and per-group correlation values listed in the upper cells.",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "color palette", "direct labeling"]
+    },
+    {
+        id: 393,
+        title: "Correlograms with R — pie glyph matrix",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://r-graph-gallery.com/correlogram.html",
+        img: [
+            { full: "correlograms-with-R-4.png", zoom: "correlograms-with-R-zoom-4.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
+        chartDescription: "A correlation matrix where each off-diagonal cell encodes strength and sign with a pie-slice glyph and a red/blue shaded background, variables ordered by PC2/PC1 with labels running down the diagonal.",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "icons & pictograms", "direct labeling"]
+    },
+    {
+        id: 394,
+        title: "Correlograms with R — ellipse matrix",
+        date: new Date(2013, 5),
+        author: "Yan Holtz",
+        url: "https://r-graph-gallery.com/correlogram.html",
+        img: [
+            { full: "correlograms-with-R-5.png", zoom: "correlograms-with-R-zoom-5.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "An overview of what <a href='https://r-graph-gallery.com/correlogram.html'>R</a> can provide when it comes to build correlograms.",
+        chartDescription: "A correlogram using shaded ellipse glyphs where the eccentricity and tilt of each ellipse encode the correlation, colored on a warm-to-cool diverging palette across the full matrix.",
+        tools: [{ name: "R", link: "https://r-graph-gallery.com/correlogram.html" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "icons & pictograms", "gradient"]
     },
     {
         id: 120,
-        title: "Plastic waste",
+        title: "Plastic waste — circular barplot",
         date: new Date(2022, 6),
         author: "Lisa Hornung",
         url: "https://inside-numbers.com/six-things-i-learned-by-tracking-my-plastic-waste-everyday-in-2021",
         img: [
             { full: "plastic-waste-1.png", zoom: "plastic-waste-zoom-1.png", chartId: ["circularBarplot"] },
+        ],
+        contextDescription: "Lisa tracked her plastic waste details for a year and wrote a blogpost full of insightful dataviz to explain the result.",
+        chartDescription: "A dark, radial circular barplot radiating red bars from a central clock-like dial to show plastic use over time, paired with a bold annotated callout of 16kg of single-use plastic. Strong visual identity with a small bubble legend at top right.",
+        tools: [{ name: "python", link: undefined }, { name: "illustrator" }],
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["radial", "annotation", "color palette", "typography"]
+    },
+    {
+        id: 395,
+        title: "Plastic waste — calendar heatmap",
+        date: new Date(2022, 6),
+        author: "Lisa Hornung",
+        url: "https://inside-numbers.com/six-things-i-learned-by-tracking-my-plastic-waste-everyday-in-2021",
+        img: [
             { full: "plastic-waste-2.png", zoom: "plastic-waste-zoom-2.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "Lisa tracked her plastic waste details for a year and wrote a blogpost full of insightful dataviz to explain the result.",
+        chartDescription: "A dark calendar heatmap with one small multiple per month, where each day cell is colored from faint to bright red to encode plastic waste intensity across the year.",
+        tools: [{ name: "python", link: undefined }, { name: "illustrator" }],
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["small multiples", "color palette", "gradient"]
+    },
+    {
+        id: 396,
+        title: "Plastic waste — bubble chart",
+        date: new Date(2022, 6),
+        author: "Lisa Hornung",
+        url: "https://inside-numbers.com/six-things-i-learned-by-tracking-my-plastic-waste-everyday-in-2021",
+        img: [
             { full: "plastic-waste-3.png", zoom: "plastic-waste-zoom-3.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Lisa tracked her plastic waste details for a year and wrote a blogpost full of insightful dataviz to explain the result.",
+        chartDescription: "A light bubble chart plotting total weight versus quantity per plastic type, with bubble size encoding plastic score. Each bubble is directly labeled with its category, highlighting that bags and wrappings score worst.",
+        tools: [{ name: "python", link: undefined }, { name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "annotation", "color palette"]
+    },
+    {
+        id: 397,
+        title: "Plastic waste — stacked barplot",
+        date: new Date(2022, 6),
+        author: "Lisa Hornung",
+        url: "https://inside-numbers.com/six-things-i-learned-by-tracking-my-plastic-waste-everyday-in-2021",
+        img: [
             { full: "plastic-waste-4.png", zoom: "plastic-waste-zoom-4.png", chartId: ["barplot"] },
         ],
         contextDescription: "Lisa tracked her plastic waste details for a year and wrote a blogpost full of insightful dataviz to explain the result.",
-        chartDescription: "I really like the visual identity that is created here. The blogpost also includes an infographic shared on <a href='https://twitter.com/LisaHornung_/status/1541739547645583360'>twitter</p>.",
+        chartDescription: "A light stacked bar chart of total weekly plastic weight across the year, with bars segmented by plastic type using a red color palette and textured fills, accompanied by a legend.",
         tools: [{ name: "python", link: undefined }, { name: "illustrator" }],
-        luminosity: ["light", "dark"],
+        luminosity: ["light"],
         interactive: false,
-        labels: ["radial", "color palette", "annotation"]
+        labels: ["legend", "color palette", "texture"]
     },
     {
         id: 121,
@@ -2062,21 +3219,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 130,
-        title: "Waves of Interest",
+        title: "Waves of Interest — density heatmap map",
         date: new Date(2021, 6),
         author: "Moritz Stefaner",
         url: "https://truth-and-beauty.net/projects/waves-of-interest",
         img: [
             { full: "wave-of-interest-1.png", zoom: "wave-of-interest-1-zoom.png", chartId: ["density2d"] },
-            { full: "wave-of-interest-2.png", zoom: "wave-of-interest-2-zoom.png", chartId: ["line"] },
-            { full: "wave-of-interest-3.png", zoom: "wave-of-interest-3-zoom.png", chartId: ["connectedScatter"] },
         ],
         contextDescription: "Which topics capture the attention of Americans during US election years? And how have our interests shifted from one election cycle to the next? This project investigates these questions with the help of Google Search Trends data.",
-        chartDescription: "The density 2d heatmap is the one that caught my eyes here, especially due to its nice annotation. But the whole <a hef='https://waves-of-interest.truth-and-beauty.net/#US'>project</a> is definitely worth a look.",
+        chartDescription: "A density 2D heatmap shaped like the contiguous United States, glowing with a blue-to-yellow gradient on a deep purple background to show the surge in Google search interest for 'Minimum Wage'. State labels carry direct percentage annotations like +105% and +68% over their hotspots.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["gradient", "annotation", "direct labeling", "color palette"]
+    },
+    {
+        id: 398,
+        title: "Waves of Interest — line chart",
+        date: new Date(2021, 6),
+        author: "Moritz Stefaner",
+        url: "https://truth-and-beauty.net/projects/waves-of-interest",
+        img: [
+            { full: "wave-of-interest-2.png", zoom: "wave-of-interest-2-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "Which topics capture the attention of Americans during US election years? And how have our interests shifted from one election cycle to the next? This project investigates these questions with the help of Google Search Trends data.",
+        chartDescription: "A multi-line chart on a white background tracing 'Opinion Poll' search interest across the months Jan-Dec, with each election year drawn as a colored curve (2016, 2004, 2020, 2012) peaking sharply in autumn while non-election years recede into grey. Years are directly labeled at the end of each line.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["gradient", "annotation", "direct labeling"]
+        labels: ["direct labeling", "highlight", "comparison", "annotation"]
+    },
+    {
+        id: 399,
+        title: "Waves of Interest — small multiples",
+        date: new Date(2021, 6),
+        author: "Moritz Stefaner",
+        url: "https://truth-and-beauty.net/projects/waves-of-interest",
+        img: [
+            { full: "wave-of-interest-3.png", zoom: "wave-of-interest-3-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "Which topics capture the attention of Americans during US election years? And how have our interests shifted from one election cycle to the next? This project investigates these questions with the help of Google Search Trends data.",
+        chartDescription: "A grid of eight small-multiple line charts, each topic (Postal Voting, Unemployment, Fact Check, Vaccine, etc.) given a bold red highlighted curve standing out against faint grey background lines, all sharing the same Jan-Nov monthly axis for easy comparison.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "highlight", "comparison", "direct labeling"]
     },
     {
         id: 131,
@@ -2208,20 +3395,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 139,
-        title: "How Britain ended its coal addiction",
+        title: "How Britain ended its coal addiction — stacked area chart",
         date: new Date(2022, 8),
         author: "Financial Times",
         url: "https://www.ft.com/content/a05d1dd4-dddd-11e9-9743-db5a370481bc",
         img: [
             { full: "britain-ends-coal-addiction.png", zoom: "britain-ends-coal-addiction-zoom.png", chartId: ["area", "stackedArea"] },
-            { full: "britain-ends-coal-addiction-2.png", zoom: "britain-ends-coal-addiction-zoom-2.png", chartId: ["barplot"] },
         ],
         contextDescription: "The shift in the UK is an important victory for environmentalists in their fight against fossil fuels.",
-        chartDescription: "Clean area and bar charts used as timeseries, with the very recognizable style of the financial times.",
+        chartDescription: "A stacked area chart of UK electricity supplied (TWhs) from 1980 to 2018, showing coal collapsing while renewables, nuclear and combined cycle gas turbine fill the void. Labels sit directly inside each colored band.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
         labels: ["direct labeling", "color palette", "typography"]
+    },
+    {
+        id: 400,
+        title: "How Britain ended its coal addiction — stacked barplot",
+        date: new Date(2022, 8),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/a05d1dd4-dddd-11e9-9743-db5a370481bc",
+        img: [
+            { full: "britain-ends-coal-addiction-2.png", zoom: "britain-ends-coal-addiction-zoom-2.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "The shift in the UK is an important victory for environmentalists in their fight against fossil fuels.",
+        chartDescription: "A stacked bar chart of weekly UK coal generation through 2019, broken down by individual power station, highlighting how generation drops to near zero by mid-year. Each station gets its own color with a top legend.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "color palette", "typography"]
     },
     {
         id: 140,
@@ -2337,16 +3539,31 @@ export const vizList: VizItem[] = [
     },
     {
         id: 147,
-        title: "The slow loss",
+        title: "The slow loss — endangered birds dendrogram",
         date: new Date(2022, 10),
         author: "Michela Lazzaroni",
         url: "https://www.behance.net/gallery/151474693/The-Slow-Loss-La-Lettura-dataviz",
         img: [
             { full: "the-slow-loss.png", zoom: "the-slow-loss-zoom.png", chartId: ["dendrogram"] },
+        ],
+        contextDescription: "This diptych shows the species of endangered birds and fishes in Italy, according to the IUCN's 'Red list'. For each animal, the following are indicated: common name, order, degree of danger, size and habitat.",
+        chartDescription: "A circular dendrogram on a light background mapping endangered Italian birds, with warm-toned feather-like shapes radiating outward whose size encodes the animal. Small multiples of leaf/feather shapes run along the bottom as a legend.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["radial", "gradient", "color palette", "small multiples"]
+    },
+    {
+        id: 401,
+        title: "The slow loss — endangered fishes dendrogram",
+        date: new Date(2022, 10),
+        author: "Michela Lazzaroni",
+        url: "https://www.behance.net/gallery/151474693/The-Slow-Loss-La-Lettura-dataviz",
+        img: [
             { full: "the-slow-loss-2.png", zoom: "the-slow-loss-zoom-2.png", chartId: ["dendrogram"] },
         ],
         contextDescription: "This diptych shows the species of endangered birds and fishes in Italy, according to the IUCN's 'Red list'. For each animal, the following are indicated: common name, order, degree of danger, size and habitat.",
-        chartDescription: "Those circular dendrograms are a poetic way to represent the information. The animal size is mapped to a shape that makes us think at a feather or a scale. Not the most scientific way to do it, but beautiful result.",
+        chartDescription: "A circular dendrogram on a light background mapping endangered Italian fishes, using cool blue and purple scale-like shapes that radiate from the center to evoke fish scales. The radial spokes encode each species' attributes with a small-multiple shape legend below.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
@@ -2386,21 +3603,37 @@ export const vizList: VizItem[] = [
     },
     {
         id: 150,
-        title: "Climate & Conflict",
+        title: "Climate & Conflict — world map",
         date: new Date(2022, 9),
         author: "Thomas Mayer",
         url: "https://climate-conflict.org",
         img: [
             { full: "climate-and-conflicts-1.png", zoom: "climate-and-conflicts-1-zoom.png", chartId: ["map"] },
-            { full: "climate-and-conflicts-2.png", zoom: "climate-and-conflicts-2-zoom.png", chartId: ["bubbleMap"] },
         ],
         contextDescription: "What is the relation between climate change and violent conflicts? Which role do socio-economic scope conditions play in exacerbating climate impact? How can we allow analysts and policymaker to make better decisions — based on heterogenous, multi-faceted information sources?",
-        chartDescription: "A scrollytelling experience that drives you through several animated map views, all done with a nice dark-mode theme.",
+        chartDescription: "A dark-themed world map rendered as a dotted choropleth, with hand-drawn outlined regions highlighting hotspot areas where climate impact, scope conditions and conflict overlap. A legend at the bottom maps colors to those three dimensions.",
         tools: undefined,
         luminosity: ["dark"],
         interactive: true,
-        labels: ["scrollytelling", "animation", "annotation", "legend"]
-    }, {
+        labels: ["legend", "color palette", "annotation", "highlight"]
+    },
+    {
+        id: 402,
+        title: "Climate & Conflict — bubble map",
+        date: new Date(2022, 9),
+        author: "Thomas Mayer",
+        url: "https://climate-conflict.org",
+        img: [
+            { full: "climate-and-conflicts-2.png", zoom: "climate-and-conflicts-2-zoom.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "What is the relation between climate change and violent conflicts? Which role do socio-economic scope conditions play in exacerbating climate impact? How can we allow analysts and policymaker to make better decisions — based on heterogenous, multi-faceted information sources?",
+        chartDescription: "A proportional symbol map zoomed on Nigeria and neighboring countries, where red bubbles sized by magnitude mark conflict events across the region over a muted dark basemap.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["color palette", "direct labeling", "minimalist"]
+    },
+    {
         id: 151,
         title: "All you need is love",
         date: new Date(2022, 10),
@@ -2415,7 +3648,8 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["radial", "minimalist", "legend"]
-    }, {
+    },
+    {
         id: 152,
         title: "Ebb & Flow",
         date: new Date(2022, 10),
@@ -2430,7 +3664,8 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["flow & arrows", "annotation", "legend", "color palette"]
-    }, {
+    },
+    {
         id: 153,
         title: "Europe and its gaz dependency",
         date: new Date(2022, 9),
@@ -2446,41 +3681,6 @@ export const vizList: VizItem[] = [
         interactive: false,
         labels: ["color palette", "typography", "annotation"]
     },
-
-    // {
-    //     id: 154,
-    //     title: "Geopolitics and Globalization",
-    //     date: new Date(2022, 9),
-    //     author: "Financial Times",
-    //     url: "https://www.ft.com/content/8954a5f8-8f03-4044-8401-f1efefe9791b",
-    //     img: [
-    //         { full: "geopolitics-and-globalization-1.png", zoom: "geopolitics-and-globalization-1-zoom.png", chartId: ["line"] },
-    //         { full: "geopolitics-and-globalization-2.png", zoom: "geopolitics-and-globalization-2-zoom.png", chartId: ["treemap"] },
-    //         { full: "geopolitics-and-globalization-3.png", zoom: "geopolitics-and-globalization-3-zoom.png", chartId: ["scatter"] },
-    //     ],
-    //     contextDescription: "Some charts about globalization, GDP, gini indexes and other economic metrics.",
-    //     chartDescription: "Another set of clean chart examples, always with a good style and some insightful annotation as always for the FT.",
-    //     tools: undefined,
-    //     luminosity: ["light"],
-    //     interactive: false
-    // },
-
-    // {
-    //     id: 155,
-    //     title: "Famous Uni",
-    //     date: new Date(2022, 9),
-    //     author: "Les echos",
-    //     url: "https://media.lesechos.com/api/v1/images/view/633eff162467d568456da8f8/par_defaut/image.jpg",
-    //     img: [
-    //         { full: "famous-uni.png", zoom: "famous-uni-zoom.png", chartId: ["barplot"] },
-    //     ],
-    //     contextDescription: "You're most likely to go to a famous uni if you come from a rich/educated family. This arcticle quantifies this.",
-    //     chartDescription: "Just a barplot, sorted, that communicates a strong message.",
-    //     tools: undefined,
-    //     luminosity: ["light"],
-    //     interactive: false
-    // },
-
     {
         id: 156,
         title: "How far by train",
@@ -2496,7 +3696,8 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["interactive controls", "gradient"]
-    }, {
+    },
+    {
         id: 157,
         title: "The most important problem",
         date: new Date(2022, 9),
@@ -2511,23 +3712,40 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["small multiples", "direct labeling", "color palette", "legend"]
-    }, {
+    },
+    {
         id: 158,
-        title: "How Britain Voted",
+        title: "How Britain Voted — choropleth map",
         date: new Date(2017, 9),
         author: "Gregor Aisch",
         url: "https://driven-by-data.net/2017/06/08/how-britain-voted.html",
         img: [
             { full: "how-britain-voted-1.png", zoom: "how-britain-voted-1-zoom.png", chartId: ["choropleth"] },
-            { full: "how-britain-voted-2.png", zoom: "how-britain-voted-2-zoom.png", chartId: ["cartogram"] },
         ],
         contextDescription: "Checking who voted for what in Britain's election.",
-        chartDescription: "A set of annotated choropleth and hexbin maps accurately describing the results of the election.",
+        chartDescription: "An annotated geographic choropleth map of the UK colored by winning party per constituency, paired with a results table of seats and seat changes, with callout annotations explaining regional outcomes.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "legend", "comparison"]
-    }, {
+        labels: ["annotation", "legend", "direct labeling"]
+    },
+    {
+        id: 423,
+        title: "How Britain Voted — hexbin cartogram",
+        date: new Date(2017, 9),
+        author: "Gregor Aisch",
+        url: "https://driven-by-data.net/2017/06/08/how-britain-voted.html",
+        img: [
+            { full: "how-britain-voted-2.png", zoom: "how-britain-voted-2-zoom.png", chartId: ["cartogram"] },
+        ],
+        contextDescription: "Checking who voted for what in Britain's election.",
+        chartDescription: "Three side-by-side hexbin cartograms of the UK showing the 2015 results, 2017 results, and the change between them, with each constituency rendered as an equal-sized hexagon and a diverging Labour-to-Conservative scale for the shift in margin.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "comparison", "legend", "color palette"]
+    },
+    {
         id: 159,
         title: "Nations Compromised by Terrorism",
         date: new Date(2016, 9),
@@ -2545,21 +3763,51 @@ export const vizList: VizItem[] = [
     },
     {
         id: 160,
-        title: "The billionaire boom",
+        title: "The billionaire boom — stacked barplot",
         date: new Date(2021, 5),
         author: "Financial Times",
         url: "https://www.ft.com/content/747a76dd-f018-4d0d-a9f3-4069bf2f5a93",
         img: [
             { full: "billionaire-boom.png", zoom: "billionaire-boom-zoom.png", chartId: ["barplot"] },
-            { full: "billionaire-boom-2.png", zoom: "billionaire-boom-zoom-2.png", chartId: ["area"] },
-            { full: "billionaire-boom-3.png", zoom: "billionaire-boom-zoom-3.png", chartId: ["barplot"] },
         ],
         contextDescription: "Pandemic stimulus has made the world’s wealthiest wealthier. Ruchir Sharma charts the rise of ‘good’ and ‘bad’ billionaires around the world",
-        chartDescription: "Some clean bar charts and area charts highlighting the reality of a somewhat grim topic. Leading to a <a href='https://twitter.com/NicolasFramont/status/1594648574217928704'>tweet with 13k likes</a>",
+        chartDescription: "A horizontal stacked bar chart ranking countries by billionaires' wealth as a percentage of GDP, with a light segment for the 2020 share and a dark segment for the 2021 increase. Russia and Sweden top the list.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["color palette", "legend", "minimalist", "comparison"]
+        labels: ["color palette", "legend", "comparison", "minimalist"]
+    },
+    {
+        id: 403,
+        title: "The billionaire boom — area chart",
+        date: new Date(2021, 5),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/747a76dd-f018-4d0d-a9f3-4069bf2f5a93",
+        img: [
+            { full: "billionaire-boom-2.png", zoom: "billionaire-boom-zoom-2.png", chartId: ["area"] },
+        ],
+        contextDescription: "Pandemic stimulus has made the world’s wealthiest wealthier. Ruchir Sharma charts the rise of ‘good’ and ‘bad’ billionaires around the world",
+        chartDescription: "A line and filled-area chart tracking the share of US net personal wealth held by the top 0.01% versus the bottom 50% from 1970 to 2019, showing widening inequality. The two diverging lines are directly labeled on the chart.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "color palette", "comparison", "minimalist"]
+    },
+    {
+        id: 404,
+        title: "The billionaire boom — grouped barplot",
+        date: new Date(2021, 5),
+        author: "Financial Times",
+        url: "https://www.ft.com/content/747a76dd-f018-4d0d-a9f3-4069bf2f5a93",
+        img: [
+            { full: "billionaire-boom-3.png", zoom: "billionaire-boom-zoom-3.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Pandemic stimulus has made the world’s wealthiest wealthier. Ruchir Sharma charts the rise of ‘good’ and ‘bad’ billionaires around the world",
+        chartDescription: "A horizontal bar chart split into three color-coded groups (Inherited, 'Bad', 'Good') showing which countries have the largest proportions of billionaires' wealth by source. France leads on inherited wealth.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "comparison", "small multiples", "minimalist"]
     },
     {
         id: 161,
@@ -3313,20 +4561,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 208,
-        title: "Breaking the cycle of homelessness in San Francisco",
+        title: "Breaking the cycle of homelessness in San Francisco — radial dendrogram",
         date: new Date(2025, 4),
         author: "Crankstart",
         url: "https://streetstostability.com/today",
         img: [
             { full: "sf-homeless-dendrogram.png", zoom: "sf-homeless-dendrogram-zoom.png", chartId: ["dendrogram"] },
-            { full: "sf-homeless-sankey.png", zoom: "sf-homeless-sankey-zoom.png", chartId: ["sankey"] },
         ],
         contextDescription: "A report by Crankstart, a San Francisco'based family foundation, addresses San Francisco's homelessness and offers a road map for administrations to build a better system with demonstrable results.",
-        chartDescription: "Sankey diagram shows the flow of people entering and exiting homelessness in San Francisco. It highlights different reasons for homelessness and ways people exit or reenter homelessness. Radial dendrogram, on the other hand, shows the interactions among individuals, service providers, and City agencies, highlighting the complexity of the support system.",
+        chartDescription: "A radial dendrogram arranging 232 service providers around a circle, with curved links connecting them to City agencies (DPH, MOHCD, HSH, etc.) and to three homelessness states. It visualizes the dense, complex ecosystem of support relationships.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["radial", "flow & arrows", "direct labeling", "full-page layout"]
+        labels: ["radial", "full-page layout", "direct labeling", "typography"]
+    },
+    {
+        id: 405,
+        title: "Breaking the cycle of homelessness in San Francisco — sankey",
+        date: new Date(2025, 4),
+        author: "Crankstart",
+        url: "https://streetstostability.com/today",
+        img: [
+            { full: "sf-homeless-sankey.png", zoom: "sf-homeless-sankey-zoom.png", chartId: ["sankey"] },
+        ],
+        contextDescription: "A report by Crankstart, a San Francisco'based family foundation, addresses San Francisco's homelessness and offers a road map for administrations to build a better system with demonstrable results.",
+        chartDescription: "A Sankey diagram tracing the 2024 flow of people in and out of homelessness, from at-risk population through entering, experiencing, and exiting stages. Color-coded ribbons highlight reasons, exits, and re-entry loops back into the next year.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["flow & arrows", "direct labeling", "color palette", "storytelling"]
     },
     {
         id: 209,
@@ -3378,20 +4641,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 212,
-        title: "The Lifespan of News Stories",
+        title: "The Lifespan of News Stories — area chart",
         date: new Date(2019, 1),
         author: "Schema Design",
         url: "https://www.newslifespan.com/",
         img: [
             { full: "news-story-area.png", zoom: "news-story-area-zoom.png", chartId: ["area"] },
-            { full: "news-story-map.png", zoom: "news-story-map-zoom.png", chartId: ["bubbleMap"] },
         ],
         contextDescription: "In collaboration between Schema, Google News Initiative, Alberto Cairo, and Axios, the project analyzes search interest data of the top news stories of 2018.",
-        chartDescription: "Cool animated area chart which shows which stories stay longest in the public view as time passes by. Definitely a cool piece to check out.",
+        chartDescription: "A log-scale area chart tracking the search interest of major 2018 news stories over time, with each colored area showing how stories like Stephen Hawking's death and March for our Lives spike and then fade. Annotations label individual peaks and a category legend and story cards sit below.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["log scale", "animation", "color palette", "annotation"]
+        labels: ["log scale", "annotation", "color palette", "legend"]
+    },
+    {
+        id: 406,
+        title: "The Lifespan of News Stories — bubble map",
+        date: new Date(2019, 1),
+        author: "Schema Design",
+        url: "https://www.newslifespan.com/",
+        img: [
+            { full: "news-story-map.png", zoom: "news-story-map-zoom.png", chartId: ["bubbleMap"] },
+        ],
+        contextDescription: "In collaboration between Schema, Google News Initiative, Alberto Cairo, and Axios, the project analyzes search interest data of the top news stories of 2018.",
+        chartDescription: "A bubble map of the United States showing the geographic distribution of search interest for a news story, with proportionally sized circles placed across the states. A date label sits above and a row of story cards runs along the bottom.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["color palette", "legend", "annotation"]
     },
     {
         id: 213,
@@ -3459,20 +4737,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 217,
-        title: "What our analysis of 900 firms shows about their values",
+        title: "What our analysis of 900 firms shows about their values — beeswarm",
         date: new Date(2025, 6),
         author: "The Economist",
         url: "https://www.economist.com/interactive/business/2025/06/16/corporate-culture",
         img: [
             { full: "employee-review-beeswarm.png", zoom: "employee-review-beeswarm-zoom.png", chartId: ["beeswarm", "bubble"] },
-            { full: "employee-review-scatter.png", zoom: "employee-review-scatter-zoom.png", chartId: ["scatter"] },
         ],
         contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.",
-        chartDescription: "The beeswarm chart shows how each companies are rated into four different measurements. Each dot represents one company and its color represents how well they are scoring on each measurement. You can find a specific company by using filter bars.",
+        chartDescription: "A set of horizontal beeswarm plots, one per culture dimension (work-life balance, toxic culture, leadership, agility). Each dot is a company, positioned from worse to better and colored on a red-to-blue diverging scale, with select companies directly labeled.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
         labels: ["small multiples", "direct labeling", "color palette"]
+    },
+    {
+        id: 407,
+        title: "What our analysis of 900 firms shows about their values — scatter",
+        date: new Date(2025, 6),
+        author: "The Economist",
+        url: "https://www.economist.com/interactive/business/2025/06/16/corporate-culture",
+        img: [
+            { full: "employee-review-scatter.png", zoom: "employee-review-scatter-zoom.png", chartId: ["scatter"] },
+        ],
+        contextDescription: "How do employees rate their company's work-life balance? The Economist, in partnership with CultureX, a research and AI firm, measures corporate culture across 900 firms in 19 industries. The measurement expressed in the graph is divided into four: work-life balance, toxic culture, leadership, and agility.",
+        chartDescription: "A scatterplot relating leadership scores (x-axis) to another culture metric, with a fitted trend line showing a strong positive correlation. Points are colored red-to-blue and many companies are directly labeled across the cloud.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["direct labeling", "color palette", "annotation"]
     },
     {
         id: 218,
@@ -3572,57 +4865,147 @@ export const vizList: VizItem[] = [
     },
     {
         id: 224,
-        title: "A Promising Horizon: How the 2025-2027 Horizon Europe strategic plan will shape Europe's tomorrow",
+        title: "A Promising Horizon: How the 2025-2027 Horizon Europe strategic plan will shape Europe's tomorrow — slope chart",
         date: new Date(2025, 6),
         author: "Nadieh Bremer",
         url: "https://data.europa.eu/en/publications/datastories/promising-horizon-how-2025-2027-horizon-europe-strategic-plan-will-shape",
         img: [
             { full: "EU-economy-slope.png", zoom: "EU-economy-slope-zoom.png", chartId: ["line"] },
-            { full: "EU-economy-map.png", zoom: "EU-economy-map-zoom.png", chartId: ["map", "choropleth"] },
-            { full: "EU-economy-bar.png", zoom: "EU-economy-bar-zoom.png", chartId: ["barplot"] },
         ],
         contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.",
-        chartDescription: "Three charts are shown in this piece. One a slope chart comparing EU's average raw material consumption, a map that highlights rise in sea levels in the Ebro River Delta, and a bar chart showing EU citizens' attitude toward AI.",
+        chartDescription: "A slope chart comparing EU member states' raw material consumption per capita between 2013 and 2023, with the EU average drawn in turquoise and Finland, Sweden and Malta highlighted in pink while all other countries are greyed out.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["highlight", "annotation", "typography"]
+        labels: ["highlight", "annotation", "direct labeling", "typography"]
+    },
+    {
+        id: 408,
+        title: "A Promising Horizon: How the 2025-2027 Horizon Europe strategic plan will shape Europe's tomorrow — map",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/promising-horizon-how-2025-2027-horizon-europe-strategic-plan-will-shape",
+        img: [
+            { full: "EU-economy-map.png", zoom: "EU-economy-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.",
+        chartDescription: "A detailed map of the Ebro River Delta in Spain on a dark navy background, using a diverging color scale to show water occurrence change intensity (decrease to increase) since 1984.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["color palette", "legend", "typography"]
+    },
+    {
+        id: 409,
+        title: "A Promising Horizon: How the 2025-2027 Horizon Europe strategic plan will shape Europe's tomorrow — diverging bars",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/promising-horizon-how-2025-2027-horizon-europe-strategic-plan-will-shape",
+        img: [
+            { full: "EU-economy-bar.png", zoom: "EU-economy-bar-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "One of the three EU's Data Stories created by Nadieh Bremer, the first piece explores the 2025-2027 Horizon Europe strategic plan that plans to invest in circular economy, space, and AI.",
+        chartDescription: "A small-multiples set of stacked diverging bar charts, one per EU member state, showing how important citizens feel public authorities should treat shaping AI to respect rights and values, with a sequential blue-to-pink palette spanning 'very important' to 'not at all important'.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "color palette", "legend", "direct labeling"]
     },
     {
         id: 225,
-        title: "Leisure in Europe: Insights from open data",
+        title: "Leisure in Europe: Insights from open data — bubble grid",
         date: new Date(2025, 6),
         author: "Nadieh Bremer",
         url: "https://data.europa.eu/en/publications/datastories/leisure-europe-insights-open-data",
         img: [
             { full: "EU-leisure-circle.png", zoom: "EU-leisure-circle-zoom.png", chartId: ["bubble"] },
-            { full: "EU-leisure-circle-two.png", zoom: "EU-leisure-circle-two-zoom.png", chartId: ["bubble"] },
-            { full: "EU-leisure-map.png", zoom: "EU-leisure-map-zoom.png", chartId: ["map", "choropleth"] },
         ],
         contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.",
-        chartDescription: "The first data visualization shows the average share of household spending allocated to dining out in across Europe with each circle scaled to the percent of household expenditure. Second chart shows how EU citizens celebrate summer season, ending the piece with a map  highlighting shares of tourists during the summer.",
+        chartDescription: "A small-multiples grid where each EU country is shown as a single circle scaled to the share of household spending on dining out, colored by European region. A legend maps the four region colors and a plate-and-cutlery pictogram anchors the EU average.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
         labels: ["small multiples", "legend", "icons & pictograms", "color palette"]
     },
     {
+        id: 410,
+        title: "Leisure in Europe: Insights from open data — multi-bubble clusters",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/leisure-europe-insights-open-data",
+        img: [
+            { full: "EU-leisure-circle-two.png", zoom: "EU-leisure-circle-two-zoom.png", chartId: ["bubble"] },
+        ],
+        contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.",
+        chartDescription: "A small-multiples grid of countries, each shown as a cluster of four overlapping circles sized by the share of people participating in cultural sites, sports events, cinema and live performances. Direct percentage labels sit around each cluster and a color legend identifies the four activity types.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "legend", "direct labeling", "color palette"]
+    },
+    {
+        id: 411,
+        title: "Leisure in Europe: Insights from open data — choropleth map",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/leisure-europe-insights-open-data",
+        img: [
+            { full: "EU-leisure-map.png", zoom: "EU-leisure-map-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "Second piece for EU's Data Stories, created by Nadieh Bremer, covers leisure, culture and tourism in Europe.",
+        chartDescription: "A choropleth map of Europe shading each NUTS 2 region by the share of annual guest nights occurring in summer, using a diverging blue-to-pink gradient. Southern coastal regions stand out in pink to highlight their strong summer tourism concentration.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "gradient", "color palette"]
+    },
+    {
         id: 226,
-        title: "Health and well-being in the EU: Investing where it matters",
+        title: "Health and well-being in the EU: Investing where it matters — Voronoi treemap",
         date: new Date(2025, 6),
         author: "Nadieh Bremer",
         url: "https://data.europa.eu/en/publications/datastories/health-and-well-being-eu-investing-where-it-matters",
         img: [
             { full: "EU-healthcare-voronoi1.png", zoom: "EU-healthcare-voronoi1-zoom.png", chartId: ["circularPacking"] },
-            { full: "EU-healthcare-voronoi2.png", zoom: "EU-healthcare-voronoi2-zoom.png", chartId: ["circularPacking"] },
-            { full: "EU-healthcare-voronoi3.png", zoom: "EU-healthcare-voronoi3-zoom.png", chartId: ["circularPacking"] },
         ],
         contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.",
-        chartDescription: "The Voronoi Treemap in this piece shows shares of public health spending across the EU as well as some major preventable causes of death, ending with diverse reasons for missing needed medical care.",
+        chartDescription: "A single large circular Voronoi treemap showing the leading causes of death in the EU in 2022, grouped into preventable (44%), treatable (23%) and unavoidable (33%) categories. Each cell is a specific cause of death scaled by the number of deaths, color-coded by category.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
         labels: ["color palette", "annotation", "direct labeling"]
+    },
+    {
+        id: 412,
+        title: "Health and well-being in the EU: Investing where it matters — small multiples",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/health-and-well-being-eu-investing-where-it-matters",
+        img: [
+            { full: "EU-healthcare-voronoi2.png", zoom: "EU-healthcare-voronoi2-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.",
+        chartDescription: "A grid of small circular Voronoi treemaps, one per EU member state, each splitting that country's total health budget into spending subcategories, with the EU aggregate enlarged in the center. A stacked area chart below shows the share of total health expenditure over the past decade.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "color palette", "annotation", "comparison"]
+    },
+    {
+        id: 413,
+        title: "Health and well-being in the EU: Investing where it matters — radial breakdown",
+        date: new Date(2025, 6),
+        author: "Nadieh Bremer",
+        url: "https://data.europa.eu/en/publications/datastories/health-and-well-being-eu-investing-where-it-matters",
+        img: [
+            { full: "EU-healthcare-voronoi3.png", zoom: "EU-healthcare-voronoi3-zoom.png", chartId: ["circularPacking"] },
+        ],
+        contextDescription: "The last piece for the European Union, this project uses open data on healthcare spending to analyze healthcare access throughout the EU.",
+        chartDescription: "A grid of small circular charts, one per EU country, each scaled to the share of people reporting unmet health needs and broken down by reason, with a large central EU circle splitting into wedges like waiting time, too expensive, and fear of treatment. A categorical color legend at the bottom maps each reason.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "radial", "legend", "color palette"]
     },
     {
         id: 227,
@@ -4074,20 +5457,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 255,
-        title: "Brussels. A lovely Melting Pot.",
+        title: "Brussels. A lovely Melting Pot. — voronoi treemap",
         date: new Date(2025, 1),
         author: "Karim Douieb",
         url: "https://brussels-diversity.jetpack.ai/",
         img: [
             { full: "brussell-voronoi-treemap.png", zoom: "brussell-voronoi-treemap-zoom.png", chartId: ["voronoi", "treemap"] },
+        ],
+        contextDescription: "A data viz essay exploring Brussels and its people.",
+        chartDescription: "Three side-by-side circular charts on a light background showing where foreigners in Brussels come from, broken down by continents, subregions, and countries. The leftmost pies progress into a voronoi-style treemap of countries on the right, each accompanied by a ranked legend with percentages and counts.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "legend", "comparison", "color palette"]
+    },
+    {
+        id: 414,
+        title: "Brussels. A lovely Melting Pot. — map",
+        date: new Date(2025, 1),
+        author: "Karim Douieb",
+        url: "https://brussels-diversity.jetpack.ai/",
+        img: [
             { full: "brussell-map.png", zoom: "brussell-map-zoom.png", chartId: ["map"] },
         ],
         contextDescription: "A data viz essay exploring Brussels and its people.",
-        chartDescription: "",
+        chartDescription: "A dark grid of small-multiple dot-density maps of Brussels, one per origin group (Belgians, EU15, North African, Turkish, etc.), each colored differently to show where residents live. A larger combined map at the bottom plus an annotation conclude that segregation is present in the city.",
         tools: undefined,
-        luminosity: ["light", "dark"],
+        luminosity: ["dark"],
         interactive: true,
-        labels: ["small multiples", "legend", "comparison", "direct labeling"]
+        labels: ["small multiples", "color palette", "annotation", "storytelling"]
     },
     {
         id: 256,
@@ -4107,26 +5505,131 @@ export const vizList: VizItem[] = [
     },
     {
         id: 257,
-        title: "Mapping the future of the AU-EU partnership",
+        title: "Mapping the future of the AU-EU partnership — infrastructure map",
         date: new Date(2023, 1),
         author: "European Union Institute for Security Studies (EUISS)",
         url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
         img: [
             { full: "EU-AU-relation-map-1.png", zoom: "EU-AU-relation-map-1-zoom.png", chartId: ["map"] },
-            { full: "EU-AU-relation-choropleth-1.png", zoom: "EU-AU-relation-choropleth-1-zoom.png", chartId: ["map", "choropleth"] },
-            { full: "EU-AU-relation-choropleth-2.png", zoom: "EU-AU-relation-choropleth-2-zoom.png", chartId: ["map", "choropleth"] },
-            { full: "EU-AU-relation-treemap.png", zoom: "EU-AU-relation-treemap-zoom.png", chartId: ["treemap"] },
-            { full: "EU-AU-relation-heatmap.png", zoom: "EU-AU-relation-heatmap-zoom.png", chartId: ["heatmap"] },
-            { full: "EU-AU-relation-line-1.png", zoom: "EU-AU-relation-line-1-zoom.png", chartId: ["line"] },
-            { full: "EU-AU-relation-connnected-dot-1.png", zoom: "EU-AU-relation-connnected-dot-1-zoom.png", chartId: ["connectedScatter"] },
-            { full: "EU-AU-relation-correlogram-1.png", zoom: "EU-AU-relation-correlogram-1-zoom.png", chartId: ["correlogram"] },
         ],
         contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
-        chartDescription: "The 57 page report has at least one data viz for every page, impressive!",
+        chartDescription: "A detailed reference map of Africa plotting transport and settlement infrastructure: airports, ports, roads, railroads, urban areas and water bodies, with a categorical legend on a light background.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["legend", "small multiples", "minimalist"]
+        labels: ["legend", "icons & pictograms", "minimalist"]
+    },
+    {
+        id: 415,
+        title: "Mapping the future of the AU-EU partnership — night lights map",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-choropleth-1.png", zoom: "EU-AU-relation-choropleth-1-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "Two side-by-side satellite night-light maps of Africa (1992 vs 2018) on a dark background, comparing electrification and population intensity, with annotations pointing to specific regions.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["annotation", "comparison", "small multiples"]
+    },
+    {
+        id: 416,
+        title: "Mapping the future of the AU-EU partnership — choropleth map",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-choropleth-2.png", zoom: "EU-AU-relation-choropleth-2-zoom.png", chartId: ["map", "choropleth"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A multivariate map of Africa combining a land-use choropleth with coastal fishing-intensity and port-call symbols, using bivariate-style color encodings and several explanatory annotations.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["bivariate coloring", "annotation", "legend"]
+    },
+    {
+        id: 417,
+        title: "Mapping the future of the AU-EU partnership — treemap",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-treemap.png", zoom: "EU-AU-relation-treemap-zoom.png", chartId: ["treemap"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A treemap of debt obligations acquired by African countries (2015-2020), with each country a rectangle subdivided by creditor group and colored by category, sized by debt value with direct labels.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "direct labeling", "comparison"]
+    },
+    {
+        id: 418,
+        title: "Mapping the future of the AU-EU partnership — heatmap",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-heatmap.png", zoom: "EU-AU-relation-heatmap-zoom.png", chartId: ["heatmap"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A heatmap showing how African countries voted against the African majority at the UN over time, with countries on the y-axis and years on the x-axis, encoded by colored cells alongside an explanatory text block.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "direct labeling", "legend"]
+    },
+    {
+        id: 419,
+        title: "Mapping the future of the AU-EU partnership — small multiples line charts",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-line-1.png", zoom: "EU-AU-relation-line-1-zoom.png", chartId: ["line"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A grid of small-multiple line charts on education indicators, one minimalist sparkline-style trend per country, arranged in a tidy matrix with direct country labels.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "direct labeling", "minimalist"]
+    },
+    {
+        id: 420,
+        title: "Mapping the future of the AU-EU partnership — connected scatter",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-connnected-dot-1.png", zoom: "EU-AU-relation-connnected-dot-1-zoom.png", chartId: ["connectedScatter"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A connected scatterplot on food sovereignty tracing the relationship between food availability and sustainability over time, with a labeled trajectory and surrounding explanatory text.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["annotation", "direct labeling", "legend"]
+    },
+    {
+        id: 421,
+        title: "Mapping the future of the AU-EU partnership — diagonal dot chart",
+        date: new Date(2023, 1),
+        author: "European Union Institute for Security Studies (EUISS)",
+        url: "https://www.iss.europa.eu/sites/default/files/EUISSFiles/CP_180_screen_small.pdf",
+        img: [
+            { full: "EU-AU-relation-correlogram-1.png", zoom: "EU-AU-relation-correlogram-1-zoom.png", chartId: ["correlogram"] },
+        ],
+        contextDescription: "In partnership between the European Union (EU) and the African Union (AU), The European Union Institute for Security Studies published a data-heavy report on EU-AU relations.",
+        chartDescription: "A diagonal dot-based correlogram of leading causes of death, with categories arranged along a 45-degree axis and colored dots grouped by disease type, accompanied by a categorical legend.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "legend", "direct labeling"]
     },
     {
         id: 258,
@@ -4162,20 +5665,35 @@ export const vizList: VizItem[] = [
     },
     {
         id: 260,
-        title: "Chocolate Wars!",
+        title: "Chocolate Wars! — radar chart",
         date: new Date(2024, 8),
         author: "Surbhi Bhatia",
         url: "https://surbhi-bh.github.io/chocolate-wars/",
         img: [
             { full: "chocolate-war-radar.png", zoom: "chocolate-war-radar-zoom.png", chartId: ["radar"] },
-            { full: "chocolate-war-barplot.png", zoom: "chocolate-war-barplot-zoom.png", chartId: ["barplot"] },
         ],
         contextDescription: "Does U.S. chocolate taste poorly compared to the same ones produced in Europe? Surbhi Bhatia uses data of each chocolate ingredients to find it out.",
-        chartDescription: "Fun use of KitKat images to replace the conventional bars in the barchart. The radar chart compares three essential components for chocolate (sugar, fat, and cocoa) between American and European chocolate products.",
+        chartDescription: "Two triangular radar charts comparing US versus UK versions of Dairy Milk and Kit Kat across sugar, fat, and cocoa, with annotated callouts highlighting that the US versions have more sugar, less fat, and less chocolate.",
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["radial", "comparison", "highlight", "annotation"]
+        labels: ["radial", "comparison", "annotation", "color palette"]
+    },
+    {
+        id: 422,
+        title: "Chocolate Wars! — barplot",
+        date: new Date(2024, 8),
+        author: "Surbhi Bhatia",
+        url: "https://surbhi-bh.github.io/chocolate-wars/",
+        img: [
+            { full: "chocolate-war-barplot.png", zoom: "chocolate-war-barplot-zoom.png", chartId: ["barplot"] },
+        ],
+        contextDescription: "Does U.S. chocolate taste poorly compared to the same ones produced in Europe? Surbhi Bhatia uses data of each chocolate ingredients to find it out.",
+        chartDescription: "A horizontal bar chart of minimum cocoa-solids requirements across countries, using Kit Kat bar images in place of conventional bars and an annotation noting the FAO 25% standard for milk chocolate.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["icons & pictograms", "annotation", "texture", "comparison"]
     },
     {
         id: 261,
@@ -5032,7 +6550,7 @@ export const vizList: VizItem[] = [
         author: "Amanda Shendruk",
         url: "https://www.not-ship.com/birds-might-help-us-get-through-this/",
         img: [
-            { full: "UK-bird-joy-rating-not-ship.png", zoom: "UK-bird-joy-rating-not-ship-zoom.png", chartId: ["lollipop"] },
+            { full: "UK-bird-joy-rating-not-ship.png", zoom: "UK-bird-joy-rating-not-ship-zoom-2.png", chartId: ["lollipop"] },
         ],
         contextDescription: "A visualization that ranks bird types using data of joy rating for common UK birds.",
         chartDescription: "A joy rating for each bird type, with line representing 95% confidence interval.",
