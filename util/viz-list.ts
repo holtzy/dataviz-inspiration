@@ -1,4 +1,3 @@
-import { TreeDeciduousIcon } from "lucide-react";
 import { ChartId } from "./sectionDescription";
 
 export const allTools = ["R", "python", "tableau", "data wrapper", "d3.js", "react", "excel", "javascript", "rawGraphs", "illustrator"] as const;
@@ -54,6 +53,7 @@ export type VizItem = {
     luminosity: Luminosity[];
     interactive: boolean
     labels?: VizLabel[]; // cross-cutting design techniques / features (see vizLabels above)
+    favorite?: boolean; // hand-picked favorites, shown first on the homepage
 }
 
 export const vizList: VizItem[] = [
@@ -68,7 +68,8 @@ export const vizList: VizItem[] = [
         chartDescription: "The New York Times <a href='https://twitter.com/FreedZach/status/1479132573578240001'>literally broke the internet</a> with this circular streamgraph. The dataviz community is divided, trying to understand if this unconventional figure is pure genius or trash, since it does not respect most of the comon rules.<br/><br/>Hint: when so many people talk about a chart, there is probably something good about it!",
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "direct labeling", "minimalist", "radial"]
+        labels: ["annotation", "direct labeling", "minimalist", "radial"],
+        favorite: true
     },
     {
         id: 2,
@@ -82,7 +83,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
         luminosity: ["dark"],
         interactive: true,
-        labels: ["interactive controls", "animation", "tooltip"]
+        labels: ["interactive controls", "animation", "tooltip"],
+        favorite: true
     },
     {
         id: 322,
@@ -699,7 +701,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light", "dark"],
         interactive: false,
-        labels: ["minimalist", "color palette", "gradient"]
+        labels: ["minimalist", "color palette", "gradient"],
+        favorite: true
     },
     {
         id: 41,
@@ -1007,7 +1010,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "color palette", "storytelling"]
+        labels: ["annotation", "color palette", "storytelling"],
+        favorite: true
     },
     {
         id: 332,
@@ -1329,7 +1333,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "d3.js", link: undefined }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["flow & arrows", "annotation", "direct labeling", "color palette"]
+        labels: ["flow & arrows", "annotation", "direct labeling", "color palette"],
+        favorite: true
     },
     {
         id: 343,
@@ -1525,7 +1530,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["flow & arrows", "highlight", "minimalist"]
+        labels: ["flow & arrows", "highlight", "minimalist"],
+        favorite: true
     },
     {
         id: 82,
@@ -1847,7 +1853,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/j.lia.borsi5912/viz/VisitVincent/VisitVincent" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["flow & arrows", "full-page layout", "typography", "color palette"]
+        labels: ["flow & arrows", "full-page layout", "typography", "color palette"],
+        favorite: true
     },
     {
         id: 96,
@@ -2113,7 +2120,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "rawGraphs", link: undefined }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["texture", "direct labeling", "color palette"]
+        labels: ["texture", "direct labeling", "color palette"],
+        favorite: true
     },
     {
         id: 109,
@@ -2141,7 +2149,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "color palette", "direct labeling"]
+        labels: ["annotation", "color palette", "direct labeling"],
+        favorite: true
     },
     {
         id: 362,
@@ -2533,7 +2542,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: true,
-        labels: ["color palette", "bivariate coloring", "minimalist"]
+        labels: ["color palette", "bivariate coloring", "minimalist"],
+        favorite: true
     },
     {
         id: 384,
@@ -2855,7 +2865,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: false,
-        labels: ["radial", "color palette", "legend"]
+        labels: ["radial", "color palette", "legend"],
+        favorite: true
     },
     {
         id: 126,
@@ -2897,7 +2908,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: false,
-        labels: ["radial", "color palette"]
+        labels: ["radial", "color palette"],
+        favorite: true
     },
     {
         id: 129,
@@ -2911,7 +2923,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/jeffrey.shaffer/viz/RemixingRoslinginTableau/RemixingRosling" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["highlight", "direct labeling", "annotation"]
+        labels: ["highlight", "direct labeling", "annotation"],
+        favorite: true
     },
     {
         id: 130,
@@ -3051,7 +3064,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/soha.elghany/viz/MissingMigrantsprintpt_1/Dashboard13" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["color palette", "legend", "annotation"]
+        labels: ["color palette", "legend", "annotation"],
+        favorite: true
     },
     {
         id: 138,
@@ -3135,7 +3149,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/tam.s.varga/viz/FloodPhenomenainEurope/FloodPhenomenainEurope" }],
         luminosity: ["dark"],
         interactive: false,
-        labels: ["color palette", "annotation", "storytelling"]
+        labels: ["color palette", "annotation", "storytelling"],
+        favorite: true
     },
     {
         id: 143,
@@ -3205,7 +3220,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["radial", "gradient", "color palette", "small multiples"]
+        labels: ["radial", "gradient", "color palette", "small multiples"],
+        favorite: true
     },
     {
         id: 401,
@@ -3345,7 +3361,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["small multiples", "direct labeling", "color palette", "legend"]
+        labels: ["small multiples", "direct labeling", "color palette", "legend"],
+        favorite: true
     },
     {
         id: 158,
@@ -3527,7 +3544,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["annotation", "direct labeling", "highlight"]
+        labels: ["annotation", "direct labeling", "highlight"],
+        favorite: true
     },
     {
         id: 168,
@@ -4211,7 +4229,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["annotation", "gradient", "color palette"]
+        labels: ["annotation", "gradient", "color palette"],
+        favorite: true
     },
     {
         id: 215,
@@ -4351,7 +4370,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["flow & arrows", "interactive controls", "color palette"]
+        labels: ["flow & arrows", "interactive controls", "color palette"],
+        favorite: true
     },
     {
         id: 224,
@@ -4505,7 +4525,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "storytelling"]
+        labels: ["annotation", "storytelling"],
+        favorite: true
     },
     {
         id: 229,
@@ -4673,7 +4694,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["log scale", "color palette", "direct labeling"]
+        labels: ["log scale", "color palette", "direct labeling"],
+        favorite: true
     },
     {
         id: 241,
@@ -4729,7 +4751,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: true,
-        labels: ["radial", "interactive controls", "color palette"]
+        labels: ["radial", "interactive controls", "color palette"],
+        favorite: true
     },
     {
         id: 245,
@@ -4869,7 +4892,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: true,
-        labels: ["small multiples", "color palette", "direct labeling"]
+        labels: ["small multiples", "color palette", "direct labeling"],
+        favorite: true
     },
     {
         id: 255,
@@ -4925,7 +4949,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["legend", "icons & pictograms", "minimalist"]
+        labels: ["legend", "icons & pictograms", "minimalist"],
+        favorite: true
     },
     {
         id: 415,
@@ -5639,7 +5664,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "gradient", "color palette", "direct labeling"]
+        labels: ["annotation", "gradient", "color palette", "direct labeling"],
+        favorite: true
     },
     {
         id: 302,
@@ -5737,7 +5763,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["gradient", "annotation", "legend"]
+        labels: ["gradient", "annotation", "legend"],
+        favorite: true
     },
     {
         id: 309,
@@ -5877,7 +5904,8 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
-        labels: ["highlight", "annotation", "direct labeling"]
+        labels: ["highlight", "annotation", "direct labeling"],
+        favorite: true
     },
     {
         id: 319,
@@ -5905,7 +5933,8 @@ export const vizList: VizItem[] = [
         tools: [{ name: "d3.js" }],
         luminosity: ["light"],
         interactive: false,
-        labels: ["annotation", "direct labeling", "comparison"]
+        labels: ["annotation", "direct labeling", "comparison"],
+        favorite: true
     },
     {
         id: 321,
