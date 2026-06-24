@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
 import "./globals.css";
 import { Suspense } from "react";
+import { Toaster } from "../components/ui/sonner";
+import { NewsletterToast } from "../components/Newsletter/NewsletterToast";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dataviz-inspiration.com"),
@@ -49,6 +50,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense fallback={""}>{children}</Suspense>
+        <Toaster />
+        <NewsletterToast />
       </body>
       <GoogleAnalytics gaId="G-TRQ20SZLV3" />
     </html>
