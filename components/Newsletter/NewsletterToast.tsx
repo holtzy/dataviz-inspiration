@@ -9,7 +9,7 @@ import { NewsletterForm } from "./NewsletterForm";
 // Mounted once in the root layout, so the timer runs a single time per page load.
 // A sessionStorage flag keeps it from re-appearing during the same visit.
 const STORAGE_KEY = "newsletter-toast-shown";
-const DELAY_MS = 2000;
+const DELAY_MS = 10000;
 
 export const NewsletterToast = () => {
   useEffect(() => {

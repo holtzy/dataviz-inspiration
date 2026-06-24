@@ -5920,5 +5920,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["bivariate coloring", "legend", "annotation", "interactive controls"]
+    },
+    {
+        id: 424,
+        title: "Years in office per government (Britain v Italy)",
+        date: new Date(2026, 5),
+        author: "Filippo Teoldi",
+        url: "https://www.linkedin.com/posts/filippo-teoldi-38a88b67_the-italian-prime-minister-has-now-seen-off-share-7474791311007686656-KGfR/",
+        img: { full: "britain-italy-years-in-office.png", zoom: "britain-italy-years-in-office-zoom.png", chartId: ["timeseries", "line", "area"] },
+        contextDescription: "A playful comparison of political (in)stability between Britain and Italy. Each government is drawn as a triangle whose height is how long it stayed in office — Britain pointing up, Italy down. The punchline: Giorgia Meloni's government has already outlasted three British prime ministers, and by September 2026 it will be the longest-serving Italian government ever.",
+        chartDescription: "An unusual mirror chart where each government is a right triangle: the line climbs with every year in office and the area beneath fills in as it grows. I'm a bit skeptical — both axes encode time, so there's some redundancy, and since the area scales with the square of the duration it visually inflates the long-lived governments. But it's original, instantly readable and genuinely fun, which is exactly why I wanted to showcase it.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "direct labeling", "minimalist"]
     }
 ]
