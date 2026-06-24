@@ -1,7 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import { Mail } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { NewsletterForm } from "./Newsletter/NewsletterForm";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -81,14 +91,23 @@ export default function Navbar() {
                 </Menu.Items>
               </Transition>
             </Menu>
-            <a
-              href="https://blog.yan-holtz.com/"
-              style={{ textDecoration: "none" }}
-            >
-              <span className="font-light mr-4 cursor-pointer text-gray-600 hover:text-black ml-3 border border-gray-300 rounded-md p-2">
-                Subscribe
-              </span>
-            </a>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="Subscribe to the newsletter"
+                  className="ml-3 mr-4 p-2 text-gray-600 hover:text-black cursor-pointer"
+                >
+                  <Mail className="h-5 w-5" />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-md">
+                <DialogTitle className="sr-only">
+                  Subscribe to the newsletter
+                </DialogTitle>
+                <NewsletterForm source="navbar" />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
