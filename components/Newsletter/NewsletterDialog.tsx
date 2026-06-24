@@ -1,12 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "../ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
 import { KitInlineForm } from "./KitInlineForm";
 
 // The newsletter signup modal opened from the navbar's envelope icon.
@@ -30,7 +25,7 @@ export const NewsletterDialog = () => {
           receive the gems I find, every now and then?
         </p>
         <div className="-translate-x-3">
-          <KitInlineForm source="navbar" height={200} className="" />
+          <KitInlineForm source="navbar" height={100} className="" />
         </div>
         <p className="text-sm text-gray-800">
           Join 19,000+ subscribers. Opt out whenever you want.
