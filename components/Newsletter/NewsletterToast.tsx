@@ -13,9 +13,9 @@ const DELAY_MS = 10000;
 
 export const NewsletterToast = () => {
   useEffect(() => {
-    // if (sessionStorage.getItem(STORAGE_KEY)) {
-    //   return;
-    // }
+    if (sessionStorage.getItem(STORAGE_KEY)) {
+      return;
+    }
 
     const timer = setTimeout(() => {
       sessionStorage.setItem(STORAGE_KEY, "1");
