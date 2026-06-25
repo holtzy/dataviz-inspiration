@@ -40,7 +40,8 @@ export const WallFilters = ({
           <ChartIdSelector selectedChart={selectedChart} />
         </FilterWrapper>
 
-        <FilterWrapper>
+        {/* Tools filter is hidden on phones to save horizontal space */}
+        <FilterWrapper className="hidden sm:flex">
           <ToolSelector tools={tools} />
         </FilterWrapper>
 
@@ -57,9 +58,16 @@ export const WallFilters = ({
   );
 };
 
-const FilterWrapper = (props: { children: JSX.Element }) => {
+const FilterWrapper = (props: {
+  children: JSX.Element;
+  className?: string;
+}) => {
   return (
-    <div className="flex h-8 px-2 mx-2 py-2 my-2 hover:outline outline-1 rounded-md outline-gray-200">
+    <div
+      className={`flex h-8 px-2 mx-2 py-2 my-2 hover:outline outline-1 rounded-md outline-gray-200 ${
+        props.className ?? ""
+      }`}
+    >
       {props.children}
     </div>
   );
