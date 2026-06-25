@@ -54,35 +54,62 @@ export default function Page() {
         </div>
 
         <div className="wrapper mb-4">
-          <div className="flex items-center space-x-4 text-sm">
-            <div className="max-w-sm">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-0 sm:space-x-4 text-sm">
+            <div className="max-w-sm text-center sm:text-left">
               <p className="text-lg">{chartTypeInfo.description}</p>
             </div>
 
-            <Separator orientation="vertical" />
+            {/* Sections below (count + tutorial links) only show from sm up */}
+            <Separator orientation="vertical" className="hidden sm:block" />
 
-            <div className="flex flex-col gap-4 items-center justify-center w-24 h-full">
+            <div className="hidden sm:flex flex-col gap-4 items-center justify-center w-24 h-full">
               <div>
                 <BigNumber number={vizItemNumber} />
               </div>
               <p>Projects</p>
             </div>
 
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="hidden sm:block" />
 
-            <div>
+            <div className="hidden sm:block">
               <p className="text-sm text-gray-500">
                 {"Learn more about " + chartTypeInfo.label}{" "}
               </p>
               <div className="my-1">
-                <Pill text="Data To Viz" />
+                <a
+                  href={chartTypeInfo.dataToVizURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Pill text="Data To Viz" />
+                </a>
               </div>
               <p className="text-sm text-gray-500 mt-6">Code tutorials</p>
               <div className="my-1 flex gap-1">
-                <Pill text="R" />
-                <Pill text="Python" />
-                <Pill text="D3.js" />
-                <Pill text="React" />
+                <a href={chartTypeInfo.rURL} target="_blank" rel="noopener noreferrer">
+                  <Pill text="R" />
+                </a>
+                <a
+                  href={chartTypeInfo.pythonURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Pill text="Python" />
+                </a>
+                <a
+                  href={chartTypeInfo.d3URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Pill text="D3.js" />
+                </a>
+                <a
+                  href={chartTypeInfo.reactURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Pill text="React" />
+                </a>
               </div>
             </div>
           </div>

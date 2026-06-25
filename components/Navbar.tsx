@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -21,7 +20,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/">
               <span className="relative  w-8 h-8 cursor-pointer">
-                <Image
+                <img
                   alt={"project logo"}
                   src={"/logo_big.png"}
                   width={30}
