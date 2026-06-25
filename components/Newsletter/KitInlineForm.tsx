@@ -24,7 +24,7 @@ export const KitInlineForm = ({ source, className }: KitInlineFormProps) => {
       title="Subscribe to the newsletter"
       loading="lazy"
       className={className}
-      style={{ width: "100%", height: 128, border: "none" }}
+      style={{ width: "100%", height: 160, border: "none" }}
     />
   );
 };

@@ -13,6 +13,7 @@ import { vizList } from "../../util/viz-list";
 import { filterVizList } from "../../util/filterVizList";
 import { VerticalSeparator } from "../../components/VerticalSeparator";
 import SectionLogo from "../../components/SectionLogo";
+import { KitEmbedForm } from "../../components/Newsletter/KitEmbedForm";
 
 export type Project = { projectId: number };
 
@@ -31,7 +32,7 @@ export default function Page() {
     vizList,
     undefined,
     chartType,
-    undefined
+    undefined,
   );
 
   const vizItemNumber = filteredVizList.length;
@@ -86,7 +87,11 @@ export default function Page() {
               </div>
               <p className="text-sm text-gray-500 mt-6">Code tutorials</p>
               <div className="my-1 flex gap-1">
-                <a href={chartTypeInfo.rURL} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={chartTypeInfo.rURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Pill text="R" />
                 </a>
                 <a
@@ -116,6 +121,25 @@ export default function Page() {
         </div>
 
         <PictureWall />
+
+        {/* Newsletter call-to-action below the wall */}
+        <div className="mt-16 mb-20 flex flex-col items-center text-center px-6">
+          <h2 className="!text-5xl">Want more?</h2>
+          <p className="max-w-md mt-4 text-gray-600">
+            I hunt down the best {chartTypeInfo.label.toLowerCase()} examples —
+            and every other kind of chart — all year long. Join the newsletter
+            to get the finest dataviz inspiration delivered straight to your
+            inbox.
+          </p>
+          {/* pt-16 compensates for the form's custom margin-top: -40px set in Kit,
+              so the pulled-up form doesn't overlap the paragraph above. */}
+          <div className="w-full max-w-md pt-16">
+            <KitEmbedForm />
+          </div>
+          <p className="text-xs text-gray-400 mt-2">
+            Join 19,000+ subscribers. Opt out anytime.
+          </p>
+        </div>
       </main>
 
       <div className="wrapper">
