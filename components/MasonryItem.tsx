@@ -1,4 +1,4 @@
-import { VizItem } from "../util/viz-list";
+import { VizItem } from "../util/viz-types";
 
 // A "MasonryItem" is just an image displayed on the main wall.
 // When hovered, an additional layer appears to provide some more information (with a sliding animation)

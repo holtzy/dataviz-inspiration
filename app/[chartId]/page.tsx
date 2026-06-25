@@ -9,7 +9,7 @@ import { PictureWall } from "../../components/PictureWall";
 import BigNumber from "../../components/BigNumber";
 import { Separator } from "../../components/ui/separator";
 import { Pill } from "../../components/Pill";
-import { vizList } from "../../util/viz-list";
+import { fullVizList } from "../../util/viz-list";
 import { filterVizList } from "../../util/filterVizList";
 import { VerticalSeparator } from "../../components/VerticalSeparator";
 import SectionLogo from "../../components/SectionLogo";
@@ -29,7 +29,7 @@ export default function Page() {
   }
 
   const filteredVizList = filterVizList(
-    vizList,
+    fullVizList,
     undefined,
     chartType,
     undefined,

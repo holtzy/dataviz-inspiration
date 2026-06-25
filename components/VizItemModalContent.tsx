@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { vizList } from "../util/viz-list";
+import { VizItem } from "../util/viz-types";
 import { ChartIdPill } from "./ChartIdPill";
 import { LinkAsButton } from "./LinkAsButton";
 import { Pill } from "./Pill";
@@ -7,16 +7,21 @@ import { Pill } from "./Pill";
 // VizItemModalContent manages the content
 type VizItemModalContentProps = {
   projectId: number;
+  // The set of items currently available on the page (favorites and/or the full
+  // list once loaded). The modal looks the project up here instead of importing
+  // the big vizList, so the homepage stays out of that bundle.
+  vizItems: VizItem[];
   onPrevious: () => void;
   onNext: () => void;
 };
 
 export const VizItemModalContent = ({
   projectId,
+  vizItems,
   onPrevious,
   onNext,
 }: VizItemModalContentProps) => {
-  const vizItem = vizList.find((item) => item.id === projectId);
+  const vizItem = vizItems.find((item) => item.id === projectId);
 
   if (!vizItem) {
     return null;

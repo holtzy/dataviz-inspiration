@@ -1,5 +1,5 @@
 import { ChartId } from "../util/sectionDescription";
-import { Luminosity, Tool, VizLabel } from "../util/viz-list";
+import { Luminosity, Tool, VizLabel } from "../util/viz-types";
 import { ChartIdSelector } from "./Filters/ChartIdSelector";
 import { ColumnNumberSelector } from "./Filters/ColumnNumberSelector";
 import { FilterReset } from "./Filters/FilterReset";

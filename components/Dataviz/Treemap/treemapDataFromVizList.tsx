@@ -1,6 +1,6 @@
 import { stratify } from "d3";
 import { ChartFamily, chartTypesInfo } from "../../../util/sectionDescription";
-import { VizItem } from "../../../util/viz-list";
+import { VizItem } from "../../../util/viz-types";
 
 export type ConnectionItem = {
   name: string;

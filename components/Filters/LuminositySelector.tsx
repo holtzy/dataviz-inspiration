@@ -1,4 +1,4 @@
-import { Luminosity } from "../../util/viz-list";
+import { Luminosity } from "../../util/viz-types";
 import { buildUrlWithUpdatedParam } from "../../util/build-url-with-updated-param";
 import Link from "next/link";
 import { Moon, Sun } from "lucide-react";

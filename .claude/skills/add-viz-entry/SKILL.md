@@ -10,9 +10,14 @@ appended to `util/viz-list.ts`, with images placed in `public/img/`.
 
 ## Files & vocab
 - **Data array**: `util/viz-list.ts` → `export const vizList: VizItem[]`. Append at the END.
-- **Type**: `VizItem` (top of `viz-list.ts`).
+  New entries ALWAYS go here — never into the favorites file (see note below).
+- **Favorites**: `util/favorite-viz-list.ts` holds the hand-picked favorites shown first
+  on the homepage. New entries are never favorites; promoting one is a manual cut/paste
+  from `viz-list.ts` into that file (done by Yan, not this skill). You only need to read it
+  for the id scan and the count bump below.
+- **Type / vocab**: `VizItem`, `Tool`/`allTools`, `Luminosity`, `VizLabel`/`vizLabels`, and
+  `TOTAL_VIZ_COUNT` now live in `util/viz-types.ts` (imported back into `viz-list.ts`).
 - **Valid chart tags** (`ChartId`): `util/sectionDescription.tsx` → `chartIds`.
-- **Valid tools** (`Tool`): `viz-list.ts` ~line 4 → `allTools`.
 - **Images**: `public/img/`. Every entry needs a `full` (modal) and a `zoom` (wall thumbnail) file.
 
 ### chartId vocabulary
@@ -64,9 +69,11 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
 
 ## Procedure
 
-1. **Find the next id.** `grep -oE "id: [0-9]+" util/viz-list.ts | tail -1`, then `+1`.
-   (As of this writing the max was 319.) The current last entry usually has **no trailing
-   comma** — your Edit must add a `,` after its closing `}` before appending the new object.
+1. **Find the next id.** Ids are split across two files now, so scan BOTH and take the max:
+   `grep -ohE "id: [0-9]+" util/viz-list.ts util/favorite-viz-list.ts | grep -oE "[0-9]+" | sort -n | tail -1`,
+   then `+1`. (As of this writing the max was 425.) The current last entry of `viz-list.ts`
+   usually has **no trailing comma** — your Edit must add a `,` after its closing `}` before
+   appending the new object.
 
 2. **Get the images.** When the user pastes/attaches screenshots, Claude Code embeds the
    local source paths inline in their message, e.g.
@@ -103,7 +110,10 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
    - `labels`: pick the few `VizLabel`s (from the vocab above) that genuinely stand out in the
      viz — what would make someone with that specific need want to study it. Omit if none do.
 
-6. **Verify**: `grep -n "id: <new>"`, confirm both image files exist in `public/img/`, and
+6. **Bump the count.** Increment `TOTAL_VIZ_COUNT` by 1 in `util/viz-types.ts` (it drives the
+   homepage's "showcases N projects" line, which no longer counts the array at runtime).
+
+7. **Verify**: `grep -n "id: <new>"`, confirm both image files exist in `public/img/`, and
    run `npx tsc --noEmit` (filter to the viz-list line range) to confirm the object parses.
    Then summarize the entry in a small table, calling out the flagged guesses for review.
 

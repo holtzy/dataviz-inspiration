@@ -1,5 +1,5 @@
 import { ChartId } from "./sectionDescription";
-import { Luminosity, Tool, VizItem, VizLabel } from "./viz-list";
+import { Luminosity, Tool, VizItem, VizLabel } from "./viz-types";
 
 // viz-list.ts is the list of all the projects displayed on the main wall
 // at the top of the wall some filters all to filter those projects

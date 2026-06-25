@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import Footer from "../../components/Footer";
 import TitleAndDescription from "../../components/TitleAndDescription";
-import { vizList } from "../../util/viz-list";
+import { fullVizList } from "../../util/viz-list";
 
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
@@ -24,12 +24,12 @@ export default function Page() {
   );
 
   // A few metrics
-  const vizNumber = vizList.length;
-  const authorNumber = new Set(vizList.map((viz) => viz.author)).size;
+  const vizNumber = fullVizList.length;
+  const authorNumber = new Set(fullVizList.map((viz) => viz.author)).size;
 
   // Compute dataset for the authors:
   let authorData: { [key: string]: number } = {};
-  vizList.forEach((viz) => {
+  fullVizList.forEach((viz) => {
     if (viz.author in authorData) {
       authorData[viz.author] += 1;
     } else {

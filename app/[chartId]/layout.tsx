@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
-import { vizList } from "../../util/viz-list";
+import { fullVizList } from "../../util/viz-list";
 import { filterVizList } from "../../util/filterVizList";
 
 export async function generateMetadata({
@@ -16,7 +16,7 @@ export async function generateMetadata({
   }
 
   const count = filterVizList(
-    vizList,
+    fullVizList,
     undefined,
     params.chartId as ChartId,
     undefined

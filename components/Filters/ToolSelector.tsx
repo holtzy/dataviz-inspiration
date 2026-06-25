@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Tool, allTools } from "../../util/viz-list";
+import { Tool, allTools } from "../../util/viz-types";
 import { Pill } from "../Pill";
 import Link from "next/link";
 import { buildUrlWithUpdatedParam } from "../../util/build-url-with-updated-param";

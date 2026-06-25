@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
-import { Project } from "./PictureWall";
 import { VizItemModalContent } from "./VizItemModalContent";
+import { Project, VizItem } from "../util/viz-types";
 
 // This component is the modal that opens when user clicks on an image of the wall.
 // VizItemModal manages the modal opening & closing
@@ -11,6 +11,8 @@ type VizItemModalProps = {
   setSelectedProject: (arg: Project) => void;
   isModalOpen: boolean;
   orderedIds: number[];
+  // Items available for the modal to resolve the selected/next/prev project from.
+  vizItems: VizItem[];
 };
 
 export const VizItemModal = ({
@@ -19,6 +21,7 @@ export const VizItemModal = ({
   selectedProject,
   setSelectedProject,
   orderedIds,
+  vizItems,
 }: VizItemModalProps) => {
   const { projectId } = selectedProject;
 
@@ -84,6 +87,7 @@ export const VizItemModal = ({
       <VizItemModalContent
         key={selectedProject.projectId}
         projectId={projectId}
+        vizItems={vizItems}
         onPrevious={() => goToOffset(-1)}
         onNext={() => goToOffset(1)}
       />
