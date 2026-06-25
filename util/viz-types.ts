@@ -62,4 +62,4 @@ export type Project = { projectId: number };
 // Total number of projects in the gallery (favorites + the rest). Kept here as a
 // small constant so the homepage can show the count WITHOUT importing the big
 // viz-list. Bump it by 1 whenever a new entry is added (the add-viz-entry skill does).
-export const TOTAL_VIZ_COUNT = 422;
+export const TOTAL_VIZ_COUNT = 423;

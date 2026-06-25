@@ -5495,6 +5495,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["direct labeling", "annotation", "typography"]
+    },
+    {
+        id: 426,
+        title: "Sickness absence in the Netherlands is highest in health and social care",
+        date: new Date(2025, 0),
+        author: "Datylon",
+        url: "https://insights.datylon.com/inspiration/uUeXsuXRCjAB3Zenc2FIEg",
+        img: { full: "sickness-absence-netherlands.png", zoom: "sickness-absence-netherlands-zoom.png", chartId: ["line"] },
+        contextDescription: "Sickness absence rates across Dutch industries from 1996 to 2025, built by Datylon on CBS StatLine data. Health and social care has stayed above the national average for the whole period, climbed steadily after 2015 and spiked during the COVID-19 years (March 2020 – May 2023). The chart weaves in the why behind the curve: the 2002 Gatekeeper Improvement Act that made employers and employees more responsible for cutting long-term absence, a 2014 low point tied to economic uncertainty and a mild flu season, and the fact that since 2018 health and social care has had the highest sickness absence of any Dutch industry.",
+        chartDescription: "A line chart where every Dutch industry is a faint grey line, with only two series pulled to the front: Health and social care in orange and the overall Mean in black, each labelled directly at the end of its line instead of through a legend. Dotted line-ends mark provisional 2025 figures and a soft grey band flags the COVID-19 window. What makes it sing is the annotation layer — four short notes anchored to specific moments turn a tangle of trend lines into a guided story. A clean, textbook example of using highlighting and direct labeling to make one series stand out of a crowded field.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["annotation", "direct labeling", "highlight", "storytelling"]
     }
 ];
 
