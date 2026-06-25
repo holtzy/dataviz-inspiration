@@ -81,6 +81,7 @@ export default function Page() {
                   href={chartTypeInfo.dataToVizURL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline hover:bg-slate-100"
                 >
                   <Pill text="Data To Viz" />
                 </a>
@@ -91,6 +92,7 @@ export default function Page() {
                   href={chartTypeInfo.rURL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline hover:bg-slate-100"
                 >
                   <Pill text="R" />
                 </a>
@@ -98,6 +100,7 @@ export default function Page() {
                   href={chartTypeInfo.pythonURL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline hover:bg-slate-100"
                 >
                   <Pill text="Python" />
                 </a>
@@ -105,6 +108,7 @@ export default function Page() {
                   href={chartTypeInfo.d3URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline hover:bg-slate-100"
                 >
                   <Pill text="D3.js" />
                 </a>
@@ -112,6 +116,7 @@ export default function Page() {
                   href={chartTypeInfo.reactURL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline hover:bg-slate-100"
                 >
                   <Pill text="React" />
                 </a>
