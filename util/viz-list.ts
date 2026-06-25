@@ -5963,5 +5963,19 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["comparison", "direct labeling", "minimalist"]
+    },
+    {
+        id: 425,
+        title: "German Cheese Exports and Imports to/from Austria (2001–2025)",
+        date: new Date(2026, 3),
+        author: "Ansgar Wolsing",
+        url: "https://github.com/bydata/30DayChartChallenge/tree/main/2026/21",
+        img: { full: "german-cheese-austria-trade.png", zoom: "german-cheese-austria-trade-zoom.png", chartId: ["line", "area"] },
+        contextDescription: "Created for the #30DayChartChallenge (2026, day 21), this chart tracks Germany's cheese trade with Austria from 2001 to 2025. Both flows have grown substantially over the period, but Germany has consistently exported more cheese to Austria than it imports — a balance in favour of Germany, until the gap narrows and even flips in the most recent years. Data from Destatis.",
+        chartDescription: "A trade-balance chart in the style of an old engraved almanac: two lines — exports in gold, imports in dark ink — with the area between them shaded to show which side the balance favours. I love the deliberately antique typography and the lines labelled directly on the curves rather than in a legend (\"Line of Exports\", \"Line of Imports\"), plus the hand-written \"BALANCE in FAVOUR of GERMANY\" tucked into the gap. The grey patches where imports overtake exports in recent years read as a quiet warning. A lovely example of giving a simple two-series chart a strong editorial voice.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "annotation", "typography"]
     }
 ]

@@ -13,9 +13,9 @@ const DELAY_MS = 10000;
 
 export const NewsletterToast = () => {
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY)) {
-      return;
-    }
+    // if (sessionStorage.getItem(STORAGE_KEY)) {
+    //   return;
+    // }
 
     const timer = setTimeout(() => {
       sessionStorage.setItem(STORAGE_KEY, "1");
@@ -39,7 +39,7 @@ export const NewsletterToast = () => {
               I hunt down the <b>best</b> chart examples — want the gems I find,
               every now and then?
             </p>
-            <KitInlineForm source="toast" height={100} className="mt-1" />
+            <KitInlineForm source="toast" className="mt-1" />
             <p className="text-xs text-gray-400">
               Join 19,000+ subscribers. Opt out anytime.
             </p>

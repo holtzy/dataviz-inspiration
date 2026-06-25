@@ -25,7 +25,7 @@ export const NewsletterDialog = () => {
           receive the gems I find, every now and then?
         </p>
         <div className="-translate-x-3">
-          <KitInlineForm source="navbar" height={100} className="" />
+          <KitInlineForm source="navbar" className="" />
         </div>
         <p className="text-sm text-gray-800">
           Join 19,000+ subscribers. Opt out whenever you want.

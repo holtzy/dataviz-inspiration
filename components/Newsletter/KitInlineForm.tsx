@@ -9,16 +9,11 @@ type KitInlineFormProps = {
   // Appended as a query param for attribution (best-effort; needs Kit-side mapping
   // to actually land on the "source" custom field).
   source?: string;
-  // Each caller (modal, toast, …) can size the iframe and add classes as it likes.
-  height?: number;
+  // Each caller (modal, toast, …) can add classes as it likes.
   className?: string;
 };
 
-export const KitInlineForm = ({
-  source,
-  height = 320,
-  className,
-}: KitInlineFormProps) => {
+export const KitInlineForm = ({ source, className }: KitInlineFormProps) => {
   const src = source
     ? `${FORM_URL}?source=${encodeURIComponent(source)}`
     : FORM_URL;
@@ -29,7 +24,7 @@ export const KitInlineForm = ({
       title="Subscribe to the newsletter"
       loading="lazy"
       className={className}
-      style={{ width: "100%", height, border: "none" }}
+      style={{ width: "100%", height: 128, border: "none" }}
     />
   );
 };
