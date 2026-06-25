@@ -51,7 +51,8 @@ export const ToolSelector = ({ tools }: ToolSelectorProps) => {
   const allChartMsg = (
     <div className="flex items-center">
       <span className="text-sm text-gray-700 font-light truncate">
-        select tools
+        <span className="sm:hidden">tools</span>
+        <span className="hidden sm:inline">select tools</span>
       </span>
     </div>
   );

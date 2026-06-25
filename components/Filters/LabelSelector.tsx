@@ -31,7 +31,8 @@ export const LabelSelector = ({ labels }: LabelSelectorProps) => {
   const placeholder = (
     <div className="flex items-center">
       <span className="text-sm text-gray-700 font-light truncate">
-        select tags
+        <span className="sm:hidden">tags</span>
+        <span className="hidden sm:inline">select tags</span>
       </span>
     </div>
   );

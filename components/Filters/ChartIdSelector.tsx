@@ -15,7 +15,8 @@ export const ChartIdSelector = ({ selectedChart }: ChartIdSelectorProps) => {
   const allChartMsg = (
     <div className="flex items-center">
       <span className="text-sm text-gray-700 font-light mr-2 truncate">
-        select chart types
+        <span className="sm:hidden">chart type</span>
+        <span className="hidden sm:inline">select chart types</span>
       </span>
     </div>
   );

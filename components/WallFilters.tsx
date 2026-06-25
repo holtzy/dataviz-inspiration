@@ -23,31 +23,36 @@ export const WallFilters = ({
   labels,
 }: WallFiltersProps) => {
   return (
-    <div className="sticky bg-white top-0 w-full z-40 flex justify-center items-center">
-      <FilterWrapper>
-        <ColumnNumberSelector columnNumber={columnNumber} />
-      </FilterWrapper>
+    // overflow-x-auto keeps any horizontal scrolling INSIDE this bar (so the page itself
+    // never scrolls sideways on mobile). The inner row uses w-max + mx-auto: it centers
+    // on wide screens when it fits, and scrolls from the left when it's too wide to fit.
+    <div className="sticky bg-white top-0 w-full z-40 overflow-x-auto">
+      <div className="flex items-center w-max mx-auto">
+        <FilterWrapper>
+          <ColumnNumberSelector columnNumber={columnNumber} />
+        </FilterWrapper>
 
-      <FilterWrapper>
-        <LuminositySelector luminosity={luminosity} />
-      </FilterWrapper>
+        <FilterWrapper>
+          <LuminositySelector luminosity={luminosity} />
+        </FilterWrapper>
 
-      <FilterWrapper>
-        <ChartIdSelector selectedChart={selectedChart} />
-      </FilterWrapper>
+        <FilterWrapper>
+          <ChartIdSelector selectedChart={selectedChart} />
+        </FilterWrapper>
 
-      <FilterWrapper>
-        <ToolSelector tools={tools} />
-      </FilterWrapper>
+        <FilterWrapper>
+          <ToolSelector tools={tools} />
+        </FilterWrapper>
 
-      <FilterWrapper>
-        <LabelSelector labels={labels} />
-      </FilterWrapper>
+        <FilterWrapper>
+          <LabelSelector labels={labels} />
+        </FilterWrapper>
 
-      {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
-      <FilterWrapper>
-        <FilterReset />
-      </FilterWrapper>
+        {/* A "x" button allowing to reset all filters to default (=no filter at all) */}
+        <FilterWrapper>
+          <FilterReset />
+        </FilterWrapper>
+      </div>
     </div>
   );
 };

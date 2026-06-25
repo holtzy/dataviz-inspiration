@@ -44,7 +44,13 @@ export const PictureWall = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  const filteredVizList = filterVizList(vizList, luminosity, chartType, tools, labels).reverse();
+  const filteredVizList = filterVizList(
+    vizList,
+    luminosity,
+    chartType,
+    tools,
+    labels,
+  ).reverse();
 
   // Ordered ids of the currently-filtered wall, so the modal's prev/next arrows
   // navigate within this set (in display order) instead of across the whole list.
