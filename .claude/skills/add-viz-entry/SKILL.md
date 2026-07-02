@@ -61,11 +61,16 @@ chart family. Pick the few that genuinely stand out in the viz; omit the field i
 annotation, legend, direct labeling, color palette, bivariate coloring, gradient, texture, typography,
 icons & pictograms, highlight, storytelling, scrollytelling, comparison, uncertainty,
 animation, shape morphism, interactive controls, tooltip, hover effect, zoom & pan, brushing,
-small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log scale
+small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log scale, climate
 
 > `highlight` = emphasizing one series while greying out the rest (very common in good editorial
 > viz). `direct labeling` = labels on the data instead of a separate legend. Don't use a label
 > for something already captured by another field (e.g. no "dark mode" label — that's `luminosity`).
+
+> **New tags: add, don't drop.** If the user supplies a tag that isn't in this vocabulary
+> (a new design technique OR a subject/topic like `climate`), ADD it — append it to the
+> `vizLabels` array in `util/viz-types.ts` (with a short `//` comment) AND to this vocab list
+> above — then use it on the entry. Never silently discard a tag the user explicitly gave.
 
 ## Procedure
 

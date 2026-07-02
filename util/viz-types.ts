@@ -37,6 +37,7 @@ export const vizLabels = [
     "flow & arrows",       // arrows / flows showing direction or movement
     "3d",                  // three-dimensional rendering
     "log scale",           // logarithmic axis
+    "climate",             // climate / environment / weather subject matter
 ] as const;
 export type VizLabel = typeof vizLabels[number];
 
@@ -62,4 +63,4 @@ export type Project = { projectId: number };
 // Total number of projects in the gallery (favorites + the rest). Kept here as a
 // small constant so the homepage can show the count WITHOUT importing the big
 // viz-list. Bump it by 1 whenever a new entry is added (the add-viz-entry skill does).
-export const TOTAL_VIZ_COUNT = 423;
+export const TOTAL_VIZ_COUNT = 426;

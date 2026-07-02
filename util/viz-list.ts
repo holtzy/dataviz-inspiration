@@ -5509,6 +5509,48 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["annotation", "direct labeling", "highlight", "storytelling"]
+    },
+    {
+        id: 427,
+        title: "How much sleep do you really need? — beeswarm",
+        date: new Date(2024, 0),
+        author: "Reuters Graphics",
+        url: "https://www.reuters.com/graphics/HEALTH-SLEEP/mopakyjmnpa/",
+        img: { full: "reuters-sleep-beeswarm.png", zoom: "reuters-sleep-beeswarm-zoom.png", chartId: ["beeswarm"] },
+        contextDescription: "Part of a Reuters explainer on sleep, this chart compares how many hours a day different animals spend asleep. Land species range from the red kangaroo (less than two hours) to the South American armadillo (more than twenty), with humans sitting comfortably in the middle. Marine mammals sleep far less, and many of them are unihemispheric sleepers — resting one half of the brain while the other stays alert to keep swimming, surfacing to breathe and watching for predators.",
+        chartDescription: "A beeswarm plot where every dot is one species, placed along a single axis of hours of sleep per day and split into a land row and a marine row. Filled dots are ordinary sleepers, hollow dots are the unihemispheric ones — a clever way to encode a second, qualitative variable without a colour legend. Direct labels and thin leader lines call out the outliers and a few familiar animals, and curved arrows tie the marine dots down to their explanatory note. A lovely example of using a simple distribution chart as the backbone of a story.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["storytelling", "annotation", "direct labeling", "flow & arrows", "highlight"]
+    },
+    {
+        id: 428,
+        title: "How much sleep do you really need? — sleep by age",
+        date: new Date(2024, 0),
+        author: "Reuters Graphics",
+        url: "https://www.reuters.com/graphics/HEALTH-SLEEP/mopakyjmnpa/",
+        img: { full: "reuters-sleep-age-stacked.png", zoom: "reuters-sleep-age-stacked-zoom.png", chartId: ["barplot"] },
+        contextDescription: "From the same Reuters piece on sleep, this chart shows how much sleep we need at each stage of life. Newborns need 14–17 hours a day including naps, dropping through infancy and childhood down to 7–9 hours for adults and 7–8 for those 65 and older. A dotted line separates total sleep across 24 hours (naps included) from sleep taken per night once daytime napping fades away.",
+        chartDescription: "A stacked bar chart with variable-width bars — each bar spans an age range, so its width carries meaning as well as its height. The recommended sleep window is drawn as a hatched band bridging the asleep and awake zones, with a sun and moon icon anchoring the two halves of the day. I like how the whole 24-hour clock is used as the frame: the dark 'asleep' block and the light 'awake' block above it turn an abstract table of guidelines into an intuitive picture of a shrinking night's sleep as we age.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["annotation", "icons & pictograms", "texture", "storytelling"]
+    },
+    {
+        id: 429,
+        title: "France 2026 daily temperature anomaly",
+        date: new Date(2026, 5),
+        author: "Dominic Royé",
+        url: "https://www.linkedin.com/posts/dominicroye_climatedata-dataviz-france-share-7478008981991628800-Drht/",
+        img: { full: "france-2026-temperature-anomaly.png", zoom: "france-2026-temperature-anomaly-zoom.png", chartId: ["area", "line", "timeseries"] },
+        contextDescription: "Daily temperatures across France in 2026 compared to the 1961–1990 climate normal, built by Dominic Royé from Open-Meteo (ERA5) data. Almost every day of the year has run warmer than the historical baseline, with a handful of extreme spikes labelled directly on the chart — up to +13.0°C above normal in June. Only a few short cold spells dip below the reference, the sharpest being −6.3°C in January.",
+        chartDescription: "A daily time series where the observed temperature is filled against the smooth black 'normal' curve: red where the day is warmer than average, blue where it's colder, so the balance of the year reads as a wash of red at a glance. Two dashed curves mark the historical 5th–95th percentile envelope, giving instant context for what counts as unusual — the tall red peaks that punch above the upper band are clearly record territory. Small circled callouts tag the biggest anomalies. It's a beautiful, compact way to show a whole year of climate deviation in one frame; the diverging red/blue fill against a reference line is a technique I always love for anomaly data.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["climate", "annotation", "uncertainty", "comparison", "color palette", "direct labeling"]
     }
 ];
 
