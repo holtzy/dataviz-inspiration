@@ -5551,6 +5551,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["climate", "annotation", "uncertainty", "comparison", "color palette", "direct labeling"]
+    },
+    {
+        id: 430,
+        title: "Share of world GDP over two centuries",
+        date: new Date(2026, 5),
+        author: "Matt McLean (The Economist)",
+        url: "https://www.linkedin.com/posts/alex-selby-boothroyd-367a5342_this-chart-is-both-a-history-lesson-and-a-share-7478426276244946944-ayxU/",
+        img: { full: "economist-world-gdp-share-stacked-area.png", zoom: "economist-world-gdp-share-stacked-area-zoom.png", chartId: ["stackedArea", "stream"] },
+        contextDescription: "Two hundred years of the world economy in a single frame: each country's share of world GDP at purchasing-power parity, from 1820 down to 2025. The story is the rise and fall of great powers — in 1820 China and the British Empire tower over everyone; the United States then swells through the 20th century into overwhelming dominance around 1945; and by 2025 China has pulled back level while the EU and India claim large slices, the visual argument behind the article's theme of America's waning dominance. Made by Matt McLean for a piece by Sondre Ulvund Solstad in The Economist.",
+        chartDescription: "A stacked area chart flipped on its side — time runs vertically down the page and each country is a coloured ribbon whose width is its share of world GDP, so all the bands together always fill the 0–70%+ axis. What makes it sing is that the ribbons are free to reorder and weave past each other as ranks change, giving the whole thing a braided, almost woodgrain texture; the sinuous hand-drawn edges keep it feeling like a piece of art rather than a spreadsheet. Country names are dropped directly inside the ribbons instead of into a legend, so you read who's who without ever leaving the shape. A gorgeous example of turning a dry 100%-stacked series into a two-century narrative.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["storytelling", "direct labeling", "color palette", "typography", "comparison"]
     }
 ];
 
