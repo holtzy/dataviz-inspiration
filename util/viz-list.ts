@@ -5565,6 +5565,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["storytelling", "direct labeling", "color palette", "typography", "comparison"]
+    },
+    {
+        id: 431,
+        title: "European wind and temperature, June 2026",
+        date: new Date(2026, 6),
+        author: "Jeran Poehls",
+        url: "https://www.youtube.com/watch?v=zFpamnNEyBw",
+        img: { full: "era5-europe-wind-temperature-june-2026.png", zoom: "era5-europe-wind-temperature-june-2026-zoom.png", chartId: ["map", "3d", "animation"] },
+        contextDescription: "An animation of ERA5 reanalysis output over Europe for June 2026, built by Jeran Poehls. It shows the wind field at the 500 hPa pressure level alongside 2-metre air temperature, playing forward day by day. Around June 17th–18th the first hints of anticyclonic behaviour appear over southern France; by June 23rd a prominent anticyclone forms over western France and then drifts east across the continent over the following week — the meteorological signature of an early-summer heat build-up.",
+        chartDescription: "A gorgeous piece of scientific-art dataviz: wind is rendered as thousands of flowlines that stream across a 3D relief of Europe like windswept fur, while their colour encodes 2-metre temperature on a blue-to-orange scale (6°C to 43°C). The height and grain of the flow give an almost tactile, brushed-hair texture that makes the atmosphere feel physical, and the diverging temperature ramp lets you read the hot southern lobe against the cool Atlantic air in a single glance. It sits right at the boundary between analysis and generative art — not the tool you'd reach for to read an exact value, but a mesmerising way to feel the shape of a month of weather.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["3d", "climate", "animation", "flow & arrows", "texture", "color palette"]
     }
 ];
 
