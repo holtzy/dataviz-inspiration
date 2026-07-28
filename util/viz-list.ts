@@ -5579,6 +5579,20 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: false,
         labels: ["3d", "climate", "animation", "flow & arrows", "texture", "color palette"]
+    },
+    {
+        id: 432,
+        title: "Furniture lost its colour",
+        date: new Date(2026, 6),
+        author: "Toon Vos (The European Correspondent)",
+        url: "https://www.linkedin.com/posts/we-looked-into-all-3500-couches-featured-share-7487824566917128193-v-XO/",
+        img: { full: "ikea-sofa-colours-timeline.png", zoom: "ikea-sofa-colours-timeline-zoom.png", chartId: ["heatmap", "timeseries"] },
+        contextDescription: "A data story by Toon Vos for The European Correspondent, based on a manual count of all 3,500 couches featured in IKEA catalogues from 1960 to 2021. The takeaway: European interiors became steadily more muted and noticeably greyer through the 2010s — 2011 had the most neutral colours ever. But trends rarely last: just as the beige 1980s gave way to the bold patterns of the 1990s, IKEA has begun reviving long-forgotten designs from its archives.",
+        chartDescription: "The chart itself is the argument — a row of vertical stripes, one per year, painted in the two most prominent sofa colours of that catalogue, so six decades of taste read as a single colour gradient. The green-and-blue 60s, the beige 70s–80s, the black-and-red patterned 90s (rendered with a dotted checkerboard texture to signal 'patterned' rather than solid), and the grey wash of the 2010s are all instantly legible without a single number. Three inline callouts over the stripes narrate the eras. It's a lovely example of letting the encoding literally be the subject: colour data shown as colour. I really like the texture trick for marking patterned years — it adds a second dimension without cluttering the palette.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "texture", "typography", "annotation", "storytelling"]
     }
 ];
 
