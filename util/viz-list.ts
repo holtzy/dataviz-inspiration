@@ -21,7 +21,7 @@ export const vizList: VizItem[] = [
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["interactive controls", "comparison", "direct labeling"]
+        labels: ["interactive controls", "comparison", "direct labeling", "dashboard"]
     },
     {
         id: 323,
@@ -35,7 +35,7 @@ export const vizList: VizItem[] = [
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
         luminosity: ["light"],
         interactive: true,
-        labels: ["small multiples", "highlight", "color palette"]
+        labels: ["small multiples", "highlight", "color palette", "dashboard"]
     },
     {
         id: 3,
@@ -792,7 +792,7 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["light", "dark"],
         interactive: false,
-        labels: ["radial", "color palette", "small multiples", "direct labeling"]
+        labels: ["radial", "color palette", "small multiples", "direct labeling", "dashboard"]
     },
     {
         id: 54,
@@ -2682,7 +2682,7 @@ export const vizList: VizItem[] = [
         tools: undefined,
         luminosity: ["dark"],
         interactive: false,
-        labels: ["3d", "gradient", "color palette"]
+        labels: ["3d", "gradient", "color palette", "dashboard"]
     },
     {
         id: 130,
@@ -2920,7 +2920,7 @@ export const vizList: VizItem[] = [
         tools: [{ name: "tableau", link: "https://public.tableau.com/app/profile/saveriorocchetti/viz/HateCrimeInUk/HATECRIMEINUK" }],
         luminosity: ["dark"],
         interactive: false,
-        labels: ["small multiples", "color palette", "direct labeling", "comparison"]
+        labels: ["small multiples", "color palette", "direct labeling", "comparison", "dashboard"]
     },
     {
         id: 146,

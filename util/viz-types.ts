@@ -38,6 +38,7 @@ export const vizLabels = [
     "3d",                  // three-dimensional rendering
     "log scale",           // logarithmic axis
     "climate",             // climate / environment / weather subject matter
+    "dashboard",           // multi-panel layout combining several charts / metrics in one view
 ] as const;
 export type VizLabel = typeof vizLabels[number];
 

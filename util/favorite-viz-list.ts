@@ -29,7 +29,7 @@ export const favoriteVizList: VizItem[] = [
         tools: [{ name: "react", link: "https://github.com/covid19india/covid19india-react" }, { name: "d3.js", link: "https://github.com/covid19india/covid19india-react" }],
         luminosity: ["dark"],
         interactive: true,
-        labels: ["interactive controls", "animation", "tooltip"],
+        labels: ["interactive controls", "animation", "tooltip", "dashboard"],
     },
     {
         id: 40,
