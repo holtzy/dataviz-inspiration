@@ -5593,6 +5593,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["color palette", "texture", "typography", "annotation", "storytelling"]
+    },
+    {
+        id: 433,
+        title: "The ticks are everywhere",
+        date: new Date(2026, 7),
+        author: "Aliaksandra Shymanskaya (The European Correspondent)",
+        url: "https://europeancorrespondent.com/en/r/the-ticking-bomb",
+        img: { full: "ticks-europe-species-map.png", zoom: "ticks-europe-species-map-zoom.png", chartId: ["map", "hexbin", "density2d"] },
+        contextDescription: "Part of a piece by Aliaksandra Shymanskaya and Liene Lūsīte, with visualisation work by Sebastian Graeff, for The European Correspondent on how a warming climate is pushing ticks further north and to higher altitudes. Milder winters and longer warm seasons are letting the animals — some of which carry Lyme disease, tick-borne encephalitis or Crimean-Congo haemorrhagic fever — survive in places they couldn't before, with records now stretching even above the Arctic Circle. The map counts the number of distinct tick species recorded in each area between 2023 and 2026, using crowdsourced GBIF observations.",
+        chartDescription: "A gridded binned map of Europe: the continent is divided into a regular square lattice and each cell is shaded by how many tick species were recorded there, on a four-step orange-to-dark-red scale. It's effectively a 2D histogram laid over a map — the same idea as a hexbin map but with square bins — which turns thousands of scattered observation points into a clean, readable density surface. I like the restrained editorial styling: a soft grey basemap, thin white country borders, and a dashed Arctic Circle line labelled right on the map to hammer home the 'even up here' point. The dense red core over Germany and the Alps pops instantly against the sparse, pale north and east.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["climate", "legend", "color palette", "annotation"]
     }
 ];
 
