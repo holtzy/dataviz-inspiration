@@ -5601,12 +5601,26 @@ export const vizList: VizItem[] = [
         author: "Aliaksandra Shymanskaya (The European Correspondent)",
         url: "https://europeancorrespondent.com/en/r/the-ticking-bomb",
         img: { full: "ticks-europe-species-map.png", zoom: "ticks-europe-species-map-zoom.png", chartId: ["map", "hexbin", "density2d"] },
-        contextDescription: "Part of a piece by Aliaksandra Shymanskaya and Liene Lūsīte, with visualisation work by Sebastian Graeff, for The European Correspondent on how a warming climate is pushing ticks further north and to higher altitudes. Milder winters and longer warm seasons are letting the animals — some of which carry Lyme disease, tick-borne encephalitis or Crimean-Congo haemorrhagic fever — survive in places they couldn't before, with records now stretching even above the Arctic Circle. The map counts the number of distinct tick species recorded in each area between 2023 and 2026, using crowdsourced GBIF observations.",
-        chartDescription: "A gridded binned map of Europe: the continent is divided into a regular square lattice and each cell is shaded by how many tick species were recorded there, on a four-step orange-to-dark-red scale. It's effectively a 2D histogram laid over a map — the same idea as a hexbin map but with square bins — which turns thousands of scattered observation points into a clean, readable density surface. I like the restrained editorial styling: a soft grey basemap, thin white country borders, and a dashed Arctic Circle line labelled right on the map to hammer home the 'even up here' point. The dense red core over Germany and the Alps pops instantly against the sparse, pale north and east.",
+        contextDescription: "A piece by Aliaksandra Shymanskaya and Liene Lūsīte, with visualisation by Sebastian Graeff, for The European Correspondent on how a warming climate is pushing ticks further north and higher. Some carry Lyme disease, tick-borne encephalitis or Crimean-Congo haemorrhagic fever, and records now reach even above the Arctic Circle. The map counts distinct tick species recorded in each area between 2023 and 2026, from crowdsourced GBIF data.",
+        chartDescription: "A gridded binned map: Europe is split into a square lattice, each cell shaded by how many tick species were recorded there on a four-step orange-to-dark-red scale. It's essentially a 2D histogram over a map — like a hexbin map but with square bins — turning thousands of scattered points into a clean density surface. I like the restrained styling: soft grey basemap, thin white borders, and a labelled dashed Arctic Circle line. The dense red core over Germany and the Alps pops against the pale north and east.",
         tools: undefined,
         luminosity: ["light"],
         interactive: false,
         labels: ["climate", "legend", "color palette", "annotation"]
+    },
+    {
+        id: 434,
+        title: "Water level of the Rhine in Cologne",
+        date: new Date(2026, 7),
+        author: "Ansgar Wolsing",
+        url: "https://www.linkedin.com/in/ansgar-wolsing/",
+        img: { full: "rhine-cologne-water-level.png", zoom: "rhine-cologne-water-level-zoom.png", chartId: ["line", "area", "timeseries"] },
+        contextDescription: "On 13 August 2026 the Rhine at Cologne sat at just 49 cm — 20 cm below the previous 2018 record. Ansgar Wolsing charts the year's daily water level against the historical envelope to show how far outside normal 2026 has fallen. The cause is a mix of prolonged drought, intense heat and the Alpine snow reserves melting away before summer even began. With too little depth for most loaded cargo ships — many carrying coal and fossil fuels — Germany's main waterway is a stark illustration of the new climate reality.",
+        chartDescription: "A time series where the 2026 daily level is drawn as a bold purple line over two nested grey bands: the full 2000–2025 min-to-max range and, darker inside it, the 80% envelope where most daily values fall. Watching the purple line dive out the bottom of even the record range makes the anomaly instantly legible. My favourite detail, which Ansgar himself points out, is the thin white stroke around the purple line — it separates the series cleanly from the grey fills and makes it pop. Built in R.",
+        tools: [{ name: "R" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["highlight", "uncertainty", "annotation", "direct labeling", "climate"]
     }
 ];
 
