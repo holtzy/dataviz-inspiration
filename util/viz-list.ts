@@ -5621,6 +5621,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["highlight", "uncertainty", "annotation", "direct labeling", "climate"]
+    },
+    {
+        id: 435,
+        title: "Does AI stop children from learning?",
+        date: new Date(2026, 7),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        img: { full: "ai-homework-exam-scores-density.png", zoom: "ai-homework-exam-scores-density-zoom.png", chartId: ["density", "area"] },
+        contextDescription: "An Economist graphic based on a June 2026 preprint of 26,811 Chinese pupils (aged 12–18). The finding: pupils using AI scored higher on homework and finished faster — but at exam time the same users did worse than before. A cautionary tale about cognitive offloading: leaning on AI feels easy, yet real learning needs the harder work of grappling with the material.",
+        chartDescription: "Three stacked density panels — homework score, completion time and exam score — each comparing pupils 'before using AI' (pale) and 'using AI' (dark red), with a grey baseline for those who never used it. Top to bottom, the 'using AI' hump slides right (better homework), left (faster), then left again (worse exams). Showing the whole distribution rather than just means, with short direct annotations instead of a legend, makes it a clean, persuasive piece of storytelling.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["small multiples", "annotation", "comparison", "direct labeling", "color palette", "storytelling"]
     }
 ];
 
