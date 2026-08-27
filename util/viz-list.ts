@@ -5635,6 +5635,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["small multiples", "annotation", "comparison", "direct labeling", "color palette", "storytelling"]
+    },
+    {
+        id: 436,
+        title: "A day of trains across Europe",
+        date: new Date(2026, 7),
+        author: "chillchamp1",
+        url: "https://chillchamp1.github.io/github.io/#eu",
+        img: { full: "europe-trains-live-map.png", zoom: "europe-trains-live-map-zoom.png", chartId: ["map", "connection", "animation"] },
+        contextDescription: "An animated replay of 70,427 scheduled trains over a single Wednesday (10 June 2026) across Germany, the Benelux, Switzerland and France, built from official open GTFS timetables. A clock scrubs through the day while every service moves in its real position, colour-coded by category — high-speed, intercity, regional, rack/panorama and night trains. It's one of sixteen rail networks the project covers, from continental Europe down to single cities.",
+        chartDescription: "A dark-mode movement map where each train is a coloured dot leaving a comet-like trail, so the whole network pulses to life around hubs like Paris, Brussels and Zürich. Rings bloom where a service begins, a live counter tracks trains currently running, and playback speed and city presets let you explore. Rendered entirely on plain HTML Canvas — no mapping library — it's a gorgeous flight-radar-style take on rail data.",
+        tools: [{ name: "javascript" }, { name: "python" }],
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["animation", "flow & arrows", "interactive controls", "legend", "color palette"]
     }
 ];
 
