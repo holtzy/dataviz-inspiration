@@ -5663,6 +5663,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["annotation", "direct labeling", "minimalist", "comparison", "typography"]
+    },
+    {
+        id: 438,
+        title: "Hotel prices surge for the eclipse",
+        date: new Date(2026, 7),
+        author: "EL PAÍS",
+        url: "https://elpais.com/ciencia/2026-08-06/los-hoteles-disparan-los-precios-por-el-eclipse-900-euros-por-una-noche-de-hotel-en-soria-y-500-en-teruel.html",
+        img: { full: "elpais-eclipse-hotel-prices-dumbbell.webp", zoom: "elpais-eclipse-hotel-prices-dumbbell-zoom.webp", chartId: ["lollipop"] },
+        contextDescription: "El País on how hotel prices exploded for Spain's 12 August 2026 total solar eclipse. Across the 23 provincial capitals in the path of totality, median Booking rates for eclipse night dwarfed a normal week — up to 879€ in Soria against 116€ seven days earlier.",
+        chartDescription: "A dumbbell chart — a lollipop variant — joining each city's price a week before (blue) and on eclipse night (orange). It's the right pick for comparing two values across many groups: each bar's length is the price jump, instantly rankable.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "direct labeling", "color palette", "minimalist"]
     }
 ];
 
