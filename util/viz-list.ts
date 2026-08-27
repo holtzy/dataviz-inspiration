@@ -5649,6 +5649,20 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: true,
         labels: ["animation", "flow & arrows", "interactive controls", "legend", "color palette"]
+    },
+    {
+        id: 437,
+        title: "Share of households with air conditioning",
+        date: new Date(2025, 7),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/data-insights/air-conditioning-is-almost-universal-in-the-us-and-japan-but-not-elsewhere",
+        img: { full: "owid-air-conditioning-share.webp", zoom: "owid-air-conditioning-share-zoom.webp", chartId: ["barplot"] },
+        contextDescription: "Our World in Data (from IEA figures) on the global gap in air-conditioning access: near-universal in Japan and the US (90%+) and fast-rising in China (79%), but far lower in Southeast Asia (29%), Europe (23%) and India (16%) — often for economic reasons. A chart about who can afford to stay cool.",
+        chartDescription: "A clean horizontal barplot ranking six regions by AC adoption, values at each bar end and two curly-brace annotations grouping the leaders and the laggards. A textbook case of how good labelling and a couple of annotations turn a plain bar chart into a finished story.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["annotation", "direct labeling", "minimalist", "comparison", "typography"]
     }
 ];
 

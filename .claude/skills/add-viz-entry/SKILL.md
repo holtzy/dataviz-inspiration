@@ -109,10 +109,10 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
    - `chartDescription`: what the chart IS and what's notable about the technique, often with
      a light first-person opinion ("I love the dotted texture…", "I'm not a fan of the
      gradient…"). Link to data-to-viz caveats where relevant.
-   - **KEEP BOTH SHORT.** Aim for ~2–3 sentences each (roughly 50–75 words / under ~450
+   - **KEEP BOTH SHORT.** Aim for ~1–2 sentences each (roughly 38–56 words / under ~340
      characters per description). Cut throat-clearing and restated facts; make every sentence
      earn its place. When in doubt, err shorter — a tight description beats a thorough one.
-     Recent entries (id 430+) are the length target; do not exceed them.
+     Recent entries (id 437+) are the length target; do not exceed them.
 
 5. **Judgment calls — pick a sensible value, then FLAG it for the user** (these are rarely in
    the paste):
