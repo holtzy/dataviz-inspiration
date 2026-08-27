@@ -25,6 +25,8 @@ export const MasonryItem = ({
         src={`/img/${vizItem.img.zoom}`}
         className="rounded-md"
         alt={"Chart showing " + vizItem.title}
+        loading="lazy"
+        decoding="async"
       />
 
       {/* Overlay that appears when hovered. Note the mb-1 that compensate the fact that the next.js Image does not take the full height of the container, no idea why */}

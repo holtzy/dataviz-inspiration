@@ -85,10 +85,15 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
    `[Image: source: /Users/.../image-cache/<session>/4.png]`. Use those paths — do NOT search
    the filesystem. The user usually labels them ("the big" = `full`, "the small" = `zoom`);
    the order of `[Image #N]` tags matches the order of the source-path tags.
-   - Copy/convert into `public/img/` with a clean kebab-case name + `-zoom` suffix:
-     - PNG source: `cp src public/img/<name>.png` and `cp smallsrc public/img/<name>-zoom.png`
-     - Non-PNG (jpeg/webp): convert with `sips -s format png src --out public/img/<name>.png`
-       (most existing files are PNG; keep that convention).
+   - Convert into `public/img/` as **WebP** (all gallery images are WebP — never PNG/JPG; they
+     are far lighter with no perceptible quality loss at display size). Clean kebab-case name +
+     `-zoom` suffix. Requires `magick` (ImageMagick):
+     - full (modal): `magick src -resize '1800x1800>' -quality 82 public/img/<name>.webp`
+     - zoom (wall thumbnail): `magick smallsrc -resize '900x900>' -quality 80 public/img/<name>-zoom.webp`
+     - The `>` flag only shrinks images larger than the cap, never upscales. Works for any
+       source format (png/jpeg/webp) → webp.
+   - Reference them in the entry with the `.webp` extension (`full: "<name>.webp"`,
+     `zoom: "<name>-zoom.webp"`).
    - If the user describes an image but attaches nothing, you have no path → ask for it.
 
 3. **Resolve the `url` = the ORIGINAL project**, not where the user found it (a LinkedIn/
