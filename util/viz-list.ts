@@ -5677,6 +5677,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["comparison", "direct labeling", "color palette", "minimalist"]
+    },
+    {
+        id: 439,
+        title: "The journey of a drop of water — France's watersheds",
+        date: new Date(2025, 0),
+        author: "Perrin Remonté",
+        url: "https://www.perrinremonte.com/fraccueil",
+        img: { full: "perrin-remonte-bassins-versants.webp", zoom: "perrin-remonte-bassins-versants-zoom.webp", chartId: ["map", "choropleth"] },
+        contextDescription: "We tend to assume a river flows to the nearest sea — but it often doesn't. Cartographer Perrin Remonté maps France's watersheds by where their water finally empties out, a quietly surprising way to redraw the country around its rivers rather than its borders.",
+        chartDescription: "A hand-crafted cartographic poster colouring every drainage basin by its destination — blue for the Atlantic, Channel and North Sea, gold for the Mediterranean — over a delicate white river network. I really love the calm, appeasing palette and the elegant serif labelling of the seas and rivers.",
+        tools: [{ name: "illustrator" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "typography", "direct labeling", "annotation"]
     }
 ];
 
