@@ -151,6 +151,7 @@ export const VizItemModalContent = ({
       <br />
       <img
         src={`/img/${vizItem.img.full}`}
+        className="w-full h-auto"
         alt={"Chart showing " + vizItem.title}
       />
       {navArrows}
@@ -163,18 +164,13 @@ export const VizItemModalContent = ({
 
   const wideScreenLayout = (
     <div
-      style={{
-        maxHeight: 1200,
-        maxWidth: 1200,
-        overflow: "scroll",
-      }}
-      className="p-4 h-full w-full grid grid-cols-3 gap-5"
+      className="p-6 w-[92vw] max-w-[1100px] max-h-[90vh] overflow-auto grid grid-cols-3 gap-5"
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="relative flex flex-col justify-center items-center h-full col-span-2">
+      <div className="relative flex flex-col justify-center items-center col-span-2">
         <img
           src={`/img/${vizItem.img.full}`}
-          style={{ objectFit: "scale-down", width: "100%", height: "100%" }}
+          className="max-h-[80vh] max-w-full h-auto w-auto object-contain"
           alt={"Chart showing " + vizItem.title}
         />
         {navArrows}

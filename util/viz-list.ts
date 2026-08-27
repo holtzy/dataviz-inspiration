@@ -5657,7 +5657,7 @@ export const vizList: VizItem[] = [
         author: "Our World in Data",
         url: "https://ourworldindata.org/data-insights/air-conditioning-is-almost-universal-in-the-us-and-japan-but-not-elsewhere",
         img: { full: "owid-air-conditioning-share.webp", zoom: "owid-air-conditioning-share-zoom.webp", chartId: ["barplot"] },
-        contextDescription: "Our World in Data (from IEA figures) on the global gap in air-conditioning access: near-universal in Japan and the US (90%+) and fast-rising in China (79%), but far lower in Southeast Asia (29%), Europe (23%) and India (16%) — often for economic reasons. A chart about who can afford to stay cool.",
+        contextDescription: "Debates on air conditioning are raging in Europe this summer amid the heat waves. Our World in Data took a step back to compare AC usage across the world's main regions, revealing huge differences in adoption.",
         chartDescription: "A clean horizontal barplot ranking six regions by AC adoption, values at each bar end and two curly-brace annotations grouping the leaders and the laggards. A textbook case of how good labelling and a couple of annotations turn a plain bar chart into a finished story.",
         tools: undefined,
         luminosity: ["light"],

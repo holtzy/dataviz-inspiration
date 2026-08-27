@@ -104,8 +104,15 @@ small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log sc
 
 4. **Write the two descriptions** in ENGLISH (the list is English even when the viz is in
    another language). Match the house voice:
-   - `contextDescription`: the story/why — what question or situation the viz addresses.
-     Translate foreign-language annotations into the context when useful.
+   - `contextDescription`: the story/why — what question or situation the viz addresses, set up
+     as a hook (the news/debate/tension that makes it interesting). Do NOT re-list numbers,
+     categories, or rankings that are already visible in the chart — the reader can see those.
+     Give the *reason to care*, then hand off to the chart. Translate foreign-language
+     annotations into the context when useful.
+     Good example (id 437): "Debates on air conditioning are raging in Europe this summer amid
+     the heat waves. Our World in Data took a step back to compare AC usage across the world's
+     main regions, revealing huge differences in adoption." — a hook + what the chart does, no
+     repeated figures.
    - `chartDescription`: what the chart IS and what's notable about the technique, often with
      a light first-person opinion ("I love the dotted texture…", "I'm not a fan of the
      gradient…"). Link to data-to-viz caveats where relevant.
