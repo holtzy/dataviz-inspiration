@@ -5691,6 +5691,62 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["color palette", "typography", "direct labeling", "annotation"]
+    },
+    {
+        id: 440,
+        title: "2026 World Cup data portraits",
+        date: new Date(2026, 6),
+        author: "Alexander Bogachev",
+        url: "https://wc26.bogachev.fr/",
+        img: { full: "bogachev-wc26-data-portrait.webp", zoom: "bogachev-wc26-data-portrait-zoom.webp", chartId: ["3d", "heatmap", "density2d"] },
+        contextDescription: "Alexander Bogachev turns every 2026 World Cup match into a 3D 'data portrait', each sculpted from around 1,500 match events. The goal isn't to report stats but to capture the emotional arc of a game — momentum swinging from one side to the other as the match is replayed on a timeline.",
+        chartDescription: "Each half of the pitch rises into a coloured 3D terrain — one team blue, the other red — whose peaks trace where and how intensely the play surged, essentially a 2D density heatmap lifted into relief. A scrubber replays the match while a diverging momentum strip runs underneath. A gorgeous, genuinely fresh way to feel a familiar event.",
+        tools: [{ name: "javascript" }],
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["3d", "animation", "interactive controls", "color palette"]
+    },
+    {
+        id: 441,
+        title: "Burned area in France in 2026",
+        date: new Date(2026, 7),
+        author: "Le Monde (Les Décodeurs)",
+        url: "https://www.lemonde.fr/les-decodeurs/article/2026/07/24/visualisez-l-etendue-des-incendies-en-france-en-carte-et-graphiques_6722679_4355771.html",
+        img: { full: "france-burned-area-2026.webp", zoom: "france-burned-area-2026-zoom.webp", chartId: ["line", "area", "timeseries"] },
+        contextDescription: "The summer of 2026 has been a brutal fire season in France — a moment that, for many, marked a real shift in how present and tangible the climate crisis suddenly felt. Le Monde tracks the cumulative area burned across the country against its full historical range since Effis records began in 2006.",
+        chartDescription: "A cumulative area/line chart setting 2026 in deep red against the historical envelope — min, mean and max drawn as soft hatched stripes so the reference reads as context, not clutter. The red line tearing far above the max band, tagged with a single '×7.2', tells the whole story. I love the calm palette and the clean information hierarchy.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["climate", "texture", "annotation", "comparison", "direct labeling"]
+    },
+    {
+        id: 442,
+        title: "Did AI write this article?",
+        date: new Date(2026, 5),
+        author: "The Economist",
+        url: "https://www.economist.com/graphic-detail/2026/06/16/did-ai-write-this-article",
+        img: { full: "economist-ai-ebooks-stacked-area.webp", zoom: "economist-ai-ebooks-stacked-area-zoom.webp", chartId: ["stackedArea", "area"] },
+        contextDescription: "As generative AI makes producing content nearly free, a natural worry follows: does more of it mean more of value, or just more? The Economist looks at monthly Amazon e-book releases, splitting them into AI-generated and non-AI titles to see how the flood has grown since ChatGPT arrived.",
+        chartDescription: "A simple stacked area chart of monthly Amazon e-book releases: the AI-generated share in bold red stacked on the muted non-AI base, with an annotation marking ChatGPT-3.5's launch as the inflection point. The two categories are labelled directly on the areas, so no legend is needed. Simple yet devastatingly clear.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "annotation", "storytelling", "color palette"]
+    },
+    {
+        id: 443,
+        title: "Demographic Profiles, 1953–2023",
+        date: new Date(2026, 1),
+        author: "Benjamin Niedermann (VisQuill)",
+        url: "https://visquill.com/gallery/world-demographics/",
+        img: { full: "niedermann-demographic-profiles.webp", zoom: "niedermann-demographic-profiles-zoom.webp", chartId: ["histogram", "map"] },
+        contextDescription: "Each country has a demographic fingerprint — how its people spread across ages, when they die, and when they have children. Benjamin Niedermann folds all three into one interactive profile, letting you sweep a country through ten-year snapshots from 1953 to 2023. Data from the UN's World Population Prospects 2024.",
+        chartDescription: "A striking three-armed layout, each arm a distribution — a population pyramid, a mortality profile and a fertility curve — meeting over a map that anchors the chosen country. It's a bespoke, futuristic interactive UI; whether it adds much over a plain dropdown is fair to ask, but as design it's gorgeous. Made with VisQuill.",
+        tools: [{ name: "javascript" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["radial", "interactive controls", "full-page layout", "color palette"]
     }
 ];
 
