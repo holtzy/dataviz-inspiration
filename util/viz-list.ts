@@ -5747,6 +5747,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["radial", "interactive controls", "full-page layout", "color palette"]
+    },
+    {
+        id: 444,
+        title: "Strava as a proxy for where to live",
+        date: new Date(2026, 7),
+        author: "Strava",
+        url: "https://www.strava.com/maps/global-heatmap",
+        img: { full: "strava-heatmap-where-to-live.webp", zoom: "strava-heatmap-where-to-live-zoom.webp", chartId: ["map", "heatmap", "connection"] },
+        contextDescription: "One of the most revealing 'unofficial' urban datasets isn't a property database — it's Strava. Its heatmaps show where people actually run and cycle, a rough proxy for where a city feels safe, green and pleasant. This one went viral off Matt's (@Terravoir) tweet: 'use Strava as a proxy for where to live'.",
+        chartDescription: "Strava's global heatmap over Chicago, every street glowing brighter blue the more runners and cyclists trace it — an activity density heatmap laid over the road network. I love it when a dataviz jumps the fence and goes viral; a great reminder that a map can quietly shape real-life decisions like where to move.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["viral", "color palette", "gradient"]
     }
 ];
 
