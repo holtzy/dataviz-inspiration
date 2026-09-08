@@ -5761,6 +5761,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["viral", "color palette", "gradient"]
+    },
+    {
+        id: 445,
+        title: "Coffee price trends by city",
+        date: new Date(2026, 8),
+        author: "CostInflation.com",
+        url: "https://costinflation.com/indices/coffee-price-trends",
+        img: { full: "coffee-price-trends-dashboard.webp", zoom: "coffee-price-trends-dashboard-zoom.webp", chartId: ["line", "timeseries", "area"] },
+        contextDescription: "Coffee has become one of the most watched grocery items of the inflation era, but a single national average hides how differently the price moves from one city to the next. CostInflation tracks a seven-format basket — ground, beans, pods, instant, ready-to-drink, cold brew and creamer — and rebuilds the index daily.",
+        chartDescription: "A line chart of the index with a shaded band showing the spread across cities, wrapped in the full dashboard toolkit: time frame buttons, date pickers, frequency and unit selectors, location filter and a tooltip. Nothing fancy, and that's the point — it's a solid reference for how to wire the classic controls around a time series.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["dashboard", "interactive controls", "tooltip", "uncertainty", "minimalist"]
     }
 ];
 
