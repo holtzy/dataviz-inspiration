@@ -5775,6 +5775,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["dashboard", "interactive controls", "tooltip", "uncertainty", "minimalist"]
+    },
+    {
+        id: 446,
+        title: "The world's most liveable cities are among its least affordable",
+        date: new Date(2026, 8),
+        author: "Home Economics",
+        url: "https://homeeconomics.substack.com/p/quality-of-life-comes-at-a-cost",
+        img: { full: "liveable-cities-affordability-beeswarm.webp", zoom: "liveable-cities-affordability-beeswarm-zoom.webp", chartId: ["beeswarm", "bubble"] },
+        contextDescription: "Cities that top the quality-of-life rankings tend to be the ones you can least afford to move to. Home Economics puts Monocle's 2026 liveability list against Numbeo's home price-to-income ratios to show how much of that comfort is priced in.",
+        chartDescription: "A beeswarm: every city is a circle placed along a log-scaled price-to-income axis, sized by average net salary, with the Monocle picks in blue against a grey crowd. Beautifully labelled with leader lines and a median reference. It's static though — I really wish I could search a city or hover a circle to reveal its name.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["highlight", "direct labeling", "legend", "annotation", "log scale", "minimalist"]
     }
 ];
 
