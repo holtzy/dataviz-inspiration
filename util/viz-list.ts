@@ -5789,6 +5789,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["highlight", "direct labeling", "legend", "annotation", "log scale", "minimalist"]
+    },
+    {
+        id: 447,
+        title: "The Disappearing Days of Silence",
+        date: new Date(2026, 8),
+        author: "Mariia Pushkarova",
+        url: "https://public.tableau.com/app/profile/mariia.pushakrova/viz/TheDisappearingDaysofSilence/Dashboard",
+        img: { full: "disappearing-days-of-silence.webp", zoom: "disappearing-days-of-silence-zoom.webp", chartId: ["heatmap", "donut", "timeseries"] },
+        contextDescription: "Counting strikes tells you how bad a war is getting; counting the quiet days tells you something harder to look away from. Mariia Pushkarova takes Petro Ivaniuk's dataset of Russian missile and drone attacks on Ukraine and tracks, year by year, how many days passed with nothing at all — 266 in 2022, three so far in 2026.",
+        chartDescription: "A calendar heatmap where every day is a dot, coloured by strike intensity, laid out as small multiples across five years with a donut summarising each one. I love it when a time series escapes the line chart: the opacity ramp makes the escalation almost physical, the grid filling up and darkening as you read left to right. Built in Tableau.",
+        tools: [{ name: "tableau" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["small multiples", "color palette", "storytelling", "dashboard", "annotation"]
     }
 ];
 
