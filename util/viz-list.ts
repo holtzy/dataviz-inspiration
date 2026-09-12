@@ -5803,6 +5803,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["small multiples", "color palette", "storytelling", "dashboard", "annotation"]
+    },
+    {
+        id: 448,
+        title: "Fortunes et fiscalité en chiffres",
+        date: new Date(2026, 8),
+        author: "Adrien Dupas, Mélodie Lontjens & Philippine Robert (Le Point)",
+        url: "https://www.lepoint.fr/economie/fortunes-et-fiscalite-en-chiffres-JCUDDWL5OBDXRJTSOGXRNRQ4OM/",
+        img: { full: "le-point-fortunes-fiscalite.webp", zoom: "le-point-fortunes-fiscalite-zoom.webp", chartId: ["stackedArea", "area"] },
+        contextDescription: "Taxing the rich is a permanent fixture of French political debate, but \"the rich\" turns out to be half a dozen different populations: very high incomes, very high wealth, both at once, the top 0.1%, the top 0.001%. Le Point devoted a double page to untangling who actually pays what.",
+        chartDescription: "The centrepiece: stacked areas splitting the effective tax rate by levy, walked along a logarithmic percentile axis so the top 0.0001% gets as much room as the merely rich — and you can watch the curve turn regressive. A dense, print-grade infographic where every panel uses a smart, unusual chart type. I love seeing numbers laid out like this.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["infographic", "small multiples", "annotation", "log scale", "full-page layout"]
     }
 ];
 

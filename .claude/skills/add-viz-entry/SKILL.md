@@ -62,7 +62,7 @@ annotation, legend, direct labeling, color palette, bivariate coloring, gradient
 icons & pictograms, highlight, storytelling, scrollytelling, comparison, uncertainty,
 animation, shape morphism, interactive controls, tooltip, hover effect, zoom & pan, brushing,
 small multiples, radial, full-page layout, minimalist, flow & arrows, 3d, log scale, climate,
-dashboard, viral
+dashboard, infographic, viral
 
 > `highlight` = emphasizing one series while greying out the rest (very common in good editorial
 > viz). `direct labeling` = labels on the data instead of a separate legend. Don't use a label
