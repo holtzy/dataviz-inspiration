@@ -5817,6 +5817,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["infographic", "small multiples", "annotation", "log scale", "full-page layout"]
+    },
+    {
+        id: 449,
+        title: "5% of US electricity is used for data centers",
+        date: new Date(2026, 8),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/how-much-energy-do-data-centers-and-artificial-intelligence-use",
+        img: { full: "owid-data-centers-electricity.webp", zoom: "owid-data-centers-electricity-zoom.webp", chartId: ["barplot"] },
+        contextDescription: "Data centers are usually discussed as if they were about to swallow the grid, so the global figure tends to surprise people: it is small. Hannah Ritchie's point is that the average hides the concentration — behind Europe's number sits Ireland at over 20%, and behind the US number, Virginia at more than a quarter.",
+        chartDescription: "A plain horizontal barplot, regions ranked, values sitting at the end of each bar and the United States picked out in dark red against a muted pink. The two-line note in the white space does the storytelling. I love that OWID charts are this simple yet efficient — you recognise their style instantly.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["highlight", "direct labeling", "minimalist", "annotation", "typography"]
+    },
+    {
+        id: 450,
+        title: "Reliance on Middle East oil and gas supplies",
+        date: new Date(2026, 3),
+        author: "IEA",
+        url: "https://www.iea.org/data-and-statistics/data-tools/reliance-on-middle-east-oil-and-gas-supplies-by-country",
+        img: { full: "iea-middle-east-oil-gas-reliance.webp", zoom: "iea-middle-east-oil-gas-reliance-zoom.webp", chartId: ["circularBarplot"] },
+        contextDescription: "Every flare-up in the Middle East raises the same question: who actually gets hurt if the barrels stop moving? The IEA measures each country's exposure as imports from the region over domestic demand plus exports, and compares 2017 with 2024 to show who has quietly grown more dependent.",
+        chartDescription: "A circular barplot where each country is a radial bar for its reliance share, coloured by region, with a bubble on the outside sized by total import volume and a tick marking the earlier year. Clean, with just the right amount of interactivity to explore the data, and I really like the gradient on those outer bubbles.",
+        tools: [{ name: "d3.js" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["radial", "legend", "gradient", "interactive controls", "hover effect"]
     }
 ];
 
