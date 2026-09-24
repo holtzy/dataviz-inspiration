@@ -5845,6 +5845,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["radial", "legend", "gradient", "interactive controls", "hover effect"]
+    },
+    {
+        id: 451,
+        title: "Two centuries of French forest evolution",
+        date: new Date(2026, 5),
+        author: "IGN",
+        url: "https://www.ign.fr/atlas-cartographier-anthropocene-2026-foret",
+        img: { full: "ign-french-forest-two-centuries.webp", zoom: "ign-french-forest-two-centuries-zoom.webp", chartId: ["bubbleMap", "map", "venn"] },
+        contextDescription: "Forests now cover a third of mainland France, roughly double what the 19th-century état-major maps recorded. But the regrowth is not a simple story: some old woodland vanished while new forest appeared elsewhere. This map from IGN's 2026 atlas compares the 1840-1866 and 2007-2018 forest cover in each département.",
+        chartDescription: "A bubble map where each département gets two overlapping circles, forming a mini Venn diagram: surviving old forest, vanished old forest and recent forest. I'm not sure I like it: a map full of Venn diagrams is hard to read and the colors lack contrast. But it's a very innovative way to show a dataset I wouldn't know how to visualize otherwise.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "comparison", "infographic"]
     }
 ];
 
