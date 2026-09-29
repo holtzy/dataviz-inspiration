@@ -5859,6 +5859,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["legend", "comparison", "infographic"]
+    },
+    {
+        id: 452,
+        title: "The shifting bell curve",
+        date: new Date(2026, 8),
+        author: "celsius.earth",
+        url: "https://celsius.earth/motion/bell-curve",
+        img: { full: "celsius-shifting-bell-curve.webp", zoom: "celsius-shifting-bell-curve-zoom.webp", chartId: ["density", "histogram", "animation"] },
+        contextDescription: "Global warming isn't just a shift of the average: extreme summers once considered near-impossible are becoming routine. Following Hansen, Sato & Ruedy (2012), this animation shows how far each place's summer sat from its 1951-1980 normal, year after year from 1941 to today.",
+        chartDescription: "A density curve, colored by temperature class, that slides and flattens toward the hot side as the years go by, against the dashed 1951-1980 reference. Lovely to see temperatures kind of dancing. I'm not usually a fan of animation to show an evolution, but this one works quite well.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["animation", "climate", "comparison", "color palette"]
     }
 ];
 
