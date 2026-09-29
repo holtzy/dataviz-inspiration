@@ -5873,6 +5873,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["animation", "climate", "comparison", "color palette"]
+    },
+    {
+        id: 453,
+        title: "A warmer shape of summer, day by day",
+        date: new Date(2026, 8),
+        author: "Milos Popovic",
+        url: "https://lnkd.in/p/eYHz5S9Q",
+        img: { full: "europe-august-temperature-anomaly-3d.webp", zoom: "europe-august-temperature-anomaly-3d-zoom.webp", chartId: ["3d", "map", "animation", "barplot"] },
+        contextDescription: "August 2026 was hot in Europe. Using ERA5 data, Milos Popovic mapped the temperature anomaly for every single day of the month, compared to the 1991-2020 normal.",
+        chartDescription: "An animated 3D map where both height and color encode the anomaly: warm regions rise, cool ones sink. Mesmerizing to see the planet breathing. I love the general layout, with the small barchart on the left giving the big picture of the month.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["3d", "animation", "climate", "legend", "full-page layout"]
+    },
+    {
+        id: 454,
+        title: "How Europe's intensifying marine heatwaves threaten its fisheries",
+        date: new Date(2026, 8),
+        author: "Reuters",
+        url: "https://www.reuters.com/world/europe/how-europes-intensifying-marine-heatwaves-threaten-its-fisheries-2026-09-26/",
+        img: { full: "reuters-marine-heatwaves-europe.webp", zoom: "reuters-marine-heatwaves-europe-zoom.webp", chartId: ["3d", "map", "animation"] },
+        contextDescription: "European seas just had their hottest summer on record, and the heat is transforming the marine ecosystems coastal communities rely on. This Reuters scrollytelling piece by Ben Welsh and colleagues follows the numbers from the data out to Spanish and English fishermen.",
+        chartDescription: "The article opens on an animated 3D map built with deck.gl, where each sea grid cell becomes a bar whose height and color show the daily temperature anomaly. A bold choice for gridded climate data, and it works: the orange spikes rising over the Mediterranean are striking.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["3d", "animation", "climate", "scrollytelling", "storytelling", "tooltip"]
     }
 ];
 
