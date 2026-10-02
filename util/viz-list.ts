@@ -5901,6 +5901,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["3d", "animation", "climate", "scrollytelling", "storytelling", "tooltip"]
+    },
+    {
+        id: 455,
+        title: "Forest-area change, 2000-2023",
+        date: new Date(2026, 8),
+        author: "Global Data Tracker",
+        url: "https://www.reddit.com/r/dataisbeautiful/comments/1wu28jw/oc_forestarea_change_from_2000_to_2023_in_the_ten/",
+        img: { full: "forest-area-change-diverging-barplot.webp", zoom: "forest-area-change-diverging-barplot-zoom.webp", chartId: ["barplot"] },
+        contextDescription: "Which of the world's most forested countries gained or lost trees since 2000? This chart, shared on r/dataisbeautiful, compares the net forest-area change of the 10 countries with the largest forests in 2000, using FAO data.",
+        chartDescription: "A diverging barplot built with Matplotlib, with bars going left or right from zero. Mirror barplots are perfect to show values diverging from 0, and the double encoding (direction + green/brown color) makes the change obvious. The extra column with the relative change is a nice touch.",
+        tools: [{ name: "python" }],
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["climate", "direct labeling", "color palette", "minimalist"]
+    },
+    {
+        id: 456,
+        title: "How long do you really wait for your bus in Singapore?",
+        date: new Date(2026, 6),
+        author: "The Straits Times",
+        url: "https://www.straitstimes.com/multimedia/graphics/2026/07/singapore-bus-waits/index.html",
+        img: { full: "straits-times-singapore-bus-waits.webp", zoom: "straits-times-singapore-bus-waits-zoom.webp", chartId: ["line"] },
+        contextDescription: "Every commuter knows the frustration of a bus that doesn't show up on time. This Straits Times scrollytelling piece opens with the questions riders ask themselves, then digs into the frequency and reliability of each Singapore bus service.",
+        chartDescription: "A circular line chart: the dashed circle is the scheduled arrival, and each red line wobbles outward with every delay. I love the minimalist style, and how the chart almost becomes an illustration embedded in the article. A dropdown lets you find your own bus.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["radial", "minimalist", "scrollytelling", "interactive controls", "annotation"]
     }
 ];
 
