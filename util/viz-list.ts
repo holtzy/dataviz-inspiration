@@ -5929,6 +5929,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["radial", "minimalist", "scrollytelling", "interactive controls", "annotation"]
+    },
+    {
+        id: 457,
+        title: "Where France lives",
+        date: new Date(2026, 9),
+        author: "Aaron J. Becker",
+        url: "https://mapped.earth/",
+        img: { full: "mapped-earth-where-france-lives.webp", zoom: "mapped-earth-where-france-lives-zoom.webp", chartId: ["density2d", "map", "animation"] },
+        contextDescription: "France gained 28 million people since 1876, yet six communes out of ten are less populated today than back then. This animation replays every census since 1876 to show how the population drained from the countryside to cities and coasts.",
+        chartDescription: "An animated population density map, rendered like a glowing contour relief. I usually don't like animation to show a time series, but here it really works: you see the population shrink into the cities. Another chart type would not convey this story as strongly.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: false,
+        labels: ["animation", "color palette", "storytelling"]
+    },
+    {
+        id: 458,
+        title: "Child mortality has declined in all world regions",
+        date: new Date(2026, 9),
+        author: "Our World in Data",
+        url: "https://ourworldindata.org/data-insights/child-mortality-has-declined-in-all-world-regions",
+        img: { full: "owid-child-mortality-regions.webp", zoom: "owid-child-mortality-regions-zoom.webp", chartId: ["line"] },
+        contextDescription: "In 1950, almost one in four children worldwide died before their fifth birthday. Max Roser shows how this rate has fallen in every world region since, while reminding us that progress is far from finished.",
+        chartDescription: "A line chart with no Y axis: only the first and last data points are labelled, which is smart since that's where the exact values matter. Lines are also directly labelled, so no legend is needed.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["direct labeling", "minimalist", "annotation"]
     }
 ];
 
