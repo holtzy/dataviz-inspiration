@@ -5957,6 +5957,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["direct labeling", "minimalist", "annotation"]
+    },
+    {
+        id: 459,
+        title: "Paris, building by building",
+        date: new Date(2026, 9),
+        author: "Alexander Bogachev",
+        url: "https://paris.bogachev.fr",
+        img: { full: "paris-building-by-building.webp", zoom: "paris-building-by-building-zoom.webp", chartId: ["map", "3d", "histogram", "animation"] },
+        contextDescription: "When was the building you live in actually built? Alexander Bogachev maps all 122,435 buildings of Paris in 3D, colored by construction period, from the medieval core to recent towers, so you can watch the city grow and explore any street.",
+        chartDescription: "The opening animation is stunning. I love the histogram at the bottom, where each dot stacks buildings by year: always a great combo with a map, and it doubles as a timeline slider to filter by period.",
+        tools: undefined,
+        luminosity: ["dark"],
+        interactive: true,
+        labels: ["3d", "animation", "interactive controls", "tooltip", "zoom & pan", "color palette", "legend", "brushing"]
     }
 ];
 
