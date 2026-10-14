@@ -5971,6 +5971,20 @@ export const vizList: VizItem[] = [
         luminosity: ["dark"],
         interactive: true,
         labels: ["3d", "animation", "interactive controls", "tooltip", "zoom & pan", "color palette", "legend", "brushing"]
+    },
+    {
+        id: 460,
+        title: "Road accident density along Norway's roads",
+        date: new Date(2026, 5),
+        author: "Thomas Heggelund",
+        url: "https://norway-charts.netlify.app/road_accident_map/public/",
+        img: { full: "norway-road-accident-density.webp", zoom: "norway-road-accident-density-zoom.webp", chartId: ["map", "histogram", "3d"] },
+        contextDescription: "Where do crashes actually happen along a road? Inspired by a Visquill chart of the UK's A1, Thomas Heggelund maps 25 years of car accidents along any Norwegian highway using official NVDB data from Statens vegvesen.",
+        chartDescription: "A histogram wrapped along the road itself: each bar sticks out sideways from its stretch of road, with length and color showing accident count, so hotspots like Bergen jump out. Bin size, year range and a circular time-of-day picker let you dig in.",
+        tools: [{ name: "javascript" }],
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["interactive controls", "color palette", "3d", "zoom & pan"]
     }
 ];
 
