@@ -8,6 +8,13 @@ export default function Footer() {
       <div className="text-sm font-light flex flex-row justify-start items-center">
         <p className="hidden sm:inline">
           Copyright © dataviz inspiration {new Date().getFullYear()}
+          {" · "}
+          <Link
+            href="https://github.com/holtzy/dataviz-inspiration/blob/main/LICENSE"
+            className="underline"
+          >
+            Data under CC BY 4.0
+          </Link>
         </p>
       </div>
 

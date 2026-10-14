@@ -1,0 +1,57 @@
+This repository contains three kinds of material, each under its own terms.
+
+================================================================================
+1. DATA — Creative Commons Attribution 4.0 International (CC BY 4.0)
+================================================================================
+
+The catalog of visualizations, meaning the entries and their fields (titles,
+authors, dates, URLs, chart types, labels, tools and the written descriptions),
+stored in:
+
+  - util/viz-list.ts
+  - util/favorite-viz-list.ts
+
+is licensed under the Creative Commons Attribution 4.0 International License.
+
+You are free to share and adapt it for any purpose, including commercially,
+as long as you give appropriate credit, for example:
+
+  "Data from dataviz-inspiration.com by Yan Holtz, licensed under CC BY 4.0"
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+================================================================================
+2. CODE — MIT License
+================================================================================
+
+Copyright (c) Yan Holtz
+
+All source code in this repository (everything not covered by sections 1
+and 3) is licensed under the MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+3. IMAGES — NOT covered by this license
+================================================================================
+
+The screenshots in public/img/ show visualizations created by their respective
+authors, who keep all rights to them. They are displayed here for reference
+and commentary only, each linked to its original source. They are NOT licensed
+under CC BY or MIT, and reusing them requires permission from their authors.
