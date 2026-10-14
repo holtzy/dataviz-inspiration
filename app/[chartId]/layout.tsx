@@ -3,6 +3,12 @@ import { ChartId, chartTypesInfo } from "../../util/sectionDescription";
 import { fullVizList } from "../../util/viz-list";
 import { filterVizList } from "../../util/filterVizList";
 
+// Pre-render one page per chart type (required by the static export).
+export function generateStaticParams() {
+  return chartTypesInfo.map((c) => ({ chartId: c.id }));
+}
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
