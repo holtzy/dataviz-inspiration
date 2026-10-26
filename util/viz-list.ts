@@ -5985,6 +5985,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["interactive controls", "color palette", "3d", "zoom & pan"]
+    },
+    {
+        id: 461,
+        title: "The dark novel of French debt",
+        date: new Date(2024, 0),
+        author: "Le Point",
+        url: "https://fr.linkedin.com/posts/st%C3%A9phane-s%C3%A9guin-0199a687_qui-est-responsable-de-la-dette-fran%C3%A7aise-activity-7520386475486613504-ycmY",
+        img: { full: "french-debt-annotated-line.webp", zoom: "french-debt-annotated-line-zoom.webp", chartId: ["timeseries", "line"] },
+        contextDescription: "France's public debt has passed 3,000 billion euros. In a cover story titled <i>Le roman noir de la dette française</i>, Le Point retraces 50 years of uncontrolled drift, from Giscard d'Estaing to Macron. Infographic by Clara Dealberto.",
+        chartDescription: "A single line chart, but packed with annotations: every key event (oil shock, Maastricht, subprime crisis, Covid…) is pinned to its point, and shaded bands mark each presidency. I love how so much annotation tells most of the story with one simple line.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["annotation", "economy"]
     }
 ];
 

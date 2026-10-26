@@ -41,6 +41,7 @@ export const vizLabels = [
     "dashboard",           // multi-panel layout combining several charts / metrics in one view
     "infographic",         // dense editorial infographic packing many charts into one layout
     "viral",               // viz that spread widely on social media
+    "economy",             // economy / finance / public debt subject matter
 ] as const;
 export type VizLabel = typeof vizLabels[number];
 
@@ -66,4 +67,4 @@ export type Project = { projectId: number };
 // Total number of projects in the gallery (favorites + the rest). Kept here as a
 // small constant so the homepage can show the count WITHOUT importing the big
 // viz-list. Bump it by 1 whenever a new entry is added (the add-viz-entry skill does).
-export const TOTAL_VIZ_COUNT = 457;
+export const TOTAL_VIZ_COUNT = 458;
