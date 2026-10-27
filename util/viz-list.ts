@@ -5999,6 +5999,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["annotation", "economy"]
+    },
+    {
+        id: 462,
+        title: "Sea of Islands",
+        date: new Date(2026, 9),
+        author: "That Akin",
+        url: "https://thatakin.com/sea-of-islands",
+        img: { full: "pacific-rainfall-ridgeline.webp", zoom: "pacific-rainfall-ridgeline-zoom.webp", chartId: ["ridgeline"] },
+        contextDescription: "For Pacific island nations, climate change is not an abstraction. A Fiji-based data analyst explores how the region is living it through a scrollytelling piece, here showing how rainfall has become unpredictable and irregular across 22 countries and territories.",
+        chartDescription: "A ridgeline of rainfall anomalies where each country's curve swings above or below its baseline, with a soft blue gradient fill. A mesmerizing article with just the right amount of animation and some original chart types in use.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["scrollytelling", "environment", "climate", "gradient", "animation", "typography"]
     }
 ];
 
