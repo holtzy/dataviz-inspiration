@@ -6013,6 +6013,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["scrollytelling", "environment", "climate", "gradient", "animation", "typography"]
+    },
+    {
+        id: 463,
+        title: "Welcoming our new overlords",
+        date: new Date(2026, 9),
+        author: "the Economist",
+        url: "https://www.economist.com",
+        img: { full: "ai-impact-opinion-stacked-barplot.webp", zoom: "ai-impact-opinion-stacked-barplot-zoom.webp", chartId: ["barplot"] },
+        contextDescription: "Will AI be good or bad for humanity? A GlobeScan survey asked people in 13 countries, and the answer depends a lot on where you live: emerging economies are enthusiastic while rich Western countries are far more wary. France, unsurprisingly, is the most reluctant of all.",
+        chartDescription: "A horizontal stacked barplot with a diverging blue-to-red palette, from very positive to very negative. Subtle but smart: countries seem ranked by the share of no impact + negative answers rather than by positive ones, which makes the pessimistic block grow steadily down the chart.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["color palette", "comparison"]
+    },
+    {
+        id: 464,
+        title: "How Americans have shifted",
+        date: new Date(2026, 10),
+        author: "The New York Times",
+        url: "https://www.nytimes.com",
+        img: { full: "americans-shift-u-turn-arrows.webp", zoom: "americans-shift-u-turn-arrows-zoom.webp", chartId: ["lollipop"] },
+        contextDescription: "Most midterm coverage compared the 2026 House vote to 2024 with simple straight arrows. The New York Times added 2020 to the picture, revealing that many demographic groups did not just swing back to the Democrats: they returned to, or went past, where they stood four years earlier.",
+        chartDescription: "A brilliant twist on the dumbbell chart: each group gets a U-turn shaped arrow going from 2020 to 2024 and then to 2026, colored by direction. I had never seen anything like it before, a fully original way to show two successive shifts in a single mark.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["flow & arrows", "comparison", "direct labeling", "legend"]
     }
 ];
 
