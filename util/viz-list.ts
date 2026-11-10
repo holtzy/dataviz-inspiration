@@ -6041,6 +6041,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["flow & arrows", "comparison", "direct labeling", "legend"]
+    },
+    {
+        id: 465,
+        title: "Climate Pulse",
+        date: new Date(2026, 10),
+        author: "Copernicus Climate Change Service (ECMWF)",
+        url: "https://pulse.climate.copernicus.eu",
+        img: { full: "copernicus-climate-pulse-dashboard.webp", zoom: "copernicus-climate-pulse-dashboard-zoom.webp", chartId: ["line", "map"] },
+        contextDescription: "How warm is the planet today compared to the past? Copernicus updates its Climate Pulse dashboard every day with near-real-time global temperatures, letting anyone put the latest data in the perspective of every year since 1940.",
+        chartDescription: "A line chart highlighting one year against all the others in grey, next to a globe of temperature anomalies. Beautiful design with just the right amount of info displayed by default, and a lot more hidden under buttons for those who want to dig in.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["dashboard", "climate", "highlight", "interactive controls"]
     }
 ];
 
