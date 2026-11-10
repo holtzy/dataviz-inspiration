@@ -48,10 +48,12 @@ export default function Page() {
   }, []);
 
   // Trigger #3 — decision A: applying any filter loads the full catalog so the
-  // filtered results are complete (favorites included).
+  // filtered results are complete (favorites included). A shared `?viz=<id>` link
+  // does too, since the project it opens may not be a favorite.
+  const hasVizParam = searchParams.has("viz");
   useEffect(() => {
-    if (hasFilter) loadFull();
-  }, [hasFilter, loadFull]);
+    if (hasFilter || hasVizParam) loadFull();
+  }, [hasFilter, hasVizParam, loadFull]);
 
   // Favorites are statically available (small module), newest first.
   const favorites = useMemo(() => [...favoriteVizList].reverse(), []);

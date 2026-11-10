@@ -45,6 +45,11 @@ export const VizItemModal = ({
 
   const keyboardCallback = useCallback(
     (event) => {
+      // The modal stays mounted while closed (for the slide-out), and a page can have
+      // one per wall: only the open one reacts to the keyboard.
+      if (!isModalOpen) {
+        return;
+      }
       if (event.key === "Escape") {
         closeModal();
         return;
@@ -56,7 +61,7 @@ export const VizItemModal = ({
         goToOffset(-1); // Left arrow
       }
     },
-    [goToOffset, closeModal]
+    [isModalOpen, goToOffset, closeModal]
   );
 
   useEffect(() => {

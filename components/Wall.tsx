@@ -7,7 +7,8 @@ import {
   useResizeObserver,
 } from "masonic";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Project, VizItem } from "../util/viz-types";
+import { useSearchParams } from "next/navigation";
+import { VizItem } from "../util/viz-types";
 import { MasonryItem } from "./MasonryItem";
 import { VizItemModal } from "./VizItemModal";
 
@@ -22,6 +23,23 @@ import { VizItemModal } from "./VizItemModal";
 // finished loading, those images load late and push the grid down — leaving <Masonry>
 // with a stale offset, so it renders the wrong window of cells and they flash in then
 // vanish. Here we also re-measure on any document-height change (see layoutVersion).
+//
+// The open project lives in the URL as `?viz=<id>`, so a project can be shared and the
+// browser's Back button closes the modal instead of leaving the site. We use the native
+// history API (which Next keeps in sync with useSearchParams) rather than router.push,
+// to avoid a navigation that would re-render the page and reset the scroll position.
+// A page can hold several walls (favorites + rest): each one only opens the modal when
+// the id in the URL belongs to its own items.
+
+const vizUrl = (id: number | undefined) => {
+  const url = new URL(window.location.href);
+  if (id === undefined) {
+    url.searchParams.delete("viz");
+  } else {
+    url.searchParams.set("viz", String(id));
+  }
+  return url;
+};
 
 type WallProps = {
   items: VizItem[];
@@ -38,8 +56,41 @@ type MasonryCardProps = {
 };
 
 export const Wall = ({ items, columnNumber, onItemClick }: WallProps) => {
-  const [selectedProject, setSelectedProject] = useState<Project | undefined>();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const searchParams = useSearchParams();
+  const vizParam = Number(searchParams.get("viz"));
+  const openId = items.some((item) => item.id === vizParam) ? vizParam : undefined;
+  const isModalOpen = openId !== undefined;
+
+  // Keep showing the last project while the modal slides out after closing.
+  const [lastOpenId, setLastOpenId] = useState<number | undefined>();
+  useEffect(() => {
+    if (openId !== undefined) setLastOpenId(openId);
+  }, [openId]);
+  const shownId = openId ?? lastOpenId;
+
+  // True when the modal was opened by a click here, i.e. there is a history entry
+  // without `viz` right behind us. Closing then goes back to it; otherwise (a shared
+  // link opened directly) we just strip `viz` from the URL.
+  const pushedRef = useRef(false);
+
+  const openModal = useCallback((id: number) => {
+    pushedRef.current = true;
+    window.history.pushState(null, "", vizUrl(id));
+  }, []);
+
+  const closeModal = useCallback(() => {
+    if (pushedRef.current) {
+      pushedRef.current = false;
+      window.history.back();
+    } else {
+      window.history.replaceState(null, "", vizUrl(undefined));
+    }
+  }, []);
+
+  // Prev/next replace the URL, so a single Back still returns to the wall.
+  const showProject = useCallback((id: number) => {
+    window.history.replaceState(null, "", vizUrl(id));
+  }, []);
 
   const containerRef = useRef<HTMLElement | null>(null);
 
@@ -96,13 +147,12 @@ export const Wall = ({ items, columnNumber, onItemClick }: WallProps) => {
       <MasonryItem
         vizItem={data}
         onClick={() => {
-          setSelectedProject({ projectId: data.id });
-          setIsModalOpen(true);
+          openModal(data.id);
           onItemClick?.();
         }}
       />
     ),
-    [onItemClick],
+    [onItemClick, openModal],
   );
 
   return (
@@ -128,12 +178,12 @@ export const Wall = ({ items, columnNumber, onItemClick }: WallProps) => {
         </div>
       </div>
 
-      {selectedProject && (
+      {shownId !== undefined && (
         <VizItemModal
           isModalOpen={isModalOpen}
-          selectedProject={selectedProject}
-          setSelectedProject={setSelectedProject}
-          closeModal={() => setIsModalOpen(false)}
+          selectedProject={{ projectId: shownId }}
+          setSelectedProject={({ projectId }) => showProject(projectId)}
+          closeModal={closeModal}
           orderedIds={orderedIds}
           vizItems={items}
         />
