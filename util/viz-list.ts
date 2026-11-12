@@ -6055,6 +6055,20 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: true,
         labels: ["dashboard", "climate", "highlight", "interactive controls"]
+    },
+    {
+        id: 466,
+        title: "Dark Arctic — NATO defence spending",
+        date: new Date(2022, 10),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/ARCTIC-SECURITY/zgvobmblrpd/",
+        img: { full: "nato-defence-spending-dumbbell.webp", zoom: "nato-defence-spending-dumbbell-zoom.webp", chartId: ["lollipop"] },
+        contextDescription: "As Russia builds up its military supremacy in the Arctic, NATO allies are waking up. In 2006, members agreed to spend at least 2% of GDP on defence, yet years later few had done so, and the invasion of Ukraine pushed many to renew that pledge.",
+        chartDescription: "A dumbbell chart linking each country's 2014 and 2022 spending, extended by a dashed segment to its renewed pledge. The dashed 2% line with its annotation makes it obvious who falls short. Graphics by Vijdan Mohammad Kawoosa.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["comparison", "annotation", "legend"]
     }
 ];
 
