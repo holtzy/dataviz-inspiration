@@ -6069,6 +6069,34 @@ export const vizList: VizItem[] = [
         luminosity: ["light"],
         interactive: false,
         labels: ["comparison", "annotation", "legend"]
+    },
+    {
+        id: 467,
+        title: "Dark Arctic — map",
+        date: new Date(2022, 10),
+        author: "Reuters",
+        url: "https://www.reuters.com/graphics/ARCTIC-SECURITY/zgvobmblrpd/",
+        img: { full: "arctic-security-globe-map.webp", zoom: "arctic-security-globe-map-zoom.webp", chartId: ["map"] },
+        contextDescription: "As Russia builds up its military supremacy in the Arctic, NATO allies are waking up. In 2006, members agreed to spend at least 2% of GDP on defence, yet years later few had done so, and the invasion of Ukraine pushed many to renew that pledge.",
+        chartDescription: "A globe centered on the North Pole, a great projection choice that shows how close NATO and Russia are across the Arctic. I love the muted beige-and-grey palette and the text cards. The whole scrollytelling article is awesome.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: true,
+        labels: ["scrollytelling", "color palette", "annotation"]
+    },
+    {
+        id: 468,
+        title: "France's power plants",
+        date: new Date(2026, 10),
+        author: "Bastien Marsaud (Polygonia)",
+        url: "https://lnkd.in/p/eXz59PUq",
+        img: { full: "france-power-plants-dorling.webp", zoom: "france-power-plants-dorling-zoom.webp", chartId: ["cartogram", "map"] },
+        contextDescription: "For day 12 (Power) of the #30DayMapChallenge, every power plant of 1 MW or more in mainland France is mapped. The contrast is striking: 18 nuclear plants hold 42% of the installed capacity, while wind and solar make up most of the sites but only 27% of the power.",
+        chartDescription: "A Dorling cartogram: each circle is a plant, sized by capacity and colored by energy type. Definitely the right chart type here. I love the legend, doubled with two stacked bars comparing the share of sites with the share of power.",
+        tools: undefined,
+        luminosity: ["light"],
+        interactive: false,
+        labels: ["legend", "direct labeling", "comparison", "environment"]
     }
 ];
 
